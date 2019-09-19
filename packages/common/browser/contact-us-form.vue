@@ -155,7 +155,7 @@ export default {
         // eslint-disable-next-line no-underscore-dangle
         const payload = { ...this._data, token };
         try {
-          const res = await fetch('/contact-us', {
+          const res = await fetch('/__contact-us', {
             method: 'post',
             body: JSON.stringify(payload),
             headers: { 'Content-Type': 'application/json' },
