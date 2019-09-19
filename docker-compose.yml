@@ -51,3 +51,18 @@ services:
     entrypoint: ["yarn"]
     environment:
       <<: *env
+
+  laserfocusworld:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/laserfocusworld
+    environment:
+      <<: *env
+      <<: *env-aerilon-staging
+      PORT: 80
+      EXPOSED_PORT: 9710
+      LIVERELOAD_PORT: 19710
+      TENANT_KEY: ebm_lfw
+    ports:
+      - "9710:80"
+      - "19710:19710"
