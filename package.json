@@ -13,6 +13,8 @@
   "scripts": {
     "compile": "lerna run compile",
     "lint": "lerna run lint",
+    "lint:css": "lerna run lint:css",
+    "lint:js": "lerna run lint:js",
     "test": "lerna run test"
   },
   "devDependencies": {
