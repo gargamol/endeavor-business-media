@@ -83,3 +83,6 @@ typings/
 
 .bash_history
 .node-gyp
+
+# Build assets
+**/dist/
