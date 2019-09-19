@@ -63,6 +63,8 @@ services:
       EXPOSED_PORT: 9710
       LIVERELOAD_PORT: 19710
       TENANT_KEY: ebm_lfw
+      CDN_IMAGE_HOSTNAME: img.laserfocusworld.com
+      CDN_ASSET_HOSTNAME: cdn.laserfocusworld.com
     ports:
       - "9710:80"
       - "19710:19710"
