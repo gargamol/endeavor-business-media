@@ -10,7 +10,7 @@
     "build": "basecms-website build",
     "compile": "basecms-marko-compile compile --dir ./ --silent true",
     "lint": "yarn lint:js && yarn lint:css",
-    "lint:js": "eslint --ext .js --ext .vue --max-warnings 5 ./",
+    "lint:js": "eslint --ext .js --ext .vue --max-warnings 5 --ignore-path ../../.eslintignore ./",
     "lint:css": "stylelint ./**/*.scss --max-warnings 5",
     "test": "yarn lint && yarn compile && yarn build"
   },
