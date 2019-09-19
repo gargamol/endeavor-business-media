@@ -1,3 +1,9 @@
 $ const { config } = out.global;
 
-<h1>${config.siteName()}</h1>
+<marko-web-document>
+  <@container>
+    <@page>
+      <h1>${config.siteName()}</h1>
+    </@page>
+  </@container>
+</marko-web-document>
