@@ -10,6 +10,11 @@
     "packages/*",
     "sites/*"
   ],
+  "scripts": {
+    "compile": "lerna run compile",
+    "lint": "lerna run lint",
+    "test": "lerna run test"
+  },
   "devDependencies": {
     "@base-cms/marko-compiler": "^1.0.0-alpha.1",
     "lerna": "^3.16.4"
