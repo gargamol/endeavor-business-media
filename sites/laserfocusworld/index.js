@@ -4,6 +4,7 @@ const { version } = require('./package.json');
 const routes = require('./server/routes');
 const siteConfig = require('./config/site');
 const coreConfig = require('./config/core');
+const document = require('./server/components/document');
 
 const { log } = console;
 
@@ -12,6 +13,7 @@ module.exports = startServer({
   coreConfig,
   siteConfig,
   routes,
+  document,
   version,
   onStart: app => app.set('trust proxy', 'loopback, linklocal, uniquelocal'),
   onAsyncBlockError: e => newrelic.noticeError(e),
