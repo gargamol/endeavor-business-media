@@ -11,6 +11,7 @@
     "sites/*"
   ],
   "devDependencies": {
+    "@base-cms/marko-compiler": "^1.0.0-alpha.1",
     "lerna": "^3.16.4"
   }
 }
