@@ -1,5 +1,6 @@
-const index = require('../templates/index');
+const home = require('./home');
 
 module.exports = (app) => {
-  app.get('/', (_, res) => { res.marko(index); });
+  // Homepage
+  home(app);
 };
