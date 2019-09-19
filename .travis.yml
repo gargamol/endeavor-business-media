@@ -18,14 +18,14 @@ jobs:
         - NODE_ENV=test
 
     - stage: notify_start
-      script: scripts/deploy-notify-start.sh
+      script: deploy/notify-start.sh
       install: skip
 
     - stage: notify
-      script: scripts/deploy-notify.sh
+      script: deploy/notify.sh
       install: skip
 
     - stage: deploy
       name: Laser Focus World
-      script: scripts/deploy.js laserfocusworld aerilon
+      script: deploy/index.js laserfocusworld aerilon
       install: skip
