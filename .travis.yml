@@ -29,3 +29,8 @@ jobs:
       name: Laser Focus World
       script: deploy/index.js laserfocusworld aerilon
       install: skip
+
+    - stage: deploy
+      name: Utility Products
+      script: deploy/index.js utilityproducts aerilon
+      install: skip
