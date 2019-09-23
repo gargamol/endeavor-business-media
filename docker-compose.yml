@@ -73,3 +73,20 @@ services:
     ports:
       - "9710:80"
       - "19710:19710"
+
+  utilityproducts:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/utilityproducts
+    environment:
+      <<: *env
+      <<: *env-aerilon-staging
+      PORT: 80
+      EXPOSED_PORT: 9711
+      LIVERELOAD_PORT: 19711
+      TENANT_KEY: ebm_up
+      CDN_IMAGE_HOSTNAME: img.utilityproducts.com
+      CDN_ASSET_HOSTNAME: cdn.utilityproducts.com
+    ports:
+      - "9711:80"
+      - "19711:19711"
