@@ -1,0 +1,23 @@
+import findActiveFacet from './find-active-facet';
+
+$ const facets = input.facets;
+$ const activeFacet = findActiveFacet(facets, input.activeId);
+
+<div class="nav-facets-toggle">
+  <div class="nav-facets-toggle__label">Show Filters</div>
+  <default-theme-menu-toggle-button
+      class-name="nav-facets-toggle__button"
+      targets=[".nav-facets"]
+      toggle-class="nav-facets--open"
+      icon-modifiers=["sm"]
+      icon-name="plus"
+      expanded-icon-name="dash"
+  />
+</div>
+<facet-container
+  facets=facets
+  title=input.title
+  param-name="nav-facet"
+  active-id=input.activeId
+  active-ids=activeFacet.activeIds
+/>

@@ -15,5 +15,8 @@
     },
     "<below-container>": {},
     "<foot>": {}
+  },
+  "<website-facets>": {
+    "template": "./facets/index.marko"
   }
 }
