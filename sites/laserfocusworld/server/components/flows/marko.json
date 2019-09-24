@@ -40,6 +40,12 @@
     "@nodes": "array",
     "@aliases": "array"
   },
+  "<website-incremented-list-load-more-flow>": {
+    "template": "./incremented-list-load-more.marko",
+    "@incrementor": "number",
+    "@nodes": "array",
+    "@aliases": "array"
+  },
   "<website-content-card-deck-flow>": {
     "template": "./content-card-deck.marko",
     "<native-x>": {
