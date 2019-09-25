@@ -13,7 +13,7 @@ $ const {
 $ const isActiveId = (id) => (activeId && (`${activeId}` === `${id}`));
 
 <if(facets && facets.length)>
-  <div class=`${block}__list`>
+  <div id=`wrapper-${input.paramName}-${input.activeId}` class=`${block}__list`>
     <for|facet| of=facets>
       $ const isOpen = activeIds.includes(facet.id);
       $ const isActive = isActiveId(facet.id);
@@ -23,10 +23,13 @@ $ const isActiveId = (id) => (activeId && (`${activeId}` === `${id}`));
       $ if (isOpen) classNames.push(`${block}__item--open`);
       $ if (isActive) linkClasses.push(`${block}__link--active`);
 
-      <div class=classNames>
+      <div id=`link-${paramName}-${facet.id}` class=classNames>
         <a class=linkClasses href=facet.alias>
           ${facet.name}
         </a>
+        <if(isActive)>
+          <marko-web-browser-component name="FacetAutoScroll" props={ paramName, activeId }  />
+        </if>
         <if(Array.isArray(facet.values))>
           <default-theme-menu-toggle-button
               class-name=`${block}__toggle`
