@@ -1,0 +1,34 @@
+const navigation = require('./navigation');
+
+module.exports = {
+  navigation,
+  company: 'Endeavor Business Media, LLC',
+  logos: {
+    navbar: {
+      src: 'https://base.imgix.net/files/base/pennwell/mae/mae-header-logo.png?h=45',
+      srcset: [
+        'https://base.imgix.net/files/base/pennwell/mae/mae-header-logo.png?h=90 2x',
+      ],
+    },
+    footer: {
+      src: 'https://base.imgix.net/files/base/pennwell/mae/mae-header-logo.png?h=60',
+      srcset: [
+        'https://base.imgix.net/files/base/pennwell/mae/mae-header-logo.png?h=120 2x',
+      ],
+    },
+  },
+  socialMediaLinks: [
+    { provider: 'linkedin', href: 'http://www.linkedin.com/groups/PennWell-Aerospace-Defense-Media-Group-2448878', target: '_blank' },
+    { provider: 'twitter', href: 'https://twitter.com/MilAero', target: '_blank' },
+    { provider: 'facebook', href: 'https://www.facebook.com/pages/Military-Aerospace-Electronics/174732214480', target: '_blank' },
+  ],
+  gtm: {
+    containerId: 'GTM-M94ZBBC',
+  },
+  wufoo: {
+    userName: 'cygnuscorporate',
+  },
+  magazines: {
+    description: 'Since the beginning, Military & Aerospace Electronics has been on top of COTS issues and continues to be the clear leader when it comes to coverage of COTS success stories, COTS failures, and COTS trends. Articles focus on how and when designers should use mil-spec, non-developmental-item, or commercial off-the-shelf (COTS) equipment and components. Feature articles cover timely issues of design trends, emerging standards, programs, budgets, contracts, and application success stories.',
+  },
+};

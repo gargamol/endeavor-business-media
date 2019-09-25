@@ -90,3 +90,20 @@ services:
     ports:
       - "9711:80"
       - "19711:19711"
+
+  militaryaerospace:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/militaryaerospace
+    environment:
+      <<: *env
+      <<: *env-aerilon-staging
+      PORT: 80
+      EXPOSED_PORT: 9713
+      LIVERELOAD_PORT: 19713
+      TENANT_KEY: ebm_mae
+      CDN_IMAGE_HOSTNAME: img.militaryaerospace.com
+      CDN_ASSET_HOSTNAME: cdn.militaryaerospace.com
+    ports:
+      - "9713:80"
+      - "19713:19713"
