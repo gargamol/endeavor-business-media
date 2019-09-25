@@ -91,6 +91,23 @@ services:
       - "9711:80"
       - "19711:19711"
 
+  vision-systems:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/vision-systems
+    environment:
+      <<: *env
+      <<: *env-aerilon-staging
+      PORT: 80
+      EXPOSED_PORT: 9712
+      LIVERELOAD_PORT: 19712
+      TENANT_KEY: ebm_vsd
+      CDN_IMAGE_HOSTNAME: img.vision-systems.com
+      CDN_ASSET_HOSTNAME: cdn.vision-systems.com
+    ports:
+      - "9712:80"
+      - "19712:19712"
+
   militaryaerospace:
     <<: *node
     <<: *site-cmd
