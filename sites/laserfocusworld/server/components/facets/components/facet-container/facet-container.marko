@@ -4,7 +4,7 @@ $ const { facets, title } = input;
     <if(title)>
       <div class="node-list__header">${title}</div>
     </if>
-    <div class="node-list__nodes">
+    <div class=`node-list__nodes node-list__nodes--${input.paramName}`>
       <facet-list
         facets=facets
         param-name=input.paramName
