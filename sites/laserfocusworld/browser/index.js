@@ -14,6 +14,5 @@ GCSE(Browser);
 RevealAd(Browser);
 Common(Browser);
 Browser.registerComponent('FacetAutoScroll', FacetAutoScroll);
-// FacetAutoScroll(Browser);
 
 export default Browser;
