@@ -87,18 +87,20 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
             <aside class="col-lg-4 page-rail">
               <marko-web-gam-display-ad id="gpt-ad-rail1" />
               <marko-web-gam-display-ad id="gpt-ad-rail2" />
-              <marko-web-resolve-page|{ data: content }| node=pageNode>
-                $ const aliases = hierarchyAliases(content.primarySection);
-                <website-related-content-block
-                  id=id
-                  type=type
-                  section-id=section.id
-                  section-name=section.name
-                  query-fragment=queryFragment
-                >
-                  <@native-x index=4 name="list1" aliases=aliases />
-                </website-related-content-block>
-              </marko-web-resolve-page>
+              <if(type !== "company")>
+                <marko-web-resolve-page|{ data: content }| node=pageNode>
+                  $ const aliases = hierarchyAliases(content.primarySection);
+                  <website-related-content-block
+                    id=id
+                    type=type
+                    section-id=section.id
+                    section-name=section.name
+                    query-fragment=queryFragment
+                  >
+                    <@native-x index=4 name="list1" aliases=aliases />
+                  </website-related-content-block>
+                </marko-web-resolve-page>
+              </if>
             </aside>
           </div>
         </@section>
@@ -106,21 +108,71 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
     </marko-web-resolve-page>
   </@page>
   <@below-page>
-    <marko-web-resolve-page|{ resolved, data: content }| node=pageNode>
-      $ const section = resolved.getAsObject("primarySection");
-      $ const aliases = hierarchyAliases(section);
-      <website-content-load-more-block
-        id=id
-        type=type
-        name=content.name
-        aliases=aliases
-        section-id=section.id
-        section-name=section.name
-        section-skip=5
-      >
-        <@native-x index=0 name="card" aliases=aliases />
-      </website-content-load-more-block>
-    </marko-web-resolve-page>
+    <if(type === "company")>
+      <div class="row">
+        <div class="column-list-flow__list">
+          <div class="col-12 mb-block">
+            <marko-web-query|{ nodes }|
+              name="all-company-content"
+              params={ companyId: id, limit: 6, includeContentTypes: ['Product', 'PressRelease'], queryFragment }
+            >
+              $ console.log(nodes);
+              <website-content-list-flow nodes=nodes>
+                <@header>
+                  <marko-web-link>Prodcuts & Press Releases</marko-web-link>
+                </@header>
+                  <website-content-list-flow nodes=nodes with-teaser=true />
+              </website-content-list-flow>
+            </marko-web-query>
+          </div>
+          <div class="col-12 mb-block">
+            <marko-web-query|{ nodes }|
+              name="all-company-content"
+              params={ companyId: id, limit: 6, includeContentTypes: ['Article', 'Blog', 'MediaGallery', 'News'], queryFragment }
+            >
+              $ console.log(nodes);
+              <website-content-list-flow nodes=nodes>
+                <@header>
+                  <marko-web-link>Articles & News</marko-web-link>
+                </@header>
+                  <website-content-list-flow nodes=nodes with-teaser=true />
+              </website-content-list-flow>
+            </marko-web-query>
+          </div>
+          <div class="col-12 mb-block">
+            <marko-web-query|{ nodes }|
+              name="all-company-content"
+              params={ companyId: id, limit: 6, includeContentTypes: ['Video', 'Whitepaper', 'Document'], queryFragment }
+            >
+              $ console.log(nodes);
+              <website-content-list-flow nodes=nodes>
+                <@header>
+                  <marko-web-link>Videos & Resources</marko-web-link>
+                </@header>
+                  <website-content-list-flow nodes=nodes with-teaser=true />
+              </website-content-list-flow>
+            </marko-web-query>
+          </div>
+        </div>
+      </div>
+    </if>
+    <else>
+      <marko-web-resolve-page|{ resolved, data: content }| node=pageNode>
+        $ const section = resolved.getAsObject("primarySection");
+        $ const aliases = hierarchyAliases(section);
+        <website-content-load-more-block
+          id=id
+          type=type
+          name=content.name
+          aliases=aliases
+          section-id=section.id
+          section-name=section.name
+          section-skip=5
+        >
+          <@native-x index=0 name="card" aliases=aliases />
+        </website-content-load-more-block>
+      </marko-web-resolve-page>
+    </else>
   </@below-page>
   <@foot>
     <marko-web-resolve-page|{ data: content }| node=pageNode>
