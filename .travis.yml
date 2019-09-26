@@ -26,6 +26,11 @@ jobs:
       install: skip
 
     - stage: deploy
+      name: Cabling Installation & Maintenance
+      script: deploy/index.js cablinginstall aerilon
+      install: skip
+
+    - stage: deploy
       name: Laser Focus World
       script: deploy/index.js laserfocusworld aerilon
       install: skip

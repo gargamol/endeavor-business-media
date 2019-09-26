@@ -124,3 +124,20 @@ services:
     ports:
       - "9713:80"
       - "19713:19713"
+
+  cablinginstall:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/cablinginstall
+    environment:
+      <<: *env
+      <<: *env-aerilon-staging
+      PORT: 80
+      EXPOSED_PORT: 9714
+      LIVERELOAD_PORT: 19714
+      TENANT_KEY: ebm_cim
+      CDN_IMAGE_HOSTNAME: img.cablinginstall.com
+      CDN_ASSET_HOSTNAME: cdn.cablinginstall.com
+    ports:
+      - "9714:80"
+      - "19714:19714"
