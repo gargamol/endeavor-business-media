@@ -43,7 +43,7 @@ $ const { id, alias, name, pageNode } = data;
           <div class="col-lg-6 mb-block">
             <marko-web-query|{ nodes }|
               name="website-scheduled-content"
-              params={ sectionAlias: "detectors-imaging", limit: 3, requiresImage: true, queryFragment }
+              params={ sectionAlias: "detectors-imaging", limit: 3, queryFragment }
             >
               <website-content-list-flow nodes=nodes>
                 <@header>
@@ -56,7 +56,7 @@ $ const { id, alias, name, pageNode } = data;
           <div class="col-lg-6 mb-block">
             <marko-web-query|{ nodes }|
               name="website-scheduled-content"
-              params={ sectionAlias: "lasers-sources", limit: 3, requiresImage: true, queryFragment }
+              params={ sectionAlias: "lasers-sources", limit: 3, queryFragment }
             >
               <website-content-list-flow nodes=nodes>
                 <@header>
@@ -71,7 +71,7 @@ $ const { id, alias, name, pageNode } = data;
           <div class="col-lg-6 mb-block">
              <marko-web-query|{ nodes }|
               name="website-scheduled-content"
-              params={ sectionAlias: "optics", limit: 3, requiresImage: true, queryFragment }
+              params={ sectionAlias: "optics", limit: 3, queryFragment }
             >
               <website-content-list-flow nodes=nodes>
                 <@header>
@@ -84,7 +84,7 @@ $ const { id, alias, name, pageNode } = data;
           <div class="col-lg-6 mb-block">
             <marko-web-query|{ nodes }|
               name="website-scheduled-content"
-              params={ sectionAlias: "fiber-optics", limit: 3, requiresImage: true, queryFragment }
+              params={ sectionAlias: "fiber-optics", limit: 3, queryFragment }
             >
               <website-content-list-flow nodes=nodes>
                 <@header>
@@ -107,7 +107,7 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionAlias: "software-accessories", limit: 3, requiresImage: true, queryFragment }
+          params={ sectionAlias: "software-accessories", limit: 3, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
             <@header>
@@ -120,7 +120,7 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionAlias: "test-measurement", limit: 3, requiresImage: true, queryFragment }
+          params={ sectionAlias: "test-measurement", limit: 3, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
             <@header>
@@ -135,7 +135,7 @@ $ const { id, alias, name, pageNode } = data;
           name="all-published-content"
           params={ contentTypes: ["Webinar"], limit: 3, queryFragment }
         >
-          <website-content-list-flow nodes=nodes>
+          <website-content-list-flow nodes=nodes display-image=false>
             <@header>
               <marko-web-link href="/webcasts">Webcasts</marko-web-link>
             </@header>
@@ -186,7 +186,7 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionAlias: "blogs", limit: 3, requiresImage: true, queryFragment }
+          params={ sectionAlias: "blogs", limit: 3, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
             <@header>
@@ -198,7 +198,7 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionAlias: "photonics-business", limit: 3, requiresImage: true, queryFragment }
+          params={ sectionAlias: "photonics-business", limit: 3, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
             <@header>
@@ -210,7 +210,7 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionAlias: "optics/optics-design", limit: 3, requiresImage: true, queryFragment }
+          params={ sectionAlias: "optics/optics-design", limit: 3, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
             <@header>
