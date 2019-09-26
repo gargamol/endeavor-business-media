@@ -2,10 +2,12 @@
 This monorepo contains the codebase for websites managed by Endeavor Business Media. All sites within this repository utilize the [@base-cms/base-cms](https://github.com/base-cms/base-cms) packages, most notably the `marko-web` and `web-cli`.
 
 #### Copy Method
-If you wish to use an existing site as a starting point, begin by copying the site directory (recursively) to the new site name:
+If you wish to use an existing site as a starting point,begin by creating a new branch and then copy the site directory (recursively) to the new site name:
 ```bash
 cp -R sites/sitetocopy sites/mynewsite
 ```
+
+This is a good time for the first commit, as you can then commit each change below individually (helps with code review later).
 
 Next, update the following files:
 ```diff
