@@ -29,6 +29,12 @@ x-env-aerilon: &env-aerilon-staging
   RSS_URI: ${RSS_URI-https://aerilon.rss-staging.base-cms.io}
   SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps-staging.base-cms.io}
 
+x-env-picon: &env-picon-staging
+  GRAPHQL_URI: ${GRAPHQL_URI-https://picon.graphql-staging.base-cms.io}
+  OEMBED_URI: ${OEMBED_URI-https://picon.oembed-staging.base-cms.io}
+  RSS_URI: ${RSS_URI-https://picon.rss-staging.base-cms.io}
+  SITEMAPS_URI: ${SITEMAPS_URI-https://picon.sitemaps-staging.base-cms.io}
+
 x-env-development: &env-development
   GRAPHQL_URI: ${GRAPHQL_URI-http://host.docker.internal:10002}
   OEMBED_URI: ${OEMBED_URI-http://host.docker.internal:10013}
@@ -318,7 +324,7 @@ services:
   #   working_dir: /root/sites/processingmagazine
   #   environment:
   #     <<: *env
-  #     <<: *env-caprica-staging
+  #     <<: *env-picon-staging
   #     PORT: 80
   #     EXPOSED_PORT: 9725
   #     LIVERELOAD_PORT: 19725
