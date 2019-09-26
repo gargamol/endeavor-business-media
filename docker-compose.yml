@@ -124,3 +124,632 @@ services:
     ports:
       - "9713:80"
       - "19713:19713"
+
+  cablinginstall:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/cablinginstall
+    environment:
+      <<: *env
+      <<: *env-aerilon-staging
+      PORT: 80
+      EXPOSED_PORT: 9714
+      LIVERELOAD_PORT: 19714
+      TENANT_KEY: ebm_cim
+      CDN_IMAGE_HOSTNAME: img.cablinginstall.com
+      CDN_ASSET_HOSTNAME: cdn.cablinginstall.com
+    ports:
+      - "9714:80"
+      - "19714:19714"
+
+  # aviationpros:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/aviationpros
+  #   environment:
+  #     <<: *env
+  #     <<: *env-picon-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9715
+  #     LIVERELOAD_PORT: 19715
+  #     TENANT_KEY: cygnus_cavc
+  #     CDN_IMAGE_HOSTNAME: img.aviationpros.com
+  #     CDN_ASSET_HOSTNAME: cdn.aviationpros.com
+  #   ports:
+  #     - "9715:80"
+  #     - "19715:19715"
+
+  # dentaleconomics:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/dentaleconomics
+  #   environment:
+  #     <<: *env
+  #     <<: *env-aerilon-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9716
+  #     LIVERELOAD_PORT: 19716
+  #     TENANT_KEY: ebm_de
+  #     CDN_IMAGE_HOSTNAME: img.dentaleconomics.com
+  #     CDN_ASSET_HOSTNAME: cdn.dentaleconomics.com
+  #   ports:
+  #     - "9716:80"
+  #     - "19716:19716"
+
+  # dentistryiq:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/dentistryiq
+  #   environment:
+  #     <<: *env
+  #     <<: *env-aerilon-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9717
+  #     LIVERELOAD_PORT: 19717
+  #     TENANT_KEY: ebm_diq
+  #     CDN_IMAGE_HOSTNAME: img.dentistryiq.com
+  #     CDN_ASSET_HOSTNAME: cdn.dentistryiq.com
+  #   ports:
+  #     - "9717:80"
+  #     - "19717:19717"
+
+  # perioimplantadvisory:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/perioimplantadvisory
+  #   environment:
+  #     <<: *env
+  #     <<: *env-aerilon-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9718
+  #     LIVERELOAD_PORT: 19718
+  #     TENANT_KEY: ebm_pia
+  #     CDN_IMAGE_HOSTNAME: img.perioimplantadvisory.com
+  #     CDN_ASSET_HOSTNAME: cdn.perioimplantadvisory.com
+  #   ports:
+  #     - "9718:80"
+  #     - "19718:19718"
+
+  # rdhmag:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/rdhmag
+  #   environment:
+  #     <<: *env
+  #     <<: *env-aerilon-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9719
+  #     LIVERELOAD_PORT: 19719
+  #     TENANT_KEY: ebm_rdh
+  #     CDN_IMAGE_HOSTNAME: img.rdhmag.com
+  #     CDN_ASSET_HOSTNAME: cdn.rdhmag.com
+  #   ports:
+  #     - "9719:80"
+  #     - "19719:19719"
+
+  # cpapracticeadvisor:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/cpapracticeadvisor
+  #   environment:
+  #     <<: *env
+  #     <<: *env-picon-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9720
+  #     LIVERELOAD_PORT: 19720
+  #     TENANT_KEY: cygnus_cpa
+  #     CDN_IMAGE_HOSTNAME: img.cpapracticeadvisor.com
+  #     CDN_ASSET_HOSTNAME: cdn.cpapracticeadvisor.com
+  #   ports:
+  #     - "9720:80"
+  #     - "19720:19720"
+
+  # hcinnovationgroup:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/hcinnovationgroup
+  #   environment:
+  #     <<: *env
+  #     <<: *env-picon-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9721
+  #     LIVERELOAD_PORT: 19721
+  #     TENANT_KEY: ebm_hci
+  #     CDN_IMAGE_HOSTNAME: img.hcinnovationgroup.com
+  #     CDN_ASSET_HOSTNAME: cdn.hcinnovationgroup.com
+  #   ports:
+  #     - "9721:80"
+  #     - "19721:19721"
+
+  # hpnonline:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/hpnonline
+  #   environment:
+  #     <<: *env
+  #     <<: *env-picon-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9722
+  #     LIVERELOAD_PORT: 19722
+  #     TENANT_KEY: ebm_hpn
+  #     CDN_IMAGE_HOSTNAME: img.hpnonline.com
+  #     CDN_ASSET_HOSTNAME: cdn.hpnonline.com
+  #   ports:
+  #     - "9722:80"
+  #     - "19722:19722"
+
+  # mlo-online:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/mlo-online
+  #   environment:
+  #     <<: *env
+  #     <<: *env-picon-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9723
+  #     LIVERELOAD_PORT: 19723
+  #     TENANT_KEY: ebm_mlo
+  #     CDN_IMAGE_HOSTNAME: img.mlo-online.com
+  #     CDN_ASSET_HOSTNAME: cdn.mlo-online.com
+  #   ports:
+  #     - "9723:80"
+  #     - "19723:19723"
+
+  # plasticsmachinerymagazine:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/plasticsmachinerymagazine
+  #   environment:
+  #     <<: *env
+  #     <<: *env-picon-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9724
+  #     LIVERELOAD_PORT: 19724
+  #     TENANT_KEY: ebm_pmm
+  #     CDN_IMAGE_HOSTNAME: img.plasticsmachinerymagazine.com
+  #     CDN_ASSET_HOSTNAME: cdn.plasticsmachinerymagazine.com
+  #   ports:
+  #     - "9724:80"
+  #     - "19724:19724"
+
+  # processingmagazine:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/processingmagazine
+  #   environment:
+  #     <<: *env
+  #     <<: *env-caprica-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9725
+  #     LIVERELOAD_PORT: 19725
+  #     TENANT_KEY: ebm_pmm
+  #     CDN_IMAGE_HOSTNAME: img.processingmagazine.com
+  #     CDN_ASSET_HOSTNAME: cdn.processingmagazine.com
+  #   ports:
+  #     - "9725:80"
+  #     - "19725:19725"
+
+  # offshore-mag:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/offshore-mag
+  #   environment:
+  #     <<: *env
+  #     <<: *env-aerilon-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9726
+  #     LIVERELOAD_PORT: 19726
+  #     TENANT_KEY: ebm_os
+  #     CDN_IMAGE_HOSTNAME: img.offshore-mag.com
+  #     CDN_ASSET_HOSTNAME: cdn.offshore-mag.com
+  #   ports:
+  #     - "9726:80"
+  #     - "19726:19726"
+
+  # ogj:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/ogj
+  #   environment:
+  #     <<: *env
+  #     <<: *env-aerilon-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9727
+  #     LIVERELOAD_PORT: 19727
+  #     TENANT_KEY: ebm_ogj
+  #     CDN_IMAGE_HOSTNAME: img.ogj.com
+  #     CDN_ASSET_HOSTNAME: cdn.ogj.com
+  #   ports:
+  #     - "9727:80"
+  #     - "19727:19727"
+
+  # firehouse:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/firehouse
+  #   environment:
+  #     <<: *env
+  #     <<: *env-picon-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9728
+  #     LIVERELOAD_PORT: 19728
+  #     TENANT_KEY: cygnus_fhc
+  #     CDN_IMAGE_HOSTNAME: img.firehouse.com
+  #     CDN_ASSET_HOSTNAME: cdn.firehouse.com
+  #   ports:
+  #     - "9728:80"
+  #     - "19728:19728"
+
+  # officer:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/officer
+  #   environment:
+  #     <<: *env
+  #     <<: *env-picon-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9729
+  #     LIVERELOAD_PORT: 19729
+  #     TENANT_KEY: cygnus_ofcr
+  #     CDN_IMAGE_HOSTNAME: img.officer.com
+  #     CDN_ASSET_HOSTNAME: cdn.officer.com
+  #   ports:
+  #     - "9729:80"
+  #     - "19729:19729"
+
+  # securityinfowatch:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/securityinfowatch
+  #   environment:
+  #     <<: *env
+  #     <<: *env-picon-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9730
+  #     LIVERELOAD_PORT: 19730
+  #     TENANT_KEY: cygnus_siw
+  #     CDN_IMAGE_HOSTNAME: img.securityinfowatch.com
+  #     CDN_ASSET_HOSTNAME: cdn.securityinfowatch.com
+  #   ports:
+  #     - "9730:80"
+  #     - "19730:19730"
+
+  # locksmithledger:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/locksmithledger
+  #   environment:
+  #     <<: *env
+  #     <<: *env-picon-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9731
+  #     LIVERELOAD_PORT: 19731
+  #     TENANT_KEY: cygnus_ll
+  #     CDN_IMAGE_HOSTNAME: img.locksmithledger.com
+  #     CDN_ASSET_HOSTNAME: cdn.locksmithledger.com
+  #   ports:
+  #     - "9731:80"
+  #     - "19731:19731"
+
+  # bioopticsworld:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/bioopticsworld
+  #   environment:
+  #     <<: *env
+  #     <<: *env-aerilon-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9732
+  #     LIVERELOAD_PORT: 19732
+  #     TENANT_KEY: ebm_bow
+  #     CDN_IMAGE_HOSTNAME: img.bioopticsworld.com
+  #     CDN_ASSET_HOSTNAME: cdn.bioopticsworld.com
+  #   ports:
+  #     - "9732:80"
+  #     - "19732:19732"
+
+  # broadbandtechreport:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/broadbandtechreport
+  #   environment:
+  #     <<: *env
+  #     <<: *env-aerilon-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9733
+  #     LIVERELOAD_PORT: 19733
+  #     TENANT_KEY: ebm_btr
+  #     CDN_IMAGE_HOSTNAME: img.broadbandtechreport.com
+  #     CDN_ASSET_HOSTNAME: cdn.broadbandtechreport.com
+  #   ports:
+  #     - "9733:80"
+  #     - "19733:19733"
+
+  # evaluationengineering:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/evaluationengineering
+  #   environment:
+  #     <<: *env
+  #     <<: *env-picon-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9734
+  #     LIVERELOAD_PORT: 19734
+  #     TENANT_KEY: ebm_ee
+  #     CDN_IMAGE_HOSTNAME: img.evaluationengineering.com
+  #     CDN_ASSET_HOSTNAME: cdn.evaluationengineering.com
+  #   ports:
+  #     - "9734:80"
+  #     - "19734:19734"
+
+  # industriallasersolutions:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/industriallasersolutions
+  #   environment:
+  #     <<: *env
+  #     <<: *env-aerilon-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9735
+  #     LIVERELOAD_PORT: 19735
+  #     TENANT_KEY: ebm_ils
+  #     CDN_IMAGE_HOSTNAME: img.industriallasersolutions.com
+  #     CDN_ASSET_HOSTNAME: cdn.industriallasersolutions.com
+  #   ports:
+  #     - "9735:80"
+  #     - "19735:19735"
+
+  # intelligentaerospace:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/intelligentaerospace
+  #   environment:
+  #     <<: *env
+  #     <<: *env-aerilon-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9736
+  #     LIVERELOAD_PORT: 19736
+  #     TENANT_KEY: ebm_ias
+  #     CDN_IMAGE_HOSTNAME: img.intelligentaerospace.com
+  #     CDN_ASSET_HOSTNAME: cdn.intelligentaerospace.com
+  #   ports:
+  #     - "9736:80"
+  #     - "19736:19736"
+
+  # ledsmagazine:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/ledsmagazine
+  #   environment:
+  #     <<: *env
+  #     <<: *env-aerilon-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9737
+  #     LIVERELOAD_PORT: 19737
+  #     TENANT_KEY: ebm_leds
+  #     CDN_IMAGE_HOSTNAME: img.ledsmagazine.com
+  #     CDN_ASSET_HOSTNAME: cdn.ledsmagazine.com
+  #   ports:
+  #     - "9737:80"
+  #     - "19737:19737"
+
+  # lightwaveonline:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/lightwaveonline
+  #   environment:
+  #     <<: *env
+  #     <<: *env-aerilon-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9738
+  #     LIVERELOAD_PORT: 19738
+  #     TENANT_KEY: ebm_lw
+  #     CDN_IMAGE_HOSTNAME: img.lightwaveonline.com
+  #     CDN_ASSET_HOSTNAME: cdn.lightwaveonline.com
+  #   ports:
+  #     - "9738:80"
+  #     - "19738:19738"
+
+  # strategies-u:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/strategies-u
+  #   environment:
+  #     <<: *env
+  #     <<: *env-aerilon-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9739
+  #     LIVERELOAD_PORT: 19739
+  #     TENANT_KEY: ebm_su
+  #     CDN_IMAGE_HOSTNAME: img.strategies-u.com
+  #     CDN_ASSET_HOSTNAME: cdn.strategies-u.com
+  #   ports:
+  #     - "9739:80"
+  #     - "19739:19739"
+
+  # masstransitmag:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/masstransitmag
+  #   environment:
+  #     <<: *env
+  #     <<: *env-picon-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9740
+  #     LIVERELOAD_PORT: 19740
+  #     TENANT_KEY: cygnus_mass
+  #     CDN_IMAGE_HOSTNAME: img.masstransitmag.com
+  #     CDN_ASSET_HOSTNAME: cdn.masstransitmag.com
+  #   ports:
+  #     - "9740:80"
+  #     - "19740:19740"
+
+  # vehicleservicepros:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/vehicleservicepros
+  #   environment:
+  #     <<: *env
+  #     <<: *env-picon-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9741
+  #     LIVERELOAD_PORT: 19741
+  #     TENANT_KEY: cygnus_vspc
+  #     CDN_IMAGE_HOSTNAME: img.vehicleservicepros.com
+  #     CDN_ASSET_HOSTNAME: cdn.vehicleservicepros.com
+  #   ports:
+  #     - "9741:80"
+  #     - "19741:19741"
+
+  # vendingmarketwatch:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/vendingmarketwatch
+  #   environment:
+  #     <<: *env
+  #     <<: *env-picon-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9742
+  #     LIVERELOAD_PORT: 19742
+  #     TENANT_KEY: cygnus_vmw
+  #     CDN_IMAGE_HOSTNAME: img.vendingmarketwatch.com
+  #     CDN_ASSET_HOSTNAME: cdn.vendingmarketwatch.com
+  #   ports:
+  #     - "9742:80"
+  #     - "19742:19742"
+
+  # distributedenergy:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/distributedenergy
+  #   environment:
+  #     <<: *env
+  #     <<: *env-picon-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9743
+  #     LIVERELOAD_PORT: 19743
+  #     TENANT_KEY: ebm_dte
+  #     CDN_IMAGE_HOSTNAME: img.distributedenergy.com
+  #     CDN_ASSET_HOSTNAME: cdn.distributedenergy.com
+  #   ports:
+  #     - "9743:80"
+  #     - "19743:19743"
+
+  # erosioncontrol:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/erosioncontrol
+  #   environment:
+  #     <<: *env
+  #     <<: *env-picon-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9744
+  #     LIVERELOAD_PORT: 19744
+  #     TENANT_KEY: ebm_ero
+  #     CDN_IMAGE_HOSTNAME: img.erosioncontrol.com
+  #     CDN_ASSET_HOSTNAME: cdn.erosioncontrol.com
+  #   ports:
+  #     - "9744:80"
+  #     - "19744:19744"
+
+  # flowcontrolnetwork:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/flowcontrolnetwork
+  #   environment:
+  #     <<: *env
+  #     <<: *env-picon-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9745
+  #     LIVERELOAD_PORT: 19745
+  #     TENANT_KEY: ebm_fcn
+  #     CDN_IMAGE_HOSTNAME: img.flowcontrolnetwork.com
+  #     CDN_ASSET_HOSTNAME: cdn.flowcontrolnetwork.com
+  #   ports:
+  #     - "9745:80"
+  #     - "19745:19745"
+
+  # gxcontractor:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/gxcontractor
+  #   environment:
+  #     <<: *env
+  #     <<: *env-picon-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9746
+  #     LIVERELOAD_PORT: 19746
+  #     TENANT_KEY: ebm_gxc
+  #     CDN_IMAGE_HOSTNAME: img.gxcontractor.com
+  #     CDN_ASSET_HOSTNAME: cdn.gxcontractor.com
+  #   ports:
+  #     - "9746:80"
+  #     - "19746:19746"
+
+  # mswmanagement:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/mswmanagement
+  #   environment:
+  #     <<: *env
+  #     <<: *env-picon-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9747
+  #     LIVERELOAD_PORT: 19747
+  #     TENANT_KEY: ebm_msw
+  #     CDN_IMAGE_HOSTNAME: img.mswmanagement.com
+  #     CDN_ASSET_HOSTNAME: cdn.mswmanagement.com
+  #   ports:
+  #     - "9747:80"
+  #     - "19747:19747"
+
+  # stormh20:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/stormh20
+  #   environment:
+  #     <<: *env
+  #     <<: *env-picon-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9748
+  #     LIVERELOAD_PORT: 19748
+  #     TENANT_KEY: ebm_gxc
+  #     CDN_IMAGE_HOSTNAME: img.stormh20.com
+  #     CDN_ASSET_HOSTNAME: cdn.stormh20.com
+  #   ports:
+  #     - "9748:80"
+  #     - "19748:19748"
+
+  # watertech-online:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/watertech-online
+  #   environment:
+  #     <<: *env
+  #     <<: *env-picon-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9749
+  #     LIVERELOAD_PORT: 19749
+  #     TENANT_KEY: ebm_wto
+  #     CDN_IMAGE_HOSTNAME: img.watertech-online.com
+  #     CDN_ASSET_HOSTNAME: cdn.watertech-online.com
+  #   ports:
+  #     - "9749:80"
+  #     - "19749:19749"
+
+  # waterworld:
+  #   <<: *node
+  #   <<: *site-cmd
+  #   working_dir: /root/sites/waterworld
+  #   environment:
+  #     <<: *env
+  #     <<: *env-aerilon-staging
+  #     PORT: 80
+  #     EXPOSED_PORT: 9750
+  #     LIVERELOAD_PORT: 19750
+  #     TENANT_KEY: ebm_ww
+  #     CDN_IMAGE_HOSTNAME: img.waterworld.com
+  #     CDN_ASSET_HOSTNAME: cdn.waterworld.com
+  #   ports:
+  #     - "9750:80"
+  #     - "19750:19750"
