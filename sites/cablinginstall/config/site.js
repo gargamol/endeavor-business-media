@@ -18,9 +18,9 @@ module.exports = {
     },
   },
   socialMediaLinks: [
-    { provider: 'linkedin', href: 'http://www.linkedin.com/groups/Laser-Focus-World-2896249' },
-    { provider: 'twitter', href: 'https://twitter.com/LaserFocusWorld' },
-    { provider: 'facebook', href: 'https://www.facebook.com/pages/Laser-Focus-World/126899915297' },
+    { provider: 'linkedin', href: 'https://www.linkedin.com/company/3962332', target: '_blank' },
+    { provider: 'twitter', href: 'http://twitter.com/CABLINGMAG', target: '_blank' },
+    { provider: 'facebook', href: 'http://www.facebook.com/pages/Cabling-Installation-and-Maintenance/298118662118', target: '_blank' },
   ],
   gtm: {
     containerId: 'GTM-T4G6938',
