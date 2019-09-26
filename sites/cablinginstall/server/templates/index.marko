@@ -43,26 +43,26 @@ $ const { id, alias, name, pageNode } = data;
           <div class="col-lg-6 mb-block">
             <marko-web-query|{ nodes }|
               name="website-scheduled-content"
-              params={ sectionAlias: "detectors-imaging", limit: 3, requiresImage: true, queryFragment }
+              params={ sectionAlias: "data-center", limit: 3, queryFragment }
             >
               <website-content-list-flow nodes=nodes>
                 <@header>
-                  <marko-web-link href="/detectors-imaging">Detectors & Imaging</marko-web-link>
+                  <marko-web-link href="/data-center">Data Center</marko-web-link>
                 </@header>
-                <@native-x index=2 name="list1" aliases=["detectors-imaging"] />
+                <@native-x index=2 name="list1" aliases=["data-center"] />
               </website-content-list-flow>
             </marko-web-query>
           </div>
           <div class="col-lg-6 mb-block">
             <marko-web-query|{ nodes }|
               name="website-scheduled-content"
-              params={ sectionAlias: "lasers-sources", limit: 3, requiresImage: true, queryFragment }
+              params={ sectionAlias: "standards", limit: 3, queryFragment }
             >
               <website-content-list-flow nodes=nodes>
                 <@header>
-                  <marko-web-link href="/lasers-sources">Lasers & Sources</marko-web-link>
+                  <marko-web-link href="/standards">Standards</marko-web-link>
                 </@header>
-                <@native-x index=2 name="list1" aliases=["lasers-sources"] />
+                <@native-x index=2 name="list1" aliases=["standards"] />
               </website-content-list-flow>
             </marko-web-query>
           </div>
@@ -71,26 +71,26 @@ $ const { id, alias, name, pageNode } = data;
           <div class="col-lg-6 mb-block">
              <marko-web-query|{ nodes }|
               name="website-scheduled-content"
-              params={ sectionAlias: "optics", limit: 3, requiresImage: true, queryFragment }
+              params={ sectionAlias: "cable", limit: 3, queryFragment }
             >
               <website-content-list-flow nodes=nodes>
                 <@header>
-                  <marko-web-link href="/optics">Optics</marko-web-link>
+                  <marko-web-link href="/cable">Cable</marko-web-link>
                 </@header>
-                <@native-x index=2 name="list1" aliases=["optics"] />
+                <@native-x index=2 name="list1" aliases=["cable"] />
               </website-content-list-flow>
             </marko-web-query>
           </div>
           <div class="col-lg-6 mb-block">
             <marko-web-query|{ nodes }|
               name="website-scheduled-content"
-              params={ sectionAlias: "fiber-optics", limit: 3, requiresImage: true, queryFragment }
+              params={ sectionAlias: "connectivity", limit: 3, queryFragment }
             >
               <website-content-list-flow nodes=nodes>
                 <@header>
-                  <marko-web-link href="/fiber-optics">Fiber Optics</marko-web-link>
+                  <marko-web-link href="/connectivity">Connectivity</marko-web-link>
                 </@header>
-                <@native-x index=2 name="list1" aliases=["fiber-optics"] />
+                <@native-x index=2 name="list1" aliases=["connectivity"] />
               </website-content-list-flow>
             </marko-web-query>
           </div>
@@ -107,26 +107,67 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionAlias: "software-accessories", limit: 3, requiresImage: true, queryFragment }
+          params={ sectionAlias: "ip-security-av", limit: 3, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
             <@header>
-              <marko-web-link href="/software-accessories">Software & Accessories</marko-web-link>
+              <marko-web-link href="/ip-security-av">IP Security & AV</marko-web-link>
             </@header>
-            <@native-x index=2 name="list1" aliases=["software-accessories"] />
+            <@native-x index=2 name="list1" aliases=["ip-security-av"] />
           </website-content-list-flow>
         </marko-web-query>
       </div>
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionAlias: "test-measurement", limit: 3, requiresImage: true, queryFragment }
+          params={ sectionAlias: "wireless-5g", limit: 3, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
             <@header>
-              <marko-web-link href="/test-measurement">Test & Measurement</marko-web-link>
+              <marko-web-link href="/wireless-5g">Wireless/5G</marko-web-link>
             </@header>
-            <@native-x index=2 name="list1" aliases=["test-measurement"] />
+            <@native-x index=2 name="list1" aliases=["wireless-5g"] />
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+      <div class="col-lg-4 mb-block">
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "design-install", limit: 3, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/design-install">Design Install</marko-web-link>
+            </@header>
+            <@native-x index=2 name="list1" aliases=["design-install"] />
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 mb-block">
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "testing", limit: 3, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/testing">Testing</marko-web-link>
+            </@header>
+            <@native-x index=2 name="list1" aliases=["testing"] />
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+      <div class="col-lg-4 mb-block">
+        <marko-web-query|{ nodes }|
+          name="all-published-content"
+          params={ contentTypes: ["Whitepaper"], limit: 3, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes display-image=false>
+            <@header>
+              <marko-web-link href="/white-papers">White Papers</marko-web-link>
+            </@header>
           </website-content-list-flow>
         </marko-web-query>
       </div>
@@ -135,7 +176,7 @@ $ const { id, alias, name, pageNode } = data;
           name="all-published-content"
           params={ contentTypes: ["Webinar"], limit: 3, queryFragment }
         >
-          <website-content-list-flow nodes=nodes>
+          <website-content-list-flow nodes=nodes display-image=false>
             <@header>
               <marko-web-link href="/webcasts">Webcasts</marko-web-link>
             </@header>
@@ -145,18 +186,6 @@ $ const { id, alias, name, pageNode } = data;
     </div>
 
     <div class="row">
-      <div class="col-lg-4 mb-block">
-        <marko-web-query|{ nodes }|
-          name="all-published-content"
-          params={ contentTypes: ["Whitepaper"], limit: 5, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes display-image=false>
-            <@header>
-              <marko-web-link href="/white-papers">White Papers</marko-web-link>
-            </@header>
-          </website-content-list-flow>
-        </marko-web-query>
-      </div>
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="all-published-content"
@@ -170,7 +199,22 @@ $ const { id, alias, name, pageNode } = data;
         </marko-web-query>
       </div>
       <div class="col-lg-4 mb-block">
-        <marko-web-query|{ node: issue }| name="magazine-latest-issue" params={ publicationId: "5ca4e38b75a25490050041a9", queryFragment: latestIssueFragment }>
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: alias, limit: 5, skip: 5, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link>More from Cabling</marko-web-link>
+            </@header>
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+      <div class="col-lg-4 mb-block">
+        <marko-web-query|{ node: issue }|
+          name="magazine-latest-issue"
+            params={ publicationId: "5ca3d82c75a25456040041a9", queryFragment: latestIssueFragment }
+          >
           <website-magazine-latest-issue-flow issue-node=issue>
             <@header>
               <marko-web-magazine-issue-name tag=null obj=issue link=true>
@@ -178,45 +222,6 @@ $ const { id, alias, name, pageNode } = data;
               </marko-web-magazine-issue-name>
             </@header>
           </website-magazine-latest-issue-flow>
-        </marko-web-query>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-4 mb-block">
-        <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
-          params={ sectionAlias: "blogs", limit: 3, requiresImage: true, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link href="/blogs">Commentary</marko-web-link>
-            </@header>
-          </website-content-list-flow>
-        </marko-web-query>
-      </div>
-      <div class="col-lg-4 mb-block">
-        <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
-          params={ sectionAlias: "photonics-business", limit: 3, requiresImage: true, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link href="/photonics-business">Photonics Business</marko-web-link>
-            </@header>
-          </website-content-list-flow>
-        </marko-web-query>
-      </div>
-      <div class="col-lg-4 mb-block">
-        <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
-          params={ sectionAlias: "optics/optics-design", limit: 3, requiresImage: true, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link href="/optics/optics-design">Optics & Design</marko-web-link>
-            </@header>
-          </website-content-list-flow>
         </marko-web-query>
       </div>
     </div>
@@ -229,7 +234,7 @@ $ const { id, alias, name, pageNode } = data;
         component-input={ aliases }
         fragment-name="content-list"
         query-name="website-scheduled-content"
-        query-params={ sectionId: id, limit: 14, skip: 5 }
+        query-params={ sectionId: id, limit: 14, skip: 10 }
         max-pages=0
         page-input={ for: "website-section", id }
       />
