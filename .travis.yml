@@ -221,8 +221,8 @@ jobs:
       install: skip
 
     # - stage: deploy
-    #   name: Water Tech Online
-    #   script: deploy/index.js watertech-online picon
+    #   name: Water Technology
+    #   script: deploy/index.js watertechonline picon
     #   install: skip
 
     # - stage: deploy

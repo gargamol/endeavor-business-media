@@ -726,10 +726,10 @@ services:
   #     - "9748:80"
   #     - "19748:19748"
 
-  # watertech-online:
+  # watertechonline:
   #   <<: *node
   #   <<: *site-cmd
-  #   working_dir: /root/sites/watertech-online
+  #   working_dir: /root/sites/watertechonline
   #   environment:
   #     <<: *env
   #     <<: *env-picon-staging
@@ -737,8 +737,8 @@ services:
   #     EXPOSED_PORT: 9749
   #     LIVERELOAD_PORT: 19749
   #     TENANT_KEY: ebm_wto
-  #     CDN_IMAGE_HOSTNAME: img.watertech-online.com
-  #     CDN_ASSET_HOSTNAME: cdn.watertech-online.com
+  #     CDN_IMAGE_HOSTNAME: img.watertechonline.com
+  #     CDN_ASSET_HOSTNAME: cdn.watertechonline.com
   #   ports:
   #     - "9749:80"
   #     - "19749:19749"
