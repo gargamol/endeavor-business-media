@@ -50,10 +50,10 @@ jobs:
     #   script: deploy/index.js cpapracticeadvisor picon
     #   install: skip
 
-    # - stage: deploy
-    #   name: Dental Economics
-    #   script: deploy/index.js dentaleconomics aerilon
-    #   install: skip
+    - stage: deploy
+      name: Dental Economics
+      script: deploy/index.js dentaleconomics aerilon
+      install: skip
 
     - stage: deploy
       name: DentistryIQ
@@ -120,10 +120,10 @@ jobs:
     #   script: deploy/index.js ledsmagazine aerilon
     #   install: skip
 
-    # - stage: deploy
-    #   name: Lightwave Online
-    #   script: deploy/index.js lightwaveonline aerilon
-    #   install: skip
+    - stage: deploy
+      name: Lightwave Online
+      script: deploy/index.js lightwaveonline aerilon
+      install: skip
 
     # - stage: deploy
     #   name: Locksmith Ledger
@@ -160,10 +160,10 @@ jobs:
     #   script: deploy/index.js ogj aerilon
     #   install: skip
 
-    # - stage: deploy
-    #   name: Offshore
-    #   script: deploy/index.js offshore-mag aerilon
-    #   install: skip
+    - stage: deploy
+      name: Offshore
+      script: deploy/index.js offshore-mag aerilon
+      install: skip
 
     # - stage: deploy
     #   name: Perio Implant Advisory
@@ -180,10 +180,10 @@ jobs:
     #   script: deploy/index.js processingmagazine picon
     #   install: skip
 
-    # - stage: deploy
-    #   name: Registered Dental Hygienists
-    #   script: deploy/index.js rdh-mag aerilon
-    #   install: skip
+    - stage: deploy
+      name: Registered Dental Hygienists
+      script: deploy/index.js rdhmag aerilon
+      install: skip
 
     # - stage: deploy
     #   name: Security Info Watch
