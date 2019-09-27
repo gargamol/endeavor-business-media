@@ -182,7 +182,7 @@ jobs:
 
     - stage: deploy
       name: Registered Dental Hygienists
-      script: deploy/index.js rdh-mag aerilon
+      script: deploy/index.js rdhmag aerilon
       install: skip
 
     # - stage: deploy
