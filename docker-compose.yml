@@ -193,8 +193,7 @@ services:
       EXPOSED_PORT: 9717
       LIVERELOAD_PORT: 19717
       TENANT_KEY: ebm_diq
-      CDN_IMAGE_HOSTNAME: img.dentistryiq.com
-      CDN_ASSET_HOSTNAME: cdn.dentistryiq.com
+      SITE_ID: 5ca3868b08cf3a4e048b4567
     ports:
       - "9717:80"
       - "19717:19717"
