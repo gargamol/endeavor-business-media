@@ -31,45 +31,85 @@ config
     { name: 'load-more', templateName: 'CONTENT', path: 'dental-hygiene/load-more' },
     { name: 'reskin', path: 'dental-hygiene/reskin' },
   ])
-  .setAliasAdUnits('lasers-sources', [
-    { name: 'lb1', templateName: 'LB', path: 'lasers-sources/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'lasers-sources/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'lasers-sources/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'lasers-sources/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'lasers-sources/load-more' },
-    { name: 'reskin', path: 'lasers-sources/reskin' },
+  .setAliasAdUnits('dental-hygiene/student-hygiene', [
+    { name: 'lb1', templateName: 'LB', path: 'dental-hygiene/student-hygiene/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'dental-hygiene/student-hygiene/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'dental-hygiene/student-hygiene/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'dental-hygiene/student-hygiene/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'dental-hygiene/student-hygiene/load-more' },
+    { name: 'reskin', path: 'dental-hygiene/student-hygiene/reskin' },
   ])
-  .setAliasAdUnits('optics', [
-    { name: 'lb1', templateName: 'LB', path: 'optics/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'optics/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'optics/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'optics/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'optics/load-more' },
-    { name: 'reskin', path: 'optics/reskin' },
+  .setAliasAdUnits('clinical', [
+    { name: 'lb1', templateName: 'LB', path: 'clinical/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'clinical/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'clinical/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'clinical/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'clinical/load-more' },
+    { name: 'reskin', path: 'clinical/reskin' },
   ])
-  .setAliasAdUnits('fiber-optics', [
-    { name: 'lb1', templateName: 'LB', path: 'fiber-optics/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'fiber-optics/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'fiber-optics/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'fiber-optics/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'fiber-optics/load-more' },
-    { name: 'reskin', path: 'fiber-optics/reskin' },
+  .setAliasAdUnits('clinical/endodontics', [
+    { name: 'lb1', templateName: 'LB', path: 'clinical/endodontics/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'clinical/endodontics/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'clinical/endodontics/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'clinical/endodontics/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'clinical/endodontics/load-more' },
+    { name: 'reskin', path: 'clinical/endodontics/reskin' },
   ])
-  .setAliasAdUnits('software-accessories', [
-    { name: 'lb1', templateName: 'LB', path: 'software-accessories/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'software-accessories/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'software-accessories/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'software-accessories/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'software-accessories/load-more' },
-    { name: 'reskin', path: 'software-accessories/reskin' },
+  .setAliasAdUnits('clinical/orthodontics', [
+    { name: 'lb1', templateName: 'LB', path: 'clinical/orthodontics/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'clinical/orthodontics/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'clinical/orthodontics/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'clinical/orthodontics/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'clinical/orthodontics/load-more' },
+    { name: 'reskin', path: 'clinical/orthodontics/reskin' },
   ])
-  .setAliasAdUnits('test-measurement', [
-    { name: 'lb1', templateName: 'LB', path: 'test-measurement/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'test-measurement/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'test-measurement/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'test-measurement/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'test-measurement/load-more' },
-    { name: 'reskin', path: 'test-measurement/reskin' },
+  .setAliasAdUnits('clinical/prosthodontics-and-laboratory', [
+    { name: 'lb1', templateName: 'LB', path: 'clinical/prosthodontics-and-laboratory/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'clinical/prosthodontics-and-laboratory/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'clinical/prosthodontics-and-laboratory/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'clinical/prosthodontics-and-laboratory/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'clinical/prosthodontics-and-laboratory/load-more' },
+    { name: 'reskin', path: 'clinical/prosthodontics-and-laboratory/reskin' },
+  ])
+  .setAliasAdUnits('products', [
+    { name: 'lb1', templateName: 'LB', path: 'products/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'products/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'products/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'products/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'products/load-more' },
+    { name: 'reskin', path: 'products/reskin' },
+  ])
+  .setAliasAdUnits('products/free-samples', [
+    { name: 'lb1', templateName: 'LB', path: 'products/free-samples/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'products/free-samples/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'products/free-samples/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'products/free-samples/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'products/free-samples/load-more' },
+    { name: 'reskin', path: 'products/free-samples/reskin' },
+  ])
+  .setAliasAdUnits('practice-management', [
+    { name: 'lb1', templateName: 'LB', path: 'practice-management/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'practice-management/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'practice-management/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'practice-management/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'practice-management/load-more' },
+    { name: 'reskin', path: 'practice-management/reskin' },
+  ])
+  .setAliasAdUnits('front-office', [
+    { name: 'lb1', templateName: 'LB', path: 'front-office/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'front-office/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'front-office/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'front-office/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'front-office/load-more' },
+    { name: 'reskin', path: 'front-office/reskin' },
+  ])
+  .setAliasAdUnits('dental-assisting', [
+    { name: 'lb1', templateName: 'LB', path: 'dental-assisting/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'dental-assisting/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'dental-assisting/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'dental-assisting/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'dental-assisting/load-more' },
+    { name: 'reskin', path: 'dental-assisting/reskin' },
   ]);
 
 module.exports = config;

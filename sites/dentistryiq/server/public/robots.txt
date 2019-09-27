@@ -5,5 +5,5 @@ User-agent: *
 Disallow: /
 Disallow: /__load-more
 
-Sitemap: https://www.laserfocusworld.com/sitemap.xml
-Sitemap: https://www.laserfocusworld.com/sitemap-google-news.xml
+Sitemap: https://www.dentistryiq.com/sitemap.xml
+Sitemap: https://www.dentistryiq.com/sitemap-google-news.xml
