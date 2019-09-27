@@ -39,7 +39,7 @@ $ const isActiveId = (id) => (activeId && (`${activeId}` === `${id}`));
           />
         </if>
         <if(isActive)>
-          <marko-web-browser-component name="AutoScroll" props={ containerTarget: `.node-list__nodes--${paramName} > .${block}__list`, elementTarget: '.nav-facets__link--active' }  />
+          <marko-web-browser-component name="WebsiteAutoScroll" props={ containerTarget: `.node-list__nodes--${paramName} > .${block}__list`, elementTarget: '.nav-facets__link--active' }  />
         </if>
         <facet-list facets=facet.values param-name=paramName active-id=activeId active-ids=activeIds />
       </div>

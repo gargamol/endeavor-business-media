@@ -13,6 +13,6 @@ GAM(Browser);
 GCSE(Browser);
 RevealAd(Browser);
 Common(Browser);
-Browser.registerComponent('AutoScroll', AutoScroll);
+Browser.registerComponent('WebsiteAutoScroll', AutoScroll);
 
 export default Browser;
