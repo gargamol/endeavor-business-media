@@ -180,10 +180,10 @@ jobs:
     #   script: deploy/index.js processingmagazine picon
     #   install: skip
 
-    # - stage: deploy
-    #   name: Registered Dental Hygienists
-    #   script: deploy/index.js rdh-mag aerilon
-    #   install: skip
+    - stage: deploy
+      name: Registered Dental Hygienists
+      script: deploy/index.js rdhmag aerilon
+      install: skip
 
     # - stage: deploy
     #   name: Security Info Watch
