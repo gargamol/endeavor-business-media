@@ -120,10 +120,10 @@ jobs:
     #   script: deploy/index.js ledsmagazine aerilon
     #   install: skip
 
-    # - stage: deploy
-    #   name: Lightwave Online
-    #   script: deploy/index.js lightwaveonline aerilon
-    #   install: skip
+    - stage: deploy
+      name: Lightwave Online
+      script: deploy/index.js lightwaveonline aerilon
+      install: skip
 
     # - stage: deploy
     #   name: Locksmith Ledger

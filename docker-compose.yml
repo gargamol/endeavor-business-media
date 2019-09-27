@@ -539,22 +539,22 @@ services:
   #     - "9737:80"
   #     - "19737:19737"
 
-  # lightwaveonline:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/lightwaveonline
-  #   environment:
-  #     <<: *env
-  #     <<: *env-aerilon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9738
-  #     LIVERELOAD_PORT: 19738
-  #     TENANT_KEY: ebm_lw
-  #     CDN_IMAGE_HOSTNAME: img.lightwaveonline.com
-  #     CDN_ASSET_HOSTNAME: cdn.lightwaveonline.com
-  #   ports:
-  #     - "9738:80"
-  #     - "19738:19738"
+  lightwaveonline:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/lightwaveonline
+    environment:
+      <<: *env
+      <<: *env-aerilon-staging
+      PORT: 80
+      EXPOSED_PORT: 9738
+      LIVERELOAD_PORT: 19738
+      TENANT_KEY: ebm_lw
+      CDN_IMAGE_HOSTNAME: img.lightwaveonline.com
+      CDN_ASSET_HOSTNAME: cdn.lightwaveonline.com
+    ports:
+      - "9738:80"
+      - "19738:19738"
 
   # strategies-u:
   #   <<: *node
