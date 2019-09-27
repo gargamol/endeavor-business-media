@@ -488,10 +488,10 @@ services:
   #     - "9734:80"
   #     - "19734:19734"
 
-  # industriallasersolutions:
+  # industrial-lasers:
   #   <<: *node
   #   <<: *site-cmd
-  #   working_dir: /root/sites/industriallasersolutions
+  #   working_dir: /root/sites/industrial-lasers
   #   environment:
   #     <<: *env
   #     <<: *env-aerilon-staging
@@ -499,16 +499,16 @@ services:
   #     EXPOSED_PORT: 9735
   #     LIVERELOAD_PORT: 19735
   #     TENANT_KEY: ebm_ils
-  #     CDN_IMAGE_HOSTNAME: img.industriallasersolutions.com
-  #     CDN_ASSET_HOSTNAME: cdn.industriallasersolutions.com
+  #     CDN_IMAGE_HOSTNAME: img.industrial-lasers.com
+  #     CDN_ASSET_HOSTNAME: cdn.industrial-lasers.com
   #   ports:
   #     - "9735:80"
   #     - "19735:19735"
 
-  # intelligentaerospace:
+  # intelligent-aerospace:
   #   <<: *node
   #   <<: *site-cmd
-  #   working_dir: /root/sites/intelligentaerospace
+  #   working_dir: /root/sites/intelligent-aerospace
   #   environment:
   #     <<: *env
   #     <<: *env-aerilon-staging
@@ -516,8 +516,8 @@ services:
   #     EXPOSED_PORT: 9736
   #     LIVERELOAD_PORT: 19736
   #     TENANT_KEY: ebm_ias
-  #     CDN_IMAGE_HOSTNAME: img.intelligentaerospace.com
-  #     CDN_ASSET_HOSTNAME: cdn.intelligentaerospace.com
+  #     CDN_IMAGE_HOSTNAME: img.intelligent-aerospace.com
+  #     CDN_ASSET_HOSTNAME: cdn.intelligent-aerospace.com
   #   ports:
   #     - "9736:80"
   #     - "19736:19736"
