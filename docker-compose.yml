@@ -216,22 +216,22 @@ services:
   #     - "9718:80"
   #     - "19718:19718"
 
-  # rdhmag:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/rdhmag
-  #   environment:
-  #     <<: *env
-  #     <<: *env-aerilon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9719
-  #     LIVERELOAD_PORT: 19719
-  #     TENANT_KEY: ebm_rdh
-  #     CDN_IMAGE_HOSTNAME: img.rdhmag.com
-  #     CDN_ASSET_HOSTNAME: cdn.rdhmag.com
-  #   ports:
-  #     - "9719:80"
-  #     - "19719:19719"
+  rdhmag:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/rdhmag
+    environment:
+      <<: *env
+      <<: *env-aerilon-staging
+      PORT: 80
+      EXPOSED_PORT: 9719
+      LIVERELOAD_PORT: 19719
+      TENANT_KEY: ebm_rdh
+      CDN_IMAGE_HOSTNAME: img.rdhmag.com
+      CDN_ASSET_HOSTNAME: cdn.rdhmag.com
+    ports:
+      - "9719:80"
+      - "19719:19719"
 
   # cpapracticeadvisor:
   #   <<: *node
