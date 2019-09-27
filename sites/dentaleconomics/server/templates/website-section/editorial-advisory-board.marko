@@ -1,6 +1,9 @@
 import { getAsObject } from '@base-cms/object-path';
-import contentListFragment from '@endeavorb2b/base-website-common/api/fragments/content-list';
+import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
+import queryFragment from "../../graphql/fragments/content-list";
+import GAM from "../../../config/gam";
 
+$ const { id, alias, name, pageNode } = data;
 $ const { site } = out.global;
 $ const section = getAsObject(data, 'section');
 $ const query = {
@@ -9,32 +12,34 @@ $ const query = {
   queryFragment: contentListFragment,
 };
 
-<theme-default-website-section-layout section=section>
+<marko-web-website-section-page-layout id=id alias=alias name=name>
   <@head>
-    <cms-ad-gam-head />
-    <script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer></script>
+    <marko-web-gtm-website-section-context|{ context }| alias=alias>
+      <marko-web-gtm-push data=context />
+    </marko-web-gtm-website-section-context>
+    <marko-web-resolve-page|{ data: section }| node=pageNode>
+      $ const aliases = hierarchyAliases(section);
+      $ const adSlots = {
+          "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
+          "gpt-ad-rail1": GAM.getAdUnit({ name: "rail1", aliases, size: [300, 250] }),
+          "gpt-ad-rail2": GAM.getAdUnit({ name: "rail2", aliases, size: [300, 600] }),
+        }
+       <marko-web-gam-slots slots=adSlots />
+    </marko-web-resolve-page>
   </@head>
-
   <@above-container>
-    <endeavor-gam-ad-unit-out-of-page name="wa" />
-    <endeavor-gam-ad-unit-out-of-page name="reskin" />
+    <marko-web-resolve-page|{ data: section }| node=pageNode>
+      $ const aliases = hierarchyAliases(section);
+      <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "wa", aliases }) />
+      <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "reskin", aliases }) />
+    </marko-web-resolve-page>
   </@above-container>
+  <@page>
+    <marko-web-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
 
-  <endeavor-gam-ad-unit-define-display name="lb1" modifiers=["top-of-page"] />
-
-  <div class="page-wrapper">
     <div class="row">
-      <div class="col">
-        <div class="page-wrapper__header">
-          <endeavor-breadcrumbs-website-section section=section />
-          <div class="page-wrapper__title">
-            ${section.name}
-          </div>
-        </div>
-        <div class="page-wrapper__body">
-          <div class="row">
-            <div class="col-lg-8">
-          <cms-query-website-scheduled-content|{ nodes }| ...query>
+      <div class="col-lg-8 mb-block">
+          <marko-web-query|{ nodes }| ...query>
             <endeavor-item-list flush=true card=false items=nodes>
               <@item|{ item }|>
                 <endeavor-content-block-item
@@ -47,14 +52,33 @@ $ const query = {
                 />
               </@item>
             </endeavor-item-list>
-          </cms-query-website-scheduled-content>
-            </div>
-            <div class="col-lg-4">
-              <cms-browser-component name="ContactUsForm" />
-            </div>
-          </div>
-        </div>
+          </marko-web-query>
+      </div>
+      <div class="col-lg-4">
+        <marko-web-browser-component name="CommonContactUsForm" />
       </div>
     </div>
-  </div>
-</theme-default-website-section-layout>
+  </@page>
+  <@below-page>
+    <marko-web-resolve-page|{ data: section }| node=pageNode>
+      $ const aliases = hierarchyAliases(section);
+      <marko-web-load-more
+        component-name="content-load-more-flow"
+        component-input={
+          aliases,
+          nativeX: { index: 0, name: 'card', aliases },
+        }
+        fragment-name="content-list"
+        query-name="website-scheduled-content"
+        query-params={ sectionId: id, limit: 14, skip: 12 }
+        page-input={ for: "website-section", id }
+      />
+    </marko-web-resolve-page>
+  </@below-page>
+  <@foot>
+    <marko-web-resolve-page|{ data: section }| node=pageNode>
+      $ const aliases = hierarchyAliases(section);
+      <marko-web-gam-fixed-ad-bottom ...GAM.getAdUnit({ name: "lb2", aliases }) refresh-interval=0 />
+    </marko-web-resolve-page>
+  </@foot>
+</marko-web-website-section-page-layout>
