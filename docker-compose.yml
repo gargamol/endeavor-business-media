@@ -335,22 +335,22 @@ services:
   #     - "9725:80"
   #     - "19725:19725"
 
-  # offshore-mag:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/offshore-mag
-  #   environment:
-  #     <<: *env
-  #     <<: *env-aerilon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9726
-  #     LIVERELOAD_PORT: 19726
-  #     TENANT_KEY: ebm_os
-  #     CDN_IMAGE_HOSTNAME: img.offshore-mag.com
-  #     CDN_ASSET_HOSTNAME: cdn.offshore-mag.com
-  #   ports:
-  #     - "9726:80"
-  #     - "19726:19726"
+  offshore-mag:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/offshore-mag
+    environment:
+      <<: *env
+      <<: *env-aerilon-staging
+      PORT: 80
+      EXPOSED_PORT: 9726
+      LIVERELOAD_PORT: 19726
+      TENANT_KEY: ebm_os
+      CDN_IMAGE_HOSTNAME: img.offshore-mag.com
+      CDN_ASSET_HOSTNAME: cdn.offshore-mag.com
+    ports:
+      - "9726:80"
+      - "19726:19726"
 
   # ogj:
   #   <<: *node

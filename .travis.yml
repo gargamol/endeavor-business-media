@@ -160,10 +160,10 @@ jobs:
     #   script: deploy/index.js ogj aerilon
     #   install: skip
 
-    # - stage: deploy
-    #   name: Offshore
-    #   script: deploy/index.js offshore-mag aerilon
-    #   install: skip
+    - stage: deploy
+      name: Offshore
+      script: deploy/index.js offshore-mag aerilon
+      install: skip
 
     # - stage: deploy
     #   name: Perio Implant Advisory
