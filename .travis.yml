@@ -165,10 +165,10 @@ jobs:
       script: deploy/index.js offshore-mag aerilon
       install: skip
 
-    # - stage: deploy
-    #   name: Perio Implant Advisory
-    #   script: deploy/index.js perioimplantadvisory aerilon
-    #   install: skip
+    - stage: deploy
+      name: Perio Implant Advisory
+      script: deploy/index.js perioimplantadvisory aerilon
+      install: skip
 
     # - stage: deploy
     #   name: Plastics Machinery Magazine

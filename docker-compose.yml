@@ -191,21 +191,21 @@ services:
   #     - "9717:80"
   #     - "19717:19717"
 
-  # perioimplantadvisory:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/perioimplantadvisory
-  #   environment:
-  #     <<: *env
-  #     <<: *env-aerilon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9718
-  #     LIVERELOAD_PORT: 19718
-  #     TENANT_KEY: ebm_pia
-  #     SITE_ID: 5ca3871b08cf3a52048b4567
-  #   ports:
-  #     - "9718:80"
-  #     - "19718:19718"
+  perioimplantadvisory:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/perioimplantadvisory
+    environment:
+      <<: *env
+      <<: *env-aerilon-staging
+      PORT: 80
+      EXPOSED_PORT: 9718
+      LIVERELOAD_PORT: 19718
+      TENANT_KEY: ebm_pia
+      SITE_ID: 5ca3871b08cf3a52048b4567
+    ports:
+      - "9718:80"
+      - "19718:19718"
 
   rdhmag:
     <<: *node
