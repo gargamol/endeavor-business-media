@@ -1,24 +1,35 @@
 import { getAsObject } from '@base-cms/object-path';
-import hierarchyAliases from '@endeavorb2b/base-website-common/utils/website-section/hierarchy-aliases';
+import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
+import GAM from "../../../config/gam";
 
 $ const { site } = out.global;
 $ const section = getAsObject(data, 'section');
 $ const aliases = hierarchyAliases(section);
+$ const { id, alias, name, pageNode } = data;
 
-<theme-default-website-section-layout section=section>
-
+<marko-web-website-section-page-layout id=id alias=alias name=name>
   <@head>
-    <endeavor-ad-gam-head />
+    <marko-web-gtm-website-section-context|{ context }| alias=alias>
+      <marko-web-gtm-push data=context />
+    </marko-web-gtm-website-section-context>
+    <marko-web-resolve-page|{ data: section }| node=pageNode>
+      $ const adSlots = {
+          "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
+          "gpt-ad-rail1": GAM.getAdUnit({ name: "rail1", aliases, size: [300, 250] }),
+          "gpt-ad-rail2": GAM.getAdUnit({ name: "rail2", aliases, size: [300, 600] }),
+        }
+       <marko-web-gam-slots slots=adSlots />
+    </marko-web-resolve-page>
   </@head>
-
   <@above-container>
-    <endeavor-gam-ad-unit-out-of-page name="wa" />
-    <endeavor-gam-ad-unit-out-of-page name="reskin" />
+    <marko-web-resolve-page|{ data: section }| node=pageNode>
+      <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "wa", aliases }) />
+      <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "reskin", aliases }) />
+    </marko-web-resolve-page>
   </@above-container>
+  <@page>
+    <marko-web-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
 
-  <endeavor-gam-ad-unit-define-display name="lb1" modifiers=["top-of-page"] />
-
-  <div class="page-wrapper">
     <div class="row">
       <div class="col">
         <div class="page-wrapper__header">
@@ -30,16 +41,26 @@ $ const aliases = hierarchyAliases(section);
         </div>
       </div>
     </div>
-  </div>
 
-  <@below-container>
-    <endeavor-content-query-load-more
-      query={ sectionId: section.id }
-      ads={ aliases }
-    />
-  </@below-container>
-
-  <@footer>
-    <endeavor-gam-ad-sticky-leaderboard name="lb2" refreshable=false />
-  </@footer>
-</theme-default-website-section-layout>
+  </@page>
+  <@below-page>
+    <marko-web-resolve-page|{ data: section }| node=pageNode>
+      <marko-web-load-more
+        component-name="content-load-more-flow"
+        component-input={
+          aliases,
+          nativeX: { index: 0, name: 'card', aliases },
+        }
+        fragment-name="content-list"
+        query-name="website-scheduled-content"
+        query-params={ sectionId: id, limit: 14, skip: 12 }
+        page-input={ for: "website-section", id }
+      />
+    </marko-web-resolve-page>
+  </@below-page>
+  <@foot>
+    <marko-web-resolve-page|{ data: section }| node=pageNode>
+      <marko-web-gam-fixed-ad-bottom ...GAM.getAdUnit({ name: "lb2", aliases }) refresh-interval=0 />
+    </marko-web-resolve-page>
+  </@foot>
+</marko-web-website-section-page-layout>
