@@ -165,22 +165,22 @@ services:
   #     - "9715:80"
   #     - "19715:19715"
 
-  # dentaleconomics:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/dentaleconomics
-  #   environment:
-  #     <<: *env
-  #     <<: *env-aerilon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9716
-  #     LIVERELOAD_PORT: 19716
-  #     TENANT_KEY: ebm_de
-  #     CDN_IMAGE_HOSTNAME: img.dentaleconomics.com
-  #     CDN_ASSET_HOSTNAME: cdn.dentaleconomics.com
-  #   ports:
-  #     - "9716:80"
-  #     - "19716:19716"
+  dentaleconomics:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/dentaleconomics
+    environment:
+      <<: *env
+      <<: *env-aerilon-staging
+      PORT: 80
+      EXPOSED_PORT: 9716
+      LIVERELOAD_PORT: 19716
+      TENANT_KEY: ebm_de
+      CDN_IMAGE_HOSTNAME: img.dentaleconomics.com
+      CDN_ASSET_HOSTNAME: cdn.dentaleconomics.com
+    ports:
+      - "9716:80"
+      - "19716:19716"
 
   # dentistryiq:
   #   <<: *node
