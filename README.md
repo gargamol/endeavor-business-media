@@ -99,6 +99,11 @@ Next, update the following files:
 ```
 
 ```diff
+# /sites/mynewsite/server/templates/subscribe/index.marko
+# Update subscribe URL (found in old /sites/mynewsite/config/site.js)
+```
+
+```diff
 # /sites/mynewsite/server/public
 # Replace all icon files
 ```

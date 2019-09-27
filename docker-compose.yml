@@ -182,22 +182,22 @@ services:
   #     - "9716:80"
   #     - "19716:19716"
 
-  # dentistryiq:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/dentistryiq
-  #   environment:
-  #     <<: *env
-  #     <<: *env-aerilon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9717
-  #     LIVERELOAD_PORT: 19717
-  #     TENANT_KEY: ebm_diq
-  #     CDN_IMAGE_HOSTNAME: img.dentistryiq.com
-  #     CDN_ASSET_HOSTNAME: cdn.dentistryiq.com
-  #   ports:
-  #     - "9717:80"
-  #     - "19717:19717"
+  dentistryiq:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/dentistryiq
+    environment:
+      <<: *env
+      <<: *env-aerilon-staging
+      PORT: 80
+      EXPOSED_PORT: 9717
+      LIVERELOAD_PORT: 19717
+      TENANT_KEY: ebm_diq
+      CDN_IMAGE_HOSTNAME: img.dentistryiq.com
+      CDN_ASSET_HOSTNAME: cdn.dentistryiq.com
+    ports:
+      - "9717:80"
+      - "19717:19717"
 
   # perioimplantadvisory:
   #   <<: *node
