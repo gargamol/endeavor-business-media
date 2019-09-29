@@ -18,9 +18,9 @@ module.exports = {
     },
   },
   socialMediaLinks: [
-    { provider: 'linkedin', href: 'https://www.linkedin.com/showcase/leds-magazine/' },
-    { provider: 'twitter', href: 'https://twitter.com/ledsmagazine' },
-    { provider: 'facebook', href: 'https://www.facebook.com/LEDsMagazine?fref=ts' },
+    { provider: 'linkedin', href: 'https://www.linkedin.com/showcase/leds-magazine/', target: '_blank' },
+    { provider: 'twitter', href: 'https://twitter.com/ledsmagazine', target: '_blank' },
+    { provider: 'facebook', href: 'https://www.facebook.com/LEDsMagazine?fref=ts', target: '_blank' },
   ],
   gtm: {
     containerId: 'GTM-T29NVLB',
