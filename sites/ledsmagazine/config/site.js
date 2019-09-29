@@ -5,25 +5,25 @@ module.exports = {
   company: 'Endeavor Business Media, LLC',
   logos: {
     navbar: {
-      src: 'https://base.imgix.net/files/base/pennwell/lfw/logo.png?h=45',
+      src: 'https://base.imgix.net/files/base/pennwell/leds/logo.png?h=45',
       srcset: [
-        'https://base.imgix.net/files/base/pennwell/lfw/logo.png?h=90 2x',
+        'https://base.imgix.net/files/base/pennwell/leds/logo.png?h=90 2x',
       ],
     },
     footer: {
-      src: 'https://base.imgix.net/files/base/pennwell/lfw/logo.png?h=60',
+      src: 'https://base.imgix.net/files/base/pennwell/leds/logo.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/pennwell/lfw/logo.png?h=120 2x',
+        'https://base.imgix.net/files/base/pennwell/leds/logo.png?h=120 2x',
       ],
     },
   },
   socialMediaLinks: [
-    { provider: 'linkedin', href: 'http://www.linkedin.com/groups/Laser-Focus-World-2896249' },
-    { provider: 'twitter', href: 'https://twitter.com/LaserFocusWorld' },
-    { provider: 'facebook', href: 'https://www.facebook.com/pages/Laser-Focus-World/126899915297' },
+    { provider: 'linkedin', href: 'https://www.linkedin.com/showcase/leds-magazine/' },
+    { provider: 'twitter', href: 'https://twitter.com/ledsmagazine' },
+    { provider: 'facebook', href: 'https://www.facebook.com/LEDsMagazine?fref=ts' },
   ],
   gtm: {
-    containerId: 'GTM-M7H8VJG',
+    containerId: 'GTM-T29NVLB',
   },
   wufoo: {
     userName: 'cygnuscorporate',
