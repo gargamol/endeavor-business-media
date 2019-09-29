@@ -109,9 +109,9 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
   </@page>
   <@below-page>
     <if(type === "company")>
-      <div class="row">
-        <div class="column-list-flow__list">
-          <div class="col-12 mb-block">
+      <section class="page page--load-more page--website-section page--website-section-31730">
+        <div class="row">
+          <div class=" col-8 mb-block">
             <marko-web-query|{ nodes }|
               name="all-company-content"
               params={ companyId: id, limit: 6, includeContentTypes: ['Product', 'PressRelease'], queryFragment }
@@ -124,12 +124,11 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
               </website-content-list-flow>
             </marko-web-query>
           </div>
-          <div class="col-12 mb-block">
+          <div class="col-8 mb-block">
             <marko-web-query|{ nodes }|
               name="all-company-content"
               params={ companyId: id, limit: 6, includeContentTypes: ['Article', 'Blog', 'MediaGallery', 'News'], queryFragment }
             >
-              $ console.log(nodes);
               <website-content-list-flow nodes=nodes>
                 <@header>
                   <marko-web-link>Articles & News</marko-web-link>
@@ -138,12 +137,11 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
               </website-content-list-flow>
             </marko-web-query>
           </div>
-          <div class="col-12 mb-block">
+          <div class="col-8 mb-block">
             <marko-web-query|{ nodes }|
               name="all-company-content"
               params={ companyId: id, limit: 6, includeContentTypes: ['Video', 'Whitepaper', 'Document'], queryFragment }
             >
-              $ console.log(nodes);
               <website-content-list-flow nodes=nodes>
                 <@header>
                   <marko-web-link>Videos & Resources</marko-web-link>
@@ -153,7 +151,7 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
             </marko-web-query>
           </div>
         </div>
-      </div>
+      </section>
     </if>
     <marko-web-resolve-page|{ resolved, data: content }| node=pageNode>
       $ const section = resolved.getAsObject("primarySection");
