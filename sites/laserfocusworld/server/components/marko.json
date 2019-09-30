@@ -1,5 +1,6 @@
 {
   "taglib-imports": [
+    "./directory/marko.json",
     "./blocks/marko.json",
     "./flows/marko.json",
     "./nodes/marko.json"
@@ -15,8 +16,5 @@
     },
     "<below-container>": {},
     "<foot>": {}
-  },
-  "<website-facets>": {
-    "template": "./facets/index.marko"
   }
 }
