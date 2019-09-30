@@ -1,6 +1,6 @@
 const GAMConfiguration = require('@base-cms/marko-web-gam/config');
 
-const config = new GAMConfiguration('21687441225', { basePath: 'LFW' });
+const config = new GAMConfiguration('21687441225', { basePath: 'ILS' });
 
 config
   .setTemplate('LB', {
@@ -23,53 +23,61 @@ config
     { name: 'reskin', path: 'default/reskin' },
     { name: 'wa', path: 'default/wa' },
   ])
-  .setAliasAdUnits('detectors-imaging', [
-    { name: 'lb1', templateName: 'LB', path: 'detectors-imaging/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'detectors-imaging/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'detectors-imaging/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'detectors-imaging/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'detectors-imaging/load-more' },
-    { name: 'reskin', path: 'detectors-imaging/reskin' },
+  .setAliasAdUnits('cutting', [
+    { name: 'lb1', templateName: 'LB', path: 'cutting/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'cutting/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'cutting/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'cutting/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'cutting/load-more' },
+    { name: 'reskin', path: 'cutting/reskin' },
   ])
-  .setAliasAdUnits('lasers-sources', [
-    { name: 'lb1', templateName: 'LB', path: 'lasers-sources/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'lasers-sources/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'lasers-sources/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'lasers-sources/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'lasers-sources/load-more' },
-    { name: 'reskin', path: 'lasers-sources/reskin' },
+  .setAliasAdUnits('welding', [
+    { name: 'lb1', templateName: 'LB', path: 'welding/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'welding/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'welding/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'welding/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'welding/load-more' },
+    { name: 'reskin', path: 'welding/reskin' },
   ])
-  .setAliasAdUnits('optics', [
-    { name: 'lb1', templateName: 'LB', path: 'optics/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'optics/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'optics/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'optics/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'optics/load-more' },
-    { name: 'reskin', path: 'optics/reskin' },
+  .setAliasAdUnits('micromachining', [
+    { name: 'lb1', templateName: 'LB', path: 'micromachining/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'micromachining/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'micromachining/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'micromachining/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'micromachining/load-more' },
+    { name: 'reskin', path: 'micromachining/reskin' },
   ])
-  .setAliasAdUnits('fiber-optics', [
-    { name: 'lb1', templateName: 'LB', path: 'fiber-optics/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'fiber-optics/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'fiber-optics/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'fiber-optics/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'fiber-optics/load-more' },
-    { name: 'reskin', path: 'fiber-optics/reskin' },
+  .setAliasAdUnits('marking-engraving', [
+    { name: 'lb1', templateName: 'LB', path: 'marking-engraving/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'marking-engraving/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'marking-engraving/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'marking-engraving/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'marking-engraving/load-more' },
+    { name: 'reskin', path: 'marking-engraving/reskin' },
   ])
-  .setAliasAdUnits('software-accessories', [
-    { name: 'lb1', templateName: 'LB', path: 'software-accessories/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'software-accessories/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'software-accessories/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'software-accessories/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'software-accessories/load-more' },
-    { name: 'reskin', path: 'software-accessories/reskin' },
+  .setAliasAdUnits('surface-treatment', [
+    { name: 'lb1', templateName: 'LB', path: 'surface-treatment/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'surface-treatment/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'surface-treatment/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'surface-treatment/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'surface-treatment/load-more' },
+    { name: 'reskin', path: 'surface-treatment/reskin' },
   ])
-  .setAliasAdUnits('test-measurement', [
-    { name: 'lb1', templateName: 'LB', path: 'test-measurement/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'test-measurement/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'test-measurement/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'test-measurement/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'test-measurement/load-more' },
-    { name: 'reskin', path: 'test-measurement/reskin' },
+  .setAliasAdUnits('additive-manufacturing', [
+    { name: 'lb1', templateName: 'LB', path: 'additive-manufacturing/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'additive-manufacturing/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'additive-manufacturing/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'additive-manufacturing/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'additive-manufacturing/load-more' },
+    { name: 'reskin', path: 'additive-manufacturing/reskin' },
+  ])
+  .setAliasAdUnits('drilling', [
+    { name: 'lb1', templateName: 'LB', path: 'drilling/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'drilling/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'drilling/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'drilling/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'drilling/load-more' },
+    { name: 'reskin', path: 'drilling/reskin' },
   ]);
 
 module.exports = config;
