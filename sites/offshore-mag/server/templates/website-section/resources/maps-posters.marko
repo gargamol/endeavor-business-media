@@ -1,11 +1,11 @@
 import { getAsObject } from '@base-cms/object-path';
 import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
-import GAM from "../../../config/gam";
+import GAM from "../../../../config/gam";
 
+$ const { id, alias, name, pageNode } = data;
 $ const { site } = out.global;
 $ const section = getAsObject(data, 'section');
 $ const aliases = hierarchyAliases(section);
-$ const { id, alias, name, pageNode } = data;
 
 <marko-web-website-section-page-layout id=id alias=alias name=name>
   <@head>
@@ -22,26 +22,27 @@ $ const { id, alias, name, pageNode } = data;
     </marko-web-resolve-page>
   </@head>
   <@above-container>
-    <marko-web-resolve-page|{ data: section }| node=pageNode>
       <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "wa", aliases }) />
       <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "reskin", aliases }) />
-    </marko-web-resolve-page>
   </@above-container>
   <@page>
-    <marko-web-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
+      <marko-web-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
 
-    <div class="row">
-      <div class="col">
-        <div class="page-wrapper__header">
-          <default-theme-website-section-breadcrumbs section=section />
-          <h1 class="page-wrapper__title">${section.name}</h1>
-          <if(section.description)>
-            <p class="page-wrapper__description">${section.description}</p>
-          </if>
-        </div>
-      </div>
-    </div>
-
+      <marko-web-resolve-page|{ data: section }| node=pageNode>
+        <marko-web-page-wrapper>
+          <@section>
+            <div class="row">
+              <div class="col">
+                <default-theme-website-section-breadcrumbs section=section />
+                <marko-web-website-section-name tag="h1" class="page-wrapper__title" obj=section />
+                <if(section.description)>
+                  <p class="page-wrapper__description">${section.description}</p>
+                </if>
+              </div>
+            </div>
+          </@section>
+        </marko-web-page-wrapper>
+      </marko-web-resolve-page>
   </@page>
   <@below-page>
     <marko-web-resolve-page|{ data: section }| node=pageNode>
