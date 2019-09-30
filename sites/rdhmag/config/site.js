@@ -18,9 +18,9 @@ module.exports = {
     },
   },
   socialMediaLinks: [
-    { provider: 'linkedin', href: 'https://www.linkedin.com/showcase/4000114/' },
-    { provider: 'twitter', href: 'https://twitter.com/RDHmag' },
-    { provider: 'facebook', href: 'https://www.facebook.com/RDHMagazine' },
+    { provider: 'linkedin', href: 'https://www.linkedin.com/showcase/4000114/', target: '_blank' },
+    { provider: 'twitter', href: 'https://twitter.com/RDHmag', target: '_blank' },
+    { provider: 'facebook', href: 'https://www.facebook.com/RDHMagazine', target: '_blank' },
   ],
   gtm: {
     containerId: 'GTM-5ZXPSXX',
