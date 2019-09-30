@@ -36,7 +36,10 @@ $ const { id, alias, name, pageNode } = data;
           <div class="row">
             <div class="col">
               <default-theme-website-section-breadcrumbs section=section display-self=false />
-              <marko-web-website-section-name tag="h1" class="page-wrapper__deck" obj=section />
+              <marko-web-website-section-name tag="h1" class="page-wrapper__title" obj=section />
+              <if(section.description)>
+                <p class="page-wrapper__deck">${section.description}</p>
+              </if>
             </div>
           </div>
         </@section>
@@ -63,6 +66,9 @@ $ const { id, alias, name, pageNode } = data;
         >
           <website-content-list-flow nodes=nodes inner-justified=false class="mb-block">
             <@header>Featured Companies</@header>
+            <@node image-position="left">
+              <@image use-placeholder=false />
+            </@node>
           </website-content-list-flow>
         </marko-web-query>
 
@@ -71,25 +77,15 @@ $ const { id, alias, name, pageNode } = data;
           params={
             sectionId: id,
             limit: 5,
-            includeContentTypes: ["Product"],
-            queryFragment
-          }
-        >
-          <website-content-list-flow nodes=nodes inner-justified=false class="mb-block">
-            <@header>Latest Products</@header>
-          </website-content-list-flow>
-        </marko-web-query>
-
-        <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
-          params={
-            sectionId: id,
-            limit: 6,
+            includeContentTypes: ["Company"],
             queryFragment
           }
         >
           <website-content-list-flow nodes=nodes inner-justified=false>
-            <@header>Recent Content</@header>
+            <@header>Latest Companies</@header>
+            <@node image-position="left">
+              <@image use-placeholder=false />
+            </@node>
           </website-content-list-flow>
         </marko-web-query>
 
@@ -101,13 +97,16 @@ $ const { id, alias, name, pageNode } = data;
     <marko-web-resolve-page|{ data: section }| node=pageNode>
       $ const aliases = hierarchyAliases(section);
       <marko-web-load-more
-        component-name="incremented-list-load-more-flow"
+        header="More Companies"
+        component-name="content-list-flow"
         component-input={
-          aliases,
+          class: "mb-block",
+          innerJustified: false,
+          node: { imagePosition: "left", image: { usePlaceholder: false } }
         }
         fragment-name="content-list"
         query-name="website-scheduled-content"
-        query-params={ sectionId: id, limit: 12, skip: 12 }
+        query-params={ sectionId: id, includeContentTypes: ["Company"], limit: 18, skip: 5 }
         page-input={ for: "website-section", id }
       />
     </marko-web-resolve-page>
