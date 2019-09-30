@@ -5,7 +5,6 @@ import GAM from '@base-cms/marko-web-gam/browser';
 import GCSE from '@base-cms/marko-web-gcse/browser';
 import RevealAd from '@base-cms/marko-web-reveal-ad/browser';
 import Common from '@base-cms-websites/package-common/browser';
-import AutoScroll from './auto-scroll.vue';
 
 DefaultTheme(Browser);
 GTM(Browser);
@@ -13,6 +12,5 @@ GAM(Browser);
 GCSE(Browser);
 RevealAd(Browser);
 Common(Browser);
-Browser.registerComponent('WebsiteAutoScroll', AutoScroll);
 
 export default Browser;
