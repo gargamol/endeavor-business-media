@@ -479,21 +479,21 @@ services:
       - "9735:80"
       - "19735:19735"
 
-  # intelligent-aerospace:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/intelligent-aerospace
-  #   environment:
-  #     <<: *env
-  #     <<: *env-aerilon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9736
-  #     LIVERELOAD_PORT: 19736
-  #     TENANT_KEY: ebm_ias
-  #     SITE_ID: 5ca4da3775a2546b050041a7
-  #   ports:
-  #     - "9736:80"
-  #     - "19736:19736"
+  intelligent-aerospace:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/intelligent-aerospace
+    environment:
+      <<: *env
+      <<: *env-aerilon-staging
+      PORT: 80
+      EXPOSED_PORT: 9736
+      LIVERELOAD_PORT: 19736
+      TENANT_KEY: ebm_ias
+      SITE_ID: 5ca4da3775a2546b050041a7
+    ports:
+      - "9736:80"
+      - "19736:19736"
 
   ledsmagazine:
     <<: *node
