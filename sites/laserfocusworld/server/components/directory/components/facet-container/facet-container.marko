@@ -1,16 +1,14 @@
 $ const { facets, title } = input;
+
 <if(facets.length)>
-  <div class="node-list node-list--inner-justified node-list--nav-facets">
+  <div class="directory-facets">
     <if(title)>
-      <div class="node-list__header">${title}</div>
+      <h3 class="directory-facets__title">${title}</h3>
     </if>
-    <div class=`node-list__nodes node-list__nodes--${input.paramName}`>
-      <facet-list
-        facets=facets
-        param-name=input.paramName
-        active-id=input.activeId
-        active-ids=input.activeIds
-      />
-    </div>
+    <facet-list
+      facets=facets
+      active-id=input.activeId
+      active-ids=input.activeIds
+    />
   </div>
 </if>

@@ -1,11 +1,7 @@
-import querystring from 'querystring';
-
-$ const { req } = out.global;
-$ const block = 'nav-facets';
+$ const block = "directory-facets";
 
 $ const {
   facets,
-  paramName,
   activeId,
   activeIds,
 } = input;
@@ -29,19 +25,26 @@ $ const isActiveId = (id) => (activeId && (`${activeId}` === `${id}`));
         </a>
         <if(Array.isArray(facet.values))>
           <default-theme-menu-toggle-button
-              class-name=`${block}__toggle`
-              targets=[`.${block}__item--${facet.id}`]
-              toggle-class=`${block}__item--open`
-              initially-expanded=isOpen
-              icon-modifiers=["sm"]
-              icon-name="plus"
-              expanded-icon-name="dash"
+            class-name=`${block}__toggle`
+            targets=[`.${block}__item--${facet.id}`]
+            toggle-class=`${block}__item--open`
+            initially-expanded=isOpen
+            icon-modifiers=["sm"]
+            icon-name="plus"
+            expanded-icon-name="dash"
           />
         </if>
         <if(isActive)>
-          <marko-web-browser-component name="WebsiteAutoScroll" props={ containerTarget: `.node-list__nodes--${paramName} > .${block}__list`, elementTarget: '.nav-facets__link--active' }  />
+          <marko-web-browser-component
+            name="WebsiteAutoScroll"
+            props={
+              containerTarget: `.${block} > .${block}__list`,
+              elementTarget: `.${block}__link--active`,
+              offset: -12,
+            }
+          />
         </if>
-        <facet-list facets=facet.values param-name=paramName active-id=activeId active-ids=activeIds />
+        <facet-list facets=facet.values active-id=activeId active-ids=activeIds />
       </div>
     </for>
   </div>

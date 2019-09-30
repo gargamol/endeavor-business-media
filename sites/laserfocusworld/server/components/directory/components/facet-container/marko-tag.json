@@ -4,10 +4,6 @@
     "required": true
   },
   "@title": "string",
-  "@param-name": {
-    "type": "string",
-    "required": true
-  },
   "@active-id": {
     "type": "string",
     "required": true
