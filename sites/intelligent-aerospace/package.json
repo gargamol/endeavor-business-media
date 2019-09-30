@@ -1,8 +1,8 @@
 {
-  "name": "@base-cms-websites/laserfocusworld",
+  "name": "@base-cms-websites/intelligent-aerospace",
   "version": "0.0.3",
-  "author": "Jacob Bare <jacob@limit0.io>",
-  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/laserfocusworld",
+  "author": "Brandon Krigbaum <brandonbk@gmail.com>",
+  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/intelligent-aerospace",
   "license": "MIT",
   "private": true,
   "scripts": {
