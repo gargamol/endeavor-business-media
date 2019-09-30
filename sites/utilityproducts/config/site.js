@@ -23,7 +23,7 @@ module.exports = {
     { provider: 'facebook', href: 'http://www.facebook.com/pages/Utility-Products-Magazine/133739816672957' },
   ],
   gtm: {
-    containerId: 'GTM-PSGKX8S',
+    containerId: 'GTM-52ZXGBW',
   },
   wufoo: {
     userName: 'cygnuscorporate',
