@@ -1,5 +1,5 @@
 const { withContent } = require('@base-cms/marko-web/middleware');
-const company = require('../templates/company');
+const company = require('../templates/content/company');
 const content = require('../templates/content');
 const whitepaper = require('../templates/content/whitepaper');
 const queryFragment = require('../graphql/fragments/content-page');
