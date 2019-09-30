@@ -733,27 +733,27 @@
     marko "^4.18.13"
     yargs "^14.1.0"
 
-"@base-cms/marko-web-gam@^1.0.0-beta.1":
-  version "1.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/@base-cms/marko-web-gam/-/marko-web-gam-1.0.0-beta.1.tgz#1ee8ece68c7ecdb951861cf98d2e7f0d6d06f3b1"
-  integrity sha512-uCdIy3uBoiXS7lZ07bVhbtEMdpybwlD76ijxD7f/Md52qBZ+N/dBkryMPibOZnCdTANgLx38obWKV64QoAAflw==
+"@base-cms/marko-web-gam@^1.0.0-beta.2":
+  version "1.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/@base-cms/marko-web-gam/-/marko-web-gam-1.0.0-beta.2.tgz#3ed6aef5ff1f688204d4453b39e1d4ce30e442f1"
+  integrity sha512-Cq9BRT8Uni6crE2/n3RPuiInj6FJf3SMvgCodUi66PzeSEgR5/7mkYxh+GoqNBxR8HvqUXmxgWhMqjl9TmQNZA==
   dependencies:
     "@base-cms/object-path" "^1.0.0-beta.1"
     "@base-cms/utils" "^1.0.0-beta.1"
     scrollmagic "^2.0.7"
 
-"@base-cms/marko-web-gcse@^1.0.0-beta.1":
-  version "1.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/@base-cms/marko-web-gcse/-/marko-web-gcse-1.0.0-beta.1.tgz#93c4e604ceb7a38ec5770063faa90cc033f25f92"
-  integrity sha512-YoO4ZY4zNEe0/H80R0GaELEr82unI0DowxkQp9bj0bOg8EBJeF+pqqGVLvTPXHLwdlAsSONsx2UFNNL05gWPBQ==
+"@base-cms/marko-web-gcse@^1.0.0-beta.2":
+  version "1.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/@base-cms/marko-web-gcse/-/marko-web-gcse-1.0.0-beta.2.tgz#6aaa161ddc92eaf37f65555dca532f97715801b9"
+  integrity sha512-8ZAmBqd5lpezOn9csf5cIQUK1PT1cmNJocQUqiLTxZ4iVDfdgNaKstMfKOreTznzhFgwtpsGE1nvWJZhRVtKlA==
   dependencies:
     "@base-cms/object-path" "^1.0.0-beta.1"
     "@base-cms/utils" "^1.0.0-beta.1"
 
-"@base-cms/marko-web-gtm@^1.0.0-beta.1":
-  version "1.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/@base-cms/marko-web-gtm/-/marko-web-gtm-1.0.0-beta.1.tgz#895873db375f9eddde4ee799d7094a9c6b46df03"
-  integrity sha512-Ga0rkSDfhpr9MQTCpCeqGRrpgahPkzh2lxRMAg6ndlnMbZNd2XVctyWTNonNsBMvEY3zrn7Wo66vieMi16EAxQ==
+"@base-cms/marko-web-gtm@^1.0.0-beta.2":
+  version "1.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/@base-cms/marko-web-gtm/-/marko-web-gtm-1.0.0-beta.2.tgz#561cad9b5bc97ddacd6ac8ae3b0acf299e13f9b3"
+  integrity sha512-HfMeXV/4jrrpj/4mEffve06QjrO5PEUw5YOltLpgYnx3m5sq2WaH5TOU+cQ/dBZvHS2Cl8WNxjKomjkShxEQtQ==
   dependencies:
     "@base-cms/object-path" "^1.0.0-beta.1"
     "@base-cms/utils" "^1.0.0-beta.1"
@@ -765,27 +765,27 @@
   resolved "https://registry.yarnpkg.com/@base-cms/marko-web-icons/-/marko-web-icons-1.0.0-beta.1.tgz#dfcc9e6e50e629bfee5475c2e97be66fbb68f9d8"
   integrity sha512-x6wYLka8cCHAObnv3dIopeZZdcpTTvT5oYdnT0hv4L/eKjcAUeOSLn+BY1BYf88yrpxGk7RDOsKtHuKX5O3ruQ==
 
-"@base-cms/marko-web-native-x@^1.0.0-beta.1":
-  version "1.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/@base-cms/marko-web-native-x/-/marko-web-native-x-1.0.0-beta.1.tgz#198b6a8d702ef98d3bf8a22b0fba66c9564284d7"
-  integrity sha512-YMQvUDvJlhpONpOPlkd9gCP/dNbVtcSKLWdDcNY9UQcAK1nN0AWriB4hRxa/SHiWFYV9EIzld2dEMIJqrzYASA==
+"@base-cms/marko-web-native-x@^1.0.0-beta.2":
+  version "1.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/@base-cms/marko-web-native-x/-/marko-web-native-x-1.0.0-beta.2.tgz#3e351a7804bcb9dd509134f49879fe49b6be7196"
+  integrity sha512-wxXpDbt+tV0IqE5cRDmFs3S1y7COfbySCOVbh85yYO3jThxeeHis/14u4K31jHOaHVhqCmdSPjznp0Qh4wXcSw==
   dependencies:
     "@base-cms/object-path" "^1.0.0-beta.1"
     "@base-cms/utils" "^1.0.0-beta.1"
     node-fetch "^2.6.0"
 
-"@base-cms/marko-web-reveal-ad@^1.0.0-beta.1":
-  version "1.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/@base-cms/marko-web-reveal-ad/-/marko-web-reveal-ad-1.0.0-beta.1.tgz#4533b2c409f1b49c00bb3c1c14eaa60d747c5405"
-  integrity sha512-f85LKopLsnEv3YruCZKF6Cpbctvz2Dxdt3MNA3muBHHtMCMCPsHBnSk9rAeSF8N/DdxDyfMsA1CVfgvJBbOGMA==
+"@base-cms/marko-web-reveal-ad@^1.0.0-beta.2":
+  version "1.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/@base-cms/marko-web-reveal-ad/-/marko-web-reveal-ad-1.0.0-beta.2.tgz#6bca442e1e410ff7aee17aa348988f6cd896f1d3"
+  integrity sha512-UIPgN0b0x9tiPgAMRB0pBG+4JwwnsHUDZcUt7XezSODncV1FvYO/hUBeMBwgb+kEfi0/zhTSdiahev7CUfRYWg==
   dependencies:
     "@base-cms/object-path" "^1.0.0-beta.1"
     "@base-cms/utils" "^1.0.0-beta.1"
 
-"@base-cms/marko-web-theme-default@^1.0.0-beta.1":
-  version "1.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/@base-cms/marko-web-theme-default/-/marko-web-theme-default-1.0.0-beta.1.tgz#5dd9440227c14fcd34bd7b82a3f5102cb5ae8374"
-  integrity sha512-nQAYgolmaSA1fbWId9kykDD+OQs7NpenhYoCD3vJW6xvmvs30kdrNdnorcNO0QAMF8Zml5IxFFWCSOSA3g1HQA==
+"@base-cms/marko-web-theme-default@^1.0.0-beta.2":
+  version "1.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/@base-cms/marko-web-theme-default/-/marko-web-theme-default-1.0.0-beta.2.tgz#14ac32c3805b6e28aeac270f181456ab8688d6db"
+  integrity sha512-jM1PxZbeqsMMlVfsAlAscw+0rCEzimvadyUc8Nbo2Ulrw9robKQFUAxaCHANMmLOo8yOw57Kl5SiIOg4qOvWVw==
   dependencies:
     "@base-cms/marko-web-icons" "^1.0.0-beta.1"
     "@base-cms/object-path" "^1.0.0-beta.1"
