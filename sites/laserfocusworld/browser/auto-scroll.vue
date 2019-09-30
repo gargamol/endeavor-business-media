@@ -13,6 +13,10 @@ export default {
       type: String,
       required: true,
     },
+    offset: {
+      type: Number,
+      default: 0,
+    },
   },
   created() {
     if (document.readyState === 'loading') {
@@ -29,7 +33,7 @@ export default {
       const element = document.querySelector(this.elementTarget);
       if (container && element) {
         const offset = element.getBoundingClientRect().top - container.getBoundingClientRect().top;
-        container.scrollTop = offset;
+        container.scrollTop = offset + this.offset;
       }
     },
   },
