@@ -495,21 +495,21 @@ services:
   #     - "9736:80"
   #     - "19736:19736"
 
-  # ledsmagazine:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/ledsmagazine
-  #   environment:
-  #     <<: *env
-  #     <<: *env-aerilon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9737
-  #     LIVERELOAD_PORT: 19737
-  #     TENANT_KEY: ebm_leds
-  #     SITE_ID: 5ca78b9f75a254fc0d0041a7
-  #   ports:
-  #     - "9737:80"
-  #     - "19737:19737"
+  ledsmagazine:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/ledsmagazine
+    environment:
+      <<: *env
+      <<: *env-aerilon-staging
+      PORT: 80
+      EXPOSED_PORT: 9737
+      LIVERELOAD_PORT: 19737
+      TENANT_KEY: ebm_leds
+      SITE_ID: 5ca78b9f75a254fc0d0041a7
+    ports:
+      - "9737:80"
+      - "19737:19737"
 
   lightwaveonline:
     <<: *node
