@@ -43,26 +43,26 @@ $ const { id, alias, name, pageNode } = data;
           <div class="col-lg-6 mb-block">
             <marko-web-query|{ nodes }|
               name="website-scheduled-content"
-              params={ sectionAlias: "macro-op-ed", limit: 3, queryFragment }
+              params={ sectionAlias: "macro-op-ed", limit: 4, queryFragment }
             >
               <website-content-list-flow nodes=nodes>
                 <@header>
                   <marko-web-link href="/macro-op-ed">Macro / Op-Ed</marko-web-link>
                 </@header>
-                <@native-x index=2 name="list1" aliases=["macro-op-ed"] />
+                <@native-x index=3 name="list1" aliases=["macro-op-ed"] />
               </website-content-list-flow>
             </marko-web-query>
           </div>
           <div class="col-lg-6 mb-block">
             <marko-web-query|{ nodes }|
               name="website-scheduled-content"
-              params={ sectionAlias: "practice", limit: 3, queryFragment }
+              params={ sectionAlias: "practice", limit: 4, queryFragment }
             >
               <website-content-list-flow nodes=nodes>
                 <@header>
                   <marko-web-link href="/practice">Practice</marko-web-link>
                 </@header>
-                <@native-x index=2 name="list1" aliases=["practice"] />
+                <@native-x index=3 name="list1" aliases=["practice"] />
               </website-content-list-flow>
             </marko-web-query>
           </div>
@@ -132,8 +132,7 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="all-published-content"
-          params={ contentTypes: ["Whitepaper"], limit: 4, queryFragment }
-        >
+          params={ contentTypes: ["Whitepaper"], limit: 4, queryFragment }>
           <website-content-list-flow nodes=nodes display-image=false>
             <@header>
               <marko-web-link href="/white-papers">White Papers</marko-web-link>
@@ -162,7 +161,7 @@ $ const { id, alias, name, pageNode } = data;
         component-input={ aliases }
         fragment-name="content-list"
         query-name="website-scheduled-content"
-        query-params={ sectionId: id, limit: 14, skip: 5 }
+        query-params={ sectionId: id, limit: 12, skip: 10 }
         max-pages=0
         page-input={ for: "website-section", id }
       />
