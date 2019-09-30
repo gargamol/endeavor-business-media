@@ -49,7 +49,7 @@ $ const { id, alias, name, pageNode } = data;
                 <@header>
                   <marko-web-link href="/ergonomics">Ergonomics</marko-web-link>
                 </@header>
-                <@native-x index=2 name="list1" aliases=["ergonomics"] />
+                <@native-x index=3 name="list1" aliases=["ergonomics"] />
               </website-content-list-flow>
             </marko-web-query>
           </div>
@@ -62,7 +62,7 @@ $ const { id, alias, name, pageNode } = data;
                 <@header>
                   <marko-web-link href="/infection-control">Infection Control</marko-web-link>
                 </@header>
-                <@native-x index=2 name="list1" aliases=["infection-control"] />
+                <@native-x index=3 name="list1" aliases=["infection-control"] />
               </website-content-list-flow>
             </marko-web-query>
           </div>
@@ -104,7 +104,7 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="all-published-content"
-          params={ contentTypes: ["Webinar"], limit: 3, queryFragment }
+          params={ contentTypes: ["Webinar"], limit: 5, queryFragment }
         >
           <website-content-list-flow nodes=nodes display-image=false>
             <@header>
@@ -119,13 +119,13 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionAlias: "career-profession", limit: 3, queryFragment }
+          params={ sectionAlias: "career-profession", limit: 5, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
             <@header>
               <marko-web-link href="/career-profession">Career & Profession</marko-web-link>
             </@header>
-            <@native-x index=2 name="list1" aliases=["career-profession"] />
+            <@native-x index=4 name="list1" aliases=["career-profession"] />
           </website-content-list-flow>
         </marko-web-query>
       </div>
@@ -162,7 +162,7 @@ $ const { id, alias, name, pageNode } = data;
         component-input={ aliases }
         fragment-name="content-list"
         query-name="website-scheduled-content"
-        query-params={ sectionId: id, limit: 14, skip: 5 }
+        query-params={ sectionId: id, limit: 10, skip: 12 }
         max-pages=0
         page-input={ for: "website-section", id }
       />
