@@ -3,8 +3,6 @@ import nxConfig from "../../../config/native-x";
 
 $ const nodes = getAsArray(input, "nodes");
 $ const nativeX = getAsObject(input, "nativeX");
-$ const displayImage = input.displayImage != null ? input.displayImage : true;
-$ const withTeaser = input.withTeaser != null ? input.withTeaser : false;
 $ const innerJustified = input.innerJustified != null ? input.innerJustified : true;
 
 <marko-web-node-list inner-justified=innerJustified class=input.class>
@@ -20,9 +18,8 @@ $ const innerJustified = input.innerJustified != null ? input.innerJustified : t
         config=nxConfig
       >
         <website-content-list-node
+          ...input.node
           node=nxNode
-          display-image=displayImage
-          with-teaser=withTeaser
           attrs=containerAttrs
           link-attrs=linkAttrs
         />

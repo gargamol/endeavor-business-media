@@ -1,6 +1,7 @@
 {
   "<website-content-list-node>": {
     "template": "./content-list.marko",
+    "<image>": {},
     "@node": "object",
     "@display-image": {
       "type": "boolean",
