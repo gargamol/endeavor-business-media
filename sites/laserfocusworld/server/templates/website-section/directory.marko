@@ -66,7 +66,7 @@ $ const { id, alias, name, pageNode } = data;
         >
           <website-content-list-flow nodes=nodes inner-justified=false class="mb-block">
             <@header>Featured Companies</@header>
-            <@node image-position="left">
+            <@node image-position="left" with-teaser=true>
               <@image use-placeholder=false />
             </@node>
           </website-content-list-flow>
@@ -83,7 +83,7 @@ $ const { id, alias, name, pageNode } = data;
         >
           <website-content-list-flow nodes=nodes inner-justified=false>
             <@header>Latest Companies</@header>
-            <@node image-position="left">
+            <@node image-position="left" with-teaser=true>
               <@image use-placeholder=false />
             </@node>
           </website-content-list-flow>
@@ -102,7 +102,7 @@ $ const { id, alias, name, pageNode } = data;
         component-input={
           class: "mb-block",
           innerJustified: false,
-          node: { imagePosition: "left", image: { usePlaceholder: false } }
+          node: { imagePosition: "left", withTeaser: true, image: { usePlaceholder: false } }
         }
         fragment-name="content-list"
         query-name="website-scheduled-content"
