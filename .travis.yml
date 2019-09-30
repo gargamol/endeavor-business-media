@@ -100,10 +100,10 @@ jobs:
     #   script: deploy/index.js hpnonline picon
     #   install: skip
 
-    # - stage: deploy
-    #   name: Industrial Laser Solutions
-    #   script: deploy/index.js industrial-lasers aerilon
-    #   install: skip
+    - stage: deploy
+      name: Industrial Laser Solutions
+      script: deploy/index.js industrial-lasers aerilon
+      install: skip
 
     # - stage: deploy
     #   name: Intelligent Aerospace

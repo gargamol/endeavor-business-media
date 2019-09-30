@@ -463,21 +463,21 @@ services:
   #     - "9734:80"
   #     - "19734:19734"
 
-  # industrial-lasers:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/industrial-lasers
-  #   environment:
-  #     <<: *env
-  #     <<: *env-aerilon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9735
-  #     LIVERELOAD_PORT: 19735
-  #     TENANT_KEY: ebm_ils
-  #     SITE_ID: 5ca43ed575a2546d050041a7
-  #   ports:
-  #     - "9735:80"
-  #     - "19735:19735"
+  industrial-lasers:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/industrial-lasers
+    environment:
+      <<: *env
+      <<: *env-aerilon-staging
+      PORT: 80
+      EXPOSED_PORT: 9735
+      LIVERELOAD_PORT: 19735
+      TENANT_KEY: ebm_ils
+      SITE_ID: 5ca43ed575a2546d050041a7
+    ports:
+      - "9735:80"
+      - "19735:19735"
 
   # intelligent-aerospace:
   #   <<: *node
