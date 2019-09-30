@@ -18,9 +18,9 @@ module.exports = {
     },
   },
   socialMediaLinks: [
-    { provider: 'linkedin', href: 'https://www.linkedin.com/company/offshore-magazine' },
-    { provider: 'twitter', href: 'https://twitter.com/offshoremgzn' },
-    { provider: 'facebook', href: 'https://www.facebook.com/offshoremagazine' },
+    { provider: 'linkedin', href: 'https://www.linkedin.com/company/offshore-magazine', target: '_blank' },
+    { provider: 'twitter', href: 'https://twitter.com/offshoremgzn', target: '_blank' },
+    { provider: 'facebook', href: 'https://www.facebook.com/offshoremagazine', target: '_blank' },
   ],
   gtm: {
     containerId: 'GTM-NFS8BVJ',

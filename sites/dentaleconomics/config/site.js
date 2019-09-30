@@ -18,9 +18,9 @@ module.exports = {
     },
   },
   socialMediaLinks: [
-    { provider: 'linkedin', href: 'https://www.linkedin.com/company/dental-economics?trk=biz-brand-tree-co-name' },
-    { provider: 'twitter', href: 'https://twitter.com/dentalmagazine' },
-    { provider: 'facebook', href: 'https://www.facebook.com/DentalEconomics' },
+    { provider: 'linkedin', href: 'https://www.linkedin.com/company/dental-economics?trk=biz-brand-tree-co-name', target: '_blank' },
+    { provider: 'twitter', href: 'https://twitter.com/dentalmagazine', target: '_blank' },
+    { provider: 'facebook', href: 'https://www.facebook.com/DentalEconomics', target: '_blank' },
   ],
   gtm: {
     containerId: 'GTM-58C63G3',
