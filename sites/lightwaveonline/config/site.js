@@ -23,7 +23,7 @@ module.exports = {
     { provider: 'facebook', href: 'https://www.facebook.com/LightwaveOnline', target: '_blank' },
   ],
   gtm: {
-    containerId: 'GTM-M3B7WXJ',
+    containerId: 'GTM-5B8WRGS',
   },
   wufoo: {
     userName: 'cygnuscorporate',

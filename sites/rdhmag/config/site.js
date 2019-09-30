@@ -23,7 +23,7 @@ module.exports = {
     { provider: 'facebook', href: 'https://www.facebook.com/RDHMagazine' },
   ],
   gtm: {
-    containerId: 'GTM-54D4B9T',
+    containerId: 'GTM-5ZXPSXX',
   },
   wufoo: {
     userName: 'cygnuscorporate',

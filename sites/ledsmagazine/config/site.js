@@ -23,7 +23,7 @@ module.exports = {
     { provider: 'facebook', href: 'https://www.facebook.com/LEDsMagazine?fref=ts', target: '_blank' },
   ],
   gtm: {
-    containerId: 'GTM-T29NVLB',
+    containerId: 'GTM-PLNZ46S',
   },
   wufoo: {
     userName: 'cygnuscorporate',

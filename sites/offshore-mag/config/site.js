@@ -23,7 +23,7 @@ module.exports = {
     { provider: 'facebook', href: 'https://www.facebook.com/offshoremagazine' },
   ],
   gtm: {
-    containerId: 'GTM-PQK8MQK',
+    containerId: 'GTM-NFS8BVJ',
   },
   wufoo: {
     userName: 'cygnuscorporate',

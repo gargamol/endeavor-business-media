@@ -23,7 +23,7 @@ module.exports = {
     { provider: 'facebook', href: 'https://www.facebook.com/industriallasersolutions', target: '_blank' },
   ],
   gtm: {
-    containerId: 'GTM-P8Q22J8',
+    containerId: 'GTM-K9WQRTW',
   },
   wufoo: {
     userName: 'cygnuscorporate',
