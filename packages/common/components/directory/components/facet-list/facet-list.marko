@@ -20,7 +20,7 @@ $ const isActiveId = (id) => (activeId && (`${activeId}` === `${id}`));
       $ if (isActive) linkClasses.push(`${block}__link--active`);
 
       <div class=classNames>
-        <a class=linkClasses href=facet.alias>
+        <a class=linkClasses href=facet.href>
           ${facet.name}
         </a>
         <if(Array.isArray(facet.values))>
