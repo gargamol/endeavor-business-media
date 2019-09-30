@@ -1,5 +1,5 @@
 import { getAsObject, getAsArray, get } from '@base-cms/object-path';
-import hierarchyAliases from '@endeavorb2b/base-website-common/utils/website-section/hierarchy-aliases';
+import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
 import GAM from "../../../config/gam";
 
 $ const { id, alias, name, pageNode } = data;
@@ -12,6 +12,7 @@ $ const adSlots = { "gpt-ad-lb2":   GAM.getAdUnit({ name: "lb2", aliases }), }
   <@head>
     <marko-web-gtm-website-section-context|{ context }| alias=alias>
       <marko-web-gtm-push data=context />
+      <marko-web-gam-slots slots=adSlots />
     </marko-web-gtm-website-section-context>
   </@head>
   <@above-container>
@@ -21,65 +22,35 @@ $ const adSlots = { "gpt-ad-lb2":   GAM.getAdUnit({ name: "lb2", aliases }), }
     </marko-web-resolve-page>
   </@above-container>
   <@page>
-    <div class="row">
-      <div class="col">
-        <div class="page-wrapper__header">
-          <nav class="breadcrumbs" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item">
-                <a href="/" title="Home">Home</a>
-              </li>
-              <li class="breadcrumb-item">
-                <a href="/products" title="Products">Products</a>
-              </li>
-              <li class="breadcrumb-item">${section.name}</li>
-            </ol>
-          </nav>
-          <div class="page-wrapper__title">
-            ${section.name}
+    <marko-web-resolve-page|{ data: section }| node=pageNode>
+      <marko-web-page-wrapper>
+        <@section>
+          <div class="row">
+            <div class="col">
+              <default-theme-website-section-breadcrumbs section=section />
+              <marko-web-website-section-name tag="h1" class="page-wrapper__title" obj=section />
+              <div class="page-wrapper__description">
+                ${section.description}
+              </div>
+              <div class="page-wrapper__contents">
+                <p><em>Please Note: Samples are available to dental professionals located in the United States.</em></p>
+                <marko-web-gam-display-ad id="gpt-ad-lb2" modifiers=['inline'] />
+                <marko-web-gam-display-ad id="gpt-ad-lb2" modifiers=['inline'] />
+                <marko-web-gam-display-ad id="gpt-ad-lb2" modifiers=['inline'] />
+                <marko-web-gam-display-ad id="gpt-ad-lb2" modifiers=['inline'] />
+                <marko-web-gam-display-ad id="gpt-ad-lb2" modifiers=['inline'] />
+                <marko-web-gam-display-ad id="gpt-ad-lb2" modifiers=['inline'] />
+                <marko-web-gam-display-ad id="gpt-ad-lb2" modifiers=['inline'] />
+                <marko-web-gam-display-ad id="gpt-ad-lb2" modifiers=['inline'] />
+                <marko-web-gam-display-ad id="gpt-ad-lb2" modifiers=['inline'] />
+                <marko-web-gam-display-ad id="gpt-ad-lb2" modifiers=['inline'] />
+                <h4>Claim your free sample offers today by clicking on the above ads and filling out the form.</h4>
+                <p>* Please Note: Samples are available to dental professionals located in the United States. Samples are limited to one sample of each product per person. Sponsoring companies will receive the contact information of sample recipients to provide follow-up information and specials offers. Please e-mail <a href="mailto:darlenes@pennwell.com">darlenes@pennwell.com</a> if you do not want your contact information shared with the participating companies.</p>
+              </div>
+            </div>
           </div>
-          <div class="page-wrapper__description">
-            ${section.description}
-          </div>
-        </div>
-        <div class="page-wrapper__contents">
-          <p><em>Please Note: Samples are available to dental professionals located in the United States.</em></p>
-          <marko-web-gam-display-ad id="gpt-ad-lb2" modifiers=['inline'] />
-          <marko-web-gam-display-ad id="gpt-ad-lb2" modifiers=['inline'] />
-          <marko-web-gam-display-ad id="gpt-ad-lb2" modifiers=['inline'] />
-          <marko-web-gam-display-ad id="gpt-ad-lb2" modifiers=['inline'] />
-          <marko-web-gam-display-ad id="gpt-ad-lb2" modifiers=['inline'] />
-          <marko-web-gam-display-ad id="gpt-ad-lb2" modifiers=['inline'] />
-          <marko-web-gam-display-ad id="gpt-ad-lb2" modifiers=['inline'] />
-          <marko-web-gam-display-ad id="gpt-ad-lb2" modifiers=['inline'] />
-          <marko-web-gam-display-ad id="gpt-ad-lb2" modifiers=['inline'] />
-          <marko-web-gam-display-ad id="gpt-ad-lb2" modifiers=['inline'] />
-          <h4>Claim your free sample offers today by clicking on the above ads and filling out the form.</h4>
-          <p>* Please Note: Samples are available to dental professionals located in the United States. Samples are limited to one sample of each product per person. Sponsoring companies will receive the contact information of sample recipients to provide follow-up information and specials offers. Please e-mail <a href="mailto:darlenes@pennwell.com">darlenes@pennwell.com</a> if you do not want your contact information shared with the participating companies.</p>
-        </div>
-      </div>
-    </div>
+        </@section>
+      </marko-web-page-wrapper>
+    </marko-web-resolve-page>
   </@page>
-  <@below-page>
-    <marko-web-resolve-page|{ data: section }| node=pageNode>
-      $ const aliases = hierarchyAliases(section);
-      <marko-web-load-more
-        component-name="content-load-more-flow"
-        component-input={
-          aliases,
-          nativeX: { index: 0, name: 'card', aliases },
-        }
-        fragment-name="content-list"
-        query-name="website-scheduled-content"
-        query-params={ sectionId: id, limit: 14, skip: 12 }
-        page-input={ for: "website-section", id }
-      />
-    </marko-web-resolve-page>
-  </@below-page>
-  <@foot>
-    <marko-web-resolve-page|{ data: section }| node=pageNode>
-      $ const aliases = hierarchyAliases(section);
-      <marko-web-gam-fixed-ad-bottom ...GAM.getAdUnit({ name: "lb2", aliases }) refresh-interval=0 />
-    </marko-web-resolve-page>
-  </@foot>
 </marko-web-website-section-page-layout>
