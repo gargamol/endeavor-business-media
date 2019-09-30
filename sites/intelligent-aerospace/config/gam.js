@@ -1,6 +1,6 @@
 const GAMConfiguration = require('@base-cms/marko-web-gam/config');
 
-const config = new GAMConfiguration('21687441225', { basePath: 'LFW' });
+const config = new GAMConfiguration('21687441225', { basePath: 'IAS' });
 
 config
   .setTemplate('LB', {
@@ -23,53 +23,61 @@ config
     { name: 'reskin', path: 'default/reskin' },
     { name: 'wa', path: 'default/wa' },
   ])
-  .setAliasAdUnits('detectors-imaging', [
-    { name: 'lb1', templateName: 'LB', path: 'detectors-imaging/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'detectors-imaging/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'detectors-imaging/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'detectors-imaging/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'detectors-imaging/load-more' },
-    { name: 'reskin', path: 'detectors-imaging/reskin' },
+  .setAliasAdUnits('commercial', [
+    { name: 'lb1', templateName: 'LB', path: 'commercial/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'commercial/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'commercial/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'commercial/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'commercial/load-more' },
+    { name: 'reskin', path: 'commercial/reskin' },
   ])
-  .setAliasAdUnits('lasers-sources', [
-    { name: 'lb1', templateName: 'LB', path: 'lasers-sources/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'lasers-sources/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'lasers-sources/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'lasers-sources/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'lasers-sources/load-more' },
-    { name: 'reskin', path: 'lasers-sources/reskin' },
+  .setAliasAdUnits('military', [
+    { name: 'lb1', templateName: 'LB', path: 'military/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'military/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'military/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'military/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'military/load-more' },
+    { name: 'reskin', path: 'military/reskin' },
   ])
-  .setAliasAdUnits('optics', [
-    { name: 'lb1', templateName: 'LB', path: 'optics/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'optics/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'optics/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'optics/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'optics/load-more' },
-    { name: 'reskin', path: 'optics/reskin' },
+  .setAliasAdUnits('avionics', [
+    { name: 'lb1', templateName: 'LB', path: 'avionics/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'avionics/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'avionics/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'avionics/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'avionics/load-more' },
+    { name: 'reskin', path: 'avionics/reskin' },
   ])
-  .setAliasAdUnits('fiber-optics', [
-    { name: 'lb1', templateName: 'LB', path: 'fiber-optics/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'fiber-optics/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'fiber-optics/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'fiber-optics/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'fiber-optics/load-more' },
-    { name: 'reskin', path: 'fiber-optics/reskin' },
+  .setAliasAdUnits('atc-atm', [
+    { name: 'lb1', templateName: 'LB', path: 'atc-atm/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'atc-atm/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'atc-atm/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'atc-atm/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'atc-atm/load-more' },
+    { name: 'reskin', path: 'atc-atm/reskin' },
   ])
-  .setAliasAdUnits('software-accessories', [
-    { name: 'lb1', templateName: 'LB', path: 'software-accessories/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'software-accessories/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'software-accessories/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'software-accessories/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'software-accessories/load-more' },
-    { name: 'reskin', path: 'software-accessories/reskin' },
+  .setAliasAdUnits('helicopter', [
+    { name: 'lb1', templateName: 'LB', path: 'helicopter/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'helicopter/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'helicopter/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'helicopter/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'helicopter/load-more' },
+    { name: 'reskin', path: 'helicopter/reskin' },
   ])
-  .setAliasAdUnits('test-measurement', [
-    { name: 'lb1', templateName: 'LB', path: 'test-measurement/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'test-measurement/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'test-measurement/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'test-measurement/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'test-measurement/load-more' },
-    { name: 'reskin', path: 'test-measurement/reskin' },
+  .setAliasAdUnits('satcom', [
+    { name: 'lb1', templateName: 'LB', path: 'satcom/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'satcom/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'satcom/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'satcom/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'satcom/load-more' },
+    { name: 'reskin', path: 'satcom/reskin' },
+  ])
+  .setAliasAdUnits('unmanned', [
+    { name: 'lb1', templateName: 'LB', path: 'unmanned/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'unmanned/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'unmanned/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'unmanned/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'unmanned/load-more' },
+    { name: 'reskin', path: 'unmanned/reskin' },
   ]);
 
 module.exports = config;
