@@ -64,47 +64,54 @@ $ const { id, type, pageNode } = data;
       </marko-web-page-wrapper>
     </marko-web-resolve-page>
 
-    <div class="row">
-      <div class="col-8 mb-block">
-        <marko-web-query|{ nodes }|
-          name="all-company-content"
-          params={ companyId: id, limit: 6, includeContentTypes: ['Product', 'PressRelease'], queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link>Prodcuts & Press Releases</marko-web-link>
-            </@header>
-              <website-content-list-flow nodes=nodes with-teaser=true />
-          </website-content-list-flow>
-        </marko-web-query>
-      </div>
-      <div class="col-8 mb-block">
-        <marko-web-query|{ nodes }|
-          name="all-company-content"
-          params={ companyId: id, limit: 6, includeContentTypes: ['Article', 'Blog', 'MediaGallery', 'News'], queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link>Articles & News</marko-web-link>
-            </@header>
-              <website-content-list-flow nodes=nodes with-teaser=true />
-          </website-content-list-flow>
-        </marko-web-query>
-      </div>
-      <div class="col-8 mb-block">
-        <marko-web-query|{ nodes }|
-          name="all-company-content"
-          params={ companyId: id, limit: 6, includeContentTypes: ['Video', 'Whitepaper', 'Document'], queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link>Videos & Resources</marko-web-link>
-            </@header>
-              <website-content-list-flow nodes=nodes with-teaser=true />
-          </website-content-list-flow>
-        </marko-web-query>
-      </div>
-    </div>
+    <marko-web-query|{ nodes }|
+        name="all-company-content"
+        params={
+          companyId: id,
+          limit: 6,
+          includeContentTypes: ['Product', 'PressRelease'],
+          queryFragment
+        }
+      >
+      <website-content-list-flow nodes=nodes inner-justified=false class="mb-block">
+        <@header>Prodcuts & Press Releases</@header>
+        <@node image-position="left" with-teaser=true>
+          <@image use-placeholder=false />
+        </@node>
+      </website-content-list-flow>
+    </marko-web-query>
+    <marko-web-query|{ nodes }|
+        name="all-company-content"
+        params={
+          companyId: id,
+          limit: 6,
+          includeContentTypes: ['Article', 'Blog', 'MediaGallery', 'News'],
+          queryFragment
+        }
+      >
+      <website-content-list-flow nodes=nodes inner-justified=false class="mb-block">
+        <@header>Articles & News</@header>
+        <@node image-position="left" with-teaser=true>
+          <@image use-placeholder=false />
+        </@node>
+      </website-content-list-flow>
+    </marko-web-query>
+    <marko-web-query|{ nodes }|
+        name="all-company-content"
+        params={
+          companyId: id,
+          limit: 6,
+          includeContentTypes: ['Video', 'Whitepaper', 'Document'],
+          queryFragment
+        }
+      >
+      <website-content-list-flow nodes=nodes inner-justified=false class="mb-block">
+        <@header>Videos & Resources</@header>
+        <@node image-position="left" with-teaser=true>
+          <@image use-placeholder=false />
+        </@node>
+      </website-content-list-flow>
+    </marko-web-query>
   </@page>
   <@below-page>
     <marko-web-resolve-page|{ resolved, data: content }| node=pageNode>
