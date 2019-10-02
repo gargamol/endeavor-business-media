@@ -31,4 +31,11 @@ module.exports = {
   magazines: {
     description: '',
   },
+  contactUs: {
+    branding: {
+      bgColor: '#ed1b24',
+      logo: 'https://base.imgix.net/files/base/pennwell/vsd/logo.png?h=60',
+    },
+    to: 'juliac@pennwell.com',
+  },
 };

@@ -28,6 +28,13 @@ module.exports = {
   wufoo: {
     userName: 'cygnuscorporate',
   },
+  contactUs: {
+    branding: {
+      bgColor: '#ee2e30',
+      logo: 'https://base.imgix.net/files/base/pennwell/cim/logo.png?h=60',
+    },
+    to: 'juliac@pennwell.com',
+  },
   magazines: {
     description: '',
   },
