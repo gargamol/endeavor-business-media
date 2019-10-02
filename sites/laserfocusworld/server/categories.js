@@ -1647,7 +1647,7 @@ module.exports = [
       {
         id: 33842,
         name: 'Laser diodes (non-telecom), <700 nm (visible & UV)',
-        href: 'directory/laser-sources/laser-diodes-non-telecom-under-700-nm',
+        href: '/directory/laser-sources/laser-diodes-non-telecom-under-700-nm',
       },
       {
         id: 33845,
