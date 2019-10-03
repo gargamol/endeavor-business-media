@@ -70,10 +70,10 @@ jobs:
     #   script: deploy/index.js erosioncontrol picon
     #   install: skip
 
-    # - stage: deploy
-    #   name: Evaluation Engineering
-    #   script: deploy/index.js evaluationengineering picon
-    #   install: skip
+    - stage: deploy
+      name: Evaluation Engineering
+      script: deploy/index.js evaluationengineering picon
+      install: skip
 
     # - stage: deploy
     #   name: Firehouse

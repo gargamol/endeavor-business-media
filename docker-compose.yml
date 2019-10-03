@@ -447,21 +447,21 @@ services:
   #     - "9733:80"
   #     - "19733:19733"
 
-  # evaluationengineering:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/evaluationengineering
-  #   environment:
-  #     <<: *env
-  #     <<: *env-picon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9734
-  #     LIVERELOAD_PORT: 19734
-  #     TENANT_KEY: ebm_ee
-  #     SITE_ID: 5babaa3fb09d901d008b4567
-  #   ports:
-  #     - "9734:80"
-  #     - "19734:19734"
+  evaluationengineering:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/evaluationengineering
+    environment:
+      <<: *env
+      <<: *env-picon-staging
+      PORT: 80
+      EXPOSED_PORT: 9734
+      LIVERELOAD_PORT: 19734
+      TENANT_KEY: ebm_ee
+      SITE_ID: 5babaa3fb09d901d008b4567
+    ports:
+      - "9734:80"
+      - "19734:19734"
 
   industrial-lasers:
     <<: *node
