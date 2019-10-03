@@ -195,10 +195,10 @@ jobs:
     #   script: deploy/index.js stormh20 picon
     #   install: skip
 
-    # - stage: deploy
-    #   name: Strategies Unlimited
-    #   script: deploy/index.js strategies-u aerilon
-    #   install: skip
+    - stage: deploy
+      name: Strategies Unlimited
+      script: deploy/index.js strategies-u aerilon
+      install: skip
 
     - stage: deploy
       name: Utility Products
