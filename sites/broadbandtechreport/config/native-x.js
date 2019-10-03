@@ -4,39 +4,49 @@ const config = new NativeXConfiguration('https://ebm.native-x.io');
 
 config
   .setAliasPlacements('default', [
-    { name: 'card', id: '5cdb230339937800010ea6ca' },
-    { name: 'list2', id: '5cdb2308f41dfb0001fce77f' },
-    { name: 'list1', id: '5cdb230ef41dfb0001fce866' },
+    { name: 'card', id: '5cdb1f5af41dfb0001fc53ef' },
+    { name: 'list2', id: '5cdb1f5af41dfb0001fc53ef' },
+    { name: 'list1', id: '5cdb1f5af41dfb0001fc53ef' },
   ])
-  .setAliasPlacements('optics', [
-    { name: 'card', id: '5cdb234939937800010eb292' },
-    { name: 'list2', id: '5cdb234ff41dfb0001fcf381' },
-    { name: 'list1', id: '5cdb235639937800010eb470' },
+  .setAliasPlacements('docsis', [
+    { name: 'card', id: '5cdb1f7e39937800010e1a74' },
+    { name: 'list2', id: '5cdb1f7e39937800010e1a74' },
+    { name: 'list1', id: '5cdb1f7e39937800010e1a74' },
   ])
-  .setAliasPlacements('lasers-sources', [
-    { name: 'card', id: '5cdb2332f41dfb0001fceed9' },
-    { name: 'list2', id: '5cdb233839937800010eb001' },
-    { name: 'list1', id: '5cdb233f39937800010eb0eb' },
+  .setAliasPlacements('wireless', [
+    { name: 'card', id: '5cdb1fbef41dfb0001fc6463' },
+    { name: 'list2', id: '5cdb1fbef41dfb0001fc6463' },
+    { name: 'list1', id: '5cdb1fbef41dfb0001fc6463' },
   ])
-  .setAliasPlacements('detectors-imaging', [
-    { name: 'card', id: '5cdb231839937800010eaa5d' },
-    { name: 'list2', id: '5cdb231ef41dfb0001fcec01' },
-    { name: 'list1', id: '5cdb232639937800010ead76' },
+  .setAliasPlacements('back-office', [
+    { name: 'card', id: '5cdb200539937800010e2f57' },
+    { name: 'list2', id: '5cdb200539937800010e2f57' },
+    { name: 'list1', id: '5cdb200539937800010e2f57' },
   ])
-  .setAliasPlacements('test-measurement', [
-    { name: 'card', id: '5cdb2388f41dfb0001fcfb50' },
-    { name: 'list2', id: '5cdb238f39937800010ebcb9' },
-    { name: 'list1', id: '5cdb239539937800010ebd85' },
+  .setAliasPlacements('in-the-home', [
+    { name: 'card', id: '5cdb1fa939937800010e2259' },
+    { name: 'list2', id: '5cdb1fa939937800010e2259' },
+    { name: 'list1', id: '5cdb1fa939937800010e2259' },
   ])
-  .setAliasPlacements('software-accessories', [
-    { name: 'card', id: '5cdb237339937800010eb873' },
-    { name: 'list2', id: '5cdb2379f41dfb0001fcf91f' },
-    { name: 'list1', id: '5cdb237f39937800010eba5b' },
+  .setAliasPlacements('test', [
+    { name: 'card', id: '5cdb201939937800010e32c2' },
+    { name: 'list2', id: '5cdb201939937800010e32c2' },
+    { name: 'list1', id: '5cdb201939937800010e32c2' },
   ])
-  .setAliasPlacements('fiber-optics', [
-    { name: 'card', id: '5cdb235d39937800010eb580' },
-    { name: 'list2', id: '5cdb236339937800010eb685' },
-    { name: 'list1', id: '5cdb2369f41dfb0001fcf737' },
+  .setAliasPlacements('fiber', [
+    { name: 'card', id: '5cdb1f93f41dfb0001fc5d1d' },
+    { name: 'list2', id: '5cdb1f93f41dfb0001fc5d1d' },
+    { name: 'list1', id: '5cdb1f93f41dfb0001fc5d1d' },
+  ])
+  .setAliasPlacements('video', [
+    { name: 'card', id: '5cdb1fd339937800010e282a' },
+    { name: 'list2', id: '5cdb1fd339937800010e282a' },
+    { name: 'list1', id: '5cdb1fd339937800010e282a' },
+  ])
+  .setAliasPlacements('business-services', [
+    { name: 'card', id: '5cdb1fee39937800010e2c07' },
+    { name: 'list2', id: '5cdb1fee39937800010e2c07' },
+    { name: 'list1', id: '5cdb1fee39937800010e2c07' },
   ]);
 
 module.exports = config;
