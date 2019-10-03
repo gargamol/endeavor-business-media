@@ -43,11 +43,11 @@ $ const { id, alias, name, pageNode } = data;
           <div class="col-lg-6 mb-block">
             <marko-web-query|{ nodes }|
               name="website-scheduled-content"
-              params={ sectionAlias: "on-topics", limit: 3, queryFragment }
+              params={ sectionAlias: "on-topic", limit: 3, queryFragment }
             >
               <website-content-list-flow nodes=nodes>
                 <@header>
-                  <marko-web-link href="/on-topics">On Topic</marko-web-link>
+                  <marko-web-link href="/on-topic">On Topic</marko-web-link>
                 </@header>
               </website-content-list-flow>
             </marko-web-query>
@@ -148,7 +148,7 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionAlias: "back-office", limit: 3, queryFragment }
+          params={ sectionAlias: "back-office", limit: 4, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
             <@header>
@@ -161,7 +161,7 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionAlias: "test", limit: 3, queryFragment }
+          params={ sectionAlias: "test", limit: 4, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
             <@header>
