@@ -30,10 +30,10 @@ jobs:
     #   script: deploy/index.js aviationpros picon
     #   install: skip
 
-    # - stage: deploy
-    #   name: Bio Optics World
-    #   script: deploy/index.js bioopticsworld aerilon
-    #   install: skip
+    - stage: deploy
+      name: Bio Optics World
+      script: deploy/index.js bioopticsworld aerilon
+      install: skip
 
     # - stage: deploy
     #   name: Broadband Technology Report
