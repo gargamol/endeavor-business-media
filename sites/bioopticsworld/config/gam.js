@@ -1,6 +1,6 @@
 const GAMConfiguration = require('@base-cms/marko-web-gam/config');
 
-const config = new GAMConfiguration('21687441225', { basePath: 'LFW' });
+const config = new GAMConfiguration('21687441225', { basePath: 'BOW' });
 
 config
   .setTemplate('LB', {
@@ -23,53 +23,37 @@ config
     { name: 'reskin', path: 'default/reskin' },
     { name: 'wa', path: 'default/wa' },
   ])
-  .setAliasAdUnits('detectors-imaging', [
-    { name: 'lb1', templateName: 'LB', path: 'detectors-imaging/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'detectors-imaging/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'detectors-imaging/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'detectors-imaging/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'detectors-imaging/load-more' },
-    { name: 'reskin', path: 'detectors-imaging/reskin' },
+  .setAliasAdUnits('bioscience', [
+    { name: 'lb1', templateName: 'LB', path: 'bioscience/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'bioscience/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'bioscience/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'bioscience/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'bioscience/load-more' },
+    { name: 'reskin', path: 'bioscience/reskin' },
   ])
-  .setAliasAdUnits('lasers-sources', [
-    { name: 'lb1', templateName: 'LB', path: 'lasers-sources/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'lasers-sources/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'lasers-sources/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'lasers-sources/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'lasers-sources/load-more' },
-    { name: 'reskin', path: 'lasers-sources/reskin' },
+  .setAliasAdUnits('biomedicine', [
+    { name: 'lb1', templateName: 'LB', path: 'biomedicine/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'biomedicine/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'biomedicine/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'biomedicine/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'biomedicine/load-more' },
+    { name: 'reskin', path: 'biomedicine/reskin' },
   ])
-  .setAliasAdUnits('optics', [
-    { name: 'lb1', templateName: 'LB', path: 'optics/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'optics/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'optics/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'optics/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'optics/load-more' },
-    { name: 'reskin', path: 'optics/reskin' },
+  .setAliasAdUnits('biophotonics-techniques', [
+    { name: 'lb1', templateName: 'LB', path: 'biophotonics-techniques/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'biophotonics-techniques/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'biophotonics-techniques/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'biophotonics-techniques/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'biophotonics-techniques/load-more' },
+    { name: 'reskin', path: 'biophotonics-techniques/reskin' },
   ])
-  .setAliasAdUnits('fiber-optics', [
-    { name: 'lb1', templateName: 'LB', path: 'fiber-optics/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'fiber-optics/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'fiber-optics/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'fiber-optics/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'fiber-optics/load-more' },
-    { name: 'reskin', path: 'fiber-optics/reskin' },
-  ])
-  .setAliasAdUnits('software-accessories', [
-    { name: 'lb1', templateName: 'LB', path: 'software-accessories/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'software-accessories/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'software-accessories/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'software-accessories/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'software-accessories/load-more' },
-    { name: 'reskin', path: 'software-accessories/reskin' },
-  ])
-  .setAliasAdUnits('test-measurement', [
-    { name: 'lb1', templateName: 'LB', path: 'test-measurement/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'test-measurement/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'test-measurement/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'test-measurement/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'test-measurement/load-more' },
-    { name: 'reskin', path: 'test-measurement/reskin' },
+  .setAliasAdUnits('biophotonics-tools', [
+    { name: 'lb1', templateName: 'LB', path: 'biophotonics-tools/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'biophotonics-tools/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'biophotonics-tools/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'biophotonics-tools/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'biophotonics-tools/load-more' },
+    { name: 'reskin', path: 'biophotonics-tools/reskin' },
   ]);
 
 module.exports = config;

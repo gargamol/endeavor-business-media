@@ -5,36 +5,36 @@ module.exports = {
   company: 'Endeavor Business Media, LLC',
   logos: {
     navbar: {
-      src: 'https://base.imgix.net/files/base/pennwell/lfw/logo.png?h=45',
+      src: 'https://base.imgix.net/files/base/pennwell/bow/logo.png?h=45',
       srcset: [
-        'https://base.imgix.net/files/base/pennwell/lfw/logo.png?h=90 2x',
+        'https://base.imgix.net/files/base/pennwell/bow/logo.png?h=90 2x',
       ],
     },
     footer: {
-      src: 'https://base.imgix.net/files/base/pennwell/lfw/logo.png?h=60',
+      src: 'https://base.imgix.net/files/base/pennwell/bow/logo.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/pennwell/lfw/logo.png?h=120 2x',
+        'https://base.imgix.net/files/base/pennwell/bow/logo.png?h=120 2x',
       ],
     },
   },
   socialMediaLinks: [
-    { provider: 'linkedin', href: 'https://www.linkedin.com/groups/2896249/', target: '_blank' },
-    { provider: 'twitter', href: 'https://twitter.com/LaserFocusWorld', target: '_blank' },
-    { provider: 'facebook', href: 'https://www.facebook.com/pages/Laser-Focus-World/126899915297', target: '_blank' },
+    { provider: 'linkedin', href: 'https://www.linkedin.com/company/biooptics-world/' },
+    { provider: 'twitter', href: 'https://twitter.com/BioOptics' },
+    { provider: 'facebook', href: 'https://www.facebook.com/pages/BioOptics-World/131802223749' },
   ],
   gtm: {
-    containerId: 'GTM-MFCT2LV',
+    containerId: 'GTM-M24RV9Q',
   },
   wufoo: {
     userName: 'cygnuscorporate',
   },
   magazines: {
-    description: '',
+    description: 'BioOptics World magzaine has merged with its sister publication, Laser Focus World, with coverage on optical technologies and instrumentation for the Life Sciences.',
   },
   contactUs: {
     branding: {
-      bgColor: '#164f77',
-      logo: 'https://base.imgix.net/files/base/pennwell/lfw/logo.png?h=60',
+      bgColor: '#445b51',
+      logo: 'https://base.imgix.net/files/base/pennwell/bow/logo.png?h=60',
     },
     to: 'juliac@pennwell.com',
   },
