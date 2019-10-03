@@ -687,21 +687,21 @@ services:
   #     - "9748:80"
   #     - "19748:19748"
 
-  # watertechonline:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/watertechonline
-  #   environment:
-  #     <<: *env
-  #     <<: *env-picon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9749
-  #     LIVERELOAD_PORT: 19749
-  #     TENANT_KEY: ebm_wto
-  #     SITE_ID:
-  #   ports:
-  #     - "9749:80"
-  #     - "19749:19749"
+  watertechonline:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/watertechonline
+    environment:
+      <<: *env
+      <<: *env-picon-staging
+      PORT: 80
+      EXPOSED_PORT: 9749
+      LIVERELOAD_PORT: 19749
+      TENANT_KEY: ebm_wto
+      SITE_ID: 5af4890775a254af9e0041a7
+    ports:
+      - "9749:80"
+      - "19749:19749"
 
   # waterworld:
   #   <<: *node
