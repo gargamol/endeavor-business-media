@@ -1,6 +1,6 @@
 const GAMConfiguration = require('@base-cms/marko-web-gam/config');
 
-const config = new GAMConfiguration('21687441225', { basePath: 'LFW' });
+const config = new GAMConfiguration('21687441225', { basePath: 'WTO' });
 
 config
   .setTemplate('LB', {
@@ -23,53 +23,85 @@ config
     { name: 'reskin', path: 'default/reskin' },
     { name: 'wa', path: 'default/wa' },
   ])
-  .setAliasAdUnits('detectors-imaging', [
-    { name: 'lb1', templateName: 'LB', path: 'detectors-imaging/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'detectors-imaging/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'detectors-imaging/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'detectors-imaging/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'detectors-imaging/load-more' },
-    { name: 'reskin', path: 'detectors-imaging/reskin' },
+  .setAliasAdUnits('process-water', [
+    { name: 'lb1', templateName: 'LB', path: 'process-water/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'process-water/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'process-water/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'process-water/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'process-water/load-more' },
+    { name: 'reskin', path: 'process-water/reskin' },
   ])
-  .setAliasAdUnits('lasers-sources', [
-    { name: 'lb1', templateName: 'LB', path: 'lasers-sources/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'lasers-sources/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'lasers-sources/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'lasers-sources/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'lasers-sources/load-more' },
-    { name: 'reskin', path: 'lasers-sources/reskin' },
+  .setAliasAdUnits('wastewater', [
+    { name: 'lb1', templateName: 'LB', path: 'wastewater/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'wastewater/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'wastewater/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'wastewater/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'wastewater/load-more' },
+    { name: 'reskin', path: 'wastewater/reskin' },
   ])
-  .setAliasAdUnits('optics', [
-    { name: 'lb1', templateName: 'LB', path: 'optics/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'optics/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'optics/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'optics/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'optics/load-more' },
-    { name: 'reskin', path: 'optics/reskin' },
+  .setAliasAdUnits('water-reuse', [
+    { name: 'lb1', templateName: 'LB', path: 'water-reuse/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'water-reuse/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'water-reuse/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'water-reuse/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'water-reuse/load-more' },
+    { name: 'reskin', path: 'water-reuse/reskin' },
   ])
-  .setAliasAdUnits('fiber-optics', [
-    { name: 'lb1', templateName: 'LB', path: 'fiber-optics/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'fiber-optics/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'fiber-optics/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'fiber-optics/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'fiber-optics/load-more' },
-    { name: 'reskin', path: 'fiber-optics/reskin' },
+  .setAliasAdUnits('produced-water', [
+    { name: 'lb1', templateName: 'LB', path: 'produced-water/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'produced-water/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'produced-water/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'produced-water/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'produced-water/load-more' },
+    { name: 'reskin', path: 'produced-water/reskin' },
   ])
-  .setAliasAdUnits('software-accessories', [
-    { name: 'lb1', templateName: 'LB', path: 'software-accessories/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'software-accessories/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'software-accessories/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'software-accessories/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'software-accessories/load-more' },
-    { name: 'reskin', path: 'software-accessories/reskin' },
+  .setAliasAdUnits('industry', [
+    { name: 'lb1', templateName: 'LB', path: 'industry/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'industry/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'industry/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'industry/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'industry/load-more' },
+    { name: 'reskin', path: 'industry/reskin' },
   ])
-  .setAliasAdUnits('test-measurement', [
-    { name: 'lb1', templateName: 'LB', path: 'test-measurement/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'test-measurement/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'test-measurement/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'test-measurement/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'test-measurement/load-more' },
-    { name: 'reskin', path: 'test-measurement/reskin' },
+  .setAliasAdUnits('industry/food-beverage', [
+    { name: 'lb1', templateName: 'LB', path: 'industry/food-beverage/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'industry/food-beverage/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'industry/food-beverage/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'industry/food-beverage/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'industry/food-beverage/load-more' },
+    { name: 'reskin', path: 'industry/food-beverage/reskin' },
+  ])
+  .setAliasAdUnits('industry/chemical', [
+    { name: 'lb1', templateName: 'LB', path: 'industry/chemical/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'industry/chemical/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'industry/chemical/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'industry/chemical/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'industry/chemical/load-more' },
+    { name: 'reskin', path: 'industry/chemical/reskin' },
+  ])
+  .setAliasAdUnits('industy/power-generation', [
+    { name: 'lb1', templateName: 'LB', path: 'industy/power-generation/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'industy/power-generation/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'industy/power-generation/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'industy/power-generation/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'industy/power-generation/load-more' },
+    { name: 'reskin', path: 'industy/power-generation/reskin' },
+  ])
+  .setAliasAdUnits('industry/oil-gas', [
+    { name: 'lb1', templateName: 'LB', path: 'industry/oil-gas/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'industry/oil-gas/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'industry/oil-gas/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'industry/oil-gas/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'industry/oil-gas/load-more' },
+    { name: 'reskin', path: 'industry/oil-gas/reskin' },
+  ])
+  .setAliasAdUnits('directory', [
+    { name: 'lb1', templateName: 'LB', path: 'directory/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'directory/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'directory/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'directory/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'directory/load-more' },
+    { name: 'reskin', path: 'directory/reskin' },
   ]);
 
 module.exports = config;
