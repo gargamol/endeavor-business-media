@@ -32,7 +32,7 @@ $ const { id, alias, name, pageNode } = data;
 
     <marko-web-query|{ nodes }|
       name="website-optioned-content"
-      params={ sectionId: id, optionId: 9, limit: 5, queryFragment }
+      params={ sectionId: id, optionName: "Pinned", limit: 5, queryFragment }
     >
       <website-content-hero-flow nodes=nodes />
     </marko-web-query>
@@ -43,26 +43,26 @@ $ const { id, alias, name, pageNode } = data;
           <div class="col-lg-6 mb-block">
             <marko-web-query|{ nodes }|
               name="website-scheduled-content"
-              params={ sectionAlias: "detectors-imaging", limit: 3, queryFragment }
+              params={ sectionAlias: "process-water", limit: 3, queryFragment }
             >
               <website-content-list-flow nodes=nodes>
                 <@header>
-                  <marko-web-link href="/detectors-imaging">Detectors & Imaging</marko-web-link>
+                  <marko-web-link href="/process-water">Process Water</marko-web-link>
                 </@header>
-                <@native-x index=2 name="list1" aliases=["detectors-imaging"] />
+                <@native-x index=2 name="list1" aliases=["process-water"] />
               </website-content-list-flow>
             </marko-web-query>
           </div>
           <div class="col-lg-6 mb-block">
             <marko-web-query|{ nodes }|
               name="website-scheduled-content"
-              params={ sectionAlias: "lasers-sources", limit: 3, queryFragment }
+              params={ sectionAlias: "wastewater", limit: 3, queryFragment }
             >
               <website-content-list-flow nodes=nodes>
                 <@header>
-                  <marko-web-link href="/lasers-sources">Lasers & Sources</marko-web-link>
+                  <marko-web-link href="/wastewater">Wastewater</marko-web-link>
                 </@header>
-                <@native-x index=2 name="list1" aliases=["lasers-sources"] />
+                <@native-x index=2 name="list1" aliases=["wastewater"] />
               </website-content-list-flow>
             </marko-web-query>
           </div>
@@ -71,32 +71,31 @@ $ const { id, alias, name, pageNode } = data;
           <div class="col-lg-6 mb-block">
              <marko-web-query|{ nodes }|
               name="website-scheduled-content"
-              params={ sectionAlias: "optics", limit: 3, queryFragment }
+              params={ sectionAlias: "water-reuse", limit: 3, queryFragment }
             >
               <website-content-list-flow nodes=nodes>
                 <@header>
-                  <marko-web-link href="/optics">Optics</marko-web-link>
+                  <marko-web-link href="/water-reuse">Water Reuse</marko-web-link>
                 </@header>
-                <@native-x index=2 name="list1" aliases=["optics"] />
+                <@native-x index=2 name="list1" aliases=["water-reuse"] />
               </website-content-list-flow>
             </marko-web-query>
           </div>
           <div class="col-lg-6 mb-block">
             <marko-web-query|{ nodes }|
               name="website-scheduled-content"
-              params={ sectionAlias: "fiber-optics", limit: 3, queryFragment }
+              params={ sectionAlias: "produced-water", limit: 3, queryFragment }
             >
               <website-content-list-flow nodes=nodes>
                 <@header>
-                  <marko-web-link href="/fiber-optics">Fiber Optics</marko-web-link>
+                  <marko-web-link href="/produced-water">Produced Water</marko-web-link>
                 </@header>
-                <@native-x index=2 name="list1" aliases=["fiber-optics"] />
+                <@native-x index=2 name="list1" aliases=["produced-water"] />
               </website-content-list-flow>
             </marko-web-query>
           </div>
         </div>
       </div>
-
       <div class="col-lg-4 mb-block page-rail">
         <marko-web-gam-display-ad id="gpt-ad-rail1" />
         <marko-web-gam-display-ad id="gpt-ad-rail2" />
@@ -107,26 +106,25 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionAlias: "software-accessories", limit: 3, queryFragment }
+          params={ sectionAlias: "industry", limit: 3, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
             <@header>
-              <marko-web-link href="/software-accessories">Software & Accessories</marko-web-link>
+              <marko-web-link href="/industry">Industry</marko-web-link>
             </@header>
-            <@native-x index=2 name="list1" aliases=["software-accessories"] />
+            <@native-x index=2 name="list1" aliases=["industry"] />
           </website-content-list-flow>
         </marko-web-query>
       </div>
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionAlias: "test-measurement", limit: 3, queryFragment }
+          params={ sectionAlias: alias, limit: 5, skip: 5, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
             <@header>
-              <marko-web-link href="/test-measurement">Test & Measurement</marko-web-link>
+              <marko-web-link>More from Water Technology</marko-web-link>
             </@header>
-            <@native-x index=2 name="list1" aliases=["test-measurement"] />
           </website-content-list-flow>
         </marko-web-query>
       </div>
@@ -143,7 +141,6 @@ $ const { id, alias, name, pageNode } = data;
         </marko-web-query>
       </div>
     </div>
-
     <div class="row">
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
@@ -170,7 +167,10 @@ $ const { id, alias, name, pageNode } = data;
         </marko-web-query>
       </div>
       <div class="col-lg-4 mb-block">
-        <marko-web-query|{ node: issue }| name="magazine-latest-issue" params={ publicationId: "5ca4e38b75a25490050041a9", queryFragment: latestIssueFragment }>
+        <marko-web-query|{ node: issue }|
+          name="magazine-latest-issue"
+          params={ publicationId: "5d95faf9a8ad6f37008b45b3", queryFragment: latestIssueFragment }
+        >
           <website-magazine-latest-issue-flow issue-node=issue>
             <@header>
               <marko-web-magazine-issue-name tag=null obj=issue link=true>
@@ -178,45 +178,6 @@ $ const { id, alias, name, pageNode } = data;
               </marko-web-magazine-issue-name>
             </@header>
           </website-magazine-latest-issue-flow>
-        </marko-web-query>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-4 mb-block">
-        <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
-          params={ sectionAlias: "blogs", limit: 3, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link href="/blogs">Commentary</marko-web-link>
-            </@header>
-          </website-content-list-flow>
-        </marko-web-query>
-      </div>
-      <div class="col-lg-4 mb-block">
-        <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
-          params={ sectionAlias: "photonics-business", limit: 3, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link href="/photonics-business">Photonics Business</marko-web-link>
-            </@header>
-          </website-content-list-flow>
-        </marko-web-query>
-      </div>
-      <div class="col-lg-4 mb-block">
-        <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
-          params={ sectionAlias: "optics/optics-design", limit: 3, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link href="/optics/optics-design">Optics & Design</marko-web-link>
-            </@header>
-          </website-content-list-flow>
         </marko-web-query>
       </div>
     </div>
