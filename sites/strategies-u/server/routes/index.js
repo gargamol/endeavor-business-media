@@ -5,7 +5,6 @@ const dynamicPages = require('./dynamic-page');
 const magazine = require('./magazine');
 const publishedContent = require('./published-content');
 const search = require('./search');
-const subscribe = require('./subscribe');
 const websiteSections = require('./website-section');
 
 module.exports = (app) => {
@@ -30,9 +29,6 @@ module.exports = (app) => {
 
   // Search
   search(app);
-
-  // Subscription Pages
-  subscribe(app);
 
   // Website Sections
   websiteSections(app);

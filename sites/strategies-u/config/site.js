@@ -5,36 +5,31 @@ module.exports = {
   company: 'Endeavor Business Media, LLC',
   logos: {
     navbar: {
-      src: 'https://base.imgix.net/files/base/pennwell/lfw/logo.png?h=45',
+      src: 'https://base.imgix.net/files/base/pennwell/su/logo.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/pennwell/lfw/logo.png?h=90 2x',
+        'https://base.imgix.net/files/base/pennwell/su/logo.png?h=120 2x',
       ],
     },
     footer: {
-      src: 'https://base.imgix.net/files/base/pennwell/lfw/logo.png?h=60',
+      src: 'https://base.imgix.net/files/base/pennwell/su/logo.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/pennwell/lfw/logo.png?h=120 2x',
+        'https://base.imgix.net/files/base/pennwell/su/logo.png?h=120 2x',
       ],
     },
   },
-  socialMediaLinks: [
-    { provider: 'linkedin', href: 'https://www.linkedin.com/groups/2896249/', target: '_blank' },
-    { provider: 'twitter', href: 'https://twitter.com/LaserFocusWorld', target: '_blank' },
-    { provider: 'facebook', href: 'https://www.facebook.com/pages/Laser-Focus-World/126899915297', target: '_blank' },
-  ],
   gtm: {
-    containerId: 'GTM-MFCT2LV',
+    containerId: 'GTM-56MD64K',
   },
   wufoo: {
     userName: 'cygnuscorporate',
   },
   magazines: {
-    description: '',
+    description: 'Strategies Unlimited offers comprehensive coverage of high-brightness LEDs and LED lighting and laser market sectors.',
   },
   contactUs: {
     branding: {
-      bgColor: '#164f77',
-      logo: 'https://base.imgix.net/files/base/pennwell/lfw/logo.png?h=60',
+      bgColor: '#0b5392',
+      logo: 'https://base.imgix.net/files/base/pennwell/su/logo.png?h=60',
     },
     to: 'juliac@pennwell.com',
   },
