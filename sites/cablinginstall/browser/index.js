@@ -5,6 +5,8 @@ import GAM from '@base-cms/marko-web-gam/browser';
 import GCSE from '@base-cms/marko-web-gcse/browser';
 import RevealAd from '@base-cms/marko-web-reveal-ad/browser';
 import Common from '@base-cms-websites/package-common/browser';
+import inquiry from '@base-cms-websites/package-inquiry/browser';
+import InquiryForm from './inquiry-form.vue';
 
 DefaultTheme(Browser);
 GTM(Browser);
@@ -12,5 +14,6 @@ GAM(Browser);
 GCSE(Browser);
 RevealAd(Browser);
 Common(Browser);
+inquiry(Browser, { component: InquiryForm });
 
 export default Browser;
