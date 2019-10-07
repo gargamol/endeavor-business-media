@@ -35,6 +35,15 @@ module.exports = {
     },
     to: 'juliac@pennwell.com',
   },
+  inquiry: {
+    enabled: true,
+    directSend: true,
+    sendTo: 'juliac@pennwell.com',
+    sendFrom: 'CablingInstall.com <noreply@baseplatform.io>',
+    sendBcc: 'emailactivity@cygnus.com',
+    logo: 'https://base.imgix.net/files/base/pennwell/cim/logo.png?h=60',
+    bgColor: '#ee2e30',
+  },
   magazines: {
     description: '',
   },
