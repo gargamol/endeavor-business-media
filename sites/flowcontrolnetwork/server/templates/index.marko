@@ -43,26 +43,26 @@ $ const { id, alias, name, pageNode } = data;
           <div class="col-lg-6 mb-block">
             <marko-web-query|{ nodes }|
               name="website-scheduled-content"
-              params={ sectionAlias: "maintenance-safety", limit: 3, queryFragment }
+              params={ sectionAlias: "instrumentation", limit: 3, queryFragment }
             >
               <website-content-list-flow nodes=nodes>
                 <@header>
-                  <marko-web-link href="/maintenance-safety">Maintenance & Safety</marko-web-link>
+                  <marko-web-link href="/instrumentation">Instrumentation</marko-web-link>
                 </@header>
-                <@native-x index=2 name="default" aliases=["maintenance-safety"] />
+                <@native-x index=2 name="default" aliases=["instrumentation"] />
               </website-content-list-flow>
             </marko-web-query>
           </div>
           <div class="col-lg-6 mb-block">
             <marko-web-query|{ nodes }|
               name="website-scheduled-content"
-              params={ sectionAlias: "material-handling-dry-wet", limit: 3, queryFragment }
+              params={ sectionAlias: "valves-actuators", limit: 3, queryFragment }
             >
               <website-content-list-flow nodes=nodes>
                 <@header>
-                  <marko-web-link href="/material-handling-dry-wet">Material Handling</marko-web-link>
+                  <marko-web-link href="/valves-actuators">Valves & Actuators</marko-web-link>
                 </@header>
-                <@native-x index=2 name="default" aliases=["material-handling-dry-wet"] />
+                <@native-x index=2 name="default" aliases=["valves-actuators"] />
               </website-content-list-flow>
             </marko-web-query>
           </div>
@@ -71,26 +71,26 @@ $ const { id, alias, name, pageNode } = data;
           <div class="col-lg-6 mb-block">
              <marko-web-query|{ nodes }|
               name="website-scheduled-content"
-              params={ sectionAlias: "mixing-blending-size-reduction", limit: 3, queryFragment }
+              params={ sectionAlias: "bearings-seals", limit: 3, queryFragment }
             >
               <website-content-list-flow nodes=nodes>
                 <@header>
-                  <marko-web-link href="/mixing-blending-size-reduction">Mixing, Blending & Size Reduction</marko-web-link>
+                  <marko-web-link href="/bearings-seals">Bearings & Seals</marko-web-link>
                 </@header>
-                <@native-x index=2 name="default" aliases=["mixing-blending-size-reduction"] />
+                <@native-x index=2 name="default" aliases=["bearings-seals"] />
               </website-content-list-flow>
             </marko-web-query>
           </div>
           <div class="col-lg-6 mb-block">
             <marko-web-query|{ nodes }|
               name="website-scheduled-content"
-              params={ sectionAlias: "process-control-automation", limit: 3, queryFragment }
+              params={ sectionAlias: "piping-tubing-hosing", limit: 3, queryFragment }
             >
               <website-content-list-flow nodes=nodes>
                 <@header>
-                  <marko-web-link href="/process-control-automation">Process Control & Automation</marko-web-link>
+                  <marko-web-link href="/piping-tubing-hosing">Piping, Tubing & Hosing</marko-web-link>
                 </@header>
-                <@native-x index=2 name="default" aliases=["process-control-automation"] />
+                <@native-x index=2 name="default" aliases=["piping-tubing-hosing"] />
               </website-content-list-flow>
             </marko-web-query>
           </div>
@@ -107,6 +107,19 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
+          params={ sectionAlias: "process-control-automation", limit: 3, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/process-control-automation">Process Control & Automation</marko-web-link>
+            </@header>
+            <@native-x index=2 name="default" aliases=["process-control-automation"] />
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+      <div class="col-lg-4 mb-block">
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
           params={ sectionAlias: "pumps-motors-drives", limit: 3, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
@@ -120,13 +133,40 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionAlias: "valves-actuators", limit: 3, queryFragment }
+          params={ sectionAlias: "maintenance-safety", limit: 3, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
             <@header>
-              <marko-web-link href="/valves-actuators">Valves & Actuators</marko-web-link>
+              <marko-web-link href="/maintenance-safety">Maintenance & Safety</marko-web-link>
             </@header>
-            <@native-x index=2 name="default" aliases=["valves-actuators"] />
+            <@native-x index=2 name="default" aliases=["maintenance-safety"] />
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 mb-block">
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "industry-applications", limit: 3, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/industry-applications">Industry Applications</marko-web-link>
+            </@header>
+            <@native-x index=2 name="default" aliases=["industry-applications"] />
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+      <div class="col-lg-4 mb-block">
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "news-notes", limit: 3, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/news-notes">News & Notes</marko-web-link>
+            </@header>
           </website-content-list-flow>
         </marko-web-query>
       </div>
