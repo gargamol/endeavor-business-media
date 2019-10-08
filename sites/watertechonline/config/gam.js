@@ -62,14 +62,6 @@ config
     { name: 'rail2', templateName: 'CONTENT', path: 'industry/rail2' },
     { name: 'load-more', templateName: 'CONTENT', path: 'industry/load-more' },
     { name: 'reskin', path: 'industry/reskin' },
-  ])
-  .setAliasAdUnits('directory', [
-    { name: 'lb1', templateName: 'LB', path: 'directory/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'directory/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'directory/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'directory/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'directory/load-more' },
-    { name: 'reskin', path: 'directory/reskin' },
   ]);
 
 module.exports = config;
