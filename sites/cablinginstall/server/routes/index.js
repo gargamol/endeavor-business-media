@@ -10,7 +10,7 @@ const subscribe = require('./subscribe');
 const websiteSections = require('./website-section');
 
 module.exports = (app) => {
-  // Handle contact is submissions on /__inquiry
+  // Handle submissions on /__inquiry
   // @todo This should be removed once inquiry is moved to core.
   loadInquiry(app);
 
