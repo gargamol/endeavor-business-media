@@ -23,16 +23,16 @@ $ const bgColor = site.get('inquiry.bgColor', 'transparent');
         <tr>
           <td bgColor=bgColor style="text-align: center">
             <if(inquiry.logo)>
-              <img src=inquiry.logo alt=config.get('siteName') />
+              <img src=inquiry.logo alt=config.website('name') />
             </if>
             <else>
-              <h1>${config.get('siteName')}</h1>
+              <h1>${config.website('name')}</h1>
             </else>
           </td>
         </tr>
         <tr>
           <td class="subject">
-            <p>${config.get('siteName')} Inquiry Notification</p>
+            <p>${config.website('name')} Inquiry Notification</p>
           </td>
         </tr>
         <tr>
@@ -85,7 +85,7 @@ $ const bgColor = site.get('inquiry.bgColor', 'transparent');
         <tr>
           <td class="footer">
             <small>
-              This is an automated message from ${config.get('siteName')}. Please do not reply directly to this email
+              This is an automated message from ${config.website('name')}. Please do not reply directly to this email
               <if(inquiry.supportEmail)>&mdash; direct any inquiries to
                 <a href=`mailto:${inquiry.supportEmail}`>
                   ${inquiry.supportEmail}
