@@ -63,38 +63,6 @@ config
     { name: 'load-more', templateName: 'CONTENT', path: 'industry/load-more' },
     { name: 'reskin', path: 'industry/reskin' },
   ])
-  .setAliasAdUnits('industry/food-beverage', [
-    { name: 'lb1', templateName: 'LB', path: 'industry/food-beverage/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'industry/food-beverage/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'industry/food-beverage/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'industry/food-beverage/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'industry/food-beverage/load-more' },
-    { name: 'reskin', path: 'industry/food-beverage/reskin' },
-  ])
-  .setAliasAdUnits('industry/chemical', [
-    { name: 'lb1', templateName: 'LB', path: 'industry/chemical/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'industry/chemical/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'industry/chemical/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'industry/chemical/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'industry/chemical/load-more' },
-    { name: 'reskin', path: 'industry/chemical/reskin' },
-  ])
-  .setAliasAdUnits('industy/power-generation', [
-    { name: 'lb1', templateName: 'LB', path: 'industy/power-generation/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'industy/power-generation/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'industy/power-generation/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'industy/power-generation/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'industy/power-generation/load-more' },
-    { name: 'reskin', path: 'industy/power-generation/reskin' },
-  ])
-  .setAliasAdUnits('industry/oil-gas', [
-    { name: 'lb1', templateName: 'LB', path: 'industry/oil-gas/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'industry/oil-gas/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'industry/oil-gas/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'industry/oil-gas/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'industry/oil-gas/load-more' },
-    { name: 'reskin', path: 'industry/oil-gas/reskin' },
-  ])
   .setAliasAdUnits('directory', [
     { name: 'lb1', templateName: 'LB', path: 'directory/lb1' },
     { name: 'lb2', templateName: 'LB', path: 'directory/lb2' },
