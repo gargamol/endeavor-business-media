@@ -23,53 +23,59 @@ config
     { name: 'reskin', path: 'default/reskin' },
     { name: 'wa', path: 'default/wa' },
   ])
-  .setAliasAdUnits('detectors-imaging', [
-    { name: 'lb1', templateName: 'LB', path: 'detectors-imaging/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'detectors-imaging/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'detectors-imaging/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'detectors-imaging/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'detectors-imaging/load-more' },
-    { name: 'reskin', path: 'detectors-imaging/reskin' },
+  .setAliasAdUnits('maintenance-safety', [
+    { name: 'lb1', templateName: 'LB', path: 'maintenance-safety/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'maintenance-safety/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'maintenance-safety/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'maintenance-safety/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'maintenance-safety/load-more' },
+    { name: 'reskin', path: 'maintenance-safety/reskin' },
+    { name: 'wa', path: 'maintenance-safety/wa' },
   ])
-  .setAliasAdUnits('lasers-sources', [
-    { name: 'lb1', templateName: 'LB', path: 'lasers-sources/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'lasers-sources/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'lasers-sources/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'lasers-sources/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'lasers-sources/load-more' },
-    { name: 'reskin', path: 'lasers-sources/reskin' },
+  .setAliasAdUnits('material-handling-dry-wet', [
+    { name: 'lb1', templateName: 'LB', path: 'material-handling-dry-wet/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'material-handling-dry-wet/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'material-handling-dry-wet/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'material-handling-dry-wet/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'material-handling-dry-wet/load-more' },
+    { name: 'reskin', path: 'material-handling-dry-wet/reskin' },
+    { name: 'wa', path: 'material-handling-dry-wet/wa' },
   ])
-  .setAliasAdUnits('optics', [
-    { name: 'lb1', templateName: 'LB', path: 'optics/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'optics/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'optics/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'optics/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'optics/load-more' },
-    { name: 'reskin', path: 'optics/reskin' },
+  .setAliasAdUnits('mixing-blending-size-reduction', [
+    { name: 'lb1', templateName: 'LB', path: 'mixing-blending-size-reduction/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'mixing-blending-size-reduction/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'mixing-blending-size-reduction/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'mixing-blending-size-reduction/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'mixing-blending-size-reduction/load-more' },
+    { name: 'reskin', path: 'mixing-blending-size-reduction/reskin' },
+    { name: 'wa', path: 'mixing-blending-size-reduction/wa' },
   ])
-  .setAliasAdUnits('fiber-optics', [
-    { name: 'lb1', templateName: 'LB', path: 'fiber-optics/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'fiber-optics/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'fiber-optics/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'fiber-optics/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'fiber-optics/load-more' },
-    { name: 'reskin', path: 'fiber-optics/reskin' },
+  .setAliasAdUnits('process-control-automation', [
+    { name: 'lb1', templateName: 'LB', path: 'process-control-automation/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'process-control-automation/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'process-control-automation/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'process-control-automation/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'process-control-automation/load-more' },
+    { name: 'reskin', path: 'process-control-automation/reskin' },
+    { name: 'wa', path: 'process-control-automation/wa' },
   ])
-  .setAliasAdUnits('software-accessories', [
-    { name: 'lb1', templateName: 'LB', path: 'software-accessories/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'software-accessories/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'software-accessories/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'software-accessories/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'software-accessories/load-more' },
-    { name: 'reskin', path: 'software-accessories/reskin' },
+  .setAliasAdUnits('pumps-motors-drives', [
+    { name: 'lb1', templateName: 'LB', path: 'pumps-motors-drives/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'pumps-motors-drives/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'pumps-motors-drives/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'pumps-motors-drives/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'pumps-motors-drives/load-more' },
+    { name: 'reskin', path: 'pumps-motors-drives/reskin' },
+    { name: 'wa', path: 'pumps-motors-drives/wa' },
   ])
-  .setAliasAdUnits('test-measurement', [
-    { name: 'lb1', templateName: 'LB', path: 'test-measurement/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'test-measurement/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'test-measurement/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'test-measurement/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'test-measurement/load-more' },
-    { name: 'reskin', path: 'test-measurement/reskin' },
+  .setAliasAdUnits('valves-actuators', [
+    { name: 'lb1', templateName: 'LB', path: 'valves-actuators/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'valves-actuators/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'valves-actuators/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'valves-actuators/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'valves-actuators/load-more' },
+    { name: 'reskin', path: 'valves-actuators/reskin' },
+    { name: 'wa', path: 'valves-actuators/wa' },
   ]);
 
 module.exports = config;
