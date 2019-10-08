@@ -175,10 +175,10 @@ jobs:
     #   script: deploy/index.js plasticsmachinerymagazine picon
     #   install: skip
 
-    # - stage: deploy
-    #   name: Processing Magazine
-    #   script: deploy/index.js processingmagazine picon
-    #   install: skip
+    - stage: deploy
+      name: Processing Magazine
+      script: deploy/index.js processingmagazine picon
+      install: skip
 
     - stage: deploy
       name: Registered Dental Hygienists

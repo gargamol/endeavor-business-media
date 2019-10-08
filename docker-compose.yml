@@ -303,21 +303,21 @@ services:
   #     - "9724:80"
   #     - "19724:19724"
 
-  # processingmagazine:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/processingmagazine
-  #   environment:
-  #     <<: *env
-  #     <<: *env-picon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9725
-  #     LIVERELOAD_PORT: 19725
-  #     TENANT_KEY: ebm_pmm
-  #     SITE_ID:
-  #   ports:
-  #     - "9725:80"
-  #     - "19725:19725"
+  processingmagazine:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/processingmagazine
+    environment:
+      <<: *env
+      <<: *env-picon-staging
+      PORT: 80
+      EXPOSED_PORT: 9725
+      LIVERELOAD_PORT: 19725
+      TENANT_KEY: ebm_pcm
+      SITE_ID: 5d94f8ffa6e8398c008b4567
+    ports:
+      - "9725:80"
+      - "19725:19725"
 
   offshore-mag:
     <<: *node
