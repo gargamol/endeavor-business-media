@@ -4,25 +4,31 @@ const config = new NativeXConfiguration('https://ebm.native-x.io');
 
 config
   .setAliasPlacements('default', [
-    { name: 'default', id: '5d9c7feacc0836000118e88b' },
+    { name: 'default', id: '5d9cee75cc0836000147f154' },
   ])
-  .setAliasPlacements('maintenance-safety', [
-    { name: 'default', id: '5d9c811a06c2650001a22577' },
-  ])
-  .setAliasPlacements('material-handling-dry-wet', [
-    { name: 'default', id: '5d9c8124cc08360001194f5a' },
-  ])
-  .setAliasPlacements('mixing-blending-size-reduction', [
-    { name: 'default', id: '5d9c8135cc0836000119550f' },
-  ])
-  .setAliasPlacements('process-control-automation', [
-    { name: 'default', id: '5d9c8140cc08360001195844' },
-  ])
-  .setAliasPlacements('pumps-motors-drives', [
-    { name: 'default', id: '5d9c814e06c2650001a2358b' },
+  .setAliasPlacements('instrumentation', [
+    { name: 'default', id: '5d9ceeafcc08360001480602' },
   ])
   .setAliasPlacements('valves-actuators', [
-    { name: 'default', id: '5d9c8158cc083600011960f8' },
+    { name: 'default', id: '5d9cef2806c2650001d0ffb1' },
+  ])
+  .setAliasPlacements('bearings-seals', [
+    { name: 'default', id: '5d9cef59cc08360001484adf' },
+  ])
+  .setAliasPlacements('piping-tubing-hosing', [
+    { name: 'default', id: '5d9cf0a2cc0836000148d170' },
+  ])
+  .setAliasPlacements('process-control-automation', [
+    { name: 'default', id: '5d9cf22dcc08360001496372' },
+  ])
+  .setAliasPlacements('pumps-motors-drives', [
+    { name: 'default', id: '5d9cf27c06c2650001d24aed' },
+  ])
+  .setAliasPlacements('maintenance-safety', [
+    { name: 'default', id: '5d9cf2a706c2650001d259f0' },
+  ])
+  .setAliasPlacements('industry-applications', [
+    { name: 'default', id: '5d9c8124cc08360001194f5a' },
   ]);
 
 module.exports = config;
