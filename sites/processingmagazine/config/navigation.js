@@ -1,24 +1,20 @@
 module.exports = {
   primary: {
     items: [
-      { href: '/detectors-imaging', label: 'Detectors & Imaging' },
-      { href: '/lasers-sources', label: 'Lasers & Sources' },
-      { href: '/optics', label: 'Optics' },
-      { href: '/fiber-optics', label: 'Fiber Optics' },
-      { href: '/software-accessories', label: 'Software & Accessories' },
-      { href: '/test-measurement', label: 'Test & Measurement' },
+      { href: '/maintenance-safety', label: 'Maintenance & Safety' },
+      { href: '/material-handling-dry-wet', label: 'Material Handling (Dry & Wet)' },
+      { href: '/mixing-blending-size-reduction', label: 'Mixing, Blending & Size Reduction' },
+      { href: '/process-control-automation', label: 'Process Control & Automation' },
+      { href: '/pumps-motors-drives', label: 'Pumps, Motors & Drives' },
+      { href: '/valves-actuators', label: 'Valves & Actuators' },
     ],
   },
   secondary: {
     items: [
       { href: '/subscribe', label: 'Subscribe' },
       { href: '/magazine', label: 'Magazine' },
-      { href: '/videos', label: 'Videos' },
-      { href: '/white-papers', label: 'White Papers' },
-      { href: '/webcasts', label: 'Webcasts' },
-      { href: '/directory', label: 'Buyer\'s Guide' },
-      { href: 'https://laserfocusworldinnovators.secure-platform.com/a', label: 'Awards', target: '_blank' },
-      { href: 'https://www.marketplaceseminar.com/index.html', label: 'L&P Market Seminar', target: '_blank' },
+      { href: '/webinars', label: 'Webinars' },
+      { href: '/events', label: 'Events' },
     ],
   },
   tertiary: {
@@ -39,28 +35,20 @@ module.exports = {
     {
       label: 'Topics',
       items: [
-        { href: '/detectors-imaging', label: 'Detectors & Imaging' },
-        { href: '/lasers-sources', label: 'Lasers & Sources' },
-        { href: '/optics', label: 'Optics' },
-        { href: '/fiber-optics', label: 'Fiber Optics' },
-        { href: '/software-accessories', label: 'Software & Accessories' },
-        { href: '/test-measurement', label: 'Test & Measurement' },
-        { href: '/photonics-business', label: 'Photonics Business' },
+        { href: '/maintenance-safety', label: 'Maintenance & Safety' },
+        { href: '/material-handling-dry-wet', label: 'Material Handling (Dry & Wet)' },
+        { href: '/mixing-blending-size-reduction', label: 'Mixing, Blending & Size Reduction' },
+        { href: '/process-control-automation', label: 'Process Control & Automation' },
+        { href: '/pumps-motors-drives', label: 'Pumps, Motors & Drives' },
+        { href: '/valves-actuators', label: 'Valves & Actuators' },
       ],
     },
     {
       label: 'Resources',
       items: [
-        { href: '/blogs', label: 'Commentary' },
         { href: '/magazine', label: 'Magazine' },
-        { href: '/videos', label: 'Videos' },
-        { href: '/white-papers', label: 'White Papers' },
-        { href: '/webcasts', label: 'Webcasts' },
+        { href: '/webinars', label: 'Webinars' },
         { href: '/events', label: 'Events' },
-        { href: '/directory', label: 'Buyer\'s Guide' },
-        { href: 'https://laserfocusworldinnovators.secure-platform.com/a', label: 'Awards', target: '_blank' },
-        { href: 'https://www.marketplaceseminar.com/index.html', label: 'L&P Market Seminar', target: '_blank' },
-        { href: 'https://www.strategies-u.com/reports', label: 'Photonics Market Reports', target: '_blank' },
       ],
     },
     {
