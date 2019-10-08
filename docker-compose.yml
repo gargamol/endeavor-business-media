@@ -314,7 +314,7 @@ services:
       EXPOSED_PORT: 9725
       LIVERELOAD_PORT: 19725
       TENANT_KEY: ebm_pcm
-      SITE_ID:
+      SITE_ID: 5d94f8ffa6e8398c008b4567
     ports:
       - "9725:80"
       - "19725:19725"
