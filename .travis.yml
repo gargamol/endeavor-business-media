@@ -222,7 +222,7 @@ jobs:
 
     - stage: deploy
       name: Water Technology
-      script: deploy/index.js watertechonline picon
+      script: deploy/index.js watertechonline aerilon
       install: skip
 
     # - stage: deploy

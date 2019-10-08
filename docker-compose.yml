@@ -693,7 +693,7 @@ services:
     working_dir: /root/sites/watertechonline
     environment:
       <<: *env
-      <<: *env-picon-staging
+      <<: *env-aerilon-staging
       PORT: 80
       EXPOSED_PORT: 9749
       LIVERELOAD_PORT: 19749
