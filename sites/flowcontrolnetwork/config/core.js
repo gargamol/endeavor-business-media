@@ -1,3 +1,3 @@
 module.exports = {
-  siteName: 'Processing Magazine',
+  siteName: 'Flow Control Network',
 };
