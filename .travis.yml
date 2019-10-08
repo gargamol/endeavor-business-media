@@ -80,10 +80,10 @@ jobs:
     #   script: deploy/index.js firehouse picon
     #   install: skip
 
-    # - stage: deploy
-    #   name: Flow Control
-    #   script: deploy/index.js flowcontrolnetwork picon
-    #   install: skip
+    - stage: deploy
+      name: Flow Control
+      script: deploy/index.js flowcontrolnetwork picon
+      install: skip
 
     # - stage: deploy
     #   name: GX Contractor
