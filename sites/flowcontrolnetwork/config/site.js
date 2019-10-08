@@ -5,25 +5,25 @@ module.exports = {
   company: 'Endeavor Business Media, LLC',
   logos: {
     navbar: {
-      src: 'https://base.imgix.net/files/base/ebm/pcm/image/static/pcm_logo_white.png?h=45',
+      src: 'https://base.imgix.net/files/base/ebm/fcn/image/static/fcn_logo_og.png?h=45',
       srcset: [
-        'https://base.imgix.net/files/base/ebm/pcm/image/static/pcm_logo_white.png?h=90 2x',
+        'https://base.imgix.net/files/base/ebm/fcn/image/static/fcn_logo_og.png?h=90 2x',
       ],
     },
     footer: {
-      src: 'https://base.imgix.net/files/base/ebm/pcm/image/static/pcm_logo_white.png?h=60',
+      src: 'https://base.imgix.net/files/base/ebm/fcn/image/static/fcn_logo_og.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/ebm/pcm/image/static/pcm_logo_white.png?h=120 2x',
+        'https://base.imgix.net/files/base/ebm/fcn/image/static/fcn_logo_og.png?h=120 2x',
       ],
     },
   },
   socialMediaLinks: [
-    { provider: 'linkedin', href: 'https://www.linkedin.com/in/watertechnology', target: '_blank' },
-    { provider: 'twitter', href: 'https://twitter.com/WaterTechOnline', target: '_blank' },
-    { provider: 'facebook', href: 'https://www.facebook.com/WaterTechnology', target: '_blank' },
+    { provider: 'linkedin', href: 'https://www.linkedin.com/groups/4068011', target: '_blank' },
+    { provider: 'twitter', href: 'https://twitter.com/flowcontrol_mag', target: '_blank' },
+    { provider: 'facebook', href: 'https://www.facebook.com/FlowControlMagazine', target: '_blank' },
   ],
   gtm: {
-    containerId: 'GTM-T8FSMGJ',
+    containerId: 'GTM-MNTKWH8',
   },
   wufoo: {
     userName: 'cygnuscorporate',
@@ -34,7 +34,7 @@ module.exports = {
   contactUs: {
     branding: {
       bgColor: '#164f77',
-      logo: 'https://base.imgix.net/files/base/ebm/pcm/image/static/pcm_logo_white.png?h=60',
+      logo: 'https://base.imgix.net/files/base/ebm/fcn/image/static/fcn_logo_og.png?h=60',
     },
     // to: '',
   },
