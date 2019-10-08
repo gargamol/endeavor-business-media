@@ -2,7 +2,7 @@ module.exports = {
   primary: {
     items: [
       { href: '/maintenance-safety', label: 'Maintenance & Safety' },
-      { href: '/material-handling-dry-wet', label: 'Material Handling (Dry & Wet)' },
+      { href: '/material-handling-dry-wet', label: 'Material Handling' },
       { href: '/mixing-blending-size-reduction', label: 'Mixing, Blending & Size Reduction' },
       { href: '/process-control-automation', label: 'Process Control & Automation' },
       { href: '/pumps-motors-drives', label: 'Pumps, Motors & Drives' },
@@ -36,7 +36,7 @@ module.exports = {
       label: 'Topics',
       items: [
         { href: '/maintenance-safety', label: 'Maintenance & Safety' },
-        { href: '/material-handling-dry-wet', label: 'Material Handling (Dry & Wet)' },
+        { href: '/material-handling-dry-wet', label: 'Material Handling' },
         { href: '/mixing-blending-size-reduction', label: 'Mixing, Blending & Size Reduction' },
         { href: '/process-control-automation', label: 'Process Control & Automation' },
         { href: '/pumps-motors-drives', label: 'Pumps, Motors & Drives' },
