@@ -25,33 +25,31 @@ module.exports = ({ queryFragment, notification, confirmation }) => asyncRoute(a
     from,
   };
 
-  // Store the submission
-  await storeInquiry({
-    apollo,
-    contentId: content.id,
-    payload,
-    addresses,
-  });
-
-  // Notify the contacts of the submission
-  await send(notificationBuilder({
-    template: notification,
-    $global,
-    content,
-    payload,
-    addresses,
-  }));
-
-  // Notify the user their submission was received
-  if (req.body.confirmationEmail) {
-    await send(confirmationBuilder({
+  await Promise.all([
+    // Store the submission
+    storeInquiry({
+      apollo,
+      contentId: content.id,
+      payload,
+      addresses,
+    }),
+    // Notify the contacts of the submission
+    send(notificationBuilder({
+      template: notification,
+      $global,
+      content,
+      payload,
+      addresses,
+    })),
+    // Notify the user their submission was received
+    req.body.confirmationEmail ? send(confirmationBuilder({
       template: confirmation,
       $global,
       content,
       email: req.body.confirmationEmail,
       from,
       bcc,
-    }));
-  }
+    })) : Promise.resolve(null),
+  ]);
   res.json({ ok: true });
 });
