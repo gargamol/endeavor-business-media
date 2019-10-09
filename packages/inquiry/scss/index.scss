@@ -1,17 +1,17 @@
 .inquiry-form {
-  margin-top: map-get($spacers, 2);
+  margin-top: 1rem;
   border-top: solid 1px $gray-200;
   label{
-    margin-top: map-get($spacers, 3);
+    margin-top: 1rem;
     margin-bottom: 0;
   }
   button {
-    margin-top: map-get($spacers, 3);
+    margin-top: 1rem;
   }
 }
 
 .inquiry-form-header {
-  padding-top: map-get($spacers, 3);
+  padding-top: 1rem;
   font-family: $theme-contact-details-font-family;
   font-size: $theme-contact-details-font-size;
   font-weight: $theme-contact-details-label-font-weight;
