@@ -42,7 +42,7 @@ module.exports = {
     enabled: true,
     directSend: true,
     sendTo: 'juliac@pennwell.com',
-    sendFrom: 'LaserFocusWorld.com <noreply@baseplatform.io>',
+    sendFrom: 'LightwaveOnline.com <noreply@baseplatform.io>',
     sendBcc: 'emailactivity@cygnus.com',
     logo: 'https://img.lightwaveonline.com/files/base/pennwell/lw/logo.png?h=60',
     bgColor: '#fff',
