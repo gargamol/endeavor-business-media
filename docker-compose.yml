@@ -623,21 +623,21 @@ services:
   #     - "9744:80"
   #     - "19744:19744"
 
-  # flowcontrolnetwork:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/flowcontrolnetwork
-  #   environment:
-  #     <<: *env
-  #     <<: *env-picon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9745
-  #     LIVERELOAD_PORT: 19745
-  #     TENANT_KEY: ebm_fcn
-  #     SITE_ID:
-  #   ports:
-  #     - "9745:80"
-  #     - "19745:19745"
+  flowcontrolnetwork:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/flowcontrolnetwork
+    environment:
+      <<: *env
+      <<: *env-picon-staging
+      PORT: 80
+      EXPOSED_PORT: 9745
+      LIVERELOAD_PORT: 19745
+      TENANT_KEY: ebm_fcn
+      SITE_ID: 5af4890775a254af9e0041a7
+    ports:
+      - "9745:80"
+      - "19745:19745"
 
   # gxcontractor:
   #   <<: *node
