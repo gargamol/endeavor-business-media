@@ -44,7 +44,7 @@ module.exports = {
     sendTo: 'juliac@pennwell.com',
     sendFrom: 'IndustrialLasers.com <noreply@baseplatform.io>',
     sendBcc: 'emailactivity@cygnus.com',
-    logo: 'https://img.industrial-lasers.com/files/base/pennwell/cim/logo.png?h=60',
+    logo: 'https://img.industrial-lasers.com/files/base/pennwell/ils/logo.png?h=60',
     bgColor: '#106d7d',
   },
 };
