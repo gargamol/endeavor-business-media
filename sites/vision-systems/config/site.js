@@ -45,6 +45,6 @@ module.exports = {
     sendFrom: 'VisionSystems.com <noreply@baseplatform.io>',
     sendBcc: 'emailactivity@cygnus.com',
     logo: 'https://img.vision-systems.com/files/base/pennwell/vsd/logo.png?h=60',
-    bgColor: '#ed1b24',
+    bgColor: '#fff',
   },
 };
