@@ -45,6 +45,6 @@ module.exports = {
     sendFrom: 'LaserFocusWorld.com <noreply@baseplatform.io>',
     sendBcc: 'emailactivity@cygnus.com',
     logo: 'https://img.laserfocusworld.com/files/base/pennwell/lfw/logo.png?h=60',
-    bgColor: '#106d7d',
+    bgColor: '#164f77',
   },
 };
