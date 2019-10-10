@@ -60,6 +60,7 @@ module.exports = {
         { href: '/webcasts', label: 'Webcasts' },
         { href: '/directory', label: 'Buyer\'s Guide' },
         { href: 'https://visionsystemsdesigninnovators.secure-platform.com/a', label: 'Awards', target: '_blank' },
+        { href: '/knowledge-zone', label: 'Knowledge Zone' },
       ],
     },
     {
