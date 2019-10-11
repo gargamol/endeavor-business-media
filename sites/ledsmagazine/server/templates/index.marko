@@ -54,7 +54,7 @@ $ const { id, alias, name, pageNode } = data;
             </marko-web-query>
           </div>
           <div class="col-lg-6 mb-block">
-             <marko-web-query|{ nodes }|
+            <marko-web-query|{ nodes }|
               name="website-scheduled-content"
               params={ sectionAlias: "architectural-lighting", limit: 3, queryFragment }
             >
@@ -157,17 +157,17 @@ $ const { id, alias, name, pageNode } = data;
         </marko-web-query>
       </div>
       <div class="col-lg-4 mb-block">
-            <marko-web-query|{ nodes }|
-              name="website-scheduled-content"
-              params={ sectionAlias: "company-newsfeed", limit: 5, queryFragment }
-            >
-              <website-content-list-flow nodes=nodes>
-                <@header>
-                  <marko-web-link href="/company-newsfeed">Company Newsfeed</marko-web-link>
-                </@header>
-                <@native-x index=2 name="list1" aliases=["company-newsfeed"] />
-              </website-content-list-flow>
-            </marko-web-query>
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "company-newsfeed", limit: 5, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/company-newsfeed">Company Newsfeed</marko-web-link>
+            </@header>
+            <@native-x index=2 name="list1" aliases=["company-newsfeed"] />
+          </website-content-list-flow>
+        </marko-web-query>
       </div>
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ node: issue }|
