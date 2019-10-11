@@ -42,16 +42,13 @@ $ const { id, alias, name, pageNode } = data;
             </div>
           </div>
         </@section>
-        <@section>
-          <marko-web-query|{ nodes }|
-            name="website-optioned-content"
-            params={ sectionId: id, optionId: 9, limit: 5, queryFragment }
-          >
-            <website-content-hero-flow nodes=nodes>
-            </website-content-hero-flow>
-          </marko-web-query>
-        </@section>
       </marko-web-page-wrapper>
+      <marko-web-query|{ nodes }|
+        name="website-optioned-content"
+        params={ sectionId: id, optionId: 9, limit: 5, queryFragment }
+      >
+        <website-content-hero-flow nodes=nodes />
+      </marko-web-query>
     </marko-web-resolve-page>
 
     <div class="row">
