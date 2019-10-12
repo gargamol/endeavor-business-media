@@ -1,11 +1,13 @@
 {
   "<website-content-list-node>": {
     "template": "./content-list.marko",
+    "<image>": {},
     "@node": "object",
     "@display-image": {
       "type": "boolean",
       "default-value": true
     },
+    "@image-position": "string",
     "@with-teaser": {
       "type": "boolean",
       "default-value": false

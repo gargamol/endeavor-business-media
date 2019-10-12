@@ -4,6 +4,7 @@ $ const content = getAsObject(input, "node");
 $ const primaryImage = getAsObject(content, "primaryImage");
 $ const primarySection = getAsObject(content, "primarySection");
 $ const displayImage = input.displayImage != null ? input.displayImage : true;
+$ const imagePosition = input.imagePosition != null ? input.imagePosition : "right";
 $ const withTeaser = input.withTeaser != null ? input.withTeaser : false;
 
 $ const { linkAttrs } = input;
@@ -11,18 +12,19 @@ $ const { linkAttrs } = input;
 <marko-web-node
   type=`${content.type}-content`
   flush=true
-  image-position="right"
+  image-position=imagePosition
   attrs=input.attrs
 >
   <if(displayImage)>
     <@image
+    ar="1:1"
+      width=75
+      align="middle"
+      ...input.image
       src=primaryImage.src
       alt=primaryImage.alt
       is-logo=primaryImage.isLogo
       fluid=false
-      ar="1:1"
-      width=75
-      align="middle"
       link={ href: content.canonicalPath, attrs: linkAttrs }
     />
   </if>
