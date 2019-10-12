@@ -55,10 +55,10 @@ jobs:
       script: deploy/index.js dentaleconomics aerilon
       install: skip
 
-    # - stage: deploy
-    #   name: DentistryIQ
-    #   script: deploy/index.js dentistryiq aerilon
-    #   install: skip
+    - stage: deploy
+      name: DentistryIQ
+      script: deploy/index.js dentistryiq aerilon
+      install: skip
 
     # - stage: deploy
     #   name: Distributed Energy
