@@ -1,0 +1,24 @@
+$primary: #1371b8;
+$secondary: #495057;
+$light: #e9ecef;
+$dark: #212529;
+$info: #6c757d;
+
+$theme-site-navbar-secondary-bg-color: #fff;
+$theme-site-navbar-secondary-type: light;
+
+$theme-site-header-breakpoints: (
+  hide-primary: 1042px,
+  hide-secondary: 850px,
+  small-logo: 916px,
+  small-text-primary: 1186px,
+  small-text-secondary: 1008px
+);
+
+@import "../../node_modules/@base-cms/marko-web-gam/scss/fixed-ad-bottom";
+@import "../../node_modules/@base-cms/marko-web-reveal-ad/scss/reveal-ad";
+@import "../../node_modules/@base-cms/marko-web-theme-default/skins/orion/skin";
+// @todo this should be remove once contact us is in core
+@import "../../node_modules/@base-cms-websites/package-common/scss/contact-us-form";
+@import "../../node_modules/@base-cms-websites/package-common/scss/directory";
+@import "../../node_modules/@base-cms-websites/package-inquiry/scss/index";

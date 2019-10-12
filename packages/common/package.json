@@ -1,6 +1,6 @@
 {
   "name": "@base-cms-websites/package-common",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "author": "Jacob Bare <jacob@limit0.io>",
   "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/packages/common",
   "license": "MIT",
@@ -11,10 +11,11 @@
   },
   "dependencies": {
     "@base-cms/env": "^1.0.0-beta.1",
-    "@base-cms/marko-web": "^1.0.0-beta.1",
+    "@base-cms/marko-web": "^1.0.0-beta.3",
+    "@base-cms/marko-web-theme-default": "^1.0.0-beta.2",
     "@base-cms/object-path": "^1.0.0-beta.1",
     "@base-cms/utils": "^1.0.0-beta.1",
-    "@base-cms/web-cli": "^1.0.0-beta.1",
+    "@base-cms/web-cli": "^1.0.0-beta.3",
     "@sendgrid/mail": "^6.4.0",
     "body-parser": "^1.19.0",
     "graphql": "^14.5.4",

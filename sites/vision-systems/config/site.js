@@ -5,15 +5,15 @@ module.exports = {
   company: 'Endeavor Business Media, LLC',
   logos: {
     navbar: {
-      src: 'https://base.imgix.net/files/base/pennwell/vsd/vsd-navbar-logo.png?h=45',
+      src: 'https://img.vision-systems.com/files/base/pennwell/vsd/vsd-navbar-logo.png?h=45',
       srcset: [
-        'https://base.imgix.net/files/base/pennwell/vsd/vsd-navbar-logo.png?h=90 2x',
+        'https://img.vision-systems.com/files/base/pennwell/vsd/vsd-navbar-logo.png?h=90 2x',
       ],
     },
     footer: {
-      src: 'https://base.imgix.net/files/base/pennwell/vsd/vsd-navbar-logo.png?h=60',
+      src: 'https://img.vision-systems.com/files/base/pennwell/vsd/vsd-navbar-logo.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/pennwell/vsd/vsd-navbar-logo.png?h=120 2x',
+        'https://img.vision-systems.com/files/base/pennwell/vsd/vsd-navbar-logo.png?h=120 2x',
       ],
     },
   },
@@ -23,12 +23,28 @@ module.exports = {
     { provider: 'facebook', href: 'https://www.facebook.com/VisionSystemsDesign?ref=hl', target: '_blank' },
   ],
   gtm: {
-    containerId: 'GTM-PZFPXQK',
+    containerId: 'GTM-TMGQFQZ',
   },
   wufoo: {
     userName: 'cygnuscorporate',
   },
   magazines: {
     description: '',
+  },
+  contactUs: {
+    branding: {
+      bgColor: '#ed1b24',
+      logo: 'https://img.vision-systems.com/files/base/pennwell/vsd/logo.png?h=60',
+    },
+    to: 'juliac@pennwell.com',
+  },
+  inquiry: {
+    enabled: true,
+    directSend: true,
+    sendTo: 'juliac@pennwell.com',
+    sendFrom: 'VisionSystems.com <noreply@baseplatform.io>',
+    sendBcc: 'emailactivity@cygnus.com',
+    logo: 'https://img.vision-systems.com/files/base/pennwell/vsd/logo.png?h=60',
+    bgColor: '#fff',
   },
 };
