@@ -10,7 +10,9 @@ module.exports = {
   },
   secondary: {
     items: [
-      { href: '/magazine', label: 'In Print' },
+      { href: '/magazine', label: 'Magazine' },
+      { href: '/white-papers', label: 'White Papers' },
+      { href: '/webcasts', label: 'Webcasts' },
       { href: '/subscribe', label: 'Subscribe' },
       { href: '/page/advertise', label: 'Advertise' },
       { href: '/page/about-us', label: 'About Us' },
