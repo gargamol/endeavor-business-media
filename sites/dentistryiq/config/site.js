@@ -23,7 +23,7 @@ module.exports = {
     { provider: 'facebook', href: 'https://www.facebook.com/DentistryIQ' },
   ],
   gtm: {
-    containerId: 'GTM-MNNGJ32',
+    containerId: 'GTM-WFGHPBF',
   },
   wufoo: {
     userName: 'cygnuscorporate',
