@@ -23,14 +23,6 @@ config
     { name: 'reskin', path: 'default/reskin' },
     { name: 'wa', path: 'default/wa' },
   ])
-  .setAliasAdUnits('data-center', [
-    { name: 'lb1', templateName: 'LB', path: 'data-center/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'data-center/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'data-center/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'data-center/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'data-center/load-more' },
-    { name: 'reskin', path: 'data-center/reskin' },
-  ])
   .setAliasAdUnits('applications', [
     { name: 'lb1', templateName: 'LB', path: 'applications/lb1' },
     { name: 'lb2', templateName: 'LB', path: 'applications/lb2' },
