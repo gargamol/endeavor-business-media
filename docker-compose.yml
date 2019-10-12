@@ -154,6 +154,7 @@ services:
   #     EXPOSED_PORT: 9715
   #     LIVERELOAD_PORT: 19715
   #     TENANT_KEY: cygnus_cavc
+  #     SITE_ID: 5409cf10c827f1be4bb483f9
   #   ports:
   #     - "9715:80"
   #     - "19715:19715"
@@ -174,37 +175,37 @@ services:
       - "9716:80"
       - "19716:19716"
 
-  # dentistryiq:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/dentistryiq
-  #   environment:
-  #     <<: *env
-  #     <<: *env-aerilon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9717
-  #     LIVERELOAD_PORT: 19717
-  #     TENANT_KEY: ebm_diq
-  #     SITE_ID: 5ca3868b08cf3a4e048b4567
-  #   ports:
-  #     - "9717:80"
-  #     - "19717:19717"
+  dentistryiq:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/dentistryiq
+    environment:
+      <<: *env
+      <<: *env-aerilon-staging
+      PORT: 80
+      EXPOSED_PORT: 9717
+      LIVERELOAD_PORT: 19717
+      TENANT_KEY: ebm_diq
+      SITE_ID: 5ca3868b08cf3a4e048b4567
+    ports:
+      - "9717:80"
+      - "19717:19717"
 
-  # perioimplantadvisory:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/perioimplantadvisory
-  #   environment:
-  #     <<: *env
-  #     <<: *env-aerilon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9718
-  #     LIVERELOAD_PORT: 19718
-  #     TENANT_KEY: ebm_pia
-  #     SITE_ID: 5ca3871b08cf3a52048b4567
-  #   ports:
-  #     - "9718:80"
-  #     - "19718:19718"
+  perioimplantadvisory:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/perioimplantadvisory
+    environment:
+      <<: *env
+      <<: *env-aerilon-staging
+      PORT: 80
+      EXPOSED_PORT: 9718
+      LIVERELOAD_PORT: 19718
+      TENANT_KEY: ebm_pia
+      SITE_ID: 5ca3871b08cf3a52048b4567
+    ports:
+      - "9718:80"
+      - "19718:19718"
 
   rdhmag:
     <<: *node
@@ -233,6 +234,7 @@ services:
   #     EXPOSED_PORT: 9720
   #     LIVERELOAD_PORT: 19720
   #     TENANT_KEY: cygnus_cpa
+  #     SITE_ID: 5be05ab10b43fe47008b4567
   #   ports:
   #     - "9720:80"
   #     - "19720:19720"
@@ -248,6 +250,7 @@ services:
   #     EXPOSED_PORT: 9721
   #     LIVERELOAD_PORT: 19721
   #     TENANT_KEY: ebm_hci
+  #     SITE_ID: 5c33c23175a254e2210041a7
   #   ports:
   #     - "9721:80"
   #     - "19721:19721"
@@ -263,6 +266,7 @@ services:
   #     EXPOSED_PORT: 9722
   #     LIVERELOAD_PORT: 19722
   #     TENANT_KEY: ebm_hpn
+  #     SITE_ID: 5babaa3fb09d901d008b4567
   #   ports:
   #     - "9722:80"
   #     - "19722:19722"
@@ -278,6 +282,7 @@ services:
   #     EXPOSED_PORT: 9723
   #     LIVERELOAD_PORT: 19723
   #     TENANT_KEY: ebm_mlo
+  #     SITE_ID: 5babaa3fb09d901d008b4567
   #   ports:
   #     - "9723:80"
   #     - "19723:19723"
@@ -293,24 +298,26 @@ services:
   #     EXPOSED_PORT: 9724
   #     LIVERELOAD_PORT: 19724
   #     TENANT_KEY: ebm_pmm
+  #     SITE_ID:
   #   ports:
   #     - "9724:80"
   #     - "19724:19724"
 
-  # processingmagazine:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/processingmagazine
-  #   environment:
-  #     <<: *env
-  #     <<: *env-picon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9725
-  #     LIVERELOAD_PORT: 19725
-  #     TENANT_KEY: ebm_pmm
-  #   ports:
-  #     - "9725:80"
-  #     - "19725:19725"
+  processingmagazine:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/processingmagazine
+    environment:
+      <<: *env
+      <<: *env-picon-staging
+      PORT: 80
+      EXPOSED_PORT: 9725
+      LIVERELOAD_PORT: 19725
+      TENANT_KEY: ebm_pcm
+      SITE_ID: 5d94f8ffa6e8398c008b4567
+    ports:
+      - "9725:80"
+      - "19725:19725"
 
   offshore-mag:
     <<: *node
@@ -355,6 +362,7 @@ services:
   #     EXPOSED_PORT: 9728
   #     LIVERELOAD_PORT: 19728
   #     TENANT_KEY: cygnus_fhc
+  #     SITE_ID: 541c4318fdef6cc5fb990f20
   #   ports:
   #     - "9728:80"
   #     - "19728:19728"
@@ -370,6 +378,7 @@ services:
   #     EXPOSED_PORT: 9729
   #     LIVERELOAD_PORT: 19729
   #     TENANT_KEY: cygnus_ofcr
+  #     SITE_ID: 53f6823828ed57018875bb51
   #   ports:
   #     - "9729:80"
   #     - "19729:19729"
@@ -385,6 +394,7 @@ services:
   #     EXPOSED_PORT: 9730
   #     LIVERELOAD_PORT: 19730
   #     TENANT_KEY: cygnus_siw
+  #     SITE_ID: 5bd2215b29a75d73008b4567
   #   ports:
   #     - "9730:80"
   #     - "19730:19730"
@@ -400,6 +410,7 @@ services:
   #     EXPOSED_PORT: 9731
   #     LIVERELOAD_PORT: 19731
   #     TENANT_KEY: cygnus_ll
+  #     SITE_ID: 5bd77286412f6dac008b4567
   #   ports:
   #     - "9731:80"
   #     - "19731:19731"
@@ -436,68 +447,69 @@ services:
   #     - "9733:80"
   #     - "19733:19733"
 
-  # evaluationengineering:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/evaluationengineering
-  #   environment:
-  #     <<: *env
-  #     <<: *env-picon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9734
-  #     LIVERELOAD_PORT: 19734
-  #     TENANT_KEY: ebm_ee
-  #   ports:
-  #     - "9734:80"
-  #     - "19734:19734"
+  evaluationengineering:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/evaluationengineering
+    environment:
+      <<: *env
+      <<: *env-picon-staging
+      PORT: 80
+      EXPOSED_PORT: 9734
+      LIVERELOAD_PORT: 19734
+      TENANT_KEY: ebm_ee
+      SITE_ID: 5babaa3fb09d901d008b4567
+    ports:
+      - "9734:80"
+      - "19734:19734"
 
-  # industrial-lasers:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/industrial-lasers
-  #   environment:
-  #     <<: *env
-  #     <<: *env-aerilon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9735
-  #     LIVERELOAD_PORT: 19735
-  #     TENANT_KEY: ebm_ils
-  #     SITE_ID: 5ca43ed575a2546d050041a7
-  #   ports:
-  #     - "9735:80"
-  #     - "19735:19735"
+  industrial-lasers:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/industrial-lasers
+    environment:
+      <<: *env
+      <<: *env-aerilon-staging
+      PORT: 80
+      EXPOSED_PORT: 9735
+      LIVERELOAD_PORT: 19735
+      TENANT_KEY: ebm_ils
+      SITE_ID: 5ca43ed575a2546d050041a7
+    ports:
+      - "9735:80"
+      - "19735:19735"
 
-  # intelligent-aerospace:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/intelligent-aerospace
-  #   environment:
-  #     <<: *env
-  #     <<: *env-aerilon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9736
-  #     LIVERELOAD_PORT: 19736
-  #     TENANT_KEY: ebm_ias
-  #     SITE_ID: 5ca4da3775a2546b050041a7
-  #   ports:
-  #     - "9736:80"
-  #     - "19736:19736"
+  intelligent-aerospace:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/intelligent-aerospace
+    environment:
+      <<: *env
+      <<: *env-aerilon-staging
+      PORT: 80
+      EXPOSED_PORT: 9736
+      LIVERELOAD_PORT: 19736
+      TENANT_KEY: ebm_ias
+      SITE_ID: 5ca4da3775a2546b050041a7
+    ports:
+      - "9736:80"
+      - "19736:19736"
 
-  # ledsmagazine:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/ledsmagazine
-  #   environment:
-  #     <<: *env
-  #     <<: *env-aerilon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9737
-  #     LIVERELOAD_PORT: 19737
-  #     TENANT_KEY: ebm_leds
-  #     SITE_ID: 5ca78b9f75a254fc0d0041a7
-  #   ports:
-  #     - "9737:80"
-  #     - "19737:19737"
+  ledsmagazine:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/ledsmagazine
+    environment:
+      <<: *env
+      <<: *env-aerilon-staging
+      PORT: 80
+      EXPOSED_PORT: 9737
+      LIVERELOAD_PORT: 19737
+      TENANT_KEY: ebm_leds
+      SITE_ID: 5ca78b9f75a254fc0d0041a7
+    ports:
+      - "9737:80"
+      - "19737:19737"
 
   lightwaveonline:
     <<: *node
@@ -542,6 +554,7 @@ services:
   #     EXPOSED_PORT: 9740
   #     LIVERELOAD_PORT: 19740
   #     TENANT_KEY: cygnus_mass
+  #     SITE_ID: 5bdb2821881b9bad008b4567
   #   ports:
   #     - "9740:80"
   #     - "19740:19740"
@@ -557,6 +570,7 @@ services:
   #     EXPOSED_PORT: 9741
   #     LIVERELOAD_PORT: 19741
   #     TENANT_KEY: cygnus_vspc
+  #     SITE_ID: 578631623bab465e7f4932d8
   #   ports:
   #     - "9741:80"
   #     - "19741:19741"
@@ -572,6 +586,7 @@ services:
   #     EXPOSED_PORT: 9742
   #     LIVERELOAD_PORT: 19742
   #     TENANT_KEY: cygnus_vmw
+  #     SITE_ID: 5bd2148d29a75d35008b4567
   #   ports:
   #     - "9742:80"
   #     - "19742:19742"
@@ -587,6 +602,7 @@ services:
   #     EXPOSED_PORT: 9743
   #     LIVERELOAD_PORT: 19743
   #     TENANT_KEY: ebm_dte
+  #     SITE_ID:
   #   ports:
   #     - "9743:80"
   #     - "19743:19743"
@@ -602,24 +618,26 @@ services:
   #     EXPOSED_PORT: 9744
   #     LIVERELOAD_PORT: 19744
   #     TENANT_KEY: ebm_ero
+  #     SITE_ID:
   #   ports:
   #     - "9744:80"
   #     - "19744:19744"
 
-  # flowcontrolnetwork:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/flowcontrolnetwork
-  #   environment:
-  #     <<: *env
-  #     <<: *env-picon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9745
-  #     LIVERELOAD_PORT: 19745
-  #     TENANT_KEY: ebm_fcn
-  #   ports:
-  #     - "9745:80"
-  #     - "19745:19745"
+  flowcontrolnetwork:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/flowcontrolnetwork
+    environment:
+      <<: *env
+      <<: *env-picon-staging
+      PORT: 80
+      EXPOSED_PORT: 9745
+      LIVERELOAD_PORT: 19745
+      TENANT_KEY: ebm_fcn
+      SITE_ID: 5af4890775a254af9e0041a7
+    ports:
+      - "9745:80"
+      - "19745:19745"
 
   # gxcontractor:
   #   <<: *node
@@ -632,6 +650,7 @@ services:
   #     EXPOSED_PORT: 9746
   #     LIVERELOAD_PORT: 19746
   #     TENANT_KEY: ebm_gxc
+  #     SITE_ID:
   #   ports:
   #     - "9746:80"
   #     - "19746:19746"
@@ -647,6 +666,7 @@ services:
   #     EXPOSED_PORT: 9747
   #     LIVERELOAD_PORT: 19747
   #     TENANT_KEY: ebm_msw
+  #     SITE_ID:
   #   ports:
   #     - "9747:80"
   #     - "19747:19747"
@@ -662,24 +682,26 @@ services:
   #     EXPOSED_PORT: 9748
   #     LIVERELOAD_PORT: 19748
   #     TENANT_KEY: ebm_gxc
+  #     SITE_ID:
   #   ports:
   #     - "9748:80"
   #     - "19748:19748"
 
-  # watertechonline:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/watertechonline
-  #   environment:
-  #     <<: *env
-  #     <<: *env-picon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9749
-  #     LIVERELOAD_PORT: 19749
-  #     TENANT_KEY: ebm_wto
-  #   ports:
-  #     - "9749:80"
-  #     - "19749:19749"
+  watertechonline:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/watertechonline
+    environment:
+      <<: *env
+      <<: *env-aerilon-staging
+      PORT: 80
+      EXPOSED_PORT: 9749
+      LIVERELOAD_PORT: 19749
+      TENANT_KEY: ebm_wto
+      SITE_ID: 5d94fb44a6e83990008b4567
+    ports:
+      - "9749:80"
+      - "19749:19749"
 
   # waterworld:
   #   <<: *node
