@@ -5,15 +5,15 @@ module.exports = {
   company: 'Endeavor Business Media, LLC',
   logos: {
     navbar: {
-      src: 'https://base.imgix.net/files/base/pennwell/ee/logo.png?h=45',
+      src: 'https://base.imgix.net/files/base/ebm/ee/image/static/ee_logo.png?h=45',
       srcset: [
-        'https://base.imgix.net/files/base/pennwell/ee/logo.png?h=90 2x',
+        'https://base.imgix.net/files/base/ebm/ee/image/static/ee_logo.png?h=90 2x',
       ],
     },
     footer: {
-      src: 'https://base.imgix.net/files/base/pennwell/ee/logo.png?h=60',
+      src: 'https://base.imgix.net/files/base/ebm/ee/image/static/ee_logo.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/pennwell/ee/logo.png?h=120 2x',
+        'https://base.imgix.net/files/base/ebm/ee/image/static/ee_logo.png?h=120 2x',
       ],
     },
   },
@@ -34,7 +34,7 @@ module.exports = {
   contactUs: {
     branding: {
       bgColor: '#d71920',
-      logo: 'https://base.imgix.net/files/base/ebm/ee/image/static/logo/site_logo_bare.png',
+      logo: 'https://base.imgix.net/files/base/ebm/ee/image/static/ee_logo.png',
     },
     to: 'kcormier@evaluationengineering.com',
   },
