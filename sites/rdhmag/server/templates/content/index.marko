@@ -19,8 +19,8 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
       $ const aliases = hierarchyAliases(content.primarySection);
       $ const adSlots = {
         "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
-        "gpt-ad-rail1": GAM.getAdUnit({ name: "rail1", aliases, size: [300, 250] }),
-        "gpt-ad-rail2": GAM.getAdUnit({ name: "rail2", aliases, size: [300, 600] }),
+        "gpt-ad-rail1": GAM.getAdUnit({ name: "rail1", aliases }),
+        "gpt-ad-rail2": GAM.getAdUnit({ name: "rail2", aliases }),
       }
        <marko-web-gam-slots slots=adSlots />
     </marko-web-resolve-page>
@@ -83,6 +83,13 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
                   <@link class="btn btn-lg btn-primary" />
                 </default-theme-content-download>
               </if>
+              <if(type === "webinar")>
+                <default-theme-content-link-url
+                  obj=content
+                  label="Register/View"
+                  target="_blank"
+                />
+              </if>
             </default-theme-page-contents>
             <aside class="col-lg-4 page-rail">
               <marko-web-gam-display-ad id="gpt-ad-rail1" />
@@ -96,7 +103,7 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
                   section-name=section.name
                   query-fragment=queryFragment
                 >
-                  <@native-x index=4 name="list1" aliases=aliases />
+                  <@native-x index=4 name="default" aliases=aliases />
                 </website-related-content-block>
               </marko-web-resolve-page>
             </aside>
@@ -118,7 +125,7 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
         section-name=section.name
         section-skip=5
       >
-        <@native-x index=0 name="card" aliases=aliases />
+        <@native-x index=0 name="default" aliases=aliases />
       </website-content-load-more-block>
     </marko-web-resolve-page>
   </@below-page>
