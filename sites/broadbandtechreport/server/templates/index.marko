@@ -61,7 +61,7 @@ $ const { id, alias, name, pageNode } = data;
                 <@header>
                   <marko-web-link href="/docsis">Docsis</marko-web-link>
                 </@header>
-                <@native-x index=2 name="list1" aliases=["docsis"] />
+                <@native-x index=2 name="default" aliases=["docsis"] />
               </website-content-list-flow>
             </marko-web-query>
           </div>
@@ -76,7 +76,7 @@ $ const { id, alias, name, pageNode } = data;
                 <@header>
                   <marko-web-link href="/fiber">Fiber</marko-web-link>
                 </@header>
-                <@native-x index=2 name="list1" aliases=["fiber"] />
+                <@native-x index=2 name="default" aliases=["fiber"] />
               </website-content-list-flow>
             </marko-web-query>
           </div>
@@ -89,7 +89,7 @@ $ const { id, alias, name, pageNode } = data;
                 <@header>
                   <marko-web-link href="/in-the-home">In The Home</marko-web-link>
                 </@header>
-                <@native-x index=2 name="list1" aliases=["in-the-home"] />
+                <@native-x index=2 name="default" aliases=["in-the-home"] />
               </website-content-list-flow>
             </marko-web-query>
           </div>
@@ -112,7 +112,7 @@ $ const { id, alias, name, pageNode } = data;
             <@header>
               <marko-web-link href="/wireless">Wireless</marko-web-link>
             </@header>
-            <@native-x index=2 name="list1" aliases=["wireless"] />
+            <@native-x index=2 name="default" aliases=["wireless"] />
           </website-content-list-flow>
         </marko-web-query>
       </div>
@@ -125,7 +125,7 @@ $ const { id, alias, name, pageNode } = data;
             <@header>
               <marko-web-link href="/videos">Videos</marko-web-link>
             </@header>
-            <@native-x index=2 name="list1" aliases=["video"] />
+            <@native-x index=2 name="default" aliases=["video"] />
           </website-content-list-flow>
         </marko-web-query>
       </div>
@@ -138,7 +138,7 @@ $ const { id, alias, name, pageNode } = data;
             <@header>
               <marko-web-link href="/business-services">Business Services</marko-web-link>
             </@header>
-            <@native-x index=2 name="list1" aliases=["business-services"] />
+            <@native-x index=2 name="default" aliases=["business-services"] />
           </website-content-list-flow>
         </marko-web-query>
       </div>
@@ -154,7 +154,7 @@ $ const { id, alias, name, pageNode } = data;
             <@header>
               <marko-web-link href="back-office">Back Office</marko-web-link>
             </@header>
-            <@native-x index=2 name="list1" aliases=["back-office"] />
+            <@native-x index=2 name="default" aliases=["back-office"] />
           </website-content-list-flow>
         </marko-web-query>
       </div>
@@ -167,7 +167,7 @@ $ const { id, alias, name, pageNode } = data;
             <@header>
               <marko-web-link href="test">Test</marko-web-link>
             </@header>
-            <@native-x index=2 name="list1" aliases=["test"] />
+            <@native-x index=2 name="default" aliases=["test"] />
           </website-content-list-flow>
         </marko-web-query>
       </div>
@@ -232,7 +232,7 @@ $ const { id, alias, name, pageNode } = data;
         component-input={ aliases }
         fragment-name="content-list"
         query-name="website-scheduled-content"
-        query-params={ sectionId: id, limit: 14, skip: 5 }
+        query-params={ sectionId: id, limit: 14, skip: 9 }
         max-pages=0
         page-input={ for: "website-section", id }
       />
