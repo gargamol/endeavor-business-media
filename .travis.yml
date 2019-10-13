@@ -55,10 +55,10 @@ jobs:
       script: deploy/index.js dentaleconomics aerilon
       install: skip
 
-    # - stage: deploy
-    #   name: DentistryIQ
-    #   script: deploy/index.js dentistryiq aerilon
-    #   install: skip
+    - stage: deploy
+      name: DentistryIQ
+      script: deploy/index.js dentistryiq aerilon
+      install: skip
 
     # - stage: deploy
     #   name: Distributed Energy
@@ -70,20 +70,20 @@ jobs:
     #   script: deploy/index.js erosioncontrol picon
     #   install: skip
 
-    # - stage: deploy
-    #   name: Evaluation Engineering
-    #   script: deploy/index.js evaluationengineering picon
-    #   install: skip
+    - stage: deploy
+      name: Evaluation Engineering
+      script: deploy/index.js evaluationengineering picon
+      install: skip
 
     # - stage: deploy
     #   name: Firehouse
     #   script: deploy/index.js firehouse picon
     #   install: skip
 
-    # - stage: deploy
-    #   name: Flow Control
-    #   script: deploy/index.js flowcontrolnetwork picon
-    #   install: skip
+    - stage: deploy
+      name: Flow Control
+      script: deploy/index.js flowcontrolnetwork picon
+      install: skip
 
     # - stage: deploy
     #   name: GX Contractor
@@ -175,10 +175,10 @@ jobs:
     #   script: deploy/index.js plasticsmachinerymagazine picon
     #   install: skip
 
-    # - stage: deploy
-    #   name: Processing Magazine
-    #   script: deploy/index.js processingmagazine picon
-    #   install: skip
+    - stage: deploy
+      name: Processing Magazine
+      script: deploy/index.js processingmagazine picon
+      install: skip
 
     - stage: deploy
       name: Registered Dental Hygienists
@@ -220,10 +220,10 @@ jobs:
       script: deploy/index.js vision-systems aerilon
       install: skip
 
-    # - stage: deploy
-    #   name: Water Technology
-    #   script: deploy/index.js watertechonline picon
-    #   install: skip
+    - stage: deploy
+      name: Water Technology
+      script: deploy/index.js watertechonline aerilon
+      install: skip
 
     # - stage: deploy
     #   name: Waterworld

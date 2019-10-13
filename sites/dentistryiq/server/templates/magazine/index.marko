@@ -1,0 +1,55 @@
+import GAM from "../../../config/gam";
+
+$ const { site } = out.global;
+
+$ const type = "magazines";
+$ const title = "Magazines";
+$ const description = site.get("magazines.description");
+
+<marko-web-default-page-layout type=type title=title description=description>
+  <@head>
+    <marko-web-gtm-default-context|{ context }| type=type>
+      <marko-web-gtm-push data=context />
+    </marko-web-gtm-default-context>
+  </@head>
+  <@above-container>
+    <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "wa" }) />
+    <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "reskin" }) />
+  </@above-container>
+  <@page>
+    <marko-web-gam-define-display-ad ...GAM.getAdUnit({ name: "lb1" }) modifiers=["top-of-page"] />
+    <marko-web-page-wrapper class="mb-block">
+      <@section>
+        <div class="row">
+          <div class="col">
+            <default-theme-breadcrumbs-with-home>
+              <@item>${title}</@item>
+            </default-theme-breadcrumbs-with-home>
+            <h1 class="page-wrapper__title">${title}</h1>
+            <p class="page-wrapper__deck">
+              <em>DentistryIQ</em> partners with <em>Dental Economics</em> and <em>RDH magazine</em> to provide timely information for dental professionals. Subscribe to these leading publications today!
+            </p>
+
+            <div class="page-wrapper__body">
+              <h2>Dental Economics Magazine</h2>
+              <p>
+                <a href="https://www.dentaleconomics.com">Dental Economics</a> (DE) is the leading business journal for the dental profession. For more than 100 years, <a href="https://www.dentaleconomics.com">DE</a> has helped dentists improve their practices through sound business advice and updates on new products, techniques, and technologies. Magazine subscriptions are free to dentists and select groups of dental professionals.
+              </p>
+              <a class="btn item__button" href="https://www.dentaleconomics.com/magazine">Subscribe to DE</a>
+            </div>
+            <div class="page-wrapper__body">
+              <h2>RDH Magazine</h2>
+              <p>
+                <a href="https://www.rdhmag.com">RDH</a> is published monthly for dental hygienists committed to ongoing professional growth. Reporting on topics such as hygiene practice management, evidence-based periodontics, infection control, oral pathology, new product evaluations and continuing education, RDH covers crucial issues that affect hygienists every day.
+              </p>
+              <a class="btn item__button" href="https://www.rdhmag.com/magazine">Subscribe to RDH</a>
+            </div>
+          </div>
+        </div>
+      </@section>
+      <@section>
+        <website-magazine-publications-block />
+      </@section>
+    </marko-web-page-wrapper>
+  </@page>
+</marko-web-default-page-layout>
