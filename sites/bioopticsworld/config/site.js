@@ -23,7 +23,7 @@ module.exports = {
     { provider: 'facebook', href: 'https://www.facebook.com/pages/BioOptics-World/131802223749' },
   ],
   gtm: {
-    containerId: 'GTM-M24RV9Q',
+    containerId: 'GTM-53W9PRB',
   },
   wufoo: {
     userName: 'cygnuscorporate',
