@@ -415,21 +415,21 @@ services:
   #     - "9731:80"
   #     - "19731:19731"
 
-  # bioopticsworld:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/bioopticsworld
-  #   environment:
-  #     <<: *env
-  #     <<: *env-aerilon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9732
-  #     LIVERELOAD_PORT: 19732
-  #     TENANT_KEY: ebm_bow
-  #     SITE_ID: 5ca3892508cf3a56048b4567
-  #   ports:
-  #     - "9732:80"
-  #     - "19732:19732"
+  bioopticsworld:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/bioopticsworld
+    environment:
+      <<: *env
+      <<: *env-aerilon-staging
+      PORT: 80
+      EXPOSED_PORT: 9732
+      LIVERELOAD_PORT: 19732
+      TENANT_KEY: ebm_bow
+      SITE_ID: 5ca3892508cf3a56048b4567
+    ports:
+      - "9732:80"
+      - "19732:19732"
 
   # broadbandtechreport:
   #   <<: *node
