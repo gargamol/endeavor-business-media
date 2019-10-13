@@ -4,14 +4,14 @@ const config = new GAMConfiguration('21687441225', { basePath: 'RDH' });
 
 config
   .setTemplate('LB', {
-    size: [[970, 250], [970, 90], [970, 66], [728, 90], [320, 50], [300, 50], [300, 100]],
+    size: [[970, 250], [970, 90], [970, 66], [728, 90], [300, 50], [300, 100]],
     sizeMapping: [
       { viewport: [980, 0], size: [[970, 250], [970, 90], [970, 66], [728, 90]] },
       { viewport: [750, 0], size: [728, 90] },
       { viewport: [320, 0], size: [[300, 50], [320, 50], [300, 100]] },
     ],
   })
-  .setTemplate('CONTENT', { size: [[300, 250], [300, 600]] });
+  .setTemplate('CONTENT', { size: [300, 250] });
 
 config
   .setAliasAdUnits('default', [
