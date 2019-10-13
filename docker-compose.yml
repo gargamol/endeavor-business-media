@@ -431,21 +431,21 @@ services:
       - "9732:80"
       - "19732:19732"
 
-  # broadbandtechreport:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/broadbandtechreport
-  #   environment:
-  #     <<: *env
-  #     <<: *env-aerilon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9733
-  #     LIVERELOAD_PORT: 19733
-  #     TENANT_KEY: ebm_btr
-  #     SITE_ID: 5ca39b0f08cf3a5a048b4567
-  #   ports:
-  #     - "9733:80"
-  #     - "19733:19733"
+  broadbandtechreport:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/broadbandtechreport
+    environment:
+      <<: *env
+      <<: *env-aerilon-staging
+      PORT: 80
+      EXPOSED_PORT: 9733
+      LIVERELOAD_PORT: 19733
+      TENANT_KEY: ebm_btr
+      SITE_ID: 5ca39b0f08cf3a5a048b4567
+    ports:
+      - "9733:80"
+      - "19733:19733"
 
   evaluationengineering:
     <<: *node

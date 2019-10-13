@@ -35,10 +35,10 @@ jobs:
       script: deploy/index.js bioopticsworld aerilon
       install: skip
 
-    # - stage: deploy
-    #   name: Broadband Technology Report
-    #   script: deploy/index.js broadbandtechreport aerilon
-    #   install: skip
+    - stage: deploy
+      name: Broadband Technology Report
+      script: deploy/index.js broadbandtechreport aerilon
+      install: skip
 
     - stage: deploy
       name: Cabling Installation & Maintenance
