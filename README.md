@@ -72,6 +72,7 @@ Next, update the following files:
 ```diff
 # /sites/mynewsite/config/native-x.js
 # Add/Remove setAliasPlacements values as needed
+# Note - ID values for card, list1, and list2 should all use card ID
 ```
 
 ```diff
@@ -96,6 +97,11 @@ Next, update the following files:
 +  Sitemap: https://www.mynewsite.com/sitemap.xml
 -  Sitemap: https://www.sitetocopy.com/sitemap-google-news.xml
 +  Sitemap: https://www.mynewsite.com/sitemap-google-news.xml
+```
+
+```diff
+# /sites/mynewsite/server/templates/subscribe/index.marko
+# Update subscribe URL (found in old /sites/mynewsite/config/site.js)
 ```
 
 ```diff

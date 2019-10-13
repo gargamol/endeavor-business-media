@@ -55,10 +55,10 @@ jobs:
       script: deploy/index.js dentaleconomics aerilon
       install: skip
 
-    # - stage: deploy
-    #   name: DentistryIQ
-    #   script: deploy/index.js dentistryiq aerilon
-    #   install: skip
+    - stage: deploy
+      name: DentistryIQ
+      script: deploy/index.js dentistryiq aerilon
+      install: skip
 
     # - stage: deploy
     #   name: Distributed Energy
@@ -70,20 +70,20 @@ jobs:
     #   script: deploy/index.js erosioncontrol picon
     #   install: skip
 
-    # - stage: deploy
-    #   name: Evaluation Engineering
-    #   script: deploy/index.js evaluationengineering picon
-    #   install: skip
+    - stage: deploy
+      name: Evaluation Engineering
+      script: deploy/index.js evaluationengineering picon
+      install: skip
 
     # - stage: deploy
     #   name: Firehouse
     #   script: deploy/index.js firehouse picon
     #   install: skip
 
-    # - stage: deploy
-    #   name: Flow Control
-    #   script: deploy/index.js flowcontrolnetwork picon
-    #   install: skip
+    - stage: deploy
+      name: Flow Control
+      script: deploy/index.js flowcontrolnetwork picon
+      install: skip
 
     # - stage: deploy
     #   name: GX Contractor

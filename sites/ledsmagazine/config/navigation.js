@@ -2,10 +2,9 @@ module.exports = {
   primary: {
     items: [
       { href: '/leds-ssl-design', label: 'LEDs & SSL Design' },
-      { href: '/manufacturing-services-testing', label: 'Manufacturing Services & Testing' },
       { href: '/architectural-lighting', label: 'Architectural Lighting' },
       { href: '/smart-lighting-iot', label: 'Smart Lighting & IoT' },
-      { href: '/specialty-ssl', label: 'Specialty SSL' },
+      { href: '/lighting-health-wellbeing', label: 'Lighting for Health & Wellbeing' },
       { href: '/horticultural-lighting', label: 'Horticultural Lighting' },
     ],
   },
@@ -39,9 +38,9 @@ module.exports = {
       label: 'Topics',
       items: [
         { href: '/leds-ssl-design', label: 'LEDs & SSL Design' },
-        { href: '/manufacturing-services-testing', label: 'Manufacturing Services & Testing' },
         { href: '/architectural-lighting', label: 'Architectural Lighting' },
         { href: '/smart-lighting-iot', label: 'Smart Lighting & IoT' },
+        { href: '/lighting-health-wellbeing', label: 'Lighting for Health & Wellbeing' },
         { href: '/specialty-ssl', label: 'Specialty SSL' },
         { href: '/horticultural-lighting', label: 'Horticultural Lighting' },
       ],
