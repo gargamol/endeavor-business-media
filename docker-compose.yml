@@ -175,21 +175,21 @@ services:
       - "9716:80"
       - "19716:19716"
 
-  # dentistryiq:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/dentistryiq
-  #   environment:
-  #     <<: *env
-  #     <<: *env-aerilon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9717
-  #     LIVERELOAD_PORT: 19717
-  #     TENANT_KEY: ebm_diq
-  #     SITE_ID: 5ca3868b08cf3a4e048b4567
-  #   ports:
-  #     - "9717:80"
-  #     - "19717:19717"
+  dentistryiq:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/dentistryiq
+    environment:
+      <<: *env
+      <<: *env-aerilon-staging
+      PORT: 80
+      EXPOSED_PORT: 9717
+      LIVERELOAD_PORT: 19717
+      TENANT_KEY: ebm_diq
+      SITE_ID: 5ca3868b08cf3a4e048b4567
+    ports:
+      - "9717:80"
+      - "19717:19717"
 
   perioimplantadvisory:
     <<: *node
@@ -303,21 +303,21 @@ services:
   #     - "9724:80"
   #     - "19724:19724"
 
-  # processingmagazine:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/processingmagazine
-  #   environment:
-  #     <<: *env
-  #     <<: *env-picon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9725
-  #     LIVERELOAD_PORT: 19725
-  #     TENANT_KEY: ebm_pmm
-  #     SITE_ID:
-  #   ports:
-  #     - "9725:80"
-  #     - "19725:19725"
+  processingmagazine:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/processingmagazine
+    environment:
+      <<: *env
+      <<: *env-picon-staging
+      PORT: 80
+      EXPOSED_PORT: 9725
+      LIVERELOAD_PORT: 19725
+      TENANT_KEY: ebm_pcm
+      SITE_ID: 5d94f8ffa6e8398c008b4567
+    ports:
+      - "9725:80"
+      - "19725:19725"
 
   offshore-mag:
     <<: *node
@@ -447,21 +447,21 @@ services:
   #     - "9733:80"
   #     - "19733:19733"
 
-  # evaluationengineering:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/evaluationengineering
-  #   environment:
-  #     <<: *env
-  #     <<: *env-picon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9734
-  #     LIVERELOAD_PORT: 19734
-  #     TENANT_KEY: ebm_ee
-  #     SITE_ID: 5babaa3fb09d901d008b4567
-  #   ports:
-  #     - "9734:80"
-  #     - "19734:19734"
+  evaluationengineering:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/evaluationengineering
+    environment:
+      <<: *env
+      <<: *env-picon-staging
+      PORT: 80
+      EXPOSED_PORT: 9734
+      LIVERELOAD_PORT: 19734
+      TENANT_KEY: ebm_ee
+      SITE_ID: 5babaa3fb09d901d008b4567
+    ports:
+      - "9734:80"
+      - "19734:19734"
 
   industrial-lasers:
     <<: *node
@@ -623,21 +623,21 @@ services:
   #     - "9744:80"
   #     - "19744:19744"
 
-  # flowcontrolnetwork:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/flowcontrolnetwork
-  #   environment:
-  #     <<: *env
-  #     <<: *env-picon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9745
-  #     LIVERELOAD_PORT: 19745
-  #     TENANT_KEY: ebm_fcn
-  #     SITE_ID:
-  #   ports:
-  #     - "9745:80"
-  #     - "19745:19745"
+  flowcontrolnetwork:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/flowcontrolnetwork
+    environment:
+      <<: *env
+      <<: *env-picon-staging
+      PORT: 80
+      EXPOSED_PORT: 9745
+      LIVERELOAD_PORT: 19745
+      TENANT_KEY: ebm_fcn
+      SITE_ID: 5af4890775a254af9e0041a7
+    ports:
+      - "9745:80"
+      - "19745:19745"
 
   # gxcontractor:
   #   <<: *node
