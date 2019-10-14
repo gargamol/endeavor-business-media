@@ -1,0 +1,27 @@
+// Style overrides for DentalPost RSS widget
+
+/* stylelint-disable-next-line */
+.feedgrabbr_widget .uw-w-header {
+  padding: .75rem;
+  margin-bottom: 0;
+  font-family: "Fira Sans", Roboto, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: #8956a7;
+  border-bottom: 1px solid rgba(0, 0, 0, .84);
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+}
+
+/* stylelint-disable-next-line */
+.feedgrabbr_widget .uw-opensans * {
+  font-family: "Fira Sans", Roboto, Arial, sans-serif;
+}
+
+/* stylelint-disable-next-line */
+#fg-widget-d02d836ff0dbba7d0fd7b54e2.uw-normal .uw-w-header > span {
+  font-size: inherit;
+}
