@@ -527,21 +527,21 @@ services:
       - "9738:80"
       - "19738:19738"
 
-  # strategies-u:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/strategies-u
-  #   environment:
-  #     <<: *env
-  #     <<: *env-aerilon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9739
-  #     LIVERELOAD_PORT: 19739
-  #     TENANT_KEY: ebm_su
-  #     SITE_ID: 5ca78d5f75a254190e0041a7
-  #   ports:
-  #     - "9739:80"
-  #     - "19739:19739"
+  strategies-u:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/strategies-u
+    environment:
+      <<: *env
+      <<: *env-aerilon-staging
+      PORT: 80
+      EXPOSED_PORT: 9739
+      LIVERELOAD_PORT: 19739
+      TENANT_KEY: ebm_su
+      SITE_ID: 5ca78d5f75a254190e0041a7
+    ports:
+      - "9739:80"
+      - "19739:19739"
 
   # masstransitmag:
   #   <<: *node
