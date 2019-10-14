@@ -1632,7 +1632,7 @@ module.exports = [
       {
         id: 33840,
         name: 'Laser diodes (non-telecom), >1600 nm',
-        href: '/directory/laser-sources/laser-diodes-non-telecomdirectory/laser-sources/laser-diodes-non-telecom-over-1600-nm',
+        href: '/directory/laser-sources/laser-diodes-non-telecom-over-1600-nm',
       },
       {
         id: 33843,
@@ -1691,20 +1691,13 @@ module.exports = [
       },
       {
         id: 33854,
-        name: 'Lasers, gas, COv(2), high-power (',
-        href: '/directory/laser-sources/lasers-gas-cov2-high-power-',
-        values: [
-          {
-            id: 33853,
-            name: '500W)',
-            href: '/directory/laser-sources/lasers-gas-cov2-high-power-/500w',
-          },
-        ],
+        name: 'Lasers, gas, COv(2), high-power (> 500W)',
+        href: '/directory/laser-sources/lasers-gas-cov2-high-power-over-500w',
       },
       {
         id: 33855,
-        name: 'Lasers, gas, COv(2), low-power  (',
-        href: '/directory/laser-sources/lasers-gas-cov2-low-power-',
+        name: 'Lasers, gas, COv(2), low-power (< 500W)',
+        href: '/directory/laser-sources/lasers-gas-cov2-low-power-under-500w',
       },
       {
         id: 33856,
