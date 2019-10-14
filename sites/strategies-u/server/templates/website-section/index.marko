@@ -67,7 +67,7 @@ $ const { id, alias, name, pageNode } = data;
     <marko-web-resolve-page|{ data: section }| node=pageNode>
       $ const aliases = hierarchyAliases(section);
       <marko-web-load-more
-        component-name="content-load-more-flow"
+        component-name="content-list-flow"
         component-input={
           aliases,
           nativeX: { index: 0, name: 'card', aliases },
