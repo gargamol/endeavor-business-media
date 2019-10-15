@@ -36,6 +36,6 @@ module.exports = {
       bgColor: '#0f4069',
       logo: 'https://base.imgix.net/files/base/pennwell/diq/logo.png?h=60',
     },
-    to: 'zacharyk@pennwell.com',
+    to: 'zkulsrud@endeavorb2b.com',
   },
 };
