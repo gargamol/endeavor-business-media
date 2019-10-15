@@ -41,7 +41,7 @@ module.exports = {
   inquiry: {
     enabled: true,
     directSend: true,
-    sendTo: 'juliac@pennwell.com',
+    sendTo: 'bgweb@endeavorb2b.com',
     sendFrom: 'LightwaveOnline.com <noreply@baseplatform.io>',
     sendBcc: 'emailactivity@cygnus.com',
     logo: 'https://img.lightwaveonline.com/files/base/pennwell/lw/logo.png?h=60',
