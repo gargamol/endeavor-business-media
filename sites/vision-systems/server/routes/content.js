@@ -1,8 +1,8 @@
 const { withContent } = require('@base-cms/marko-web/middleware');
 const company = require('../templates/content/company');
 const content = require('../templates/content');
-const whitepaper = require('../templates/content/whitepaper');
 const queryFragment = require('../graphql/fragments/content-page');
+const whitepaper = require('../templates/content/whitepaper');
 
 module.exports = (app) => {
   app.get('/*?company/:id(\\d{8})*', withContent({
