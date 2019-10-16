@@ -13,6 +13,7 @@ module.exports = {
       { href: '/magazine', label: 'Magazine' },
       { href: '/white-papers', label: 'White Papers' },
       { href: '/webcasts', label: 'Webcasts' },
+      { href: '/special-reports', label: 'Special Reports' },
       { href: '/subscribe', label: 'Subscribe' },
       { href: '/page/advertise', label: 'Advertise' },
       { href: '/page/about-us', label: 'About Us' },
