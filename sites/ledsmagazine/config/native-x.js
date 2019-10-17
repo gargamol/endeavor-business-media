@@ -37,6 +37,11 @@ config
     { name: 'card', id: '5cdb241e39937800010ed2d5' },
     { name: 'list2', id: '5cdb241e39937800010ed2d5' },
     { name: 'list1', id: '5cdb241e39937800010ed2d5' },
+  ])
+  .setAliasPlacements('lighting-health-wellbeing', [
+    { name: 'card', id: '5da8cd31cc0836000171d1ad' },
+    { name: 'list2', id: '5da8cd31cc0836000171d1ad' },
+    { name: 'list1', id: '5da8cd31cc0836000171d1ad' },
   ]);
 
 module.exports = config;

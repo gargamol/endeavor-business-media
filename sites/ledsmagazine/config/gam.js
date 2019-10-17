@@ -78,6 +78,14 @@ config
     { name: 'rail2', templateName: 'CONTENT', path: 'leds-lighting-reports/rail2' },
     { name: 'load-more', templateName: 'CONTENT', path: 'leds-lighting-reports/load-more' },
     { name: 'reskin', path: 'leds-lighting-reports/reskin' },
+  ])
+  .setAliasAdUnits('lighting-health-wellbeing', [
+    { name: 'lb1', templateName: 'LB', path: 'lighting-health-wellbeing/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'lighting-health-wellbeing/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'lighting-health-wellbeing/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'lighting-health-wellbeing/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'lighting-health-wellbeing/load-more' },
+    { name: 'reskin', path: 'lighting-health-wellbeing/reskin' },
   ]);
 
 module.exports = config;
