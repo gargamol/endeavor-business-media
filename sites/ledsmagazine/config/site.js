@@ -41,7 +41,7 @@ module.exports = {
   inquiry: {
     enabled: true,
     directSend: true,
-    sendTo: 'juliac@pennwell.com',
+    sendTo: 'bgweb@endeavorb2b.com',
     sendFrom: 'LEDsMagazine.com <noreply@baseplatform.io>',
     sendBcc: 'emailactivity@cygnus.com',
     logo: 'https://img.ledsmagazine.com/files/base/pennwell/leds/logo.png?h=60',
