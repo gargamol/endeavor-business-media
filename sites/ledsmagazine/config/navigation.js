@@ -13,10 +13,11 @@ module.exports = {
       { href: '/directory', label: 'Industry Guide' },
       { href: 'https://www.strategiesinlight.com/index.html', label: 'Strategies in Light', target: '_blank' },
       { href: 'https://sapphireawards.secure-platform.com/a/', label: 'Awards', target: '_blank' },
-      { href: 'http://horticulturelightingconference.com', label: 'Horticultural Conference', target: '_blank' },
+      { href: 'http://horticulturelightingconference.com', label: 'Horticann Conference', target: '_blank' },
       { href: '/page/advertise', label: 'Advertise' },
       { href: '/subscribe', label: 'Subscribe' },
       { href: '/magazine', label: 'Magazine' },
+      { href: 'https://www.strategies-u.com/', label: 'Research', target: '_blank' },
     ],
   },
   tertiary: {
