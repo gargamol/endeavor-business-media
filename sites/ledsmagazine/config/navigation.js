@@ -13,7 +13,7 @@ module.exports = {
       { href: '/directory', label: 'Industry Guide' },
       { href: 'https://www.strategiesinlight.com/index.html', label: 'Strategies in Light', target: '_blank' },
       { href: 'https://sapphireawards.secure-platform.com/a/', label: 'Awards', target: '_blank' },
-      { href: 'http://horticulturelightingconference.com', label: 'Horticann Conference', target: '_blank' },
+      { href: 'https://www.horticannlt.com/', label: 'HortiCann Conference', target: '_blank' },
       { href: '/page/advertise', label: 'Advertise' },
       { href: '/subscribe', label: 'Subscribe' },
       { href: '/magazine', label: 'Magazine' },
