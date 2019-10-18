@@ -5,9 +5,8 @@ module.exports = {
       { href: '/valves-actuators', label: 'Valves & Actuators' },
       { href: '/bearings-seals', label: 'Bearings & Seals' },
       { href: '/piping-tubing-hosing', label: 'Piping, Tubing & Hosing' },
-      { href: '/process-control-automation', label: 'Process Control & Automation' },
+      { href: '/process-control-automation', label: 'Control & Automation' },
       { href: '/pumps-motors-drives', label: 'Pumps, Motors & Drives' },
-      { href: '/maintenance-safety', label: 'Maintenance & Safety' },
       { href: '/industry-applications', label: 'Industry Applications' },
     ],
   },
@@ -17,6 +16,7 @@ module.exports = {
       { href: '/magazine', label: 'Magazine' },
       { href: '/webinars', label: 'Webinars' },
       { href: '/events', label: 'Events' },
+      { href: '/news-notes', label: 'News & Notes' },
     ],
   },
   tertiary: {
@@ -53,7 +53,7 @@ module.exports = {
         { href: '/magazine', label: 'Magazine' },
         { href: '/webinars', label: 'Webinars' },
         { href: '/events', label: 'Events' },
-        { href: '/news-reports', label: 'News & Reports' },
+        { href: '/news-notes', label: 'News & Notes' },
       ],
     },
     {
