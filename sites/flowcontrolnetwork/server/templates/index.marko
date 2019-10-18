@@ -161,23 +161,23 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionAlias: "news-notes", limit: 3, queryFragment }
+          params={ sectionAlias: "news-reports", limit: 3, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
             <@header>
-              <marko-web-link href="/news-notes">News & Notes</marko-web-link>
+              <marko-web-link href="/news-reports">News & Reports</marko-web-link>
             </@header>
           </website-content-list-flow>
         </marko-web-query>
       </div>
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
-          name="all-published-content"
-          params={ contentTypes: ["Webinar"], limit: 3, queryFragment }
+          name="website-scheduled-content"
+          params={ sectionAlias: alias, limit: 3, skip: 5, queryFragment }
         >
-          <website-content-list-flow nodes=nodes display-image=false>
+          <website-content-list-flow nodes=nodes>
             <@header>
-              <marko-web-link href="/webinars">Webinars</marko-web-link>
+              <marko-web-link>More from Flow Control</marko-web-link>
             </@header>
           </website-content-list-flow>
         </marko-web-query>
@@ -192,7 +192,7 @@ $ const { id, alias, name, pageNode } = data;
         component-input={ aliases }
         fragment-name="content-list"
         query-name="website-scheduled-content"
-        query-params={ sectionId: id, limit: 14, skip: 5 }
+        query-params={ sectionId: id, limit: 14, skip: 8 }
         max-pages=0
         page-input={ for: "website-section", id }
       />
