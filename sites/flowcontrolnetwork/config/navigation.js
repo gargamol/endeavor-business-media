@@ -53,6 +53,7 @@ module.exports = {
         { href: '/magazine', label: 'Magazine' },
         { href: '/webinars', label: 'Webinars' },
         { href: '/events', label: 'Events' },
+        { href: '/news-reports', label: 'News & Reports' },
       ],
     },
     {
