@@ -8,11 +8,11 @@ $theme-site-navbar-secondary-bg-color: #fff;
 $theme-site-navbar-secondary-type: light;
 
 $theme-site-header-breakpoints: (
-  hide-primary: 930px,
-  hide-secondary: 850px,
-  small-logo: 1050px,
+  hide-primary: 925px,
+  hide-secondary: 905px,
+  small-logo: 1070px,
   small-text-primary: 1100px,
-  small-text-secondary: 950px
+  small-text-secondary: 1070px
 );
 
 @import "../../node_modules/@base-cms/marko-web-gam/scss/fixed-ad-bottom";
