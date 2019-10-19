@@ -1,14 +1,12 @@
 module.exports = {
   primary: {
     items: [
-      { href: '/instrumentation', label: 'Instrumentation' },
+      { href: '/instrumentation', label: 'Instrumentation & Measurement' },
       { href: '/valves-actuators', label: 'Valves & Actuators' },
       { href: '/bearings-seals', label: 'Bearings & Seals' },
       { href: '/piping-tubing-hosing', label: 'Piping, Tubing & Hosing' },
-      { href: '/process-control-automation', label: 'Process Control & Automation' },
+      { href: '/process-control-automation', label: 'Process Control' },
       { href: '/pumps-motors-drives', label: 'Pumps, Motors & Drives' },
-      { href: '/maintenance-safety', label: 'Maintenance & Safety' },
-      { href: '/industry-applications', label: 'Industry Applications' },
     ],
   },
   secondary: {
@@ -17,6 +15,7 @@ module.exports = {
       { href: '/magazine', label: 'Magazine' },
       { href: '/webinars', label: 'Webinars' },
       { href: '/events', label: 'Events' },
+      { href: '/news-reports', label: 'News & Reports' },
     ],
   },
   tertiary: {
@@ -37,7 +36,7 @@ module.exports = {
     {
       label: 'Topics',
       items: [
-        { href: '/instrumentation', label: 'Instrumentation' },
+        { href: '/instrumentation', label: 'Instrumentation & Measurement' },
         { href: '/valves-actuators', label: 'Valves & Actuators' },
         { href: '/bearings-seals', label: 'Bearings & Seals' },
         { href: '/piping-tubing-hosing', label: 'Piping, Tubing & Hosing' },
