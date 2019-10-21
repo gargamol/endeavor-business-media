@@ -11,12 +11,20 @@ config
       { viewport: [320, 0], size: [[300, 50], [320, 50], [300, 100]] },
     ],
   })
+  .setTemplate('LB2', {
+    size: [[970, 90], [970, 66], [728, 90], [320, 50], [300, 50], [300, 100]],
+    sizeMapping: [
+      { viewport: [980, 0], size: [[970, 90], [970, 66], [728, 90]] },
+      { viewport: [750, 0], size: [728, 90] },
+      { viewport: [320, 0], size: [[300, 50], [320, 50], [300, 100]] },
+    ],
+  })
   .setTemplate('CONTENT', { size: [[300, 250], [300, 600]] });
 
 config
   .setAliasAdUnits('default', [
     { name: 'lb1', templateName: 'LB', path: 'default/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'default/lb2' },
+    { name: 'lb2', templateName: 'LB2', path: 'default/lb2' },
     { name: 'rail1', templateName: 'CONTENT', path: 'default/rail1' },
     { name: 'rail2', templateName: 'CONTENT', path: 'default/rail2' },
     { name: 'load-more', templateName: 'CONTENT', path: 'default/load-more' },
@@ -25,7 +33,7 @@ config
   ])
   .setAliasAdUnits('maintenance-safety', [
     { name: 'lb1', templateName: 'LB', path: 'maintenance-safety/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'maintenance-safety/lb2' },
+    { name: 'lb2', templateName: 'LB2', path: 'maintenance-safety/lb2' },
     { name: 'rail1', templateName: 'CONTENT', path: 'maintenance-safety/rail1' },
     { name: 'rail2', templateName: 'CONTENT', path: 'maintenance-safety/rail2' },
     { name: 'load-more', templateName: 'CONTENT', path: 'maintenance-safety/load-more' },
@@ -34,7 +42,7 @@ config
   ])
   .setAliasAdUnits('material-handling-dry-wet', [
     { name: 'lb1', templateName: 'LB', path: 'material-handling-dry-wet/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'material-handling-dry-wet/lb2' },
+    { name: 'lb2', templateName: 'LB2', path: 'material-handling-dry-wet/lb2' },
     { name: 'rail1', templateName: 'CONTENT', path: 'material-handling-dry-wet/rail1' },
     { name: 'rail2', templateName: 'CONTENT', path: 'material-handling-dry-wet/rail2' },
     { name: 'load-more', templateName: 'CONTENT', path: 'material-handling-dry-wet/load-more' },
@@ -43,7 +51,7 @@ config
   ])
   .setAliasAdUnits('mixing-blending-size-reduction', [
     { name: 'lb1', templateName: 'LB', path: 'mixing-blending-size-reduction/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'mixing-blending-size-reduction/lb2' },
+    { name: 'lb2', templateName: 'LB2', path: 'mixing-blending-size-reduction/lb2' },
     { name: 'rail1', templateName: 'CONTENT', path: 'mixing-blending-size-reduction/rail1' },
     { name: 'rail2', templateName: 'CONTENT', path: 'mixing-blending-size-reduction/rail2' },
     { name: 'load-more', templateName: 'CONTENT', path: 'mixing-blending-size-reduction/load-more' },
@@ -52,7 +60,7 @@ config
   ])
   .setAliasAdUnits('process-control-automation', [
     { name: 'lb1', templateName: 'LB', path: 'process-control-automation/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'process-control-automation/lb2' },
+    { name: 'lb2', templateName: 'LB2', path: 'process-control-automation/lb2' },
     { name: 'rail1', templateName: 'CONTENT', path: 'process-control-automation/rail1' },
     { name: 'rail2', templateName: 'CONTENT', path: 'process-control-automation/rail2' },
     { name: 'load-more', templateName: 'CONTENT', path: 'process-control-automation/load-more' },
@@ -61,7 +69,7 @@ config
   ])
   .setAliasAdUnits('pumps-motors-drives', [
     { name: 'lb1', templateName: 'LB', path: 'pumps-motors-drives/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'pumps-motors-drives/lb2' },
+    { name: 'lb2', templateName: 'LB2', path: 'pumps-motors-drives/lb2' },
     { name: 'rail1', templateName: 'CONTENT', path: 'pumps-motors-drives/rail1' },
     { name: 'rail2', templateName: 'CONTENT', path: 'pumps-motors-drives/rail2' },
     { name: 'load-more', templateName: 'CONTENT', path: 'pumps-motors-drives/load-more' },
@@ -70,7 +78,7 @@ config
   ])
   .setAliasAdUnits('valves-actuators', [
     { name: 'lb1', templateName: 'LB', path: 'valves-actuators/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'valves-actuators/lb2' },
+    { name: 'lb2', templateName: 'LB2', path: 'valves-actuators/lb2' },
     { name: 'rail1', templateName: 'CONTENT', path: 'valves-actuators/rail1' },
     { name: 'rail2', templateName: 'CONTENT', path: 'valves-actuators/rail2' },
     { name: 'load-more', templateName: 'CONTENT', path: 'valves-actuators/load-more' },
