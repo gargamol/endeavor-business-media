@@ -18,9 +18,9 @@ module.exports = {
     },
   },
   socialMediaLinks: [
-    { provider: 'linkedin', href: 'https://www.linkedin.com/in/watertechnology', target: '_blank' },
-    { provider: 'twitter', href: 'https://twitter.com/WaterTechOnline', target: '_blank' },
-    { provider: 'facebook', href: 'https://www.facebook.com/WaterTechnology', target: '_blank' },
+    { provider: 'linkedin', href: 'https://www.linkedin.com/groups/4050058/', target: '_blank' },
+    { provider: 'twitter', href: 'https://twitter.com/ProcessingMag', target: '_blank' },
+    { provider: 'facebook', href: 'http://www.facebook.com/ProcessingMagazine', target: '_blank' },
   ],
   gtm: {
     containerId: 'GTM-T8FSMGJ',
