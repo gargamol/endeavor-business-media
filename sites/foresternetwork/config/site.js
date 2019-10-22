@@ -36,6 +36,6 @@ module.exports = {
       bgColor: '#164f77',
       logo: 'https://base.imgix.net/files/base/ebm/frn/image/static/logo/site_logo.png?h=60',
     },
-    // to: '',
+    to: 'adsales@endeavorb2b.com',
   },
 };
