@@ -1,8 +1,8 @@
 {
-  "name": "@base-cms-websites/flowcontrolnetwork",
+  "name": "@base-cms-websites/foresternetwork",
   "version": "1.0.0-alpha.11",
-  "author": "Brandon Krigbaum <brandonbk@gmail.com>",
-  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/flowcontrolnetwork",
+  "author": "Brian Miller <bmiller@endeavorb2b.com>",
+  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/foresternetwork",
   "license": "MIT",
   "private": true,
   "scripts": {
