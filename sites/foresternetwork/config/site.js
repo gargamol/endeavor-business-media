@@ -23,7 +23,7 @@ module.exports = {
     { provider: 'facebook', href: 'https://www.facebook.com/foresternetwork' },
   ],
   gtm: {
-    gtmContainer: 'GTM-PTKGVK5',
+    containerId: 'GTM-TNFLPD9',
   },
   wufoo: {
     userName: 'cygnuscorporate',
