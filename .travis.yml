@@ -145,10 +145,10 @@ jobs:
       script: deploy/index.js militaryaerospace aerilon
       install: skip
 
-    # - stage: deploy
-    #   name: MSW Management
-    #   script: deploy/index.js mswmanagement picon
-    #   install: skip
+    - stage: deploy
+      name: MSW Management
+      script: deploy/index.js mswmanagement picon
+      install: skip
 
     # - stage: deploy
     #   name: Officer
