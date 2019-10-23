@@ -4,6 +4,7 @@ const section = require('../templates/website-section');
 const contactUs = require('../templates/website-section/contact-us');
 const queryFragment = require('../graphql/fragments/website-section-page');
 const whitePapers = require('../templates/website-section/white-papers');
+const knowledgeZoneTemplate = require('../templates/website-section/knowledge-zone');
 
 module.exports = (app) => {
   app.get('/:alias(contact-us)', withWebsiteSection({
@@ -20,6 +21,10 @@ module.exports = (app) => {
   }));
   app.get('/:alias(white-papers)', withWebsiteSection({
     template: whitePapers,
+    queryFragment,
+  }));
+  app.get('/:alias(knowledge-zone)', withWebsiteSection({
+    template: knowledgeZoneTemplate,
     queryFragment,
   }));
   app.get('/:alias([a-z0-9-/]+)', withWebsiteSection({
