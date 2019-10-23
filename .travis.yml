@@ -86,20 +86,12 @@ jobs:
       install: skip
 
     - stage: deploy
-<<<<<<< HEAD
       name: GX Contractor
       script: deploy/index.js gxcontractor picon
       install: skip
-=======
       name: Forester Network
       script: deploy/index.js foresternetwork aerilon
       install: skip
-
-    # - stage: deploy
-    #   name: GX Contractor
-    #   script: deploy/index.js gxcontractor picon
-    #   install: skip
->>>>>>> add docker compose, packages and travis setup
 
     # - stage: deploy
     #   name: HC Innovation Group
