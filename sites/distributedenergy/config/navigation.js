@@ -1,23 +1,15 @@
 module.exports = {
   primary: {
     items: [
-      { href: '/distributed-energy', label: 'Distributed Energy' },
-      { href: '/erosion-control', label: 'Erosion Control' },
-      { href: '/grading-excavation-contractor', label: 'Grading & Excavation Contractor' },
-      { href: '/msw-management', label: 'MSW Management' },
-      { href: '/stormwater', label: 'Stormwater' },
-      { href: '/water-efficiency', label: 'Water Efficiency' },
+      { href: '/microgrids', label: 'Microgrids' },
+      { href: '/renewables', label: 'Renewables' },
+      { href: '/storage', label: 'Storage' },
+      { href: '/building-automation', label: 'Building Automation' },
+      { href: '/technologies', label: 'Technologies' },
     ],
   },
   secondary: {
-    items: [
-      { href: 'https://www.stormcon.com', label: 'Stormcon', target: '_blank' },
-      { href: '/free-reports', label: 'Free Reports' },
-      { href: '/page/advertise', label: 'Advertise' },
-      { href: 'https://www.foresteruniversity.com/ProductSubCats.aspx?SubCatID=47', label: 'Books', target: '_blank' },
-      { href: 'https://www.foresteruniversity.com', label: 'Training', target: '_blank' },
-      { href: '/subscribe', label: 'Subscribe' },
-    ],
+    items: [],
   },
   tertiary: {
     items: [
@@ -37,24 +29,17 @@ module.exports = {
     {
       label: 'Topics',
       items: [
-        { href: '/distributed-energy', label: 'Distributed Energy' },
-        { href: '/erosion-control', label: 'Erosion Control' },
-        { href: '/grading-excavation-contractor', label: 'Grading & Excavation Contractor' },
-        { href: '/msw-management', label: 'MSW Management' },
-        { href: '/stormwater', label: 'Stormwater' },
-        { href: '/water-efficiency', label: 'Water Efficiency' },
+        { href: '/microgrids', label: 'Microgrids' },
+        { href: '/renewables', label: 'Renewables' },
+        { href: '/storage', label: 'Storage' },
+        { href: '/building-automation', label: 'Building Automation' },
+        { href: '/technologies', label: 'Technologies' },
       ],
     },
     {
       label: 'Resources',
       items: [
-        { href: 'https://www.stormcon.com', label: 'Stormcon', target: '_blank' },
-        { href: '/free-reports', label: 'Free Reports' },
-        { href: '/page/advertise', label: 'Advertise' },
-        { href: 'https://www.foresteruniversity.com/ProductSubCats.aspx?SubCatID=47', label: 'Books', target: '_blank' },
-        { href: 'https://www.foresteruniversity.com', label: 'Training', target: '_blank' },
         { href: '/magazine', label: 'Magazine' },
-        { href: '/events', label: 'Events' },
       ],
     },
     {
