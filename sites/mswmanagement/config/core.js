@@ -1,3 +1,3 @@
 module.exports = {
-  siteName: 'Forester Network',
+  siteName: 'MSW Management',
 };
