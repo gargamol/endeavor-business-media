@@ -639,21 +639,21 @@ services:
       - "9745:80"
       - "19745:19745"
 
-  # gxcontractor:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/gxcontractor
-  #   environment:
-  #     <<: *env
-  #     <<: *env-picon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9746
-  #     LIVERELOAD_PORT: 19746
-  #     TENANT_KEY: ebm_gxc
-  #     SITE_ID:
-  #   ports:
-  #     - "9746:80"
-  #     - "19746:19746"
+  gxcontractor:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/gxcontractor
+    environment:
+      <<: *env
+      <<: *env-picon-staging
+      PORT: 80
+      EXPOSED_PORT: 9746
+      LIVERELOAD_PORT: 19746
+      TENANT_KEY: ebm_gxc
+      SITE_ID: 5daf1d05a6e83941008b4567
+    ports:
+      - "9746:80"
+      - "19746:19746"
 
   # mswmanagement:
   #   <<: *node
