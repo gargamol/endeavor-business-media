@@ -85,10 +85,10 @@ jobs:
       script: deploy/index.js flowcontrolnetwork picon
       install: skip
 
-    # - stage: deploy
-    #   name: GX Contractor
-    #   script: deploy/index.js gxcontractor picon
-    #   install: skip
+    - stage: deploy
+      name: GX Contractor
+      script: deploy/index.js gxcontractor picon
+      install: skip
 
     # - stage: deploy
     #   name: HC Innovation Group
