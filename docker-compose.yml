@@ -591,21 +591,21 @@ services:
   #     - "9742:80"
   #     - "19742:19742"
 
-  # distributedenergy:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/distributedenergy
-  #   environment:
-  #     <<: *env
-  #     <<: *env-picon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9743
-  #     LIVERELOAD_PORT: 19743
-  #     TENANT_KEY: ebm_dte
-  #     SITE_ID:
-  #   ports:
-  #     - "9743:80"
-  #     - "19743:19743"
+  distributedenergy:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/distributedenergy
+    environment:
+      <<: *env
+      <<: *env-picon-staging
+      PORT: 80
+      EXPOSED_PORT: 9743
+      LIVERELOAD_PORT: 19743
+      TENANT_KEY: ebm_dte
+      SITE_ID: 5dae1b9ea6e8398e018b4567
+    ports:
+      - "9743:80"
+      - "19743:19743"
 
   # erosioncontrol:
   #   <<: *node

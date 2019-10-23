@@ -60,10 +60,10 @@ jobs:
       script: deploy/index.js dentistryiq aerilon
       install: skip
 
-    # - stage: deploy
-    #   name: Distributed Energy
-    #   script: deploy/index.js distributedenergy picon
-    #   install: skip
+    - stage: deploy
+      name: Distributed Energy
+      script: deploy/index.js distributedenergy picon
+      install: skip
 
     # - stage: deploy
     #   name: Erosion Control
