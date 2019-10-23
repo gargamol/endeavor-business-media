@@ -36,13 +36,11 @@ module.exports = {
     {
       label: 'Topics',
       items: [
-        { href: '/detectors-imaging', label: 'Detectors & Imaging' },
-        { href: '/lasers-sources', label: 'Lasers & Sources' },
-        { href: '/optics', label: 'Optics' },
-        { href: '/fiber-optics', label: 'Fiber Optics' },
-        { href: '/software-accessories', label: 'Software & Accessories' },
-        { href: '/test-measurement', label: 'Test & Measurement' },
-        { href: '/photonics-business', label: 'Photonics Business' },
+        { href: '/process-water', label: 'Process Water' },
+        { href: '/wastewater', label: 'Wastewater' },
+        { href: '/water-reuse', label: 'Water Reuse' },
+        { href: '/produced-water', label: 'Produced Water' },
+        { href: '/industry', label: 'Industry' },
       ],
     },
     {
