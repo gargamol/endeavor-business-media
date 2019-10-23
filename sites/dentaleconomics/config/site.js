@@ -5,15 +5,15 @@ module.exports = {
   company: 'Endeavor Business Media, LLC',
   logos: {
     navbar: {
-      src: 'https://base.imgix.net/files/base/pennwell/de/logo.png?h=45',
+      src: 'https://base.imgix.net/files/base/pennwell/dte/logo.png?h=45',
       srcset: [
-        'https://base.imgix.net/files/base/pennwell/de/logo.png?h=90 2x',
+        'https://base.imgix.net/files/base/pennwell/dte/logo.png?h=90 2x',
       ],
     },
     footer: {
-      src: 'https://base.imgix.net/files/base/pennwell/de/logo.png?h=60',
+      src: 'https://base.imgix.net/files/base/pennwell/dte/logo.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/pennwell/de/logo.png?h=120 2x',
+        'https://base.imgix.net/files/base/pennwell/dte/logo.png?h=120 2x',
       ],
     },
   },
@@ -34,7 +34,7 @@ module.exports = {
   contactUs: {
     branding: {
       bgColor: '#285923',
-      logo: 'https://base.imgix.net/files/base/pennwell/de/logo.png?h=60',
+      logo: 'https://base.imgix.net/files/base/pennwell/dte/logo.png?h=60',
     },
     to: 'zacharyk@pennwell.com',
   },
