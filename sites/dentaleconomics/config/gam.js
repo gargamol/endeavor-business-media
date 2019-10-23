@@ -1,6 +1,6 @@
 const GAMConfiguration = require('@base-cms/marko-web-gam/config');
 
-const config = new GAMConfiguration('21687441225', { basePath: 'DTE' });
+const config = new GAMConfiguration('21687441225', { basePath: 'DE' });
 
 config
   .setTemplate('LB', {
