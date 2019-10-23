@@ -90,6 +90,11 @@ jobs:
       script: deploy/index.js gxcontractor picon
       install: skip
 
+    - stage: deploy
+      name: Forester Network
+      script: deploy/index.js foresternetwork picon
+      install: skip
+
     # - stage: deploy
     #   name: HC Innovation Group
     #   script: deploy/index.js hcinnovationgroup picon
