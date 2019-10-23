@@ -655,21 +655,21 @@ services:
   #     - "9746:80"
   #     - "19746:19746"
 
-  # mswmanagement:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/mswmanagement
-  #   environment:
-  #     <<: *env
-  #     <<: *env-picon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9747
-  #     LIVERELOAD_PORT: 19747
-  #     TENANT_KEY: ebm_msw
-  #     SITE_ID:
-  #   ports:
-  #     - "9747:80"
-  #     - "19747:19747"
+  mswmanagement:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/mswmanagement
+    environment:
+      <<: *env
+      <<: *env-picon-staging
+      PORT: 80
+      EXPOSED_PORT: 9747
+      LIVERELOAD_PORT: 19747
+      TENANT_KEY: ebm_msw
+      SITE_ID: 5daf1d88a6e83946008b4567
+    ports:
+      - "9747:80"
+      - "19747:19747"
 
   # stormh20:
   #   <<: *node
