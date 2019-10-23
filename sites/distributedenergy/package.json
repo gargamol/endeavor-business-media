@@ -1,8 +1,8 @@
 {
-  "name": "@base-cms-websites/foresternetwork",
+  "name": "@base-cms-websites/distributedenergy",
   "version": "1.0.0-alpha.11",
   "author": "Brian Miller <bmiller@endeavorb2b.com>",
-  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/foresternetwork",
+  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/distributedenergy",
   "license": "MIT",
   "private": true,
   "scripts": {
