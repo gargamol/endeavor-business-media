@@ -4,31 +4,40 @@ const config = new NativeXConfiguration('https://ebm.native-x.io');
 
 config
   .setAliasPlacements('default', [
-    { name: 'default', id: '5d9cee75cc0836000147f154' },
+    { name: 'default', id: '5db0533cc99ad20001ee7523' },
   ])
-  .setAliasPlacements('instrumentation', [
-    { name: 'default', id: '5d9ceeafcc08360001480602' },
+  .setAliasPlacements('/attachments', [
+    { name: 'default', id: '5db053e5c99ad20001eea92e' },
   ])
-  .setAliasPlacements('valves-actuators', [
-    { name: 'default', id: '5d9cef2806c2650001d0ffb1' },
+  .setAliasPlacements('/equipment', [
+    { name: 'default', id: '5db053f3c99ad20001eead70' },
   ])
-  .setAliasPlacements('bearings-seals', [
-    { name: 'default', id: '5d9cef59cc08360001484adf' },
+  .setAliasPlacements('/maintenance', [
+    { name: 'default', id: '5db053fe3204b10001f6fe5d' },
   ])
-  .setAliasPlacements('piping-tubing-hosing', [
-    { name: 'default', id: '5d9cf0a2cc0836000148d170' },
+  .setAliasPlacements('/technology', [
+    { name: 'default', id: '5db0540ac99ad20001eeb566' },
   ])
-  .setAliasPlacements('process-control-automation', [
-    { name: 'default', id: '5d9cf22dcc08360001496372' },
+  .setAliasPlacements('/training-safety', [
+    { name: 'default', id: '5db0541bc99ad20001eebada' },
   ])
-  .setAliasPlacements('pumps-motors-drives', [
-    { name: 'default', id: '5d9cf27c06c2650001d24aed' },
+  .setAliasPlacements('/trenching-shoring', [
+    { name: 'default', id: '5db05428c99ad20001eebecc' },
   ])
-  .setAliasPlacements('maintenance-safety', [
-    { name: 'default', id: '5d9cf2a706c2650001d259f0' },
+  .setAliasPlacements('/site-clearing', [
+    { name: 'default', id: '5db054323204b10001f70e37' },
   ])
-  .setAliasPlacements('industry-applications', [
-    { name: 'default', id: '5d9c8124cc08360001194f5a' },
+  .setAliasPlacements('/work-site-support-equipment', [
+    { name: 'default', id: '5db0543f3204b10001f7115e' },
+  ])
+  .setAliasPlacements('/road-building-and-compaction', [
+    { name: 'default', id: '5db05448c99ad20001eec7a2' },
+  ])
+  .setAliasPlacements('/dump-trucks', [
+    { name: 'default', id: '5db05454c99ad20001eecaf4' },
+  ])
+  .setAliasPlacements('/trailers', [
+    { name: 'default', id: '5db0545f3204b10001f71b71' },
   ]);
 
 module.exports = config;
