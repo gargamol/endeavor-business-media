@@ -89,6 +89,8 @@ jobs:
       name: GX Contractor
       script: deploy/index.js gxcontractor picon
       install: skip
+
+    - stage: deploy
       name: Forester Network
       script: deploy/index.js foresternetwork aerilon
       install: skip
