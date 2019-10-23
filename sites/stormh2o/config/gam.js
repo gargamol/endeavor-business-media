@@ -30,6 +30,51 @@ config
     { name: 'load-more', templateName: 'CONTENT', path: 'default/load-more' },
     { name: 'reskin', path: 'default/reskin' },
     { name: 'wa', path: 'default/wa' },
+  ])
+  .setAliasAdUnits('bmps', [
+    { name: 'lb1', templateName: 'LB', path: 'bmps/lb1' },
+    { name: 'lb2', templateName: 'LB2', path: 'bmps/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'bmps/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'bmps/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'bmps/load-more' },
+    { name: 'reskin', path: 'bmps/reskin' },
+    { name: 'wa', path: 'bmps/wa' },
+  ])
+  .setAliasAdUnits('green-infrastructure', [
+    { name: 'lb1', templateName: 'LB', path: 'green-infrastructure/lb1' },
+    { name: 'lb2', templateName: 'LB2', path: 'green-infrastructure/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'green-infrastructure/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'green-infrastructure/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'green-infrastructure/load-more' },
+    { name: 'reskin', path: 'green-infrastructure/reskin' },
+    { name: 'wa', path: 'green-infrastructure/wa' },
+  ])
+  .setAliasAdUnits('program-management', [
+    { name: 'lb1', templateName: 'LB', path: 'program-management/lb1' },
+    { name: 'lb2', templateName: 'LB2', path: 'program-management/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'program-management/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'program-management/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'program-management/load-more' },
+    { name: 'reskin', path: 'program-management/reskin' },
+    { name: 'wa', path: 'program-management/wa' },
+  ])
+  .setAliasAdUnits('compliance', [
+    { name: 'lb1', templateName: 'LB', path: 'compliance/lb1' },
+    { name: 'lb2', templateName: 'LB2', path: 'compliance/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'compliance/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'compliance/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'compliance/load-more' },
+    { name: 'reskin', path: 'compliance/reskin' },
+    { name: 'wa', path: 'compliance/wa' },
+  ])
+  .setAliasAdUnits('erosion-control', [
+    { name: 'lb1', templateName: 'LB', path: 'erosion-control/lb1' },
+    { name: 'lb2', templateName: 'LB2', path: 'erosion-control/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'erosion-control/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'erosion-control/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'erosion-control/load-more' },
+    { name: 'reskin', path: 'erosion-control/reskin' },
+    { name: 'wa', path: 'erosion-control/wa' },
   ]);
 
 module.exports = config;
