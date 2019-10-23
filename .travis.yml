@@ -191,8 +191,8 @@ jobs:
     #   install: skip
 
     - stage: deploy
-      name: Storm H20
-      script: deploy/index.js stormh20 picon
+      name: Storm H2O
+      script: deploy/index.js stormh2o picon
       install: skip
 
     - stage: deploy
