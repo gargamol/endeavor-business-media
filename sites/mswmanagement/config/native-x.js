@@ -4,31 +4,22 @@ const config = new NativeXConfiguration('https://ebm.native-x.io');
 
 config
   .setAliasPlacements('default', [
-    { name: 'default', id: '5d9cee75cc0836000147f154' },
+    { name: 'default', id: '5db0598dc99ad20001f09417' },
   ])
-  .setAliasPlacements('instrumentation', [
-    { name: 'default', id: '5d9ceeafcc08360001480602' },
+  .setAliasPlacements('collection', [
+    { name: 'default', id: '5db059c83204b10001f8f873' },
   ])
-  .setAliasPlacements('valves-actuators', [
-    { name: 'default', id: '5d9cef2806c2650001d0ffb1' },
+  .setAliasPlacements('landfills', [
+    { name: 'default', id: '5db059b6c99ad20001f0a538' },
   ])
-  .setAliasPlacements('bearings-seals', [
-    { name: 'default', id: '5d9cef59cc08360001484adf' },
+  .setAliasPlacements('maintenance', [
+    { name: 'default', id: '5db059acc99ad20001f0a101' },
   ])
-  .setAliasPlacements('piping-tubing-hosing', [
-    { name: 'default', id: '5d9cf0a2cc0836000148d170' },
+  .setAliasPlacements('recycling', [
+    { name: 'default', id: '5db059a13204b10001f8e855' },
   ])
-  .setAliasPlacements('process-control-automation', [
-    { name: 'default', id: '5d9cf22dcc08360001496372' },
-  ])
-  .setAliasPlacements('pumps-motors-drives', [
-    { name: 'default', id: '5d9cf27c06c2650001d24aed' },
-  ])
-  .setAliasPlacements('maintenance-safety', [
-    { name: 'default', id: '5d9cf2a706c2650001d259f0' },
-  ])
-  .setAliasPlacements('industry-applications', [
-    { name: 'default', id: '5d9c8124cc08360001194f5a' },
+  .setAliasPlacements('technology', [
+    { name: 'default', id: '5db05997c99ad20001f09767' },
   ]);
 
 module.exports = config;
