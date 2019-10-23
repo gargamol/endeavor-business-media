@@ -730,8 +730,6 @@ services:
       EXPOSED_PORT: 9751
       LIVERELOAD_PORT: 19751
       TENANT_KEY: ebm_frn
-      CDN_IMAGE_HOSTNAME: img.foresternetwork.com
-      CDN_ASSET_HOSTNAME: cdn.foresternetwork.com
       SITE_ID: 5c86ed7b47062b9e098b4567
     ports:
       - "9751:80"
