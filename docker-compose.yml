@@ -671,21 +671,21 @@ services:
   #     - "9747:80"
   #     - "19747:19747"
 
-  # stormh20:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/stormh20
-  #   environment:
-  #     <<: *env
-  #     <<: *env-picon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9748
-  #     LIVERELOAD_PORT: 19748
-  #     TENANT_KEY: ebm_gxc
-  #     SITE_ID:
-  #   ports:
-  #     - "9748:80"
-  #     - "19748:19748"
+  stormh2o:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/stormh2o
+    environment:
+      <<: *env
+      <<: *env-picon-staging
+      PORT: 80
+      EXPOSED_PORT: 9748
+      LIVERELOAD_PORT: 19748
+      TENANT_KEY: ebm_stw
+      SITE_ID: 5daf1dcba6e8394a008b4567
+    ports:
+      - "9748:80"
+      - "19748:19748"
 
   watertechonline:
     <<: *node
