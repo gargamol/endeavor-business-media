@@ -19,7 +19,7 @@ module.exports = {
   },
   socialMediaLinks: [],
   gtm: {
-    containerId: 'GTM-TNFLPD9',
+    containerId: 'GTM-55MWDH4',
   },
   wufoo: {
     userName: 'cygnuscorporate',
