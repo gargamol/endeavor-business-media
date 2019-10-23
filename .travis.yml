@@ -92,7 +92,7 @@ jobs:
 
     - stage: deploy
       name: Forester Network
-      script: deploy/index.js foresternetwork aerilon
+      script: deploy/index.js foresternetwork picon
       install: skip
 
     # - stage: deploy
