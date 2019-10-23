@@ -14,7 +14,6 @@ $ const { id, alias, name, pageNode } = data;
       $ const aliases = hierarchyAliases(section);
       $ const adSlots = {
           "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
-          "gpt-ad-rail1": GAM.getAdUnit({ name: "rail1", aliases, size: [300, 250] }),
           "gpt-ad-rail2": GAM.getAdUnit({ name: "rail2", aliases, size: [300, 600] }),
         }
        <marko-web-gam-slots slots=adSlots />
@@ -41,52 +40,55 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionAlias: "msw-management", limit: 3, queryFragment }
+          params={ sectionAlias: "bmps", limit: 3, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
             <@header>
-              <marko-web-link href="/msw-management">MSW Measurement</marko-web-link>
+              <marko-web-link href="/bmps">BMPs</marko-web-link>
             </@header>
-            <@native-x index=2 name="default" aliases=["msw-management"] />
+            <@native-x index=2 name="default" aliases=["bmps"] />
           </website-content-list-flow>
         </marko-web-query>
       </div>
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionAlias: "stormwater", limit: 3, queryFragment }
+          params={ sectionAlias: "green-infrastructure", limit: 3, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
             <@header>
-              <marko-web-link href="/stormwater">Stormwater</marko-web-link>
+              <marko-web-link href="/green-infrastructure">Green Infrastructure</marko-web-link>
             </@header>
-            <@native-x index=2 name="default" aliases=["stormwater"] />
+            <@native-x index=2 name="default" aliases=["green-infrastructure"] />
           </website-content-list-flow>
         </marko-web-query>
       </div>
       <div class="col-lg-4 mb-block">
-          <marko-web-query|{ nodes }|
+        <marko-web-gam-display-ad id="gpt-ad-rail2" />
+      </div>
+      <div class="col-lg-4 mb-block">
+        <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionAlias: "water-efficiency", limit: 3, queryFragment }
+          params={ sectionAlias: "program-management", limit: 3, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
             <@header>
-              <marko-web-link href="/water-efficiency">Water Efficiency</marko-web-link>
+              <marko-web-link href="/program-management">Program Management</marko-web-link>
             </@header>
-            <@native-x index=2 name="default" aliases=["water-efficiency"] />
+            <@native-x index=2 name="default" aliases=["program-management"] />
           </website-content-list-flow>
         </marko-web-query>
       </div>
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionAlias: "distributed-energy", limit: 3, queryFragment }
+          params={ sectionAlias: "compliance", limit: 3, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
             <@header>
-              <marko-web-link href="/distributed-energy">Distributed Energy</marko-web-link>
+              <marko-web-link href="/compliance">Compliance</marko-web-link>
             </@header>
-            <@native-x index=2 name="default" aliases=["distributed-energy"] />
+            <@native-x index=2 name="default" aliases=["compliance"] />
           </website-content-list-flow>
         </marko-web-query>
       </div>
@@ -100,19 +102,6 @@ $ const { id, alias, name, pageNode } = data;
               <marko-web-link href="/erosion-control">Erosion Control</marko-web-link>
             </@header>
             <@native-x index=2 name="default" aliases=["erosion-control"] />
-          </website-content-list-flow>
-        </marko-web-query>
-      </div>
-      <div class="col-lg-4 mb-block">
-        <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
-          params={ sectionAlias: "grading-excavation-contractor", limit: 3, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link href="/grading-excavation-contractor">Grading & Excavation Contractor</marko-web-link>
-            </@header>
-            <@native-x index=2 name="default" aliases=["grading-excavation-contractor"] />
           </website-content-list-flow>
         </marko-web-query>
       </div>
