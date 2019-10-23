@@ -1,11 +1,11 @@
 module.exports = {
   primary: {
     items: [
-      { href: '/bmps', lable: 'BMPs' },
-      { href: '/green-infrastructure', lable: 'Green Infrastructure' },
-      { href: '/program-management', lable: 'Program Management' },
-      { href: '/compliance', lable: 'Compliance' },
-      { href: '/erosion-control', lable: 'Erosion Control' },
+      { href: '/bmps', label: 'BMPs' },
+      { href: '/green-infrastructure', label: 'Green Infrastructure' },
+      { href: '/program-management', label: 'Program Management' },
+      { href: '/compliance', label: 'Compliance' },
+      { href: '/erosion-control', label: 'Erosion Control' },
     ],
   },
   secondary: {
@@ -29,11 +29,11 @@ module.exports = {
     {
       label: 'Topics',
       items: [
-        { href: '/bmps', lable: 'BMPs' },
-        { href: '/green-infrastructure', lable: 'Green Infrastructure' },
-        { href: '/program-management', lable: 'Program Management' },
-        { href: '/compliance', lable: 'Compliance' },
-        { href: '/erosion-control', lable: 'Erosion Control' },
+        { href: '/bmps', label: 'BMPs' },
+        { href: '/green-infrastructure', label: 'Green Infrastructure' },
+        { href: '/program-management', label: 'Program Management' },
+        { href: '/compliance', label: 'Compliance' },
+        { href: '/erosion-control', label: 'Erosion Control' },
       ],
     },
     {
