@@ -15,9 +15,7 @@ module.exports = {
     ],
   },
   secondary: {
-    items: [
-      { href: '/page/advertise', label: 'Advertise' },
-    ],
+    items: [],
   },
   tertiary: {
     items: [
