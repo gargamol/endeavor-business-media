@@ -4,6 +4,7 @@ const contactUs = require('../templates/website-section/contact-us');
 const queryFragment = require('../graphql/fragments/website-section-page');
 const editorialAdvisoryBoardTemplate = require('../templates/website-section/editorial-advisory-board');
 const jobPostings = require('../templates/website-section/job-postings');
+const whitePapers = require('../templates/website-section/white-papers');
 
 module.exports = (app) => {
   app.get('/:alias(contact-us)', withWebsiteSection({
@@ -16,6 +17,10 @@ module.exports = (app) => {
   }));
   app.get('/:alias(job-postings)', withWebsiteSection({
     template: jobPostings,
+    queryFragment,
+  }));
+  app.get('/:alias(white-papers)', withWebsiteSection({
+    template: whitePapers,
     queryFragment,
   }));
   app.get('/:alias([a-z0-9-/]+)', withWebsiteSection({
