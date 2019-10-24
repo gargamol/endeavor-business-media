@@ -9,7 +9,11 @@ module.exports = {
     ],
   },
   secondary: {
-    items: [],
+    items: [
+      { href: '/subscribe', label: 'Subscribe' },
+      { href: '/magazine', label: 'Magazine ' },
+      { href: '/page/advertise', label: 'Advertise' },
+    ],
   },
   tertiary: {
     items: [
@@ -18,7 +22,6 @@ module.exports = {
   },
   footer: {
     items: [
-      { href: '/page/about-us', label: 'About Us' },
       { href: '/contact-us', label: 'Contact Us' },
       { href: '/page/advertise', label: 'Advertise' },
       { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
@@ -47,7 +50,6 @@ module.exports = {
       items: [
         { href: '/subscribe', label: 'Subscribe' },
         { href: '/page/advertise', label: 'Advertise' },
-        { href: '/page/about-us', label: 'About Us' },
         { href: '/contact-us', label: 'Contact Us' },
         { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
         { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
