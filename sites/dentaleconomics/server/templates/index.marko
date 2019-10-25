@@ -131,8 +131,8 @@ $ const { id, alias, name, pageNode } = data;
       </div>
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
-          name="all-published-content"
-          params={ contentTypes: ["Whitepaper"], limit: 4, queryFragment }>
+          name="website-scheduled-content"
+          params={ sectionAlias: "white-papers", limit: 4, queryFragment }>
           <website-content-list-flow nodes=nodes display-image=false>
             <@header>
               <marko-web-link href="/white-papers">White Papers</marko-web-link>
