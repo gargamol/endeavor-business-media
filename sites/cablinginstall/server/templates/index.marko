@@ -162,7 +162,7 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionAlias: ["white-papers"], limit: 3, queryFragment }
+          params={ sectionAlias: "white-papers", limit: 3, queryFragment }
         >
           <website-content-list-flow nodes=nodes display-image=false>
             <@header>
