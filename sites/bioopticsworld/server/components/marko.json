@@ -18,5 +18,5 @@
   },
   "<website-inquiry-form>": {
     "template": "./inquiry-form.marko"
-  }	  }
+  }
 }
