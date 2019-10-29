@@ -3,6 +3,7 @@ const section = require('../templates/website-section');
 const contactUs = require('../templates/website-section/contact-us');
 const queryFragment = require('../graphql/fragments/website-section-page');
 const mapsPostersTemplate = require('../templates/website-section/resources/maps-posters');
+const whitePapers = require('../templates/website-section/white-papers');
 
 module.exports = (app) => {
   app.get('/:alias(contact-us)', withWebsiteSection({
@@ -11,6 +12,10 @@ module.exports = (app) => {
   }));
   app.get('/:alias(resources/maps-posters)', withWebsiteSection({
     template: mapsPostersTemplate,
+    queryFragment,
+  }));
+  app.get('/:alias(white-papers)', withWebsiteSection({
+    template: whitePapers,
     queryFragment,
   }));
   app.get('/:alias([a-z0-9-/]+)', withWebsiteSection({
