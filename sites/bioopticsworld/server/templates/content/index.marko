@@ -54,6 +54,14 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
                 </if>
                 <if(content.type === "webinar")>
                   <marko-web-content-starts block-name=blockName obj=content />
+                  <default-theme-content-link-url
+                    obj=content
+                    label="Register/View"
+                    target="_blank"
+                  />
+                </if>
+                <if(type === "product")>
+                  <website-inquiry-form content=content />
                 </if>
                 <if(displayPublishedDate)>
                   <marko-web-content-published block-name=blockName obj=content />
