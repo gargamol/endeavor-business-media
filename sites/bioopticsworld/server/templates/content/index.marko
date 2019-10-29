@@ -54,14 +54,6 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
                 </if>
                 <if(content.type === "webinar")>
                   <marko-web-content-starts block-name=blockName obj=content />
-                  <default-theme-content-link-url
-                    obj=content
-                    label="Register/View"
-                    target="_blank"
-                  />
-                </if>
-                <if(type === "product")>
-                  <website-inquiry-form content=content />
                 </if>
                 <if(displayPublishedDate)>
                   <marko-web-content-published block-name=blockName obj=content />
@@ -90,6 +82,16 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
                   <@wufoo user-name=site.get("wufoo.userName") />
                   <@link class="btn btn-lg btn-primary" />
                 </default-theme-content-download>
+              </if>
+              <if(type === "webinar")>
+                <default-theme-content-link-url
+                  obj=content
+                  label="Register/View"
+                  target="_blank"
+                />
+              </if>
+              <if(type === "product")>
+                <website-inquiry-form content=content />
               </if>
             </default-theme-page-contents>
             <aside class="col-lg-4 page-rail">
