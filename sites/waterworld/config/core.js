@@ -1,3 +1,3 @@
 module.exports = {
-  siteName: 'Storm Water',
+  siteName: 'Water Water',
 };
