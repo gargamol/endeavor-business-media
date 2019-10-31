@@ -703,21 +703,21 @@ services:
       - "9749:80"
       - "19749:19749"
 
-  # waterworld:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/waterworld
-  #   environment:
-  #     <<: *env
-  #     <<: *env-aerilon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9750
-  #     LIVERELOAD_PORT: 19750
-  #     TENANT_KEY: ebm_ww
-  #     SITE_ID: 5ca26a4908cf3add038b4567
-  #   ports:
-  #     - "9750:80"
-  #     - "19750:19750"
+  waterworld:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/waterworld
+    environment:
+      <<: *env
+      <<: *env-aerilon-staging
+      PORT: 80
+      EXPOSED_PORT: 9750
+      LIVERELOAD_PORT: 19750
+      TENANT_KEY: ebm_ww
+      SITE_ID: 5ca26a4908cf3add038b4567
+    ports:
+      - "9750:80"
+      - "19750:19750"
 
   foresternetwork:
     <<: *node
