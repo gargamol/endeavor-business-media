@@ -1,18 +1,20 @@
 module.exports = {
   primary: {
     items: [
-      { href: '/bmps', label: 'BMPs' },
-      { href: '/green-infrastructure', label: 'Green Infrastructure' },
-      { href: '/program-management', label: 'Program Management' },
-      { href: '/compliance', label: 'Compliance' },
-      { href: '/erosion-control', label: 'Erosion Control' },
+      { href: '/municipal', label: 'Municipal' },
+      { href: '/industrial', label: 'Industrial' },
+      { href: '/international', label: 'International' },
+      { href: '/municipal/technologies', label: 'Technologies' },
+      { href: '/global-thought-leaders', label: 'Global Thought Leaders' },
     ],
   },
   secondary: {
     items: [
       { href: '/subscribe', label: 'Subscribe' },
-      { href: '/magazine', label: 'Magazine ' },
+      { href: '/magazine', label: 'Magazine' },
+      { href: '/videos', label: 'WaterWorldTV' },
       { href: '/page/advertise', label: 'Advertise' },
+      { href: '/page/about-us', label: 'About Us' },
     ],
   },
   tertiary: {
@@ -22,9 +24,9 @@ module.exports = {
   },
   footer: {
     items: [
+      { href: '/subscribe', label: 'Subscribe' },
       { href: '/page/about-us', label: 'About Us' },
       { href: '/contact-us', label: 'Contact Us' },
-      { href: '/page/advertise', label: 'Advertise' },
       { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
       { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
     ],
@@ -33,18 +35,21 @@ module.exports = {
     {
       label: 'Topics',
       items: [
-        { href: '/bmps', label: 'BMPs' },
-        { href: '/green-infrastructure', label: 'Green Infrastructure' },
-        { href: '/program-management', label: 'Program Management' },
-        { href: '/compliance', label: 'Compliance' },
-        { href: '/erosion-control', label: 'Erosion Control' },
+        { href: '/municipal', label: 'Municipal' },
+        { href: '/industrial', label: 'Industrial' },
+        { href: '/international', label: 'International' },
+        { href: '/municipal/technologies', label: 'Technologies' },
+        { href: '/global-thought-leaders', label: 'Global Thought Leaders' },
       ],
     },
     {
       label: 'Resources',
       items: [
-        { href: '/page/advertise', label: 'Advertise' },
+        { href: '/events', label: 'Events' },
         { href: '/magazine', label: 'Magazine' },
+        { href: '/videos', label: 'WaterWorldTV' },
+        { href: '/white-papers', label: 'White Papers' },
+        { href: '/webcasts', label: 'Webcasts' },
       ],
     },
     {

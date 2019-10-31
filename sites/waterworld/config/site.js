@@ -18,9 +18,9 @@ module.exports = {
     },
   },
   socialMediaLinks: [
-    { provider: 'linkedin', href: 'https://www.linkedin.com/company/forester_media_inc-/' },
-    { provider: 'twitter', href: 'https://twitter.com/foresternetwork' },
-    { provider: 'facebook', href: 'https://www.facebook.com/foresternetwork' },
+    { provider: 'linkedin', href: 'https://www.linkedin.com/showcase/waterworld-magazine/about/' },
+    { provider: 'twitter', href: 'https://twitter.com/WaterWorld' },
+    { provider: 'facebook', href: 'https://www.facebook.com/waterworldmag' },
   ],
   gtm: {
     containerId: 'GTM-MXBGH3V',
