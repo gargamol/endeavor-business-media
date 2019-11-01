@@ -19,8 +19,8 @@ module.exports = {
   },
   socialMediaLinks: [
     { provider: 'linkedin', href: 'https://www.linkedin.com/company/19195026' },
-    { provider: 'twitter', href: 'https://twitter.com/foresternetwork' },
-    { provider: 'facebook', href: 'https://www.facebook.com/foresternetwork' },
+    { provider: 'twitter', href: 'https://twitter.com/stormwatermag?lang=en' },
+    { provider: 'facebook', href: 'https://www.facebook.com/StormwaterMagazine' },
   ],
   gtm: {
     containerId: 'GTM-TLSVP6Q',
