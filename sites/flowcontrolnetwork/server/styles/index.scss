@@ -12,6 +12,10 @@ $theme-site-navbar-secondary-link-color: $black;
 $theme-site-navbar-secondary-link-hover-color: $black;
 $theme-site-navbar-secondary-link-active-color: $black;
 
+$theme-site-navbar-tertiary-link-active-color: $black;
+$theme-site-navbar-tertiary-link-color: $black;
+$theme-site-navbar-tertiary-link-hover-color: $black;
+
 $theme-site-navbar-logo-height: 45px;
 $theme-site-navbar-logo-height-sm: 25px;
 
@@ -30,6 +34,3 @@ $theme-site-header-breakpoints: (
 @import "../../node_modules/@base-cms/marko-web-theme-default/skins/orion/skin";
 // @todo this should be remove once contact us is in core
 @import "../../node_modules/@base-cms-websites/package-common/scss/contact-us-form";
-
-/* stylelint-disable-next-line */
-.site-navbar__items--tertiary .site-navbar__link svg { fill: $black; }
