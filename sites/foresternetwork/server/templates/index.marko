@@ -36,87 +36,6 @@ $ const { id, alias, name, pageNode } = data;
     >
       <website-content-hero-flow nodes=nodes />
     </marko-web-query>
-
-    <div class="row">
-      <div class="col-lg-4 mb-block">
-        <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
-          params={ sectionAlias: "msw-management", limit: 4, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link href="/msw-management">MSW Measurement</marko-web-link>
-            </@header>
-            <@native-x index=2 name="default" aliases=["msw-management"] />
-          </website-content-list-flow>
-        </marko-web-query>
-      </div>
-      <div class="col-lg-4 mb-block">
-        <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
-          params={ sectionAlias: "stormwater", limit: 4, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link href="/stormwater">Stormwater</marko-web-link>
-            </@header>
-            <@native-x index=2 name="default" aliases=["stormwater"] />
-          </website-content-list-flow>
-        </marko-web-query>
-      </div>
-      <div class="col-lg-4 mb-block">
-          <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
-          params={ sectionAlias: "water-efficiency", limit: 4, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link href="/water-efficiency">Water Efficiency</marko-web-link>
-            </@header>
-            <@native-x index=2 name="default" aliases=["water-efficiency"] />
-          </website-content-list-flow>
-        </marko-web-query>
-      </div>
-      <div class="col-lg-4 mb-block">
-        <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
-          params={ sectionAlias: "distributed-energy", limit: 4, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link href="/distributed-energy">Distributed Energy</marko-web-link>
-            </@header>
-            <@native-x index=2 name="default" aliases=["distributed-energy"] />
-          </website-content-list-flow>
-        </marko-web-query>
-      </div>
-      <div class="col-lg-4 mb-block">
-        <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
-          params={ sectionAlias: "erosion-control", limit: 4, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link href="/erosion-control">Erosion Control</marko-web-link>
-            </@header>
-            <@native-x index=2 name="default" aliases=["erosion-control"] />
-          </website-content-list-flow>
-        </marko-web-query>
-      </div>
-      <div class="col-lg-4 mb-block">
-        <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
-          params={ sectionAlias: "grading-excavation-contractor", limit: 4, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link href="/grading-excavation-contractor">Grading & Excavation Contractor</marko-web-link>
-            </@header>
-            <@native-x index=2 name="default" aliases=["grading-excavation-contractor"] />
-          </website-content-list-flow>
-        </marko-web-query>
-      </div>
-    </div>
   </@page>
   <@below-page>
     <marko-web-resolve-page|{ data: section }| node=pageNode>
@@ -126,7 +45,7 @@ $ const { id, alias, name, pageNode } = data;
         component-input={ aliases }
         fragment-name="content-list"
         query-name="website-scheduled-content"
-        query-params={ sectionId: id, limit: 14, skip: 8 }
+        query-params={ sectionId: id, limit: 14, skip: 5 }
         max-pages=0
         page-input={ for: "website-section", id }
       />
