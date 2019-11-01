@@ -23,7 +23,7 @@ module.exports = {
     { provider: 'facebook', href: 'https://www.facebook.com/waterworldmag' },
   ],
   gtm: {
-    containerId: 'GTM-MXBGH3V',
+    containerId: 'GTM-TC76RXH',
   },
   wufoo: {
     userName: 'cygnuscorporate',
