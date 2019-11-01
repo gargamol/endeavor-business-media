@@ -4,22 +4,28 @@ const config = new NativeXConfiguration('https://ebm.native-x.io');
 
 config
   .setAliasPlacements('default', [
-    { name: 'default', id: '5db05b30c99ad20001f14492' },
+    { name: 'default', id: '5cdb1903f41dfb0001fb2ea7' },
   ])
-  .setAliasPlacements('bmps', [
-    { name: 'default', id: '5db05b75c99ad20001f162f4' },
+  .setAliasPlacements('technologies', [
+    { name: 'default', id: '5cdb16baf41dfb0001fac272' },
   ])
-  .setAliasPlacements('green-infrastructure', [
-    { name: 'default', id: '5db05b653204b10001f9a969' },
+  .setAliasPlacements('drinking-water', [
+    { name: 'default', id: '5dbc58862480f80001621418' },
   ])
-  .setAliasPlacements('program-management', [
-    { name: 'default', id: '5db05b58c99ad20001f15628' },
+  .setAliasPlacements('wastewater', [
+    { name: 'default', id: '5dbc586f8eb88b0001a1d457' },
   ])
-  .setAliasPlacements('compliance', [
-    { name: 'default', id: '5db05b4e3204b10001f99f2a' },
+  .setAliasPlacements('water-utility-management', [
+    { name: 'default', id: '5dbc58562480f8000161fff8' },
   ])
-  .setAliasPlacements('erosion-control', [
-    { name: 'default', id: '5db05b3fc99ad20001f14a8f' },
+  .setAliasPlacements('environmental', [
+    { name: 'default', id: '5dbc582d8eb88b0001a1bb68' },
+  ])
+  .setAliasPlacements('urban-stormwater', [
+    { name: 'default', id: '5dbc58188eb88b0001a1b408' },
+  ])
+  .setAliasPlacements('international', [
+    { name: 'default', id: '5cdb16fe39937800010c96d0' },
   ]);
 
 module.exports = config;
