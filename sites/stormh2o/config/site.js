@@ -18,7 +18,7 @@ module.exports = {
     },
   },
   socialMediaLinks: [
-    { provider: 'linkedin', href: 'https://www.linkedin.com/company/forester_media_inc-/' },
+    { provider: 'linkedin', href: 'https://www.linkedin.com/company/19195026' },
     { provider: 'twitter', href: 'https://twitter.com/foresternetwork' },
     { provider: 'facebook', href: 'https://www.facebook.com/foresternetwork' },
   ],
