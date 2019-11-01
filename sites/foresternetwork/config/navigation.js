@@ -1,14 +1,4 @@
 module.exports = {
-  primary: {
-    items: [
-      { href: '/distributed-energy', label: 'Distributed Energy' },
-      { href: '/erosion-control', label: 'Erosion Control' },
-      { href: '/grading-excavation-contractor', label: 'Grading & Excavation Contractor' },
-      { href: '/msw-management', label: 'MSW Management' },
-      { href: '/stormwater', label: 'Stormwater' },
-      { href: '/water-efficiency', label: 'Water Efficiency' },
-    ],
-  },
   secondary: {
     items: [
       { href: 'https://www.stormcon.com', label: 'Stormcon', target: '_blank' },
@@ -37,12 +27,12 @@ module.exports = {
     {
       label: 'Topics',
       items: [
-        { href: '/distributed-energy', label: 'Distributed Energy' },
-        { href: '/erosion-control', label: 'Erosion Control' },
-        { href: '/grading-excavation-contractor', label: 'Grading & Excavation Contractor' },
-        { href: '/msw-management', label: 'MSW Management' },
-        { href: '/stormwater', label: 'Stormwater' },
-        { href: '/water-efficiency', label: 'Water Efficiency' },
+        { href: 'https://www.distributedenergy.com', label: 'Distributed Energy' },
+        { href: 'https://www.stormh2o.com', label: 'Erosion Control' },
+        { href: 'https://www.gxcontractor.com/', label: 'Grading & Excavation Contractor' },
+        { href: 'https://www.mswmanagement.com/', label: 'MSW Management' },
+        { href: 'https://www.stormh2o.com', label: 'Stormwater' },
+        { href: 'https://www.waterworld.com/', label: 'Water Efficiency' },
       ],
     },
     {
