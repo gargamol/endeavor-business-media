@@ -1,11 +1,11 @@
 module.exports = {
   primary: {
     items: [
-      { href: '/municipal', label: 'Municipal' },
-      { href: '/industrial', label: 'Industrial' },
-      { href: '/international', label: 'International' },
-      { href: '/municipal/technologies', label: 'Technologies' },
-      { href: '/global-thought-leaders', label: 'Global Thought Leaders' },
+      { href: '/drinking-water', label: 'Drinking Water' },
+      { href: '/wastewater', label: 'Wastewater' },
+      { href: '/water-utility-management', label: 'Water Utility Management' },
+      { href: '/environmental', label: 'Environmental' },
+      { href: '/technology', label: 'Technology' },
     ],
   },
   secondary: {
@@ -35,16 +35,18 @@ module.exports = {
     {
       label: 'Topics',
       items: [
-        { href: '/municipal', label: 'Municipal' },
-        { href: '/industrial', label: 'Industrial' },
-        { href: '/international', label: 'International' },
-        { href: '/municipal/technologies', label: 'Technologies' },
-        { href: '/global-thought-leaders', label: 'Global Thought Leaders' },
+        { href: '/drinking-water', label: 'Drinking Water' },
+        { href: '/wastewater', label: 'Wastewater' },
+        { href: '/water-utility-management', label: 'Water Utility Management' },
+        { href: '/environmental', label: 'Environmental' },
+        { href: '/urban-stormwater', label: 'Urban Stormwater' },
+        { href: '/technology', label: 'Technology' },
       ],
     },
     {
       label: 'Resources',
       items: [
+        { href: '/global-thought-leaders', label: 'Global Thought Leaders' },
         { href: '/events', label: 'Events' },
         { href: '/magazine', label: 'Magazine' },
         { href: '/videos', label: 'WaterWorldTV' },
