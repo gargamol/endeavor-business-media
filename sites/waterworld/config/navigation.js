@@ -5,7 +5,8 @@ module.exports = {
       { href: '/wastewater', label: 'Wastewater' },
       { href: '/water-utility-management', label: 'Water Utility Management' },
       { href: '/environmental', label: 'Environmental' },
-      { href: '/technology', label: 'Technology' },
+      { href: '/technologies', label: 'Technologies' },
+      { href: '/global-thought-leaders', label: 'Global Thought Leaders' },
     ],
   },
   secondary: {
@@ -40,7 +41,7 @@ module.exports = {
         { href: '/water-utility-management', label: 'Water Utility Management' },
         { href: '/environmental', label: 'Environmental' },
         { href: '/urban-stormwater', label: 'Urban Stormwater' },
-        { href: '/technology', label: 'Technology' },
+        { href: '/technologies', label: 'Technologies' },
       ],
     },
     {
