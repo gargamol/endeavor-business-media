@@ -36,6 +36,6 @@ module.exports = {
       bgColor: '#164f77',
       logo: 'https://base.imgix.net/files/base/ebm/wto/image/static/wto-logo.png?h=60',
     },
-    to: 'abailie@endeavorb2b.com',
+    to: 'tdower@endeavorb2b.com',
   },
 };
