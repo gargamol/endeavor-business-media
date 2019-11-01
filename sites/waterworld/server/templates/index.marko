@@ -1,6 +1,5 @@
 import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
 import queryFragment from "../graphql/fragments/content-list";
-import latestIssueFragment from "../graphql/fragments/magazine-latest-issue";
 import GAM from "../../config/gam";
 
 $ const { id, alias, name, pageNode } = data;
@@ -37,14 +36,92 @@ $ const { id, alias, name, pageNode } = data;
     </marko-web-query>
 
     <div class="row">
+      <div class="col-lg-8">
+        <div class="row">
+          <div class="col-lg-6 mb-block">
+            <marko-web-query|{ nodes }|
+              name="website-scheduled-content"
+              params={ sectionAlias: "drinking-water", limit: 3, queryFragment }
+            >
+              <website-content-list-flow nodes=nodes>
+                <@header>
+                  <marko-web-link href="/drinking-water">Drinking Water</marko-web-link>
+                </@header>
+                <@native-x index=2 name="list1" aliases=["drinking-water"] />
+              </website-content-list-flow>
+            </marko-web-query>
+          </div>
+          <div class="col-lg-6 mb-block">
+            <marko-web-query|{ nodes }|
+              name="website-scheduled-content"
+              params={ sectionAlias: "wastewater", limit: 3, queryFragment }
+            >
+              <website-content-list-flow nodes=nodes>
+                <@header>
+                  <marko-web-link href="/wastewater">Wastewater</marko-web-link>
+                </@header>
+                <@native-x index=2 name="list1" aliases=["wastewater"] />
+              </website-content-list-flow>
+            </marko-web-query>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 mb-block">
+             <marko-web-query|{ nodes }|
+              name="website-scheduled-content"
+              params={ sectionAlias: "water-utility-management", limit: 3, queryFragment }
+            >
+              <website-content-list-flow nodes=nodes>
+                <@header>
+                  <marko-web-link href="/water-utility-management">Water Utility Management</marko-web-link>
+                </@header>
+                <@native-x index=2 name="list1" aliases=["water-utility-management"] />
+              </website-content-list-flow>
+            </marko-web-query>
+          </div>
+          <div class="col-lg-6 mb-block">
+            <marko-web-query|{ nodes }|
+              name="website-scheduled-content"
+              params={ sectionAlias: "environmental", limit: 3, queryFragment }
+            >
+              <website-content-list-flow nodes=nodes>
+                <@header>
+                  <marko-web-link href="/environmental">Environmental</marko-web-link>
+                </@header>
+                <@native-x index=2 name="list1" aliases=["environmental"] />
+              </website-content-list-flow>
+            </marko-web-query>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 mb-block page-rail">
+        <marko-web-gam-display-ad id="gpt-ad-rail1" />
+        <marko-web-gam-display-ad id="gpt-ad-rail2" />
+      </div>
+    </div>
+
+    <div class="row">
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="all-published-content"
-          params={ contentTypes: ["Video"], limit: 3, queryFragment }
+          params={ contentTypes: ["Video"], limit: 4, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/videos">Videos</marko-web-link>
+            </@header>
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+      <div class="col-lg-4 mb-block">
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "white-papers", limit: 4, queryFragment }
         >
           <website-content-list-flow nodes=nodes display-image=false>
             <@header>
-              <marko-web-link href="/video">Video</marko-web-link>
+              <marko-web-link href="/white-papers">White Papers</marko-web-link>
             </@header>
           </website-content-list-flow>
         </marko-web-query>
@@ -52,28 +129,17 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="all-published-content"
-          params={ contentTypes: ["Whitepaper"], limit: 3, queryFragment }
+          params={ contentTypes: ["Webinar"], limit: 4, queryFragment }
         >
           <website-content-list-flow nodes=nodes display-image=false>
             <@header>
-              <marko-web-link href="/whitepaper">White Paper</marko-web-link>
-            </@header>
-          </website-content-list-flow>
-        </marko-web-query>
-      </div>
-      <div class="col-lg-4 mb-block">
-        <marko-web-query|{ nodes }|
-          name="all-published-content"
-          params={ contentTypes: ["Webinar"], limit: 3, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes display-image=false>
-            <@header>
-              <marko-web-link href="/webinar">Webinar</marko-web-link>
+              <marko-web-link href="/webcasts">Webcasts</marko-web-link>
             </@header>
           </website-content-list-flow>
         </marko-web-query>
       </div>
     </div>
+
   </@page>
   <@below-page>
     <marko-web-resolve-page|{ data: section }| node=pageNode>
