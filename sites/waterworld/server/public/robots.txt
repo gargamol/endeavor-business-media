@@ -4,5 +4,5 @@
 User-agent: *
 Disallow: /__load-more
 
-Sitemap: https://www.stormh2o.com/sitemap.xml
-Sitemap: https://www.stormh2o.com/sitemap-google-news.xml
+Sitemap: https://www.waterworld.com/sitemap.xml
+Sitemap: https://www.waterworld.com/sitemap-google-news.xml
