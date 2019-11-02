@@ -230,7 +230,7 @@ jobs:
       script: deploy/index.js watertechonline aerilon
       install: skip
 
-    # - stage: deploy
-    #   name: Waterworld
-    #   script: deploy/index.js waterworld aerilon
-    #   install: skip
+    - stage: deploy
+      name: Waterworld
+      script: deploy/index.js waterworld aerilon
+      install: skip
