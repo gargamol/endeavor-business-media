@@ -1,5 +1,6 @@
+import { get } from '@base-cms/object-path';
 import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
-import queryFragment from "../../graphql/fragments/content-list";
+import queryFragment from "../../graphql/fragments/global-thought-leaders";
 import GAM from "../../../config/gam";
 
 $ const { id, alias, name, pageNode } = data;
@@ -41,34 +42,45 @@ $ const { id, alias, name, pageNode } = data;
         </@section>
         <@section>
           <div class="row">
-            <div class="col-lg-8 mb-block">
-              <marko-web-query|{ nodes }|
-                name="website-scheduled-content"
-                params={ sectionId: id, limit: 2, contentTypes: ["Video"], queryFragment }
-              >
-                <default-theme-card-deck-flow cols=2 nodes=nodes>
-                  <@slot|{ node, index }|>
-                    <website-content-card-node
-                      image-width=340
-                      node=node
+            <marko-web-query|{ nodes }|
+              name="website-scheduled-content"
+              params={ sectionId: id, limit: 2, includeContentTypes: ["Video"], queryFragment }
+            >
+              <for|content| of=nodes>
+                <div class="col">
+                  <marko-web-node
+                    type="compay-content"
+                    image-position="top"
+                    card=true
+                    full-height=true
+                    attrs=input.attrs
+                  >
+                    <@image
+                      src=get(content, "company.primaryImage.src")
+                      alt=get(content, "company.primaryImage.alt")
+                      is-logo=get(content, "company.primaryImage.isLogo")
+                      fluid=true
+                      ar="16:9"
+                      width=520
+                      link={ href: get(content, "company.canonicalPath") }
                     />
-                  </@slot>
-                </default-theme-card-deck-flow>
-              </marko-web-query>
-            </div>
+                    <@body>
+                      <@header>
+                        <@left>
+                          Watch ${get(content, "company.name")}'s Video
+                        </@left>
+                      </@header>
+                      <@text>
+                        <website-video-embed-node embedCode=content.embedCode width=480 />
+                      </@text>
+                    </@body>
+                  </marko-web-node>
+                </div>
+              </for>
+            </marko-web-query>
           </div>
         </@section>
       </marko-web-page-wrapper>
-    </marko-web-resolve-page>
-
-    <marko-web-resolve-page|{ data: section }| node=pageNode>
-      $ const aliases = hierarchyAliases(section);
-      <marko-web-query|{ nodes }|
-        name="website-scheduled-content"
-        params={ sectionId: id, limit: 14, skip: 5, queryFragment }
-      >
-        <website-content-load-more-flow nodes=nodes aliases=aliases />
-      </marko-web-query>
     </marko-web-resolve-page>
 
   </@page>
