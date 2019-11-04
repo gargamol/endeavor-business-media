@@ -72,7 +72,9 @@ $ const imageOpts = {
                     />
                     <@body>
                       <@header>
-                        <@left>Watch ${get(content, "company.name")}'s Video</@left>
+                        <@left>
+                          <marko-web-content-name|{ value }| obj=content.company>Watch ${value}'s Video</marko-web-content-name>
+                        </@left>
                       </@header>
                       <@text><marko-web-content-embed-code block-name="node" obj=content /></@text>
                     </@body>
@@ -96,10 +98,12 @@ $ const imageOpts = {
                   >
                     <@body>
                       <@header>
-                        <@left>Download ${get(content, "company.name")}'s Whitepaper</@left>
+                        <@left>
+                          <marko-web-content-name|{ value }| obj=content.company>Download ${value}'s Whitepaper</marko-web-content-name>
+                        </@left>
                       </@header>
-                      <@title>${content.name}</@title>
-                      <@text>$!{content.body}</@text>
+                      <@title><marko-web-content-name obj=content /></@title>
+                      <@text><marko-web-content-body obj=content /></@text>
                       <@footer>
                         <@left><marko-core-link href=content.canonicalPath>Download Now!</marko-core-link></@left>
                       </@footer>
