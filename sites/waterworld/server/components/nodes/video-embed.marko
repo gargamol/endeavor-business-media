@@ -1,16 +1,18 @@
 $ var { embedCode, width, height, responsive } = input;
 
+// Determine if the embed code is an iframe
 $ if (embedCode.match(/^\<iframe/i)) {
-  const iframe = {};
 
-  // Extract src, width, height values
-  const pattern = /(src|width|height)=["']([^"']*)["']/gi;
-  embedCode.replace(pattern, (match, key, val) => {
+  // Extract src, width, height values from iframe
+  const iframe = {};
+  embedCode.replace(/(src|width|height)=["']([^"']*)["']/gi, (match, key, val) => {
     iframe[key] = val;
   });
 
-  // Use src value to determine type
+  // If responsive and a supported type, build responsive embed code
   if (responsive && iframe.src && iframe.src.match(/vimeo/i)) {
+
+    // Vimeo
     let vimeoId = iframe.src.split('?')[0].split('/').pop();
     embedCode = `<div style="padding:56.25% 0 0 0;position:relative;">
       <iframe src="${iframe.src}" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
@@ -22,8 +24,14 @@ $ if (embedCode.match(/^\<iframe/i)) {
     iframe.width = width;
     iframe.height = height;
 
+    // Replace width & height
+    embedCode = embedCode.replace(/(width|height)=["']([^"']*)["']/gi, (match, key, val) => {
+        if (iframe[key]) return `${key}="${iframe[key]}"`;
+    });
+
+  // If width OR height are sent, preserve aspect ratio
   } else if (width || height) {
-    // Resize
+
     if (width) {
       iframe.height = (iframe.height / iframe.width) * width;
       iframe.width = width;
@@ -33,7 +41,7 @@ $ if (embedCode.match(/^\<iframe/i)) {
     }
 
     // Replace width & height
-    embedCode = embedCode.replace(pattern, (match, key, val) => {
+    embedCode = embedCode.replace(/(width|height)=["']([^"']*)["']/gi, (match, key, val) => {
         if (iframe[key]) return `${key}="${iframe[key]}"`;
     });
   }
