@@ -16,6 +16,9 @@
       "@name": "string",
       "@aliases": "array"
     },
+    "<node>": {
+      "<image>": {}
+    },
     "@nodes": "array",
     "@display-image": {
       "type": "boolean",
@@ -28,7 +31,8 @@
     "@inner-justified": {
       "type": "boolean",
       "default-value": true
-    }
+    },
+    "@class": "string"
   },
   "<website-content-load-more-flow>": {
     "template": "./content-load-more.marko",
