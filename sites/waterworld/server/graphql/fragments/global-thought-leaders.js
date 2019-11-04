@@ -35,9 +35,6 @@ fragment GlobalThoughtLeadersContentFragment on Content {
   }
   ... on ContentWhitepaper {
     body
-    siteContext {
-      path
-    }
     company {
       id
       name
