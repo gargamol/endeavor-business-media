@@ -15,5 +15,8 @@
     },
     "<below-container>": {},
     "<foot>": {}
+  },
+  "<website-inquiry-form>": {
+    "template": "./inquiry-form.marko"
   }
 }
