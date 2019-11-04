@@ -19,7 +19,7 @@ config
     { name: 'default', id: '5cdb210cf41dfb0001fc9a4a' },
   ])
   .setAliasPlacements('data-center', [
-    { name: 'default', id: '5cdb205439937800010e3bd6' }
+    { name: 'default', id: '5cdb205439937800010e3bd6' },
   ])
   .setAliasPlacements('cable', [
     { name: 'default', id: '5cdb208d39937800010e4673' },
