@@ -6,7 +6,9 @@ fragment GlobalThoughtLeadersContentFragment on Content {
   id
   type
   name
-  canonicalPath
+  siteContext {
+    path
+  }
   ... on ContentCompany {
     primaryImage {
       id
@@ -20,7 +22,9 @@ fragment GlobalThoughtLeadersContentFragment on Content {
     company {
       id
       name
-      canonicalPath
+      siteContext {
+        path
+      }
       primaryImage {
         id
         src
@@ -31,7 +35,9 @@ fragment GlobalThoughtLeadersContentFragment on Content {
   }
   ... on ContentWhitepaper {
     body
-    canonicalPath
+    siteContext {
+      path
+    }
     company {
       id
       name

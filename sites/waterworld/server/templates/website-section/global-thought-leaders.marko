@@ -68,7 +68,7 @@ $ const imageOpts = {
                       fluid=true
                       ar="16:9"
                       width=520
-                      link={ href: get(content, "company.canonicalPath") }
+                      link={ href: get(content, "company.siteContext.path") }
                     />
                     <@body>
                       <@header>
@@ -105,7 +105,7 @@ $ const imageOpts = {
                       <@title><marko-web-content-name obj=content /></@title>
                       <@text><marko-web-content-body obj=content /></@text>
                       <@footer>
-                        <@left><marko-core-link href=content.canonicalPath>Download Now!</marko-core-link></@left>
+                        <@left><marko-core-link href=content.siteContext.path>Download Now!</marko-core-link></@left>
                       </@footer>
                     </@body>
                   </marko-web-node>
@@ -140,7 +140,7 @@ $ const imageOpts = {
                       src=get(content, "primaryImage.src")
                       alt=get(content, "primaryImage.alt")
                       is-logo=get(content, "primaryImage.isLogo")
-                      link={ href: content.canonicalPath }
+                      link={ href: content.siteContext.path }
                       ar="16:9"
                       modifiers=["centercap"]
                       options=imageOpts
