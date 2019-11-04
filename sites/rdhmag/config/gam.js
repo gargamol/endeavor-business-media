@@ -11,7 +11,9 @@ config
       { viewport: [320, 0], size: [[300, 50], [320, 50], [300, 100]] },
     ],
   })
-  .setTemplate('CONTENT', { size: [300, 250] });
+  .setTemplate('RAIL1', { size: [300, 250] })
+  .setTemplate('RAIL2', { size: [300, 250] })
+  .setTemplate('LM', { size: [300, 250] });
 
 config
   .setAliasAdUnits('default', [
