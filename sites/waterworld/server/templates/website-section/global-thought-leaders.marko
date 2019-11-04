@@ -49,11 +49,10 @@ $ const { id, alias, name, pageNode } = data;
               <for|content| of=nodes>
                 <div class="col">
                   <marko-web-node
-                    type="compay-content"
+                    type="company-content"
                     image-position="top"
-                    card=true
+                    card=false
                     full-height=true
-                    attrs=input.attrs
                   >
                     <@image
                       src=get(content, "company.primaryImage.src")
@@ -66,13 +65,9 @@ $ const { id, alias, name, pageNode } = data;
                     />
                     <@body>
                       <@header>
-                        <@left>
-                          Watch ${get(content, "company.name")}'s Video
-                        </@left>
+                        <@left>Watch ${get(content, "company.name")}'s Video</@left>
                       </@header>
-                      <@text>
-                        <website-video-embed-node embedCode=content.embedCode width=480 />
-                      </@text>
+                      <@text><website-video-embed-node embedCode=content.embedCode width=480 /></@text>
                     </@body>
                   </marko-web-node>
                 </div>
