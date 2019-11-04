@@ -23,7 +23,6 @@ config
     { name: 'rail2', templateName: 'RAIL2', path: 'default/rail2' },
     { name: 'load-more', templateName: 'LM', path: 'default/load-more' },
     { name: 'reskin', path: 'default/reskin' },
-    { name: 'wa', path: 'default/wa' },
   ])
   .setAliasAdUnits('job-postings', [
     { name: 'lb1', templateName: 'LB', path: 'job-postings/lb1' },
