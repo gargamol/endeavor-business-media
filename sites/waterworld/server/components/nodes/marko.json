@@ -56,15 +56,5 @@
   "<website-contact-us-list-node>": {
     "template": "./contact-us-list.marko",
     "@node": "object"
-  },
-  "<website-video-embed-node>": {
-    "template": "./video-embed.marko",
-    "@embedCode": "string",
-    "@width": "number",
-    "@height": "number",
-    "@responsive": {
-      "type": "boolean",
-      "default-value": true
-    }
   }
 }

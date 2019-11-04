@@ -74,7 +74,7 @@ $ const imageOpts = {
                       <@header>
                         <@left>Watch ${get(content, "company.name")}'s Video</@left>
                       </@header>
-                      <@text><website-video-embed-node embedCode=content.embedCode width=480 /></@text>
+                      <@text><marko-web-content-embed-code block-name="node" obj=content /></@text>
                     </@body>
                   </marko-web-node>
                 </div>
