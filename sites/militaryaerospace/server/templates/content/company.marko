@@ -1,5 +1,5 @@
 import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
-import { getAsObject } from "@base-cms/object-path";
+import { get, getAsObject } from "@base-cms/object-path";
 import queryFragment from "../../graphql/fragments/content-list";
 import GAM from "../../../config/gam";
 
@@ -51,7 +51,18 @@ $ const { id, type, pageNode } = data;
         <@section>
           <div class="row">
             <default-theme-page-contents|{ blockName }| class="col-lg-8 mb-3 mb-lg-0">
-              <marko-web-page-image width=500 obj=content.primaryImage />
+              $ const isLogo = get(content, "primaryImage.isLogo");
+              <if(isLogo)>
+                <marko-web-page-image
+                  modifiers=["primary-image-inline"]
+                  obj=content.primaryImage
+                  fluid=false
+                  width=250
+                />
+              </if>
+              <else>
+                <marko-web-page-image width=500 obj=content.primaryImage />
+              </else>
               <default-theme-content-contact-details obj=content />
               <marko-web-content-body block-name=blockName obj=content />
               <website-inquiry-form content=content />
