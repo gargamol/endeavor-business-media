@@ -79,6 +79,35 @@ $ const { id, alias, name, pageNode } = data;
               </for>
             </marko-web-query>
           </div>
+          <div class="row">
+            <marko-web-query|{ nodes }|
+              name="website-scheduled-content"
+              params={ sectionId: id, limit: 2, includeContentTypes: ["Whitepaper"], queryFragment }
+            >
+              <for|content| of=nodes>
+                <div class="col">
+                  <marko-web-node
+                    type="whitepaper-content"
+                    image-position="top"
+                    card=false
+                    full-height=true
+                  >
+                    <@body>
+                      <@header>
+                        <@left>Download ${get(content, "company.name")}'s Whitepaper</@left>
+                      </@header>
+                      <@title>${content.name}</@title>
+                      <@text>$!{content.body}</@text>
+                      <@footer>
+                        <@left><marko-core-link href=content.canonicalPath>Download Now!</marko-core-link></@left>
+                      </@footer>
+                    </@body>
+                  </marko-web-node>
+                </div>
+              </for>
+            </marko-web-query>
+          </div>
+
         </@section>
       </marko-web-page-wrapper>
     </marko-web-resolve-page>
