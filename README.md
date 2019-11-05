@@ -72,7 +72,6 @@ Next, update the following files:
 ```diff
 # /sites/mynewsite/config/native-x.js
 # Add/Remove setAliasPlacements values as needed
-# Note - ID values for card, list1, and list2 should all use card ID
 ```
 
 ```diff
