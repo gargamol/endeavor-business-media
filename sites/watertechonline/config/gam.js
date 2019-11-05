@@ -42,7 +42,7 @@ config
     { name: 'reskin', path: 'process-water/reskin' },
   ])
   .setAliasAdUnits('wastewater', [
-    { name: 'lb1', templateName: 'LB1', path: 'wastewater/lb1' },
+    { name: 'lb1', templateName: 'LB', path: 'wastewater/lb1' },
     { name: 'lb2', templateName: 'LB2', path: 'wastewater/lb2' },
     { name: 'rail1', templateName: 'RAIL1', path: 'wastewater/rail1' },
     { name: 'rail2', templateName: 'RAIL2', path: 'wastewater/rail2' },

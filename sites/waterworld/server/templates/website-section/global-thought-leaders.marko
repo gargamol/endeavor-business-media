@@ -1,8 +1,16 @@
+import { get } from '@base-cms/object-path';
 import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
-import queryFragment from "../../graphql/fragments/content-list";
+import queryFragment from "../../graphql/fragments/global-thought-leaders";
 import GAM from "../../../config/gam";
 
 $ const { id, alias, name, pageNode } = data;
+
+$ const imageOpts = {
+  fit: "fillmax",
+  fillColor: "fff",
+  h: 180,
+  w: 320,
+};
 
 <marko-web-website-section-page-layout id=id alias=alias name=name>
   <@head>
@@ -41,41 +49,109 @@ $ const { id, alias, name, pageNode } = data;
         </@section>
         <@section>
           <div class="row">
-            <div class="col-lg-8 mb-block">
-              <marko-web-query|{ nodes }|
-                name="website-scheduled-content"
-                params={ sectionId: id, limit: 2, contentTypes: ["Video"], queryFragment }
-              >
-                <default-theme-card-deck-flow cols=2 nodes=nodes>
-                  <@slot|{ node, index }|>
-                    <website-content-card-node
-                      image-width=340
-                      node=node
+            <marko-web-query|{ nodes }|
+              name="website-scheduled-content"
+              params={ sectionId: id, limit: 2, includeContentTypes: ["Video"], queryFragment }
+            >
+              <for|content| of=nodes>
+                <div class="col">
+                  <marko-web-node
+                    type="company-content"
+                    image-position="top"
+                    card=false
+                    full-height=true
+                  >
+                    <@image
+                      src=get(content, "company.primaryImage.src")
+                      alt=get(content, "company.primaryImage.alt")
+                      is-logo=get(content, "company.primaryImage.isLogo")
+                      fluid=true
+                      ar="16:9"
+                      width=520
+                      link={ href: get(content, "company.siteContext.path") }
                     />
-                  </@slot>
-                </default-theme-card-deck-flow>
-              </marko-web-query>
+                    <@body>
+                      <@header>
+                        <@left>
+                          <marko-web-content-name|{ value }| obj=content.company>Watch ${value}'s Video</marko-web-content-name>
+                        </@left>
+                      </@header>
+                      <@text><marko-web-content-embed-code block-name="node" obj=content /></@text>
+                    </@body>
+                  </marko-web-node>
+                </div>
+              </for>
+            </marko-web-query>
+          </div>
+          <div class="row">
+            <marko-web-query|{ nodes }|
+              name="website-scheduled-content"
+              params={ sectionId: id, limit: 2, includeContentTypes: ["Whitepaper"], queryFragment }
+            >
+              <for|content| of=nodes>
+                <div class="col">
+                  <marko-web-node
+                    type="whitepaper-content"
+                    image-position="top"
+                    card=false
+                    full-height=true
+                  >
+                    <@body>
+                      <@header>
+                        <@left>
+                          <marko-web-content-name|{ value }| obj=content.company>Download ${value}'s Whitepaper</marko-web-content-name>
+                        </@left>
+                      </@header>
+                      <@title><marko-web-content-name obj=content /></@title>
+                      <@text><marko-web-content-body obj=content /></@text>
+                      <@footer>
+                        <@left><marko-core-link href=content.siteContext.path>Download Now!</marko-core-link></@left>
+                      </@footer>
+                    </@body>
+                  </marko-web-node>
+                </div>
+              </for>
+            </marko-web-query>
+          </div>
+
+          <div class="row">
+
+            <div class="col col-lg-12">
+              <hr>
+              <div class="node">
+                <h4>All Global Thought Leaders</h4>
+              </div>
             </div>
+
+            <marko-web-query|{ nodes }|
+              name="website-scheduled-content"
+              params={ sectionId: id, limit: 27, includeContentTypes: ["Company"], queryFragment }
+            >
+
+              <for|content| of=nodes>
+                <div class="col col-lg-4">
+                  <marko-web-node
+                    type="company-content"
+                    image-position="top"
+                    card=false
+                    full-height=true
+                  >
+                    <@image
+                      src=get(content, "primaryImage.src")
+                      alt=get(content, "primaryImage.alt")
+                      is-logo=get(content, "primaryImage.isLogo")
+                      link={ href: content.siteContext.path }
+                      ar="16:9"
+                      modifiers=["centercap"]
+                      options=imageOpts
+                    />
+                  </marko-web-node>
+                </div>
+              </for>
+            </marko-web-query>
           </div>
         </@section>
       </marko-web-page-wrapper>
     </marko-web-resolve-page>
-
-    <marko-web-resolve-page|{ data: section }| node=pageNode>
-      $ const aliases = hierarchyAliases(section);
-      <marko-web-query|{ nodes }|
-        name="website-scheduled-content"
-        params={ sectionId: id, limit: 14, skip: 5, queryFragment }
-      >
-        <website-content-load-more-flow nodes=nodes aliases=aliases />
-      </marko-web-query>
-    </marko-web-resolve-page>
-
   </@page>
-  <@foot>
-    <marko-web-resolve-page|{ data: section }| node=pageNode>
-      $ const aliases = hierarchyAliases(section);
-      <marko-web-gam-fixed-ad-bottom ...GAM.getAdUnit({ name: "lb2", aliases }) refresh-interval=15 scroll-offset=100 />
-    </marko-web-resolve-page>
-  </@foot>
 </marko-web-website-section-page-layout>
