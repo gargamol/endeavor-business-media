@@ -6,6 +6,7 @@ module.exports = {
       { href: '/water-reuse', label: 'Water Reuse' },
       { href: '/produced-water', label: 'Produced Water' },
       { href: '/industry', label: 'Industry' },
+      { href: '/technology-guide', label: 'Technology Guide' },
     ],
   },
   secondary: {
