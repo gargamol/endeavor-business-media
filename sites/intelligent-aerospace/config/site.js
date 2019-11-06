@@ -5,15 +5,15 @@ module.exports = {
   company: 'Endeavor Business Media, LLC',
   logos: {
     navbar: {
-      src: 'https://base.imgix.net/files/base/pennwell/ias/logo.png?h=45',
+      src: 'https://img.intelligent-aerospace.com/files/base/pennwell/ias/logo.png?h=45',
       srcset: [
-        'https://base.imgix.net/files/base/pennwell/ias/logo.png?h=90 2x',
+        'https://img.intelligent-aerospace.com/files/base/pennwell/ias/logo.png?h=90 2x',
       ],
     },
     footer: {
-      src: 'https://base.imgix.net/files/base/pennwell/ias/logo.png?h=60',
+      src: 'https://img.intelligent-aerospace.com/files/base/pennwell/ias/logo.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/pennwell/ias/logo.png?h=120 2x',
+        'https://img.intelligent-aerospace.com/files/base/pennwell/ias/logo.png?h=120 2x',
       ],
     },
   },
@@ -34,8 +34,17 @@ module.exports = {
   contactUs: {
     branding: {
       bgColor: '#106d7d',
-      logo: 'https://base.imgix.net/files/base/pennwell/ils/logo.png?h=60',
+      logo: 'https://img.intelligent-aerospace.com/files/base/pennwell/ils/logo.png?h=60',
     },
     to: 'juliac@pennwell.com',
+  },
+  inquiry: {
+    enabled: true,
+    directSend: true,
+    sendTo: 'juliac@pennwell.com',
+    sendFrom: 'Intelligent-Aerospace.com <noreply@baseplatform.io>',
+    sendBcc: 'emailactivity@cygnus.com',
+    logo: 'https://img.intelligent-aerospace.com/files/base/pennwell/ils/logo.png?h=60',
+    bgColor: '#106d7d',
   },
 };

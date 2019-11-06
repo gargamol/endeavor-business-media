@@ -5,15 +5,15 @@ module.exports = {
   company: 'Endeavor Business Media, LLC',
   logos: {
     navbar: {
-      src: 'https://base.imgix.net/files/base/ebm/wto/image/static/wto-logo.png?h=45',
+      src: 'https://img.waterteckonling.com/files/base/ebm/wto/image/static/wto-logo.png?h=45',
       srcset: [
-        'https://base.imgix.net/files/base/ebm/wto/image/static/wto-logo.png?h=90 2x',
+        'https://img.waterteckonling.com/files/base/ebm/wto/image/static/wto-logo.png?h=90 2x',
       ],
     },
     footer: {
-      src: 'https://base.imgix.net/files/base/ebm/wto/image/static/wto-logo.png?h=60',
+      src: 'https://img.waterteckonling.com/files/base/ebm/wto/image/static/wto-logo.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/ebm/wto/image/static/wto-logo.png?h=120 2x',
+        'https://img.waterteckonling.com/files/base/ebm/wto/image/static/wto-logo.png?h=120 2x',
       ],
     },
   },
@@ -34,8 +34,17 @@ module.exports = {
   contactUs: {
     branding: {
       bgColor: '#164f77',
-      logo: 'https://base.imgix.net/files/base/ebm/wto/image/static/wto-logo.png?h=60',
+      logo: 'https://img.waterteckonling.com/files/base/ebm/wto/image/static/wto-logo.png?h=60',
     },
     to: 'tdower@endeavorb2b.com',
+  },
+  inquiry: {
+    enabled: true,
+    directSend: true,
+    sendTo: 'tdower@endeavorb2b.com',
+    sendFrom: 'WaterTechOnline.com <noreply@baseplatform.io>',
+    sendBcc: 'emailactivity@cygnus.com',
+    logo: 'https://img.waterteckonling.com/files/base/ebm/wto/image/static/wto-logo.png?h=60',
+    bgColor: '#164f77',
   },
 };

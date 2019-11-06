@@ -5,15 +5,15 @@ module.exports = {
   company: 'Endeavor Business Media, LLC',
   logos: {
     navbar: {
-      src: 'https://base.imgix.net/files/base/ebm/fcn/image/static/fcn_logo_og.png?h=45',
+      src: 'https://img.flowcontrolnetwork.com/files/base/ebm/fcn/image/static/fcn_logo_og.png?h=45',
       srcset: [
-        'https://base.imgix.net/files/base/ebm/fcn/image/static/fcn_logo_og.png?h=90 2x',
+        'https://img.flowcontrolnetwork.com/files/base/ebm/fcn/image/static/fcn_logo_og.png?h=90 2x',
       ],
     },
     footer: {
-      src: 'https://base.imgix.net/files/base/ebm/fcn/image/static/fcn_logo_og.png?h=60',
+      src: 'https://img.flowcontrolnetwork.com/files/base/ebm/fcn/image/static/fcn_logo_og.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/ebm/fcn/image/static/fcn_logo_og.png?h=120 2x',
+        'https://img.flowcontrolnetwork.com/files/base/ebm/fcn/image/static/fcn_logo_og.png?h=120 2x',
       ],
     },
   },
@@ -34,8 +34,17 @@ module.exports = {
   contactUs: {
     branding: {
       bgColor: '#164f77',
-      logo: 'https://base.imgix.net/files/base/ebm/fcn/image/static/fcn_logo_og.png?h=60',
+      logo: 'https://img.flowcontrolnetwork.com/files/base/ebm/fcn/image/static/fcn_logo_og.png?h=60',
     },
-    // to: '',
+    to: 'juliac@pennwell.com',
+  },
+  inquiry: {
+    enabled: true,
+    directSend: true,
+    sendTo: 'juliac@pennwell.com',
+    sendFrom: 'FlowControlNetwork.com <noreply@baseplatform.io>',
+    sendBcc: 'emailactivity@cygnus.com',
+    logo: 'https://img.flowcontrolnetwork.com/files/base/ebm/fcn/image/static/fcn_logo_og.png?h=60',
+    bgColor: '#164f77',
   },
 };

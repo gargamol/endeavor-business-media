@@ -34,4 +34,13 @@ module.exports = {
     },
     to: 'adsales@endeavorb2b.com',
   },
+  inquiry: {
+    enabled: true,
+    directSend: true,
+    sendTo: 'adsales@endeavorb2b.com',
+    sendFrom: 'GXContractor.com <noreply@baseplatform.io>',
+    sendBcc: 'emailactivity@cygnus.com',
+    logo: 'https://img.gxcontractor.com/files/base/ebm/gxc/image/static/logo/site_logo.png?h=60',
+    bgColor: '#164f77',
+  },
 };

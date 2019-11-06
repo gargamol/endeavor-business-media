@@ -5,15 +5,15 @@ module.exports = {
   company: 'Endeavor Business Media, LLC',
   logos: {
     navbar: {
-      src: 'https://base.imgix.net/files/base/ebm/ee/image/static/ee_logo.png?h=45',
+      src: 'https://img.evaluationengineering.com/files/base/ebm/ee/image/static/ee_logo.png?h=45',
       srcset: [
-        'https://base.imgix.net/files/base/ebm/ee/image/static/ee_logo.png?h=90 2x',
+        'https://img.evaluationengineering.com/files/base/ebm/ee/image/static/ee_logo.png?h=90 2x',
       ],
     },
     footer: {
-      src: 'https://base.imgix.net/files/base/ebm/ee/image/static/ee_logo.png?h=60',
+      src: 'https://img.evaluationengineering.com/files/base/ebm/ee/image/static/ee_logo.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/ebm/ee/image/static/ee_logo.png?h=120 2x',
+        'https://img.evaluationengineering.com/files/base/ebm/ee/image/static/ee_logo.png?h=120 2x',
       ],
     },
   },
@@ -34,8 +34,17 @@ module.exports = {
   contactUs: {
     branding: {
       bgColor: '#d71920',
-      logo: 'https://base.imgix.net/files/base/ebm/ee/image/static/ee_logo.png',
+      logo: 'https://img.evaluationengineering.com/files/base/ebm/ee/image/static/ee_logo.png',
     },
     to: 'kcormier@evaluationengineering.com',
+  },
+  inquiry: {
+    enabled: true,
+    directSend: true,
+    sendTo: 'kcormier@evaluationengineering.com',
+    sendFrom: 'EvaluationEngineering.com <noreply@baseplatform.io>',
+    sendBcc: 'emailactivity@cygnus.com',
+    logo: 'https://img.evaluationengineering.com/files/base/ebm/ee/image/static/ee_logo.png?h=60',
+    bgColor: '#d71920',
   },
 };
