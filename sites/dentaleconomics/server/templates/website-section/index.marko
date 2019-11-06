@@ -13,8 +13,8 @@ $ const { id, alias, name, pageNode } = data;
       $ const aliases = hierarchyAliases(section);
       $ const adSlots = {
           "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
-          "gpt-ad-rail1": GAM.getAdUnit({ name: "rail1", aliases, size: [300, 250] }),
-          "gpt-ad-rail2": GAM.getAdUnit({ name: "rail2", aliases, size: [300, 600] }),
+          "gpt-ad-rail1": GAM.getAdUnit({ name: "rail1", aliases }),
+          "gpt-ad-rail2": GAM.getAdUnit({ name: "rail2", aliases }),
         }
        <marko-web-gam-slots slots=adSlots />
     </marko-web-resolve-page>
@@ -22,7 +22,6 @@ $ const { id, alias, name, pageNode } = data;
   <@above-container>
     <marko-web-resolve-page|{ data: section }| node=pageNode>
       $ const aliases = hierarchyAliases(section);
-      <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "wa", aliases }) />
       <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "reskin", aliases }) />
     </marko-web-resolve-page>
   </@above-container>
@@ -34,7 +33,7 @@ $ const { id, alias, name, pageNode } = data;
       params={ sectionId: id, optionId: 9, limit: 5, queryFragment }
     >
       <website-content-hero-flow nodes=nodes>
-        <@native-x index=3 name="list1" aliases=[alias] />
+        <@native-x index=3 name="default" aliases=[alias] />
       </website-content-hero-flow>
     </marko-web-query>
 
@@ -46,7 +45,7 @@ $ const { id, alias, name, pageNode } = data;
         >
           <website-content-list-flow nodes=nodes>
             <@header>Featured</@header>
-            <@native-x index=6 name="list2" aliases=[alias] />
+            <@native-x index=6 name="default" aliases=[alias] />
           </website-content-list-flow>
         </marko-web-query>
       </div>
@@ -63,7 +62,7 @@ $ const { id, alias, name, pageNode } = data;
         component-name="content-load-more-flow"
         component-input={
           aliases,
-          nativeX: { index: 0, name: 'card', aliases },
+          nativeX: { index: 0, name: "default", aliases },
         }
         fragment-name="content-list"
         query-name="website-scheduled-content"

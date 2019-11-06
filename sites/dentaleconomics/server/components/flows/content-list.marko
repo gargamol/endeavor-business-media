@@ -7,7 +7,7 @@ $ const displayImage = input.displayImage != null ? input.displayImage : true;
 $ const withTeaser = input.withTeaser != null ? input.withTeaser : false;
 $ const innerJustified = input.innerJustified != null ? input.innerJustified : true;
 
-<marko-web-node-list inner-justified=innerJustified>
+<marko-web-node-list inner-justified=innerJustified class=input.class>
   <if(input.header)>
     <@header ...input.header />
   </if>
@@ -20,6 +20,7 @@ $ const innerJustified = input.innerJustified != null ? input.innerJustified : t
         config=nxConfig
       >
         <website-content-list-node
+          ...input.node
           node=nxNode
           display-image=displayImage
           with-teaser=withTeaser
