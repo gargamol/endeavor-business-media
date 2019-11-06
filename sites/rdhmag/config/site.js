@@ -42,7 +42,7 @@ module.exports = {
     enabled: true,
     directSend: true,
     sendTo: 'zacharyk@pennwell.com',
-    sendFrom: 'RDMag.com <noreply@baseplatform.io>',
+    sendFrom: 'RDHMag.com <noreply@baseplatform.io>',
     sendBcc: 'emailactivity@cygnus.com',
     logo: 'https://img.rdhmag.com/files/base/pennwell/rdh/logo.png?h=60',
     bgColor: '#8956a7',
