@@ -1,16 +1,19 @@
-$primary: #000;
-$secondary: #93d5d5;
+$primary: #93d5d5;
+$secondary: #000;
 $light: #93d5d5;
-$dark: #212529;
+$dark: #313131;
 $info: #9a9a9a;
 
-$theme-site-navbar-secondary-bg-color: #000;
-$theme-site-navbar-primary-bg-color: #93d5d5;
+$theme-site-navbar-primary-bg-color: $primary;
+$theme-site-navbar-secondary-bg-color: $secondary;
 
-$theme-site-navbar-secondary-link-color: #9a9a9a;
 $theme-site-navbar-primary-link-color: #fff;
-$theme-site-footer-primary-bg-color: $primary;
+$theme-site-navbar-secondary-link-color: $info;
+
+$theme-card-header-background-color: $secondary;
 $theme-site-navbar-menu-hover-background-color: #e6e6e6;
+$marko-web-node-placeholder-image-bg-color: $primary;
+$theme-site-footer-primary-bg-color: $secondary;
 
 $theme-site-navbar-logo-height: 45px;
 $theme-site-navbar-logo-height-sm: 25px;
