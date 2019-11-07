@@ -1,18 +1,21 @@
-$primary: #164f77;
-$secondary: #495057;
-$light: #e9ecef;
+$primary: #000;
+$secondary: #93d5d5;
+$light: #93d5d5;
 $dark: #212529;
-$info: #6c757d;
+$info: #9a9a9a;
 
-$theme-site-navbar-secondary-bg-color: #002e4f;
-$theme-site-navbar-primary-bg-color: $primary;
+$theme-site-navbar-secondary-bg-color: #000;
+$theme-site-navbar-primary-bg-color: #93d5d5;
+
+$theme-site-navbar-primary-link-color: #fff;
+$theme-site-footer-primary-bg-color: $primary;
 
 $theme-site-navbar-logo-height: 45px;
 $theme-site-navbar-logo-height-sm: 25px;
 
 $theme-site-header-breakpoints: (
   hide-primary: 832px,
-  hide-secondary: 906px,
+  hide-secondary: 760px,
   small-logo: 1015px,
   small-text-primary: 932px,
   small-text-secondary: 1105px
