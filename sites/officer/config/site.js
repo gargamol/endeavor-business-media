@@ -5,25 +5,25 @@ module.exports = {
   company: 'Endeavor Business Media, LLC',
   logos: {
     navbar: {
-      src: 'https://img.laserfocusworld.com/files/base/pennwell/lfw/logo.png?h=45',
+      src: 'https://img.officer.com/files/base/cygnus/ofcr/image/static/logo/site_logo.png?h=45',
       srcset: [
-        'https://img.laserfocusworld.com/files/base/pennwell/lfw/logo.png?h=90 2x',
+        'https://img.officer.com/files/base/cygnus/ofcr/image/static/logo/site_logo.png?h=90 2x',
       ],
     },
     footer: {
-      src: 'https://img.laserfocusworld.com/files/base/pennwell/lfw/logo.png?h=60',
+      src: 'https://img.officer.com/files/base/cygnus/ofcr/image/static/logo/site_logo.png?h=60',
       srcset: [
-        'https://img.laserfocusworld.com/files/base/pennwell/lfw/logo.png?h=120 2x',
+        'https://img.officer.com/files/base/cygnus/ofcr/image/static/logo/site_logo.png?h=120 2x',
       ],
     },
   },
   socialMediaLinks: [
-    { provider: 'linkedin', href: 'https://www.linkedin.com/groups/2896249/', target: '_blank' },
-    { provider: 'twitter', href: 'https://twitter.com/LaserFocusWorld', target: '_blank' },
-    { provider: 'facebook', href: 'https://www.facebook.com/pages/Laser-Focus-World/126899915297', target: '_blank' },
+    { provider: 'linkedin', href: 'https://www.linkedin.com/groups/3287176/profile', target: '_blank' },
+    { provider: 'twitter', href: 'https://twitter.com/officercom', target: '_blank' },
+    { provider: 'facebook', href: 'https://www.facebook.com/officercom', target: '_blank' },
   ],
   gtm: {
-    containerId: 'GTM-MFCT2LV',
+    containerId: 'GTM-TZNC8W8',
   },
   wufoo: {
     userName: 'cygnuscorporate',
@@ -33,18 +33,18 @@ module.exports = {
   },
   contactUs: {
     branding: {
-      bgColor: '#164f77',
-      logo: 'https://img.laserfocusworld.com/files/base/pennwell/lfw/logo.png?h=60',
+      bgColor: '#222222',
+      logo: 'https://img.officer.com/files/base/cygnus/ofcr/image/static/logo/site_logo.png?h=60',
     },
-    to: 'juliac@pennwell.com',
+    to: 'support@officer.com',
   },
   inquiry: {
     enabled: true,
     directSend: true,
-    sendTo: 'bgweb@endeavorb2b.com',
+    sendTo: 'jsimon@southcomm.com',
     sendFrom: 'LaserFocusWorld.com <noreply@baseplatform.io>',
     sendBcc: 'emailactivity@cygnus.com',
-    logo: 'https://img.laserfocusworld.com/files/base/pennwell/lfw/logo.png?h=60',
-    bgColor: '#164f77',
+    logo: 'https://img.officer.com/files/base/cygnus/ofcr/image/static/logo/site_logo.png?h=60',
+    bgColor: '#222222',
   },
 };
