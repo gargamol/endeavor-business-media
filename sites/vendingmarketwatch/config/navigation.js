@@ -1,13 +1,13 @@
 module.exports = {
   primary: {
     items: [
-      { href: '/beveragbe', label: 'Beverage' },
+      { href: '/beverage', label: 'Beverage' },
       { href: '/coffee-service', label: 'Coffee Service' },
       { href: '/equipment', label: 'Equipment' },
       { href: '/healthy-convenience', label: 'Healthy Conveince' },
       { href: '/management', label: 'Management' },
       { href: '/micro-market', label: 'Micro Market' },
-      { href: '/product', label: 'Product' },
+      { href: '/products', label: 'Products' },
       { href: '/technology', label: 'Technology' },
     ],
   },
@@ -38,13 +38,13 @@ module.exports = {
     {
       label: 'Topics',
       items: [
-        { href: '/beveragbe', label: 'Beverage' },
+        { href: '/beverage', label: 'Beverage' },
         { href: '/coffee-service', label: 'Coffee Service' },
         { href: '/equipment', label: 'Equipment' },
         { href: '/healthy-convenience', label: 'Healthy Conveince' },
         { href: '/management', label: 'Management' },
         { href: '/micro-market', label: 'Micro Market' },
-        { href: '/product', label: 'Product' },
+        { href: '/products', label: 'Products' },
         { href: '/technology', label: 'Technology' },
       ],
     },
