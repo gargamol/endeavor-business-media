@@ -5,15 +5,15 @@ module.exports = {
   company: 'Endeavor Business Media, LLC',
   logos: {
     navbar: {
-      src: 'https://base.imgix.net/files/base/pennwell/os/logo.png?h=45',
+      src: 'https://img.offshore-mag.com/files/base/pennwell/os/logo.png?h=45',
       srcset: [
-        'https://base.imgix.net/files/base/pennwell/os/logo.png?h=90 2x',
+        'https://img.offshore-mag.com/files/base/pennwell/os/logo.png?h=90 2x',
       ],
     },
     footer: {
-      src: 'https://base.imgix.net/files/base/pennwell/os/logo.png?h=60',
+      src: 'https://img.offshore-mag.com/files/base/pennwell/os/logo.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/pennwell/os/logo.png?h=120 2x',
+        'https://img.offshore-mag.com/files/base/pennwell/os/logo.png?h=120 2x',
       ],
     },
   },
@@ -34,8 +34,17 @@ module.exports = {
   contactUs: {
     branding: {
       bgColor: '#094e85',
-      logo: 'https://base.imgix.net/files/base/pennwell/os/logo.png?h=60',
+      logo: 'https://img.offshore-mag.com/files/base/pennwell/os/logo.png?h=60',
     },
     to: 'pwestervelt@pennwell.com',
+  },
+  inquiry: {
+    enabled: true,
+    directSend: true,
+    sendTo: 'pwestervelt@pennwell.com',
+    sendFrom: 'OffShore-Mag.com <noreply@baseplatform.io>',
+    sendBcc: 'emailactivity@cygnus.com',
+    logo: 'https://img.offshore-mag.com/files/base/pennwell/os/logo.png?h=60',
+    bgColor: '#094e85',
   },
 };

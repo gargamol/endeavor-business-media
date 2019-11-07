@@ -38,4 +38,13 @@ module.exports = {
     },
     to: 'adsales@endeavorb2b.com',
   },
+  inquiry: {
+    enabled: true,
+    directSend: true,
+    sendTo: 'adsales@endeavorb2b.com',
+    sendFrom: 'WaterWorld.com <noreply@baseplatform.io>',
+    sendBcc: 'emailactivity@cygnus.com',
+    logo: 'https://img.waterworld.com/files/base/ebm/ww/image/static/logo/site_logo.png?h=60',
+    bgColor: '#164f77',
+  },
 };
