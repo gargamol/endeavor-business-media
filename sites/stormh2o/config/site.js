@@ -5,7 +5,7 @@ module.exports = {
   company: 'Endeavor Business Media, LLC',
   logos: {
     navbar: {
-      src: 'https://img.stormh2o.com/files/base/ebm/stw/image/static/logo/site_logo_green_green.png?h=45',
+      src: 'https://img.stormh2o.com/files/base/ebm/stw/image/static/logo/site_logo_green.png?h=45',
       srcset: [
         'https://img.stormh2o.com/files/base/ebm/stw/image/static/logo/site_logo_green.png?h=90 2x',
       ],
