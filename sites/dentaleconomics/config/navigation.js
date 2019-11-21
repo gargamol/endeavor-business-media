@@ -5,7 +5,7 @@ module.exports = {
       { href: '/practice', label: 'Practice' },
       { href: '/science-tech', label: 'Science & Tech' },
       { href: '/money', label: 'Money' },
-      { href: '/dental-office-design', label: 'Dental Office Design' },
+      // { href: '/dental-office-design', label: 'Dental Office Design' },
     ],
   },
   secondary: {
@@ -41,7 +41,7 @@ module.exports = {
         { href: '/practice', label: 'Practice' },
         { href: '/science-tech', label: 'Science & Tech' },
         { href: '/money', label: 'Money' },
-        { href: '/dental-office-design', label: 'Dental Office Design' },
+        // { href: '/dental-office-design', label: 'Dental Office Design' },
       ],
     },
     {
