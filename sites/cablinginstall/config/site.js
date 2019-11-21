@@ -5,9 +5,9 @@ module.exports = {
   company: 'Endeavor Business Media, LLC',
   logos: {
     navbar: {
-      src: 'https://img.cablinginstall.com/files/base/pennwell/cim/cim-header-logo-2.png?h=45',
+      src: 'https://img.cablinginstall.com/files/base/pennwell/cim/cim-header-logo-2.png?h=60',
       srcset: [
-        'https://img.cablinginstall.com/files/base/pennwell/cim/cim-header-logo-2.png?h=90 2x',
+        'https://img.cablinginstall.com/files/base/pennwell/cim/cim-header-logo-2.png?h=120 2x',
       ],
     },
     footer: {
