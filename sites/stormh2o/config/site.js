@@ -5,15 +5,15 @@ module.exports = {
   company: 'Endeavor Business Media, LLC',
   logos: {
     navbar: {
-      src: 'https://img.stormh2o.com/files/base/ebm/stw/image/static/logo/site_logo.png?h=45',
+      src: 'https://img.stormh2o.com/files/base/ebm/stw/image/static/logo/site_logo_green.png?h=45',
       srcset: [
-        'https://img.stormh2o.com/files/base/ebm/stw/image/static/logo/site_logo.png?h=90 2x',
+        'https://img.stormh2o.com/files/base/ebm/stw/image/static/logo/site_logo_green.png?h=90 2x',
       ],
     },
     footer: {
-      src: 'https://img.stormh2o.com/files/base/ebm/stw/image/static/logo/site_logo.png?h=60',
+      src: 'https://img.stormh2o.com/files/base/ebm/stw/image/static/logo/site_logo_green.png?h=60',
       srcset: [
-        'https://img.stormh2o.com/files/base/ebm/stw/image/static/logo/site_logo.png?h=120 2x',
+        'https://img.stormh2o.com/files/base/ebm/stw/image/static/logo/site_logo_green.png?h=120 2x',
       ],
     },
   },
@@ -34,7 +34,7 @@ module.exports = {
   contactUs: {
     branding: {
       bgColor: '#164f77',
-      logo: 'https://img.stormh2o.com/files/base/ebm/stw/image/static/logo/site_logo.png?h=60',
+      logo: 'https://img.stormh2o.com/files/base/ebm/stw/image/static/logo/site_logo_green.png?h=60',
     },
     to: 'adsales@endeavorb2b.com',
   },
