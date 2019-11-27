@@ -5,9 +5,9 @@ module.exports = {
   company: 'Endeavor Business Media, LLC',
   logos: {
     navbar: {
-      src: 'https://img.processingmagazine.com/files/base/ebm/pcm/image/static/pcm_logo_white.png?h=45',
+      src: 'https://img.processingmagazine.com/files/base/ebm/pcm/image/static/pcm_logo_white.png?h=60',
       srcset: [
-        'https://img.processingmagazine.com/files/base/ebm/pcm/image/static/pcm_logo_white.png?h=90 2x',
+        'https://img.processingmagazine.com/files/base/ebm/pcm/image/static/pcm_logo_white.png?h=120 2x',
       ],
     },
     footer: {

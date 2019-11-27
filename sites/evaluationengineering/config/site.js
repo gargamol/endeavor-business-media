@@ -5,9 +5,9 @@ module.exports = {
   company: 'Endeavor Business Media, LLC',
   logos: {
     navbar: {
-      src: 'https://img.evaluationengineering.com/files/base/ebm/ee/image/static/ee_logo.png?h=45',
+      src: 'https://img.evaluationengineering.com/files/base/ebm/ee/image/static/ee_logo.png?h=60',
       srcset: [
-        'https://img.evaluationengineering.com/files/base/ebm/ee/image/static/ee_logo.png?h=90 2x',
+        'https://img.evaluationengineering.com/files/base/ebm/ee/image/static/ee_logo.png?h=120 2x',
       ],
     },
     footer: {
