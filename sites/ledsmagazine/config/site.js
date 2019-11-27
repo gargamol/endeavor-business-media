@@ -5,9 +5,9 @@ module.exports = {
   company: 'Endeavor Business Media, LLC',
   logos: {
     navbar: {
-      src: 'https://img.ledsmagazine.com/files/base/pennwell/leds/logo.png?h=45',
+      src: 'https://img.ledsmagazine.com/files/base/pennwell/leds/logo.png?h=60',
       srcset: [
-        'https://img.ledsmagazine.com/files/base/pennwell/leds/logo.png?h=90 2x',
+        'https://img.ledsmagazine.com/files/base/pennwell/leds/logo.png?h=120 2x',
       ],
     },
     footer: {

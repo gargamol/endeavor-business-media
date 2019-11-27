@@ -13,6 +13,7 @@ module.exports = {
       { href: '/subscribe', label: 'Subscribe' },
       { href: '/magazine', label: 'Magazine ' },
       { href: '/page/advertise', label: 'Advertise' },
+      { href: '/white-papers', label: 'Free Reports' },
     ],
   },
   tertiary: {
@@ -43,8 +44,8 @@ module.exports = {
     {
       label: 'Resources',
       items: [
-        { href: '/page/advertise', label: 'Advertise' },
         { href: '/magazine', label: 'Magazine' },
+        { href: '/white-papers', label: 'Free Reports' },
       ],
     },
     {

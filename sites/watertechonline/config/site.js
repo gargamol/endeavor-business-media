@@ -5,9 +5,9 @@ module.exports = {
   company: 'Endeavor Business Media, LLC',
   logos: {
     navbar: {
-      src: 'https://img.watertechonline.com/files/base/ebm/wto/image/static/wto-logo.png?h=45',
+      src: 'https://img.watertechonline.com/files/base/ebm/wto/image/static/wto-logo.png?h=60',
       srcset: [
-        'https://img.watertechonline.com/files/base/ebm/wto/image/static/wto-logo.png?h=90 2x',
+        'https://img.watertechonline.com/files/base/ebm/wto/image/static/wto-logo.png?h=120 2x',
       ],
     },
     footer: {

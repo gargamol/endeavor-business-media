@@ -11,9 +11,9 @@ module.exports = {
   secondary: {
     items: [
       { href: '/page/about-us', label: 'About Us' },
+      { href: '/job-postings', label: 'Career Center' },
       { href: 'https://pennwell.myabsorb.com', label: 'Earn CE', target: '_blank' },
       { href: 'https://www.dentistryiq.com/products/free-samples', label: 'Free Samples', target: '_blank' },
-      { href: '/job-postings', label: 'Job Postings' },
       { href: '/magazine', label: 'Magazine' },
       { href: '/subscribe', label: 'Subscribe' },
       { href: '/videos', label: 'Videos' },
@@ -49,7 +49,7 @@ module.exports = {
       items: [
         { href: 'https://pennwell.myabsorb.com', label: 'Earn CE', target: '_blank' },
         { href: 'https://www.dentistryiq.com/products/free-samples', label: 'Free Samples', target: '_blank' },
-        { href: '/job-postings', label: 'Job Postings' },
+        { href: '/job-postings', label: 'Career Center' },
         { href: '/magazine', label: 'Magazine' },
         { href: '/page/submission-guidelines', label: 'Submission Guidelines' },
         { href: '/videos', label: 'Videos' },
