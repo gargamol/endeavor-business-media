@@ -4,25 +4,22 @@ const config = new NativeXConfiguration('https://ebm.native-x.io');
 
 config
   .setAliasPlacements('default', [
-    { name: 'default', id: '5cdb230339937800010ea6ca' },
+    { name: 'default', id: '5b55eae504bce800019807fd' },
   ])
-  .setAliasPlacements('optics', [
-    { name: 'default', id: '5cdb234939937800010eb292' },
+  .setAliasPlacements('tactical', [
+    { name: 'default', id: '5b57589407cd7000019c5fbb' },
   ])
-  .setAliasPlacements('lasers-sources', [
-    { name: 'default', id: '5cdb2332f41dfb0001fceed9' },
+  .setAliasPlacements('training-careers', [
+    { name: 'default', id: '5b5758a35bbf91000134a2c4' },
   ])
-  .setAliasPlacements('detectors-imaging', [
-    { name: 'default', id: '5cdb231839937800010eaa5d' },
+  .setAliasPlacements('on-the-street', [
+    { name: 'default', id: '5b5758b107cd7000019c5fbd' },
   ])
-  .setAliasPlacements('test-measurement', [
-    { name: 'default', id: '5cdb2388f41dfb0001fcfb50' },
+  .setAliasPlacements('investigations', [
+    { name: 'default', id: '5b5758bf5bbf91000134a2c5' },
   ])
-  .setAliasPlacements('software-accessories', [
-    { name: 'default', id: '5cdb237339937800010eb873' },
-  ])
-  .setAliasPlacements('fiber-optics', [
-    { name: 'default', id: '5cdb235d39937800010eb580' },
+  .setAliasPlacements('command-hq', [
+    { name: 'default', id: '5b5758cf07cd7000019c5fbf' },
   ]);
 
 module.exports = config;
