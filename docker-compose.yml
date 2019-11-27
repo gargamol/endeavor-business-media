@@ -367,21 +367,21 @@ services:
   #     - "9728:80"
   #     - "19728:19728"
 
-  # officer:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/officer
-  #   environment:
-  #     <<: *env
-  #     <<: *env-picon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9729
-  #     LIVERELOAD_PORT: 19729
-  #     TENANT_KEY: cygnus_ofcr
-  #     SITE_ID: 53f6823828ed57018875bb51
-  #   ports:
-  #     - "9729:80"
-  #     - "19729:19729"
+  officer:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/officer
+    environment:
+      <<: *env
+      <<: *env-picon-staging
+      PORT: 80
+      EXPOSED_PORT: 9729
+      LIVERELOAD_PORT: 19729
+      TENANT_KEY: cygnus_ofcr
+      SITE_ID: 53f6823828ed57018875bb51
+    ports:
+      - "9729:80"
+      - "19729:19729"
 
   # securityinfowatch:
   #   <<: *node
