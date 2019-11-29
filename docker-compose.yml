@@ -271,21 +271,21 @@ services:
   #     - "9722:80"
   #     - "19722:19722"
 
-  # mlo-online:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/mlo-online
-  #   environment:
-  #     <<: *env
-  #     <<: *env-picon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9723
-  #     LIVERELOAD_PORT: 19723
-  #     TENANT_KEY: ebm_mlo
-  #     SITE_ID: 5babaa3fb09d901d008b4567
-  #   ports:
-  #     - "9723:80"
-  #     - "19723:19723"
+  mlo-online:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/mlo-online
+    environment:
+      <<: *env
+      <<: *env-picon-staging
+      PORT: 80
+      EXPOSED_PORT: 9723
+      LIVERELOAD_PORT: 19723
+      TENANT_KEY: ebm_mlo
+      SITE_ID: 5babaa3fb09d901d008b4567
+    ports:
+      - "9723:80"
+      - "19723:19723"
 
   # plasticsmachinerymagazine:
   #   <<: *node
