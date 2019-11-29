@@ -1,5 +1,5 @@
 import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
-import { getAsObject } from "@base-cms/object-path";
+import { get, getAsObject } from "@base-cms/object-path";
 import queryFragment from "../../graphql/fragments/content-list";
 import GAM from "../../../config/gam";
 
@@ -19,8 +19,8 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
       $ const aliases = hierarchyAliases(content.primarySection);
       $ const adSlots = {
         "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
-        "gpt-ad-rail1": GAM.getAdUnit({ name: "rail1", aliases, size: [300, 250] }),
-        "gpt-ad-rail2": GAM.getAdUnit({ name: "rail2", aliases, size: [300, 600] }),
+        "gpt-ad-rail1": GAM.getAdUnit({ name: "rail1", aliases }),
+        "gpt-ad-rail2": GAM.getAdUnit({ name: "rail2", aliases }),
       }
        <marko-web-gam-slots slots=adSlots />
     </marko-web-resolve-page>
@@ -28,7 +28,6 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
   <@above-container>
     <marko-web-resolve-page|{ data: content }| node=pageNode>
       $ const aliases = hierarchyAliases(content.primarySection);
-      <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "wa", aliases }) />
       <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "reskin", aliases }) />
     </marko-web-resolve-page>
 
@@ -69,7 +68,18 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
                 <marko-web-content-embed-code block-name=blockName obj=content />
               </if>
               <else-if(displayPrimaryImage)>
-                <marko-web-page-image width=500 obj=content.primaryImage />
+                $ const isLogo = get(content, "primaryImage.isLogo");
+                <if(isLogo)>
+                  <marko-web-page-image
+                    modifiers=["primary-image-inline"]
+                    obj=content.primaryImage
+                    fluid=false
+                    width=250
+                  />
+                </if>
+                <else>
+                  <marko-web-page-image width=500 obj=content.primaryImage />
+                </else>
               </else-if>
               <else-if(type === "contact")>
                 <marko-web-page-image width=300 fluid=false obj=content.primaryImage />
@@ -90,6 +100,9 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
                   target="_blank"
                 />
               </if>
+              <if(type === "product")>
+                <website-inquiry-form content=content />
+              </if>
             </default-theme-page-contents>
             <aside class="col-lg-4 page-rail">
               <marko-web-gam-display-ad id="gpt-ad-rail1" />
@@ -103,7 +116,7 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
                   section-name=section.name
                   query-fragment=queryFragment
                 >
-                  <@native-x index=4 name="list1" aliases=aliases />
+                  <@native-x index=4 name="default" aliases=aliases />
                 </website-related-content-block>
               </marko-web-resolve-page>
             </aside>
@@ -125,7 +138,7 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
         section-name=section.name
         section-skip=5
       >
-        <@native-x index=0 name="card" aliases=aliases />
+        <@native-x index=0 name="default" aliases=aliases />
       </website-content-load-more-block>
     </marko-web-resolve-page>
   </@below-page>

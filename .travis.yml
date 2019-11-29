@@ -155,10 +155,10 @@ jobs:
       script: deploy/index.js mswmanagement picon
       install: skip
 
-    # - stage: deploy
-    #   name: Officer
-    #   script: deploy/index.js officer picon
-    #   install: skip
+    - stage: deploy
+      name: Officer
+      script: deploy/index.js officer picon
+      install: skip
 
     # - stage: deploy
     #   name: Oil & Gas Journal

@@ -14,8 +14,8 @@ $ const { id, alias, name, pageNode } = data;
       $ const aliases = hierarchyAliases(section);
       $ const adSlots = {
           "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
-          "gpt-ad-rail1": GAM.getAdUnit({ name: "rail1", aliases, size: [300, 250] }),
-          "gpt-ad-rail2": GAM.getAdUnit({ name: "rail2", aliases, size: [300, 600] }),
+          "gpt-ad-rail1": GAM.getAdUnit({ name: "rail1", aliases }),
+          "gpt-ad-rail2": GAM.getAdUnit({ name: "rail2", aliases }),
         }
        <marko-web-gam-slots slots=adSlots />
     </marko-web-resolve-page>
@@ -23,7 +23,6 @@ $ const { id, alias, name, pageNode } = data;
   <@above-container>
     <marko-web-resolve-page|{ data: section }| node=pageNode>
       $ const aliases = hierarchyAliases(section);
-      <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "wa", aliases }) />
       <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "reskin", aliases }) />
     </marko-web-resolve-page>
   </@above-container>
@@ -49,7 +48,7 @@ $ const { id, alias, name, pageNode } = data;
                 <@header>
                   <marko-web-link href="/macro-op-ed">Macro / Op-Ed</marko-web-link>
                 </@header>
-                <@native-x index=3 name="list1" aliases=["macro-op-ed"] />
+                <@native-x index=3 name="default" aliases=["macro-op-ed"] />
               </website-content-list-flow>
             </marko-web-query>
           </div>
@@ -62,7 +61,7 @@ $ const { id, alias, name, pageNode } = data;
                 <@header>
                   <marko-web-link href="/practice">Practice</marko-web-link>
                 </@header>
-                <@native-x index=3 name="list1" aliases=["practice"] />
+                <@native-x index=3 name="default" aliases=["practice"] />
               </website-content-list-flow>
             </marko-web-query>
           </div>
@@ -84,7 +83,7 @@ $ const { id, alias, name, pageNode } = data;
             <@header>
               <marko-web-link href="/science-tech">Science & Tech</marko-web-link>
             </@header>
-            <@native-x index=2 name="list1" aliases=["science-tech"] />
+            <@native-x index=2 name="default" aliases=["science-tech"] />
           </website-content-list-flow>
         </marko-web-query>
       </div>
@@ -97,7 +96,7 @@ $ const { id, alias, name, pageNode } = data;
             <@header>
               <marko-web-link href="/money">Money</marko-web-link>
             </@header>
-            <@native-x index=2 name="list1" aliases=["money"] />
+            <@native-x index=2 name="default" aliases=["money"] />
           </website-content-list-flow>
         </marko-web-query>
       </div>
@@ -110,7 +109,7 @@ $ const { id, alias, name, pageNode } = data;
             <@header>
               <marko-web-link href="/dental-office-design">Dental Office Design</marko-web-link>
             </@header>
-            <@native-x index=2 name="list1" aliases=["dental-office-design"] />
+            <@native-x index=2 name="default" aliases=["dental-office-design"] />
           </website-content-list-flow>
         </marko-web-query>
       </div>

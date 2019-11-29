@@ -5,9 +5,9 @@ module.exports = {
   company: 'Endeavor Business Media, LLC',
   logos: {
     navbar: {
-      src: 'https://img.gxcontractor.com/files/base/ebm/gxc/image/static/logo/site_logo.png?h=45',
+      src: 'https://img.gxcontractor.com/files/base/ebm/gxc/image/static/logo/site_logo.png?h=60',
       srcset: [
-        'https://img.gxcontractor.com/files/base/ebm/gxc/image/static/logo/site_logo.png?h=90 2x',
+        'https://img.gxcontractor.com/files/base/ebm/gxc/image/static/logo/site_logo.png?h=120 2x',
       ],
     },
     footer: {
@@ -33,5 +33,14 @@ module.exports = {
       logo: 'https://img.gxcontractor.com/files/base/ebm/gxc/image/static/logo/site_logo.png?h=60',
     },
     to: 'adsales@endeavorb2b.com',
+  },
+  inquiry: {
+    enabled: true,
+    directSend: true,
+    sendTo: 'adsales@endeavorb2b.com',
+    sendFrom: 'GXContractor.com <noreply@baseplatform.io>',
+    sendBcc: 'emailactivity@cygnus.com',
+    logo: 'https://img.gxcontractor.com/files/base/ebm/gxc/image/static/logo/site_logo.png?h=60',
+    bgColor: '#164f77',
   },
 };

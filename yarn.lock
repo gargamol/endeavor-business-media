@@ -795,10 +795,10 @@
     "@base-cms/object-path" "^1.0.0-beta.4"
     "@base-cms/utils" "^1.0.0-beta.4"
 
-"@base-cms/marko-web-theme-default@^1.0.0-beta.15":
-  version "1.0.0-beta.15"
-  resolved "https://registry.yarnpkg.com/@base-cms/marko-web-theme-default/-/marko-web-theme-default-1.0.0-beta.15.tgz#7efd3870cc326fa7faf231ea5c8b5dd9c16b48dc"
-  integrity sha512-/S5HHbskVeZZ8QjbZtj2VKABHLV9Xvqvde23slOy2e7XaMd88v/og+VBXHS3GMB1uHmgNWcet5rPOmCSHc3pKg==
+"@base-cms/marko-web-theme-default@^1.0.0-beta.18":
+  version "1.0.0-beta.18"
+  resolved "https://registry.yarnpkg.com/@base-cms/marko-web-theme-default/-/marko-web-theme-default-1.0.0-beta.18.tgz#115f9fd3e5a4ef56c4383f517e4b7eb19d3a8453"
+  integrity sha512-ILF/JojxqKoL2kJ7XM2utD5uTfm2/wuNe0YP2/EZ2+Sqtv3G1d7cW5W0Bko8hEff6pDoCvS8cRT/bZ7MWiJZGQ==
   dependencies:
     "@base-cms/marko-web-icons" "^1.0.0-beta.15"
     "@base-cms/object-path" "^1.0.0-beta.4"
