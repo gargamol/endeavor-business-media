@@ -1,3 +1,1 @@
-module.exports = {
-  siteName: 'MLO Online',
-};
+module.exports = {};
