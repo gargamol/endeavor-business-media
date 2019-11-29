@@ -25,53 +25,77 @@ config
     { name: 'reskin', path: 'default/reskin' },
     { name: 'wa', path: 'default/wa' },
   ])
-  .setAliasAdUnits('detectors-imaging', [
-    { name: 'lb1', templateName: 'LB', path: 'detectors-imaging/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'detectors-imaging/lb2' },
-    { name: 'rail1', templateName: 'RAIL1', path: 'detectors-imaging/rail1' },
-    { name: 'rail2', templateName: 'RAIL2', path: 'detectors-imaging/rail2' },
-    { name: 'load-more', templateName: 'LM', path: 'detectors-imaging/load-more' },
-    { name: 'reskin', path: 'detectors-imaging/reskin' },
+  .setAliasAdUnits('summits', [
+    { name: 'lb1', templateName: 'LB', path: 'summits/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'summits/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'summits/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'summits/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'summits/load-more' },
+    { name: 'reskin', path: 'summits/reskin' },
   ])
-  .setAliasAdUnits('lasers-sources', [
-    { name: 'lb1', templateName: 'LB', path: 'lasers-sources/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'lasers-sources/lb2' },
-    { name: 'rail1', templateName: 'RAIL1', path: 'lasers-sources/rail1' },
-    { name: 'rail2', templateName: 'RAIL2', path: 'lasers-sources/rail2' },
-    { name: 'load-more', templateName: 'LM', path: 'lasers-sources/load-more' },
-    { name: 'reskin', path: 'lasers-sources/reskin' },
+  .setAliasAdUnits('policy-value-based-care', [
+    { name: 'lb1', templateName: 'LB', path: 'policy-value-based-care/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'policy-value-based-care/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'policy-value-based-care/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'policy-value-based-care/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'policy-value-based-care/load-more' },
+    { name: 'reskin', path: 'policy-value-based-care/reskin' },
   ])
-  .setAliasAdUnits('optics', [
-    { name: 'lb1', templateName: 'LB', path: 'optics/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'optics/lb2' },
-    { name: 'rail1', templateName: 'RAIL1', path: 'optics/rail1' },
-    { name: 'rail2', templateName: 'RAIL2', path: 'optics/rail2' },
-    { name: 'load-more', templateName: 'LM', path: 'optics/load-more' },
-    { name: 'reskin', path: 'optics/reskin' },
+  .setAliasAdUnits('population-health-management', [
+    { name: 'lb1', templateName: 'LB', path: 'population-health-management/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'population-health-management/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'population-health-management/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'population-health-management/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'population-health-management/load-more' },
+    { name: 'reskin', path: 'population-health-management/reskin' },
   ])
-  .setAliasAdUnits('fiber-optics', [
-    { name: 'lb1', templateName: 'LB', path: 'fiber-optics/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'fiber-optics/lb2' },
-    { name: 'rail1', templateName: 'RAIL1', path: 'fiber-optics/rail1' },
-    { name: 'rail2', templateName: 'RAIL2', path: 'fiber-optics/rail2' },
-    { name: 'load-more', templateName: 'LM', path: 'fiber-optics/load-more' },
-    { name: 'reskin', path: 'fiber-optics/reskin' },
+  .setAliasAdUnits('analytics-ai', [
+    { name: 'lb1', templateName: 'LB', path: 'analytics-ai/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'analytics-ai/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'analytics-ai/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'analytics-ai/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'analytics-ai/load-more' },
+    { name: 'reskin', path: 'analytics-ai/reskin' },
   ])
-  .setAliasAdUnits('software-accessories', [
-    { name: 'lb1', templateName: 'LB', path: 'software-accessories/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'software-accessories/lb2' },
-    { name: 'rail1', templateName: 'RAIL1', path: 'software-accessories/rail1' },
-    { name: 'rail2', templateName: 'RAIL2', path: 'software-accessories/rail2' },
-    { name: 'load-more', templateName: 'LM', path: 'software-accessories/load-more' },
-    { name: 'reskin', path: 'software-accessories/reskin' },
+  .setAliasAdUnits('cybersecurity', [
+    { name: 'lb1', templateName: 'LB', path: 'cybersecurity/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'cybersecurity/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'cybersecurity/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'cybersecurity/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'cybersecurity/load-more' },
+    { name: 'reskin', path: 'cybersecurity/reskin' },
   ])
-  .setAliasAdUnits('test-measurement', [
-    { name: 'lb1', templateName: 'LB', path: 'test-measurement/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'test-measurement/lb2' },
-    { name: 'rail1', templateName: 'RAIL1', path: 'test-measurement/rail1' },
-    { name: 'rail2', templateName: 'RAIL2', path: 'test-measurement/rail2' },
-    { name: 'load-more', templateName: 'LM', path: 'test-measurement/load-more' },
-    { name: 'reskin', path: 'test-measurement/reskin' },
+  .setAliasAdUnits('finance-revenue-cycle', [
+    { name: 'lb1', templateName: 'LB', path: 'finance-revenue-cycle/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'finance-revenue-cycle/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'finance-revenue-cycle/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'finance-revenue-cycle/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'finance-revenue-cycle/load-more' },
+    { name: 'reskin', path: 'finance-revenue-cycle/reskin' },
+  ])
+  .setAliasAdUnits('interoperability-hie', [
+    { name: 'lb1', templateName: 'LB', path: 'interoperability-hie/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'interoperability-hie/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'interoperability-hie/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'interoperability-hie/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'interoperability-hie/load-more' },
+    { name: 'reskin', path: 'interoperability-hie/reskin' },
+  ])
+  .setAliasAdUnits('clinical-it', [
+    { name: 'lb1', templateName: 'LB', path: 'clinical-it/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'clinical-it/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'clinical-it/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'clinical-it/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'clinical-it/load-more' },
+    { name: 'reskin', path: 'clinical-it/reskin' },
+  ])
+  .setAliasAdUnits('imaging', [
+    { name: 'lb1', templateName: 'LB', path: 'imaging/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'imaging/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'imaging/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'imaging/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'imaging/load-more' },
+    { name: 'reskin', path: 'imaging/reskin' },
   ]);
 
 module.exports = config;

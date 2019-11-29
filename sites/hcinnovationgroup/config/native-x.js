@@ -4,25 +4,34 @@ const config = new NativeXConfiguration('https://ebm.native-x.io');
 
 config
   .setAliasPlacements('default', [
-    { name: 'default', id: '5cdb230339937800010ea6ca' },
+    { name: 'default', id: '5c803358eed7b70001809d69' },
   ])
-  .setAliasPlacements('optics', [
-    { name: 'default', id: '5cdb234939937800010eb292' },
+  .setAliasPlacements('imaging', [
+    { name: 'default', id: '5c8033a010dd9e000198684a' },
   ])
-  .setAliasPlacements('lasers-sources', [
-    { name: 'default', id: '5cdb2332f41dfb0001fceed9' },
+  .setAliasPlacements('clinical-it', [
+    { name: 'default', id: '5c8033d3eed7b7000180b221' },
   ])
-  .setAliasPlacements('detectors-imaging', [
-    { name: 'default', id: '5cdb231839937800010eaa5d' },
+  .setAliasPlacements('interoperability-hie', [
+    { name: 'default', id: '5c8033f6eed7b7000180b792' },
   ])
-  .setAliasPlacements('test-measurement', [
-    { name: 'default', id: '5cdb2388f41dfb0001fcfb50' },
+  .setAliasPlacements('finance-revenue-cycle', [
+    { name: 'default', id: '5c803413eed7b7000180bc80' },
   ])
-  .setAliasPlacements('software-accessories', [
-    { name: 'default', id: '5cdb237339937800010eb873' },
+  .setAliasPlacements('cybersecurity', [
+    { name: 'default', id: '5c80343510dd9e0001988105' },
   ])
-  .setAliasPlacements('fiber-optics', [
-    { name: 'default', id: '5cdb235d39937800010eb580' },
+  .setAliasPlacements('analytics-ai', [
+    { name: 'default', id: '5c80346aeed7b7000180cb22' },
+  ])
+  .setAliasPlacements('population-health-management', [
+    { name: 'default', id: '5c803489eed7b7000180d097' },
+  ])
+  .setAliasPlacements('policy-value-based-care', [
+    { name: 'default', id: '5c8034aa10dd9e00019895b8' },
+  ])
+  .setAliasPlacements('summits', [
+    { name: 'default', id: '5de1486c5ff3410001c63df0' },
   ]);
 
 module.exports = config;
