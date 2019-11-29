@@ -1,3 +1,1 @@
-module.exports = {
-  siteName: 'Vending Market Watch',
-};
+module.exports = {};
