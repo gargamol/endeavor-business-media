@@ -239,21 +239,21 @@ services:
   #     - "9720:80"
   #     - "19720:19720"
 
-  # hcinnovationgroup:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/hcinnovationgroup
-  #   environment:
-  #     <<: *env
-  #     <<: *env-picon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9721
-  #     LIVERELOAD_PORT: 19721
-  #     TENANT_KEY: ebm_hci
-  #     SITE_ID: 5c33c23175a254e2210041a7
-  #   ports:
-  #     - "9721:80"
-  #     - "19721:19721"
+  hcinnovationgroup:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/hcinnovationgroup
+    environment:
+      <<: *env
+      <<: *env-picon-staging
+      PORT: 80
+      EXPOSED_PORT: 9721
+      LIVERELOAD_PORT: 19721
+      TENANT_KEY: ebm_hci
+      SITE_ID: 5c33c23175a254e2210041a7
+    ports:
+      - "9721:80"
+      - "19721:19721"
 
   # hpnonline:
   #   <<: *node
