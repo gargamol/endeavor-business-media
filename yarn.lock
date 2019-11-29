@@ -778,6 +778,11 @@
   resolved "https://registry.yarnpkg.com/@base-cms/marko-web-icons/-/marko-web-icons-1.0.0-beta.15.tgz#3ecfe52f2f763d2a2be5667319c79e1ec1007202"
   integrity sha512-Z1k7KZE4d1Wx6C28GvNeh6lzGXFPqc2yH51Ug10SynMNydI/qPwXFvQavxedGBA967qRekSIaTDx1zbM3n6hLA==
 
+"@base-cms/marko-web-icons@^1.0.0-rc.1":
+  version "1.0.0-rc.1"
+  resolved "https://registry.yarnpkg.com/@base-cms/marko-web-icons/-/marko-web-icons-1.0.0-rc.1.tgz#a34db81d7a812d827cede19f02bc9f61122bb77e"
+  integrity sha512-4wGIz7sciS4zuyyUMF2Xxwnr5navd6WDWmvBlIUnQwAL9nwu8fbI0oPopC88wFXexk7GaadhBuDS2hKT5HPukg==
+
 "@base-cms/marko-web-native-x@^1.0.0-beta.7":
   version "1.0.0-beta.7"
   resolved "https://registry.yarnpkg.com/@base-cms/marko-web-native-x/-/marko-web-native-x-1.0.0-beta.7.tgz#bf9c725aec1eabd7c0a2037b2c82a138f9364e1c"
@@ -794,6 +799,18 @@
   dependencies:
     "@base-cms/object-path" "^1.0.0-beta.4"
     "@base-cms/utils" "^1.0.0-beta.4"
+
+"@base-cms/marko-web-theme-default@^1.0.0-beta.15":
+  version "1.0.0-rc.9"
+  resolved "https://registry.yarnpkg.com/@base-cms/marko-web-theme-default/-/marko-web-theme-default-1.0.0-rc.9.tgz#7583937004cb970eecdbd31cda04b31b3c57396e"
+  integrity sha512-4gaEx7MlnrewTcBt7UQmit9BpVparVC/G1wK7JWSHdcqjwnsifhMHOrc//Gv1CwvcFF6KF4pQQCC9cHo0yeKnw==
+  dependencies:
+    "@base-cms/marko-web-icons" "^1.0.0-rc.1"
+    "@base-cms/object-path" "^1.0.0-rc.1"
+    "@base-cms/utils" "^1.0.0-rc.1"
+    bootstrap "4.3.1"
+    graphql "^14.5.4"
+    graphql-tag "^2.10.1"
 
 "@base-cms/marko-web-theme-default@^1.0.0-beta.18":
   version "1.0.0-beta.18"
@@ -841,6 +858,14 @@
     "@base-cms/utils" "^1.0.0-beta.4"
     object-path "^0.11.4"
 
+"@base-cms/object-path@^1.0.0-rc.1":
+  version "1.0.0-rc.1"
+  resolved "https://registry.yarnpkg.com/@base-cms/object-path/-/object-path-1.0.0-rc.1.tgz#b176c41ed92225572044f858829c0f99eeb82a1d"
+  integrity sha512-HjuXf54XbItS/wBUx/tAGCG5M0WdCF3kud94dwXfRnigZY0IxIAiCo+1iAhIpECaeMj0oWeGeL5Olr1EfqQZHw==
+  dependencies:
+    "@base-cms/utils" "^1.0.0-rc.1"
+    object-path "^0.11.4"
+
 "@base-cms/tenant-context@^1.0.0-beta.4":
   version "1.0.0-beta.4"
   resolved "https://registry.yarnpkg.com/@base-cms/tenant-context/-/tenant-context-1.0.0-beta.4.tgz#501c74a013c6c8791f3d3d0d5a143fb263f19dcf"
@@ -850,6 +875,11 @@
   version "1.0.0-beta.4"
   resolved "https://registry.yarnpkg.com/@base-cms/utils/-/utils-1.0.0-beta.4.tgz#d25eec2484b9529a69de2475fa071f277ebc37be"
   integrity sha512-WtvpT02tDLGFl+79p2zUyIiKenuNEpbpPWcqcIoc5mzdGXvRTxkMAcX2uSXn/soJeW5LSTTQi3xOsLRjtg086g==
+
+"@base-cms/utils@^1.0.0-rc.1":
+  version "1.0.0-rc.1"
+  resolved "https://registry.yarnpkg.com/@base-cms/utils/-/utils-1.0.0-rc.1.tgz#dac2402bdc170e3f39d50e88a86fc069027717ea"
+  integrity sha512-aOYgnTfU5ArW8uFnowX1PlF+3mOZ7RUda/GOohf0gkcGRGF8ZmXws/gHfiwmTJEZh9mzsKtJLAG6E2rMTrJyLg==
 
 "@base-cms/web-cli@^1.0.0-beta.15":
   version "1.0.0-beta.15"
