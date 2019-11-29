@@ -23,7 +23,7 @@ module.exports = {
     { provider: 'facebook', href: 'https://www.facebook.com/MLOMedicalLaboratoryObserver', target: '_blank' },
   ],
   gtm: {
-    containerId: 'GTM-PR8N96M',
+    containerId: 'GTM-NBTQ9MW',
   },
   wufoo: {
     userName: 'cygnuscorporate',
