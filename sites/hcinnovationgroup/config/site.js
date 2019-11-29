@@ -5,25 +5,25 @@ module.exports = {
   company: 'Endeavor Business Media, LLC',
   logos: {
     navbar: {
-      src: 'https://img.laserfocusworld.com/files/base/pennwell/lfw/logo.png?h=60',
+      src: 'https://img.hcinnovationgroup.com/files/base/ebm/hci/image/static/logo/site_logo.png?h=70',
       srcset: [
-        'https://img.laserfocusworld.com/files/base/pennwell/lfw/logo.png?h=120 2x',
+        'https://img.hcinnovationgroup.com/files/base/ebm/hci/image/static/logo/site_logo.png?h=140 2x',
       ],
     },
     footer: {
-      src: 'https://img.laserfocusworld.com/files/base/pennwell/lfw/logo.png?h=60',
+      src: 'https://img.hcinnovationgroup.com/files/base/ebm/hci/image/static/logo/site_logo.png?h=60',
       srcset: [
-        'https://img.laserfocusworld.com/files/base/pennwell/lfw/logo.png?h=120 2x',
+        'https://img.hcinnovationgroup.com/files/base/ebm/hci/image/static/logo/site_logo.png?h=120 2x',
       ],
     },
   },
   socialMediaLinks: [
-    { provider: 'linkedin', href: 'https://www.linkedin.com/groups/2896249/', target: '_blank' },
-    { provider: 'twitter', href: 'https://twitter.com/LaserFocusWorld', target: '_blank' },
-    { provider: 'facebook', href: 'https://www.facebook.com/pages/Laser-Focus-World/126899915297', target: '_blank' },
+    { provider: 'linkedin', href: 'https://www.linkedin.com/groups/90501/', target: '_blank' },
+    { provider: 'twitter', href: 'https://twitter.com/HCInnovationGrp', target: '_blank' },
+    { provider: 'facebook', href: 'https://www.facebook.com/HealthcareInnovationGroup', target: '_blank' },
   ],
   gtm: {
-    containerId: 'GTM-MFCT2LV',
+    containerId: 'GTM-WV5FMR3',
   },
   wufoo: {
     userName: 'cygnuscorporate',
@@ -34,17 +34,17 @@ module.exports = {
   contactUs: {
     branding: {
       bgColor: '#164f77',
-      logo: 'https://img.laserfocusworld.com/files/base/pennwell/lfw/logo.png?h=60',
+      logo: 'https://img.hcinnovationgroup.com/files/base/ebm/hci/image/static/logo/site_logo.png?h=60',
     },
-    to: 'juliac@pennwell.com',
+    to: 'amularski@endeavorb2b.com',
   },
   inquiry: {
     enabled: true,
     directSend: true,
     sendTo: 'bgweb@endeavorb2b.com',
-    sendFrom: 'LaserFocusWorld.com <noreply@baseplatform.io>',
+    sendFrom: 'HCInnovationGroup.com <noreply@baseplatform.io>',
     sendBcc: 'emailactivity@cygnus.com',
-    logo: 'https://img.laserfocusworld.com/files/base/pennwell/lfw/logo.png?h=60',
+    logo: 'https://img.hcinnovationgroup.com/files/base/ebm/hci/image/static/logo/site_logo.png?h=60',
     bgColor: '#164f77',
   },
 };
