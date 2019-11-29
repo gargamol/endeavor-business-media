@@ -1,3 +1,1 @@
-module.exports = {
-  siteName: 'Laser Focus World',
-};
+module.exports = {};
