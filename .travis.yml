@@ -215,10 +215,10 @@ jobs:
     #   script: deploy/index.js vehicleservicepros picon
     #   install: skip
 
-    # - stage: deploy
-    #   name: Vending Market Watch
-    #   script: deploy/index.js vendingmarketwatch picon
-    #   install: skip
+    - stage: deploy
+      name: Vending Market Watch
+      script: deploy/index.js vendingmarketwatch picon
+      install: skip
 
     - stage: deploy
       name: Vision Systems Design

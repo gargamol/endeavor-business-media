@@ -575,21 +575,21 @@ services:
   #     - "9741:80"
   #     - "19741:19741"
 
-  # vendingmarketwatch:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/vendingmarketwatch
-  #   environment:
-  #     <<: *env
-  #     <<: *env-picon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9742
-  #     LIVERELOAD_PORT: 19742
-  #     TENANT_KEY: cygnus_vmw
-  #     SITE_ID: 5bd2148d29a75d35008b4567
-  #   ports:
-  #     - "9742:80"
-  #     - "19742:19742"
+  vendingmarketwatch:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/vendingmarketwatch
+    environment:
+      <<: *env
+      <<: *env-picon-staging
+      PORT: 80
+      EXPOSED_PORT: 9742
+      LIVERELOAD_PORT: 19742
+      TENANT_KEY: cygnus_vmw
+      SITE_ID: 5bd2148d29a75d35008b4567
+    ports:
+      - "9742:80"
+      - "19742:19742"
 
   distributedenergy:
     <<: *node
