@@ -100,10 +100,10 @@ jobs:
       script: deploy/index.js hcinnovationgroup picon
       install: skip
 
-    # - stage: deploy
-    #   name: Healthcare Purchasing News Online
-    #   script: deploy/index.js hpnonline picon
-    #   install: skip
+    - stage: deploy
+      name: Healthcare Purchasing News Online
+      script: deploy/index.js hpnonline picon
+      install: skip
 
     - stage: deploy
       name: Industrial Laser Solutions
