@@ -607,22 +607,6 @@ services:
       - "9743:80"
       - "19743:19743"
 
-  # erosioncontrol:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/erosioncontrol
-  #   environment:
-  #     <<: *env
-  #     <<: *env-picon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9744
-  #     LIVERELOAD_PORT: 19744
-  #     TENANT_KEY: ebm_ero
-  #     SITE_ID:
-  #   ports:
-  #     - "9744:80"
-  #     - "19744:19744"
-
   flowcontrolnetwork:
     <<: *node
     <<: *site-cmd
