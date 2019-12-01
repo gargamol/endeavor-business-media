@@ -5,15 +5,15 @@ module.exports = {
   company: 'Endeavor Business Media, LLC',
   logos: {
     navbar: {
-      src: 'https://img.mlo-online.com/files/base/ebm/mlo/image/static/logo/site_logo.png?h=45',
+      src: 'https://img.hpnonline.com/files/base/ebm/hpn/image/static/logo/site_logo_white.png?h=45',
       srcset: [
-        'https://img.mlo-online.com/files/base/ebm/mlo/image/static/logo/site_logo.png?h=90 2x',
+        'https://img.hpnonline.com/files/base/ebm/hpn/image/static/logo/site_logo_white.png?h=90 2x',
       ],
     },
     footer: {
-      src: 'https://img.mlo-online.com/files/base/ebm/mlo/image/static/logo/site_logo.png?h=60',
+      src: 'https://img.hpnonline.com/files/base/ebm/hpn/image/static/logo/site_logo_white.png?h=60',
       srcset: [
-        'https://img.mlo-online.com/files/base/ebm/mlo/image/static/logo/site_logo.png?h=120 2x',
+        'https://img.hpnonline.com/files/base/ebm/hpn/image/static/logo/site_logo_white.png?h=120 2x',
       ],
     },
   },
@@ -29,22 +29,22 @@ module.exports = {
     userName: 'cygnuscorporate',
   },
   magazines: {
-    description: 'mlo-online.com features online exclusive content as well as feature articles and stories from our print publications. Access digital editions and recent issues for our magazine here.',
+    description: 'HPN Online features online exclusive content as well as feature articles and stories from our print publications. Access digital editions and recent issues for our magazine here.',
   },
   contactUs: {
     branding: {
       bgColor: '#000000',
-      logo: 'https://img.mlo-online.com/files/base/ebm/mlo/image/static/logo/site_logo.png?h=60',
+      logo: 'https://img.hpnonline.com/files/base/ebm/hpn/image/static/logo/site_logo_white.png?h=60',
     },
-    to: 'krussell@mlo-online.com',
+    to: 'krussell@endeavorb2b.com',
   },
   inquiry: {
     enabled: true,
     directSend: true,
-    sendTo: 'krussell@mlo-online.com',
-    sendFrom: 'Medical Laboratory Observer <noreply@baseplatform.io>',
+    sendTo: 'krussell@endeavorb2b.com',
+    sendFrom: 'HPN Online <noreply@baseplatform.io>',
     sendBcc: 'eactivity@endeavorb2b.com',
-    logo: 'https://img.mlo-online.com/files/base/ebm/mlo/image/static/logo/site_logo.png?h=60',
+    logo: 'https://img.hpnonline.com/files/base/ebm/hpn/image/static/logo/site_logo_white.png?h=60',
     bgColor: '#000000',
   },
 };
