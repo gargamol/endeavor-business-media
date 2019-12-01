@@ -23,45 +23,69 @@ config
     { name: 'reskin', path: 'default/reskin' },
     { name: 'wa', path: 'default/wa' },
   ])
-  .setAliasAdUnits('information-technology', [
-    { name: 'lb1', templateName: 'LB', path: 'information-technology/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'information-technology/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'information-technology/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'information-technology/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'information-technology/load-more' },
-    { name: 'reskin', path: 'information-technology/reskin' },
+  .setAliasAdUnits('sourcing-logistics', [
+    { name: 'lb1', templateName: 'LB', path: 'sourcing-logistics/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'sourcing-logistics/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'sourcing-logistics/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'sourcing-logistics/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'sourcing-logistics/load-more' },
+    { name: 'reskin', path: 'sourcing-logistics/reskin' },
   ])
-  .setAliasAdUnits('molecular', [
-    { name: 'lb1', templateName: 'LB', path: 'molecular/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'molecular/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'molecular/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'molecular/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'molecular/load-more' },
-    { name: 'reskin', path: 'molecular/reskin' },
+  .setAliasAdUnits('sterile-processing', [
+    { name: 'lb1', templateName: 'LB', path: 'sterile-processing/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'sterile-processing/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'sterile-processing/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'sterile-processing/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'sterile-processing/load-more' },
+    { name: 'reskin', path: 'sterile-processing/reskin' },
   ])
-  .setAliasAdUnits('diagnostics', [
-    { name: 'lb1', templateName: 'LB', path: 'diagnostics/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'diagnostics/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'diagnostics/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'diagnostics/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'diagnostics/load-more' },
-    { name: 'reskin', path: 'diagnostics/reskin' },
+  .setAliasAdUnits('surgical-critical-care', [
+    { name: 'lb1', templateName: 'LB', path: 'surgical-critical-care/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'surgical-critical-care/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'surgical-critical-care/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'surgical-critical-care/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'surgical-critical-care/load-more' },
+    { name: 'reskin', path: 'surgical-critical-care/reskin' },
   ])
-  .setAliasAdUnits('disease', [
-    { name: 'lb1', templateName: 'LB', path: 'disease/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'disease/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'disease/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'disease/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'disease/load-more' },
-    { name: 'reskin', path: 'disease/reskin' },
+  .setAliasAdUnits('patient-satisfaction', [
+    { name: 'lb1', templateName: 'LB', path: 'patient-satisfaction/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'patient-satisfaction/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'patient-satisfaction/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'patient-satisfaction/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'patient-satisfaction/load-more' },
+    { name: 'reskin', path: 'patient-satisfaction/reskin' },
   ])
-  .setAliasAdUnits('management', [
-    { name: 'lb1', templateName: 'LB', path: 'management/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'management/lb2' },
-    { name: 'rail1', templateName: 'CONTENT', path: 'management/rail1' },
-    { name: 'rail2', templateName: 'CONTENT', path: 'management/rail2' },
-    { name: 'load-more', templateName: 'CONTENT', path: 'management/load-more' },
-    { name: 'reskin', path: 'management/reskin' },
+  .setAliasAdUnits('infection-prevention', [
+    { name: 'lb1', templateName: 'LB', path: 'infection-prevention/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'infection-prevention/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'infection-prevention/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'infection-prevention/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'infection-prevention/load-more' },
+    { name: 'reskin', path: 'infection-prevention/reskin' },
+  ])
+  .setAliasAdUnits('evs-facility-services', [
+    { name: 'lb1', templateName: 'LB', path: 'evs-facility-services/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'evs-facility-services/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'evs-facility-services/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'evs-facility-services/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'evs-facility-services/load-more' },
+    { name: 'reskin', path: 'evs-facility-services/reskin' },
+  ])
+  .setAliasAdUnits('healthcare-it', [
+    { name: 'lb1', templateName: 'LB', path: 'healthcare-it/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'healthcare-it/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'healthcare-it/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'healthcare-it/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'healthcare-it/load-more' },
+    { name: 'reskin', path: 'healthcare-it/reskin' },
+  ])
+  .setAliasAdUnits('regulatory', [
+    { name: 'lb1', templateName: 'LB', path: 'regulatory/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'regulatory/lb2' },
+    { name: 'rail1', templateName: 'CONTENT', path: 'regulatory/rail1' },
+    { name: 'rail2', templateName: 'CONTENT', path: 'regulatory/rail2' },
+    { name: 'load-more', templateName: 'CONTENT', path: 'regulatory/load-more' },
+    { name: 'reskin', path: 'regulatory/reskin' },
   ]);
 
 module.exports = config;

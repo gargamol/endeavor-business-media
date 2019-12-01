@@ -4,25 +4,31 @@ const config = new NativeXConfiguration('https://ebm.native-x.io');
 
 config
   .setAliasPlacements('default', [
-    { name: 'default', id: '5de0681b03b6d40001a83bda' },
+    { name: 'default', id: '5de32e3303b6d40001a18010' },
   ])
-  .setAliasPlacements('information-technology', [
-    { name: 'default', id: '5cdb234939937800010eb292' },
+  .setAliasPlacements('sourcing-logistics', [
+    { name: 'default', id: '5de32e4c5ff34100016d1c21' },
   ])
-  .setAliasPlacements('management', [
-    { name: 'default', id: '5de068665ff341000173cc50' },
+  .setAliasPlacements('sterile-processing', [
+    { name: 'default', id: '5de32e5d5ff34100016d227e' },
   ])
-  .setAliasPlacements('disease', [
-    { name: 'default', id: '5de0685c03b6d40001a8516b' },
+  .setAliasPlacements('surgical-critical-care', [
+    { name: 'default', id: '5de32e6c03b6d40001a19479' },
   ])
-  .setAliasPlacements('diagnostics', [
-    { name: 'default', id: '5de0685203b6d40001a84e91' },
+  .setAliasPlacements('patient-satisfaction', [
+    { name: 'default', id: '5de32e7d5ff34100016d300f' },
   ])
-  .setAliasPlacements('information-technology', [
-    { name: 'default', id: '5de0684403b6d40001a849d5' },
+  .setAliasPlacements('infection-prevention', [
+    { name: 'default', id: '5de32e9603b6d40001a1a474' },
   ])
-  .setAliasPlacements('molecular', [
-    { name: 'default', id: '5de0682f03b6d40001a8435e' },
+  .setAliasPlacements('evs-facility-services', [
+    { name: 'default', id: '5de32eac03b6d40001a1ada4' },
+  ])
+  .setAliasPlacements('healthcare-it', [
+    { name: 'default', id: '5de32ebb03b6d40001a1b434' },
+  ])
+  .setAliasPlacements('regulatory', [
+    { name: 'default', id: '5de32ecb5ff34100016d4dd1' },
   ]);
 
 module.exports = config;
