@@ -5,25 +5,25 @@ module.exports = {
   company: 'Endeavor Business Media, LLC',
   logos: {
     navbar: {
-      src: 'https://img.securityinfowatch.com/files/base/cygnus/siw/image/static/logo/site_logo_red_on_black.png?h=60',
+      src: 'https://img.locksmithledger.com/files/base/cygnus/ll/image/static/logo/lsl.png?h=60',
       srcset: [
-        'https://img.securityinfowatch.com/files/base/cygnus/siw/image/static/logo/site_logo_red_on_black.png?h=120 2x',
+        'https://img.locksmithledger.com/files/base/cygnus/ll/image/static/logo/lsl.png?h=120 2x',
       ],
     },
     footer: {
-      src: 'https://img.securityinfowatch.com/files/base/cygnus/siw/image/static/logo/site_logo_red_on_black.png?h=60',
+      src: 'https://img.locksmithledger.com/files/base/cygnus/ll/image/static/logo/lsl.png?h=60',
       srcset: [
-        'https://img.securityinfowatch.com/files/base/cygnus/siw/image/static/logo/site_logo_red_on_black.png?h=120 2x',
+        'https://img.locksmithledger.com/files/base/cygnus/ll/image/static/logo/lsl.png?h=120 2x',
       ],
     },
   },
   socialMediaLinks: [
-    { provider: 'linkedin', href: 'http://www.linkedin.com/groups/8244648/profile', target: '_blank' },
-    { provider: 'twitter', href: 'http://www.twitter.com/SecInfoWatch', target: '_blank' },
-    { provider: 'facebook', href: 'http://www.facebook.com/SecInfoWatch', target: '_blank' },
+    { provider: 'linkedin', href: 'https://www.linkedin.com/groups/4087326/profile', target: '_blank' },
+    { provider: 'twitter', href: 'https://www.twitter.com/LocksmithLedger', target: '_blank' },
+    { provider: 'facebook', href: 'https://www.facebook.com/locksmithledgerinternational', target: '_blank' },
   ],
   gtm: {
-    containerId: 'GTM-KMZ7FHS',
+    containerId: 'GTM-N7CHFQS',
   },
   wufoo: {
     userName: 'cygnuscorporate',
@@ -34,17 +34,17 @@ module.exports = {
   contactUs: {
     branding: {
       bgColor: '#164f77',
-      logo: 'https://img.securityinfowatch.com/files/base/cygnus/siw/image/static/logo/site_logo_red_on_black.png?h=60',
+      logo: 'https://img.locksmithledger.com/files/base/cygnus/ll/image/static/logo/lsl.png?h=60',
     },
-    // to: 'juliac@pennwell.com',
+    to: 'nbrokamp@endeavorb2b.com',
   },
   inquiry: {
     enabled: true,
     directSend: true,
-    sendTo: 'bgweb@endeavorb2b.com',
-    sendFrom: 'SecurityInfoWatch.com <noreply@baseplatform.io>',
+    sendTo: 'nbrokamp@endeavorb2b.com',
+    sendFrom: 'LocksmithLedger.com <noreply@baseplatform.io>',
     sendBcc: 'emailactivity@cygnus.com',
-    logo: 'https://img.securityinfowatch.com/files/base/cygnus/siw/image/static/logo/site_logo_red_on_black.png?h=60',
+    logo: 'https://img.locksmithledger.com/files/base/cygnus/ll/image/static/logo/lsl.png?h=60',
     bgColor: '#164f77',
   },
 };
