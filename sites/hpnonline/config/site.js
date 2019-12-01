@@ -18,12 +18,11 @@ module.exports = {
     },
   },
   socialMediaLinks: [
-    { provider: 'linkedin', href: 'https://www.linkedin.com/groups/?home=&gid=2301731&trk=groups_guest_about-h-logo', target: '_blank' },
-    { provider: 'twitter', href: 'https://twitter.com/MedicalLabMLO', target: '_blank' },
-    { provider: 'facebook', href: 'https://www.facebook.com/MLOMedicalLaboratoryObserver', target: '_blank' },
+    { provider: 'twitter', href: 'https://twitter.com/HPN_Online', target: '_blank' },
+    { provider: 'facebook', href: 'https://www.facebook.com/hpnonline', target: '_blank' },
   ],
   gtm: {
-    containerId: 'GTM-NBTQ9MW',
+    containerId: 'GTM-PGBWQKG',
   },
   wufoo: {
     userName: 'cygnuscorporate',
