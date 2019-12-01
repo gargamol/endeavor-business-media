@@ -383,21 +383,21 @@ services:
       - "9729:80"
       - "19729:19729"
 
-  # securityinfowatch:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/securityinfowatch
-  #   environment:
-  #     <<: *env
-  #     <<: *env-picon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9730
-  #     LIVERELOAD_PORT: 19730
-  #     TENANT_KEY: cygnus_siw
-  #     SITE_ID: 5bd2215b29a75d73008b4567
-  #   ports:
-  #     - "9730:80"
-  #     - "19730:19730"
+  securityinfowatch:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/securityinfowatch
+    environment:
+      <<: *env
+      <<: *env-picon-staging
+      PORT: 80
+      EXPOSED_PORT: 9730
+      LIVERELOAD_PORT: 19730
+      TENANT_KEY: cygnus_siw
+      SITE_ID: 5bd2215b29a75d73008b4567
+    ports:
+      - "9730:80"
+      - "19730:19730"
 
   # locksmithledger:
   #   <<: *node
