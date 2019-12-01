@@ -11,11 +11,11 @@ $theme-site-navbar-logo-height: 45px;
 $theme-site-navbar-logo-height-sm: 25px;
 
 $theme-site-header-breakpoints: (
-  hide-primary: 832px,
+  hide-primary: 1050px,
   hide-secondary: 906px,
   small-logo: 1015px,
-  small-text-primary: 932px,
-  small-text-secondary: 1105px
+  small-text-primary: 10000px,
+  small-text-secondary: 10000px
 );
 
 @import "../../node_modules/@base-cms/marko-web-gam/scss/fixed-ad-bottom";
