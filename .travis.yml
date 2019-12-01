@@ -190,10 +190,10 @@ jobs:
       script: deploy/index.js rdhmag aerilon
       install: skip
 
-    # - stage: deploy
-    #   name: Security Info Watch
-    #   script: deploy/index.js securityinfowatch picon
-    #   install: skip
+    - stage: deploy
+      name: Security Info Watch
+      script: deploy/index.js securityinfowatch picon
+      install: skip
 
     - stage: deploy
       name: Storm H2O
