@@ -5,10 +5,10 @@ module.exports = {
       { href: '/integrators', label: 'Integrators' },
       { href: '/video-surveillance', label: 'Video Surveillance' },
       { href: '/access-identity', label: 'Access Identity' },
-      { href: '/residential-technologies', label: 'Residential Technologies' },
+      { href: '/residential-technologies', label: 'Residential Tech' },
       { href: '/alarms-monitoring', label: 'Alarms & Monitoring' },
       { href: '/cybersecurity', label: 'Cybersecurity' },
-      { href: '/perimeter-security', label: 'Perimeter Security' },
+      { href: '/perimeter-security', label: 'Perimeter' },
     ],
   },
   secondary: {
