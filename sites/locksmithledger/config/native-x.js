@@ -4,31 +4,28 @@ const config = new NativeXConfiguration('https://ebm.native-x.io');
 
 config
   .setAliasPlacements('default', [
-    { name: 'default', id: '5c0e7695cf399b000179ee97' },
+    { name: 'default', id: '5c73f9804eb667000191f8e4' },
   ])
-  .setAliasPlacements('security-executives', [
-    { name: 'default', id: '5c0e76c8cf399b000179f1f4' },
+  .setAliasPlacements('alarms-video', [
+    { name: 'default', id: '5c73fa734eb6670001921a18' },
   ])
-  .setAliasPlacements('integrators', [
-    { name: 'default', id: '5c0e76f484c2cd000147d261' },
+  .setAliasPlacements('door-hardware', [
+    { name: 'default', id: '5c73fa544eb6670001921598' },
   ])
-  .setAliasPlacements('video-surveillance', [
-    { name: 'default', id: '5c0e7724cf399b000179f750' },
+  .setAliasPlacements('keys-tools', [
+    { name: 'default', id: '5c73fa34b0a5270001326cca' },
   ])
-  .setAliasPlacements('access-identity', [
-    { name: 'default', id: '5c0e774a84c2cd000147d79a' },
+  .setAliasPlacements('locks', [
+    { name: 'default', id: '5c73fa0cb0a52700013267ae' },
   ])
-  .setAliasPlacements('residential-technologies', [
-    { name: 'default', id: '5c0e776a84c2cd000147d9a7' },
+  .setAliasPlacements('electronics-access-control', [
+    { name: 'default', id: '5c73f9e6b0a52700013262a1' },
   ])
-  .setAliasPlacements('alarms-monitoring', [
-    { name: 'default', id: '5c0e7794cf399b000179fe68' },
+  .setAliasPlacements('safes', [
+    { name: 'default', id: '5c73f9c54eb6670001920239' },
   ])
-  .setAliasPlacements('cybersecurity', [
-    { name: 'default', id: '5c0e77b584c2cd000147de60' },
-  ])
-  .setAliasPlacements('perimeter-security', [
-    { name: 'default', id: '5c0e77dd84c2cd000147e0ee' },
+  .setAliasPlacements('distributors', [
+    { name: 'default', id: '5c73f99b4eb667000191fbec' },
   ]);
 
 module.exports = config;
