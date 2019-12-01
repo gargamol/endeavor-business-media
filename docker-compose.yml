@@ -255,21 +255,21 @@ services:
       - "9721:80"
       - "19721:19721"
 
-  # hpnonline:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/hpnonline
-  #   environment:
-  #     <<: *env
-  #     <<: *env-picon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9722
-  #     LIVERELOAD_PORT: 19722
-  #     TENANT_KEY: ebm_hpn
-  #     SITE_ID: 5babaa3fb09d901d008b4567
-  #   ports:
-  #     - "9722:80"
-  #     - "19722:19722"
+  hpnonline:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/hpnonline
+    environment:
+      <<: *env
+      <<: *env-picon-staging
+      PORT: 80
+      EXPOSED_PORT: 9722
+      LIVERELOAD_PORT: 19722
+      TENANT_KEY: ebm_hpn
+      SITE_ID: 5babaa3fb09d901d008b4567
+    ports:
+      - "9722:80"
+      - "19722:19722"
 
   mlo-online:
     <<: *node
@@ -606,22 +606,6 @@ services:
     ports:
       - "9743:80"
       - "19743:19743"
-
-  # erosioncontrol:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/erosioncontrol
-  #   environment:
-  #     <<: *env
-  #     <<: *env-picon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9744
-  #     LIVERELOAD_PORT: 19744
-  #     TENANT_KEY: ebm_ero
-  #     SITE_ID:
-  #   ports:
-  #     - "9744:80"
-  #     - "19744:19744"
 
   flowcontrolnetwork:
     <<: *node
