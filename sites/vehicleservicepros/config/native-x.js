@@ -4,31 +4,22 @@ const config = new NativeXConfiguration('https://ebm.native-x.io');
 
 config
   .setAliasPlacements('default', [
-    { name: 'default', id: '5c0e7695cf399b000179ee97' },
+    { name: 'default', id: '5b55ea8304bce80001980611' },
   ])
-  .setAliasPlacements('security-executives', [
-    { name: 'default', id: '5c0e76c8cf399b000179f1f4' },
+  .setAliasPlacements('in-the-bay', [
+    { name: 'default', id: '5b57584b07cd7000019c5fb4' },
   ])
-  .setAliasPlacements('integrators', [
-    { name: 'default', id: '5c0e76f484c2cd000147d261' },
+  .setAliasPlacements('shop-operations', [
+    { name: 'default', id: '5b57585b07cd7000019c5fb6' },
   ])
-  .setAliasPlacements('video-surveillance', [
-    { name: 'default', id: '5c0e7724cf399b000179f750' },
+  .setAliasPlacements('vehicles', [
+    { name: 'default', id: '5b57583b07cd7000019c5fb3' },
   ])
-  .setAliasPlacements('access-identity', [
-    { name: 'default', id: '5c0e774a84c2cd000147d79a' },
+  .setAliasPlacements('distributors', [
+    { name: 'default', id: '5b57586e07cd7000019c5fb8' },
   ])
-  .setAliasPlacements('residential-technologies', [
-    { name: 'default', id: '5c0e776a84c2cd000147d9a7' },
-  ])
-  .setAliasPlacements('alarms-monitoring', [
-    { name: 'default', id: '5c0e7794cf399b000179fe68' },
-  ])
-  .setAliasPlacements('cybersecurity', [
-    { name: 'default', id: '5c0e77b584c2cd000147de60' },
-  ])
-  .setAliasPlacements('perimeter-security', [
-    { name: 'default', id: '5c0e77dd84c2cd000147e0ee' },
+  .setAliasPlacements('industry-news', [
+    { name: 'default', id: '5b57587e5bbf91000134a2c2' },
   ]);
 
 module.exports = config;
