@@ -559,21 +559,21 @@ services:
   #     - "9740:80"
   #     - "19740:19740"
 
-  # vehicleservicepros:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/vehicleservicepros
-  #   environment:
-  #     <<: *env
-  #     <<: *env-picon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9741
-  #     LIVERELOAD_PORT: 19741
-  #     TENANT_KEY: cygnus_vspc
-  #     SITE_ID: 578631623bab465e7f4932d8
-  #   ports:
-  #     - "9741:80"
-  #     - "19741:19741"
+  vehicleservicepros:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/vehicleservicepros
+    environment:
+      <<: *env
+      <<: *env-picon-staging
+      PORT: 80
+      EXPOSED_PORT: 9741
+      LIVERELOAD_PORT: 19741
+      TENANT_KEY: cygnus_vspc
+      SITE_ID: 578631623bab465e7f4932d8
+    ports:
+      - "9741:80"
+      - "19741:19741"
 
   vendingmarketwatch:
     <<: *node
