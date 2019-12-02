@@ -205,10 +205,10 @@ jobs:
       script: deploy/index.js utilityproducts aerilon
       install: skip
 
-    # - stage: deploy
-    #   name: Vehicle Service Pros
-    #   script: deploy/index.js vehicleservicepros picon
-    #   install: skip
+    - stage: deploy
+      name: Vehicle Service Pros
+      script: deploy/index.js vehicleservicepros picon
+      install: skip
 
     - stage: deploy
       name: Vending Market Watch
