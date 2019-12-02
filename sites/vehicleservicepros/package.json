@@ -1,8 +1,8 @@
 {
-  "name": "@base-cms-websites/securityinfowatch",
+  "name": "@base-cms-websites/vehicleservicepros",
   "version": "1.0.4",
   "author": "Brandon Krigbaum <brandonbk@gmail.com>",
-  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/securityinfowatch",
+  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/vehicleservicepros",
   "license": "MIT",
   "private": true,
   "scripts": {
