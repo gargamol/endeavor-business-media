@@ -399,21 +399,21 @@ services:
       - "9730:80"
       - "19730:19730"
 
-  # locksmithledger:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/locksmithledger
-  #   environment:
-  #     <<: *env
-  #     <<: *env-picon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9731
-  #     LIVERELOAD_PORT: 19731
-  #     TENANT_KEY: cygnus_ll
-  #     SITE_ID: 5bd77286412f6dac008b4567
-  #   ports:
-  #     - "9731:80"
-  #     - "19731:19731"
+  locksmithledger:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/locksmithledger
+    environment:
+      <<: *env
+      <<: *env-picon-staging
+      PORT: 80
+      EXPOSED_PORT: 9731
+      LIVERELOAD_PORT: 19731
+      TENANT_KEY: cygnus_ll
+      SITE_ID: 5bd77286412f6dac008b4567
+    ports:
+      - "9731:80"
+      - "19731:19731"
 
   bioopticsworld:
     <<: *node

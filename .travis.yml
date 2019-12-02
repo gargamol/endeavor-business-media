@@ -125,10 +125,10 @@ jobs:
       script: deploy/index.js lightwaveonline aerilon
       install: skip
 
-    # - stage: deploy
-    #   name: Locksmith Ledger
-    #   script: deploy/index.js locksmithledger picon
-    #   install: skip
+    - stage: deploy
+      name: Locksmith Ledger
+      script: deploy/index.js locksmithledger picon
+      install: skip
 
     # - stage: deploy
     #   name: Mass Transit
