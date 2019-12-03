@@ -56,13 +56,12 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionAlias: "career-center", limit: 4, queryFragment }
+          params={ sectionAlias: "jobs", limit: 4, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
             <@header>
               <marko-web-link href="https://jobs.masstransitmag.com">Career Center</marko-web-link>
             </@header>
-            <@native-x index=3 name="default" aliases=["career-center"] />
           </website-content-list-flow>
         </marko-web-query>
       </div>
