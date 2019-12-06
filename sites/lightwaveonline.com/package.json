@@ -1,8 +1,8 @@
 {
-  "name": "@base-cms-websites/lightwaveonline",
+  "name": "@base-cms-websites/lightwaveonline.com",
   "version": "1.0.5",
   "author": "Brandon Krigbaum <brandonbk@gmail.com>",
-  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/lightwaveonline",
+  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/lightwaveonline.com",
   "license": "MIT",
   "private": true,
   "scripts": {
