@@ -1,8 +1,8 @@
 {
-  "name": "@base-cms-websites/locksmithledger",
+  "name": "@base-cms-websites/locksmithledger.com",
   "version": "1.0.5",
   "author": "Brandon Krigbaum <brandonbk@gmail.com>",
-  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/locksmithledger",
+  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/locksmithledger.com",
   "license": "MIT",
   "private": true,
   "scripts": {
