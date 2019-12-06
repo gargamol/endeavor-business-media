@@ -1,8 +1,8 @@
 {
-  "name": "@base-cms-websites/distributedenergy",
+  "name": "@base-cms-websites/distributedenergy.com",
   "version": "1.0.4",
   "author": "Brian Miller <bmiller@endeavorb2b.com>",
-  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/distributedenergy",
+  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/distributedenergy.com",
   "license": "MIT",
   "private": true,
   "scripts": {
