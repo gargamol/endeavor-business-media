@@ -1,8 +1,8 @@
 {
-  "name": "@base-cms-websites/mlo-online",
+  "name": "@base-cms-websites/mlo-online.com",
   "version": "1.0.5",
   "author": "Caitlyn Knudsvig <cknudsvig@endeavorb2b.com>",
-  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/mlo-online",
+  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/mlo-online.com",
   "license": "MIT",
   "private": true,
   "scripts": {
