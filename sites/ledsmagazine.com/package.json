@@ -1,8 +1,8 @@
 {
-  "name": "@base-cms-websites/ledsmagazine",
+  "name": "@base-cms-websites/ledsmagazine.com",
   "version": "1.0.5",
   "author": "Brandon Krigbaum <brandonbk@gmail.com>",
-  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/ledsmagazine",
+  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/ledsmagazine.com",
   "license": "MIT",
   "private": true,
   "scripts": {
