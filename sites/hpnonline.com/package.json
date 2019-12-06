@@ -1,8 +1,8 @@
 {
-  "name": "@base-cms-websites/hpnonline",
+  "name": "@base-cms-websites/hpnonline.com",
   "version": "1.0.5",
   "author": "Brandon Krigbaum <brandonbk@gmail.com>",
-  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/hpnonline",
+  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/hpnonline.com",
   "license": "MIT",
   "private": true,
   "scripts": {
