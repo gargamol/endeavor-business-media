@@ -1,8 +1,8 @@
 {
-  "name": "@base-cms-websites/vision-systems",
+  "name": "@base-cms-websites/vision-systems.com",
   "version": "1.0.5",
   "author": "Brandon Krigbaum <brandonbk@gmail.com>",
-  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/vision-systems",
+  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/vision-systems.com",
   "license": "MIT",
   "private": true,
   "scripts": {
