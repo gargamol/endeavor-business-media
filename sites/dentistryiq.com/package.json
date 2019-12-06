@@ -1,8 +1,8 @@
 {
-  "name": "@base-cms-websites/dentistryiq",
+  "name": "@base-cms-websites/dentistryiq.com",
   "version": "1.0.5",
   "author": "Alysha Buselt <abuselt@endeavorb2b.com>",
-  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/dentistryiq",
+  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/dentistryiq.com",
   "license": "MIT",
   "private": true,
   "scripts": {
