@@ -1,8 +1,8 @@
 {
-  "name": "@base-cms-websites/processingmagazine",
+  "name": "@base-cms-websites/processingmagazine.com",
   "version": "1.0.4",
   "author": "Brandon Krigbaum <brandonbk@gmail.com>",
-  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/processingmagazine",
+  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/processingmagazine.com",
   "license": "MIT",
   "private": true,
   "scripts": {
