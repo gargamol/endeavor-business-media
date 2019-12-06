@@ -63,10 +63,10 @@ services:
     environment:
       <<: *env
 
-  laserfocusworld:
+  laserfocusworld.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/laserfocusworld
+    working_dir: /root/sites/laserfocusworld.com
     environment:
       <<: *env
       <<: *env-aerilon-staging
@@ -79,10 +79,10 @@ services:
       - "9710:80"
       - "19710:19710"
 
-  utilityproducts:
+  utilityproducts.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/utilityproducts
+    working_dir: /root/sites/utilityproducts.com
     environment:
       <<: *env
       <<: *env-aerilon-staging
@@ -95,10 +95,10 @@ services:
       - "9711:80"
       - "19711:19711"
 
-  vision-systems:
+  vision-systems.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/vision-systems
+    working_dir: /root/sites/vision-systems.com
     environment:
       <<: *env
       <<: *env-aerilon-staging
@@ -111,10 +111,10 @@ services:
       - "9712:80"
       - "19712:19712"
 
-  militaryaerospace:
+  militaryaerospace.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/militaryaerospace
+    working_dir: /root/sites/militaryaerospace.com
     environment:
       <<: *env
       <<: *env-aerilon-staging
@@ -127,10 +127,10 @@ services:
       - "9713:80"
       - "19713:19713"
 
-  cablinginstall:
+  cablinginstall.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/cablinginstall
+    working_dir: /root/sites/cablinginstall.com
     environment:
       <<: *env
       <<: *env-aerilon-staging
@@ -159,10 +159,10 @@ services:
       - "9715:80"
       - "19715:19715"
 
-  dentaleconomics:
+  dentaleconomics.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/dentaleconomics
+    working_dir: /root/sites/dentaleconomics.com
     environment:
       <<: *env
       <<: *env-aerilon-staging
@@ -175,10 +175,10 @@ services:
       - "9716:80"
       - "19716:19716"
 
-  dentistryiq:
+  dentistryiq.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/dentistryiq
+    working_dir: /root/sites/dentistryiq.com
     environment:
       <<: *env
       <<: *env-aerilon-staging
@@ -191,10 +191,10 @@ services:
       - "9717:80"
       - "19717:19717"
 
-  perioimplantadvisory:
+  perioimplantadvisory.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/perioimplantadvisory
+    working_dir: /root/sites/perioimplantadvisory.com
     environment:
       <<: *env
       <<: *env-aerilon-staging
@@ -207,10 +207,10 @@ services:
       - "9718:80"
       - "19718:19718"
 
-  rdhmag:
+  rdhmag.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/rdhmag
+    working_dir: /root/sites/rdhmag.com
     environment:
       <<: *env
       <<: *env-aerilon-staging
@@ -239,10 +239,10 @@ services:
       - "9720:80"
       - "19720:19720"
 
-  hcinnovationgroup:
+  hcinnovationgroup.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/hcinnovationgroup
+    working_dir: /root/sites/hcinnovationgroup.com
     environment:
       <<: *env
       <<: *env-picon-staging
@@ -255,10 +255,10 @@ services:
       - "9721:80"
       - "19721:19721"
 
-  hpnonline:
+  hpnonline.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/hpnonline
+    working_dir: /root/sites/hpnonline.com
     environment:
       <<: *env
       <<: *env-picon-staging
@@ -271,10 +271,10 @@ services:
       - "9722:80"
       - "19722:19722"
 
-  mlo-online:
+  mlo-online.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/mlo-online
+    working_dir: /root/sites/mlo-online.com
     environment:
       <<: *env
       <<: *env-picon-staging
@@ -303,10 +303,10 @@ services:
       - "9724:80"
       - "19724:19724"
 
-  processingmagazine:
+  processingmagazine.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/processingmagazine
+    working_dir: /root/sites/processingmagazine.com
     environment:
       <<: *env
       <<: *env-picon-staging
@@ -319,10 +319,10 @@ services:
       - "9725:80"
       - "19725:19725"
 
-  offshore-mag:
+  offshore-mag.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/offshore-mag
+    working_dir: /root/sites/offshore-mag.com
     environment:
       <<: *env
       <<: *env-aerilon-staging
@@ -335,10 +335,10 @@ services:
       - "9726:80"
       - "19726:19726"
 
-  # ogj:
+  # ogj.com:
   #   <<: *node
   #   <<: *site-cmd
-  #   working_dir: /root/sites/ogj
+  #   working_dir: /root/sites/ogj.com
   #   environment:
   #     <<: *env
   #     <<: *env-aerilon-staging
@@ -351,10 +351,10 @@ services:
   #     - "9727:80"
   #     - "19727:19727"
 
-  # firehouse:
+  # firehouse.com:
   #   <<: *node
   #   <<: *site-cmd
-  #   working_dir: /root/sites/firehouse
+  #   working_dir: /root/sites/firehouse.com
   #   environment:
   #     <<: *env
   #     <<: *env-picon-staging
@@ -367,10 +367,10 @@ services:
   #     - "9728:80"
   #     - "19728:19728"
 
-  officer:
+  officer.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/officer
+    working_dir: /root/sites/officer.com
     environment:
       <<: *env
       <<: *env-picon-staging
@@ -383,10 +383,10 @@ services:
       - "9729:80"
       - "19729:19729"
 
-  securityinfowatch:
+  securityinfowatch.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/securityinfowatch
+    working_dir: /root/sites/securityinfowatch.com
     environment:
       <<: *env
       <<: *env-picon-staging
@@ -399,10 +399,10 @@ services:
       - "9730:80"
       - "19730:19730"
 
-  locksmithledger:
+  locksmithledger.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/locksmithledger
+    working_dir: /root/sites/locksmithledger.com
     environment:
       <<: *env
       <<: *env-picon-staging
@@ -415,10 +415,10 @@ services:
       - "9731:80"
       - "19731:19731"
 
-  bioopticsworld:
+  bioopticsworld.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/bioopticsworld
+    working_dir: /root/sites/bioopticsworld.com
     environment:
       <<: *env
       <<: *env-aerilon-staging
@@ -431,10 +431,10 @@ services:
       - "9732:80"
       - "19732:19732"
 
-  broadbandtechreport:
+  broadbandtechreport.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/broadbandtechreport
+    working_dir: /root/sites/broadbandtechreport.com
     environment:
       <<: *env
       <<: *env-aerilon-staging
@@ -447,10 +447,10 @@ services:
       - "9733:80"
       - "19733:19733"
 
-  evaluationengineering:
+  evaluationengineering.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/evaluationengineering
+    working_dir: /root/sites/evaluationengineering.com
     environment:
       <<: *env
       <<: *env-picon-staging
@@ -463,10 +463,10 @@ services:
       - "9734:80"
       - "19734:19734"
 
-  industrial-lasers:
+  industrial-lasers.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/industrial-lasers
+    working_dir: /root/sites/industrial-lasers.com
     environment:
       <<: *env
       <<: *env-aerilon-staging
@@ -479,10 +479,10 @@ services:
       - "9735:80"
       - "19735:19735"
 
-  intelligent-aerospace:
+  intelligent-aerospace.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/intelligent-aerospace
+    working_dir: /root/sites/intelligent-aerospace.com
     environment:
       <<: *env
       <<: *env-aerilon-staging
@@ -495,10 +495,10 @@ services:
       - "9736:80"
       - "19736:19736"
 
-  ledsmagazine:
+  ledsmagazine.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/ledsmagazine
+    working_dir: /root/sites/ledsmagazine.com
     environment:
       <<: *env
       <<: *env-aerilon-staging
@@ -511,10 +511,10 @@ services:
       - "9737:80"
       - "19737:19737"
 
-  lightwaveonline:
+  lightwaveonline.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/lightwaveonline
+    working_dir: /root/sites/lightwaveonline.com
     environment:
       <<: *env
       <<: *env-aerilon-staging
@@ -527,10 +527,10 @@ services:
       - "9738:80"
       - "19738:19738"
 
-  strategies-u:
+  strategies-u.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/strategies-u
+    working_dir: /root/sites/strategies-u.com
     environment:
       <<: *env
       <<: *env-aerilon-staging
@@ -559,10 +559,10 @@ services:
       - "9740:80"
       - "19740:19740"
 
-  vehicleservicepros:
+  vehicleservicepros.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/vehicleservicepros
+    working_dir: /root/sites/vehicleservicepros.com
     environment:
       <<: *env
       <<: *env-picon-staging
@@ -575,10 +575,10 @@ services:
       - "9741:80"
       - "19741:19741"
 
-  vendingmarketwatch:
+  vendingmarketwatch.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/vendingmarketwatch
+    working_dir: /root/sites/vendingmarketwatch.com
     environment:
       <<: *env
       <<: *env-picon-staging
@@ -591,10 +591,10 @@ services:
       - "9742:80"
       - "19742:19742"
 
-  distributedenergy:
+  distributedenergy.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/distributedenergy
+    working_dir: /root/sites/distributedenergy.com
     environment:
       <<: *env
       <<: *env-picon-staging
@@ -607,10 +607,10 @@ services:
       - "9743:80"
       - "19743:19743"
 
-  flowcontrolnetwork:
+  flowcontrolnetwork.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/flowcontrolnetwork
+    working_dir: /root/sites/flowcontrolnetwork.com
     environment:
       <<: *env
       <<: *env-picon-staging
@@ -623,10 +623,10 @@ services:
       - "9745:80"
       - "19745:19745"
 
-  gxcontractor:
+  gxcontractor.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/gxcontractor
+    working_dir: /root/sites/gxcontractor.com
     environment:
       <<: *env
       <<: *env-picon-staging
@@ -639,10 +639,10 @@ services:
       - "9746:80"
       - "19746:19746"
 
-  mswmanagement:
+  mswmanagement.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/mswmanagement
+    working_dir: /root/sites/mswmanagement.com
     environment:
       <<: *env
       <<: *env-picon-staging
@@ -655,10 +655,10 @@ services:
       - "9747:80"
       - "19747:19747"
 
-  stormh2o:
+  stormh2o.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/stormh2o
+    working_dir: /root/sites/stormh2o.com
     environment:
       <<: *env
       <<: *env-picon-staging
@@ -671,10 +671,10 @@ services:
       - "9748:80"
       - "19748:19748"
 
-  watertechonline:
+  watertechonline.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/watertechonline
+    working_dir: /root/sites/watertechonline.com
     environment:
       <<: *env
       <<: *env-aerilon-staging
@@ -687,10 +687,10 @@ services:
       - "9749:80"
       - "19749:19749"
 
-  waterworld:
+  waterworld.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/waterworld
+    working_dir: /root/sites/waterworld.com
     environment:
       <<: *env
       <<: *env-aerilon-staging
@@ -703,10 +703,10 @@ services:
       - "9750:80"
       - "19750:19750"
 
-  foresternetwork:
+  foresternetwork.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/foresternetwork
+    working_dir: /root/sites/foresternetwork.com
     environment:
       <<: *env
       <<: *env-picon-staging
