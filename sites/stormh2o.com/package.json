@@ -1,8 +1,8 @@
 {
-  "name": "@base-cms-websites/stormh2o",
+  "name": "@base-cms-websites/stormh2o.com",
   "version": "1.0.4",
   "author": "Brian Miller <bmiller@endeavorb2b.com>",
-  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/stormh2o",
+  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/stormh2o.com",
   "license": "MIT",
   "private": true,
   "scripts": {
