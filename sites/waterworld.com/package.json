@@ -1,8 +1,8 @@
 {
-  "name": "@base-cms-websites/waterworld",
+  "name": "@base-cms-websites/waterworld.com",
   "version": "1.0.4",
   "author": "Brian Miller <bmiller@endeavorb2b.com>",
-  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/waterworld",
+  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/waterworld.com",
   "license": "MIT",
   "private": true,
   "scripts": {
