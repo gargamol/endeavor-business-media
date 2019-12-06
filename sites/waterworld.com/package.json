@@ -1,5 +1,5 @@
 {
-  "name": "@base-cms-websites/waterworld.com",
+  "name": "@endeavor-business-media/waterworld.com",
   "version": "1.0.4",
   "author": "Brian Miller <bmiller@endeavorb2b.com>",
   "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/waterworld.com",
@@ -15,8 +15,8 @@
     "test": "yarn lint && yarn compile && yarn build"
   },
   "dependencies": {
-    "@base-cms-websites/package-common": "^1.0.0",
-    "@base-cms-websites/package-inquiry": "^1.0.0",
+    "@endeavor-business-media/package-common": "^1.0.0",
+    "@endeavor-business-media/package-inquiry": "^1.0.0",
     "@base-cms/marko-core": "^1.0.0-beta.15",
     "@base-cms/marko-web": "^1.0.0-beta.15",
     "@base-cms/marko-web-gam": "^1.0.0-beta.4",

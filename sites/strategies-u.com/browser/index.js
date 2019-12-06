@@ -4,8 +4,8 @@ import GTM from '@base-cms/marko-web-gtm/browser';
 import GAM from '@base-cms/marko-web-gam/browser';
 import GCSE from '@base-cms/marko-web-gcse/browser';
 import RevealAd from '@base-cms/marko-web-reveal-ad/browser';
-import Common from '@base-cms-websites/package-common/browser';
-import Inquiry from '@base-cms-websites/package-inquiry/browser';
+import Common from '@endeavor-business-media/package-common/browser';
+import Inquiry from '@endeavor-business-media/package-inquiry/browser';
 
 
 DefaultTheme(Browser);
