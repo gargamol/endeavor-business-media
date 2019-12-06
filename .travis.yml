@@ -4,228 +4,55 @@ cache: yarn
 
 stages:
   - name: test
-  - name: notify_start
+
+  - name: production-started
+    if: tag =~ /^v\d+\.\d+\.\d+$/
+  - name: production
+    if: tag =~ /^v\d+\.\d+\.\d+$/
+  - name: production-finished
+    if: tag =~ /^v\d+\.\d+\.\d+$/
+
+  - name: staging-started
     if: tag is present
-  - name: deploy
+  - name: staging
     if: tag is present
-  - name: notify
+  - name: staging-finished
     if: tag is present
 
 jobs:
   include:
     - stage: test
-      env:
-        - NODE_ENV=test
+      env: [NODE_ENV=test]
 
-    - stage: notify_start
-      script: deploy/notify-start.sh
+    - stage: production-started
+      name: Deployment Started
+      script: npx @base-cms/website-deployment-tool notify-started
       install: skip
+      env: [ENVIRONMENT=production RANCHER_CLUSTERID=c-gxsr7]
 
-    - stage: notify
-      script: deploy/notify.sh
+    - stage: staging-started
+      name: Deployment Started
+      script: npx @base-cms/website-deployment-tool notify-started
       install: skip
+      env: [ENVIRONMENT=staging RANCHER_CLUSTERID=c-rc5kp]
 
-    - stage: deploy
-      name: Aviation Pros
-      script: deploy/index.js aviationpros picon
+    ##########################
+    # vvv ADD SITES HERE vvv #
+    ##########################
+
+
+    ##########################
+    # ^^^ ADD SITES HERE ^^^ #
+    ##########################
+
+    - stage: production-finished
+      name: Deployment Finished
+      script: npx @base-cms/website-deployment-tool notify-finished
       install: skip
+      env: [ENVIRONMENT=production RANCHER_CLUSTERID=c-gxsr7]
 
-    - stage: deploy
-      name: Bio Optics World
-      script: deploy/index.js bioopticsworld aerilon
+    - stage: staging-finished
+      name: Deployment Finished
+      script: npx @base-cms/website-deployment-tool notify-finished
       install: skip
-
-    - stage: deploy
-      name: Broadband Technology Report
-      script: deploy/index.js broadbandtechreport aerilon
-      install: skip
-
-    - stage: deploy
-      name: Cabling Installation & Maintenance
-      script: deploy/index.js cablinginstall aerilon
-      install: skip
-
-    - stage: deploy
-      name: CPA Practice Advisory
-      script: deploy/index.js cpapracticeadvisor picon
-      install: skip
-
-    - stage: deploy
-      name: Dental Economics
-      script: deploy/index.js dentaleconomics aerilon
-      install: skip
-
-    - stage: deploy
-      name: DentistryIQ
-      script: deploy/index.js dentistryiq aerilon
-      install: skip
-
-    - stage: deploy
-      name: Distributed Energy
-      script: deploy/index.js distributedenergy picon
-      install: skip
-
-    - stage: deploy
-      name: Evaluation Engineering
-      script: deploy/index.js evaluationengineering picon
-      install: skip
-
-    # - stage: deploy
-    #   name: Firehouse
-    #   script: deploy/index.js firehouse picon
-    #   install: skip
-
-    - stage: deploy
-      name: Flow Control
-      script: deploy/index.js flowcontrolnetwork picon
-      install: skip
-
-    - stage: deploy
-      name: GX Contractor
-      script: deploy/index.js gxcontractor picon
-      install: skip
-
-    - stage: deploy
-      name: Forester Network
-      script: deploy/index.js foresternetwork picon
-      install: skip
-
-    - stage: deploy
-      name: HC Innovation Group
-      script: deploy/index.js hcinnovationgroup picon
-      install: skip
-
-    - stage: deploy
-      name: Healthcare Purchasing News Online
-      script: deploy/index.js hpnonline picon
-      install: skip
-
-    - stage: deploy
-      name: Industrial Laser Solutions
-      script: deploy/index.js industrial-lasers aerilon
-      install: skip
-
-    - stage: deploy
-      name: Intelligent Aerospace
-      script: deploy/index.js intelligent-aerospace aerilon
-      install: skip
-
-    - stage: deploy
-      name: Laser Focus World
-      script: deploy/index.js laserfocusworld aerilon
-      install: skip
-
-    - stage: deploy
-      name: LEDs Magazine
-      script: deploy/index.js ledsmagazine aerilon
-      install: skip
-
-    - stage: deploy
-      name: Lightwave Online
-      script: deploy/index.js lightwaveonline aerilon
-      install: skip
-
-    - stage: deploy
-      name: Locksmith Ledger
-      script: deploy/index.js locksmithledger picon
-      install: skip
-
-    - stage: deploy
-      name: Mass Transit
-      script: deploy/index.js masstransitmag picon
-      install: skip
-
-    - stage: deploy
-      name: Medical Laboratory Observer
-      script: deploy/index.js mlo-online picon
-      install: skip
-
-    - stage: deploy
-      name: Military & Aerospace Electronics
-      script: deploy/index.js militaryaerospace aerilon
-      install: skip
-
-    - stage: deploy
-      name: MSW Management
-      script: deploy/index.js mswmanagement picon
-      install: skip
-
-    - stage: deploy
-      name: Officer
-      script: deploy/index.js officer picon
-      install: skip
-
-    # - stage: deploy
-    #   name: Oil & Gas Journal
-    #   script: deploy/index.js ogj aerilon
-    #   install: skip
-
-    - stage: deploy
-      name: Offshore
-      script: deploy/index.js offshore-mag aerilon
-      install: skip
-
-    - stage: deploy
-      name: Perio Implant Advisory
-      script: deploy/index.js perioimplantadvisory aerilon
-      install: skip
-
-    - stage: deploy
-      name: Plastics Machinery Magazine
-      script: deploy/index.js plasticsmachinerymagazine picon
-      install: skip
-
-    - stage: deploy
-      name: Processing Magazine
-      script: deploy/index.js processingmagazine picon
-      install: skip
-
-    - stage: deploy
-      name: Registered Dental Hygienists
-      script: deploy/index.js rdhmag aerilon
-      install: skip
-
-    - stage: deploy
-      name: Security Info Watch
-      script: deploy/index.js securityinfowatch picon
-      install: skip
-
-    - stage: deploy
-      name: Storm H2O
-      script: deploy/index.js stormh2o picon
-      install: skip
-
-    - stage: deploy
-      name: Strategies Unlimited
-      script: deploy/index.js strategies-u aerilon
-      install: skip
-
-    - stage: deploy
-      name: Utility Products
-      script: deploy/index.js utilityproducts aerilon
-      install: skip
-
-    - stage: deploy
-      name: Vehicle Service Pros
-      script: deploy/index.js vehicleservicepros picon
-      install: skip
-
-    - stage: deploy
-      name: Vending Market Watch
-      script: deploy/index.js vendingmarketwatch picon
-      install: skip
-
-    - stage: deploy
-      name: Vision Systems Design
-      script: deploy/index.js vision-systems aerilon
-      install: skip
-
-    - stage: deploy
-      name: Water Technology
-      script: deploy/index.js watertechonline aerilon
-      install: skip
-
-    - stage: deploy
-      name: Waterworld
-      script: deploy/index.js waterworld aerilon
-      install: skip
+      env: [ENVIRONMENT=staging RANCHER_CLUSTERID=c-rc5kp]
