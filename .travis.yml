@@ -2,15 +2,15 @@ language: node_js
 node_js: "10.15"
 cache: yarn
 
-x-production-env: &production-env
+_production-env: &production-env
   ENVIRONMENT: production
   RANCHER_CLUSTERID: c-gxsr7
 
-x-staging-env: &staging-env
+_staging-env: &staging-env
   ENVIRONMENT: staging
   RANCHER_CLUSTERID: c-rc5kp
 
-x-production-job: &production-job
+_production-job: &production-job
   stage: production
   name: SITE_NAME
   script: npx @base-cms/website-deployment-tool deploy SITE_NAME SITE_STACK
@@ -18,7 +18,7 @@ x-production-job: &production-job
   env:
     <<: *production-env
 
-x-staging-job: &staging-job
+_staging-job: &staging-job
   stage: staging
   name: SITE_NAME
   script: npx @base-cms/website-deployment-tool deploy SITE_NAME SITE_STACK
@@ -347,7 +347,7 @@ jobs:
       name: vision-systems.com
       script: npx @base-cms/website-deployment-tool deploy vision-systems.com aerilon
 
-      - <<: *production-job
+    - <<: *production-job
       name: watertechonline.com
       script: npx @base-cms/website-deployment-tool deploy watertechonline.com aerilon
     - <<: *staging-job
