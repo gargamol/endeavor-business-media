@@ -1,8 +1,8 @@
 {
-  "name": "@base-cms-websites/offshore-mag",
+  "name": "@base-cms-websites/offshore-mag.com",
   "version": "1.0.5",
   "author": "Jacob Bare <jacob@limit0.io>",
-  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/offshore-mag",
+  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/offshore-mag.com",
   "license": "MIT",
   "private": true,
   "scripts": {
