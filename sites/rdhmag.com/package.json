@@ -1,8 +1,8 @@
 {
-  "name": "@base-cms-websites/rdhmag",
+  "name": "@base-cms-websites/rdhmag.com",
   "version": "1.0.4",
   "author": "Alysha Buselt <abuselt@endeavorb2b.com>",
-  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/rdhmag",
+  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/rdhmag.com",
   "license": "MIT",
   "private": true,
   "scripts": {
