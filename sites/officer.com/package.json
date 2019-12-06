@@ -1,8 +1,8 @@
 {
-  "name": "@base-cms-websites/officer",
+  "name": "@base-cms-websites/officer.com",
   "version": "1.0.4",
   "author": "Brian Miller<bmiller@endeavorb2b.com>",
-  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/officer",
+  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/officer.com",
   "license": "MIT",
   "private": true,
   "scripts": {
