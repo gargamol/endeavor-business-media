@@ -1,8 +1,8 @@
 {
-  "name": "@base-cms-websites/vehicleservicepros",
+  "name": "@base-cms-websites/vehicleservicepros.com",
   "version": "1.0.5",
   "author": "Brandon Krigbaum <brandonbk@gmail.com>",
-  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/vehicleservicepros",
+  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/vehicleservicepros.com",
   "license": "MIT",
   "private": true,
   "scripts": {
