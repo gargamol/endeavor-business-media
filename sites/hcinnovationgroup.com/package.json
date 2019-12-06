@@ -1,8 +1,8 @@
 {
-  "name": "@base-cms-websites/hcinnovationgroup",
+  "name": "@base-cms-websites/hcinnovationgroup.com",
   "version": "1.0.5",
   "author": "Brandon Krigbaum <brandonbk@gmail.com>",
-  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/hcinnovationgroup",
+  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/hcinnovationgroup.com",
   "license": "MIT",
   "private": true,
   "scripts": {
