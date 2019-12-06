@@ -1,8 +1,8 @@
 {
-  "name": "@base-cms-websites/intelligent-aerospace",
+  "name": "@base-cms-websites/intelligent-aerospace.com",
   "version": "1.0.5",
   "author": "Brandon Krigbaum <brandonbk@gmail.com>",
-  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/intelligent-aerospace",
+  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/intelligent-aerospace.com",
   "license": "MIT",
   "private": true,
   "scripts": {
