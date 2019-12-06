@@ -1,8 +1,8 @@
 {
-  "name": "@base-cms-websites/watertechonline",
+  "name": "@base-cms-websites/watertechonline.com",
   "version": "1.0.4",
   "author": "Brandon Krigbaum <brandonbk@gmail.com>",
-  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/watertechonline",
+  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/watertechonline.com",
   "license": "MIT",
   "private": true,
   "scripts": {
