@@ -143,21 +143,21 @@ services:
       - "9714:80"
       - "19714:19714"
 
-  # aviationpros:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/aviationpros
-  #   environment:
-  #     <<: *env
-  #     <<: *env-picon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9715
-  #     LIVERELOAD_PORT: 19715
-  #     TENANT_KEY: cygnus_cavc
-  #     SITE_ID: 5409cf10c827f1be4bb483f9
-  #   ports:
-  #     - "9715:80"
-  #     - "19715:19715"
+  aviationpros:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/aviationpros
+    environment:
+      <<: *env
+      <<: *env-picon-staging
+      PORT: 80
+      EXPOSED_PORT: 9715
+      LIVERELOAD_PORT: 19715
+      TENANT_KEY: cygnus_cavc
+      SITE_ID: 5409cf10c827f1be4bb483f9
+    ports:
+      - "9715:80"
+      - "19715:19715"
 
   dentaleconomics:
     <<: *node
