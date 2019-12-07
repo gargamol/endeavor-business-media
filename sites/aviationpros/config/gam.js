@@ -1,6 +1,6 @@
 const GAMConfiguration = require('@base-cms/marko-web-gam/config');
 
-const config = new GAMConfiguration('21687441225', { basePath: 'SIW' });
+const config = new GAMConfiguration('21687441225', { basePath: 'Aviation' });
 
 config
   .setTemplate('LB', {
@@ -25,69 +25,93 @@ config
     { name: 'reskin', path: 'default/reskin' },
     { name: 'wa', path: 'default/wa' },
   ])
-  .setAliasAdUnits('security-executives', [
-    { name: 'lb1', templateName: 'LB', path: 'security-executives/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'security-executives/lb2' },
-    { name: 'rail1', templateName: 'RAIL1', path: 'security-executives/rail1' },
-    { name: 'rail2', templateName: 'RAIL2', path: 'security-executives/rail2' },
-    { name: 'load-more', templateName: 'LM', path: 'security-executives/load-more' },
-    { name: 'reskin', path: 'security-executives/reskin' },
+  .setAliasAdUnits('aircraft', [
+    { name: 'lb1', templateName: 'LB', path: 'aircraft/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'aircraft/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'aircraft/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'aircraft/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'aircraft/load-more' },
+    { name: 'reskin', path: 'aircraft/reskin' },
   ])
-  .setAliasAdUnits('integrators', [
-    { name: 'lb1', templateName: 'LB', path: 'integrators/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'integrators/lb2' },
-    { name: 'rail1', templateName: 'RAIL1', path: 'integrators/rail1' },
-    { name: 'rail2', templateName: 'RAIL2', path: 'integrators/rail2' },
-    { name: 'load-more', templateName: 'LM', path: 'integrators/load-more' },
-    { name: 'reskin', path: 'integrators/reskin' },
+  .setAliasAdUnits('engines-components', [
+    { name: 'lb1', templateName: 'LB', path: 'engines-components/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'engines-components/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'engines-components/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'engines-components/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'engines-components/load-more' },
+    { name: 'reskin', path: 'engines-components/reskin' },
   ])
-  .setAliasAdUnits('video-surveillance', [
-    { name: 'lb1', templateName: 'LB', path: 'video-surveillance/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'video-surveillance/lb2' },
-    { name: 'rail1', templateName: 'RAIL1', path: 'video-surveillance/rail1' },
-    { name: 'rail2', templateName: 'RAIL2', path: 'video-surveillance/rail2' },
-    { name: 'load-more', templateName: 'LM', path: 'video-surveillance/load-more' },
-    { name: 'reskin', path: 'video-surveillance/reskin' },
+  .setAliasAdUnits('tools-equipment', [
+    { name: 'lb1', templateName: 'LB', path: 'tools-equipment/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'tools-equipment/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'tools-equipment/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'tools-equipment/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'tools-equipment/load-more' },
+    { name: 'reskin', path: 'tools-equipment/reskin' },
   ])
-  .setAliasAdUnits('access-identity', [
-    { name: 'lb1', templateName: 'LB', path: 'access-identity/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'access-identity/lb2' },
-    { name: 'rail1', templateName: 'RAIL1', path: 'access-identity/rail1' },
-    { name: 'rail2', templateName: 'RAIL2', path: 'access-identity/rail2' },
-    { name: 'load-more', templateName: 'LM', path: 'access-identity/load-more' },
-    { name: 'reskin', path: 'access-identity/reskin' },
+  .setAliasAdUnits('education-training', [
+    { name: 'lb1', templateName: 'LB', path: 'education-training/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'education-training/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'education-training/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'education-training/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'education-training/load-more' },
+    { name: 'reskin', path: 'education-training/reskin' },
   ])
-  .setAliasAdUnits('residential-technologies', [
-    { name: 'lb1', templateName: 'LB', path: 'residential-technologies/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'residential-technologies/lb2' },
-    { name: 'rail1', templateName: 'RAIL1', path: 'residential-technologies/rail1' },
-    { name: 'rail2', templateName: 'RAIL2', path: 'residential-technologies/rail2' },
-    { name: 'load-more', templateName: 'LM', path: 'residential-technologies/load-more' },
-    { name: 'reskin', path: 'residential-technologies/reskin' },
+  .setAliasAdUnits('airports', [
+    { name: 'lb1', templateName: 'LB', path: 'airports/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'airports/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'airports/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'airports/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'airports/load-more' },
+    { name: 'reskin', path: 'airports/reskin' },
   ])
-  .setAliasAdUnits('alarms-monitoring', [
-    { name: 'lb1', templateName: 'LB', path: 'alarms-monitoring/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'alarms-monitoring/lb2' },
-    { name: 'rail1', templateName: 'RAIL1', path: 'alarms-monitoring/rail1' },
-    { name: 'rail2', templateName: 'RAIL2', path: 'alarms-monitoring/rail2' },
-    { name: 'load-more', templateName: 'LM', path: 'alarms-monitoring/load-more' },
-    { name: 'reskin', path: 'alarms-monitoring/reskin' },
+  .setAliasAdUnits('aviation-security', [
+    { name: 'lb1', templateName: 'LB', path: 'aviation-security/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'aviation-security/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'aviation-security/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'aviation-security/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'aviation-security/load-more' },
+    { name: 'reskin', path: 'aviation-security/reskin' },
   ])
-  .setAliasAdUnits('cybersecurity', [
-    { name: 'lb1', templateName: 'LB', path: 'cybersecurity/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'cybersecurity/lb2' },
-    { name: 'rail1', templateName: 'RAIL1', path: 'cybersecurity/rail1' },
-    { name: 'rail2', templateName: 'RAIL2', path: 'cybersecurity/rail2' },
-    { name: 'load-more', templateName: 'LM', path: 'cybersecurity/load-more' },
-    { name: 'reskin', path: 'cybersecurity/reskin' },
+  .setAliasAdUnits('aoa', [
+    { name: 'lb1', templateName: 'LB', path: 'aoa/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'aoa/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'aoa/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'aoa/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'aoa/load-more' },
+    { name: 'reskin', path: 'aoa/reskin' },
   ])
-  .setAliasAdUnits('perimeter-security', [
-    { name: 'lb1', templateName: 'LB', path: 'perimeter-security/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'perimeter-security/lb2' },
-    { name: 'rail1', templateName: 'RAIL1', path: 'perimeter-security/rail1' },
-    { name: 'rail2', templateName: 'RAIL2', path: 'perimeter-security/rail2' },
-    { name: 'load-more', templateName: 'LM', path: 'perimeter-security/load-more' },
-    { name: 'reskin', path: 'perimeter-security/reskin' },
+  .setAliasAdUnits('fbos-tenants', [
+    { name: 'lb1', templateName: 'LB', path: 'fbos-tenants/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'fbos-tenants/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'fbos-tenants/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'fbos-tenants/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'fbos-tenants/load-more' },
+    { name: 'reskin', path: 'fbos-tenants/reskin' },
+  ])
+  .setAliasAdUnits('airlines', [
+    { name: 'lb1', templateName: 'LB', path: 'airlines/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'airlines/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'airlines/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'airlines/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'airlines/load-more' },
+    { name: 'reskin', path: 'airlines/reskin' },
+  ])
+  .setAliasAdUnits('ground-handling', [
+    { name: 'lb1', templateName: 'LB', path: 'ground-handling/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'ground-handling/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'ground-handling/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'ground-handling/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'ground-handling/load-more' },
+    { name: 'reskin', path: 'ground-handling/reskin' },
+  ])
+  .setAliasAdUnits('gse', [
+    { name: 'lb1', templateName: 'LB', path: 'gse/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'gse/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'gse/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'gse/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'gse/load-more' },
+    { name: 'reskin', path: 'gse/reskin' },
   ]);
 
 module.exports = config;

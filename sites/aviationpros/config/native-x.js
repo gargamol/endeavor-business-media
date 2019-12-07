@@ -4,31 +4,40 @@ const config = new NativeXConfiguration('https://ebm.native-x.io');
 
 config
   .setAliasPlacements('default', [
-    { name: 'default', id: '5c0e7695cf399b000179ee97' },
+    { name: 'default', id: '5c3ca7bb93865500013635d9' },
   ])
-  .setAliasPlacements('security-executives', [
-    { name: 'default', id: '5c0e76c8cf399b000179f1f4' },
+  .setAliasPlacements('aircraft', [
+    { name: 'default', id: '5c3caafd9386550001366e90' },
   ])
-  .setAliasPlacements('integrators', [
-    { name: 'default', id: '5c0e76f484c2cd000147d261' },
+  .setAliasPlacements('engines-components', [
+    { name: 'default', id: '5c3ca9dd0af48a0001ddc45b' },
   ])
-  .setAliasPlacements('video-surveillance', [
-    { name: 'default', id: '5c0e7724cf399b000179f750' },
+  .setAliasPlacements('tools-equipment', [
+    { name: 'default', id: '5c3ca8070af48a0001dda258' },
   ])
-  .setAliasPlacements('access-identity', [
-    { name: 'default', id: '5c0e774a84c2cd000147d79a' },
+  .setAliasPlacements('education-training', [
+    { name: 'default', id: '5c3caa060af48a0001ddc6d8' },
   ])
-  .setAliasPlacements('residential-technologies', [
-    { name: 'default', id: '5c0e776a84c2cd000147d9a7' },
+  .setAliasPlacements('airports', [
+    { name: 'default', id: '5c3caaa99386550001366902' },
   ])
-  .setAliasPlacements('alarms-monitoring', [
-    { name: 'default', id: '5c0e7794cf399b000179fe68' },
+  .setAliasPlacements('aviation-security', [
+    { name: 'default', id: '5c3caa230af48a0001ddc936' },
   ])
-  .setAliasPlacements('cybersecurity', [
-    { name: 'default', id: '5c0e77b584c2cd000147de60' },
+  .setAliasPlacements('aoa', [
+    { name: 'default', id: '5c3caa7893865500013665dd' },
   ])
-  .setAliasPlacements('perimeter-security', [
-    { name: 'default', id: '5c0e77dd84c2cd000147e0ee' },
+  .setAliasPlacements('fbos-tenants', [
+    { name: 'default', id: '5c3ca99d0af48a0001ddbf14' },
+  ])
+  .setAliasPlacements('airlines', [
+    { name: 'default', id: '5c3caad60af48a0001ddd4a8' },
+  ])
+  .setAliasPlacements('ground-handling', [
+    { name: 'default', id: '5c3ca89c0af48a0001ddad7f' },
+  ])
+  .setAliasPlacements('gse', [
+    { name: 'default', id: '5c3ca8560af48a0001dda889' },
   ]);
 
 module.exports = config;
