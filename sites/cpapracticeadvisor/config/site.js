@@ -42,7 +42,7 @@ module.exports = {
     enabled: true,
     directSend: true,
     sendTo: 'bstrobel@southcomm.com',
-    sendFrom: 'SecurityInfoWatch.com <noreply@baseplatform.io>',
+    sendFrom: 'CPAPracticeAdvisor.com <noreply@baseplatform.io>',
     sendBcc: 'emailactivity@cygnus.com',
     logo: 'https://img.cpapracticeadvisor.com/files/base/cygnus/cpa/image/static/logo/site_logo_white.png?h=60',
     bgColor: '#164f77',
