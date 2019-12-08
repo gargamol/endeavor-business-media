@@ -298,7 +298,7 @@ services:
       EXPOSED_PORT: 9724
       LIVERELOAD_PORT: 19724
       TENANT_KEY: ebm_pmm
-      SITE_ID:
+      SITE_ID: 5bdc6830346922f7118b4567
     ports:
       - "9724:80"
       - "19724:19724"
