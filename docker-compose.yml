@@ -287,21 +287,21 @@ services:
       - "9723:80"
       - "19723:19723"
 
-  # plasticsmachinerymagazine:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/plasticsmachinerymagazine
-  #   environment:
-  #     <<: *env
-  #     <<: *env-picon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9724
-  #     LIVERELOAD_PORT: 19724
-  #     TENANT_KEY: ebm_pmm
-  #     SITE_ID:
-  #   ports:
-  #     - "9724:80"
-  #     - "19724:19724"
+  plasticsmachinerymagazine:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/plasticsmachinerymagazine
+    environment:
+      <<: *env
+      <<: *env-picon-staging
+      PORT: 80
+      EXPOSED_PORT: 9724
+      LIVERELOAD_PORT: 19724
+      TENANT_KEY: ebm_pmm
+      SITE_ID:
+    ports:
+      - "9724:80"
+      - "19724:19724"
 
   processingmagazine:
     <<: *node
