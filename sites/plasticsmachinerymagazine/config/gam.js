@@ -1,6 +1,6 @@
 const GAMConfiguration = require('@base-cms/marko-web-gam/config');
 
-const config = new GAMConfiguration('21687441225', { basePath: 'SIW' });
+const config = new GAMConfiguration('21687441225', { basePath: 'PlasticsMachinery' });
 
 config
   .setTemplate('LB', {
@@ -25,69 +25,77 @@ config
     { name: 'reskin', path: 'default/reskin' },
     { name: 'wa', path: 'default/wa' },
   ])
-  .setAliasAdUnits('security-executives', [
-    { name: 'lb1', templateName: 'LB', path: 'security-executives/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'security-executives/lb2' },
-    { name: 'rail1', templateName: 'RAIL1', path: 'security-executives/rail1' },
-    { name: 'rail2', templateName: 'RAIL2', path: 'security-executives/rail2' },
-    { name: 'load-more', templateName: 'LM', path: 'security-executives/load-more' },
-    { name: 'reskin', path: 'security-executives/reskin' },
+  .setAliasAdUnits('additive-manufacturing', [
+    { name: 'lb1', templateName: 'LB', path: 'additive-manufacturing/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'additive-manufacturing/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'additive-manufacturing/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'additive-manufacturing/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'additive-manufacturing/load-more' },
+    { name: 'reskin', path: 'additive-manufacturing/reskin' },
   ])
-  .setAliasAdUnits('integrators', [
-    { name: 'lb1', templateName: 'LB', path: 'integrators/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'integrators/lb2' },
-    { name: 'rail1', templateName: 'RAIL1', path: 'integrators/rail1' },
-    { name: 'rail2', templateName: 'RAIL2', path: 'integrators/rail2' },
-    { name: 'load-more', templateName: 'LM', path: 'integrators/load-more' },
-    { name: 'reskin', path: 'integrators/reskin' },
+  .setAliasAdUnits('blow-molding', [
+    { name: 'lb1', templateName: 'LB', path: 'blow-molding/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'blow-molding/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'blow-molding/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'blow-molding/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'blow-molding/load-more' },
+    { name: 'reskin', path: 'blow-molding/reskin' },
   ])
-  .setAliasAdUnits('video-surveillance', [
-    { name: 'lb1', templateName: 'LB', path: 'video-surveillance/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'video-surveillance/lb2' },
-    { name: 'rail1', templateName: 'RAIL1', path: 'video-surveillance/rail1' },
-    { name: 'rail2', templateName: 'RAIL2', path: 'video-surveillance/rail2' },
-    { name: 'load-more', templateName: 'LM', path: 'video-surveillance/load-more' },
-    { name: 'reskin', path: 'video-surveillance/reskin' },
+  .setAliasAdUnits('thermoforming', [
+    { name: 'lb1', templateName: 'LB', path: 'thermoforming/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'thermoforming/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'thermoforming/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'thermoforming/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'thermoforming/load-more' },
+    { name: 'reskin', path: 'thermoforming/reskin' },
   ])
-  .setAliasAdUnits('access-identity', [
-    { name: 'lb1', templateName: 'LB', path: 'access-identity/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'access-identity/lb2' },
-    { name: 'rail1', templateName: 'RAIL1', path: 'access-identity/rail1' },
-    { name: 'rail2', templateName: 'RAIL2', path: 'access-identity/rail2' },
-    { name: 'load-more', templateName: 'LM', path: 'access-identity/load-more' },
-    { name: 'reskin', path: 'access-identity/reskin' },
+  .setAliasAdUnits('compounding', [
+    { name: 'lb1', templateName: 'LB', path: 'compounding/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'compounding/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'compounding/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'compounding/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'compounding/load-more' },
+    { name: 'reskin', path: 'compounding/reskin' },
   ])
-  .setAliasAdUnits('residential-technologies', [
-    { name: 'lb1', templateName: 'LB', path: 'residential-technologies/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'residential-technologies/lb2' },
-    { name: 'rail1', templateName: 'RAIL1', path: 'residential-technologies/rail1' },
-    { name: 'rail2', templateName: 'RAIL2', path: 'residential-technologies/rail2' },
-    { name: 'load-more', templateName: 'LM', path: 'residential-technologies/load-more' },
-    { name: 'reskin', path: 'residential-technologies/reskin' },
+  .setAliasAdUnits('injection-molding', [
+    { name: 'lb1', templateName: 'LB', path: 'injection-molding/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'injection-molding/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'injection-molding/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'injection-molding/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'injection-molding/load-more' },
+    { name: 'reskin', path: 'injection-molding/reskin' },
   ])
-  .setAliasAdUnits('alarms-monitoring', [
-    { name: 'lb1', templateName: 'LB', path: 'alarms-monitoring/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'alarms-monitoring/lb2' },
-    { name: 'rail1', templateName: 'RAIL1', path: 'alarms-monitoring/rail1' },
-    { name: 'rail2', templateName: 'RAIL2', path: 'alarms-monitoring/rail2' },
-    { name: 'load-more', templateName: 'LM', path: 'alarms-monitoring/load-more' },
-    { name: 'reskin', path: 'alarms-monitoring/reskin' },
+  .setAliasAdUnits('extrusion', [
+    { name: 'lb1', templateName: 'LB', path: 'extrusion/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'extrusion/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'extrusion/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'extrusion/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'extrusion/load-more' },
+    { name: 'reskin', path: 'extrusion/reskin' },
   ])
-  .setAliasAdUnits('cybersecurity', [
-    { name: 'lb1', templateName: 'LB', path: 'cybersecurity/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'cybersecurity/lb2' },
-    { name: 'rail1', templateName: 'RAIL1', path: 'cybersecurity/rail1' },
-    { name: 'rail2', templateName: 'RAIL2', path: 'cybersecurity/rail2' },
-    { name: 'load-more', templateName: 'LM', path: 'cybersecurity/load-more' },
-    { name: 'reskin', path: 'cybersecurity/reskin' },
+  .setAliasAdUnits('recycling', [
+    { name: 'lb1', templateName: 'LB', path: 'recycling/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'recycling/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'recycling/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'recycling/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'recycling/load-more' },
+    { name: 'reskin', path: 'recycling/reskin' },
   ])
-  .setAliasAdUnits('perimeter-security', [
-    { name: 'lb1', templateName: 'LB', path: 'perimeter-security/lb1' },
-    { name: 'lb2', templateName: 'LB', path: 'perimeter-security/lb2' },
-    { name: 'rail1', templateName: 'RAIL1', path: 'perimeter-security/rail1' },
-    { name: 'rail2', templateName: 'RAIL2', path: 'perimeter-security/rail2' },
-    { name: 'load-more', templateName: 'LM', path: 'perimeter-security/load-more' },
-    { name: 'reskin', path: 'perimeter-security/reskin' },
+  .setAliasAdUnits('molds-tooling', [
+    { name: 'lb1', templateName: 'LB', path: 'molds-tooling/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'molds-tooling/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'molds-tooling/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'molds-tooling/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'molds-tooling/load-more' },
+    { name: 'reskin', path: 'molds-tooling/reskin' },
+  ])
+  .setAliasAdUnits('rotomolding', [
+    { name: 'lb1', templateName: 'LB', path: 'rotomolding/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'rotomolding/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'rotomolding/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'rotomolding/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'rotomolding/load-more' },
+    { name: 'reskin', path: 'rotomolding/reskin' },
   ]);
 
 module.exports = config;

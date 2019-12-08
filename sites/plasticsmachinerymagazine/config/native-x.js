@@ -4,31 +4,34 @@ const config = new NativeXConfiguration('https://ebm.native-x.io');
 
 config
   .setAliasPlacements('default', [
-    { name: 'default', id: '5c0e7695cf399b000179ee97' },
+    { name: 'default', id: '5cae78baaa89740001456f08' },
   ])
-  .setAliasPlacements('security-executives', [
-    { name: 'default', id: '5c0e76c8cf399b000179f1f4' },
+  .setAliasPlacements('additive-manufacturing', [
+    { name: 'default', id: '5cae79f437b0b90001eb450e' },
   ])
-  .setAliasPlacements('integrators', [
-    { name: 'default', id: '5c0e76f484c2cd000147d261' },
+  .setAliasPlacements('blow-molding', [
+    { name: 'default', id: '5cae79d537b0b90001eb4288' },
   ])
-  .setAliasPlacements('video-surveillance', [
-    { name: 'default', id: '5c0e7724cf399b000179f750' },
+  .setAliasPlacements('thermoforming', [
+    { name: 'default', id: '5cae79b737b0b90001eb3fd6' },
   ])
-  .setAliasPlacements('access-identity', [
-    { name: 'default', id: '5c0e774a84c2cd000147d79a' },
+  .setAliasPlacements('compounding', [
+    { name: 'default', id: '5cae799837b0b90001eb3cce' },
   ])
-  .setAliasPlacements('residential-technologies', [
-    { name: 'default', id: '5c0e776a84c2cd000147d9a7' },
+  .setAliasPlacements('injection-molding', [
+    { name: 'default', id: '5cae7977aa897400014583ff' },
   ])
-  .setAliasPlacements('alarms-monitoring', [
-    { name: 'default', id: '5c0e7794cf399b000179fe68' },
+  .setAliasPlacements('extrusion', [
+    { name: 'default', id: '5cae794137b0b90001eb3399' },
   ])
-  .setAliasPlacements('cybersecurity', [
-    { name: 'default', id: '5c0e77b584c2cd000147de60' },
+  .setAliasPlacements('recycling', [
+    { name: 'default', id: '5cae7923aa89740001457b5b' },
   ])
-  .setAliasPlacements('perimeter-security', [
-    { name: 'default', id: '5c0e77dd84c2cd000147e0ee' },
+  .setAliasPlacements('molds-tooling', [
+    { name: 'default', id: '5cae7902aa89740001457776' },
+  ])
+  .setAliasPlacements('rotomolding', [
+    { name: 'default', id: '5cae78d6aa89740001457249' },
   ]);
 
 module.exports = config;
