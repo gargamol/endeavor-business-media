@@ -67,12 +67,12 @@ jobs:
     # vvv ADD SITES HERE vvv #
     ##########################
 
-    # - <<: *production-job
-    #   name: aviationpros.com
-    #   script: npx @base-cms/website-deployment-tool deploy aviationpros.com picon
-    # - <<: *staging-job
-    #   name: aviationpros.com
-    #   script: npx @base-cms/website-deployment-tool deploy aviationpros.com picon
+    - <<: *production-job
+      name: aviationpros.com
+      script: npx @base-cms/website-deployment-tool deploy aviationpros.com picon
+    - <<: *staging-job
+      name: aviationpros.com
+      script: npx @base-cms/website-deployment-tool deploy aviationpros.com picon
 
     - <<: *production-job
       name: bioopticsworld.com

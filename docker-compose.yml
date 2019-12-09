@@ -143,10 +143,10 @@ services:
       - "9714:80"
       - "19714:19714"
 
-  aviationpros:
+  aviationpros.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/aviationpros
+    working_dir: /root/sites/aviationpros.com
     environment:
       <<: *env
       <<: *env-picon-staging
