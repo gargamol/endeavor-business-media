@@ -1,0 +1,217 @@
+import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
+import queryFragment from "../graphql/fragments/content-list";
+import latestIssueFragment from "../graphql/fragments/magazine-latest-issue";
+import GAM from "../../config/gam";
+
+$ const { id, alias, name, pageNode } = data;
+
+<marko-web-website-section-page-layout id=id alias=alias name=name>
+  <@head>
+    <marko-web-gtm-website-section-context|{ context }| alias=alias>
+      <marko-web-gtm-push data=context />
+    </marko-web-gtm-website-section-context>
+    <marko-web-resolve-page|{ data: section }| node=pageNode>
+      $ const aliases = hierarchyAliases(section);
+      $ const adSlots = {
+          "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
+          "gpt-ad-rail1": GAM.getAdUnit({ name: "rail1", aliases }),
+          "gpt-ad-rail2": GAM.getAdUnit({ name: "rail2", aliases }),
+        }
+       <marko-web-gam-slots slots=adSlots />
+    </marko-web-resolve-page>
+  </@head>
+  <@above-container>
+    <marko-web-resolve-page|{ data: section }| node=pageNode>
+      $ const aliases = hierarchyAliases(section);
+      <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "wa", aliases }) />
+      <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "reskin", aliases }) />
+    </marko-web-resolve-page>
+  </@above-container>
+  <@page>
+    <marko-web-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
+
+    <marko-web-query|{ nodes }|
+      name="website-optioned-content"
+      params={ sectionId: id, optionName: "Pinned", limit: 5, queryFragment }
+    >
+      <website-content-hero-flow nodes=nodes />
+    </marko-web-query>
+
+    <div class="row">
+      <div class="col-lg-4 mb-block">
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "aircraft", limit: 4, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/aircraft">Aircraft</marko-web-link>
+            </@header>
+            <@native-x index=3 name="default" aliases=["aircraft"] />
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+
+      <div class="col-lg-4 mb-block">
+        <marko-web-gam-display-ad id="gpt-ad-rail1" />
+      </div>
+
+      <div class="col-lg-4 mb-block">
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "engines-components", limit: 4, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/engines-components">Engines & Components</marko-web-link>
+            </@header>
+            <@native-x index=3 name="default" aliases=["engines-components"] />
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 mb-block">
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "tools-equipment", limit: 4, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/tools-equipment">Tools & Equipment</marko-web-link>
+            </@header>
+            <@native-x index=3 name="default" aliases=["tools-equipment"] />
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+      <div class="col-lg-4 mb-block">
+          <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "education-training", limit: 4, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/education-training">Education & Training</marko-web-link>
+            </@header>
+            <@native-x index=3 name="default" aliases=["education-training"] />
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+      <div class="col-lg-4 mb-block">
+          <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "airports", limit: 4, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/airports">Airports</marko-web-link>
+            </@header>
+            <@native-x index=3 name="default" aliases=["airports"] />
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 mb-block">
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "aviation-security", limit: 4, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/aviation-security">Aviation Security</marko-web-link>
+            </@header>
+            <@native-x index=3 name="default" aliases=["aviation-security"] />
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+      <div class="col-lg-4 mb-block">
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "aoa", limit: 4, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/aoa">AOA</marko-web-link>
+            </@header>
+            <@native-x index=3 name="default" aliases=["aoa"] />
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+
+      <div class="col-lg-4 mb-block">
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "fbos-tenants", limit: 4, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/fbos-tenants">FBOs & Tenants</marko-web-link>
+            </@header>
+            <@native-x index=3 name="default" aliases=["fbos-tenants"] />
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+      <div class="col-lg-4 mb-block">
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "airlines", limit: 4, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/airlines">Airlines</marko-web-link>
+            </@header>
+            <@native-x index=3 name="default" aliases=["airlines"] />
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+      <div class="col-lg-4 mb-block">
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "ground-handling", limit: 4, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/ground-handling">Ground Handling</marko-web-link>
+            </@header>
+            <@native-x index=3 name="default" aliases=["ground-handling"] />
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+      <div class="col-lg-4 mb-block">
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "gse", limit: 4, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/gse">GSE</marko-web-link>
+            </@header>
+            <@native-x index=3 name="default" aliases=["gse"] />
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+    </div>
+  </@page>
+  <@below-page>
+    <marko-web-resolve-page|{ data: section }| node=pageNode>
+      $ const aliases = hierarchyAliases(section);
+      <marko-web-load-more
+        component-name="content-load-more-flow"
+        component-input={ aliases }
+        fragment-name="content-list"
+        query-name="website-scheduled-content"
+        query-params={ sectionId: id, limit: 14, skip: 5 }
+        max-pages=0
+        page-input={ for: "website-section", id }
+      />
+    </marko-web-resolve-page>
+  </@below-page>
+  <@foot>
+    <marko-web-resolve-page|{ data: section }| node=pageNode>
+      $ const aliases = hierarchyAliases(section);
+      <marko-web-gam-fixed-ad-bottom ...GAM.getAdUnit({ name: "lb2", aliases }) refresh-interval=15 scroll-offset=100 />
+    </marko-web-resolve-page>
+  </@foot>
+</marko-web-website-section-page-layout>

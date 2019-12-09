@@ -25,10 +25,10 @@ jobs:
       script: deploy/notify.sh
       install: skip
 
-    # - stage: deploy
-    #   name: Aviation Pros
-    #   script: deploy/index.js aviationpros picon
-    #   install: skip
+    - stage: deploy
+      name: Aviation Pros
+      script: deploy/index.js aviationpros picon
+      install: skip
 
     - stage: deploy
       name: Bio Optics World
