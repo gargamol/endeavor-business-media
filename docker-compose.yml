@@ -223,21 +223,21 @@ services:
       - "9719:80"
       - "19719:19719"
 
-  # cpapracticeadvisor:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/cpapracticeadvisor
-  #   environment:
-  #     <<: *env
-  #     <<: *env-picon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9720
-  #     LIVERELOAD_PORT: 19720
-  #     TENANT_KEY: cygnus_cpa
-  #     SITE_ID: 5be05ab10b43fe47008b4567
-  #   ports:
-  #     - "9720:80"
-  #     - "19720:19720"
+  cpapracticeadvisor:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/cpapracticeadvisor
+    environment:
+      <<: *env
+      <<: *env-picon-staging
+      PORT: 80
+      EXPOSED_PORT: 9720
+      LIVERELOAD_PORT: 19720
+      TENANT_KEY: cygnus_cpa
+      SITE_ID: 5be05ab10b43fe47008b4567
+    ports:
+      - "9720:80"
+      - "19720:19720"
 
   hcinnovationgroup:
     <<: *node
