@@ -270,12 +270,12 @@ jobs:
       name: perioimplantadvisory.com
       script: npx @base-cms/website-deployment-tool deploy perioimplantadvisory.com aerilon
 
-    # - <<: *production-job
-    #   name: plasticsmachinerymagazine.com
-    #   script: npx @base-cms/website-deployment-tool deploy plasticsmachinerymagazine.com picon
-    # - <<: *staging-job
-    #   name: plasticsmachinerymagazine.com
-    #   script: npx @base-cms/website-deployment-tool deploy plasticsmachinerymagazine.com picon
+    - <<: *production-job
+      name: plasticsmachinerymagazine.com
+      script: npx @base-cms/website-deployment-tool deploy plasticsmachinerymagazine.com picon
+    - <<: *staging-job
+      name: plasticsmachinerymagazine.com
+      script: npx @base-cms/website-deployment-tool deploy plasticsmachinerymagazine.com picon
 
     - <<: *production-job
       name: processingmagazine.com
