@@ -543,21 +543,21 @@ services:
       - "9739:80"
       - "19739:19739"
 
-  # masstransitmag:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/masstransitmag
-  #   environment:
-  #     <<: *env
-  #     <<: *env-picon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9740
-  #     LIVERELOAD_PORT: 19740
-  #     TENANT_KEY: cygnus_mass
-  #     SITE_ID: 5bdb2821881b9bad008b4567
-  #   ports:
-  #     - "9740:80"
-  #     - "19740:19740"
+  masstransitmag:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/masstransitmag
+    environment:
+      <<: *env
+      <<: *env-picon-staging
+      PORT: 80
+      EXPOSED_PORT: 9740
+      LIVERELOAD_PORT: 19740
+      TENANT_KEY: cygnus_mass
+      SITE_ID: 5bdb2821881b9bad008b4567
+    ports:
+      - "9740:80"
+      - "19740:19740"
 
   vehicleservicepros:
     <<: *node

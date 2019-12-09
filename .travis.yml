@@ -130,10 +130,10 @@ jobs:
       script: deploy/index.js locksmithledger picon
       install: skip
 
-    # - stage: deploy
-    #   name: Mass Transit
-    #   script: deploy/index.js masstransitmag picon
-    #   install: skip
+    - stage: deploy
+      name: Mass Transit
+      script: deploy/index.js masstransitmag picon
+      install: skip
 
     - stage: deploy
       name: Medical Laboratory Observer
