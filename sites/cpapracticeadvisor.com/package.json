@@ -1,8 +1,8 @@
 {
-  "name": "@base-cms-websites/cpapracticeadvisor",
+  "name": "@endeavor-business-media/cpapracticeadvisor.com",
   "version": "1.0.5",
   "author": "Brandon Krigbaum <brandonbk@gmail.com>",
-  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/cpapracticeadvisor",
+  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/cpapracticeadvisor.com",
   "license": "MIT",
   "private": true,
   "scripts": {

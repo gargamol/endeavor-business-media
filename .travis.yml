@@ -95,12 +95,12 @@ jobs:
       name: cablinginstall.com
       script: npx @base-cms/website-deployment-tool deploy cablinginstall.com aerilon
 
-    # - <<: *production-job
-    #   name: cpapracticeadvisor.com
-    #   script: npx @base-cms/website-deployment-tool deploy cpapracticeadvisor.com picon
-    # - <<: *staging-job
-    #   name: cpapracticeadvisor.com
-    #   script: npx @base-cms/website-deployment-tool deploy cpapracticeadvisor.com picon
+    - <<: *production-job
+      name: cpapracticeadvisor.com
+      script: npx @base-cms/website-deployment-tool deploy cpapracticeadvisor.com picon
+    - <<: *staging-job
+      name: cpapracticeadvisor.com
+      script: npx @base-cms/website-deployment-tool deploy cpapracticeadvisor.com picon
 
     - <<: *production-job
       name: dentaleconomics.com

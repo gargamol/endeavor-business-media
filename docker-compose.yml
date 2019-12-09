@@ -223,10 +223,10 @@ services:
       - "9719:80"
       - "19719:19719"
 
-  cpapracticeadvisor:
+  cpapracticeadvisor.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/cpapracticeadvisor
+    working_dir: /root/sites/cpapracticeadvisor.com
     environment:
       <<: *env
       <<: *env-picon-staging
