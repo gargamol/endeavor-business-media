@@ -214,12 +214,12 @@ jobs:
       name: locksmithledger.com
       script: npx @base-cms/website-deployment-tool deploy locksmithledger.com picon
 
-    # - <<: *production-job
-    #   name: masstransitmag.com
-    #   script: npx @base-cms/website-deployment-tool deploy masstransitmag.com picon
-    # - <<: *staging-job
-    #   name: masstransitmag.com
-    #   script: npx @base-cms/website-deployment-tool deploy masstransitmag.com picon
+    - <<: *production-job
+      name: masstransitmag.com
+      script: npx @base-cms/website-deployment-tool deploy masstransitmag.com picon
+    - <<: *staging-job
+      name: masstransitmag.com
+      script: npx @base-cms/website-deployment-tool deploy masstransitmag.com picon
 
     - <<: *production-job
       name: militaryaerospace.com

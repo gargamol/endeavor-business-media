@@ -543,10 +543,10 @@ services:
       - "9739:80"
       - "19739:19739"
 
-  masstransitmag:
+  masstransitmag.com:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/masstransitmag
+    working_dir: /root/sites/masstransitmag.com
     environment:
       <<: *env
       <<: *env-picon-staging
