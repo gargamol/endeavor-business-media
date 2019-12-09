@@ -2,230 +2,380 @@ language: node_js
 node_js: "10.15"
 cache: yarn
 
+_production-env: &production-env
+  ENVIRONMENT: production
+  RANCHER_CLUSTERID: c-gxsr7
+
+_staging-env: &staging-env
+  ENVIRONMENT: staging
+  RANCHER_CLUSTERID: c-rc5kp
+
+_production-job: &production-job
+  stage: production
+  name: SITE_NAME
+  script: npx @base-cms/website-deployment-tool deploy SITE_NAME SITE_STACK
+  install: skip
+  env:
+    <<: *production-env
+
+_staging-job: &staging-job
+  stage: staging
+  name: SITE_NAME
+  script: npx @base-cms/website-deployment-tool deploy SITE_NAME SITE_STACK
+  install: skip
+  env:
+    <<: *staging-env
+
 stages:
   - name: test
-  - name: notify_start
+
+  - name: production-started
+    if: tag =~ /^v\d+\.\d+\.\d+$/
+  - name: production
+    if: tag =~ /^v\d+\.\d+\.\d+$/
+  - name: production-finished
+    if: tag =~ /^v\d+\.\d+\.\d+$/
+
+  - name: staging-started
     if: tag is present
-  - name: deploy
+  - name: staging
     if: tag is present
-  - name: notify
+  - name: staging-finished
     if: tag is present
 
 jobs:
   include:
     - stage: test
       env:
-        - NODE_ENV=test
+        NODE_ENV: test
 
-    - stage: notify_start
-      script: deploy/notify-start.sh
+    - stage: production-started
+      name: Deployment Started
+      script: npx @base-cms/website-deployment-tool notify-started
       install: skip
+      env:
+        <<: *production-env
 
-    - stage: notify
-      script: deploy/notify.sh
+    - stage: staging-started
+      name: Deployment Started
+      script: npx @base-cms/website-deployment-tool notify-started
       install: skip
+      env:
+        <<: *staging-env
 
-    - stage: deploy
-      name: Aviation Pros
-      script: deploy/index.js aviationpros picon
+    ##########################
+    # vvv ADD SITES HERE vvv #
+    ##########################
+
+    - <<: *production-job
+      name: aviationpros.com
+      script: npx @base-cms/website-deployment-tool deploy aviationpros.com picon
+    - <<: *staging-job
+      name: aviationpros.com
+      script: npx @base-cms/website-deployment-tool deploy aviationpros.com picon
+
+    - <<: *production-job
+      name: bioopticsworld.com
+      script: npx @base-cms/website-deployment-tool deploy bioopticsworld.com aerilon
+    - <<: *staging-job
+      name: bioopticsworld.com
+      script: npx @base-cms/website-deployment-tool deploy bioopticsworld.com aerilon
+
+    - <<: *production-job
+      name: broadbandtechreport.com
+      script: npx @base-cms/website-deployment-tool deploy broadbandtechreport.com aerilon
+    - <<: *staging-job
+      name: broadbandtechreport.com
+      script: npx @base-cms/website-deployment-tool deploy broadbandtechreport.com aerilon
+
+    - <<: *production-job
+      name: cablinginstall.com
+      script: npx @base-cms/website-deployment-tool deploy cablinginstall.com aerilon
+    - <<: *staging-job
+      name: cablinginstall.com
+      script: npx @base-cms/website-deployment-tool deploy cablinginstall.com aerilon
+
+    - <<: *production-job
+      name: cpapracticeadvisor.com
+      script: npx @base-cms/website-deployment-tool deploy cpapracticeadvisor.com picon
+    - <<: *staging-job
+      name: cpapracticeadvisor.com
+      script: npx @base-cms/website-deployment-tool deploy cpapracticeadvisor.com picon
+
+    - <<: *production-job
+      name: dentaleconomics.com
+      script: npx @base-cms/website-deployment-tool deploy dentaleconomics.com aerilon
+    - <<: *staging-job
+      name: dentaleconomics.com
+      script: npx @base-cms/website-deployment-tool deploy dentaleconomics.com aerilon
+
+    - <<: *production-job
+      name: dentistryiq.com
+      script: npx @base-cms/website-deployment-tool deploy dentistryiq.com aerilon
+    - <<: *staging-job
+      name: dentistryiq.com
+      script: npx @base-cms/website-deployment-tool deploy dentistryiq.com aerilon
+
+    - <<: *production-job
+      name: distributedenergy.com
+      script: npx @base-cms/website-deployment-tool deploy distributedenergy.com aerilon
+    - <<: *staging-job
+      name: distributedenergy.com
+      script: npx @base-cms/website-deployment-tool deploy distributedenergy.com aerilon
+
+    - <<: *production-job
+      name: evaluationengineering.com
+      script: npx @base-cms/website-deployment-tool deploy evaluationengineering.com picon
+    - <<: *staging-job
+      name: evaluationengineering.com
+      script: npx @base-cms/website-deployment-tool deploy evaluationengineering.com picon
+
+    # - <<: *production-job
+    #   name: firehouse.com
+    #   script: npx @base-cms/website-deployment-tool deploy firehouse.com picon
+    # - <<: *staging-job
+    #   name: firehouse.com
+    #   script: npx @base-cms/website-deployment-tool deploy firehouse.com picon
+
+    - <<: *production-job
+      name: flowcontrolnetwork.com
+      script: npx @base-cms/website-deployment-tool deploy flowcontrolnetwork.com picon
+    - <<: *staging-job
+      name: flowcontrolnetwork.com
+      script: npx @base-cms/website-deployment-tool deploy flowcontrolnetwork.com picon
+
+    - <<: *production-job
+      name: foresternetwork.com
+      script: npx @base-cms/website-deployment-tool deploy foresternetwork.com picon
+    - <<: *staging-job
+      name: foresternetwork.com
+      script: npx @base-cms/website-deployment-tool deploy foresternetwork.com picon
+
+    - <<: *production-job
+      name: gxcontractor.com
+      script: npx @base-cms/website-deployment-tool deploy gxcontractor.com picon
+    - <<: *staging-job
+      name: gxcontractor.com
+      script: npx @base-cms/website-deployment-tool deploy gxcontractor.com picon
+
+    - <<: *production-job
+      name: hcinnovationgroup.com
+      script: npx @base-cms/website-deployment-tool deploy hcinnovationgroup.com picon
+    - <<: *staging-job
+      name: hcinnovationgroup.com
+      script: npx @base-cms/website-deployment-tool deploy hcinnovationgroup.com picon
+
+    - <<: *production-job
+      name: hpnonline.com
+      script: npx @base-cms/website-deployment-tool deploy hpnonline.com picon
+    - <<: *staging-job
+      name: hpnonline.com
+      script: npx @base-cms/website-deployment-tool deploy hpnonline.com picon
+
+    - <<: *production-job
+      name: industrial-lasers.com
+      script: npx @base-cms/website-deployment-tool deploy industrial-lasers.com aerilon
+    - <<: *staging-job
+      name: industrial-lasers.com
+      script: npx @base-cms/website-deployment-tool deploy industrial-lasers.com aerilon
+
+    - <<: *production-job
+      name: intelligent-aerospace.com
+      script: npx @base-cms/website-deployment-tool deploy intelligent-aerospace.com aerilon
+    - <<: *staging-job
+      name: intelligent-aerospace.com
+      script: npx @base-cms/website-deployment-tool deploy intelligent-aerospace.com aerilon
+
+    - <<: *production-job
+      name: laserfocusworld.com
+      script: npx @base-cms/website-deployment-tool deploy laserfocusworld.com aerilon
+    - <<: *staging-job
+      name: laserfocusworld.com
+      script: npx @base-cms/website-deployment-tool deploy laserfocusworld.com aerilon
+
+    - <<: *production-job
+      name: ledsmagazine.com
+      script: npx @base-cms/website-deployment-tool deploy ledsmagazine.com aerilon
+    - <<: *staging-job
+      name: ledsmagazine.com
+      script: npx @base-cms/website-deployment-tool deploy ledsmagazine.com aerilon
+
+    - <<: *production-job
+      name: lightwaveonline.com
+      script: npx @base-cms/website-deployment-tool deploy lightwaveonline.com aerilon
+    - <<: *staging-job
+      name: lightwaveonline.com
+      script: npx @base-cms/website-deployment-tool deploy lightwaveonline.com aerilon
+
+    - <<: *production-job
+      name: locksmithledger.com
+      script: npx @base-cms/website-deployment-tool deploy locksmithledger.com picon
+    - <<: *staging-job
+      name: locksmithledger.com
+      script: npx @base-cms/website-deployment-tool deploy locksmithledger.com picon
+
+    - <<: *production-job
+      name: masstransitmag.com
+      script: npx @base-cms/website-deployment-tool deploy masstransitmag.com picon
+    - <<: *staging-job
+      name: masstransitmag.com
+      script: npx @base-cms/website-deployment-tool deploy masstransitmag.com picon
+
+    - <<: *production-job
+      name: militaryaerospace.com
+      script: npx @base-cms/website-deployment-tool deploy militaryaerospace.com aerilon
+    - <<: *staging-job
+      name: militaryaerospace.com
+      script: npx @base-cms/website-deployment-tool deploy militaryaerospace.com aerilon
+
+    - <<: *production-job
+      name: mlo-online.com
+      script: npx @base-cms/website-deployment-tool deploy mlo-online.com picon
+    - <<: *staging-job
+      name: mlo-online.com
+      script: npx @base-cms/website-deployment-tool deploy mlo-online.com picon
+
+    - <<: *production-job
+      name: mswmanagement.com
+      script: npx @base-cms/website-deployment-tool deploy mswmanagement.com picon
+    - <<: *staging-job
+      name: mswmanagement.com
+      script: npx @base-cms/website-deployment-tool deploy mswmanagement.com picon
+
+    - <<: *production-job
+      name: officer.com
+      script: npx @base-cms/website-deployment-tool deploy officer.com picon
+    - <<: *staging-job
+      name: officer.com
+      script: npx @base-cms/website-deployment-tool deploy officer.com picon
+
+    - <<: *production-job
+      name: offshore-mag.com
+      script: npx @base-cms/website-deployment-tool deploy offshore-mag.com aerilon
+    - <<: *staging-job
+      name: offshore-mag.com
+      script: npx @base-cms/website-deployment-tool deploy offshore-mag.com aerilon
+
+    # - <<: *production-job
+    #   name: ogj.com
+    #   script: npx @base-cms/website-deployment-tool deploy ogj.com aerilon
+    # - <<: *staging-job
+    #   name: ogj.com
+    #   script: npx @base-cms/website-deployment-tool deploy ogj.com aerilon
+
+    - <<: *production-job
+      name: perioimplantadvisory.com
+      script: npx @base-cms/website-deployment-tool deploy perioimplantadvisory.com aerilon
+    - <<: *staging-job
+      name: perioimplantadvisory.com
+      script: npx @base-cms/website-deployment-tool deploy perioimplantadvisory.com aerilon
+
+    - <<: *production-job
+      name: plasticsmachinerymagazine.com
+      script: npx @base-cms/website-deployment-tool deploy plasticsmachinerymagazine.com picon
+    - <<: *staging-job
+      name: plasticsmachinerymagazine.com
+      script: npx @base-cms/website-deployment-tool deploy plasticsmachinerymagazine.com picon
+
+    - <<: *production-job
+      name: processingmagazine.com
+      script: npx @base-cms/website-deployment-tool deploy processingmagazine.com picon
+    - <<: *staging-job
+      name: processingmagazine.com
+      script: npx @base-cms/website-deployment-tool deploy processingmagazine.com picon
+
+    - <<: *production-job
+      name: rdhmag.com
+      script: npx @base-cms/website-deployment-tool deploy rdhmag.com aerilon
+    - <<: *staging-job
+      name: rdhmag.com
+      script: npx @base-cms/website-deployment-tool deploy rdhmag.com aerilon
+
+    - <<: *production-job
+      name: securityinfowatch.com
+      script: npx @base-cms/website-deployment-tool deploy securityinfowatch.com picon
+    - <<: *staging-job
+      name: securityinfowatch.com
+      script: npx @base-cms/website-deployment-tool deploy securityinfowatch.com picon
+
+    - <<: *production-job
+      name: stormh2o.com
+      script: npx @base-cms/website-deployment-tool deploy stormh2o.com picon
+    - <<: *staging-job
+      name: stormh2o.com
+      script: npx @base-cms/website-deployment-tool deploy stormh2o.com picon
+
+    - <<: *production-job
+      name: strategies-u.com
+      script: npx @base-cms/website-deployment-tool deploy strategies-u.com aerilon
+    - <<: *staging-job
+      name: strategies-u.com
+      script: npx @base-cms/website-deployment-tool deploy strategies-u.com aerilon
+
+    # - <<: *production-job
+    #   name: taxpracticeadvisor.com
+    #   script: npx @base-cms/website-deployment-tool deploy taxpracticeadvisor.com picon
+    # - <<: *staging-job
+    #   name: taxpracticeadvisor.com
+    #   script: npx @base-cms/website-deployment-tool deploy taxpracticeadvisor.com picon
+
+    - <<: *production-job
+      name: utilityproducts.com
+      script: npx @base-cms/website-deployment-tool deploy utilityproducts.com aerilon
+    - <<: *staging-job
+      name: utilityproducts.com
+      script: npx @base-cms/website-deployment-tool deploy utilityproducts.com aerilon
+
+    - <<: *production-job
+      name: vehicleservicepros.com
+      script: npx @base-cms/website-deployment-tool deploy vehicleservicepros.com picon
+    - <<: *staging-job
+      name: vehicleservicepros.com
+      script: npx @base-cms/website-deployment-tool deploy vehicleservicepros.com picon
+
+    - <<: *production-job
+      name: vendingmarketwatch.com
+      script: npx @base-cms/website-deployment-tool deploy vendingmarketwatch.com picon
+    - <<: *staging-job
+      name: vendingmarketwatch.com
+      script: npx @base-cms/website-deployment-tool deploy vendingmarketwatch.com picon
+
+    - <<: *production-job
+      name: vision-systems.com
+      script: npx @base-cms/website-deployment-tool deploy vision-systems.com aerilon
+    - <<: *staging-job
+      name: vision-systems.com
+      script: npx @base-cms/website-deployment-tool deploy vision-systems.com aerilon
+
+    - <<: *production-job
+      name: watertechonline.com
+      script: npx @base-cms/website-deployment-tool deploy watertechonline.com aerilon
+    - <<: *staging-job
+      name: watertechonline.com
+      script: npx @base-cms/website-deployment-tool deploy watertechonline.com aerilon
+
+    - <<: *production-job
+      name: waterworld.com
+      script: npx @base-cms/website-deployment-tool deploy waterworld.com aerilon
+    - <<: *staging-job
+      name: waterworld.com
+      script: npx @base-cms/website-deployment-tool deploy waterworld.com aerilon
+
+
+    ##########################
+    # ^^^ ADD SITES HERE ^^^ #
+    ##########################
+
+    - stage: production-finished
+      name: Deployment Finished
+      script: npx @base-cms/website-deployment-tool notify-finished
       install: skip
+      env:
+        <<: *production-env
 
-    - stage: deploy
-      name: Bio Optics World
-      script: deploy/index.js bioopticsworld aerilon
+    - stage: staging-finished
+      name: Deployment Finished
+      script: npx @base-cms/website-deployment-tool notify-finished
       install: skip
-
-    - stage: deploy
-      name: Broadband Technology Report
-      script: deploy/index.js broadbandtechreport aerilon
-      install: skip
-
-    - stage: deploy
-      name: Cabling Installation & Maintenance
-      script: deploy/index.js cablinginstall aerilon
-      install: skip
-
-    - stage: deploy
-      name: CPA Practice Advisory
-      script: deploy/index.js cpapracticeadvisor picon
-      install: skip
-
-    - stage: deploy
-      name: Dental Economics
-      script: deploy/index.js dentaleconomics aerilon
-      install: skip
-
-    - stage: deploy
-      name: DentistryIQ
-      script: deploy/index.js dentistryiq aerilon
-      install: skip
-
-    - stage: deploy
-      name: Distributed Energy
-      script: deploy/index.js distributedenergy picon
-      install: skip
-
-    - stage: deploy
-      name: Evaluation Engineering
-      script: deploy/index.js evaluationengineering picon
-      install: skip
-
-    # - stage: deploy
-    #   name: Firehouse
-    #   script: deploy/index.js firehouse picon
-    #   install: skip
-
-    - stage: deploy
-      name: Flow Control
-      script: deploy/index.js flowcontrolnetwork picon
-      install: skip
-
-    - stage: deploy
-      name: GX Contractor
-      script: deploy/index.js gxcontractor picon
-      install: skip
-
-    - stage: deploy
-      name: Forester Network
-      script: deploy/index.js foresternetwork picon
-      install: skip
-
-    - stage: deploy
-      name: HC Innovation Group
-      script: deploy/index.js hcinnovationgroup picon
-      install: skip
-
-    - stage: deploy
-      name: Healthcare Purchasing News Online
-      script: deploy/index.js hpnonline picon
-      install: skip
-
-    - stage: deploy
-      name: Industrial Laser Solutions
-      script: deploy/index.js industrial-lasers aerilon
-      install: skip
-
-    - stage: deploy
-      name: Intelligent Aerospace
-      script: deploy/index.js intelligent-aerospace aerilon
-      install: skip
-
-    - stage: deploy
-      name: Laser Focus World
-      script: deploy/index.js laserfocusworld aerilon
-      install: skip
-
-    - stage: deploy
-      name: LEDs Magazine
-      script: deploy/index.js ledsmagazine aerilon
-      install: skip
-
-    - stage: deploy
-      name: Lightwave Online
-      script: deploy/index.js lightwaveonline aerilon
-      install: skip
-
-    - stage: deploy
-      name: Locksmith Ledger
-      script: deploy/index.js locksmithledger picon
-      install: skip
-
-    - stage: deploy
-      name: Mass Transit
-      script: deploy/index.js masstransitmag picon
-      install: skip
-
-    - stage: deploy
-      name: Medical Laboratory Observer
-      script: deploy/index.js mlo-online picon
-      install: skip
-
-    - stage: deploy
-      name: Military & Aerospace Electronics
-      script: deploy/index.js militaryaerospace aerilon
-      install: skip
-
-    - stage: deploy
-      name: MSW Management
-      script: deploy/index.js mswmanagement picon
-      install: skip
-
-    - stage: deploy
-      name: Officer
-      script: deploy/index.js officer picon
-      install: skip
-
-    # - stage: deploy
-    #   name: Oil & Gas Journal
-    #   script: deploy/index.js ogj aerilon
-    #   install: skip
-
-    - stage: deploy
-      name: Offshore
-      script: deploy/index.js offshore-mag aerilon
-      install: skip
-
-    - stage: deploy
-      name: Perio Implant Advisory
-      script: deploy/index.js perioimplantadvisory aerilon
-      install: skip
-
-    - stage: deploy
-      name: Plastics Machinery Magazine
-      script: deploy/index.js plasticsmachinerymagazine picon
-      install: skip
-
-    - stage: deploy
-      name: Processing Magazine
-      script: deploy/index.js processingmagazine picon
-      install: skip
-
-    - stage: deploy
-      name: Registered Dental Hygienists
-      script: deploy/index.js rdhmag aerilon
-      install: skip
-
-    - stage: deploy
-      name: Security Info Watch
-      script: deploy/index.js securityinfowatch picon
-      install: skip
-
-    - stage: deploy
-      name: Storm H2O
-      script: deploy/index.js stormh2o picon
-      install: skip
-
-    - stage: deploy
-      name: Strategies Unlimited
-      script: deploy/index.js strategies-u aerilon
-      install: skip
-
-    - stage: deploy
-      name: Utility Products
-      script: deploy/index.js utilityproducts aerilon
-      install: skip
-
-    - stage: deploy
-      name: Vehicle Service Pros
-      script: deploy/index.js vehicleservicepros picon
-      install: skip
-
-    - stage: deploy
-      name: Vending Market Watch
-      script: deploy/index.js vendingmarketwatch picon
-      install: skip
-
-    - stage: deploy
-      name: Vision Systems Design
-      script: deploy/index.js vision-systems aerilon
-      install: skip
-
-    - stage: deploy
-      name: Water Technology
-      script: deploy/index.js watertechonline aerilon
-      install: skip
-
-    - stage: deploy
-      name: Waterworld
-      script: deploy/index.js waterworld aerilon
-      install: skip
+      env:
+        <<: *staging-env

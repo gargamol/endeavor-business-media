@@ -41,8 +41,8 @@ Next, update the following files:
 
 ```diff
 # /sites/mynewsite/package.json
--  "name": "@base-cms-websites/sitetocopy",
-+  "name": "@base-cms-websites/mynewsite",
+-  "name": "@endeavor-business-media/sitetocopy",
++  "name": "@endeavor-business-media/mynewsite",
 -  "author": "John Doe <johndoe@gmail.com>",
 +  "author": "Jack Smith <jacksmith@gmail.com>",
 -  "repository": "https://github.com/base-cms-websites/your-repository/tree/master/sites/sitetocopy",

@@ -1,0 +1,28 @@
+$primary: #8956a7 !default;
+$secondary: #495057; // equivalent to default gray-700
+$light: #e9ecef !default; // equivalent to default gray-200
+$dark: #212529 !default; // equivalent to default gray-900
+$info: #6c757d !default; // equivalent to default gray-600
+
+$theme-site-navbar-secondary-bg-color: #fff;
+$theme-site-navbar-primary-bg-color: $primary;
+$theme-site-navbar-menu-hover-background-color: lighten($theme-site-navbar-primary-bg-color, 40%);
+$theme-site-navbar-secondary-type: light;
+
+$theme-site-header-breakpoints: (
+  hide-primary: 642px,
+  hide-secondary: 678px,
+  small-logo: 735px,
+  small-text-primary: 706px,
+  small-text-secondary: 805px
+);
+
+@import "components/rss";
+
+@import "../../node_modules/@base-cms/marko-web-gam/scss/fixed-ad-bottom";
+@import "../../node_modules/@base-cms/marko-web-reveal-ad/scss/reveal-ad";
+@import "../../node_modules/@base-cms/marko-web-theme-default/skins/orion/skin";
+// @todo this should be remove once contact us is in core
+@import "../../node_modules/@endeavor-business-media/package-common/scss/contact-us-form";
+@import "../../node_modules/@endeavor-business-media/package-common/scss/directory";
+@import "../../node_modules/@endeavor-business-media/package-inquiry/scss/index";
