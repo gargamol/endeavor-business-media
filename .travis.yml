@@ -118,10 +118,10 @@ jobs:
 
     - <<: *production-job
       name: distributedenergy.com
-      script: npx @base-cms/website-deployment-tool deploy distributedenergy.com aerilon
+      script: npx @base-cms/website-deployment-tool deploy distributedenergy.com picon
     - <<: *staging-job
       name: distributedenergy.com
-      script: npx @base-cms/website-deployment-tool deploy distributedenergy.com aerilon
+      script: npx @base-cms/website-deployment-tool deploy distributedenergy.com picon
 
     - <<: *production-job
       name: evaluationengineering.com
