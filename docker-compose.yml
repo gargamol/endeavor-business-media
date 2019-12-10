@@ -351,21 +351,21 @@ services:
   #     - "9727:80"
   #     - "19727:19727"
 
-  # firehouse.com:
-  #   <<: *node
-  #   <<: *site-cmd
-  #   working_dir: /root/sites/firehouse.com
-  #   environment:
-  #     <<: *env
-  #     <<: *env-picon-staging
-  #     PORT: 80
-  #     EXPOSED_PORT: 9728
-  #     LIVERELOAD_PORT: 19728
-  #     TENANT_KEY: cygnus_fhc
-  #     SITE_ID: 541c4318fdef6cc5fb990f20
-  #   ports:
-  #     - "9728:80"
-  #     - "19728:19728"
+  firehouse.com:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/firehouse.com
+    environment:
+      <<: *env
+      <<: *env-picon-staging
+      PORT: 80
+      EXPOSED_PORT: 9728
+      LIVERELOAD_PORT: 19728
+      TENANT_KEY: cygnus_fhc
+      SITE_ID: 541c4318fdef6cc5fb990f20
+    ports:
+      - "9728:80"
+      - "19728:19728"
 
   officer.com:
     <<: *node
