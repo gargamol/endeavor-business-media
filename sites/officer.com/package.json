@@ -1,6 +1,6 @@
 {
   "name": "@endeavor-business-media/officer.com",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "author": "Brian Miller<bmiller@endeavorb2b.com>",
   "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/officer.com",
   "license": "MIT",
@@ -15,8 +15,6 @@
     "test": "yarn lint && yarn compile && yarn build"
   },
   "dependencies": {
-    "@endeavor-business-media/package-common": "^1.0.0",
-    "@endeavor-business-media/package-inquiry": "^1.0.0",
     "@base-cms/marko-core": "^1.0.0-beta.15",
     "@base-cms/marko-web": "^1.0.0-beta.15",
     "@base-cms/marko-web-gam": "^1.0.0-beta.4",
@@ -29,6 +27,8 @@
     "@base-cms/object-path": "^1.0.0-beta.4",
     "@base-cms/utils": "^1.0.0-beta.4",
     "@base-cms/web-cli": "^1.0.0-beta.15",
+    "@endeavor-business-media/package-common": "^1.0.6",
+    "@endeavor-business-media/package-inquiry": "^1.0.6",
     "graphql": "^14.5.4",
     "graphql-tag": "^2.10.1",
     "newrelic": "^5.11.0"
