@@ -4,31 +4,34 @@ const config = new NativeXConfiguration('https://ebm.native-x.io');
 
 config
   .setAliasPlacements('default', [
-    { name: 'default', id: '5c0e7695cf399b000179ee97' },
+    { name: 'default', id: '5b55eaa68c39e40001f51ea7' },
   ])
-  .setAliasPlacements('security-executives', [
-    { name: 'default', id: '5c0e76c8cf399b000179f1f4' },
+  .setAliasPlacements('leadership', [
+    { name: 'default', id: '5b5758e15bbf91000134a2c8' },
   ])
-  .setAliasPlacements('integrators', [
-    { name: 'default', id: '5c0e76f484c2cd000147d261' },
+  .setAliasPlacements('apparatus', [
+    { name: 'default', id: '5b5758ed5bbf91000134a2c9' },
   ])
-  .setAliasPlacements('video-surveillance', [
-    { name: 'default', id: '5c0e7724cf399b000179f750' },
+  .setAliasPlacements('rescue', [
+    { name: 'default', id: '5b5758f85bbf91000134a2ca' },
   ])
-  .setAliasPlacements('access-identity', [
-    { name: 'default', id: '5c0e774a84c2cd000147d79a' },
+  .setAliasPlacements('safety-health', [
+    { name: 'default', id: '5b57590c5bbf91000134a2cc' },
   ])
-  .setAliasPlacements('residential-technologies', [
-    { name: 'default', id: '5c0e776a84c2cd000147d9a7' },
+  .setAliasPlacements('operations-training', [
+    { name: 'default', id: '5b5759145bbf91000134a2cd' },
   ])
-  .setAliasPlacements('alarms-monitoring', [
-    { name: 'default', id: '5c0e7794cf399b000179fe68' },
+  .setAliasPlacements('careers-education', [
+    { name: 'default', id: '5b57592707cd7000019c5fc4' },
   ])
-  .setAliasPlacements('cybersecurity', [
-    { name: 'default', id: '5c0e77b584c2cd000147de60' },
+  .setAliasPlacements('prevention-investigation', [
+    { name: 'default', id: '5b57593207cd7000019c5fc5' },
   ])
-  .setAliasPlacements('perimeter-security', [
-    { name: 'default', id: '5c0e77dd84c2cd000147e0ee' },
+  .setAliasPlacements('tech-comm', [
+    { name: 'default', id: '5b57593f5bbf91000134a2d0' },
+  ])
+  .setAliasPlacements('stations', [
+    { name: 'default', id: '5b57594c5bbf91000134a2d2' },
   ]);
 
 module.exports = config;
