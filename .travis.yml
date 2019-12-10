@@ -130,12 +130,12 @@ jobs:
       name: evaluationengineering.com
       script: npx @base-cms/website-deployment-tool deploy evaluationengineering.com picon
 
-    # - <<: *production-job
-    #   name: firehouse.com
-    #   script: npx @base-cms/website-deployment-tool deploy firehouse.com picon
-    # - <<: *staging-job
-    #   name: firehouse.com
-    #   script: npx @base-cms/website-deployment-tool deploy firehouse.com picon
+    - <<: *production-job
+      name: firehouse.com
+      script: npx @base-cms/website-deployment-tool deploy firehouse.com picon
+    - <<: *staging-job
+      name: firehouse.com
+      script: npx @base-cms/website-deployment-tool deploy firehouse.com picon
 
     - <<: *production-job
       name: flowcontrolnetwork.com
