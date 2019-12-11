@@ -41,7 +41,7 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionId: id, limit: 4, queryFragment }
+          params={ sectionId: id, limit: 5, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
             <@header>
@@ -50,13 +50,15 @@ $ const { id, alias, name, pageNode } = data;
           </website-content-list-flow>
         </marko-web-query>
       </div>
+
       <div class="col-lg-4 mb-block">
         <marko-web-gam-display-ad id="gpt-ad-rail1" />
       </div>
+
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionAlias: "sponsored", optionName: "Sponsored", limit: 4, queryFragment }
+          params={ sectionAlias: "sponsored", limit: 5, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
             <@header>
@@ -65,7 +67,9 @@ $ const { id, alias, name, pageNode } = data;
           </website-content-list-flow>
         </marko-web-query>
       </div>
+    </div>
 
+    <div class="row">
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
