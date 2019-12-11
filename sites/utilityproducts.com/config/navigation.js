@@ -16,6 +16,7 @@ module.exports = {
       { href: '/videos', label: 'Videos' },
       { href: '/page/advertise', label: 'Advertise' },
       { href: '/page/about-us', label: 'About Us' },
+      { href: '/events', label: 'Events' },
     ],
   },
   tertiary: {
