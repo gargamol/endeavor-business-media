@@ -13,8 +13,6 @@ $ const { section } = data;
       $ const aliases = hierarchyAliases(section);
       $ const adSlots = {
           "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
-          "gpt-ad-rail1": GAM.getAdUnit({ name: "rail1", aliases }),
-          "gpt-ad-rail2": GAM.getAdUnit({ name: "rail2", aliases }),
         }
        <marko-web-gam-slots slots=adSlots />
     </marko-web-resolve-page>
@@ -29,6 +27,7 @@ $ const { section } = data;
   <@page>
     <marko-web-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
     <marko-web-resolve-page|{ data: section }| node=pageNode>
+    $ const aliases = hierarchyAliases(section);
       <marko-web-page-wrapper class="mb-block">
         <@section>
           <div class="row">
@@ -58,8 +57,7 @@ $ const { section } = data;
 
           <div class="row">
             <div class="col-lg-4 page-rail">
-              <marko-web-gam-display-ad id="gpt-ad-rail1" />
-              <marko-web-gam-display-ad id="gpt-ad-rail2" />
+              <marko-web-gam-define-display-ad ...GAM.getAdUnit({ name: "load-more", size: [300, 600], aliases }) modifiers=["in-card"] />
             </div>
             <div class="col-lg-8 mb-block">
               <marko-web-query|{ nodes }|
