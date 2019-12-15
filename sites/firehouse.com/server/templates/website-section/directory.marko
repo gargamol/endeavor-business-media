@@ -15,7 +15,6 @@ $ const { id, alias, name, pageNode } = data;
       $ const adSlots = {
           "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
           "gpt-ad-rail1": GAM.getAdUnit({ name: "rail1", aliases }),
-          "gpt-ad-rail2": GAM.getAdUnit({ name: "rail2", aliases }),
         }
        <marko-web-gam-slots slots=adSlots />
     </marko-web-resolve-page>
@@ -50,7 +49,6 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-4 page-rail mb-block">
         <common-directory-facets title="Categories" activeId=id facets=categories />
         <marko-web-gam-display-ad id="gpt-ad-rail1" />
-        <marko-web-gam-display-ad id="gpt-ad-rail2" />
       </div>
       <div class="col-lg-8 mb-block">
 
