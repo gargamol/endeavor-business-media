@@ -7,14 +7,6 @@ $info: #6c757d;
 $theme-site-navbar-secondary-bg-color: #000;
 $theme-site-navbar-primary-bg-color: $primary;
 
-$theme-site-navbar-secondary-link-color: $primary;
-$theme-site-navbar-secondary-link-hover-color: $primary;
-$theme-site-navbar-secondary-link-active-color: $primary;
-
-$theme-site-navbar-tertiary-link-active-color: $primary;
-$theme-site-navbar-tertiary-link-color: $primary;
-$theme-site-navbar-tertiary-link-hover-color: $primary;
-
 $theme-site-navbar-logo-height: 45px;
 $theme-site-navbar-logo-height-sm: 25px;
 
@@ -26,7 +18,6 @@ $theme-site-header-breakpoints: (
   small-text-secondary: 1105px
 );
 
-$theme-site-navbar-primary-font-weight: bold;
 $theme-card-header-background-color: #000;
 
 $border-radius: none;
@@ -41,7 +32,6 @@ $body-bg: #fff;
 @import "../../node_modules/@endeavor-business-media/package-common/scss/contact-us-form";
 @import "../../node_modules/@endeavor-business-media/package-common/scss/directory";
 @import "../../node_modules/@endeavor-business-media/package-inquiry/scss/index";
-
 
 .node-list {
   &.sponsored {

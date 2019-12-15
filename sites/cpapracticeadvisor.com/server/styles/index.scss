@@ -18,6 +18,13 @@ $theme-site-header-breakpoints: (
   small-text-secondary: 1050px
 );
 
+$theme-card-header-background-color: #000;
+
+$border-radius: none;
+$theme-box-shadow-sm:   none;
+$theme-box-shadow-lg: none;
+$body-bg: #fff;
+
 @import "../../node_modules/@base-cms/marko-web-gam/scss/fixed-ad-bottom";
 @import "../../node_modules/@base-cms/marko-web-reveal-ad/scss/reveal-ad";
 @import "../../node_modules/@base-cms/marko-web-theme-default/skins/orion/skin";
@@ -25,3 +32,12 @@ $theme-site-header-breakpoints: (
 @import "../../node_modules/@endeavor-business-media/package-common/scss/contact-us-form";
 @import "../../node_modules/@endeavor-business-media/package-common/scss/directory";
 @import "../../node_modules/@endeavor-business-media/package-inquiry/scss/index";
+
+.node-list {
+  &.sponsored {
+    background-color: #ccc;
+    .node {
+      background-color: transparent;
+    }
+  }
+}
