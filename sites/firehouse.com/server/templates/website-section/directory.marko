@@ -75,12 +75,11 @@ $ const { id, alias, name, pageNode } = data;
           params={
             sectionId: id,
             limit: 5,
-            includeContentTypes: ["Company"],
             queryFragment
           }
         >
           <website-content-list-flow nodes=nodes inner-justified=false>
-            <@header>Latest Companies</@header>
+            <@header>Latest</@header>
             <@node image-position="left" with-teaser=true>
               <@image use-placeholder=false />
             </@node>
@@ -95,7 +94,6 @@ $ const { id, alias, name, pageNode } = data;
     <marko-web-resolve-page|{ data: section }| node=pageNode>
       $ const aliases = hierarchyAliases(section);
       <marko-web-load-more
-        header="More Companies"
         component-name="content-list-flow"
         component-input={
           class: "mb-block",
@@ -104,7 +102,7 @@ $ const { id, alias, name, pageNode } = data;
         }
         fragment-name="content-list"
         query-name="website-scheduled-content"
-        query-params={ sectionId: id, includeContentTypes: ["Company"], limit: 18, skip: 5 }
+        query-params={ sectionId: id, limit: 18, skip: 5 }
         page-input={ for: "website-section", id }
       />
     </marko-web-resolve-page>
