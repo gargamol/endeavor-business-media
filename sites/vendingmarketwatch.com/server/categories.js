@@ -20,7 +20,7 @@ module.exports = [
     id: 60060,
     name: 'Bill and coin acceptors and accessories',
     href: '/technology/bill-and-coin-acceptors-and-accessories',
-    value: [
+    values: [
       {
         id: 60061,
         name: 'Bill and coin acceptors/validators',
@@ -164,7 +164,7 @@ module.exports = [
     id: 60070,
     name: 'Micro market fixtures/area treatments',
     href: '/micro-market/micro-market-fixtures-area-treatments',
-    value: [
+    values: [
       {
         id: 60072,
         name: 'Lighting',
@@ -186,7 +186,7 @@ module.exports = [
     id: 60075,
     name: 'Micro market food coolers',
     href: '/micro-market/micro-market-food-coolers',
-    value: [
+    values: [
       {
         id: 60076,
         name: 'Food rated coolers and freezers',
@@ -293,7 +293,7 @@ module.exports = [
     id: 60056,
     name: 'Vehicles And Delivery Equipment',
     href: '/equipment/vehicles-and-delivery-equipment',
-    value: [
+    values: [
       {
         id: 60057,
         name: 'Vehicle accessories and lifting/delivery equipment',
@@ -310,7 +310,7 @@ module.exports = [
     id: 60048,
     name: 'Vending Machines',
     href: '/equipment/vending-machines',
-    value: [
+    values: [
       {
         id: 60049,
         name: 'Candy, Snack',
