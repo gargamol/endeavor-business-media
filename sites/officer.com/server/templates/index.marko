@@ -52,14 +52,14 @@ $ const { id, alias, name, pageNode } = data;
         </marko-web-query>
       </div>
       <div class="col-lg-4 mb-block">
-        <marko-web-gam-display-ad id="gpt-ad-rail1" />
+        <marko-web-gam-display-ad id="gpt-ad-rail2" />
       </div>
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionId: 56155, optionName: "Sponsored", limit: 4, queryFragment }
+          params={ sectionId: id, optionName: "Sponsored", limit: 4, queryFragment }
         >
-          <website-content-list-flow nodes=nodes>
+          <website-content-list-flow nodes=nodes class="sponsored">
             <@header>
               <marko-web-link>Sponsored Content</marko-web-link>
             </@header>

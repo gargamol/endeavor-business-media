@@ -107,7 +107,6 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
             </default-theme-page-contents>
             <aside class="col-lg-4 page-rail">
               <marko-web-gam-display-ad id="gpt-ad-rail1" />
-              <marko-web-gam-display-ad id="gpt-ad-rail2" />
               <marko-web-resolve-page|{ data: content }| node=pageNode>
                 $ const aliases = hierarchyAliases(content.primarySection);
                 <website-related-content-block
@@ -120,6 +119,7 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
                   <@native-x index=4 name="default" aliases=aliases />
                 </website-related-content-block>
               </marko-web-resolve-page>
+              <marko-web-gam-display-ad id="gpt-ad-rail2" />
             </aside>
           </div>
         </@section>
