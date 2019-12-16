@@ -26,6 +26,10 @@ module.exports = (app) => {
     template: directory,
     queryFragment,
   }));
+  app.get('/:alias(directory/[a-z0-9-/]+)', withWebsiteSection({
+    template: directory,
+    queryFragment,
+  }));
   app.get(`/:alias(${channelAliases.join('|')})`, withWebsiteSection({
     template: channel,
     queryFragment,
