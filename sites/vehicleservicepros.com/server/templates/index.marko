@@ -1,6 +1,7 @@
 import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
 import queryFragment from "../graphql/fragments/content-list";
 import latestIssueFragment from "../graphql/fragments/magazine-latest-issue";
+import categories from "../categories";
 import GAM from "../../config/gam";
 
 $ const { id, alias, name, pageNode } = data;
@@ -16,6 +17,7 @@ $ const { id, alias, name, pageNode } = data;
           "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
           "gpt-ad-rail1": GAM.getAdUnit({ name: "rail1", aliases }),
           "gpt-ad-rail2": GAM.getAdUnit({ name: "rail2", aliases }),
+          "gpt-ad-ms": GAM.getAdUnit({ name: "ms", aliases }),
         }
        <marko-web-gam-slots slots=adSlots />
     </marko-web-resolve-page>
@@ -41,7 +43,7 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionAlias: "industry-news", limit: 5, queryFragment }
+          params={ sectionAlias: "industry-news", limit: 4, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
             <@header>
@@ -57,16 +59,34 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionId: id, optionName: "Sponsored", limit: 5, queryFragment }
+          params={ sectionId: id, optionName: "Sponsored", limit: 4, queryFragment }
         >
           <website-content-list-flow nodes=nodes class="sponsored">
             <@header>
               <marko-web-link>Sponsored</marko-web-link>
             </@header>
+            <@body>
+              <marko-web-gam-display-ad id="gpt-ad-ms" />
+            </@body>
           </website-content-list-flow>
         </marko-web-query>
       </div>
+    </div>
 
+    <div class="row">
+      <div class="col-lg-4 mb-block">
+          <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "vehicles", limit: 4, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/vehicles">Vehicles</marko-web-link>
+            </@header>
+            <@native-x index=3 name="default" aliases=["vehicles"] />
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
@@ -93,20 +113,78 @@ $ const { id, alias, name, pageNode } = data;
           </website-content-list-flow>
         </marko-web-query>
       </div>
+    </div>
+
+    <div class="row">
       <div class="col-lg-4 mb-block">
-          <marko-web-query|{ nodes }|
+        <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionAlias: "vehicles", limit: 4, queryFragment }
+          params={ sectionAlias: "in-the-bay/diagnostic-repair-info", limit: 4, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
             <@header>
-              <marko-web-link href="/vehicles">Vehicles</marko-web-link>
+              <marko-web-link href="/in-the-bay/diagnostic-repair-info">Diagnostic/Repair</marko-web-link>
             </@header>
-            <@native-x index=3 name="default" aliases=["vehicles"] />
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+      <div class="col-lg-4 mb-block">
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "in-the-bay/tools-equipment", limit: 4, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/in-the-bay/tools-equipment">Tools / Equipment</marko-web-link>
+            </@header>
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+
+      <div class="col-lg-4 mb-block">
+        <common-directory-facets title="Product Guide" activeId=id facets=categories />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 mb-block">
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "vehicles/powertrain", limit: 4, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/vehicles/powertrain">Powertrain</marko-web-link>
+            </@header>
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+      <div class="col-lg-4 mb-block">
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "vehicles/under-vehicle-trailer-towing", limit: 4, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/vehicles/under-vehicle-trailer-towing">Under Vehicle, Trailer & Towing</marko-web-link>
+            </@header>
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+      <div class="col-lg-4 mb-block">
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "shop-operations/training-resources", limit: 4, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/shop-operations/training-resources">Training / Resources</marko-web-link>
+            </@header>
           </website-content-list-flow>
         </marko-web-query>
       </div>
     </div>
+
     <div class="row">
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
@@ -119,6 +197,78 @@ $ const { id, alias, name, pageNode } = data;
             </@header>
             <@native-x index=3 name="default" aliases=["distributors"] />
           </website-content-list-flow>
+        </marko-web-query>
+      </div>
+      <div class="col-lg-4 mb-block">
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "industry-news", limit: 4, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/industry-news">Industry News</marko-web-link>
+            </@header>
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+      <div class="col-lg-4 mb-block">
+        <marko-web-query|{ nodes }|
+          name="all-published-content"
+          params={ contentTypes: ["Video"], limit: 4, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link>Video Network</marko-web-link>
+            </@header>
+            <@body>
+              <marko-web-gam-display-ad id="gpt-ad-ms" />
+            </@body>
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 mb-block">
+        <marko-web-query|{ node: issue }|
+          name="magazine-latest-issue"
+            params={ publicationId: "53cd1d791784f8066eb2ca76", queryFragment: latestIssueFragment }
+          >
+          <website-magazine-latest-issue-flow issue-node=issue>
+            <@header>
+              <marko-web-magazine-issue-name tag=null obj=issue link=true>
+                Fleet Maintenance
+              </marko-web-magazine-issue-name>
+            </@header>
+          </website-magazine-latest-issue-flow>
+        </marko-web-query>
+      </div>
+      <div class="col-lg-4 mb-block">
+        <marko-web-query|{ node: issue }|
+          name="magazine-latest-issue"
+            params={ publicationId: "53cd1d791784f8066eb2ca77", queryFragment: latestIssueFragment }
+          >
+          <website-magazine-latest-issue-flow issue-node=issue>
+            <@header>
+              <marko-web-magazine-issue-name tag=null obj=issue link=true>
+                PTEN
+              </marko-web-magazine-issue-name>
+            </@header>
+          </website-magazine-latest-issue-flow>
+        </marko-web-query>
+      </div>
+      <div class="col-lg-4 mb-block">
+        <marko-web-query|{ node: issue }|
+          name="magazine-latest-issue"
+            params={ publicationId: "53cd1d791784f8066eb2ca78", queryFragment: latestIssueFragment }
+          >
+          <website-magazine-latest-issue-flow issue-node=issue>
+            <@header>
+              <marko-web-magazine-issue-name tag=null obj=issue link=true>
+                Professional Distributor
+              </marko-web-magazine-issue-name>
+            </@header>
+          </website-magazine-latest-issue-flow>
         </marko-web-query>
       </div>
     </div>
