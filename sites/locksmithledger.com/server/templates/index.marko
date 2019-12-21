@@ -17,6 +17,7 @@ $ const { id, alias, name, pageNode } = data;
           "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
           "gpt-ad-rail1": GAM.getAdUnit({ name: "rail1", aliases }),
           "gpt-ad-rail2": GAM.getAdUnit({ name: "rail2", aliases }),
+          "gpt-ad-ms": GAM.getAdUnit({ name: "ms", aliases }),
         }
        <marko-web-gam-slots slots=adSlots />
     </marko-web-resolve-page>
@@ -63,6 +64,9 @@ $ const { id, alias, name, pageNode } = data;
             <@header>
               <marko-web-link>Sponsored</marko-web-link>
             </@header>
+            <@body>
+              <marko-web-gam-display-ad id="gpt-ad-ms" />
+            </@body>
           </website-content-list-flow>
         </marko-web-query>
       </div>
