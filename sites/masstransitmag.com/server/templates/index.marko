@@ -16,6 +16,7 @@ $ const { id, alias, name, pageNode } = data;
           "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
           "gpt-ad-rail1": GAM.getAdUnit({ name: "rail1", aliases }),
           "gpt-ad-rail2": GAM.getAdUnit({ name: "rail2", aliases }),
+          "gpt-ad-ms": GAM.getAdUnit({ name: "ms", aliases }),
         }
        <marko-web-gam-slots slots=adSlots />
     </marko-web-resolve-page>
@@ -28,7 +29,6 @@ $ const { id, alias, name, pageNode } = data;
     </marko-web-resolve-page>
   </@above-container>
   <@page>
-    <marko-web-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
 
     <marko-web-query|{ nodes }|
       name="website-optioned-content"
@@ -36,6 +36,8 @@ $ const { id, alias, name, pageNode } = data;
     >
       <website-content-hero-flow nodes=nodes />
     </marko-web-query>
+
+    <marko-web-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
 
     <div class="row">
       <div class="col-lg-4 mb-block">
@@ -62,6 +64,9 @@ $ const { id, alias, name, pageNode } = data;
             <@header>
               <marko-web-link href="https://jobs.masstransitmag.com">Career Center</marko-web-link>
             </@header>
+            <@body>
+              <marko-web-gam-display-ad id="gpt-ad-ms" />
+            </@body>
           </website-content-list-flow>
         </marko-web-query>
       </div>
