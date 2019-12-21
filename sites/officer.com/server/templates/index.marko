@@ -60,7 +60,7 @@ $ const { id, alias, name, pageNode } = data;
           name="website-scheduled-content"
           params={ sectionId: id, optionName: "Sponsored", limit: 4, queryFragment }
         >
-          <website-content-list-flow nodes=nodes class="sponsored">
+          <website-content-list-flow nodes=nodes class="sponsored" inner-justified=false>
             <@header>
               <marko-web-link>Sponsored Content</marko-web-link>
             </@header>
