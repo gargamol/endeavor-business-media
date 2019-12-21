@@ -52,9 +52,11 @@ $ const { id, alias, name, pageNode } = data;
           </website-content-list-flow>
         </marko-web-query>
       </div>
+
       <div class="col-lg-4 mb-block">
         <marko-web-gam-display-ad id="gpt-ad-rail2" />
       </div>
+
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
@@ -64,14 +66,15 @@ $ const { id, alias, name, pageNode } = data;
             <@header>
               <marko-web-link>Sponsored Content</marko-web-link>
             </@header>
-            <@native-x index=2 name="default" aliases=["home"] />
             <@body>
               <marko-web-gam-display-ad id="gpt-ad-ms" />
             </@body>
           </website-content-list-flow>
         </marko-web-query>
       </div>
+    </div>
 
+    <div class="row">
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
@@ -111,6 +114,9 @@ $ const { id, alias, name, pageNode } = data;
           </website-content-list-flow>
         </marko-web-query>
       </div>
+    </div>
+
+    <div class="row">
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
@@ -137,7 +143,6 @@ $ const { id, alias, name, pageNode } = data;
           </website-content-list-flow>
         </marko-web-query>
       </div>
-
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
@@ -151,9 +156,13 @@ $ const { id, alias, name, pageNode } = data;
           </website-content-list-flow>
         </marko-web-query>
       </div>
+    </div>
 
-      <div class="col-lg-6 md-block">
-        <marko-web-query|{ node: issue }| name="magazine-latest-issue" params={ publicationId: "53f6823928ed57018875bb53", queryFragment: latestIssueFragment }>
+    <div class="row">
+      <div class="col-lg-4 md-block">
+        <marko-web-query|{ node: issue }|
+          name="magazine-latest-issue"
+            params={ publicationId: "53f6823928ed57018875bb53", queryFragment: latestIssueFragment }>
           <website-magazine-latest-issue-flow issue-node=issue>
             <@header>
               <marko-web-magazine-issue-name tag=null obj=issue link=true>
@@ -164,8 +173,14 @@ $ const { id, alias, name, pageNode } = data;
         </marko-web-query>
       </div>
 
-      <div class="col-lg-6 md-block">
-        <marko-web-query|{ node: issue }| name="magazine-latest-issue" params={ publicationId: "53f6824228ed57018875bb59", queryFragment: latestIssueFragment }>
+      <div class="col-lg-4 mb-block">
+        <marko-web-gam-display-ad id="gpt-ad-rail2" />
+      </div>
+
+      <div class="col-lg-4 md-block">
+        <marko-web-query|{ node: issue }|
+          name="magazine-latest-issue"
+            params={ publicationId: "53f6824228ed57018875bb59", queryFragment: latestIssueFragment }>
           <website-magazine-latest-issue-flow issue-node=issue>
             <@header>
               <marko-web-magazine-issue-name tag=null obj=issue link=true>
@@ -175,7 +190,6 @@ $ const { id, alias, name, pageNode } = data;
           </website-magazine-latest-issue-flow>
         </marko-web-query>
       </div>
-
     </div>
   </@page>
   <@below-page>
