@@ -1,6 +1,10 @@
+import GAM from "../../../config/gam";
+$ const { aliases } = input;
+
 <default-theme-hero-flow nodes=input.nodes>
   <@hero|{ node }|>
-    <website-content-card-node node=node image-width=630 title-modifiers=["large"] />
+    <website-content-card-node node=node image-width=630 full-height=false title-modifiers=["large"] />
+    <marko-web-gam-define-display-ad ...GAM.getAdUnit({ name: "fl", aliases }) />
   </@hero>
   <@list|{ nodes }|>
     <website-content-list-flow nodes=nodes native-x=input.nativeX />
