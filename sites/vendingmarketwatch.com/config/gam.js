@@ -1,6 +1,6 @@
 const GAMConfiguration = require('@base-cms/marko-web-gam/config');
 
-const config = new GAMConfiguration('21687441225', { basePath: 'VMW' });
+const config = new GAMConfiguration('21687441225', { basePath: 'VendingMarketWatch' });
 
 config
   .setTemplate('LB', {
