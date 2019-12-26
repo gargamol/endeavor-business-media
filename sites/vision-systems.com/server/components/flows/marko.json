@@ -6,10 +6,12 @@
       "@name": "string",
       "@aliases": "array"
     },
-    "@nodes": "array"
+    "@nodes": "array",
+    "@aliases": "array"
   },
   "<website-content-list-flow>": {
     "template": "./content-list.marko",
+    "<body>": {},
     "<header>": {},
     "<native-x>": {
       "@index": "number",

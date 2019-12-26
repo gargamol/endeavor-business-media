@@ -21,6 +21,7 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
         "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
         "gpt-ad-rail1": GAM.getAdUnit({ name: "rail1", aliases }),
         "gpt-ad-rail2": GAM.getAdUnit({ name: "rail2", aliases }),
+        "gpt-ad-fl": GAM.getAdUnit({ name: "fl", aliases }),
       }
        <marko-web-gam-slots slots=adSlots />
     </marko-web-resolve-page>
@@ -86,6 +87,7 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
                 <marko-web-page-image width=300 fluid=false obj=content.primaryImage />
               </else-if>
               <default-theme-content-contact-details obj=content />
+              <marko-web-gam-display-ad id="gpt-ad-fl" modifiers=["top-of-page"] />
               <marko-web-content-body block-name=blockName obj=content />
               <marko-web-content-sidebars block-name=blockName obj=content />
               <if(type === "document")>

@@ -1,6 +1,7 @@
 import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
 import queryFragment from "../graphql/fragments/content-list";
 import latestIssueFragment from "../graphql/fragments/magazine-latest-issue";
+import categories from "../categories";
 import GAM from "../../config/gam";
 
 $ const { id, alias, name, pageNode } = data;
@@ -16,6 +17,7 @@ $ const { id, alias, name, pageNode } = data;
           "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
           "gpt-ad-rail1": GAM.getAdUnit({ name: "rail1", aliases }),
           "gpt-ad-rail2": GAM.getAdUnit({ name: "rail2", aliases }),
+          "gpt-ad-ms": GAM.getAdUnit({ name: "ms", aliases }),
         }
        <marko-web-gam-slots slots=adSlots />
     </marko-web-resolve-page>
@@ -41,7 +43,7 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionId: id, limit: 5, queryFragment }
+          params={ sectionId: id, limit: 4, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
             <@header>
@@ -52,18 +54,21 @@ $ const { id, alias, name, pageNode } = data;
       </div>
 
       <div class="col-lg-4 mb-block">
-        <marko-web-gam-display-ad id="gpt-ad-rail1" />
+        <marko-web-gam-display-ad id="gpt-ad-rail2" />
       </div>
 
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionId: id, optionName: "Sponsored", limit: 5, queryFragment }
+          params={ sectionId: id, optionName: "Sponsored", limit: 4, queryFragment }
         >
-          <website-content-list-flow nodes=nodes class="sponsored">
+          <website-content-list-flow nodes=nodes class="sponsored" inner-justified=false>
             <@header>
-              <marko-web-link>Sponsored</marko-web-link>
+              <marko-web-link>Sponsored Content</marko-web-link>
             </@header>
+            <@body>
+              <marko-web-gam-display-ad id="gpt-ad-ms" />
+            </@body>
           </website-content-list-flow>
         </marko-web-query>
       </div>
@@ -114,19 +119,6 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-4 mb-block">
           <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionAlias: "apparatus", limit: 4, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link href="/apparatus">Apparatus</marko-web-link>
-            </@header>
-            <@native-x index=3 name="default" aliases=["apparatus"] />
-          </website-content-list-flow>
-        </marko-web-query>
-      </div>
-      <div class="col-lg-4 mb-block">
-          <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
           params={ sectionAlias: "rescue", limit: 4, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
@@ -150,6 +142,19 @@ $ const { id, alias, name, pageNode } = data;
           </website-content-list-flow>
         </marko-web-query>
       </div>
+      <div class="col-lg-4 mb-block">
+          <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "prevention-investigation", limit: 4, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/prevention-investigation">Prevention & Investigation</marko-web-link>
+            </@header>
+            <@native-x index=3 name="default" aliases=["prevention-investigation"] />
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
     </div>
 
     <div class="row">
@@ -169,32 +174,6 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-4 mb-block">
           <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionAlias: "careers-education", limit: 4, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link href="/careers-education">Careers & Edu</marko-web-link>
-            </@header>
-            <@native-x index=3 name="default" aliases=["careers-education"] />
-          </website-content-list-flow>
-        </marko-web-query>
-      </div>
-      <div class="col-lg-4 mb-block">
-          <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
-          params={ sectionAlias: "prevention-investigation", limit: 4, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link href="/prevention-investigation">Prevention & Investigation</marko-web-link>
-            </@header>
-            <@native-x index=3 name="default" aliases=["prevention-investigation"] />
-          </website-content-list-flow>
-        </marko-web-query>
-      </div>
-      <div class="col-lg-4 mb-block">
-          <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
           params={ sectionAlias: "tech-comm", limit: 4, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
@@ -208,6 +187,22 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-4 mb-block">
           <marko-web-query|{ nodes }|
           name="website-scheduled-content"
+          params={ sectionAlias: "careers-education", limit: 4, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/careers-education">Careers & Education</marko-web-link>
+            </@header>
+            <@native-x index=3 name="default" aliases=["careers-education"] />
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 mb-block">
+          <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
           params={ sectionAlias: "stations", limit: 4, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
@@ -218,6 +213,7 @@ $ const { id, alias, name, pageNode } = data;
           </website-content-list-flow>
         </marko-web-query>
       </div>
+
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ node: issue }|
           name="magazine-latest-issue"
@@ -233,7 +229,9 @@ $ const { id, alias, name, pageNode } = data;
         </marko-web-query>
       </div>
 
-      <!-- Directory Categories -->
+      <div class="col-lg-4 mb-block">
+        <common-directory-facets title="Channels" activeId=id facets=categories />
+      </div>
 
     </div>
   </@page>

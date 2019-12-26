@@ -1,6 +1,7 @@
 import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
 import queryFragment from "../graphql/fragments/content-list";
 import latestIssueFragment from "../graphql/fragments/magazine-latest-issue";
+import categories from "../categories";
 import GAM from "../../config/gam";
 
 $ const { id, alias, name, pageNode } = data;
@@ -16,6 +17,7 @@ $ const { id, alias, name, pageNode } = data;
           "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
           "gpt-ad-rail1": GAM.getAdUnit({ name: "rail1", aliases }),
           "gpt-ad-rail2": GAM.getAdUnit({ name: "rail2", aliases }),
+          "gpt-ad-ms": GAM.getAdUnit({ name: "ms", aliases }),
         }
        <marko-web-gam-slots slots=adSlots />
     </marko-web-resolve-page>
@@ -28,20 +30,21 @@ $ const { id, alias, name, pageNode } = data;
     </marko-web-resolve-page>
   </@above-container>
   <@page>
-    <marko-web-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
 
     <marko-web-query|{ nodes }|
       name="website-optioned-content"
-      params={ sectionId: id, optionName: "Pinned", limit: 5, queryFragment }
+      params={ sectionId: id, optionName: "Pinned", limit: 5, queryFragment, requiresImage: true }
     >
       <website-content-hero-flow nodes=nodes />
     </marko-web-query>
+
+    <marko-web-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
 
     <div class="row">
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionId: id, limit: 5, queryFragment }
+          params={ sectionId: id, limit: 4, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
             <@header>
@@ -51,20 +54,26 @@ $ const { id, alias, name, pageNode } = data;
         </marko-web-query>
       </div>
       <div class="col-lg-4 mb-block">
-        <marko-web-gam-display-ad id="gpt-ad-rail1" />
+        <marko-web-gam-display-ad id="gpt-ad-rail2" />
       </div>
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionAlias: "jobs", limit: 5, queryFragment }
+          params={ sectionAlias: "jobs", limit: 4, queryFragment }
         >
-          <website-content-list-flow nodes=nodes>
+          <website-content-list-flow nodes=nodes class="sponsored">
             <@header>
               <marko-web-link href="https://jobs.masstransitmag.com">Career Center</marko-web-link>
             </@header>
+            <@body>
+              <marko-web-gam-display-ad id="gpt-ad-ms" />
+            </@body>
           </website-content-list-flow>
         </marko-web-query>
       </div>
+    </div>
+
+    <div class="row">
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
@@ -105,6 +114,7 @@ $ const { id, alias, name, pageNode } = data;
         </marko-web-query>
       </div>
     </div>
+
     <div class="row">
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
@@ -131,6 +141,9 @@ $ const { id, alias, name, pageNode } = data;
             <@native-x index=3 name="default" aliases=["alt-mobility"] />
           </website-content-list-flow>
         </marko-web-query>
+      </div>
+      <div class="col-lg-4 mb-block">
+        <common-directory-facets title="Channels" activeId=id facets=categories />
       </div>
     </div>
   </@page>

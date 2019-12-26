@@ -32,7 +32,8 @@
       "default-value": true
     },
     "@attrs": "object",
-    "@link-attrs": "object"
+    "@link-attrs": "object",
+    "@full-height": "boolean"
   },
   "<website-magazine-latest-issue-node>": {
     "template": "./magazine-latest-issue.marko",

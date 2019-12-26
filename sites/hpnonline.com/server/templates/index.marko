@@ -85,35 +85,6 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionAlias: "sterile-processing", limit: 4, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link href="/sterile-processing">Sterile Processing</marko-web-link>
-            </@header>
-            <@native-x index=3 name="default" aliases=["sterile-processing"] />
-          </website-content-list-flow>
-        </marko-web-query>
-      </div>
-      <div class="col-lg-4 mb-block">
-          <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
-          params={ sectionAlias: "surgical-critical-care", limit: 4, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link href="/surgical-critical-care">Surgical & Critical Care</marko-web-link>
-            </@header>
-            <@native-x index=3 name="default" aliases=["surgical-critical-care"] />
-          </website-content-list-flow>
-        </marko-web-query>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-4 mb-block">
-        <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
           params={ sectionAlias: "patient-satisfaction", limit: 4, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
@@ -134,6 +105,35 @@ $ const { id, alias, name, pageNode } = data;
               <marko-web-link href="/infection-prevention">Infection Prevention</marko-web-link>
             </@header>
             <@native-x index=3 name="default" aliases=["infection-prevention"] />
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 mb-block">
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "sterile-processing", limit: 4, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/sterile-processing">Sterile Processing</marko-web-link>
+            </@header>
+            <@native-x index=3 name="default" aliases=["sterile-processing"] />
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+      <div class="col-lg-4 mb-block">
+          <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "surgical-critical-care", limit: 4, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/surgical-critical-care">Surgical & Critical Care</marko-web-link>
+            </@header>
+            <@native-x index=3 name="default" aliases=["surgical-critical-care"] />
           </website-content-list-flow>
         </marko-web-query>
       </div>
@@ -184,7 +184,7 @@ $ const { id, alias, name, pageNode } = data;
           name="all-published-content"
           params={ contentTypes: ["Webinar"], limit: 4, queryFragment }
         >
-          <website-content-list-flow nodes=nodes display-image=false>
+          <website-content-list-flow nodes=nodes inner-justified=false>
             <@header>
               <marko-web-link href="/webinars">Webinars</marko-web-link>
             </@header>

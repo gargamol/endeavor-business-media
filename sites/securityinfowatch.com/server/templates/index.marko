@@ -1,6 +1,7 @@
 import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
 import queryFragment from "../graphql/fragments/content-list";
 import latestIssueFragment from "../graphql/fragments/magazine-latest-issue";
+import categories from "../categories";
 import GAM from "../../config/gam";
 
 $ const { id, alias, name, pageNode } = data;
@@ -30,18 +31,21 @@ $ const { id, alias, name, pageNode } = data;
   <@page>
     <marko-web-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
 
-    <marko-web-query|{ nodes }|
-      name="website-optioned-content"
-      params={ sectionId: id, optionName: "Pinned", limit: 5, queryFragment }
-    >
-      <website-content-hero-flow nodes=nodes />
-    </marko-web-query>
+    <marko-web-resolve-page|{ data: section }| node=pageNode>
+      $ const aliases = hierarchyAliases(section);
+      <marko-web-query|{ nodes }|
+        name="website-optioned-content"
+        params={ sectionId: id, optionName: "Pinned", limit: 5, queryFragment }
+      >
+        <website-content-hero-flow nodes=nodes aliases=aliases />
+      </marko-web-query>
+    </marko-web-resolve-page>
 
     <div class="row">
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionId: id, limit: 5, queryFragment }
+          params={ sectionId: id, limit: 4, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
             <@header>
@@ -52,18 +56,60 @@ $ const { id, alias, name, pageNode } = data;
       </div>
 
       <div class="col-lg-4 mb-block">
-        <marko-web-gam-display-ad id="gpt-ad-rail1" />
+        <marko-web-gam-display-ad id="gpt-ad-rail2" />
       </div>
 
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionAlias: "sponsored", limit: 5, queryFragment }
+          params={ sectionAlias: "sponsored", limit: 4, queryFragment }
         >
           <website-content-list-flow nodes=nodes class="sponsored">
             <@header>
               <marko-web-link>Sponsored</marko-web-link>
             </@header>
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 mb-block">
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "cybersecurity", limit: 4, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/cybersecurity">Cybersecurity</marko-web-link>
+            </@header>
+            <@native-x index=3 name="default" aliases=["cybersecurity"] />
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+      <div class="col-lg-4 mb-block">
+          <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "video-surveillance", limit: 4, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/video-surveillance">Video Surveillance</marko-web-link>
+            </@header>
+            <@native-x index=3 name="default" aliases=["video-surveillance"] />
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+      <div class="col-lg-4 mb-block">
+          <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "integrators", limit: 4, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/integrators">Integrators</marko-web-link>
+            </@header>
+            <@native-x index=3 name="default" aliases=["integrators"] />
           </website-content-list-flow>
         </marko-web-query>
       </div>
@@ -84,34 +130,6 @@ $ const { id, alias, name, pageNode } = data;
         </marko-web-query>
       </div>
       <div class="col-lg-4 mb-block">
-          <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
-          params={ sectionAlias: "integrators", limit: 4, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link href="/integrators">Integrators</marko-web-link>
-            </@header>
-            <@native-x index=3 name="default" aliases=["integrators"] />
-          </website-content-list-flow>
-        </marko-web-query>
-      </div>
-      <div class="col-lg-4 mb-block">
-          <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
-          params={ sectionAlias: "video-surveillance", limit: 4, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link href="/video-surveillance">Video Surveillance</marko-web-link>
-            </@header>
-            <@native-x index=3 name="default" aliases=["video-surveillance"] />
-          </website-content-list-flow>
-        </marko-web-query>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
           params={ sectionAlias: "access-identity", limit: 4, queryFragment }
@@ -121,6 +139,35 @@ $ const { id, alias, name, pageNode } = data;
               <marko-web-link href="/access-identity">Access Identity</marko-web-link>
             </@header>
             <@native-x index=3 name="default" aliases=["access-identity"] />
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+      <div class="col-lg-4 mb-block">
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "alarms-monitoring", limit: 4, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/alarms-monitoring">Alarms & Monitoring</marko-web-link>
+            </@header>
+            <@native-x index=3 name="default" aliases=["alarms-monitoring"] />
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 mb-block">
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "perimeter-security", limit: 4, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/perimeter-security">Perimeter</marko-web-link>
+            </@header>
+            <@native-x index=3 name="default" aliases=["perimeter-security"] />
           </website-content-list-flow>
         </marko-web-query>
       </div>
@@ -137,47 +184,9 @@ $ const { id, alias, name, pageNode } = data;
           </website-content-list-flow>
         </marko-web-query>
       </div>
-
       <div class="col-lg-4 mb-block">
-        <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
-          params={ sectionAlias: "alarms-monitoring", limit: 4, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link href="/alarms-monitoring">Alarms & Monitoring</marko-web-link>
-            </@header>
-            <@native-x index=3 name="default" aliases=["alarms-monitoring"] />
-          </website-content-list-flow>
-        </marko-web-query>
+        <common-directory-facets title="Channels" activeId=id facets=categories />
       </div>
-      <div class="col-lg-4 mb-block">
-        <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
-          params={ sectionAlias: "cybersecurity", limit: 4, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link href="/cybersecurity">Cyber</marko-web-link>
-            </@header>
-            <@native-x index=3 name="default" aliases=["cybersecurity"] />
-          </website-content-list-flow>
-        </marko-web-query>
-      </div>
-      <div class="col-lg-4 mb-block">
-        <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
-          params={ sectionAlias: "perimeter-security", limit: 4, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link href="/perimeter-security">Perimeter</marko-web-link>
-            </@header>
-            <@native-x index=3 name="default" aliases=["perimeter-security"] />
-          </website-content-list-flow>
-        </marko-web-query>
-      </div>
-
     </div>
   </@page>
   <@below-page>
