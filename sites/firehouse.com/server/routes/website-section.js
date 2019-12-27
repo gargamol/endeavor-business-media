@@ -5,6 +5,7 @@ const section = require('../templates/website-section');
 const contactUs = require('../templates/website-section/contact-us');
 const whitePapers = require('../templates/website-section/white-papers');
 const channel = require('../templates/website-section/channel');
+const runSurveys = require('../templates/website-section/run-surveys');
 
 const channelAliases = [
   'leadership',
@@ -36,6 +37,10 @@ module.exports = (app) => {
   }));
   app.get('/:alias(white-papers)', withWebsiteSection({
     template: whitePapers,
+    queryFragment,
+  }));
+  app.get('/:alias(run-surveys)', withWebsiteSection({
+    template: runSurveys,
     queryFragment,
   }));
   app.get('/:alias([a-z0-9-/]+)', withWebsiteSection({
