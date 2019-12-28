@@ -82,6 +82,22 @@ config
     { name: 'rail2', templateName: 'RAIL2', path: 'directory/rail2' },
     { name: 'load-more', templateName: 'LM', path: 'directory/load-more' },
     { name: 'reskin', path: 'directory/reskin' },
+  ])
+  .setAliasAdUnits('sales-tax-compliance', [
+    { name: 'lb1', templateName: 'LB', path: 'sales-tax-compliance/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'sales-tax-compliance/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'sales-tax-compliance/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'sales-tax-compliance/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'sales-tax-compliance/load-more' },
+    { name: 'reskin', path: 'sales-tax-compliance/reskin' },
+  ])
+  .setAliasAdUnits('a-year-in-the-life-of-payroll', [
+    { name: 'lb1', templateName: 'LB', path: 'a-year-in-the-life-of-payroll/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'a-year-in-the-life-of-payroll/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'a-year-in-the-life-of-payroll/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'a-year-in-the-life-of-payroll/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'a-year-in-the-life-of-payroll/load-more' },
+    { name: 'reskin', path: 'a-year-in-the-life-of-payroll/reskin' },
   ]);
 
 module.exports = config;
