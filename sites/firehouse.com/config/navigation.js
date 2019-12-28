@@ -55,6 +55,7 @@ module.exports = {
       items: [
         { href: 'https://forums.firehouse.com', label: 'Forums', target: '_blank' },
         { href: '/magazine', label: 'In Print' },
+        { href: '/shiftcalendar', label: 'Shift Calendar' },
         { href: '/lodds', label: 'LODDs' },
         { href: '/directory', label: 'Buyer\'s Guide' },
         { href: '/40th-anniversary', label: '40th Anniversary' },

@@ -7,6 +7,7 @@ const magazine = require('./magazine');
 const publishedContent = require('./published-content');
 const search = require('./search');
 const subscribe = require('./subscribe');
+const shiftCalendar = require('./shiftcalendar');
 const websiteSections = require('./website-section');
 
 module.exports = (app) => {
@@ -38,6 +39,9 @@ module.exports = (app) => {
 
   // Subscription Pages
   subscribe(app);
+
+  // Shift Calendar
+  shiftCalendar(app);
 
   // Website Sections
   websiteSections(app);
