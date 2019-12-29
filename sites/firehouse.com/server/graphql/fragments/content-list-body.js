@@ -7,7 +7,6 @@ fragment WebsiteContentListBodyFragment on Content {
   type
   shortName
   body
-  canonicalPath
   published
   primaryImage {
     id
