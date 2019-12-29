@@ -52,6 +52,7 @@ $ const { id, alias, name, pageNode } = data;
         >
           $ const content = nodes[0];
           $ const primaryImage = getAsObject(content, "primaryImage");
+          $ const siteContext = getAsObject(content, "siteContext");
           <marko-web-node
             type=`${content.type}-content`
             image-position="top"
@@ -64,7 +65,7 @@ $ const { id, alias, name, pageNode } = data;
               fluid=true
               ar="16:9"
               width=1200
-              link={ href: content.canonicalPath }
+              link={ href: siteContext.path }
             />
             <@body>
               <@text>
