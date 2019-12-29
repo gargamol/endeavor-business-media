@@ -98,6 +98,60 @@ config
     { name: 'load-more', templateName: 'LM', path: 'products/load-more' },
     { name: 'reskin', path: 'products/reskin' },
     { name: 'wa', path: 'products/wa' },
+  ])
+  .setAliasAdUnits('coffee-service/water-equipment-coolers-filters-accessories-etc', [
+    { name: 'lb1', templateName: 'LB', path: 'coffee-service/water-equipment-coolers-filters-accessories-etc/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'coffee-service/water-equipment-coolers-filters-accessories-etc/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'coffee-service/water-equipment-coolers-filters-accessories-etc/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'coffee-service/water-equipment-coolers-filters-accessories-etc/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'coffee-service/water-equipment-coolers-filters-accessories-etc/load-more' },
+    { name: 'reskin', path: 'coffee-service/water-equipment-coolers-filters-accessories-etc/reskin' },
+    { name: 'wa', path: 'coffee-service/water-equipment-coolers-filters-accessories-etc/wa' },
+  ])
+  .setAliasAdUnits('micro-market/micro-market-security-systems-and-accessories', [
+    { name: 'lb1', templateName: 'LB', path: 'micro-market/micro-market-security-systems-and-accessories/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'micro-market/micro-market-security-systems-and-accessories/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'micro-market/micro-market-security-systems-and-accessories/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'micro-market/micro-market-security-systems-and-accessories/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'micro-market/micro-market-security-systems-and-accessories/load-more' },
+    { name: 'reskin', path: 'micro-market/micro-market-security-systems-and-accessories/reskin' },
+    { name: 'wa', path: 'micro-market/micro-market-security-systems-and-accessories/wa' },
+  ])
+  .setAliasAdUnits('micro-market/micro-market-management-systems-mms', [
+    { name: 'lb1', templateName: 'LB', path: 'micro-market/micro-market-management-systems-mms/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'micro-market/micro-market-management-systems-mms/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'micro-market/micro-market-management-systems-mms/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'micro-market/micro-market-management-systems-mms/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'micro-market/micro-market-management-systems-mms/load-more' },
+    { name: 'reskin', path: 'micro-market/micro-market-management-systems-mms/reskin' },
+    { name: 'wa', path: 'micro-market/micro-market-management-systems-mms/wa' },
+  ])
+  .setAliasAdUnits('micro-market/micro-market-kiosks-and-mobile-checkout', [
+    { name: 'lb1', templateName: 'LB', path: 'micro-market/micro-market-kiosks-and-mobile-checkout/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'micro-market/micro-market-kiosks-and-mobile-checkout/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'micro-market/micro-market-kiosks-and-mobile-checkout/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'micro-market/micro-market-kiosks-and-mobile-checkout/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'micro-market/micro-market-kiosks-and-mobile-checkout/load-more' },
+    { name: 'reskin', path: 'micro-market/micro-market-kiosks-and-mobile-checkout/reskin' },
+    { name: 'wa', path: 'micro-market/micro-market-kiosks-and-mobile-checkout/wa' },
+  ])
+  .setAliasAdUnits('micro-market/micro-market-food-coolers', [
+    { name: 'lb1', templateName: 'LB', path: 'micro-market/micro-market-food-coolers/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'micro-market/micro-market-food-coolers/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'micro-market/micro-market-food-coolers/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'micro-market/micro-market-food-coolers/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'micro-market/micro-market-food-coolers/load-more' },
+    { name: 'reskin', path: 'micro-market/micro-market-food-coolers/reskin' },
+    { name: 'wa', path: 'micro-market/micro-market-food-coolers/wa' },
+  ])
+  .setAliasAdUnits('micro-market/micro-market-fixtures-area-treatments', [
+    { name: 'lb1', templateName: 'LB', path: 'micro-market/micro-market-fixtures-area-treatments/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'micro-market/micro-market-fixtures-area-treatments/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'micro-market/micro-market-fixtures-area-treatments/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'micro-market/micro-market-fixtures-area-treatments/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'micro-market/micro-market-fixtures-area-treatments/load-more' },
+    { name: 'reskin', path: 'micro-market/micro-market-fixtures-area-treatments/reskin' },
+    { name: 'wa', path: 'micro-market/micro-market-fixtures-area-treatments/wa' },
   ]);
 
 module.exports = config;
