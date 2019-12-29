@@ -1,6 +1,7 @@
 import { getAsObject } from "@base-cms/object-path";
 import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
-import queryFragment from "../../graphql/fragments/content-list-expanded";
+import queryFragment from "../../graphql/fragments/content-list";
+import runSurveysQueryFragment from "../../graphql/fragments/content-list-body";
 import GAM from "../../../config/gam";
 
 $ const { id, alias, name, pageNode } = data;
@@ -47,11 +48,10 @@ $ const { id, alias, name, pageNode } = data;
 
         <marko-web-query|{ nodes }|
           name="website-optioned-content"
-          params={ sectionId: id, optionName: "Pinned", limit: 1, queryFragment }
+          params={ sectionId: id, optionName: "Pinned", limit: 1, queryFragment: runSurveysQueryFragment }
         >
           $ const content = nodes[0];
           $ const primaryImage = getAsObject(content, "primaryImage");
-          <h1>${content.name}</h1>
           <marko-web-node
             type=`${content.type}-content`
             image-position="top"
