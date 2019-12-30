@@ -47,9 +47,6 @@ $ const { id, alias, name, pageNode } = data;
           params={ sectionAlias: "summits", optionName: "Pinned", limit: 1, queryFragment: summitsQueryFragment }
         >
           $ const content = nodes[0];
-          $ const primaryImage = getAsObject(content, "primaryImage");
-          $ const siteContext = getAsObject(content, "siteContext");
-
           <div class="node-list">
             <marko-web-node-list-header>
               <marko-web-link href="/summits">Summits</marko-web-link>
