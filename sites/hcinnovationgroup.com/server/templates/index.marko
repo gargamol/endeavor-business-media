@@ -1,5 +1,7 @@
+import { getAsObject } from "@base-cms/object-path";
 import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
 import queryFragment from "../graphql/fragments/content-list";
+import summitsQueryFragment from "../graphql/fragments/content-list-body";
 import latestIssueFragment from "../graphql/fragments/magazine-latest-issue";
 import GAM from "../../config/gam";
 
@@ -41,14 +43,26 @@ $ const { id, alias, name, pageNode } = data;
 
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
-          params={ sectionAlias: "summits", limit: 4, queryFragment }
+          name="website-optioned-content"
+          params={ sectionAlias: "summits", optionName: "Pinned", limit: 1, queryFragment: summitsQueryFragment }
         >
-          <website-content-list-flow nodes=nodes display-image=false>
-            <@header>
-              <marko-web-link>Summits</marko-web-link>
-            </@header>
-          </website-content-list-flow>
+          $ const content = nodes[0];
+          <div class="node-list">
+            <marko-web-node-list-header>
+              <marko-web-link href="/summits">Summits</marko-web-link>
+            </marko-web-node-list-header>
+            <marko-web-node
+              type=`${content.type}-content`
+              image-position="top"
+              card=true
+            >
+              <@body>
+                <@text>
+                  <marko-web-content-body tag=null obj=content />
+                </@text>
+              </@body>
+            </marko-web-node>
+          </div>
         </marko-web-query>
       </div>
 
