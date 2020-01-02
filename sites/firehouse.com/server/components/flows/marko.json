@@ -56,6 +56,11 @@
     "@nodes": "array",
     "@aliases": "array"
   },
+  "<website-content-four-card-deck-flow>": {
+    "template": "./content-four-card-deck.marko",
+    "@nodes": "array",
+    "@aliases": "array"
+  },
   "<website-magazine-issue-archive-flow>": {
     "template": "./magazine-issue-archive.marko",
     "@nodes": "array",
