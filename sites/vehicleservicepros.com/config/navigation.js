@@ -52,6 +52,7 @@ module.exports = {
         { href: '/ask-the-expert', label: 'Ask the Expert & Tech Tips' },
         { href: '/blogs', label: 'Blogs' },
         { href: '/videos', label: 'Videos' },
+        { href: '/podcasts', label: 'Podcasts' },
         { href: '/webinars', label: 'Webinars' },
         { href: '/whitepapers', label: 'Whitepapers' },
         { href: '/reviews', label: 'Tool Reviews' },
