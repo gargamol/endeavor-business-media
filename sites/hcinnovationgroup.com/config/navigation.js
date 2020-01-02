@@ -1,7 +1,7 @@
 module.exports = {
   primary: {
     items: [
-      { href: '/summits', label: 'Summits' },
+      { href: 'https://endeavor.swoogo.com/Summit_Series/cyber_forums', label: 'Events', target: '_blank' },
       { href: '/policy-value-based-care', label: 'VBC' },
       { href: '/population-health-management', label: 'Pop Health' },
       { href: '/analytics-ai', label: 'Analytics/AI' },
@@ -40,7 +40,7 @@ module.exports = {
     {
       label: 'Topics',
       items: [
-        { href: '/summits', label: 'Summits' },
+        { href: 'https://endeavor.swoogo.com/Summit_Series/cyber_forums', label: 'Events', target: '_blank' },
         { href: '/policy-value-based-care', label: 'Policy & Value-Based Care' },
         { href: '/population-health-management', label: 'Population Health' },
         { href: '/analytics-ai', label: 'Analytics/AI' },

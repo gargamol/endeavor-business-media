@@ -54,6 +54,15 @@
       "@aliases": "array"
     },
     "@nodes": "array",
+    "@cols": {
+      "type": "number",
+      "default-value": 3
+    },
+    "@display-ads": {
+      "type": "boolean",
+      "default-value": true
+    },
+    "@with-teaser": "boolean",
     "@aliases": "array"
   },
   "<website-magazine-issue-archive-flow>": {
