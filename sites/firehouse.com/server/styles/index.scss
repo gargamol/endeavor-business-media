@@ -41,3 +41,18 @@ $body-bg: #fff;
     }
   }
 }
+
+// Override to make card deck flows with 4 cols display 25% till it reaches a lower resolution
+@media (min-width: 768px) {
+  .card-deck-flow {
+    $self: &;
+    &--4-cols {
+      #{ $self }{
+        &__node {
+          flex: 0 0 25%;
+          max-width: 25%;
+        }
+      }
+    }
+  }
+}
