@@ -32,6 +32,7 @@ $theme-site-header-breakpoints: (
 @import "../../node_modules/@base-cms/marko-web-gam/scss/fixed-ad-bottom";
 @import "../../node_modules/@base-cms/marko-web-reveal-ad/scss/reveal-ad";
 @import "../../node_modules/@base-cms/marko-web-theme-default/skins/orion/skin";
+@import "../../node_modules/@endeavor-business-media/package-common/scss/card-deck-flow";
 // @todo this should be remove once contact us is in core
 @import "../../node_modules/@endeavor-business-media/package-common/scss/contact-us-form";
 @import "../../node_modules/@endeavor-business-media/package-common/scss/directory";

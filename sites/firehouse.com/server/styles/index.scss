@@ -28,6 +28,7 @@ $body-bg: #fff;
 @import "../../node_modules/@base-cms/marko-web-gam/scss/fixed-ad-bottom";
 @import "../../node_modules/@base-cms/marko-web-reveal-ad/scss/reveal-ad";
 @import "../../node_modules/@base-cms/marko-web-theme-default/skins/orion/skin";
+@import "../../node_modules/@endeavor-business-media/package-common/scss/card-deck-flow";
 // @todo this should be remove once contact us is in core
 @import "../../node_modules/@endeavor-business-media/package-common/scss/contact-us-form";
 @import "../../node_modules/@endeavor-business-media/package-common/scss/directory";
@@ -38,44 +39,6 @@ $body-bg: #fff;
     background-color: #f0f0f0;
     .node {
       background-color: transparent;
-    }
-  }
-}
-
-// Override to make card deck flows with 4 cols display 25% till it reaches a lower resolution
-
-@include media-breakpoint-up(md) {
-  .card-deck-flow {
-    $self: &;
-    &--4-cols {
-      #{ $self }{
-        &__node {
-          flex: 0 0 25%;
-          max-width: 25%;
-        }
-      }
-    }
-
-    &--6-cols {
-      #{ $self }{
-        &__node {
-          flex: 0 0 16.6666%;
-          max-width: 16.6666%;
-        }
-      }
-    }
-  }
-}
-@include media-breakpoint-between(sm, md) {
-  .card-deck-flow {
-    $self: &;
-    &--6-cols {
-      #{ $self }{
-        &__node {
-          flex: 0 0 33.3333%;
-          max-width: 33.3333%;
-        }
-      }
     }
   }
 }
