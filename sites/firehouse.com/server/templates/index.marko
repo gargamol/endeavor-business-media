@@ -127,7 +127,7 @@ $ const { id, alias, name, pageNode } = data;
             name="all-published-content"
             params={ contentTypes: ["Video"], limit: 4, queryFragment }
           >
-            <website-content-four-card-deck-flow nodes=nodes />
+            <website-content-card-deck-flow nodes=nodes cols=4 display-ads=false with-teaser=false />
           </marko-web-query>
         </div>
       </div>

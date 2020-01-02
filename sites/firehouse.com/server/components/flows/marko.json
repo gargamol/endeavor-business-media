@@ -54,11 +54,15 @@
       "@aliases": "array"
     },
     "@nodes": "array",
-    "@aliases": "array"
-  },
-  "<website-content-four-card-deck-flow>": {
-    "template": "./content-four-card-deck.marko",
-    "@nodes": "array",
+    "@cols": {
+      "type": "number",
+      "default-value": 3
+    },
+    "@display-ads": {
+      "type": "boolean",
+      "default-value": true
+    },
+    "@with-teaser": "boolean",
     "@aliases": "array"
   },
   "<website-magazine-issue-archive-flow>": {
