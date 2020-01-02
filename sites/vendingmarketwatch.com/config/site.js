@@ -23,7 +23,7 @@ module.exports = {
     { provider: 'facebook', href: 'https://www.facebook.com/vendingmarket/', target: '_blank' },
   ],
   gtm: {
-    containerId: 'GTM-5J26FCD',
+    containerId: 'GTM-MH74BHQ',
   },
   wufoo: {
     userName: 'cygnuscorporate',
