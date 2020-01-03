@@ -44,6 +44,7 @@ module.exports = {
         { href: '/lighting-health-wellbeing', label: 'Lighting for Health & Wellbeing' },
         { href: '/specialty-ssl', label: 'Specialty SSL' },
         { href: '/horticultural-lighting', label: 'Horticultural Lighting' },
+        { href: '/manufacturing-services-testing', label: 'Manufacturing, Services & Testing' },
       ],
     },
     {
