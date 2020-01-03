@@ -36,7 +36,7 @@ module.exports = {
       bgColor: '#164f77',
       logo: 'https://img.processingmagazine.com/files/base/ebm/pcm/image/static/pcm_logo_white.png?h=60',
     },
-    to: 'adsales@endeavorb2b.com',
+    to: 'contact@processingmagazine.com',
   },
   inquiry: {
     enabled: true,
