@@ -6,7 +6,7 @@ module.exports = {
       { href: '/technology', label: 'Technology' },
       { href: '/safety-security', label: 'Safety & Security' },
       { href: '/alt-mobility', label: 'Alt. Mobility' },
-      { href: '/career-center', label: 'Career Center' },
+      { href: 'https://jobs.masstransitmag.com/', target: '_blank' label: 'Career Center' },
     ],
   },
   secondary: {
@@ -41,7 +41,7 @@ module.exports = {
         { href: '/technology', label: 'Technology' },
         { href: '/safety-security', label: 'Safety & Security' },
         { href: '/alt-mobility', label: 'Alt. Mobility' },
-        { href: '/career-center', label: 'Career Center' },
+        { href: 'https://jobs.masstransitmag.com/', target: '_blank' label: 'Career Center' },
       ],
     },
     {
