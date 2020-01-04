@@ -3,7 +3,7 @@ module.exports = {
     items: [
       { href: '/alarms-video', label: 'Alarms & Video' },
       { href: '/door-hardware', label: 'Door Hardware' },
-      { href: '/keys-tools', label: 'Keys Tools' },
+      { href: '/keys-tools', label: 'Keys & Tools' },
       { href: '/locks', label: 'Locks' },
       { href: '/electronics-access-control', label: 'Electronics & Access Control' },
       { href: '/safes', label: 'Safes' },
@@ -37,7 +37,7 @@ module.exports = {
       items: [
         { href: '/alarms-video', label: 'Alarms & Video' },
         { href: '/door-hardware', label: 'Door Hardware' },
-        { href: '/keys-tools', label: 'Keys Tools' },
+        { href: '/keys-tools', label: 'Keys & Tools' },
         { href: '/locks', label: 'Locks' },
         { href: '/electronics-access-control', label: 'Electronics & Access Control' },
         { href: '/safes', label: 'Safes' },
