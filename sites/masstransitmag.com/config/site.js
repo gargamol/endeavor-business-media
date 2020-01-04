@@ -20,6 +20,7 @@ module.exports = {
   socialMediaLinks: [
     { provider: 'twitter', href: 'https://www.twitter.com/MassTransitMag', target: '_blank' },
     { provider: 'facebook', href: 'https://www.facebook.com/MassTransit', target: '_blank' },
+    { provider: 'linkedin', href: 'https://www.linkedin.com/company/masstransit', target: '_blank' },
   ],
   gtm: {
     containerId: 'GTM-PR268NB',
