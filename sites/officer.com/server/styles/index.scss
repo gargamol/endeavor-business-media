@@ -48,3 +48,10 @@ $body-bg: #fff;
     }
   }
 }
+
+// @todo this should be removed once added to the theme
+.page-contents {
+  &__content-body a {
+    text-decoration: underline;
+  }
+}
