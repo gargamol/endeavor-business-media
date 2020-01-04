@@ -13,7 +13,6 @@ module.exports = {
   secondary: {
     items: [
       { href: 'https://www.locksmithledger.com/codesexpress', label: 'CodesExpress' },
-      { href: 'https://forums.locksmithledger.com', label: 'Forums', target: '_blank' },
       { href: '/directory', label: 'Buyer\'s Guide' },
       { href: '/contact-us', label: 'Contact Us' },
     ],
@@ -48,7 +47,6 @@ module.exports = {
       label: 'Resources',
       items: [
         { href: 'https://www.locksmithledger.com/codesexpress', label: 'CodesExpress' },
-        { href: 'https://forums.locksmithledger.com', label: 'Forums', target: '_blank' },
         { href: '/directory', label: 'Buyer\'s Guide' },
         { href: '/events', label: 'Events' },
         { href: '/magazine', label: 'Magazine' },
