@@ -20,7 +20,7 @@ module.exports = {
       { href: 'https://endeavor.swoogo.com/innovators-showcase/378310', label: 'Innovators', target: '_blank' },
       { href: '/subscribe', label: 'Subscribe' },
       { href: 'https://endeavor.swoogo.com/marketing-solutions', label: 'Advertise', target: '_blank' },
-      { href: '/about-us', label: 'About Us' },
+      { href: '/page/about-us', label: 'About Us' },
     ],
   },
   tertiary: {
