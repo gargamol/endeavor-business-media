@@ -19,7 +19,7 @@ module.exports = {
       { href: '/top-100-vendors/2018', label: 'Top 100 Vendors' },
       { href: 'https://endeavor.swoogo.com/innovators-showcase/378310', label: 'Innovators', target: '_blank' },
       { href: '/subscribe', label: 'Subscribe' },
-      { href: '/advertise', label: 'Advertise' },
+      { href: 'https://endeavor.swoogo.com/marketing-solutions', label: 'Advertise', target: '_blank' },
       { href: '/about-us', label: 'About Us' },
     ],
   },
@@ -65,7 +65,7 @@ module.exports = {
       label: 'User Tools',
       items: [
         { href: '/subscribe', label: 'Subscribe' },
-        { href: '/page/advertise', label: 'Advertise' },
+        { href: 'https://endeavor.swoogo.com/marketing-solutions', label: 'Advertise', target: '_blank' },
         { href: '/page/about-us', label: 'About Us' },
         { href: '/contact-us', label: 'Contact Us' },
         { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
