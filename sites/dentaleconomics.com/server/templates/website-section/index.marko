@@ -32,9 +32,7 @@ $ const { id, alias, name, pageNode } = data;
       name="website-optioned-content"
       params={ sectionId: id, optionName: "Pinned", limit: 5, queryFragment }
     >
-      <website-content-hero-flow nodes=nodes>
-        <@native-x index=3 name="default" aliases=[alias] />
-      </website-content-hero-flow>
+      <website-content-hero-flow nodes=nodes />
     </marko-web-query>
 
     <div class="row">
