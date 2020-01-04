@@ -66,6 +66,7 @@ module.exports = {
     {
       label: 'Events',
       items: [
+        { href: '/events', label: 'Calendar' },
         { href: '/secured-cities', label: 'Secured Cities' },
         { href: '/11713862', label: 'Fast50' },
         { href: '/isc-west', label: 'ISC West' },
