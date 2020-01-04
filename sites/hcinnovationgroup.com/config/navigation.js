@@ -16,7 +16,7 @@ module.exports = {
     items: [
       { href: '/webinars', label: 'Webinars' },
       { href: '/whitepapers', label: 'WhitePapers' },
-      { href: '/top-100-vendors/2018', label: 'Top 100 Vendors' },
+      // { href: '/top-100-vendors/2018', label: 'Top 100 Vendors' },
       { href: 'https://endeavor.swoogo.com/innovators-showcase/378310', label: 'Innovators', target: '_blank' },
       { href: '/subscribe', label: 'Subscribe' },
       { href: 'https://endeavor.swoogo.com/marketing-solutions', label: 'Advertise', target: '_blank' },
@@ -56,7 +56,7 @@ module.exports = {
       items: [
         { href: '/webinars', label: 'Webinars' },
         { href: '/whitepapers', label: 'WhitePapers' },
-        { href: '/top-100-vendors/2018', label: 'Top 100 Vendors' },
+        // { href: '/top-100-vendors/2018', label: 'Top 100 Vendors' },
         { href: 'https://endeavor.swoogo.com/innovators-showcase/378310', label: 'Innovators', target: '_blank' },
         { href: '/magazine', label: 'In Print' },
       ],
