@@ -50,6 +50,7 @@ module.exports = {
     {
       label: 'Resources',
       items: [
+        { href: '/magazine', label: 'Magazines' },
         { href: 'https://forums.securityinfowatch.com', label: 'Forums', target: '_blank' },
         { href: '/directory', label: 'Buyer\'s Guide' },
         { href: '/government', label: 'Government' },
