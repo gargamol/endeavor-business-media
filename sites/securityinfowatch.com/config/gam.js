@@ -106,6 +106,15 @@ config
     { name: 'load-more', templateName: 'LM', path: 'perimeter-security/load-more' },
     { name: 'reskin', path: 'perimeter-security/reskin' },
     { name: 'fl', templateName: 'FL', path: 'perimeter-security/fl' },
+  ])
+  .setAliasAdUnits('alarms-monitoring/alarm-systems-intrusion-detection', [
+    { name: 'lb1', templateName: 'LB', path: 'alarms-monitoring/alarm-systems-intrusion-detection/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'alarms-monitoring/alarm-systems-intrusion-detection/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'alarms-monitoring/alarm-systems-intrusion-detection/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'alarms-monitoring/alarm-systems-intrusion-detection/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'alarms-monitoring/alarm-systems-intrusion-detection/load-more' },
+    { name: 'reskin', path: 'alarms-monitoring/alarm-systems-intrusion-detection/reskin' },
+    { name: 'fl', templateName: 'FL', path: 'alarms-monitoring/alarm-systems-intrusion-detection/fl' },
   ]);
 
 module.exports = config;

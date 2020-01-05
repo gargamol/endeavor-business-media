@@ -66,6 +66,14 @@ config
     { name: 'rail2', templateName: 'RAIL2', path: 'alt-mobility/rail2' },
     { name: 'load-more', templateName: 'LM', path: 'alt-mobility/load-more' },
     { name: 'reskin', path: 'alt-mobility/reskin' },
+  ])
+  .setAliasAdUnits('technology/fare-collection', [
+    { name: 'lb1', templateName: 'LB', path: 'technology/fare-collection/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'technology/fare-collection/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'technology/fare-collection/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'technology/fare-collection/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'technology/fare-collection/load-more' },
+    { name: 'reskin', path: 'technology/fare-collection/reskin' },
   ]);
 
 module.exports = config;
