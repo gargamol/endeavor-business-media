@@ -259,6 +259,24 @@ config
     { name: 'load-more', templateName: 'LM', path: 'on-the-street/k-9-equipment-services/load-more' },
     { name: 'reskin', path: 'on-the-street/k-9-equipment-services/reskin' },
     { name: 'wa', path: 'on-the-street/k-9-equipment-services/wa' },
+  ])
+  .setAliasAdUnits('training-careers/specialized-training', [
+    { name: 'lb1', templateName: 'LB', path: 'training-careers/specialized-training/lb1' },
+    { name: 'lb2', templateName: 'LB2', path: 'training-careers/specialized-training/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'training-careers/specialized-training/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'training-careers/specialized-training/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'training-careers/specialized-training/load-more' },
+    { name: 'reskin', path: 'training-careers/specialized-training/reskin' },
+    { name: 'wa', path: 'training-careers/specialized-training/wa' },
+  ])
+  .setAliasAdUnits('on-the-street/vehicles-equipment', [
+    { name: 'lb1', templateName: 'LB', path: 'on-the-street/vehicles-equipment/lb1' },
+    { name: 'lb2', templateName: 'LB2', path: 'on-the-street/vehicles-equipment/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'on-the-street/vehicles-equipment/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'on-the-street/vehicles-equipment/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'on-the-street/vehicles-equipment/load-more' },
+    { name: 'reskin', path: 'on-the-street/vehicles-equipment/reskin' },
+    { name: 'wa', path: 'on-the-street/vehicles-equipment/wa' },
   ]);
 
 module.exports = config;
