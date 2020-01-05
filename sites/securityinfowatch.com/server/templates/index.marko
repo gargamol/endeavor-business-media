@@ -188,6 +188,48 @@ $ const { id, alias, name, pageNode } = data;
         <common-directory-facets title="Channels" activeId=id facets=categories />
       </div>
     </div>
+
+    <div class="row">
+      <div class="col-lg-4 md-block">
+        <marko-web-query|{ node: issue }|
+          name="magazine-latest-issue"
+            params={ publicationId: "5447e151c99db54158d9e7e1", queryFragment: latestIssueFragment }>
+          <website-magazine-latest-issue-flow issue-node=issue>
+            <@header>
+              <marko-web-magazine-issue-name tag=null obj=issue link=true>
+                Security Business
+              </marko-web-magazine-issue-name>
+            </@header>
+          </website-magazine-latest-issue-flow>
+        </marko-web-query>
+      </div>
+      <div class="col-lg-4 md-block">
+        <marko-web-query|{ node: issue }|
+          name="magazine-latest-issue"
+            params={ publicationId: "5447e204c99db54158d9e809", queryFragment: latestIssueFragment }>
+          <website-magazine-latest-issue-flow issue-node=issue>
+            <@header>
+              <marko-web-magazine-issue-name tag=null obj=issue link=true>
+                Security Technology Executive
+              </marko-web-magazine-issue-name>
+            </@header>
+          </website-magazine-latest-issue-flow>
+        </marko-web-query>
+      </div>
+      <div class="col-lg-4 mb-block">
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "multimedia", limit: 4, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/multimedia">Multimedia</marko-web-link>
+            </@header>
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+    </div>
+
   </@page>
   <@below-page>
     <marko-web-resolve-page|{ data: section }| node=pageNode>

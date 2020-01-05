@@ -4,6 +4,7 @@ const section = require('../templates/website-section');
 const contactUs = require('../templates/website-section/contact-us');
 const queryFragment = require('../graphql/fragments/website-section-page');
 const whitePapers = require('../templates/website-section/white-papers');
+const fortyUnderForty = require('../templates/website-section/40-under-40');
 const channel = require('../templates/website-section/channel');
 
 const channelAliases = [
@@ -26,6 +27,10 @@ module.exports = (app) => {
   }));
   app.get('/:alias(directory/[a-z0-9-/]+)', withWebsiteSection({
     template: directory,
+    queryFragment,
+  }));
+  app.get('/:alias(40-under-40)', withWebsiteSection({
+    template: fortyUnderForty,
     queryFragment,
   }));
   app.get(`/:alias(${channelAliases.join('|')})`, withWebsiteSection({

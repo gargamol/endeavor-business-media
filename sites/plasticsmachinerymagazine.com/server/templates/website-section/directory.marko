@@ -71,9 +71,9 @@ $ const { id, alias, name, pageNode } = data;
         </marko-web-query>
 
         <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
+          name="all-published-content"
           params={
-            sectionId: id,
+            contentTypes: ["Product"],
             limit: 5,
             queryFragment
           }
@@ -101,8 +101,8 @@ $ const { id, alias, name, pageNode } = data;
           node: { imagePosition: "left", withTeaser: true, image: { usePlaceholder: false } }
         }
         fragment-name="content-list"
-        query-name="website-scheduled-content"
-        query-params={ sectionId: id, limit: 18, skip: 5 }
+        query-name="all-published-content"
+        query-params={ contentTypes: ["Product"], limit: 18, skip: 5 }
         page-input={ for: "website-section", id }
       />
     </marko-web-resolve-page>

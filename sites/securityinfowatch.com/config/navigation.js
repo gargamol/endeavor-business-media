@@ -4,7 +4,7 @@ module.exports = {
       { href: '/security-executives', label: 'Security Executives' },
       { href: '/integrators', label: 'Integrators' },
       { href: '/video-surveillance', label: 'Video Surveillance' },
-      { href: '/access-identity', label: 'Access Identity' },
+      { href: '/access-identity', label: 'Access & Identity' },
       { href: '/residential-technologies', label: 'Residential Tech' },
       { href: '/alarms-monitoring', label: 'Alarms & Monitoring' },
       { href: '/cybersecurity', label: 'Cybersecurity' },
@@ -40,7 +40,7 @@ module.exports = {
         { href: '/security-executives', label: 'Security Executives' },
         { href: '/integrators', label: 'Integrators' },
         { href: '/video-surveillance', label: 'Video Surveillance' },
-        { href: '/access-identity', label: 'Access Identity' },
+        { href: '/access-identity', label: 'Access & Identity' },
         { href: '/residential-technologies', label: 'Residential Technologies' },
         { href: '/alarms-monitoring', label: 'Alarms & Monitoring' },
         { href: '/cybersecurity', label: 'Cybersecurity' },
@@ -50,6 +50,7 @@ module.exports = {
     {
       label: 'Resources',
       items: [
+        { href: '/magazine', label: 'Magazines' },
         { href: 'https://forums.securityinfowatch.com', label: 'Forums', target: '_blank' },
         { href: '/directory', label: 'Buyer\'s Guide' },
         { href: '/government', label: 'Government' },
@@ -58,13 +59,14 @@ module.exports = {
         { href: '/education', label: 'Education' },
         { href: '/healthcare', label: 'Healthcare' },
         { href: '/security-solutions-corner', label: 'Security Solutions Corner' },
-        { href: '/white-papers', label: 'Whitepapers' },
+        { href: '/whitepapers', label: 'Whitepapers' },
         { href: '/webinars', label: 'Webinars' },
       ],
     },
     {
       label: 'Events',
       items: [
+        { href: '/events', label: 'Calendar' },
         { href: '/secured-cities', label: 'Secured Cities' },
         { href: '/11713862', label: 'Fast50' },
         { href: '/isc-west', label: 'ISC West' },
