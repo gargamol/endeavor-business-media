@@ -65,6 +65,22 @@ config
     { name: 'load-more', templateName: 'LM', path: 'test/load-more' },
     { name: 'reskin', path: 'test/reskin' },
   ])
+  .setAliasAdUnits('network-automation', [
+    { name: 'lb1', templateName: 'LB', path: 'network-automation/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'network-automation/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'network-automation/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'network-automation/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'network-automation/load-more' },
+    { name: 'reskin', path: 'network-automation/reskin' },
+  ])
+  .setAliasAdUnits('5g-mobile', [
+    { name: 'lb1', templateName: 'LB', path: '5g-mobile/lb1' },
+    { name: 'lb2', templateName: 'LB', path: '5g-mobile/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: '5g-mobile/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: '5g-mobile/rail2' },
+    { name: 'load-more', templateName: 'LM', path: '5g-mobile/load-more' },
+    { name: 'reskin', path: '5g-mobile/reskin' },
+  ])
   .setAliasAdUnits('test-measurement', [
     { name: 'lb1', templateName: 'LB', path: 'test-measurement/lb1' },
     { name: 'lb2', templateName: 'LB', path: 'test-measurement/lb2' },
