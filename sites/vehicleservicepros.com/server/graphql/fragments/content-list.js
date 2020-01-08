@@ -29,6 +29,18 @@ fragment WebsiteContentListFragment on Content {
     alt
     isLogo
   }
+  images {
+    edges {
+      node {
+        id
+        src
+        alt
+        displayName
+        caption
+        credit
+      }
+    }
+  }
   userRegistration {
     isRequired
   }
@@ -40,6 +52,20 @@ fragment WebsiteContentListFragment on Content {
           name
           type
           canonicalPath
+        }
+      }
+    }
+  }
+  ... on MediaGallery {
+    images {
+      edges {
+        node {
+          id
+          src
+          alt
+          displayName
+          caption
+          credit
         }
       }
     }
