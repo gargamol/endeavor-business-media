@@ -1,5 +1,9 @@
 {
   "taglib-imports": [
     "./directory/marko.json"
-  ]
+  ],
+  "<common-image-list>": {
+    "template": "./image-list.marko",
+    "@image-connection": "object"
+  }
 }
