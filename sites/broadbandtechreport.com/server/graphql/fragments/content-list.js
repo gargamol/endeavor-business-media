@@ -44,7 +44,7 @@ fragment WebsiteContentListFragment on Content {
       }
     }
   }
-  ... on MediaGallery {
+  ... on ContentMediaGallery {
     images {
       edges {
         node {
