@@ -6,7 +6,7 @@ $ const images = getAsArray(input, 'imageConnection.edges').map(({ node }) => no
 <if(images.length)>
   <div class=block>
     <for|image, index| of=images>
-      <marko-web-page-image width=500 obj=image />
+      <marko-web-page-image width=1000 obj=image />
     </for>
   </div>
 </if>
