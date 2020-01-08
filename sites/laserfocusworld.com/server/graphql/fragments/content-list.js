@@ -44,20 +44,6 @@ fragment WebsiteContentListFragment on Content {
       }
     }
   }
-  ... on ContentMediaGallery {
-    images {
-      edges {
-        node {
-          id
-          src
-          alt
-          displayName
-          caption
-          credit
-        }
-      }
-    }
-  }
   ... on ContentPromotion {
     linkText
     linkUrl
