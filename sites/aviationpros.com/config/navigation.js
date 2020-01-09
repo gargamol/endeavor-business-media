@@ -18,7 +18,7 @@ module.exports = {
     items: [
       { href: '/subscribe', label: 'Subscribe' },
       { href: '/magazine', label: 'Magazines' },
-      { href: '/advertise', label: 'Advertise' },
+      { href: '/page/advertise', label: 'Advertise' },
       { href: '/contact-us', label: 'Contact Us' },
       { href: 'https://jobs.aviationpros.com', label: 'Careers', target: '_blank' },
       { href: '/directory', label: 'Buyers Guide' },

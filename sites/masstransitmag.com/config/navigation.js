@@ -14,7 +14,7 @@ module.exports = {
     items: [
       { href: '/subscribe', label: 'Subscribe' },
       { href: '/magazine', label: 'Magazine' },
-      { href: '/advertise', label: 'Advertise' },
+      { href: '/page/advertise', label: 'Advertise' },
       { href: '/contact-us', label: 'Contact Us' },
       { href: '/directory', label: 'Supplier\'s Directory' },
     ],

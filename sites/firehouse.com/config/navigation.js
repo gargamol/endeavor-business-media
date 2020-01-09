@@ -18,7 +18,7 @@ module.exports = {
       { href: '/subscribe', label: 'Subscribe' },
       { href: '/directory', label: 'Buyer\'s Guide' },
       { href: '/magazine', label: 'In Print' },
-      { href: '/advertise', label: 'Advertise' },
+      { href: '/page/advertise', label: 'Advertise' },
     ],
   },
   tertiary: {
