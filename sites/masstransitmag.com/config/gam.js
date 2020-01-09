@@ -67,6 +67,14 @@ config
     { name: 'load-more', templateName: 'LM', path: 'alt-mobility/load-more' },
     { name: 'reskin', path: 'alt-mobility/reskin' },
   ])
+  .setAliasAdUnits('management', [
+    { name: 'lb1', templateName: 'LB', path: 'management/lb1' },
+    { name: 'lb2', templateName: 'LB', path: 'management/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'management/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'management/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'management/load-more' },
+    { name: 'reskin', path: 'management/reskin' },
+  ])
   .setAliasAdUnits('technology/fare-collection', [
     { name: 'lb1', templateName: 'LB', path: 'technology/fare-collection/lb1' },
     { name: 'lb2', templateName: 'LB', path: 'technology/fare-collection/lb2' },
