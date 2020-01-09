@@ -83,6 +83,14 @@ config
     { name: 'load-more', templateName: 'LM', path: 'management/load-more' },
     { name: 'reskin', path: 'management/reskin' },
   ])
+  .setAliasAdUnits('transit-bids-rfp', [
+    { name: 'lb1', templateName: 'LB1', path: 'transit-bids-rfp/lb1' },
+    { name: 'lb2', templateName: 'LB2', path: 'transit-bids-rfp/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'transit-bids-rfp/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'transit-bids-rfp/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'transit-bids-rfp/load-more' },
+    { name: 'reskin', path: 'transit-bids-rfp/reskin' },
+  ])
   .setAliasAdUnits('technology/fare-collection', [
     { name: 'lb1', templateName: 'LB1', path: 'technology/fare-collection/lb1' },
     { name: 'lb2', templateName: 'LB2', path: 'technology/fare-collection/lb2' },
