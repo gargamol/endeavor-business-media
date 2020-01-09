@@ -99,6 +99,15 @@ config
     { name: 'reskin', path: 'products/reskin' },
     { name: 'wa', path: 'products/wa' },
   ])
+  .setAliasAdUnits('365-retail-markets', [
+    { name: 'lb1', templateName: 'LB', path: '365-retail-markets/lb1' },
+    { name: 'lb2', templateName: 'LB', path: '365-retail-markets/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: '365-retail-markets/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: '365-retail-markets/rail2' },
+    { name: 'load-more', templateName: 'LM', path: '365-retail-markets/load-more' },
+    { name: 'reskin', path: '365-retail-markets/reskin' },
+    { name: 'wa', path: '365-retail-markets/wa' },
+  ])
   .setAliasAdUnits('coffee-service/water-equipment-coolers-filters-accessories-etc', [
     { name: 'lb1', templateName: 'LB', path: 'coffee-service/water-equipment-coolers-filters-accessories-etc/lb1' },
     { name: 'lb2', templateName: 'LB', path: 'coffee-service/water-equipment-coolers-filters-accessories-etc/lb2' },
