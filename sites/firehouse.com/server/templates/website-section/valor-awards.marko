@@ -100,7 +100,7 @@ $ const { id, alias, name, pageNode } = data;
                 name="website-scheduled-content"
                 params={ sectionId: id, limit: 10, skip: 0, queryFragment }
               >
-                <website-content-card-deck-flow nodes=nodes>
+                <website-content-card-deck-flow nodes=nodes aliases=aliases>
                   <@native-x index=2 name="default" aliases=[alias] />
                 </website-content-card-deck-flow>
               </marko-web-query>
