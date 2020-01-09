@@ -3,12 +3,20 @@ const GAMConfiguration = require('@base-cms/marko-web-gam/config');
 const config = new GAMConfiguration('21687441225', { basePath: 'DTE' });
 
 config
-  .setTemplate('LB', {
+  .setTemplate('LB1', {
     size: [[970, 250], [970, 90], [970, 66], [728, 90], [320, 50], [300, 50], [300, 100]],
     sizeMapping: [
       { viewport: [980, 0], size: [[970, 250], [970, 90], [970, 66], [728, 90]] },
       { viewport: [750, 0], size: [728, 90] },
       { viewport: [320, 0], size: [[300, 50], [320, 50], [300, 100]] },
+    ],
+  })
+  .setTemplate('LB2', {
+    size: [[970, 90], [970, 66], [728, 90], [320, 50], [300, 50]],
+    sizeMapping: [
+      { viewport: [980, 0], size: [[970, 90], [970, 66], [728, 90]] },
+      { viewport: [750, 0], size: [728, 90] },
+      { viewport: [320, 0], size: [[300, 50], [320, 50]] },
     ],
   })
   .setTemplate('LB2', {
@@ -25,7 +33,7 @@ config
 
 config
   .setAliasAdUnits('default', [
-    { name: 'lb1', templateName: 'LB', path: 'default/lb1' },
+    { name: 'lb1', templateName: 'LB1', path: 'default/lb1' },
     { name: 'lb2', templateName: 'LB2', path: 'default/lb2' },
     { name: 'rail1', templateName: 'RAIL1', path: 'default/rail1' },
     { name: 'rail2', templateName: 'RAIL2', path: 'default/rail2' },
@@ -34,7 +42,7 @@ config
     { name: 'wa', path: 'default/wa' },
   ])
   .setAliasAdUnits('microgrids', [
-    { name: 'lb1', templateName: 'LB', path: 'microgrids/lb1' },
+    { name: 'lb1', templateName: 'LB1', path: 'microgrids/lb1' },
     { name: 'lb2', templateName: 'LB2', path: 'microgrids/lb2' },
     { name: 'rail1', templateName: 'RAIL1', path: 'microgrids/rail1' },
     { name: 'rail2', templateName: 'RAIL2', path: 'microgrids/rail2' },
@@ -43,7 +51,7 @@ config
     { name: 'wa', path: 'microgrids/wa' },
   ])
   .setAliasAdUnits('renewables', [
-    { name: 'lb1', templateName: 'LB', path: 'renewables/lb1' },
+    { name: 'lb1', templateName: 'LB1', path: 'renewables/lb1' },
     { name: 'lb2', templateName: 'LB2', path: 'renewables/lb2' },
     { name: 'rail1', templateName: 'RAIL1', path: 'renewables/rail1' },
     { name: 'rail2', templateName: 'RAIL2', path: 'renewables/rail2' },
@@ -52,7 +60,7 @@ config
     { name: 'wa', path: 'renewables/wa' },
   ])
   .setAliasAdUnits('storage', [
-    { name: 'lb1', templateName: 'LB', path: 'storage/lb1' },
+    { name: 'lb1', templateName: 'LB1', path: 'storage/lb1' },
     { name: 'lb2', templateName: 'LB2', path: 'storage/lb2' },
     { name: 'rail1', templateName: 'RAIL1', path: 'storage/rail1' },
     { name: 'rail2', templateName: 'RAIL2', path: 'storage/rail2' },
@@ -61,7 +69,7 @@ config
     { name: 'wa', path: 'storage/wa' },
   ])
   .setAliasAdUnits('building-automation', [
-    { name: 'lb1', templateName: 'LB', path: 'building-automation/lb1' },
+    { name: 'lb1', templateName: 'LB1', path: 'building-automation/lb1' },
     { name: 'lb2', templateName: 'LB2', path: 'building-automation/lb2' },
     { name: 'rail1', templateName: 'RAIL1', path: 'building-automation/rail1' },
     { name: 'rail2', templateName: 'RAIL2', path: 'building-automation/rail2' },
@@ -70,7 +78,7 @@ config
     { name: 'wa', path: 'building-automation/wa' },
   ])
   .setAliasAdUnits('technologies', [
-    { name: 'lb1', templateName: 'LB', path: 'technologies/lb1' },
+    { name: 'lb1', templateName: 'LB1', path: 'technologies/lb1' },
     { name: 'lb2', templateName: 'LB2', path: 'technologies/lb2' },
     { name: 'rail1', templateName: 'RAIL1', path: 'technologies/rail1' },
     { name: 'rail2', templateName: 'RAIL2', path: 'technologies/rail2' },
