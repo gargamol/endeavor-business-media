@@ -3,12 +3,20 @@ const GAMConfiguration = require('@base-cms/marko-web-gam/config');
 const config = new GAMConfiguration('21687441225', { basePath: 'FRN' });
 
 config
-  .setTemplate('LB', {
+  .setTemplate('LB1', {
     size: [[970, 250], [970, 90], [970, 66], [728, 90], [320, 50], [300, 50], [300, 100]],
     sizeMapping: [
       { viewport: [980, 0], size: [[970, 250], [970, 90], [970, 66], [728, 90]] },
       { viewport: [750, 0], size: [728, 90] },
       { viewport: [320, 0], size: [[300, 50], [320, 50], [300, 100]] },
+    ],
+  })
+  .setTemplate('LB2', {
+    size: [[970, 90], [970, 66], [728, 90], [320, 50], [300, 50]],
+    sizeMapping: [
+      { viewport: [980, 0], size: [[970, 90], [970, 66], [728, 90]] },
+      { viewport: [750, 0], size: [728, 90] },
+      { viewport: [320, 0], size: [[300, 50], [320, 50]] },
     ],
   })
   .setTemplate('LB2', {
@@ -25,7 +33,7 @@ config
 
 config
   .setAliasAdUnits('default', [
-    { name: 'lb1', templateName: 'LB', path: 'default/lb1' },
+    { name: 'lb1', templateName: 'LB1', path: 'default/lb1' },
     { name: 'lb2', templateName: 'LB2', path: 'default/lb2' },
     { name: 'rail1', templateName: 'RAIL1', path: 'default/rail1' },
     { name: 'rail2', templateName: 'RAIL2', path: 'default/rail2' },
@@ -34,7 +42,7 @@ config
     { name: 'wa', path: 'default/wa' },
   ])
   .setAliasAdUnits('distributed-energy', [
-    { name: 'lb1', templateName: 'LB', path: 'distributed-energy/lb1' },
+    { name: 'lb1', templateName: 'LB1', path: 'distributed-energy/lb1' },
     { name: 'lb2', templateName: 'LB2', path: 'distributed-energy/lb2' },
     { name: 'rail1', templateName: 'RAIL1', path: 'distributed-energy/rail1' },
     { name: 'rail2', templateName: 'RAIL2', path: 'distributed-energy/rail2' },
@@ -43,7 +51,7 @@ config
     { name: 'wa', path: 'distributed-energy/wa' },
   ])
   .setAliasAdUnits('erosion-control', [
-    { name: 'lb1', templateName: 'LB', path: 'erosion-control/lb1' },
+    { name: 'lb1', templateName: 'LB1', path: 'erosion-control/lb1' },
     { name: 'lb2', templateName: 'LB2', path: 'erosion-control/lb2' },
     { name: 'rail1', templateName: 'RAIL1', path: 'erosion-control/rail1' },
     { name: 'rail2', templateName: 'RAIL2', path: 'erosion-control/rail2' },
@@ -52,7 +60,7 @@ config
     { name: 'wa', path: 'erosion-control/wa' },
   ])
   .setAliasAdUnits('grading-excavation-contractor', [
-    { name: 'lb1', templateName: 'LB', path: 'grading-excavation-contractor/lb1' },
+    { name: 'lb1', templateName: 'LB1', path: 'grading-excavation-contractor/lb1' },
     { name: 'lb2', templateName: 'LB2', path: 'grading-excavation-contractor/lb2' },
     { name: 'rail1', templateName: 'RAIL1', path: 'grading-excavation-contractor/rail1' },
     { name: 'rail2', templateName: 'RAIL2', path: 'grading-excavation-contractor/rail2' },
@@ -61,7 +69,7 @@ config
     { name: 'wa', path: 'grading-excavation-contractor/wa' },
   ])
   .setAliasAdUnits('msw-management', [
-    { name: 'lb1', templateName: 'LB', path: 'msw-management/lb1' },
+    { name: 'lb1', templateName: 'LB1', path: 'msw-management/lb1' },
     { name: 'lb2', templateName: 'LB2', path: 'msw-management/lb2' },
     { name: 'rail1', templateName: 'RAIL1', path: 'msw-management/rail1' },
     { name: 'rail2', templateName: 'RAIL2', path: 'msw-management/rail2' },
@@ -70,7 +78,7 @@ config
     { name: 'wa', path: 'msw-management/wa' },
   ])
   .setAliasAdUnits('stormwater', [
-    { name: 'lb1', templateName: 'LB', path: 'stormwater/lb1' },
+    { name: 'lb1', templateName: 'LB1', path: 'stormwater/lb1' },
     { name: 'lb2', templateName: 'LB2', path: 'stormwater/lb2' },
     { name: 'rail1', templateName: 'RAIL1', path: 'stormwater/rail1' },
     { name: 'rail2', templateName: 'RAIL2', path: 'stormwater/rail2' },
@@ -79,7 +87,7 @@ config
     { name: 'wa', path: 'stormwater/wa' },
   ])
   .setAliasAdUnits('water-efficiency', [
-    { name: 'lb1', templateName: 'LB', path: 'water-efficiency/lb1' },
+    { name: 'lb1', templateName: 'LB1', path: 'water-efficiency/lb1' },
     { name: 'lb2', templateName: 'LB2', path: 'water-efficiency/lb2' },
     { name: 'rail1', templateName: 'RAIL1', path: 'water-efficiency/rail1' },
     { name: 'rail2', templateName: 'RAIL2', path: 'water-efficiency/rail2' },

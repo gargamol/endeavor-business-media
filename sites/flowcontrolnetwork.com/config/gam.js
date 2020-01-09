@@ -3,12 +3,20 @@ const GAMConfiguration = require('@base-cms/marko-web-gam/config');
 const config = new GAMConfiguration('21687441225', { basePath: 'FCN' });
 
 config
-  .setTemplate('LB', {
+  .setTemplate('LB1', {
     size: [[970, 250], [970, 90], [970, 66], [728, 90], [320, 50], [300, 50], [300, 100]],
     sizeMapping: [
       { viewport: [980, 0], size: [[970, 250], [970, 90], [970, 66], [728, 90]] },
       { viewport: [750, 0], size: [728, 90] },
       { viewport: [320, 0], size: [[300, 50], [320, 50], [300, 100]] },
+    ],
+  })
+  .setTemplate('LB2', {
+    size: [[970, 90], [970, 66], [728, 90], [320, 50], [300, 50]],
+    sizeMapping: [
+      { viewport: [980, 0], size: [[970, 90], [970, 66], [728, 90]] },
+      { viewport: [750, 0], size: [728, 90] },
+      { viewport: [320, 0], size: [[300, 50], [320, 50]] },
     ],
   })
   .setTemplate('LB2', {
@@ -25,7 +33,7 @@ config
 
 config
   .setAliasAdUnits('default', [
-    { name: 'lb1', templateName: 'LB', path: 'default/lb1' },
+    { name: 'lb1', templateName: 'LB1', path: 'default/lb1' },
     { name: 'lb2', templateName: 'LB2', path: 'default/lb2' },
     { name: 'rail1', templateName: 'RAIL1', path: 'default/rail1' },
     { name: 'rail2', templateName: 'RAIL2', path: 'default/rail2' },
@@ -34,7 +42,7 @@ config
     { name: 'wa', path: 'default/wa' },
   ])
   .setAliasAdUnits('instrumentation', [
-    { name: 'lb1', templateName: 'LB', path: 'instrumentation/lb1' },
+    { name: 'lb1', templateName: 'LB1', path: 'instrumentation/lb1' },
     { name: 'lb2', templateName: 'LB2', path: 'instrumentation/lb2' },
     { name: 'rail1', templateName: 'RAIL1', path: 'instrumentation/rail1' },
     { name: 'rail2', templateName: 'RAIL2', path: 'instrumentation/rail2' },
@@ -43,7 +51,7 @@ config
     { name: 'wa', path: 'instrumentation/wa' },
   ])
   .setAliasAdUnits('valves-actuators', [
-    { name: 'lb1', templateName: 'LB', path: 'valves-actuators/lb1' },
+    { name: 'lb1', templateName: 'LB1', path: 'valves-actuators/lb1' },
     { name: 'lb2', templateName: 'LB2', path: 'valves-actuators/lb2' },
     { name: 'rail1', templateName: 'RAIL1', path: 'valves-actuators/rail1' },
     { name: 'rail2', templateName: 'RAIL2', path: 'valves-actuators/rail2' },
@@ -52,7 +60,7 @@ config
     { name: 'wa', path: 'valves-actuators/wa' },
   ])
   .setAliasAdUnits('bearings-seals', [
-    { name: 'lb1', templateName: 'LB', path: 'bearings-seals/lb1' },
+    { name: 'lb1', templateName: 'LB1', path: 'bearings-seals/lb1' },
     { name: 'lb2', templateName: 'LB2', path: 'bearings-seals/lb2' },
     { name: 'rail1', templateName: 'RAIL1', path: 'bearings-seals/rail1' },
     { name: 'rail2', templateName: 'RAIL2', path: 'bearings-seals/rail2' },
@@ -61,7 +69,7 @@ config
     { name: 'wa', path: 'bearings-seals/wa' },
   ])
   .setAliasAdUnits('piping-tubing-hosing', [
-    { name: 'lb1', templateName: 'LB', path: 'piping-tubing-hosing/lb1' },
+    { name: 'lb1', templateName: 'LB1', path: 'piping-tubing-hosing/lb1' },
     { name: 'lb2', templateName: 'LB2', path: 'piping-tubing-hosing/lb2' },
     { name: 'rail1', templateName: 'RAIL1', path: 'piping-tubing-hosing/rail1' },
     { name: 'rail2', templateName: 'RAIL2', path: 'piping-tubing-hosing/rail2' },
@@ -70,7 +78,7 @@ config
     { name: 'wa', path: 'piping-tubing-hosing/wa' },
   ])
   .setAliasAdUnits('process-control-automation', [
-    { name: 'lb1', templateName: 'LB', path: 'process-control-automation/lb1' },
+    { name: 'lb1', templateName: 'LB1', path: 'process-control-automation/lb1' },
     { name: 'lb2', templateName: 'LB2', path: 'process-control-automation/lb2' },
     { name: 'rail1', templateName: 'RAIL1', path: 'process-control-automation/rail1' },
     { name: 'rail2', templateName: 'RAIL2', path: 'process-control-automation/rail2' },
@@ -79,7 +87,7 @@ config
     { name: 'wa', path: 'process-control-automation/wa' },
   ])
   .setAliasAdUnits('pumps-motors-drives', [
-    { name: 'lb1', templateName: 'LB', path: 'pumps-motors-drives/lb1' },
+    { name: 'lb1', templateName: 'LB1', path: 'pumps-motors-drives/lb1' },
     { name: 'lb2', templateName: 'LB2', path: 'pumps-motors-drives/lb2' },
     { name: 'rail1', templateName: 'RAIL1', path: 'pumps-motors-drives/rail1' },
     { name: 'rail2', templateName: 'RAIL2', path: 'pumps-motors-drives/rail2' },
@@ -88,7 +96,7 @@ config
     { name: 'wa', path: 'pumps-motors-drives/wa' },
   ])
   .setAliasAdUnits('pumps-motors-drives', [
-    { name: 'lb1', templateName: 'LB', path: 'pumps-motors-drives/lb1' },
+    { name: 'lb1', templateName: 'LB1', path: 'pumps-motors-drives/lb1' },
     { name: 'lb2', templateName: 'LB2', path: 'pumps-motors-drives/lb2' },
     { name: 'rail1', templateName: 'RAIL1', path: 'pumps-motors-drives/rail1' },
     { name: 'rail2', templateName: 'RAIL2', path: 'pumps-motors-drives/rail2' },
@@ -97,7 +105,7 @@ config
     { name: 'wa', path: 'pumps-motors-drives/wa' },
   ])
   .setAliasAdUnits('industry-applications', [
-    { name: 'lb1', templateName: 'LB', path: 'industry-applications/lb1' },
+    { name: 'lb1', templateName: 'LB1', path: 'industry-applications/lb1' },
     { name: 'lb2', templateName: 'LB2', path: 'industry-applications/lb2' },
     { name: 'rail1', templateName: 'RAIL1', path: 'industry-applications/rail1' },
     { name: 'rail2', templateName: 'RAIL2', path: 'industry-applications/rail2' },

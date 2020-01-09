@@ -14,6 +14,7 @@ const channelAliases = [
   'safety-security',
   'alt-mobility',
   'transit-bids-rfp',
+  'management',
 ];
 
 module.exports = (app) => {

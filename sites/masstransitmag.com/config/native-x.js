@@ -18,6 +18,9 @@ config
   .setAliasPlacements('safety-security', [
     { name: 'default', id: '5c0e815984c2cd0001487828' },
   ])
+  .setAliasPlacements('management', [
+    { name: 'default', id: '5e173eae90e40e0001cc47ae' },
+  ])
   .setAliasPlacements('alt-mobility', [
     { name: 'default', id: '5c0e819ccf399b00017aa059' },
   ]);
