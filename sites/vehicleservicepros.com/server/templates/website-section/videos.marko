@@ -1,0 +1,106 @@
+import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
+import queryFragment from "../../graphql/fragments/content-list";
+import GAM from "../../../config/gam";
+
+$ const { id, alias, name, pageNode } = data;
+$ const title = "Videos";
+
+<marko-web-website-section-page-layout id=id alias=alias name=name>
+  <@head>
+    <marko-web-gtm-default-context|{ context }| type=type>
+      <marko-web-gtm-push data=context />
+    </marko-web-gtm-default-context>
+  </@head>
+  <@above-container>
+    <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "wa" }) />
+    <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "reskin" }) />
+  </@above-container>
+  <@page>
+    <marko-web-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
+
+    <marko-web-page-wrapper class="mb-block">
+      <@section>
+        <div class="row">
+          <div class="col">
+            <default-theme-website-section-breadcrumbs section=section />
+            <marko-web-website-section-name tag="h1" class="page-wrapper__title" obj=section />
+          </div>
+        </div>
+      </@section>
+    </marko-web-page-wrapper>
+
+
+    <div class="row">
+      <div class="col">
+        <marko-web-query|{ nodes }|
+          name="all-published-content"
+          params={ contentTypes: ["Video"], limit: 6, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <h1 class="text-primary">UPTIME UPDATE</h1>
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={
+            limit: 3,
+            sectionAlias: "videos/uptime-update",
+            queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <h1 class="text-primary">KOLMAN'S CORNER</h1>
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content",
+          params={
+            limit: 3,
+            sectionAlias: "videos/kolmans-korner",
+            queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <h1 class="text-primary">TOOLBOX TOPICS</h1>
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={
+            limit: 3,
+            sectionAlias: "videos/toolbox-topics",
+            queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+    </div>
+
+  </@page>
+  <@below-page>
+    <marko-web-load-more
+      component-name="content-card-deck-flow"
+      fragment-name="content-list"
+      query-name="all-published-content"
+      query-params={ contentTypes: ["Video"], limit: 10, skip: 6 }
+      page-input={ for: "published-content" }
+    />
+  </@below-page>
+  <@foot>
+    <marko-web-gam-fixed-ad-bottom ...GAM.getAdUnit({ name: "lb2" }) refresh-interval=15 scroll-offset=100 />
+  </@foot>
+</marko-web-website-section-page-layout>
