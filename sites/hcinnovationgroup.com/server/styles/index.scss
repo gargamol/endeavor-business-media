@@ -41,10 +41,71 @@ $body-bg: #fff;
       background-color: transparent;
     }
   }
+  .node {
+    &--top100-content-type {
+      .d-flex {
+        div {
+          padding: 10px 20px;
+          &:nth-child(odd){
+            background-color: #f1f1f1;
+          }
+        }
+      }
+      .company {
+        h6 {
+          margin-bottom: 0;
+          font-weight: 700;
+        }
+      }
+    }
+  }
 }
 
-// @todo this should be removed once added to the theme
 .page-contents {
+  $self: &;
+  &__info {
+    & div {
+      padding: 10px;
+      text-align: right;
+      border-bottom: solid 1px #ccc;
+      &::before {
+        float: left;
+        font-weight: 700;
+      }
+      &#{ $self } {
+        &__content-revenue-current{
+          &::before {
+            content: "Revenue: ";
+          }
+        }
+        &__content-phone{
+          &::before {
+            content: "Phone: ";
+          }
+        }
+        &__content-website{
+          &::before {
+            content: "Website: ";
+          }
+        }
+        &__content-company-executives{
+          &::before {
+            content: "Executives: ";
+          }
+        }
+        &__content-founded{
+          &::before {
+            content: "Year Est: ";
+          }
+        }
+        &__content-markets-serving{
+          &::before {
+            content: "Markets Served: ";
+          }
+        }
+      }
+    }
+  }
   &__content-body a {
     text-decoration: underline;
   }
