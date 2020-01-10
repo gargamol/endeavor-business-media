@@ -2,7 +2,8 @@ import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
 import queryFragment from "../../graphql/fragments/content-list";
 import GAM from "../../../config/gam";
 
-$ const { id, alias, name, pageNode } = data;
+$ const type = "published-content";
+$ const { id, alias, name, pageNode, section } = data;
 $ const title = "Videos";
 
 <marko-web-website-section-page-layout id=id alias=alias name=name>
@@ -10,10 +11,23 @@ $ const title = "Videos";
     <marko-web-gtm-default-context|{ context }| type=type>
       <marko-web-gtm-push data=context />
     </marko-web-gtm-default-context>
+    <marko-web-resolve-page|{ data: section }| node=pageNode>
+      $ const aliases = hierarchyAliases(section);
+      $ const adSlots = {
+          "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
+          "gpt-ad-rail1": GAM.getAdUnit({ name: "rail1", aliases }),
+          "gpt-ad-rail2": GAM.getAdUnit({ name: "rail2", aliases }),
+          "gpt-ad-ms": GAM.getAdUnit({ name: "ms", aliases }),
+        }
+       <marko-web-gam-slots slots=adSlots />
+    </marko-web-resolve-page>
   </@head>
   <@above-container>
-    <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "wa" }) />
-    <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "reskin" }) />
+    <marko-web-resolve-page|{ data: section }| node=pageNode>
+      $ const aliases = hierarchyAliases(section);
+      <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "wa", aliases }) />
+      <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "reskin", aliases }) />
+    </marko-web-resolve-page>
   </@above-container>
   <@page>
     <marko-web-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
@@ -22,25 +36,27 @@ $ const title = "Videos";
       <@section>
         <div class="row">
           <div class="col">
-            <default-theme-website-section-breadcrumbs section=section />
-            <marko-web-website-section-name tag="h1" class="page-wrapper__title" obj=section />
+            <default-theme-breadcrumbs-with-home>
+              <@item>${title}</@item>
+            </default-theme-breadcrumbs-with-home>
+            <h1 class="page-wrapper__title">${title}</h1>
           </div>
         </div>
       </@section>
     </marko-web-page-wrapper>
 
-
     <div class="row">
       <div class="col">
         <marko-web-query|{ nodes }|
           name="all-published-content"
-          params={ contentTypes: ["Video"], limit: 6, queryFragment }
+          params={ contentTypes: ["Video"], limit: 5, queryFragment }
         >
-          <website-content-list-flow nodes=nodes>
-          </website-content-list-flow>
+          <website-content-card-deck-flow nodes=nodes with-teaser=false/>
         </marko-web-query>
       </div>
     </div>
+
+    <hr>
 
     <div class="row">
       <div class="col">
@@ -52,11 +68,12 @@ $ const title = "Videos";
             sectionAlias: "videos/uptime-update",
             queryFragment }
         >
-          <website-content-list-flow nodes=nodes>
-          </website-content-list-flow>
+          <website-content-card-deck-flow nodes=nodes display-ads=false/>
         </marko-web-query>
       </div>
     </div>
+
+    <hr>
 
     <div class="row">
       <div class="col">
@@ -68,11 +85,12 @@ $ const title = "Videos";
             sectionAlias: "videos/kolmans-korner",
             queryFragment }
         >
-          <website-content-list-flow nodes=nodes>
-          </website-content-list-flow>
+          <website-content-card-deck-flow nodes=nodes display-ads=false/>
         </marko-web-query>
       </div>
     </div>
+
+    <hr>
 
     <div class="row">
       <div class="col">
@@ -84,11 +102,12 @@ $ const title = "Videos";
             sectionAlias: "videos/toolbox-topics",
             queryFragment }
         >
-          <website-content-list-flow nodes=nodes>
-          </website-content-list-flow>
+          <website-content-card-deck-flow nodes=nodes display-ads=false/>
         </marko-web-query>
       </div>
     </div>
+
+    <hr>
 
   </@page>
   <@below-page>
@@ -96,7 +115,7 @@ $ const title = "Videos";
       component-name="content-card-deck-flow"
       fragment-name="content-list"
       query-name="all-published-content"
-      query-params={ contentTypes: ["Video"], limit: 10, skip: 6 }
+      query-params={ contentTypes: ["Video"], limit: 10, skip: 5 }
       page-input={ for: "published-content" }
     />
   </@below-page>
