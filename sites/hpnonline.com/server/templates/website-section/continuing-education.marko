@@ -62,6 +62,7 @@ $ const description = (data.descrtiption) ? data.description : "";
       $ const aliases = hierarchyAliases(section);
       <marko-web-load-more
         component-name="content-list-flow"
+        component-input={ image: { ar: "16:9", width: 150 }, imagePosition: "left" }
         fragment-name="content-list"
         query-name="website-optioned-content"
         query-params={ sectionId: id, optionName: "Pinned", limit: 14, skip: 18 }
