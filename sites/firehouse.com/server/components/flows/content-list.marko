@@ -3,7 +3,9 @@ import nxConfig from "../../../config/native-x";
 
 $ const nodes = getAsArray(input, "nodes");
 $ const nativeX = getAsObject(input, "nativeX");
+$ const image = getAsObject(input, "image");
 $ const displayImage = input.displayImage != null ? input.displayImage : true;
+$ const imagePosition = input.imagePosition != null ? input.imagePosition : "right";
 $ const withTeaser = input.withTeaser != null ? input.withTeaser : false;
 $ const innerJustified = input.innerJustified != null ? input.innerJustified : true;
 
@@ -23,9 +25,11 @@ $ const innerJustified = input.innerJustified != null ? input.innerJustified : t
           ...input.node
           node=nxNode
           display-image=displayImage
+          image-position=imagePosition
           with-teaser=withTeaser
           attrs=containerAttrs
           link-attrs=linkAttrs
+          image=image
         />
       </marko-web-native-x-render>
     </@slot>
