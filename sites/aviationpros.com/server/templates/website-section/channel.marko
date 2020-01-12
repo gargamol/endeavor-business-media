@@ -43,7 +43,7 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionId: id, limit: 4, queryFragment }
+          params={ sectionId: id, limit: 4, skip: 5, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
             <@header>Latest</@header>
@@ -69,7 +69,7 @@ $ const { id, alias, name, pageNode } = data;
         }
         fragment-name="content-list"
         query-name="website-scheduled-content"
-        query-params={ sectionId: id, limit: 14, skip: 12 }
+        query-params={ sectionId: id, limit: 14, skip: 9 }
         page-input={ for: "website-section", id }
       />
     </marko-web-resolve-page>
