@@ -24,6 +24,7 @@ $ const { linkAttrs } = input;
       fluid=true
       ar="21:9"
       width=(input.imageWidth || 300)
+      ...input.image
       link={ href: content.canonicalPath, attrs: linkAttrs }
     />
   </if>
