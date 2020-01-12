@@ -35,3 +35,27 @@
     }
   }
 }
+
+.card-deck-flow {
+  .node {
+    &__body:first-child {
+      .node {
+        &__header,
+        &__text--teaser {
+          font-size: 16px;
+          a {
+            max-height: 112px;
+            -webkit-line-clamp: 5;
+          }
+        }
+        &__title {
+          font-size: 24px;
+          a {
+            max-height: 124px;
+            -webkit-line-clamp: 4;
+          }
+        }
+      }
+    }
+  }
+}
