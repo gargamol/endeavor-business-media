@@ -29,6 +29,7 @@
       "type": "boolean",
       "default-value": true
     },
+    "@image": "object",
     "@attrs": "object",
     "@link-attrs": "object",
     "@full-height": "boolean"
