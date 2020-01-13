@@ -1,5 +1,6 @@
 import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
 import queryFragment from "../../graphql/fragments/top100-landing-page";
+import formatUsCurrency from "../../utils/format-us-currency";
 import GAM from "../../../config/gam";
 
 $ const formatCurrentcy = function(number) {
@@ -60,7 +61,6 @@ $ const { id, alias, name, pageNode } = data;
                 });
                 <div class="node-list node-list--inner-justified node-list--top100">
                   <for|node, index| of=nodes>
-                  $ const revenue = node.revenueCurrent !== null ? formatCurrentcy(node.revenueCurrent) : '';
                     <marko-web-node
                       type=`top100-content`
                       flush=true
@@ -75,7 +75,7 @@ $ const { id, alias, name, pageNode } = data;
                             </marko-web-content-short-name>
                             ${node.city}, ${node.state}
                           </div>
-                          <div class="revenue">${revenue}</div>
+                          <div class="revenue">${formatUsCurrency(node.revenueCurrent)}</div>
                         </div>
                       </@text>
                     </@body>

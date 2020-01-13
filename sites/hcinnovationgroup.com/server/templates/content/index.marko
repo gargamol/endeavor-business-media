@@ -2,6 +2,7 @@ import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
 import { get, getAsObject } from "@base-cms/object-path";
 import contentKeyValues from "@endeavor-business-media/package-common/gam/content-key-values";
 import queryFragment from "../../graphql/fragments/content-list";
+import formatUsCurrency from "../../utils/format-us-currency";
 import GAM from "../../../config/gam";
 
 $ const formatCurrentcy = function(number) {
@@ -126,7 +127,7 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
               </if>
               <if(type === "top100")>
                 <div class="page-contents__info">
-                  $ content.revenueCurrent = content.revenueCurrent !== null ? formatCurrentcy(content.revenueCurrent) : '';
+                  $ content.revenueCurrent = formatUsCurrency(content.revenueCurrent);
                   <marko-web-obj-text type="content" block-name=blockName obj=content field="revenueCurrent" />
                   <marko-web-obj-text type="content" block-name=blockName obj=content field="companyExecutives" />
                   <marko-web-obj-text type="content" block-name=blockName obj=content field="founded" />
