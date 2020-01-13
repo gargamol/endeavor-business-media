@@ -51,7 +51,10 @@ $ const description = (data.descrtiption) ? data.description : "";
           name="website-optioned-content"
           params={ sectionId: id, optionName: "Pinned", limit: 18, queryFragment }
         >
-          <website-content-list-flow nodes=nodes image={ ar: "16:9", width: 150 } image-position="left">
+          <website-content-list-flow nodes=nodes>
+            <@node image-position="left">
+              <@image ar="16:9", width=150 />
+            </@node>
           </website-content-list-flow>
         </marko-web-query>
       </div>
