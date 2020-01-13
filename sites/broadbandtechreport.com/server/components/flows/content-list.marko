@@ -20,12 +20,12 @@ $ const innerJustified = input.innerJustified != null ? input.innerJustified : t
         config=nxConfig
       >
         <website-content-list-node
-          ...input.node
           node=nxNode
           display-image=displayImage
           with-teaser=withTeaser
           attrs=containerAttrs
           link-attrs=linkAttrs
+          ...input.node
         />
       </marko-web-native-x-render>
     </@slot>
