@@ -6,7 +6,6 @@ See [marko-web-leaders package](https://github.com/base-cms/base-cms/blob/master
 - Import `@endeavor-business-media/package-leaders` into your site's `package.json` file.
 - Import `@endeavor-business-media/package-leaders/browser` into your site's `browser/index.js` file.
 - Import `@endeavor-business-media/package-leaders/scss/index.scss` into your site's `server/styles/index.scss` file.
-  - If your site uses rounded corners, import the `@endeavor-business-media/package-leaders/scss/rounded.scss` file.
 - Include the dropdown portal component in your template or document root. Include immediately after the opening `<body>` tag! **<< Don't forget this step >>**
 ```marko
 <!-- your-site/server/components/document.marko -->
