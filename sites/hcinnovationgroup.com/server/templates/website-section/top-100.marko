@@ -53,7 +53,11 @@ $ const { id, alias, name, pageNode } = data;
                 params={ sectionId: id, includeContentTypes: ["Top100"], limit: 100, queryFragment }
               >
                 <!-- @todo add support for sort by rank -->
-                $ nodes = nodes.sort((a,b) => (a.rank > b.rank) ? 1 : ((b.rank > a.rank) ? -1 : 0));
+                $ nodes.sort((a, b) => {
+                  if (a.rank > b.rank) return 1;
+                  if (a.rank < b.rank) return -1;
+                  return 1;
+                });
                 <div class="node-list node-list--inner-justified node-list--top100">
                   <for|node, index| of=nodes>
                   $ const revenue = node.revenueCurrent !== null ? formatCurrentcy(node.revenueCurrent) : '';
