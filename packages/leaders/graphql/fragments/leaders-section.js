@@ -9,7 +9,7 @@ fragment LeadersWebsiteSectionPageFragment on WebsiteSection {
       node {
         id
         name
-        # Support second-tier hierarchy for packworld
+        # Support second-tier hierarchy
         children(input:{ pagination: { limit: 0 }, sort: { field: name, order: asc } }) {
           edges {
             node {
