@@ -127,10 +127,10 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
               <if(type === "top100")>
                 <div class="page-contents__info">
                   $ content.revenueCurrent = content.revenueCurrent !== null ? formatCurrentcy(content.revenueCurrent) : '';
-                  <marko-web-obj-text type="content" block-name=blockName obj=content field="revenueCurrent" tag="div" modifiers="revenueCurrent" />
-                  <marko-web-obj-text type="content" block-name=blockName obj=content field="companyExecutives" tag="div" modifiers="companyExecutives" />
-                  <marko-web-obj-text type="content" block-name=blockName obj=content field="founded" tag="div" modifiers="founded" />
-                  <marko-web-obj-text type="content" block-name=blockName obj=content field="marketsServing" tag="div" modifiers="marketsServing" />
+                  <marko-web-obj-text type="content" block-name=blockName obj=content field="revenueCurrent" />
+                  <marko-web-obj-text type="content" block-name=blockName obj=content field="companyExecutives" />
+                  <marko-web-obj-text type="content" block-name=blockName obj=content field="founded" />
+                  <marko-web-obj-text type="content" block-name=blockName obj=content field="marketsServing" />
                 </div>
               </if>
             </default-theme-page-contents>
