@@ -41,8 +41,8 @@ $body-bg: #fff;
       background-color: transparent;
     }
   }
-  .node {
-    &--top100-content-type {
+  &--top100 {
+    .node {
       &:nth-child(odd){
         background-color: #f1f1f1;
       }
