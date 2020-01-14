@@ -43,7 +43,7 @@ $body-bg: #fff;
   }
   &--top100 {
     .node {
-      &:nth-child(odd){
+      &:nth-child(odd) {
         background-color: #f1f1f1;
       }
       .d-flex {
@@ -73,32 +73,32 @@ $body-bg: #fff;
         font-weight: 700;
       }
       &#{ $self } {
-        &__content-revenue-current{
+        &__content-revenue-current {
           &::before {
             content: "Revenue: ";
           }
         }
-        &__content-phone{
+        &__content-phone {
           &::before {
             content: "Phone: ";
           }
         }
-        &__content-website{
+        &__content-website {
           &::before {
             content: "Website: ";
           }
         }
-        &__content-company-executives{
+        &__content-company-executives {
           &::before {
             content: "Executives: ";
           }
         }
-        &__content-founded{
+        &__content-founded {
           &::before {
             content: "Year Est: ";
           }
         }
-        &__content-markets-serving{
+        &__content-markets-serving {
           &::before {
             content: "Markets Served: ";
           }
