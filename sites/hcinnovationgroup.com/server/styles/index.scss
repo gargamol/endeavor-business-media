@@ -68,44 +68,49 @@ $body-bg: #fff;
 .page-contents {
   $self: &;
   &__info {
-    & div {
-      padding: 10px;
-      text-align: right;
-      border-bottom: solid 1px #ccc;
-      &::before {
-        float: left;
-        font-weight: 700;
+    #{ $self } {
+      &__content-revenue-current,
+      &__content-phone,
+      &__content-website,
+      &__content-company-executives,
+      &__content-founded,
+      &__content-markets-serving {
+        padding: 10px;
+        text-align: right;
+        border-bottom: solid 1px #ccc;
+        &::before {
+          float: left;
+          font-weight: 700;
+        }
       }
-      &#{ $self } {
-        &__content-revenue-current {
-          &::before {
-            content: "Revenue: ";
-          }
+      &__content-revenue-current {
+        &::before {
+          content: "Revenue: ";
         }
-        &__content-phone {
-          &::before {
-            content: "Phone: ";
-          }
+      }
+      &__content-phone {
+        &::before {
+          content: "Phone: ";
         }
-        &__content-website {
-          &::before {
-            content: "Website: ";
-          }
+      }
+      &__content-website {
+        &::before {
+          content: "Website: ";
         }
-        &__content-company-executives {
-          &::before {
-            content: "Executives: ";
-          }
+      }
+      &__content-company-executives {
+        &::before {
+          content: "Executives: ";
         }
-        &__content-founded {
-          &::before {
-            content: "Year Est: ";
-          }
+      }
+      &__content-founded {
+        &::before {
+          content: "Year Est: ";
         }
-        &__content-markets-serving {
-          &::before {
-            content: "Markets Served: ";
-          }
+      }
+      &__content-markets-serving {
+        &::before {
+          content: "Markets Served: ";
         }
       }
     }
