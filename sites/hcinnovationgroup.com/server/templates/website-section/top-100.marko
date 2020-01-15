@@ -67,14 +67,14 @@ $ const { id, alias, name, pageNode } = data;
                     >
                     <@body>
                       <@text|{ blockName }|>
-                        <div class=`${blockName}__content--rank`>${node.rank}</div>
-                        <div class=`${blockName}__content--company`>
-                          <marko-web-content-short-name class=`${blockName}__content--name` tag="h6" obj=node link={ attrs: linkAttrs }>
+                        <div class=`${blockName}__content-rank`>${node.rank}</div>
+                        <div class=`${blockName}__content-company`>
+                          <marko-web-content-short-name block-name=blockName tag="h6" obj=node link={ attrs: linkAttrs }>
                             <@link href=node.siteContext.url />
                           </marko-web-content-short-name>
                           ${node.city}, ${node.state}
                         </div>
-                        <div class=`${blockName}__content--revenue`>${formatUsCurrency(node.revenueCurrent)}</div>
+                        <div class=`${blockName}__content-revenue`>${formatUsCurrency(node.revenueCurrent)}</div>
                       </@text>
                     </@body>
                     </marko-web-node>

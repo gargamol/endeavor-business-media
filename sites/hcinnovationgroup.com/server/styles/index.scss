@@ -50,15 +50,15 @@ $body-bg: #fff;
         display: flex;
       }
       &__content {
-        &--rank,
-        &--company,
-        &--revenue {
+        &-rank,
+        &-company,
+        &-revenue {
           padding: 10px 20px;
         }
-        &--company {
+        &-company {
           flex-grow: 1;
         }
-        &--name {
+        &-short-name{
           margin-bottom: 0;
           font-weight: 700;
         }
