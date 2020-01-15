@@ -77,6 +77,23 @@ $ const title = "Videos";
 
     <div class="row">
       <div class="col">
+        <h1 class="text-primary">TOOL REVIEWS</h1>
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content",
+          params={
+            limit: 3,
+            sectionAlias: "videos/tool-reviews",
+            queryFragment }
+        >
+          <website-content-card-deck-flow nodes=nodes display-ads=false/>
+        </marko-web-query>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <div class="col">
         <h1 class="text-primary">KOLMAN'S CORNER</h1>
         <marko-web-query|{ nodes }|
           name="website-scheduled-content",
