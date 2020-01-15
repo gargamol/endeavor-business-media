@@ -46,19 +46,21 @@ $body-bg: #fff;
       &:nth-child(odd) {
         background-color: #f1f1f1;
       }
-      &__text {
+      &__text{
         display: flex;
-        .rank,
-        .company,
-        .revenue {
+      }
+      &__content {
+        &--rank,
+        &--company,
+        &--revenue {
           padding: 10px 20px;
         }
-        .company {
+        &--company {
           flex-grow: 1;
-          .name {
-            margin-bottom: 0;
-            font-weight: 700;
-          }
+        }
+        &--name {
+          margin-bottom: 0;
+          font-weight: 700;
         }
       }
     }
