@@ -6,6 +6,7 @@ const queryFragment = require('../graphql/fragments/website-section-page');
 const whitePapers = require('../templates/website-section/white-papers');
 const fortyUnderForty = require('../templates/website-section/40-under-40');
 const channel = require('../templates/website-section/channel');
+const transitBidsRFP = require('../templates/website-section/transit-bids-rfp');
 
 const channelAliases = [
   'bus',
@@ -13,7 +14,6 @@ const channelAliases = [
   'technology',
   'safety-security',
   'alt-mobility',
-  'transit-bids-rfp',
   'management',
 ];
 
@@ -32,6 +32,10 @@ module.exports = (app) => {
   }));
   app.get('/:alias(40-under-40)', withWebsiteSection({
     template: fortyUnderForty,
+    queryFragment,
+  }));
+  app.get('/:alias(transit-bids-rfp)', withWebsiteSection({
+    template: transitBidsRFP,
     queryFragment,
   }));
   app.get(`/:alias(${channelAliases.join('|')})`, withWebsiteSection({
