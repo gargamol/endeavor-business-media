@@ -3,10 +3,6 @@ import queryFragment from "../../graphql/fragments/top100-landing-page";
 import formatUsCurrency from "../../utils/format-us-currency";
 import GAM from "../../../config/gam";
 
-$ const formatCurrentcy = function(number) {
-  return '$' + new Intl.NumberFormat().format(number)
-};
-
 $ const { id, alias, name, pageNode } = data;
 
 <marko-web-website-section-page-layout id=id alias=alias name=name>
@@ -53,7 +49,6 @@ $ const { id, alias, name, pageNode } = data;
                 name="website-scheduled-content"
                 params={ sectionId: id, includeContentTypes: ["Top100"], limit: 100, queryFragment }
               >
-                <!-- @todo add support for sort by rank -->
                 $ nodes.sort((a, b) => {
                   if (a.rank > b.rank) return 1;
                   if (a.rank < b.rank) return -1;

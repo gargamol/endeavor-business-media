@@ -5,9 +5,6 @@ import queryFragment from "../../graphql/fragments/content-list";
 import formatUsCurrency from "../../utils/format-us-currency";
 import GAM from "../../../config/gam";
 
-$ const formatCurrentcy = function(number) {
-  return '$' + new Intl.NumberFormat().format(number)
-};
 $ const { site } = out.global;
 $ const { id, type, pageNode } = data;
 
@@ -127,8 +124,7 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
               </if>
               <if(type === "top100")>
                 <div class="page-contents__info">
-                  $ content.revenueCurrent = formatUsCurrency(content.revenueCurrent);
-                  <marko-web-obj-text type="content" block-name=blockName obj=content field="revenueCurrent" />
+                  <div class=`${blockName}__content-revenue-current`>${formatUsCurrency(content.revenueCurrent)}</div>
                   <marko-web-obj-text type="content" block-name=blockName obj=content field="companyExecutives" />
                   <marko-web-obj-text type="content" block-name=blockName obj=content field="founded" />
                   <marko-web-obj-text type="content" block-name=blockName obj=content field="marketsServing" />
