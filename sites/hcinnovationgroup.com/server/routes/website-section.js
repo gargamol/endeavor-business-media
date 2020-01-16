@@ -1,6 +1,7 @@
 const { withWebsiteSection } = require('@base-cms/marko-web/middleware');
 const directory = require('../templates/website-section/directory');
 const section = require('../templates/website-section');
+const top100 = require('../templates/website-section/top-100');
 const contactUs = require('../templates/website-section/contact-us');
 const queryFragment = require('../graphql/fragments/website-section-page');
 const whitePapers = require('../templates/website-section/white-papers');
@@ -28,6 +29,14 @@ module.exports = (app) => {
   }));
   app.get('/:alias(directory/[a-z0-9-/]+)', withWebsiteSection({
     template: directory,
+    queryFragment,
+  }));
+  app.get('/:alias(top-100-vendors/2018)', withWebsiteSection({
+    template: top100,
+    queryFragment,
+  }));
+  app.get('/:alias(top-100-vendors/2019)', withWebsiteSection({
+    template: top100,
     queryFragment,
   }));
   app.get(`/:alias(${channelAliases.join('|')})`, withWebsiteSection({

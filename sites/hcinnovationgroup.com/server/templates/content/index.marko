@@ -2,6 +2,7 @@ import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
 import { get, getAsObject } from "@base-cms/object-path";
 import contentKeyValues from "@endeavor-business-media/package-common/gam/content-key-values";
 import queryFragment from "../../graphql/fragments/content-list";
+import formatUsCurrency from "../../utils/format-us-currency";
 import GAM from "../../../config/gam";
 
 $ const { site } = out.global;
@@ -60,6 +61,18 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
                 <if(displayPublishedDate)>
                   <marko-web-content-published block-name=blockName obj=content />
                 </if>
+                <if(type === "top100")>
+                <div>
+                  <strong>
+                    Current Rank: <marko-web-obj-text type="content" block-name=blockName obj=content field="rank" tag=null modifiers="rank"/>
+                  </strong>
+                </div>
+                <div>
+                  <strong>
+                    Previously Ranked: <marko-web-obj-text type="content" block-name=blockName obj=content field="previousRank" tag=null modifiers="rank"/>
+                  </strong>
+                </div>
+                </if>
               </default-theme-page-dates>
             </div>
           </div>
@@ -108,6 +121,14 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
               </if>
               <if(type === "product")>
                 <website-inquiry-form content=content />
+              </if>
+              <if(type === "top100")>
+                <div class="page-contents__info">
+                  <div class=`${blockName}__content-revenue-current`>${formatUsCurrency(content.revenueCurrent)}</div>
+                  <marko-web-obj-text type="content" block-name=blockName obj=content field="companyExecutives" />
+                  <marko-web-obj-text type="content" block-name=blockName obj=content field="founded" />
+                  <marko-web-obj-text type="content" block-name=blockName obj=content field="marketsServing" />
+                </div>
               </if>
             </default-theme-page-contents>
             <aside class="col-lg-4 page-rail">
