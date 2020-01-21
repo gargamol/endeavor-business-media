@@ -7,7 +7,8 @@ const contactUs = require('../templates/website-section/contact-us');
 const queryFragment = require('../graphql/fragments/website-section-page');
 const whitePapers = require('../templates/website-section/white-papers');
 const channel = require('../templates/website-section/channel');
-const videos = require('../templates/website-section/videos.marko');
+const videos = require('../templates/website-section/videos');
+const blogs = require('../templates/website-section/blogs');
 
 const channelAliases = [
   'in-the-bay',
@@ -21,6 +22,14 @@ module.exports = (app) => {
   app.get('/:alias(leaders)', withWebsiteSection({
     template: leaders,
     queryFragment: leadersFragment,
+  }));
+  app.get('/:alias(blogs)', withWebsiteSection({
+    template: blogs,
+    queryFragment,
+  }));
+  app.get('/:alias(videos)', withWebsiteSection({
+    template: videos,
+    queryFragment,
   }));
   app.get('/:alias(contact-us)', withWebsiteSection({
     template: contactUs,
@@ -36,10 +45,6 @@ module.exports = (app) => {
   }));
   app.get(`/:alias(${channelAliases.join('|')})`, withWebsiteSection({
     template: channel,
-    queryFragment,
-  }));
-  app.get('/:alias(videos)', withWebsiteSection({
-    template: videos,
     queryFragment,
   }));
   app.get('/:alias(white-papers)', withWebsiteSection({

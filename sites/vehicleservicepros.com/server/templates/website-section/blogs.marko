@@ -1,0 +1,160 @@
+import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
+import queryFragment from "../../graphql/fragments/content-list";
+import GAM from "../../../config/gam";
+
+$ const type = "published-content";
+$ const { id, alias, name, pageNode, section } = data;
+$ const title = "Blogs";
+
+<marko-web-website-section-page-layout id=id alias=alias name=name>
+  <@head>
+    <marko-web-gtm-default-context|{ context }| type=type>
+      <marko-web-gtm-push data=context />
+    </marko-web-gtm-default-context>
+    <marko-web-resolve-page|{ data: section }| node=pageNode>
+      $ const aliases = hierarchyAliases(section);
+      $ const adSlots = {
+          "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
+          "gpt-ad-rail1": GAM.getAdUnit({ name: "rail1", aliases }),
+          "gpt-ad-rail2": GAM.getAdUnit({ name: "rail2", aliases }),
+          "gpt-ad-ms": GAM.getAdUnit({ name: "ms", aliases }),
+        }
+       <marko-web-gam-slots slots=adSlots />
+    </marko-web-resolve-page>
+  </@head>
+  <@above-container>
+    <marko-web-resolve-page|{ data: section }| node=pageNode>
+      $ const aliases = hierarchyAliases(section);
+      <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "wa", aliases }) />
+      <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "reskin", aliases }) />
+    </marko-web-resolve-page>
+  </@above-container>
+  <@page>
+    <marko-web-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
+
+    <marko-web-page-wrapper class="mb-block">
+      <@section>
+        <div class="row">
+          <div class="col">
+            <default-theme-breadcrumbs-with-home>
+              <@item>${title}</@item>
+            </default-theme-breadcrumbs-with-home>
+            <h1 class="page-wrapper__title">${title}</h1>
+          </div>
+        </div>
+      </@section>
+    </marko-web-page-wrapper>
+
+    <div class="row">
+      <div class="col">
+        <h1 class="text-primary">Latest Blogs</h1>
+        <marko-web-query|{ nodes }|
+          name="all-published-content"
+          params={ contentTypes: ["Blog"], limit: 5, queryFragment }
+        >
+          <website-content-card-deck-flow nodes=nodes with-teaser=false/>
+        </marko-web-query>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <div class="col">
+        <h1 class="text-primary">IN THE DRIVER'S SEAT</h1>
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={
+            limit: 3,
+            sectionAlias: "blogs/drivers-seat",
+            queryFragment }
+        >
+          <website-content-card-deck-flow nodes=nodes display-ads=false/>
+        </marko-web-query>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <div class="col">
+        <h1 class="text-primary">KOLMAN'S KOMMENTS</h1>
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content",
+          params={
+            limit: 3,
+            sectionAlias: "blogs/kolmans-komments",
+            queryFragment }
+        >
+          <website-content-card-deck-flow nodes=nodes display-ads=false/>
+        </marko-web-query>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <div class="col">
+        <h1 class="text-primary">GUEST BLOGS</h1>
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content",
+          params={
+            limit: 3,
+            sectionAlias: "blogs/guest-blogs",
+            queryFragment }
+        >
+          <website-content-card-deck-flow nodes=nodes display-ads=false/>
+        </marko-web-query>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <div class="col">
+        <h1 class="text-primary">INDUSTRY INSIGHTS</h1>
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={
+            limit: 3,
+            sectionAlias: "blogs/industry-insights",
+            queryFragment }
+        >
+          <website-content-card-deck-flow nodes=nodes display-ads=false/>
+        </marko-web-query>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <div class="col">
+        <h1 class="text-primary">LABOR TIME</h1>
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={
+            limit: 3,
+            sectionAlias: "shop-operations/employees-hiring",
+            queryFragment }
+        >
+          <website-content-card-deck-flow nodes=nodes display-ads=false/>
+        </marko-web-query>
+      </div>
+    </div>
+
+    <hr>
+
+  </@page>
+  <@below-page>
+    <marko-web-load-more
+      component-name="content-card-deck-flow"
+      fragment-name="content-list"
+      query-name="all-published-content"
+      query-params={ contentTypes: ["Video"], limit: 10, skip: 5 }
+      page-input={ for: "published-content" }
+    />
+  </@below-page>
+  <@foot>
+    <marko-web-gam-fixed-ad-bottom ...GAM.getAdUnit({ name: "lb2" }) refresh-interval=15 scroll-offset=100 />
+  </@foot>
+</marko-web-website-section-page-layout>
