@@ -22,9 +22,14 @@
       "<image>": {}
     },
     "@nodes": "array",
+    "@image": "object",
     "@display-image": {
       "type": "boolean",
       "default-value": true
+    },
+    "@image-position": {
+      "type": "string",
+      "default-value": "right"
     },
     "@with-teaser": {
       "type": "boolean",
