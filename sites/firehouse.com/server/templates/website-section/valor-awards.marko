@@ -81,13 +81,30 @@ $ const { id, alias, name, pageNode } = data;
             <div class="col-lg-6">
               <marko-web-query|{ nodes }|
                 name="website-optioned-content"
-                params={ sectionId: id, optionName: "Pinned", limit: 18, includeContentTypes: ["Company"], queryFragment }
+                params={ sectionId: id, optionName: "Pinned", limit: 100, includeContentTypes: ["Promotion"], queryFragment }
               >
-                <marko-web-node-list inner-justified=true modifiers=["valor-award-sponsors"]>
-                  <@nodes nodes=nodes>
-
-                  </@nodes>
-                </marko-web-node-list>
+                <div class="row">
+                  <for|node| of=nodes>
+                    <div class="col-4">
+                      $ const primaryImage = getAsObject(node, "primaryImage");
+                      <marko-web-node
+                        type="company-content"
+                        image-position="top"
+                        card=true
+                      >
+                        <@image
+                          src=primaryImage.src
+                          alt=primaryImage.alt
+                          is-logo=true
+                          fluid=true
+                          ar="1:1"
+                          width=200
+                          link={ href: node.canonicalPath }
+                        />
+                      </marko-web-node>
+                    </div>
+                  </for>
+                </div>
               </marko-web-query>
             </div>
 

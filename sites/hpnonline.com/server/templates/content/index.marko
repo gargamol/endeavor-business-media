@@ -81,7 +81,7 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
                   />
                 </if>
                 <else>
-                  <marko-web-page-image width=500 obj=content.primaryImage />
+                  <marko-web-page-image width=720 obj=content.primaryImage />
                 </else>
               </else-if>
               <else-if(type === "contact")>
@@ -90,6 +90,9 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
               <default-theme-content-contact-details obj=content />
               <marko-web-content-body block-name=blockName obj=content />
               <marko-web-content-sidebars block-name=blockName obj=content />
+              <if(type === "media-gallery")>
+                <common-image-list image-connection=content.images />
+              </if>
               <if(type === "document")>
                 <default-theme-content-download obj=content>
                   <@wufoo user-name=site.get("wufoo.userName") />

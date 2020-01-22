@@ -22,9 +22,14 @@
       "<image>": {}
     },
     "@nodes": "array",
+    "@image": "object",
     "@display-image": {
       "type": "boolean",
       "default-value": true
+    },
+    "@image-position": {
+      "type": "string",
+      "default-value": "right"
     },
     "@with-teaser": {
       "type": "boolean",
@@ -34,7 +39,7 @@
       "type": "boolean",
       "default-value": true
     },
-    "@class" : "string"
+    "@class": "string"
   },
   "<website-content-load-more-flow>": {
     "template": "./content-load-more.marko",
