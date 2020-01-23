@@ -5,31 +5,31 @@
     role="dialog"
     aria-hidden="true"
   >
-    <pwsp-element name="bg" />
-    <pwsp-element name="scroll-wrap">
-      <pwsp-element name="container">
-        <pwsp-item />
-        <pwsp-item />
-        <pwsp-item />
-      </pwsp-element>
-    </pwsp-element>
+    <pswp-element name="bg" />
+    <pswp-element name="scroll-wrap">
+      <pswp-element name="container">
+        <pswp-item />
+        <pswp-item />
+        <pswp-item />
+      </pswp-element>
+    </pswp-element>
 
-    <pwsp-element name="ui" :modifiers="['hidden']">
-      <pwsp-element name="top-bar">
-        <pwsp-element name="counter" />
-      </pwsp-element>
-    </pwsp-element>
+    <pswp-element name="ui" :modifiers="['hidden']">
+      <pswp-element name="top-bar">
+        <pswp-element name="counter" />
+      </pswp-element>
+    </pswp-element>
   </div>
 </template>
 
 <script>
 import PhotoSwipe from 'photoswipe';
 import PhotoSwipeUI from 'photoswipe/dist/photoswipe-ui-default';
-import PwspElement from './element.vue';
-import PwspItem from './item.vue';
+import PswpElement from './element.vue';
+import PswpItem from './item.vue';
 
 export default {
-  components: { PwspElement, PwspItem },
+  components: { PswpElement, PswpItem },
 
   mounted() {
     const options = { index: 0 };
