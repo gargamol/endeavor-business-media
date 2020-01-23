@@ -1,12 +1,16 @@
 <template>
-  <div :class="classNames">
+  <component :is="tag" :class="classNames">
     <slot />
-  </div>
+  </component>
 </template>
 
 <script>
 export default {
   props: {
+    tag: {
+      type: String,
+      default: 'div',
+    },
     name: {
       type: String,
       required: true,
