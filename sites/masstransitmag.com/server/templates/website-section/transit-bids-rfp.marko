@@ -15,7 +15,6 @@ $ const title = "Transit Bids-RFP";
       $ const aliases = hierarchyAliases(section);
       $ const adSlots = {
           "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
-          "gpt-ad-rail2": GAM.getAdUnit({ name: "rail2", aliases }),
         }
        <marko-web-gam-slots slots=adSlots />
     </marko-web-resolve-page>
@@ -66,7 +65,7 @@ $ const title = "Transit Bids-RFP";
       <div class="col-lg-12 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionId: id, queryFragment }
+          params={ sectionId: id, limit: 10, queryFragment }
         >
           <website-content-list-flow nodes=nodes with-teaser=true image-position="left"/>
         </marko-web-query>
@@ -74,6 +73,18 @@ $ const title = "Transit Bids-RFP";
     </div>
 
   </@page>
+  <@below-page>
+    <marko-web-resolve-page|{ data: section }| node=pageNode>
+      $ const aliases = hierarchyAliases(section);
+      <marko-web-load-more
+        component-name="content-load-more-flow"
+        fragment-name="content-list"
+        query-name="website-scheduled-content"
+        query-params={ sectionId: id, skip: 10 }
+        page-input={ for: "website-section", id }
+      />
+    </marko-web-resolve-page>
+  </@below-page>
   <@foot>
     <marko-web-resolve-page|{ data: section }| node=pageNode>
       $ const aliases = hierarchyAliases(section);
