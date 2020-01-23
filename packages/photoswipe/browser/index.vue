@@ -12,20 +12,31 @@
         <pswp-item />
         <pswp-item />
       </pswp-element>
-    </pswp-element>
 
-    <pswp-element name="ui" :modifiers="['hidden']">
-      <pswp-element name="top-bar">
-        <pswp-element name="counter" />
-        <pswp-button type="close" />
-        <pswp-button type="share" />
-        <pswp-button type="fullscreen" />
-        <pswp-button type="zoom" />
+      <pswp-element name="ui" :modifiers="['hidden']">
+        <pswp-element name="top-bar">
+          <pswp-element name="counter" />
+          <pswp-button type="close" />
+          <!-- <pswp-button type="share" /> -->
+          <pswp-button type="fullscreen" />
+          <pswp-button type="zoom" />
+
+          <pswp-element name="preloader">
+            <pswp-element name="preloader__icn">
+              <pswp-element name="preloader__cut">
+                <pswp-element name="preloader__donut" />
+              </pswp-element>
+            </pswp-element>
+          </pswp-element>
+        </pswp-element>
+
+        <pswp-button type="previous" />
+        <pswp-button type="next" />
+        <pswp-element name="caption">
+          <pswp-element name="caption__center" />
+        </pswp-element>
       </pswp-element>
     </pswp-element>
-
-    <pswp-button type="previous" />
-    <pswp-button type="next" />
   </div>
 </template>
 
