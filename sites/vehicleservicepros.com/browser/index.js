@@ -6,6 +6,7 @@ import GCSE from '@base-cms/marko-web-gcse/browser';
 import RevealAd from '@base-cms/marko-web-reveal-ad/browser';
 import Common from '@endeavor-business-media/package-common/browser';
 import Inquiry from '@endeavor-business-media/package-inquiry/browser';
+import Photoswipe from '@endeavor-business-media/package-photoswipe/browser';
 
 DefaultTheme(Browser);
 GTM(Browser);
@@ -14,5 +15,6 @@ GCSE(Browser);
 RevealAd(Browser);
 Common(Browser);
 Inquiry(Browser);
+Photoswipe(Browser);
 
 export default Browser;
