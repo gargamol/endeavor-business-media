@@ -17,8 +17,15 @@
     <pswp-element name="ui" :modifiers="['hidden']">
       <pswp-element name="top-bar">
         <pswp-element name="counter" />
+        <pswp-button type="close" />
+        <pswp-button type="share" />
+        <pswp-button type="fullscreen" />
+        <pswp-button type="zoom" />
       </pswp-element>
     </pswp-element>
+
+    <pswp-button type="previous" />
+    <pswp-button type="next" />
   </div>
 </template>
 
@@ -27,9 +34,14 @@ import PhotoSwipe from 'photoswipe';
 import PhotoSwipeUI from 'photoswipe/dist/photoswipe-ui-default';
 import PswpElement from './element.vue';
 import PswpItem from './item.vue';
+import PswpButton from './buttons/index.vue';
 
 export default {
-  components: { PswpElement, PswpItem },
+  components: {
+    PswpElement,
+    PswpItem,
+    PswpButton,
+  },
 
   mounted() {
     const options = { index: 0 };
