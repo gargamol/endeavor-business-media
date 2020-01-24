@@ -66,7 +66,7 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
         </@section>
         <@section>
           <div class="row">
-            <default-theme-page-contents|{ blockName }| class="col-lg-8 mb-3 mb-lg-0">
+            <default-theme-page-contents|{ blockName }| class="col-lg-8 mb-3 mb-lg-0" attrs={ "data-gallery-id": id }>
               <if(content.embedCode)>
                 <marko-web-content-embed-code block-name=blockName obj=content />
               </if>
@@ -127,7 +127,9 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
               <marko-web-gam-display-ad id="gpt-ad-rail2" />
             </aside>
           </div>
-          <marko-web-browser-component name="PhotoSwipe" />
+          <marko-web-photoswipe-content-images content=content>
+            <@props thumbnail-click-selectors=`[data-gallery-id="${id}"] [data-image-id]` />
+          </marko-web-photoswipe-content-images>
         </@section>
       </marko-web-page-wrapper>
     </marko-web-resolve-page>
