@@ -15,7 +15,7 @@
     "photoswipe": "^4.1.3"
   },
   "peerDependencies": {
-    "@base-cms/marko-web": "^1.0.0"
+    "@base-cms/marko-web": "^1.12.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3"
