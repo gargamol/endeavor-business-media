@@ -17,7 +17,6 @@
         <pswp-element name="top-bar">
           <pswp-element name="counter" />
           <pswp-button type="close" />
-          <pswp-button type="share" />
           <pswp-button type="fullscreen" />
           <pswp-button type="zoom" />
 
