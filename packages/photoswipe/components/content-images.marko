@@ -19,10 +19,16 @@ $ const calcDimensions = ({ width, height }) => {
   };
 };
 
+$ const buildTitleHtml = ({ caption, credit }) => {
+  const creditHtml = credit ? `<small>${credit}</small>` : '';
+  if (!caption) return creditHtml;
+  if (creditHtml) return `${caption}<br>${creditHtml}`;
+  return caption;
+};
+
 $ const items = images.map((image) => {
   const item = {
-    title: image.caption,
-    credit: image.credit,
+    title: buildTitleHtml(image),
   };
 
   const { width, height } = getAsObject(image, "source");
