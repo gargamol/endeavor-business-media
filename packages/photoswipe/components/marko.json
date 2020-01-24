@@ -3,13 +3,15 @@
     "template": "./photoswipe.marko",
     "@items": "array",
     "@options": "object",
-    "@init-on-mount": "boolean"
+    "@init-on-mount": "boolean",
+    "@with-credit": "boolean"
   },
   "<marko-web-photoswipe-content-images>": {
     "template": "./content-images.marko",
     "<props>": {
       "@options": "object",
-      "@init-on-mount": "boolean"
+      "@init-on-mount": "boolean",
+      "@with-credit": "boolean"
     },
     "@content": "object",
     "@mix-size": "number"

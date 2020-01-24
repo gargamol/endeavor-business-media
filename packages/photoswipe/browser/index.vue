@@ -71,10 +71,30 @@ export default {
       type: Boolean,
       default: false,
     },
+    withCredit: {
+      type: Boolean,
+      default: true,
+    },
   },
 
   mounted() {
-    const gallery = new PhotoSwipe(this.$el, PhotoSwipeUI, this.items, this.options);
+    const options = { ...this.options };
+    if (this.withCredit) {
+      options.addCaptionHTMLFn = (item, captionEl) => {
+        const creditHtml = item.credit ? `<small>${item.credit}</small>` : '';
+        if (!item.title) {
+          // eslint-disable-next-line no-param-reassign
+          captionEl.children[0].innerText = creditHtml;
+          return false;
+        }
+        let titleHtml = item.title;
+        if (creditHtml) titleHtml = `${titleHtml}<br>${creditHtml}`;
+        // eslint-disable-next-line no-param-reassign
+        captionEl.children[0].innerHTML = titleHtml;
+        return true;
+      };
+    }
+    const gallery = new PhotoSwipe(this.$el, PhotoSwipeUI, this.items, options);
     if (this.initOnMount) gallery.init();
   },
 };
