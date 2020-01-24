@@ -67,15 +67,96 @@ export default {
       type: Object,
       default: () => ({}),
     },
-    initOnMount: {
-      type: Boolean,
-      default: false,
+    itemIdProp: {
+      type: String,
+      default: 'id',
+    },
+    thumbnailClickSelectors: {
+      type: String,
+      default: null,
+    },
+    thumbnailImageIdAttr: {
+      type: String,
+      default: 'data-image-id',
     },
   },
 
+  data: () => ({
+    pswp: null,
+    thumbnailReadyAttr: 'data-thumbnail-ready',
+    thumbnailClass: 'pswp-thumbnail',
+  }),
+
   mounted() {
-    const gallery = new PhotoSwipe(this.$el, PhotoSwipeUI, this.items, this.options);
-    if (this.initOnMount) gallery.init();
+    this.addThumbnailListeners();
+  },
+
+  beforeDestroy() {
+    this.removeThumbnailListeners();
+    this.pswp.destroy();
+  },
+
+  methods: {
+    getThumbnailImageId(el) {
+      if (!el) return null;
+      return el.getAttribute(this.thumbnailImageIdAttr);
+    },
+
+    getImageIndex(id) {
+      if (!id) return false;
+      return this.items.reduce((found, item, index) => {
+        if (found) return found;
+        if (item[this.itemIdProp] === id) return `${index}`;
+        return found;
+      }, null);
+    },
+
+    getThumbnailElements() {
+      const elements = [];
+      const { thumbnailClickSelectors: selector } = this;
+      if (selector) {
+        const elementList = document.querySelectorAll(selector);
+        for (let i = 0; i < elementList.length; i += 1) {
+          const element = elementList[i];
+          const imageId = this.getThumbnailImageId(element);
+          const index = this.getImageIndex(imageId);
+          if (index) elements.push(element);
+        }
+      }
+      return elements;
+    },
+
+    getUnloadedThumbnails() {
+      return this.getThumbnailElements().filter(el => !el.hasAttribute(this.thumbnailReadyAttr));
+    },
+
+    getLoadedThumbnails() {
+      return this.getThumbnailElements().filter(el => el.hasAttribute(this.thumbnailReadyAttr));
+    },
+
+    addThumbnailListeners() {
+      const elements = this.getUnloadedThumbnails();
+      elements.forEach((el) => {
+        el.addEventListener('click', this.handleThumbnailClick);
+        el.setAttribute(this.thumbnailReadyAttr, true);
+        el.classList.add(this.thumbnailClass);
+      });
+    },
+
+    removeThumbnailListeners() {
+      const elements = this.getLoadedThumbnails();
+      elements.forEach(el => el.removeEventListener('click', this.handleThumbnailClick));
+    },
+
+    handleThumbnailClick(event) {
+      const imageId = this.getThumbnailImageId(event.target);
+      const index = this.getImageIndex(imageId);
+      if (index) {
+        const options = { ...this.options, index: parseInt(index, 10) };
+        const pswp = new PhotoSwipe(this.$el, PhotoSwipeUI, this.items, options);
+        pswp.init();
+      }
+    },
   },
 };
 </script>

@@ -28,6 +28,7 @@ $ const buildTitleHtml = ({ caption, credit }) => {
 
 $ const items = images.map((image) => {
   const item = {
+    id: image.id,
     title: buildTitleHtml(image),
   };
 
