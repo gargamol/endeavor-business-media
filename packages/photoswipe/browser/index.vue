@@ -17,7 +17,7 @@
         <pswp-element name="top-bar">
           <pswp-element name="counter" />
           <pswp-button type="close" />
-          <!-- <pswp-button type="share" /> -->
+          <pswp-button type="share" />
           <pswp-button type="fullscreen" />
           <pswp-button type="zoom" />
 
@@ -89,6 +89,7 @@ export default {
 
   mounted() {
     this.addThumbnailListeners();
+    this.openOnHash();
   },
 
   beforeDestroy() {
@@ -97,13 +98,21 @@ export default {
   },
 
   methods: {
+    openOnHash() {
+      const { pid } = this.parseHashParams();
+      if (pid != null) {
+        const index = pid - 1;
+        if (this.items[index]) this.openPhotoswipe({ index });
+      }
+    },
+
     getThumbnailImageId(el) {
       if (!el) return null;
       return el.getAttribute(this.thumbnailImageIdAttr);
     },
 
     getImageIndex(id) {
-      if (!id) return false;
+      if (id == null) return false;
       return this.items.reduce((found, item, index) => {
         if (found) return found;
         if (item[this.itemIdProp] === id) return `${index}`;
@@ -151,11 +160,32 @@ export default {
     handleThumbnailClick(event) {
       const imageId = this.getThumbnailImageId(event.target);
       const index = this.getImageIndex(imageId);
-      if (index) {
-        const options = { ...this.options, index: parseInt(index, 10) };
-        const pswp = new PhotoSwipe(this.$el, PhotoSwipeUI, this.items, options);
-        pswp.init();
+      if (index) this.openPhotoswipe({ index });
+    },
+
+    openPhotoswipe({ index }) {
+      const options = { ...this.options };
+      if (index != null) options.index = parseInt(index, 10);
+      const pswp = new PhotoSwipe(this.$el, PhotoSwipeUI, this.items, options);
+      pswp.init();
+    },
+
+    parseHashParams() {
+      const hash = window.location.hash.substring(1);
+      const params = {};
+      const parts = hash.split('&');
+      for (let i = 0; i < parts.length; i += 1) {
+        if (parts[i]) {
+          const pair = parts[i].split('=');
+          if (pair.length >= 2) {
+            const [key, val] = pair;
+            params[key] = val;
+          }
+        }
       }
+      if (params.gid) params.gid = parseInt(params.gid, 10);
+      if (params.pid) params.pid = parseInt(params.pid, 10);
+      return params;
     },
   },
 };
