@@ -1,0 +1,17 @@
+{
+  "<marko-web-photoswipe>": {
+    "template": "./photoswipe.marko",
+    "@items": "array",
+    "@options": "object",
+    "@init-on-mount": "boolean"
+  },
+  "<marko-web-photoswipe-content-images>": {
+    "template": "./content-images.marko",
+    "<props>": {
+      "@options": "object",
+      "@init-on-mount": "boolean"
+    },
+    "@content": "object",
+    "@mix-size": "number"
+  }
+}
