@@ -58,15 +58,24 @@ export default {
     PswpButton,
   },
 
-  mounted() {
-    const options = { index: 0 };
-    const items = [
-      { src: 'https://placekitten.com/600/400', w: 600, h: 400 },
-      { src: 'https://placekitten.com/1200/900', w: 1200, h: 900 },
-    ];
+  props: {
+    items: {
+      type: Array,
+      default: () => [],
+    },
+    options: {
+      type: Object,
+      default: () => ({}),
+    },
+    initOnMount: {
+      type: Boolean,
+      default: false,
+    },
+  },
 
-    const gallery = new PhotoSwipe(this.$el, PhotoSwipeUI, items, options);
-    gallery.init();
+  mounted() {
+    const gallery = new PhotoSwipe(this.$el, PhotoSwipeUI, this.items, this.options);
+    if (this.initOnMount) gallery.init();
   },
 };
 </script>
