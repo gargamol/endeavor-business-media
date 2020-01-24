@@ -41,6 +41,10 @@
 </template>
 
 <script>
+import 'photoswipe/dist/default-skin/default-skin.png';
+import 'photoswipe/dist/default-skin/default-skin.svg';
+import 'photoswipe/dist/default-skin/preloader.gif';
+
 import PhotoSwipe from 'photoswipe';
 import PhotoSwipeUI from 'photoswipe/dist/photoswipe-ui-default';
 import PswpElement from './element.vue';
