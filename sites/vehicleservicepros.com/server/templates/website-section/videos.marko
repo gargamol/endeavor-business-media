@@ -2,15 +2,14 @@ import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
 import queryFragment from "../../graphql/fragments/content-list";
 import GAM from "../../../config/gam";
 
-$ const type = "published-content";
 $ const { id, alias, name, pageNode, section } = data;
 $ const title = "Videos";
 
 <marko-web-website-section-page-layout id=id alias=alias name=name>
   <@head>
-    <marko-web-gtm-default-context|{ context }| type=type>
+    <marko-web-gtm-website-section-context|{ context }| alias=alias>
       <marko-web-gtm-push data=context />
-    </marko-web-gtm-default-context>
+    </marko-web-gtm-website-section-context>
     <marko-web-resolve-page|{ data: section }| node=pageNode>
       $ const aliases = hierarchyAliases(section);
       $ const adSlots = {
@@ -39,93 +38,93 @@ $ const title = "Videos";
             <default-theme-breadcrumbs-with-home>
               <@item>${title}</@item>
             </default-theme-breadcrumbs-with-home>
-            <h1 class="page-wrapper__title">${title}</h1>
           </div>
         </div>
       </@section>
+
+      <@section>
+        <div class="row">
+          <div class="col">
+            <marko-web-query|{ nodes }|
+              name="all-published-content"
+              params={ contentTypes: ["Video"], limit: 5, queryFragment }
+            >
+              <website-content-card-deck-flow nodes=nodes with-teaser=false/>
+            </marko-web-query>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+          <div class="col">
+            <h1 class="text-primary">UPTIME UPDATE</h1>
+            <marko-web-query|{ nodes }|
+              name="website-scheduled-content"
+              params={
+                limit: 3,
+                sectionAlias: "videos/uptime-update",
+                queryFragment }
+            >
+              <website-content-card-deck-flow nodes=nodes display-ads=false/>
+            </marko-web-query>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+          <div class="col">
+            <h1 class="text-primary">TOOL REVIEWS</h1>
+            <marko-web-query|{ nodes }|
+              name="website-scheduled-content",
+              params={
+                limit: 3,
+                sectionAlias: "videos/tool-reviews",
+                queryFragment }
+            >
+              <website-content-card-deck-flow nodes=nodes display-ads=false/>
+            </marko-web-query>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+          <div class="col">
+            <h1 class="text-primary">KOLMAN'S CORNER</h1>
+            <marko-web-query|{ nodes }|
+              name="website-scheduled-content",
+              params={
+                limit: 3,
+                sectionAlias: "videos/kolmans-korner",
+                queryFragment }
+            >
+              <website-content-card-deck-flow nodes=nodes display-ads=false/>
+            </marko-web-query>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+          <div class="col">
+            <h1 class="text-primary">TOOLBOX TOPICS</h1>
+            <marko-web-query|{ nodes }|
+              name="website-scheduled-content"
+              params={
+                limit: 3,
+                sectionAlias: "videos/toolbox-topics",
+                queryFragment }
+            >
+              <website-content-card-deck-flow nodes=nodes display-ads=false/>
+            </marko-web-query>
+          </div>
+        </div>
+
+        <hr>
+      </@section>
     </marko-web-page-wrapper>
-
-    <div class="row">
-      <div class="col">
-        <marko-web-query|{ nodes }|
-          name="all-published-content"
-          params={ contentTypes: ["Video"], limit: 5, queryFragment }
-        >
-          <website-content-card-deck-flow nodes=nodes with-teaser=false/>
-        </marko-web-query>
-      </div>
-    </div>
-
-    <hr>
-
-    <div class="row">
-      <div class="col">
-        <h1 class="text-primary">UPTIME UPDATE</h1>
-        <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
-          params={
-            limit: 3,
-            sectionAlias: "videos/uptime-update",
-            queryFragment }
-        >
-          <website-content-card-deck-flow nodes=nodes display-ads=false/>
-        </marko-web-query>
-      </div>
-    </div>
-
-    <hr>
-
-    <div class="row">
-      <div class="col">
-        <h1 class="text-primary">TOOL REVIEWS</h1>
-        <marko-web-query|{ nodes }|
-          name="website-scheduled-content",
-          params={
-            limit: 3,
-            sectionAlias: "videos/tool-reviews",
-            queryFragment }
-        >
-          <website-content-card-deck-flow nodes=nodes display-ads=false/>
-        </marko-web-query>
-      </div>
-    </div>
-
-    <hr>
-
-    <div class="row">
-      <div class="col">
-        <h1 class="text-primary">KOLMAN'S CORNER</h1>
-        <marko-web-query|{ nodes }|
-          name="website-scheduled-content",
-          params={
-            limit: 3,
-            sectionAlias: "videos/kolmans-korner",
-            queryFragment }
-        >
-          <website-content-card-deck-flow nodes=nodes display-ads=false/>
-        </marko-web-query>
-      </div>
-    </div>
-
-    <hr>
-
-    <div class="row">
-      <div class="col">
-        <h1 class="text-primary">TOOLBOX TOPICS</h1>
-        <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
-          params={
-            limit: 3,
-            sectionAlias: "videos/toolbox-topics",
-            queryFragment }
-        >
-          <website-content-card-deck-flow nodes=nodes display-ads=false/>
-        </marko-web-query>
-      </div>
-    </div>
-
-    <hr>
-
   </@page>
   <@below-page>
     <marko-web-load-more
