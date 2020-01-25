@@ -30,6 +30,9 @@ $theme-site-header-breakpoints: (
 @import "../../node_modules/@endeavor-business-media/package-common/scss/directory";
 @import "../../node_modules/@endeavor-business-media/package-inquiry/scss/index";
 
+$pswp__root-z-index: $theme-site-header-z-index + 1;
+@import "../../node_modules/@endeavor-business-media/package-photoswipe/scss/main";
+
 .website-section-page {
   &--31922 {
     margin-bottom: map-get($spacers, block);
