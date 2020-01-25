@@ -5,6 +5,7 @@ import GAM from '@base-cms/marko-web-gam/browser';
 import GCSE from '@base-cms/marko-web-gcse/browser';
 import RevealAd from '@base-cms/marko-web-reveal-ad/browser';
 import Common from '@endeavor-business-media/package-common/browser';
+import Inquiry from '@endeavor-business-media/package-inquiry/browser';
 import PhotoSwipe from '@endeavor-business-media/package-photoswipe/browser';
 
 DefaultTheme(Browser);
