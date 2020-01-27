@@ -56,3 +56,11 @@ $body-bg: #fff;
     text-decoration: underline;
   }
 }
+
+.submit-job {
+  @include media-breakpoint-up(lg) {
+    max-width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
