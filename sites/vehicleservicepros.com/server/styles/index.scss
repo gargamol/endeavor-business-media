@@ -53,9 +53,11 @@ $pswp__root-z-index: $theme-site-header-z-index + 1;
   }
 }
 
-.section-title__primary {
-  color: $primary;
-  text-transform: uppercase;
+.section-title {
+  &__primary {
+    color: $primary;
+    text-transform: uppercase;
+  }
 }
 
 // @todo this should be removed once added to the theme
