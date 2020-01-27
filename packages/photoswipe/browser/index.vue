@@ -81,7 +81,6 @@ export default {
   },
 
   data: () => ({
-    pswp: null,
     thumbnailReadyAttr: 'data-thumbnail-ready',
     thumbnailClass: 'pswp-thumbnail',
   }),
@@ -93,7 +92,6 @@ export default {
 
   beforeDestroy() {
     this.removeThumbnailListeners();
-    this.pswp.destroy();
   },
 
   methods: {
