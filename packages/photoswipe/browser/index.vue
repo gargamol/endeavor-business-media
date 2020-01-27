@@ -87,7 +87,7 @@ export default {
 
   mounted() {
     this.addThumbnailListeners();
-    this.openOnHash();
+    this.openWhenHasPresent();
   },
 
   beforeDestroy() {
@@ -95,7 +95,7 @@ export default {
   },
 
   methods: {
-    openOnHash() {
+    openWhenHasPresent() {
       const { pid } = this.parseHashParams();
       if (pid != null) {
         const index = pid - 1;
