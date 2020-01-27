@@ -16,13 +16,6 @@ $ const { id, alias, name, pageNode } = data;
       <marko-web-gam-slots slots=adSlots />
     </marko-web-resolve-page>
   </@head>
-  <@above-container>
-    <marko-web-resolve-page|{ data: section }| node=pageNode>
-      $ const aliases = hierarchyAliases(section);
-      <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "wa", aliases }) />
-      <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "reskin", aliases }) />
-    </marko-web-resolve-page>
-  </@above-container>
   <@page>
     <marko-web-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
 
@@ -32,12 +25,17 @@ $ const { id, alias, name, pageNode } = data;
           <div class="row">
             <div class="col">
               <default-theme-website-section-breadcrumbs section=section />
-              <marko-web-website-section-name tag="h1" class="page-wrapper__title" obj=section />
+              <iframe
+                class="mt-block"
+                height="2090"
+                allowtransparency="true"
+                frameborder="0"
+                scrolling="no"
+                style="width:100%;border:none;"
+                src="https://cygnuscorporate.wufoo.com/embed/qxt99920fhljtm/def/embedKey=qxt99920fhljtm490212&amp;entsource=&amp;referrer=http%3Awuslashwuslashwww-dev.officer.comwuslashcareers&amp;header=hide"
+              />
             </div>
           </div>
-        </@section>
-        <@section>
-          <iframe id="wufooFormqxt99920fhljtm" class="wufoo-form-container" height="2090" allowtransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none" src="https://cygnuscorporate.wufoo.com/embed/qxt99920fhljtm/def/embedKey=qxt99920fhljtm490212&amp;entsource=&amp;referrer=http%3Awuslashwuslashwww-dev.officer.comwuslashcareers&amp;header=hide">&lt;a href="https://cygnuscorporate.wufoo.com/forms/qxt99920fhljtm/" title="html form"&gt;Fill out my Wufoo form!&lt;/a&gt;</iframe>
         </@section>
       </marko-web-page-wrapper>
     </marko-web-resolve-page>
