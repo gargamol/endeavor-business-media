@@ -59,3 +59,11 @@ $pswp__root-z-index: $theme-site-header-z-index + 1;
     text-decoration: underline;
   }
 }
+
+.submit-job {
+  @include media-breakpoint-up(lg) {
+    max-width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
