@@ -2,7 +2,7 @@ import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
 import queryFragment from "../../graphql/fragments/content-list";
 import GAM from "../../../config/gam";
 
-$ const { id, alias, name, pageNode, section } = data;
+$ const { id, alias, name, pageNode } = data;
 $ const title = "Blogs";
 
 <marko-web-website-section-page-layout id=id alias=alias name=name>
@@ -14,9 +14,6 @@ $ const title = "Blogs";
       $ const aliases = hierarchyAliases(section);
       $ const adSlots = {
           "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
-          "gpt-ad-rail1": GAM.getAdUnit({ name: "rail1", aliases }),
-          "gpt-ad-rail2": GAM.getAdUnit({ name: "rail2", aliases }),
-          "gpt-ad-ms": GAM.getAdUnit({ name: "ms", aliases }),
         }
        <marko-web-gam-slots slots=adSlots />
     </marko-web-resolve-page>
@@ -45,7 +42,7 @@ $ const title = "Blogs";
       <@section>
         <div class="row">
           <div class="col">
-            <h1 class="text-primary">Latest Blogs</h1>
+            <h2 class="section-title__primary">Latest Blogs</h2>
             <marko-web-query|{ nodes }|
               name="all-published-content"
               params={ contentTypes: ["Blog"], limit: 5, queryFragment }
@@ -55,11 +52,9 @@ $ const title = "Blogs";
           </div>
         </div>
 
-        <hr>
-
         <div class="row">
           <div class="col">
-            <h1 class="text-primary">IN THE DRIVER'S SEAT</h1>
+            <h2 class="section-title__primary">IN THE DRIVER'S SEAT</h2>
             <marko-web-query|{ nodes }|
               name="website-scheduled-content"
               params={
@@ -72,11 +67,9 @@ $ const title = "Blogs";
           </div>
         </div>
 
-        <hr>
-
         <div class="row">
           <div class="col">
-            <h1 class="text-primary">KOLMAN'S KOMMENTS</h1>
+            <h2 class="section-title__primary">KOLMAN'S KOMMENTS</h2>
             <marko-web-query|{ nodes }|
               name="website-scheduled-content",
               params={
@@ -89,11 +82,9 @@ $ const title = "Blogs";
           </div>
         </div>
 
-        <hr>
-
         <div class="row">
           <div class="col">
-            <h1 class="text-primary">GUEST BLOGS</h1>
+            <h2 class="section-title__primary">GUEST BLOGS</h2>
             <marko-web-query|{ nodes }|
               name="website-scheduled-content",
               params={
@@ -106,11 +97,9 @@ $ const title = "Blogs";
           </div>
         </div>
 
-        <hr>
-
         <div class="row">
           <div class="col">
-            <h1 class="text-primary">INDUSTRY INSIGHTS</h1>
+            <h2 class="section-title__primary">INDUSTRY INSIGHTS</h2>
             <marko-web-query|{ nodes }|
               name="website-scheduled-content"
               params={
@@ -123,11 +112,9 @@ $ const title = "Blogs";
           </div>
         </div>
 
-        <hr>
-
         <div class="row">
           <div class="col">
-            <h1 class="text-primary">LABOR TIME</h1>
+            <h2 class="section-title__primary">LABOR TIME</h2>
             <marko-web-query|{ nodes }|
               name="website-scheduled-content"
               params={
@@ -139,8 +126,6 @@ $ const title = "Blogs";
             </marko-web-query>
           </div>
         </div>
-
-        <hr>
       </@section>
     </marko-web-page-wrapper>
   </@page>
