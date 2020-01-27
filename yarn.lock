@@ -716,16 +716,7 @@
     globals "^11.1.0"
     lodash "^4.17.13"
 
-"@babel/types@^7.0.0", "@babel/types@^7.2.0", "@babel/types@^7.4.4", "@babel/types@^7.5.5", "@babel/types@^7.6.0":
-  version "7.6.1"
-  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.6.1.tgz#53abf3308add3ac2a2884d539151c57c4b3ac648"
-  integrity sha512-X7gdiuaCmA0uRjCmRtYJNAVCc/q+5xSgsfKJHqMN4iNLILX39677fJE1O40arPMh0TTtS9ItH67yre6c7k6t0g==
-  dependencies:
-    esutils "^2.0.2"
-    lodash "^4.17.13"
-    to-fast-properties "^2.0.0"
-
-"@babel/types@^7.7.4":
+"@babel/types@^7.0.0", "@babel/types@^7.2.0", "@babel/types@^7.4.4", "@babel/types@^7.5.5", "@babel/types@^7.6.0", "@babel/types@^7.7.4":
   version "7.7.4"
   resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.7.4.tgz#516570d539e44ddf308c07569c258ff94fde9193"
   integrity sha512-cz5Ji23KCi4T+YIE/BolWosrJuSmoZeN1EFnRtBwF+KKLi8GG/Z2c2hOJJeCXPk4mwk4QFvTmwIodJowXgttRA==
@@ -733,6 +724,15 @@
     esutils "^2.0.2"
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
+
+"@base-cms/cli-utils@^1.13.0":
+  version "1.13.0"
+  resolved "https://registry.yarnpkg.com/@base-cms/cli-utils/-/cli-utils-1.13.0.tgz#4d11ac591f4d34e9f477ec04ae7ee9bad011fb15"
+  integrity sha512-jTeVdmykLqH5VlZjYpQJ6l1O5QmWrDBzWLqAF8hr4raQsio5RK9B457t2zyaU6c7SBG24KveZabpykor6vkwxQ==
+  dependencies:
+    chalk "^2.4.2"
+    fancy-log "^1.3.3"
+    mkdirp "^0.5.1"
 
 "@base-cms/embedded-media@^1.6.3":
   version "1.6.3"
@@ -899,10 +899,10 @@
     graphql "^14.5.4"
     graphql-tag "^2.10.1"
 
-"@base-cms/marko-web@^1.12.0":
-  version "1.12.0"
-  resolved "https://registry.yarnpkg.com/@base-cms/marko-web/-/marko-web-1.12.0.tgz#0b655b3c63663123313d224adf973e72d0096215"
-  integrity sha512-pALbo0WqtFNZakIWnsU6BhO3av/YuSF1b5jNl94jFXrgSf4532wauR4BpBTbwkXNZuXvSHKaOj4eLgiFfeQ0XA==
+"@base-cms/marko-web@^1.13.2":
+  version "1.13.2"
+  resolved "https://registry.yarnpkg.com/@base-cms/marko-web/-/marko-web-1.13.2.tgz#0945f549fa6b71fd3ce5cb5530c9c06b285283b1"
+  integrity sha512-yhdy4dv9fO/5Ds8OsaQ8CLO7P70j/gvbFwL+YAmHdzzUOrUmxsKUrrSvEQUvb3JnzxsqLwGZVN07V+qAm68zuA==
   dependencies:
     "@base-cms/embedded-media" "^1.6.3"
     "@base-cms/express-apollo" "^1.9.0"
@@ -949,18 +949,19 @@
   resolved "https://registry.yarnpkg.com/@base-cms/utils/-/utils-1.9.0.tgz#fb208c11b155d019876806855e7a8bb1c56041fd"
   integrity sha512-mo3sRxE/KL1i1haP8MrZa32aZaKz4dOqtUb84DOHSlNrhyoPEJ0wq/+KKi6gLjYAY6j2ECxmDcgBztcYjamIEg==
 
-"@base-cms/web-cli@^1.12.0":
-  version "1.12.0"
-  resolved "https://registry.yarnpkg.com/@base-cms/web-cli/-/web-cli-1.12.0.tgz#c37fa3dbda86f8ffe58f9b141b709536513297e1"
-  integrity sha512-2EWeBQRMRkpUGP7tR6G+N97zFSyEkMzfCxstYe1GG1+1GVbfhO6ne+WB7y3HqAWgBke0R2455Cc/x1Iea5CnZQ==
+"@base-cms/web-cli@^1.13.2":
+  version "1.13.2"
+  resolved "https://registry.yarnpkg.com/@base-cms/web-cli/-/web-cli-1.13.2.tgz#cd8865a48d3d3c03b8a151203b1758a198f929a8"
+  integrity sha512-J4Dm9i4ymb228rL998qY7H1DRWqvy84LAB+oMnSuQparL04VC/odF8XuLeGlmxbP4/ncnCAuM8uaEjEyyAsFJA==
   dependencies:
     "@babel/core" "^7.6.0"
     "@babel/plugin-transform-runtime" "^7.6.0"
     "@babel/preset-env" "^7.6.0"
     "@babel/runtime" "^7.6.0"
     "@babel/runtime-corejs2" "^7.6.0"
+    "@base-cms/cli-utils" "^1.13.0"
     "@base-cms/express-apollo" "^1.9.0"
-    "@base-cms/marko-web" "^1.12.0"
+    "@base-cms/marko-web" "^1.13.2"
     autoprefixer "^9.6.1"
     babel-eslint "^10.0.3"
     babel-loader "^8.0.6"
@@ -976,6 +977,7 @@
     eslint-plugin-vue "^5.2.3"
     fancy-log "^1.3.3"
     figlet "^1.2.4"
+    file-loader "^5.0.2"
     graphql "^14.5.4"
     graphql-tag "^2.10.1"
     gulp "^4.0.2"
@@ -991,7 +993,6 @@
     handlebars "^4.6.0"
     ignore "^5.0.5"
     inquirer "^6.5.2"
-    mkdirp "^0.5.1"
     node-sass "^4.12.0"
     pump "^3.0.0"
     recursive-readdir "^2.2.2"
@@ -5045,6 +5046,14 @@ file-entry-cache@^5.0.1:
   dependencies:
     flat-cache "^2.0.1"
 
+file-loader@^5.0.2:
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/file-loader/-/file-loader-5.0.2.tgz#7f3d8b4ac85a5e8df61338cfec95d7405f971caa"
+  integrity sha512-QMiQ+WBkGLejKe81HU8SZ9PovsU/5uaLo0JdTCEXOYv7i7jfAjHZi1tcwp9tSASJPOmmHZtbdCervFmXMH/Dcg==
+  dependencies:
+    loader-utils "^1.2.3"
+    schema-utils "^2.5.0"
+
 fill-range@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/fill-range/-/fill-range-4.0.0.tgz#d544811d428f98eb06a63dc402d2403c328c38f7"
@@ -8545,6 +8554,11 @@ performance-now@^2.1.0:
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
   integrity sha1-Ywn04OX6kT7BxpMHrjZLSzd8nns=
 
+photoswipe@^4.1.3:
+  version "4.1.3"
+  resolved "https://registry.yarnpkg.com/photoswipe/-/photoswipe-4.1.3.tgz#59f49494eeb9ddab5888d03392926a19bc197550"
+  integrity sha512-89Z43IRUyw7ycTolo+AaiDn3W1EEIfox54hERmm9bI12IB9cvRfHSHez3XhAyU8XW2EAFrC+2sKMhh7SJwn0bA==
+
 picomatch@^2.0.5:
   version "2.0.7"
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.0.7.tgz#514169d8c7cd0bdbeecc8a2609e34a7163de69f6"
@@ -9879,6 +9893,14 @@ schema-utils@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-2.2.0.tgz#48a065ce219e0cacf4631473159037b2c1ae82da"
   integrity sha512-5EwsCNhfFTZvUreQhx/4vVQpJ/lnCAkgoIHLhSpp4ZirE+4hzFvdJi0FMub6hxbFVBJYSpeVVmon+2e7uEGRrA==
+  dependencies:
+    ajv "^6.10.2"
+    ajv-keywords "^3.4.1"
+
+schema-utils@^2.5.0:
+  version "2.6.4"
+  resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-2.6.4.tgz#a27efbf6e4e78689d91872ee3ccfa57d7bdd0f53"
+  integrity sha512-VNjcaUxVnEeun6B2fiiUDjXXBtD4ZSH7pdbfIu1pOFwgptDPLMo/z9jr4sUfsjFVPqDCEin/F7IYlq7/E6yDbQ==
   dependencies:
     ajv "^6.10.2"
     ajv-keywords "^3.4.1"
