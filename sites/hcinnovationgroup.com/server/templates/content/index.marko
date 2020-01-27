@@ -122,6 +122,13 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
               <if(type === "product")>
                 <website-inquiry-form content=content />
               </if>
+              <if(type === "podcast"  && null !== content.fileSrc)>
+                <audio controls>
+                  <source src=content.fileSrc type="audio/mpeg">
+                  <p>Your browser doesn't support HTML5 audio. Here is
+                    a <a href=content.fileSrc>link to the audio</a> instead.</p>
+                </audio>
+              </if>
               <if(type === "top100")>
                 <div class="page-contents__info">
                   <div class=`${blockName}__content-revenue-current`>${formatUsCurrency(content.revenueCurrent)}</div>
