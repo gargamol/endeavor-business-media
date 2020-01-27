@@ -39,7 +39,6 @@ $ const { id, alias, name, pageNode } = data;
               <if(section.description)>
                 <p class="page-wrapper__deck">${section.description}</p>
               </if>
-              <hr>
             </div>
           </div>
         </@section>
@@ -50,7 +49,11 @@ $ const { id, alias, name, pageNode } = data;
                 name="website-scheduled-content"
                 params={ sectionId: id, limit: 10, queryFragment }
               >
-                <website-content-list-flow nodes=nodes />
+                <website-content-list-flow
+                  nodes=nodes
+                  inner-justified=false
+                  flush-x=true
+                />
               </marko-web-query>
             </div>
             <div class="col-lg-4 page-rail">
@@ -63,7 +66,6 @@ $ const { id, alias, name, pageNode } = data;
                   Submit a Job
                 </marko-web-link>
               </p>
-              <hr>
               <marko-web-gam-display-ad id="gpt-ad-rail1" />
             </div>
           </div>
