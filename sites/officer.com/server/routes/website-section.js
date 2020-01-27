@@ -5,8 +5,8 @@ const contactUs = require('../templates/website-section/contact-us');
 const queryFragment = require('../graphql/fragments/website-section-page');
 const whitePapers = require('../templates/website-section/white-papers');
 const channel = require('../templates/website-section/channel');
-const careers = require('../templates/website-section/careers/careers');
-const careersSubmit = require('../templates/website-section/careers/careers-submit');
+const careers = require('../templates/website-section/careers');
+const careersSubmit = require('../templates/website-section/careers/submit');
 
 const channelAliases = [
   'tactical',
