@@ -4,7 +4,7 @@ import categories from "../../categories";
 import GAM from "../../../config/gam";
 
 $ const { id, alias, name, pageNode } = data;
-$ const title = "Transit Bids-RFP";
+$ const { site } = out.global;
 
 <marko-web-website-section-page-layout id=id alias=alias name=name>
   <@head>
@@ -16,7 +16,7 @@ $ const title = "Transit Bids-RFP";
       $ const adSlots = {
           "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
         }
-       <marko-web-gam-slots slots=adSlots />
+      <marko-web-gam-slots slots=adSlots />
     </marko-web-resolve-page>
   </@head>
   <@above-container>
@@ -27,8 +27,37 @@ $ const title = "Transit Bids-RFP";
     </marko-web-resolve-page>
   </@above-container>
   <@page>
+    <marko-web-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
+    <marko-web-resolve-page|{ data: section }| node=pageNode>
+      <marko-web-page-wrapper class="mb-block">
+        <@section>
+          <div class="row">
+            <div class="col">
+              <default-theme-website-section-breadcrumbs section=section display-self=false />
+              <marko-web-website-section-name tag="h1" class="page-wrapper__title" obj=section />
+              <if(section.description)>
+                <p class="page-wrapper__deck">${section.description}</p>
+              </if>
+            </div>
+          </div>
+        </@section>
+        <@section>
+          <div class="row">
+            <div class="col-lg-5">
+              <marko-web-page-image
+                obj=site.getAsObject("transitBids.headerImage")
+                width=400
+                fluid=true
+              />
+            </div>
+            <div class="col-lg-7">
 
-    <marko-web-page-wrapper class="mb-block">
+            </div>
+          </div>
+        </@section>
+      </marko-web-page-wrapper>
+    </marko-web-resolve-page>
+    <!-- <marko-web-page-wrapper class="mb-block">
         <@section>
           <div class="row row--center-between">
             <div>
@@ -70,7 +99,7 @@ $ const title = "Transit Bids-RFP";
             </div>
           </div>
         </@section>
-    </marko-web-page-wrapper>
+    </marko-web-page-wrapper> -->
   </@page>
   <@below-page>
     <marko-web-resolve-page|{ data: section }| node=pageNode>
