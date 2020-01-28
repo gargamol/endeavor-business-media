@@ -7,6 +7,7 @@ import RevealAd from '@base-cms/marko-web-reveal-ad/browser';
 import Common from '@endeavor-business-media/package-common/browser';
 import Inquiry from '@endeavor-business-media/package-inquiry/browser';
 import Leaders from '@endeavor-business-media/package-leaders/browser';
+import PhotoSwipe from '@endeavor-business-media/package-photoswipe/browser';
 
 DefaultTheme(Browser);
 GTM(Browser);
@@ -16,5 +17,6 @@ RevealAd(Browser);
 Common(Browser);
 Inquiry(Browser);
 Leaders(Browser);
+PhotoSwipe(Browser);
 
 export default Browser;

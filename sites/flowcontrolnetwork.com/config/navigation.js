@@ -16,6 +16,7 @@ module.exports = {
       { href: '/webinars', label: 'Webinars' },
       { href: '/events', label: 'Events' },
       { href: '/news-reports', label: 'News & Reports' },
+      { href: '/innovation-awards', label: 'Innovation Awards' },
     ],
   },
   tertiary: {
@@ -53,6 +54,7 @@ module.exports = {
         { href: '/webinars', label: 'Webinars' },
         { href: '/events', label: 'Events' },
         { href: '/news-reports', label: 'News & Reports' },
+        { href: '/innovation-awards', label: 'Innovation Awards' },
       ],
     },
     {

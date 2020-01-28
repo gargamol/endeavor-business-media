@@ -29,5 +29,8 @@
   },
   "<website-magazine-publications-block>": {
     "template": "./magazine-publications.marko"
+  },
+  "<website-submit-job-block>": {
+    "template": "./submit-job.marko"
   }
 }

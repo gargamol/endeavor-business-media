@@ -8,8 +8,16 @@ $ const displayImage = input.displayImage != null ? input.displayImage : true;
 $ const imagePosition = input.imagePosition != null ? input.imagePosition : "right";
 $ const withTeaser = input.withTeaser != null ? input.withTeaser : false;
 $ const innerJustified = input.innerJustified != null ? input.innerJustified : true;
+$ const flushX = input.flushX != null ? input.flushX : false;
+$ const flushy = input.flushy != null ? input.flushy : false;
 
-<marko-web-node-list inner-justified=innerJustified class=input.class body=input.body>
+<marko-web-node-list
+  inner-justified=innerJustified
+  class=input.class
+  body=input.body
+  flush-x=flushX
+  flush-y=flushy
+>
   <if(input.header)>
     <@header ...input.header />
   </if>

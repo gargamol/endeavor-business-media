@@ -53,6 +53,7 @@ module.exports = {
         { href: '/apps-we-love', label: 'Apps We Love' },
         { href: '/awards', label: 'Awards' },
         { href: '/cpe-training', label: 'CPE & Training' },
+        { href: '/magazine', label: 'Magazine' },
         { href: '/webinars', label: 'Webinars' },
         { href: '/sales-tax-compliance', label: 'Sales Tax & Compliance' },
         { href: '/a-year-in-the-life-of-payroll', label: 'Year in the Life: Payroll' },
