@@ -50,7 +50,7 @@ module.exports = {
   transitBids: {
     headerImage: {
       src: 'https://img.masstransitmag.com/files/base/cygnus/mass/image/2020/01/New_RFP.5e2f210df31bf.png',
-      alt: 'Promote RFPS, RFQs and Bids',
+      alt: 'Promote RFPs, RFQs and Bids',
     },
     contact: {
       name: 'Jesse Gonzalez',
