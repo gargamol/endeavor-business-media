@@ -51,7 +51,17 @@ $ const { site } = out.global;
               />
             </div>
             <div class="col-lg-7">
-
+              <div class="transit-bids">
+                <marko-web-link href=`/${alias}/submit` class="transit-bids__button">
+                  Submit a Transit BID-RFP Online
+                </marko-web-link>
+                $ const contact = site.getAsObject("transitBids.contact");
+                <if(contact.name && contact.email)>
+                  <p class="transit-bids__contact-info">
+                    Or contact ${contact.name} <a href=`mailto:${contact.email}`>${contact.email}</a>
+                  </p>
+                </if>
+              </div>
             </div>
           </div>
         </@section>
