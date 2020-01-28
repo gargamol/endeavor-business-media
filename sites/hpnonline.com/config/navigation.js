@@ -13,7 +13,6 @@ module.exports = {
   },
   secondary: {
     items: [
-      { href: 'https://sg.hpnonline.com', label: 'HPN Source Guide' },
       { href: '/continuing-education', label: 'Continuing Education' },
       { href: '/webinars', label: 'Webinars' },
       { href: '/whitepapers', label: 'Whitepapers' },
@@ -22,6 +21,7 @@ module.exports = {
       { href: '/hall-of-fame', label: 'Hall of Fame' },
       { href: '/page/advertise', label: 'Advertise' },
       { href: '/subscribe', label: 'Subscribe' },
+      { href: 'https://sg.hpnonline.com', label: 'HPN Source Guide' },
     ],
   },
   tertiary: {
