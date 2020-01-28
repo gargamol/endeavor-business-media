@@ -56,9 +56,5 @@ module.exports = {
       name: 'Jesse Gonzalez',
       email: 'jgonzalez@masstransitmag.com',
     },
-    wufoo: {
-      userName: 'cygnuscorporate',
-      formHash: 'q19zmy5w0qcojvg',
-    },
   },
 };
