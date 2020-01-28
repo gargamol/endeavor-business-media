@@ -45,7 +45,7 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionId: id, limit: 4, queryFragment }
+          params={ sectionId: id, limit: 4, skip: 5, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
             <@header>
@@ -185,7 +185,25 @@ $ const { id, alias, name, pageNode } = data;
         </marko-web-query>
       </div>
       <div class="col-lg-4 mb-block">
-        <common-directory-facets title="Content Categories" activeId=id facets=categories />
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "multimedia", limit: 4, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/multimedia">Multimedia</marko-web-link>
+            </@header>
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-8 mb-block">
+        <leaders-home-page />
+      </div>
+      <div class="col-lg-4 mb-block">
+        <marko-web-gam-display-ad id="gpt-ad-rail1" />
       </div>
     </div>
 
@@ -219,17 +237,16 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionAlias: "multimedia", limit: 4, queryFragment }
+          params={ sectionId: id, limit: 4, skip: 9, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
             <@header>
-              <marko-web-link href="/multimedia">Multimedia</marko-web-link>
+              <marko-web-link>More from Security Info Watch</marko-web-link>
             </@header>
           </website-content-list-flow>
         </marko-web-query>
       </div>
     </div>
-
   </@page>
   <@below-page>
     <marko-web-resolve-page|{ data: section }| node=pageNode>
@@ -239,7 +256,7 @@ $ const { id, alias, name, pageNode } = data;
         component-input={ aliases }
         fragment-name="content-list"
         query-name="website-scheduled-content"
-        query-params={ sectionId: id, limit: 14, skip: 5 }
+        query-params={ sectionId: id, limit: 14, skip: 13 }
         max-pages=0
         page-input={ for: "website-section", id }
       />
