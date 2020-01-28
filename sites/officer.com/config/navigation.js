@@ -26,7 +26,6 @@ module.exports = {
   },
   footer: {
     items: [
-      { href: '/page/about-us', label: 'About Us' },
       { href: '/contact-us', label: 'Contact Us' },
       { href: '/page/advertise', label: 'Advertise' },
       { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
@@ -55,7 +54,7 @@ module.exports = {
         { href: '/features/by-contributor', label: 'By Contributors' },
         { href: '/blogs/industry-insights', label: 'Industry Insights' },
         { href: '/magazine', label: 'Publications' },
-        { href: '/white-papers', label: 'Whitepapers' },
+        { href: '/whitepapers', label: 'Whitepapers' },
         { href: '/webcasts', label: 'Webcasts' },
         { href: '/careers', label: 'Careers' },
         { href: '/events', label: 'Events' },
@@ -68,7 +67,6 @@ module.exports = {
       items: [
         { href: '/subscribe', label: 'Subscribe' },
         { href: '/page/advertise', label: 'Advertise' },
-        { href: '/page/about-us', label: 'About Us' },
         { href: '/contact-us', label: 'Contact Us' },
         { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
         { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },

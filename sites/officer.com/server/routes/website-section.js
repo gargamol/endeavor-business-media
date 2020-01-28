@@ -5,6 +5,8 @@ const contactUs = require('../templates/website-section/contact-us');
 const queryFragment = require('../graphql/fragments/website-section-page');
 const whitePapers = require('../templates/website-section/white-papers');
 const channel = require('../templates/website-section/channel');
+const careers = require('../templates/website-section/careers');
+const careersSubmit = require('../templates/website-section/careers/submit');
 
 const channelAliases = [
   'tactical',
@@ -17,6 +19,14 @@ const channelAliases = [
 module.exports = (app) => {
   app.get('/:alias(contact-us)', withWebsiteSection({
     template: contactUs,
+    queryFragment,
+  }));
+  app.get('/:alias(careers)', withWebsiteSection({
+    template: careers,
+    queryFragment,
+  }));
+  app.get('/:alias(careers/submit)', withWebsiteSection({
+    template: careersSubmit,
     queryFragment,
   }));
   app.get('/:alias(directory)', withWebsiteSection({

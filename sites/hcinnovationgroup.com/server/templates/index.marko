@@ -41,23 +41,19 @@ $ const { id, alias, name, pageNode } = data;
     <div class="row">
 
       <div class="col-lg-4 mb-block">
-        <marko-web-query|{ nodes }|
-          name="website-optioned-content"
-          params={ sectionAlias: "summits", optionName: "Pinned", limit: 1, queryFragment: summitsQueryFragment }
-        >
-          $ const content = nodes[0];
+        <marko-web-query|{ node }| name="content" params={ id: 21069218, queryFragment: summitsQueryFragment }>
           <div class="node-list">
             <marko-web-node-list-header>
-              <marko-web-link href="/summits">Summits</marko-web-link>
+              <marko-web-link href="https://endeavor.swoogo.com/summit_series/Locations">Summits</marko-web-link>
             </marko-web-node-list-header>
             <marko-web-node
-              type=`${content.type}-content`
+              type=`${node.type}-content`
               image-position="top"
               card=true
             >
               <@body>
                 <@text>
-                  <marko-web-content-body tag=null obj=content />
+                  <marko-web-content-body tag=null obj=node />
                 </@text>
               </@body>
             </marko-web-node>

@@ -42,6 +42,9 @@ $leaders-primary-color-light: lighten($leaders-primary-color, 10%);
 @import "../../node_modules/@endeavor-business-media/package-inquiry/scss/index";
 @import "../../node_modules/@endeavor-business-media/package-leaders/scss/index";
 
+$pswp__root-z-index: $theme-site-header-z-index + 1;
+@import "../../node_modules/@endeavor-business-media/package-photoswipe/scss/main";
+
 .node {
   &__content-embed-code {
     @include theme-embed-responsive($theme-primary-media-video-aspect-ratio-x, $theme-primary-media-video-aspect-ratio-y);
