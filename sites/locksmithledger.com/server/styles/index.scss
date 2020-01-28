@@ -25,6 +25,7 @@ $theme-box-shadow-sm:   none;
 $theme-box-shadow-lg: none;
 $body-bg: #fff;
 
+@import "../../node_modules/@endeavor-business-media/package-common/scss/content-heading";
 @import "../../node_modules/@base-cms/marko-web-gam/scss/fixed-ad-bottom";
 @import "../../node_modules/@base-cms/marko-web-reveal-ad/scss/reveal-ad";
 @import "../../node_modules/@base-cms/marko-web-theme-default/skins/orion/skin";
@@ -33,6 +34,9 @@ $body-bg: #fff;
 @import "../../node_modules/@endeavor-business-media/package-common/scss/contact-us-form";
 @import "../../node_modules/@endeavor-business-media/package-common/scss/directory";
 @import "../../node_modules/@endeavor-business-media/package-inquiry/scss/index";
+
+$pswp__root-z-index: $theme-site-header-z-index + 1;
+@import "../../node_modules/@endeavor-business-media/package-photoswipe/scss/main";
 
 .node-list {
   &.sponsored {
