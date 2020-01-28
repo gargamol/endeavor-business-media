@@ -123,7 +123,7 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
                 <website-inquiry-form content=content />
               </if>
               <if(type === "podcast")>
-                <marko-web-content-audio-source block-name=blockName obj=content />
+                <marko-web-content-audio block-name=blockName obj=content />
               </if>
               <if(type === "top100")>
                 <div class="page-contents__info">
