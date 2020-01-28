@@ -117,6 +117,24 @@ $ const { id, alias, name, pageNode } = data;
     </div>
 
     <div class="row">
+      <div class="col">
+        <marko-web-query|{ nodes }|
+          name="all-published-content"
+          params={ contentTypes: ["Video"], limit: 4, queryFragment }
+        >
+          <marko-web-node-list inner-justified=true >
+            <@header>
+              <marko-web-link href="/videos">Videos</marko-web-link>
+            </@header>
+            <@nodes nodes=nodes>
+              <website-content-card-deck-flow nodes=nodes cols=4 display-ads=false with-teaser=false />
+            </@nodes>
+          </marko-web-node-list>
+        </marko-web-query>
+      </div>
+    </div>
+
+    <div class="row">
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
