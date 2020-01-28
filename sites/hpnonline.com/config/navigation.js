@@ -9,11 +9,11 @@ module.exports = {
       { href: '/evs-facility-services', label: 'EVS & Facility Services' },
       { href: '/healthcare-it', label: 'Healthcare IT' },
       { href: '/regulatory', label: 'Regulatory' },
-      { href: 'https://sg.hpnonline.com', label: 'HPN Source Guide' },
     ],
   },
   secondary: {
     items: [
+      { href: 'https://sg.hpnonline.com', label: 'HPN Source Guide' },
       { href: '/continuing-education', label: 'Continuing Education' },
       { href: '/webinars', label: 'Webinars' },
       { href: '/whitepapers', label: 'Whitepapers' },
