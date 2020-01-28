@@ -53,3 +53,25 @@ $pswp__root-z-index: $theme-site-header-z-index + 1;
     text-decoration: underline;
   }
 }
+
+.transit-bids {
+  &__button {
+    @extend .btn;
+    @extend .btn-primary;
+    margin-bottom: map-get($spacers, block);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+  }
+
+  &__contact-info {
+    font-size: 1.25rem;
+  }
+}
+
+.page-wrapper {
+  &__section {
+    &--bottom-border {
+      @include marko-web-node-list-border(border-bottom, $width: 2px);
+    }
+  }
+}
