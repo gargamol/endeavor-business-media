@@ -5,6 +5,10 @@ $dark: #212529;
 $info: #6c757d;
 $black: rgba(0, 0, 0, .84);
 
+$leaders-primary-color: $primary;
+$leaders-primary-color-light: lighten($leaders-primary-color, 10%);
+$leaders-accent-color: $primary;
+
 $theme-site-navbar-secondary-bg-color: #fcfcfc;
 $theme-site-navbar-primary-bg-color: $primary;
 
@@ -28,9 +32,6 @@ $theme-site-header-breakpoints: (
   small-text-primary: 1152px,
   small-text-secondary: 1105px
 );
-
-$leaders-primary-color: $primary;
-$leaders-primary-color-light: lighten($leaders-primary-color, 10%);
 
 @import "../../node_modules/@base-cms/marko-web-gam/scss/fixed-ad-bottom";
 @import "../../node_modules/@base-cms/marko-web-reveal-ad/scss/reveal-ad";
