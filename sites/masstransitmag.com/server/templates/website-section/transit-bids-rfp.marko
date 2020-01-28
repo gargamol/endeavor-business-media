@@ -64,12 +64,12 @@ $ const { site } = out.global;
             </div>
           </div>
         </@section>
-        <@section>
+        <@section class="infinite-scroll-target">
           <div class="row">
             <div class="col">
               <marko-web-query|{ nodes }|
                 name="website-optioned-content"
-                params={ sectionId: id, optionName: "Pinned", limit: 15, queryFragment }
+                params={ sectionId: id, optionName: "Pinned", limit: 250, queryFragment }
               >
                 <website-content-list-flow
                   nodes=nodes
@@ -85,18 +85,6 @@ $ const { site } = out.global;
       </marko-web-page-wrapper>
     </marko-web-resolve-page>
   </@page>
-  <@below-page>
-    <marko-web-resolve-page|{ data: section }| node=pageNode>
-      $ const aliases = hierarchyAliases(section);
-      <marko-web-load-more
-        component-name="content-load-more-flow"
-        fragment-name="content-list"
-        query-name="website-scheduled-content"
-        query-params={ sectionId: id, skip: 15 }
-        page-input={ for: "website-section", id }
-      />
-    </marko-web-resolve-page>
-  </@below-page>
   <@foot>
     <marko-web-resolve-page|{ data: section }| node=pageNode>
       $ const aliases = hierarchyAliases(section);
