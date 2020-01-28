@@ -47,4 +47,18 @@ module.exports = {
     logo: 'https://img.masstransitmag.com/files/base/cygnus/mass/image/static/logo/site_logo.png?h=60',
     bgColor: '#164f77',
   },
+  transitBids: {
+    headerImage: {
+      src: 'https://img.masstransitmag.com/files/base/cygnus/mass/image/2020/01/New_RFP.5e2f210df31bf.png',
+      alt: 'Promote RFPS, RFQs and Bids',
+    },
+    contact: {
+      name: 'Jesse Gonzalez',
+      email: 'jgonzalez@masstransitmag.com',
+    },
+    wufoo: {
+      userName: 'cygnuscorporate',
+      formHash: 'q19zmy5w0qcojvg',
+    },
+  },
 };
