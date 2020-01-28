@@ -49,3 +49,18 @@ $body-bg: #fff;
     text-decoration: underline;
   }
 }
+
+.transit-bids {
+  &__button {
+    @extend .btn;
+    @extend .btn-primary;
+    margin-bottom: map-get($spacers, block);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+  }
+
+  &__contact-info {
+    margin-bottom: 0;
+    font-size: 1.25rem;
+  }
+}
