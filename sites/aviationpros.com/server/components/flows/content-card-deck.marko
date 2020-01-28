@@ -18,9 +18,9 @@ $ const withTeaser = input.withTeaser != null ? input.withTeaser : true;
         config=nxConfig
       >
         <website-content-card-node
-          image-width=340
           node=nxNode
           with-teaser=withTeaser
+          image={ width: 340, usePlaceholder: false }
           attrs=containerAttrs
           link-attrs=linkAttrs
         />

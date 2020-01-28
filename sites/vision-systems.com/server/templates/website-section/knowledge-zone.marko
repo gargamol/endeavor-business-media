@@ -45,7 +45,7 @@ $ const { id, alias, name, pageNode } = data;
       </marko-web-page-wrapper>
       <marko-web-query|{ nodes }|
         name="website-optioned-content"
-        params={ sectionId: id, optionName: "Pinned", limit: 5, queryFragment }
+        params={ sectionId: id, optionName: "Pinned", limit: 5, requiresImage: true, queryFragment }
       >
         <website-content-hero-flow nodes=nodes />
       </marko-web-query>

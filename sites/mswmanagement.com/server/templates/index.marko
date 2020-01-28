@@ -31,13 +31,13 @@ $ const { id, alias, name, pageNode } = data;
 
     <marko-web-query|{ nodes }|
       name="website-optioned-content"
-      params={ sectionId: id, optionName: "Pinned", limit: 5, queryFragment }
+      params={ sectionId: id, optionName: "Pinned", limit: 5, requiresImage: true, queryFragment }
     >
       <website-content-hero-flow nodes=nodes />
     </marko-web-query>
 
     <div class="row">
-            <div class="col-lg-4 mb-block">
+      <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
           params={ sectionAlias: "collection", limit: 4, queryFragment }
