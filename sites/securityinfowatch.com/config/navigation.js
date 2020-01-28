@@ -72,6 +72,7 @@ module.exports = {
         { href: '/isc-west', label: 'ISC West' },
         { href: '/gsx', label: 'GSX' },
         { href: '/ces', label: 'CES' },
+        { href: '/21121461', label: 'Vanguard Awards' },
       ],
     },
     {
