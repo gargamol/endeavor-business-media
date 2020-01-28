@@ -60,7 +60,14 @@ $body-bg: #fff;
   }
 
   &__contact-info {
-    margin-bottom: 0;
     font-size: 1.25rem;
+  }
+}
+
+.page-wrapper {
+  &__section {
+    &--bottom-border {
+      @include marko-web-node-list-border(border-bottom, $width: 2px);
+    }
   }
 }
