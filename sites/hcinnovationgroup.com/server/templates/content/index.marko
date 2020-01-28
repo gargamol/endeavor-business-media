@@ -122,6 +122,9 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
               <if(type === "product")>
                 <website-inquiry-form content=content />
               </if>
+              <if(type === "podcast")>
+                <marko-web-content-audio block-name=blockName obj=content />
+              </if>
               <if(type === "top100")>
                 <div class="page-contents__info">
                   <div class=`${blockName}__content-revenue-current`>${formatUsCurrency(content.revenueCurrent)}</div>

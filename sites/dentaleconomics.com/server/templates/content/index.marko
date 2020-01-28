@@ -108,6 +108,9 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
               <if(type === "product")>
                 <website-inquiry-form content=content />
               </if>
+              <if(type === "podcast")>
+                <marko-web-content-audio block-name=blockName obj=content />
+              </if>
             </default-theme-page-contents>
             <aside class="col-lg-4 page-rail">
               <marko-web-gam-display-ad id="gpt-ad-rail1" />
