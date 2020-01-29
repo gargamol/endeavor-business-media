@@ -50,7 +50,8 @@ module.exports = {
     {
       label: 'Resources',
       items: [
-        { href: '/magazine', label: 'Magazines' },
+        { href: '/magazine/5447e151c99db54158d9e7e1', label: 'Security Business Magazine' },
+        { href: '/magazine/5447e204c99db54158d9e809', label: 'Security Technology Executive Magazine' },
         { href: 'https://forums.securityinfowatch.com', label: 'Forums', target: '_blank' },
         { href: '/directory', label: 'Buyer\'s Guide' },
         { href: '/government', label: 'Government' },
