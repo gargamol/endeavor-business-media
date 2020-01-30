@@ -9,7 +9,6 @@ module.exports = {
       { href: '/evs-facility-services', label: 'EVS & Facility Services' },
       { href: '/healthcare-it', label: 'Healthcare IT' },
       { href: '/regulatory', label: 'Regulatory' },
-      { href: 'https://sg.hpnonline.com', label: 'HPN Source Guide' },
     ],
   },
   secondary: {
@@ -22,6 +21,7 @@ module.exports = {
       { href: '/hall-of-fame', label: 'Hall of Fame' },
       { href: '/page/advertise', label: 'Advertise' },
       { href: '/subscribe', label: 'Subscribe' },
+      { href: 'https://sg.hpnonline.com', label: 'HPN Source Guide' },
     ],
   },
   tertiary: {
