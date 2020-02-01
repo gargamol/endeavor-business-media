@@ -16,6 +16,7 @@ $ const alt = `${publication.name} ${issue.name}`;
     src=coverImage.src
     alt=(coverImage.alt || alt)
     fluid=true
+    use-placeholder=false
     ar="3:4"
     width=defaultValue(input.imageWidth, 400)
     link={ href: issue.canonicalPath, title: alt }
