@@ -43,6 +43,10 @@ module.exports = (app) => {
     template: continuingEducation,
     queryFragment,
   }));
+  app.get('/:alias(continuing-education/*)', withWebsiteSection({
+    template: continuingEducation,
+    queryFragment,
+  }));
   app.get('/:alias([a-z0-9-/]+)', withWebsiteSection({
     template: section,
     queryFragment,
