@@ -65,7 +65,9 @@ $ const { id, type, pageNode } = data;
               </else>
               <default-theme-content-contact-details obj=content />
               <marko-web-content-body block-name=blockName obj=content />
-              <website-inquiry-form content=content />
+              <if(content.enableRmi)>
+                <website-inquiry-form content=content />
+              </if>
             </default-theme-page-contents>
             <aside class="col-lg-4 page-rail">
               <marko-web-gam-display-ad id="gpt-ad-rail1" />
