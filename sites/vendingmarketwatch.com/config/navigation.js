@@ -19,6 +19,7 @@ module.exports = {
       { href: '/subscribe', label: 'Subscribe' },
       { href: '/page/advertise', label: 'Advertise' },
       { href: '/video-showcase', label: 'Video Showcase' },
+      { href: '/365-retail-markets', label: '365 Retail Markets' },
     ],
   },
   tertiary: {
@@ -55,6 +56,7 @@ module.exports = {
         { href: '/magazine', label: 'Magazine' },
         { href: '/directory', label: 'Product Guide' },
         { href: '/video-showcase', label: 'Video Showcase' },
+        { href: '/365-retail-markets', label: '365 Retail Markets' },
       ],
     },
     {
