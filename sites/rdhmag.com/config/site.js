@@ -36,7 +36,7 @@ module.exports = {
       bgColor: '#8956a7',
       logo: 'https://img.rdhmag.com/files/base/pennwell/rdh/logo.png?h=60',
     },
-    to: 'zacharyk@pennwell.com',
+    to: 'dental@endeavorb2b.com',
   },
   inquiry: {
     enabled: true,

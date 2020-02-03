@@ -36,7 +36,7 @@ module.exports = {
       bgColor: '#0f4069',
       logo: 'https://img.dentistryiq.com/files/base/pennwell/diq/logo.png?h=60',
     },
-    to: 'zkulsrud@endeavorb2b.com',
+    to: 'dental@endeavorb2b.com',
   },
   inquiry: {
     enabled: true,

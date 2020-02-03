@@ -36,7 +36,7 @@ module.exports = {
       bgColor: '#000',
       logo: 'https://img.perioimplantadvisory.com/files/base/pennwell/pia/logo.png?h=60',
     },
-    to: 'zacharyk@pennwell.com',
+    to: 'dental@endeavorb2b.com',
   },
   inquiry: {
     enabled: true,
