@@ -36,7 +36,7 @@ module.exports = {
       bgColor: '#285923',
       logo: 'https://img.dentaleconomics.com/files/base/pennwell/de/logo.png?h=60',
     },
-    to: 'zacharyk@pennwell.com',
+    to: 'dental@endeavorb2b.com',
   },
   inquiry: {
     enabled: true,
