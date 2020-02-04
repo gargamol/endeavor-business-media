@@ -11,6 +11,7 @@ fragment ContentPageFragment on Content {
     id
     name
     canonicalPath
+    enableRmi
   }
   primarySection {
     id
@@ -90,6 +91,9 @@ fragment ContentPageFragment on Content {
   }
   ... on Media {
     fileSrc
+  }
+  ... on Inquirable {
+    enableRmi
   }
   ... on Authorable {
     authors {

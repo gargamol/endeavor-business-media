@@ -105,7 +105,7 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
                   target="_blank"
                 />
               </if>
-              <if(type === "product")>
+              <if(type === "product" && get(content, "company.enableRmi"))>
                 <website-inquiry-form content=content />
               </if>
               <if(type === "podcast")>
