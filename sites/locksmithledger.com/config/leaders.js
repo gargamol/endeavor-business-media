@@ -3,6 +3,6 @@ module.exports = {
   alias: 'leaders/2020',
   calloutValue: 'Leading Companies',
   header: {
-    imgSrc: 'https://img.locksmithledger.com/files/base/cygnus/ll/image/static/ll-leaders-logo.png?h=90',
+    imgSrc: 'https://img.locksmithledger.com/files/base/cygnus/ll/image/static/ll-leaders.png?h=90',
   },
 };
