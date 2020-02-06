@@ -2,7 +2,11 @@ $primary: #285923 !default;
 $secondary: #495057; // equivalent to default gray-700
 $light: #e9ecef !default; // equivalent to default gray-200
 $dark: #212529 !default; // equivalent to default gray-900
-$info: #6c757d !default; // equivalent to default gray-600
+$info: #6c757d;
+
+$leaders-primary-color: #000;
+$leaders-primary-color-light: lighten($leaders-primary-color, 10%);
+$leaders-accent-color: $primary;
 
 $theme-site-navbar-primary-bg-color: #5d8259;
 $theme-site-navbar-secondary-bg-color: #285923;
@@ -26,6 +30,7 @@ $theme-site-header-breakpoints: (
 @import "../../node_modules/@endeavor-business-media/package-common/scss/contact-us-form";
 @import "../../node_modules/@endeavor-business-media/package-common/scss/directory";
 @import "../../node_modules/@endeavor-business-media/package-inquiry/scss/index";
+@import "../../node_modules/@endeavor-business-media/package-leaders/scss/index";
 
 $pswp__root-z-index: $theme-site-header-z-index + 1;
 @import "../../node_modules/@endeavor-business-media/package-photoswipe/scss/main";
