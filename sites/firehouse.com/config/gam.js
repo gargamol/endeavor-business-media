@@ -75,7 +75,7 @@ config
     { name: 'load-more', templateName: 'LM', path: 'safety-health/load-more' },
     { name: 'reskin', path: 'safety-health/reskin' },
   ])
-  .setAliasAdUnits('operations-training', [
+  .setAliasAdUnits('ops-training', [
     { name: 'lb1', templateName: 'LB1', path: 'operations-training/lb1' },
     { name: 'lb2', templateName: 'LB2', path: 'operations-training/lb2' },
     { name: 'rail1', templateName: 'RAIL1', path: 'operations-training/rail1' },
