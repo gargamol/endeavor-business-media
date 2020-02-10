@@ -76,12 +76,12 @@ config
     { name: 'reskin', path: 'safety-health/reskin' },
   ])
   .setAliasAdUnits('operations-training', [
-    { name: 'lb1', templateName: 'LB1', path: 'operations-training/lb1' },
-    { name: 'lb2', templateName: 'LB2', path: 'operations-training/lb2' },
-    { name: 'rail1', templateName: 'RAIL1', path: 'operations-training/rail1' },
-    { name: 'rail2', templateName: 'RAIL2', path: 'operations-training/rail2' },
-    { name: 'load-more', templateName: 'LM', path: 'operations-training/load-more' },
-    { name: 'reskin', path: 'operations-training/reskin' },
+    { name: 'lb1', templateName: 'LB1', path: 'ops-training/lb1' },
+    { name: 'lb2', templateName: 'LB2', path: 'ops-training/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'ops-training/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'ops-training/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'ops-training/load-more' },
+    { name: 'reskin', path: 'ops-training/reskin' },
   ])
   .setAliasAdUnits('careers-education', [
     { name: 'lb1', templateName: 'LB1', path: 'careers-education/lb1' },
