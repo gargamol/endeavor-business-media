@@ -14,7 +14,7 @@ module.exports = {
       { href: '/subscribe', label: 'Subscribe' },
       { href: '/magazine', label: 'Magazine' },
       { href: '/videos', label: 'Videos' },
-      { href: '/page/advertise', label: 'Advertise' },
+      { href: 'https://energy.endeavorb2b.com/utility-products', label: 'Advertise', target: '_blank' },
       { href: '/page/about-us', label: 'About Us' },
       { href: '/events', label: 'Events' },
     ],
@@ -58,7 +58,7 @@ module.exports = {
       label: 'User Tools',
       items: [
         { href: '/subscribe', label: 'Subscribe' },
-        { href: '/page/advertise', label: 'Advertise' },
+        { href: 'https://energy.endeavorb2b.com/utility-products', label: 'Advertise', target: '_blank' },
         { href: '/page/about-us', label: 'About Us' },
         { href: '/contact-us', label: 'Contact Us' },
         { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
