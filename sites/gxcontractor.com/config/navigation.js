@@ -18,7 +18,7 @@ module.exports = {
     items: [
       { href: '/subscribe', label: 'Subscribe' },
       { href: '/magazine', label: 'Magazine ' },
-      { href: '/page/advertise', label: 'Advertise' },
+      { href: 'https://buildings.endeavorb2b.com/grading-excavation-contractor', label: 'Advertise', target: '_blank' },
     ],
   },
   tertiary: {
@@ -30,7 +30,7 @@ module.exports = {
     items: [
       { href: '/page/about-us', label: 'About Us' },
       { href: '/contact-us', label: 'Contact Us' },
-      { href: '/page/advertise', label: 'Advertise' },
+      { href: 'https://buildings.endeavorb2b.com/grading-excavation-contractor', label: 'Advertise', target: '_blank' },
       { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
       { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
     ],
@@ -55,7 +55,7 @@ module.exports = {
     {
       label: 'Resources',
       items: [
-        { href: '/page/advertise', label: 'Advertise' },
+        { href: 'https://buildings.endeavorb2b.com/grading-excavation-contractor', label: 'Advertise', target: '_blank' },
         { href: 'https://www.foresteruniversity.com/ProductSubCats.aspx?SubCatID=47', label: 'Books', target: '_blank' },
         { href: 'https://www.foresteruniversity.com', label: 'Training', target: '_blank' },
         { href: '/magazine', label: 'Magazine' },
@@ -64,7 +64,7 @@ module.exports = {
     {
       label: 'User Tools',
       items: [
-        { href: '/page/advertise', label: 'Advertise' },
+        { href: 'https://buildings.endeavorb2b.com/grading-excavation-contractor', label: 'Advertise', target: '_blank' },
         { href: '/page/about-us', label: 'About Us' },
         { href: '/contact-us', label: 'Contact Us' },
         { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
