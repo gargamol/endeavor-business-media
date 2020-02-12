@@ -15,7 +15,7 @@ module.exports = {
       { href: '/magazine', label: 'Magazine' },
       { href: '/webinars', label: 'Webinars' },
       { href: '/events', label: 'Events' },
-      { href: '/breakthrough-products-awards', label: 'Breakthrough Products Awards' },
+      { href: '/breakthrough-products', label: 'Breakthrough Products Awards' },
     ],
   },
   tertiary: {
