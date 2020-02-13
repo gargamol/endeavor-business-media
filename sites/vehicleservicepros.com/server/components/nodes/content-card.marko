@@ -6,6 +6,8 @@ $ const primarySection = getAsObject(content, "primarySection");
 $ const displayImage = input.displayImage != null ? input.displayImage : true;
 $ const withTeaser = input.withTeaser != null ? input.withTeaser : true;
 $ const fullHeight = input.fullHeight != null ? input.fullHeight : true;
+$ const flushX = input.flushX != null ? input.flushX : false;
+$ const flushY = input.flushY != null ? input.flushY : false;
 $ const hasImage = Boolean(primaryImage.src);
 $ const modifiers = [];
 $ if (!hasImage) modifiers.push("zoomed");
@@ -17,6 +19,8 @@ $ const { linkAttrs } = input;
   image-position="top"
   card=true
   full-height=fullHeight
+  flush-x=flushX
+  flush-y=flushY
   attrs=input.attrs
   modifiers=modifiers
 >
