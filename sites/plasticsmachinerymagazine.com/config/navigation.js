@@ -9,7 +9,7 @@ module.exports = {
       { href: '/extrusion', label: 'Extrusion' },
       { href: '/recycling', label: 'Recycling' },
       { href: '/molds-tooling', label: 'Molds & Tooling' },
-      { href: '/rotomolding', label: 'Rotomolding' },
+      { href: '/feature', label: 'Features' },
     ],
   },
   secondary: {
@@ -44,7 +44,7 @@ module.exports = {
         { href: '/extrusion', label: 'Extrusion' },
         { href: '/recycling', label: 'Recycling' },
         { href: '/molds-tooling', label: 'Molds & Tooling' },
-        { href: '/rotomolding', label: 'Rotomolding' },
+        { href: '/feature', label: 'Features' },
       ],
     },
     {
