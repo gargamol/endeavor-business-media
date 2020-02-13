@@ -19,6 +19,7 @@ const channelAliases = [
   'molds-tooling',
   'rotomolding',
   'feature',
+  'product-innovations',
 ];
 
 module.exports = (app) => {
