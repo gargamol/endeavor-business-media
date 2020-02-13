@@ -17,6 +17,7 @@ module.exports = {
       { href: '/magazine', label: 'In Print' },
       { href: '/page/advertise', label: 'Advertise' },
       { href: '/contact-us', label: 'Contact Us' },
+      { href: '/product-innovations', label: 'Product Innovations' },
     ],
   },
   tertiary: {
@@ -53,6 +54,7 @@ module.exports = {
         { href: '/magazine', label: 'Digital Edition' },
         { href: '/page/advertise', label: 'Advertise' },
         { href: '/contact-us', label: 'Contact Us' },
+        { href: '/product-innovations', label: 'Product Innovations' },
       ],
     },
     {
