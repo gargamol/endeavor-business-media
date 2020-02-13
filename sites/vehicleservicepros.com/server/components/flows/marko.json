@@ -58,6 +58,7 @@
       "@name": "string",
       "@aliases": "array"
     },
+    "<node>": {},
     "@nodes": "array",
     "@cols": {
       "type": "number",

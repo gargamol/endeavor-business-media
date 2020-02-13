@@ -202,11 +202,11 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionAlias: "industry-news", limit: 4, queryFragment }
+          params={ sectionAlias: "blogs", limit: 4, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
             <@header>
-              <marko-web-link href="/industry-news">Industry News</marko-web-link>
+              <marko-web-link href="/blogs">Blogs</marko-web-link>
             </@header>
           </website-content-list-flow>
         </marko-web-query>

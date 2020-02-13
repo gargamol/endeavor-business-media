@@ -34,7 +34,9 @@
     "@image": "object",
     "@attrs": "object",
     "@link-attrs": "object",
-    "@full-height": "boolean"
+    "@full-height": "boolean",
+    "@flush-x": "boolean",
+    "@flush-y": "boolean"
   },
   "<website-magazine-latest-issue-node>": {
     "template": "./magazine-latest-issue.marko",

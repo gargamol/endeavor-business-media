@@ -53,6 +53,19 @@ $pswp__root-z-index: $theme-site-header-z-index + 1;
   }
 }
 
+// @todo this should move to the common theme
+.page-wrapper {
+  &__section-title {
+    margin-bottom: .25rem;
+    font-family: $theme-font-family-sans-serif;
+    font-size: 22px;
+    font-weight: $font-weight-bold;
+    line-height: 1.2;
+    color: $primary;
+    text-transform: uppercase;
+  }
+}
+
 // @todo this should be removed once added to the theme
 .page-contents {
   &__content-body a {

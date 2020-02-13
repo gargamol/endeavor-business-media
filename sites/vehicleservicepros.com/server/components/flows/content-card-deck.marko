@@ -23,6 +23,7 @@ $ const withTeaser = input.withTeaser != null ? input.withTeaser : true;
           image={ width: 340, usePlaceholder: false }
           attrs=containerAttrs
           link-attrs=linkAttrs
+          ...input.node
         />
       </marko-web-native-x-render>
     </@slot>
