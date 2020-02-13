@@ -43,9 +43,6 @@ $ const { id, alias, name, pageNode } = data;
           <@section|{ blockName }|>
             <div class="row mb-block">
               <div class="col">
-                <marko-web-element tag="h2" block-name=blockName name="section-title">
-                  Latest Blogs
-                </marko-web-element>
                 <marko-web-query|{ nodes }|
                   name="all-published-content"
                   params={ contentTypes: ["Blog"], limit: 5, queryFragment }
@@ -60,7 +57,7 @@ $ const { id, alias, name, pageNode } = data;
             <div class="row mb-block">
               <div class="col">
                 <marko-web-element tag="h2" block-name=blockName name="section-title">
-                  In The Driver's Seat
+                  <marko-web-link href="/blogs/drivers-seat">In The Driver's Seat</marko-web-link>
                 </marko-web-element>
                 <marko-web-query|{ nodes }|
                   name="website-scheduled-content"
@@ -76,7 +73,7 @@ $ const { id, alias, name, pageNode } = data;
             <div class="row mb-block">
               <div class="col">
                 <marko-web-element tag="h2" block-name=blockName name="section-title">
-                  Kolman's Komments
+                  <marko-web-link href="/blogs/kolmans-komments">Kolman's Komments</marko-web-link>
                 </marko-web-element>
                 <marko-web-query|{ nodes }|
                   name="website-scheduled-content"
@@ -92,7 +89,7 @@ $ const { id, alias, name, pageNode } = data;
             <div class="row mb-block">
               <div class="col">
                 <marko-web-element tag="h2" block-name=blockName name="section-title">
-                  Guest Blogs
+                  <marko-web-link href="/blogs/guest-blogs">Guest Blogs</marko-web-link>
                 </marko-web-element>
                 <marko-web-query|{ nodes }|
                   name="website-scheduled-content"
@@ -108,7 +105,7 @@ $ const { id, alias, name, pageNode } = data;
             <div class="row mb-block">
               <div class="col">
                 <marko-web-element tag="h2" block-name=blockName name="section-title">
-                  Industry Insights
+                  <marko-web-link href="/blogs/industry-insights">Industry Insights</marko-web-link>
                 </marko-web-element>
                 <marko-web-query|{ nodes }|
                   name="website-scheduled-content"
@@ -124,7 +121,7 @@ $ const { id, alias, name, pageNode } = data;
             <div class="row mb-block">
               <div class="col">
                 <marko-web-element tag="h2" block-name=blockName name="section-title">
-                  Labor Time
+                  <marko-web-link href="/shop-operations/employees-hiring">Labor Time</marko-web-link>
                 </marko-web-element>
                 <marko-web-query|{ nodes }|
                   name="website-scheduled-content"
