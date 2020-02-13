@@ -18,6 +18,7 @@ const channelAliases = [
   'recycling',
   'molds-tooling',
   'rotomolding',
+  'feature',
 ];
 
 module.exports = (app) => {
