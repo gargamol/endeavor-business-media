@@ -58,49 +58,7 @@ $ const { id, alias, name, pageNode } = data;
       </div>
 
       <div class="col-lg-4 mb-block">
-          <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
-          params={ sectionAlias: "blow-molding", limit: 4, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link href="/blow-molding">Blow Molding</marko-web-link>
-            </@header>
-            <@native-x index=3 name="default" aliases=["blow-molding"] />
-          </website-content-list-flow>
-        </marko-web-query>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
-          params={ sectionAlias: "thermoforming", limit: 4, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link href="/thermoforming">Thermoforming</marko-web-link>
-            </@header>
-            <@native-x index=3 name="default" aliases=["thermoforming"] />
-          </website-content-list-flow>
-        </marko-web-query>
-      </div>
-      <div class="col-lg-4 mb-block">
-          <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
-          params={ sectionAlias: "compounding", limit: 4, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link href="/compounding">Compounding</marko-web-link>
-            </@header>
-            <@native-x index=3 name="default" aliases=["compounding"] />
-          </website-content-list-flow>
-        </marko-web-query>
-      </div>
-      <div class="col-lg-4 mb-block">
-          <marko-web-query|{ nodes }|
           name="website-scheduled-content"
           params={ sectionAlias: "injection-molding", limit: 4, queryFragment }
         >
@@ -115,9 +73,8 @@ $ const { id, alias, name, pageNode } = data;
     </div>
 
     <div class="row">
-
       <div class="col-lg-4 mb-block">
-          <marko-web-query|{ nodes }|
+        <marko-web-query|{ nodes }|
           name="website-scheduled-content"
           params={ sectionAlias: "extrusion", limit: 4, queryFragment }
         >
@@ -126,6 +83,49 @@ $ const { id, alias, name, pageNode } = data;
               <marko-web-link href="/extrusion">Extrusion</marko-web-link>
             </@header>
             <@native-x index=3 name="default" aliases=["extrusion"] />
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+      <div class="col-lg-4 mb-block">
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "molds-tooling", limit: 4, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/molds-tooling">Molds & Tooling</marko-web-link>
+            </@header>
+            <@native-x index=3 name="default" aliases=["molds-tooling"] />
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+      <div class="col-lg-4 mb-block">
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "blow-molding", limit: 4, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/blow-molding">Blow Molding</marko-web-link>
+            </@header>
+            <@native-x index=3 name="default" aliases=["blow-molding"] />
+          </website-content-list-flow>
+        </marko-web-query>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-lg-4 mb-block">
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionAlias: "thermoforming", limit: 4, queryFragment }
+        >
+          <website-content-list-flow nodes=nodes>
+            <@header>
+              <marko-web-link href="/thermoforming">Thermoforming</marko-web-link>
+            </@header>
+            <@native-x index=3 name="default" aliases=["thermoforming"] />
           </website-content-list-flow>
         </marko-web-query>
       </div>
@@ -151,15 +151,15 @@ $ const { id, alias, name, pageNode } = data;
 
     <div class="row">
       <div class="col-lg-4 mb-block">
-          <marko-web-query|{ nodes }|
+        <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionAlias: "molds-tooling", limit: 4, queryFragment }
+          params={ sectionAlias: "compounding", limit: 4, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
             <@header>
-              <marko-web-link href="/molds-tooling">Molds & Tooling</marko-web-link>
+              <marko-web-link href="/compounding">Compounding</marko-web-link>
             </@header>
-            <@native-x index=3 name="default" aliases=["molds-tooling"] />
+            <@native-x index=3 name="default" aliases=["compounding"] />
           </website-content-list-flow>
         </marko-web-query>
       </div>
@@ -167,13 +167,13 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-4 mb-block">
           <marko-web-query|{ nodes }|
           name="website-scheduled-content"
-          params={ sectionAlias: "rotomolding", limit: 4, queryFragment }
+          params={ sectionAlias: "feature", limit: 4, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
             <@header>
-              <marko-web-link href="/rotomolding">Rotomolding</marko-web-link>
+              <marko-web-link href="/feature">Features</marko-web-link>
             </@header>
-            <@native-x index=3 name="default" aliases=["rotomolding"] />
+            <@native-x index=3 name="default" aliases=["feature"] />
           </website-content-list-flow>
         </marko-web-query>
       </div>
