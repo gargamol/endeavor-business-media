@@ -14,7 +14,7 @@ module.exports = {
   },
   secondary: {
     items: [
-      { href: '/magazine', label: 'In Print' },
+      { href: '/magazine', label: 'Digital Edition' },
       { href: '/page/advertise', label: 'Advertise' },
       { href: '/contact-us', label: 'Contact Us' },
       { href: '/product-innovations', label: 'Product Innovations' },
