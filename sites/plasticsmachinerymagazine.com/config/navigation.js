@@ -9,7 +9,7 @@ module.exports = {
       { href: '/extrusion', label: 'Extrusion' },
       { href: '/recycling', label: 'Recycling' },
       { href: '/molds-tooling', label: 'Molds & Tooling' },
-      { href: '/rotomolding', label: 'Rotomolding' },
+      { href: '/feature', label: 'Features' },
     ],
   },
   secondary: {
@@ -17,6 +17,7 @@ module.exports = {
       { href: '/magazine', label: 'In Print' },
       { href: '/page/advertise', label: 'Advertise' },
       { href: '/contact-us', label: 'Contact Us' },
+      { href: '/product-innovations', label: 'Product Innovations' },
     ],
   },
   tertiary: {
@@ -44,15 +45,16 @@ module.exports = {
         { href: '/extrusion', label: 'Extrusion' },
         { href: '/recycling', label: 'Recycling' },
         { href: '/molds-tooling', label: 'Molds & Tooling' },
-        { href: '/rotomolding', label: 'Rotomolding' },
+        { href: '/feature', label: 'Features' },
       ],
     },
     {
       label: 'Resources',
       items: [
-        { href: '/magazine', label: 'In Print' },
+        { href: '/magazine', label: 'Digital Edition' },
         { href: '/page/advertise', label: 'Advertise' },
         { href: '/contact-us', label: 'Contact Us' },
+        { href: '/product-innovations', label: 'Product Innovations' },
       ],
     },
     {
