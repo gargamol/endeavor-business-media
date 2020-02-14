@@ -14,6 +14,7 @@ $ const { id, alias, name, pageNode } = data;
       $ const aliases = hierarchyAliases(section);
       $ const adSlots = {
           "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
+          "gpt-ad-rail1": GAM.getAdUnit({ name: "rail1", aliases }),
           "gpt-ad-rail2": GAM.getAdUnit({ name: "rail2", aliases }),
         }
        <marko-web-gam-slots slots=adSlots />
@@ -67,6 +68,9 @@ $ const { id, alias, name, pageNode } = data;
           </website-content-list-flow>
         </marko-web-query>
       </div>
+    </div>
+
+    <div class="row">
       <div class="col-lg-4 mb-block">
           <marko-web-query|{ nodes }|
           name="website-scheduled-content"
@@ -106,7 +110,9 @@ $ const { id, alias, name, pageNode } = data;
           </website-content-list-flow>
         </marko-web-query>
       </div>
+    </div>
 
+    <div class="row">
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
@@ -120,7 +126,6 @@ $ const { id, alias, name, pageNode } = data;
           </website-content-list-flow>
         </marko-web-query>
       </div>
-
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
@@ -134,7 +139,6 @@ $ const { id, alias, name, pageNode } = data;
           </website-content-list-flow>
         </marko-web-query>
       </div>
-
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
           name="website-scheduled-content"
@@ -148,7 +152,15 @@ $ const { id, alias, name, pageNode } = data;
           </website-content-list-flow>
         </marko-web-query>
       </div>
+    </div>
 
+    <div class="row">
+      <div class="col-lg-8 mb-block">
+        <leaders-home-page />
+      </div>
+      <div class="col-lg-4 mb-block">
+        <marko-web-gam-display-ad id="gpt-ad-rail1" />
+      </div>
     </div>
   </@page>
   <@below-page>
