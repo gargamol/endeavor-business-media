@@ -59,7 +59,6 @@ module.exports = {
         { href: '/retail', label: 'Retail' },
         { href: '/education', label: 'Education' },
         { href: '/healthcare', label: 'Healthcare' },
-        { href: '/security-solutions-corner', label: 'Security Solutions Corner' },
         { href: '/whitepapers', label: 'Whitepapers' },
         { href: '/webinars', label: 'Webinars' },
       ],
