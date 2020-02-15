@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Leadership in Visions and and Imaging',
+  title: 'Leadership in Vision and Imaging',
   alias: 'leaders/2020',
   calloutValue: 'Leading Companies',
   header: {
