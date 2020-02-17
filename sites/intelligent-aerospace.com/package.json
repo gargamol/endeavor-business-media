@@ -1,6 +1,6 @@
 {
   "name": "@endeavor-business-media/intelligent-aerospace.com",
-  "version": "1.8.2",
+  "version": "1.8.6",
   "author": "Brandon Krigbaum <brandonbk@gmail.com>",
   "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/intelligent-aerospace.com",
   "license": "MIT",
@@ -27,10 +27,10 @@
     "@base-cms/object-path": "^1.9.0",
     "@base-cms/utils": "^1.9.0",
     "@base-cms/web-cli": "^1.20.4",
-    "@endeavor-business-media/package-common": "^1.8.2",
-    "@endeavor-business-media/package-inquiry": "^1.8.2",
+    "@endeavor-business-media/package-common": "^1.8.6",
+    "@endeavor-business-media/package-inquiry": "^1.8.6",
     "@endeavor-business-media/package-leaders": "^1.8.2",
-    "@endeavor-business-media/package-photoswipe": "^1.8.2",
+    "@endeavor-business-media/package-photoswipe": "^1.8.6",
     "graphql": "^14.5.4",
     "graphql-tag": "^2.10.1",
     "newrelic": "^5.11.0"
