@@ -41,7 +41,7 @@ module.exports = {
   inquiry: {
     enabled: true,
     directSend: true,
-    sendTo: 'websupport@firehouse.com',
+    sendTo: 'rmi@firehouse.com',
     sendFrom: 'Firehouse.com <noreply@baseplatform.io>',
     sendBcc: 'emailactivity@cygnus.com',
     logo: 'https://img.firehouse.com/files/base/cygnus/fhc/image/static/logo/site_logo.png?h=60',
