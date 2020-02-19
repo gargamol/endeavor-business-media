@@ -23,6 +23,7 @@
     "@base-cms/marko-web-icons": "^1.0.0",
     "@base-cms/marko-web-native-x": "^1.9.0",
     "@base-cms/marko-web-reveal-ad": "^1.19.2",
+    "@base-cms/marko-web-social-sharing": "^1.19.3",
     "@base-cms/marko-web-theme-default": "^1.20.0",
     "@base-cms/object-path": "^1.9.0",
     "@base-cms/utils": "^1.9.0",
@@ -31,6 +32,7 @@
     "@endeavor-business-media/package-inquiry": "^1.8.6",
     "@endeavor-business-media/package-leaders": "^1.8.2",
     "@endeavor-business-media/package-photoswipe": "^1.8.6",
+
     "graphql": "^14.5.4",
     "graphql-tag": "^2.10.1",
     "newrelic": "^5.11.0"
