@@ -8,6 +8,7 @@ import Common from '@endeavor-business-media/package-common/browser';
 import Inquiry from '@endeavor-business-media/package-inquiry/browser';
 import Leaders from '@endeavor-business-media/package-leaders/browser';
 import PhotoSwipe from '@endeavor-business-media/package-photoswipe/browser';
+import SocialSharing from '@base-cms/marko-web-social-sharing/browser';
 
 DefaultTheme(Browser);
 GTM(Browser);
@@ -18,5 +19,6 @@ Common(Browser);
 Inquiry(Browser);
 Leaders(Browser);
 PhotoSwipe(Browser);
+SocialSharing(Browser);
 
 export default Browser;
