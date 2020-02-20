@@ -74,6 +74,12 @@ $ const displayPublishedDate = ["event", "webinar", "contact"].includes(type) ? 
                 </div>
                 </if>
               </default-theme-page-dates>
+              <if(content.type !== "contact")>
+                <marko-web-social-sharing
+                  path=content.siteContext.path
+                  providers=["facebook", "linkedin", "twitter", "pinterest"]
+                />
+              </if>
             </div>
           </div>
         </@section>
