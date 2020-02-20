@@ -20,5 +20,5 @@ Inquiry(Browser);
 Leaders(Browser);
 PhotoSwipe(Browser);
 SocialSharing(Browser);
-s;
+
 export default Browser;
