@@ -5,6 +5,7 @@ import GAM from '@base-cms/marko-web-gam/browser';
 import GCSE from '@base-cms/marko-web-gcse/browser';
 import RevealAd from '@base-cms/marko-web-reveal-ad/browser';
 import PhotoSwipe from '@base-cms/marko-web-photoswipe/browser';
+import ContactUs from '@endeavor-business-media/package-contact-us/browser';
 import Inquiry from '@endeavor-business-media/package-inquiry/browser';
 import Leaders from '@endeavor-business-media/package-leaders/browser';
 import SocialSharing from '@base-cms/marko-web-social-sharing/browser';
@@ -22,5 +23,6 @@ Inquiry(Browser);
 Leaders(Browser);
 PhotoSwipe(Browser);
 SocialSharing(Browser);
+ContactUs(Browser);
 
 export default Browser;
