@@ -879,6 +879,15 @@
     "@base-cms/utils" "^1.9.0"
     node-fetch "^2.6.0"
 
+"@base-cms/marko-web-photoswipe@^1.20.3":
+  version "1.20.3"
+  resolved "https://registry.yarnpkg.com/@base-cms/marko-web-photoswipe/-/marko-web-photoswipe-1.20.3.tgz#14715165a713495e618cc5aa31bff4fc90544e7e"
+  integrity sha512-ktmfZrS859qwBBtkkdBeW5fnLy+RH31V0TQXJqVRlE43sAHjrEK/Bbm/ini0yOiJcvhpb1hdIfWsCcZRljZ8cg==
+  dependencies:
+    "@base-cms/image" "^1.6.3"
+    "@base-cms/object-path" "^1.9.0"
+    photoswipe "^4.1.3"
+
 "@base-cms/marko-web-reveal-ad@^1.19.2":
   version "1.19.2"
   resolved "https://registry.yarnpkg.com/@base-cms/marko-web-reveal-ad/-/marko-web-reveal-ad-1.19.2.tgz#15370a4039c597cb1b3385703e7d06718b5dad54"
