@@ -2,7 +2,7 @@ const NativeXConfiguration = require('@base-cms/marko-web-native-x/config');
 const { asObject } = require('@base-cms/utils');
 
 module.exports = ({
-  uri = 'https://acbm.native-x.io',
+  uri = 'https://ebm.native-x.io',
   enabled = true,
   placements,
 } = {}) => {
