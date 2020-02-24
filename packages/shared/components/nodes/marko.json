@@ -1,0 +1,16 @@
+{
+  "<shared-magazine-issue-archive-node>": {
+    "template": "./magazine-issue-archive.marko",
+    "<image>": {},
+    "<title>": {},
+    "@node": "object",
+
+    "@image-position": "string",
+    "@card": "boolean",
+    "@flush": "boolean",
+    "@full-height": "boolean",
+
+    "@modifiers": "array",
+    "@attrs": "object"
+  }
+}
