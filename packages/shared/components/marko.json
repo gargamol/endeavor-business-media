@@ -21,5 +21,9 @@
     "<adunit>": {},
     "@refresh-interval": "number",
     "@scroll-offset": "number"
+  },
+  "<shared-inquiry-form>": {
+    "template": "./inquiry-form.marko",
+    "@node": "object"
   }
 }
