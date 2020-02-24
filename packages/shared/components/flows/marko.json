@@ -18,6 +18,28 @@
     "@class": "string",
     "@modifiers": "array"
   },
+  "<shared-content-card-deck-flow>": {
+    "template": "./content-card-deck.marko",
+    "<node>": {
+      "<image>": {},
+      "<title>": {}
+    },
+    "<adunit>": {
+      "@aliases": "array"
+    },
+    "<native-x>": {
+      "@index": "number",
+      "@name": "string",
+      "@aliases": "array"
+    },
+    "@nodes": "array",
+    "@display-ads": "boolean",
+    "@cols": "number",
+    "@tag": "string",
+    "@class": "string",
+    "@modifiers": "array",
+    "@attrs": "object"
+  },
   "<shared-magazine-issue-archive-flow>": {
     "template": "./magazine-issue-archive.marko",
     "<node>": {
