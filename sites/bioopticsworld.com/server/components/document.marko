@@ -1,6 +1,9 @@
 import nativeX from "../../config/native-x";
+import gam from "../../config/gam";
 
 $ const { site, req } = out.global;
+$ const adunit = gam.getAdUnit({ name: "wa" });
+$ const wrapperStyle = adunit ? "opacity: 0;" : null;
 
 <marko-web-document ...input>
   <@head>
@@ -11,11 +14,16 @@ $ const { site, req } = out.global;
     <marko-web-gam-init />
     <marko-web-gtm-init container-id=site.get("gtm.containerId") />
     <marko-web-native-x-init uri=nativeX.getUri() enabled=nativeX.isEnabled() />
+    <common-gam-prestitial init=true adunit=adunit />
     <${input.head} />
     <marko-web-gtm-start />
     <marko-web-gam-enable />
     <marko-web-gam-targeting key-values={ uri: req.path } />
   </@head>
+  <@body-wrapper enabled=true attrs={ id: "body-wrapper", class: "full-flex-column", style: wrapperStyle } />
+  <@above-wrapper>
+    <common-gam-prestitial display=true adunit=adunit />
+  </@above-wrapper>
   <@above-container>
     <leaders-dropdown-portal />
     <marko-web-reveal-ad-listener />
