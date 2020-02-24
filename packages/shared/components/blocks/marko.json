@@ -1,0 +1,5 @@
+{
+  "<shared-magazine-publications-block>": {
+    "template": "./magazine-publications.marko"
+  }
+}
