@@ -1,4 +1,22 @@
 {
+  "<shared-content-list-node>": {
+    "template": "./content-list.marko",
+    "<image>": {},
+    "<title>": {},
+    "@node": "object",
+
+    "@image-position": "string",
+    "@card": "boolean",
+    "@flush": "boolean",
+    "@full-height": "boolean",
+
+    "@display-image": "boolean",
+    "@with-teaser": "boolean",
+
+    "@modifiers": "array",
+    "@attrs": "object",
+    "@link-attrs": "object"
+  },
   "<shared-magazine-issue-archive-node>": {
     "template": "./magazine-issue-archive.marko",
     "<image>": {},

@@ -1,4 +1,23 @@
 {
+  "<shared-content-list-flow>": {
+    "template": "./content-list.marko",
+    "<header>": {},
+    "<body>": {},
+    "<node>": {
+      "<image>": {}
+    },
+    "<native-x>": {
+      "@index": "number",
+      "@name": "string",
+      "@aliases": "array"
+    },
+    "@nodes": "array",
+    "@inner-justified": "boolean",
+    "@flush-x": "boolean",
+    "@flush-y": "boolean",
+    "@class": "string",
+    "@modifiers": "array"
+  },
   "<shared-magazine-issue-archive-flow>": {
     "template": "./magazine-issue-archive.marko",
     "<node>": {
