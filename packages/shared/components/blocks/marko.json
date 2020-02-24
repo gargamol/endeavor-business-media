@@ -1,4 +1,17 @@
 {
+  "<shared-related-content-block>": {
+    "template": "./related-content.marko",
+    "<native-x>": {
+      "@index": "number",
+      "@name": "string",
+      "@aliases": "array"
+    },
+    "@id": "number",
+    "@type": "string",
+    "@section-id": "number",
+    "@section-name": "string",
+    "@query-fragment": "object"
+  },
   "<shared-magazine-publications-block>": {
     "template": "./magazine-publications.marko"
   }
