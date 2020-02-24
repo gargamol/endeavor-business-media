@@ -1,5 +1,5 @@
 {
-  "<common-gam-prestitial>": {
+  "<gam-prestitial>": {
     "template": "./prestitial.marko",
     "@adunit": "object",
     "@slot-id": {

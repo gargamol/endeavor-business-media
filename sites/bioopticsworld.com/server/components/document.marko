@@ -14,7 +14,7 @@ $ const wrapperStyle = adunit ? "opacity: 0;" : null;
     <marko-web-gam-init />
     <marko-web-gtm-init container-id=site.get("gtm.containerId") />
     <marko-web-native-x-init uri=nativeX.getUri() enabled=nativeX.isEnabled() />
-    <common-gam-prestitial init=true adunit=adunit />
+    <gam-prestitial init=true adunit=adunit />
     <${input.head} />
     <marko-web-gtm-start />
     <marko-web-gam-enable />
@@ -22,7 +22,7 @@ $ const wrapperStyle = adunit ? "opacity: 0;" : null;
   </@head>
   <@body-wrapper enabled=true attrs={ id: "body-wrapper", style: wrapperStyle } />
   <@above-wrapper>
-    <common-gam-prestitial display=true adunit=adunit />
+    <gam-prestitial display=true adunit=adunit />
   </@above-wrapper>
   <@above-container>
     <leaders-dropdown-portal />
