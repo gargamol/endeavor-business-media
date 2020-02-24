@@ -1,6 +1,7 @@
 {
   "taglib-imports": [
-    "./directory/marko.json"
+    "./directory/marko.json",
+    "./gam/marko.json"
   ],
   "<common-image-list>": {
     "template": "./image-list.marko",
