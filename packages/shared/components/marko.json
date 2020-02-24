@@ -12,5 +12,11 @@
     },
     "<below-container>": {},
     "<foot>": {}
+  },
+  "<shared-fixed-ad-bottom>": {
+    "template": "./fixed-ad-bottom.marko",
+    "<adunit>": {},
+    "@refresh-interval": "number",
+    "@scroll-offset": "number"
   }
 }
