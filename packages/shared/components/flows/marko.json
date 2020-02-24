@@ -1,0 +1,12 @@
+{
+  "<shared-magazine-issue-archive-flow>": {
+    "template": "./magazine-issue-archive.marko",
+    "<node>": {
+      "<image>": {},
+      "<title>": {}
+    },
+    "@nodes": "array",
+    "@cols": "number",
+    "@modifiers": "array"
+  }
+}
