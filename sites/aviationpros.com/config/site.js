@@ -1,7 +1,11 @@
 const navigation = require('./navigation');
+const gam = require('./gam');
+const nativeX = require('./native-x');
 
 module.exports = {
   navigation,
+  gam,
+  nativeX,
   company: 'Endeavor Business Media, LLC',
   logos: {
     navbar: {
