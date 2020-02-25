@@ -22,6 +22,11 @@
     "@refresh-interval": "number",
     "@scroll-offset": "number"
   },
+  "<shared-image-list>": {
+    "template": "./image-list.marko",
+    "@images": "array",
+    "@width": "number"
+  },
   "<shared-inquiry-form>": {
     "template": "./inquiry-form.marko",
     "@node": "object"
