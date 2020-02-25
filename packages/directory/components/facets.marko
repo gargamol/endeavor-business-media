@@ -1,6 +1,7 @@
+import { getAsArray } from "@base-cms/object-path";
 import findActiveFacet from './find-active-facet';
 
-$ const facets = input.facets;
+$ const facets = getAsArray(input, "facets");
 $ const activeFacet = findActiveFacet(facets, input.activeId);
 
 <!-- <div class="directory-facets-toggle">
