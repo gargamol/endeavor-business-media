@@ -1,0 +1,10 @@
+{
+  "<shared-content-page-header>": {
+    "template": "./header.marko",
+    "@content": "object"
+  },
+  "<shared-content-page-contents>": {
+    "template": "./contents.marko",
+    "@content": "object"
+  }
+}

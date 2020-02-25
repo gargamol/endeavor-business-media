@@ -1,0 +1,73 @@
+import { get, getAsObject, getAsArray } from "@base-cms/object-path";
+
+$ const { site } = out.global;
+
+$ const content = getAsObject(input, "content");
+$ const images = getAsArray(content, "images.edges").map(edge => edge.node);
+$ const { id, type } = content;
+
+$ const displayPrimaryImage = ["whitepaper", "media-gallery"].includes(type) ? false : true;
+$ const displayPhotoswipe = ["contact"].includes(type) ? false : true;
+$ const displayInquiry = (content) => {
+  if (type === "company" && get(content, "enableRmi")) return true;
+  if (type === "product" && get(content, "company.enableRmi")) return true;
+  return false;
+};
+
+<default-theme-page-contents|{ blockName }| attrs={ "data-gallery-id": id }>
+  <if(content.embedCode)>
+    <marko-web-content-embed-code block-name=blockName obj=content />
+  </if>
+  <else-if(displayPrimaryImage)>
+    $ const isLogo = get(content, "primaryImage.isLogo");
+    <if(isLogo || type === "contact")>
+      <marko-web-page-image
+        modifiers=modifiers=(type === "contact" ? [] : ["primary-image-inline"])
+        obj=content.primaryImage
+        fluid=false
+        width=250
+      />
+    </if>
+    <else>
+      <marko-web-page-image width=720 obj=content.primaryImage />
+    </else>
+  </else-if>
+
+  <default-theme-content-contact-details obj=content />
+  <marko-web-content-body block-name=blockName obj=content />
+  <marko-web-content-sidebars block-name=blockName obj=content />
+
+  <if(type === "media-gallery")>
+    <shared-image-list images=images />
+  </if>
+
+  <if(type === "document")>
+    <default-theme-content-download obj=content>
+      <@wufoo user-name=site.get("wufoo.userName") />
+      <@link class="btn btn-lg btn-primary" />
+    </default-theme-content-download>
+  </if>
+
+  <if(type === "webinar")>
+    $ const isUpcoming = content.startDate > Date.now();
+    <default-theme-content-link-url
+      obj=content
+      label=(isUpcoming ? "Register for Webinar" : "View Webinar")
+      target="_blank"
+    />
+  </if>
+
+  <if(displayInquiry(content))>
+    <shared-inquiry-form node=content />
+  </if>
+
+  <if(type === "podcast")>
+    <marko-web-content-audio block-name=blockName obj=content />
+  </if>
+
+  <if(displayPhotoswipe)>
+    <marko-web-photoswipe-images images=images>
+      <@props thumbnail-click-selectors=`[data-gallery-id="${id}"] [data-image-id]` />
+    </marko-web-photoswipe-images>
+  </if>
+</default-theme-page-contents>
