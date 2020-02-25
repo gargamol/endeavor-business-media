@@ -1,0 +1,25 @@
+$theme-card-header-background-color: #000;
+
+$border-radius: none;
+$theme-box-shadow-sm:   none;
+$theme-box-shadow-lg: none;
+$body-bg: #fff;
+
+@import "./core";
+
+// @todo confirm if this is still in use.
+.node-list {
+  &.sponsored {
+    background-color: #f0f0f0;
+    .node {
+      background-color: transparent;
+    }
+  }
+}
+
+// @todo confirm if this is still in use.
+.page-contents {
+  &__content-body a {
+    text-decoration: underline;
+  }
+}
