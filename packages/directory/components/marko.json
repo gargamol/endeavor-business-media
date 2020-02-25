@@ -1,5 +1,8 @@
 {
   "<common-directory-facets>": {
-    "template": "./facets.marko"
+    "template": "./facets.marko",
+    "@facets": "array",
+    "@active-id": "expression",
+    "@title": "string"
   }
 }
