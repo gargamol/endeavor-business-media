@@ -1,0 +1,16 @@
+{
+  "name": "@endeavor-business-media/package-directory",
+  "version": "1.8.7",
+  "author": "Jacob Bare <jacob@limit0.io>",
+  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/packages/directory",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --ext .js --ext .vue --max-warnings 5 --ignore-path ../../.eslintignore ./",
+    "test": "yarn lint"
+  },
+  "dependencies": {
+    "@base-cms/marko-core": "^1.20.3",
+    "@base-cms/marko-web": "^1.20.4"
+  }
+}
