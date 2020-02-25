@@ -1,0 +1,31 @@
+{
+  "<shared-content-page-layout>": {
+    "template": "./index.marko",
+    "<head>": {},
+    "<above-container>": {},
+
+    "<page>": {},
+    "<section-header>": {},
+    "<section-body>": {},
+    "<body-contents>": {},
+    "<body-rail>": {},
+
+    "<below-page>": {},
+    "<foot>": {},
+    "@id": {
+      "type": "string",
+      "required": true
+    },
+    "@type": {
+      "type": "string",
+      "required": true
+    },
+    "@page-node": {
+      "type": "object",
+      "required": true
+    },
+    "@ad-slots": "function",
+    "@display-primary-image": "boolean",
+    "@display-photoswipe": "boolean"
+  }
+}

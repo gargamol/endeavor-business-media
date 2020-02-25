@@ -1,0 +1,172 @@
+import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
+import defaultValue from "@base-cms/marko-core/utils/default-value";
+import { get, getAsObject } from "@base-cms/object-path";
+import { isFunction } from "@base-cms/utils";
+import contentKeyValues from "../../../utils/gam/content-key-values";
+import queryFragment from "../../../graphql/fragments/content-list";
+
+$ const { site, GAM } = out.global;
+$ const { id, type, pageNode } = input;
+
+$ const adSlots = isFunction(input.adSlots) ? input.adSlots : ({ aliases }) => ({
+  "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
+  "gpt-ad-rail1": GAM.getAdUnit({ name: "rail1", aliases }),
+  "gpt-ad-rail2": GAM.getAdUnit({ name: "rail2", aliases }),
+});
+
+$ const leadersEnabled = Boolean(site.get("leaders.alias"));
+$ const displayLeaders = leadersEnabled && type !== "company";
+
+<marko-web-content-page-layout id=id type=type>
+  <@head>
+    <if(input.head)>
+      <${input.head} />
+    </if>
+    <else>
+      <marko-web-gtm-content-context|{ context }| id=id>
+        <marko-web-gtm-push data=context />
+      </marko-web-gtm-content-context>
+      <if(GAM)>
+        <marko-web-resolve-page|{ data: content }| node=pageNode>
+          $ const aliases = hierarchyAliases(content.primarySection);
+          <marko-web-gam-targeting key-values=contentKeyValues(content) />
+          <marko-web-gam-slots slots=adSlots({ aliases }) />
+        </marko-web-resolve-page>
+      </if>
+    </else>
+  </@head>
+
+  <@above-container>
+    <if(input.aboveContainer)>
+      <${input.aboveContainer} />
+    </if>
+    <else>
+      <if(GAM)>
+        <marko-web-resolve-page|{ data: content }| node=pageNode>
+          $ const aliases = hierarchyAliases(content.primarySection);
+          <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "wa", aliases }) />
+          <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "reskin", aliases }) />
+        </marko-web-resolve-page>
+      </if>
+    </else>
+  </@above-container>
+
+  <@page>
+    <marko-web-resolve-page|response| node=pageNode>
+      $ const { data: content, resolved } = response;
+      $ const section = resolved.getAsObject("primarySection");
+      $ const images = resolved.getEdgeNodesFor("images")
+      <if(input.page)>
+        <${input.page} ...response />
+      </if>
+      <else>
+        <if(GAM)>
+          <marko-web-gam-display-ad
+            id="gpt-ad-lb1"
+            modifiers=["top-of-page"]
+          />
+        </if>
+        <marko-web-page-wrapper>
+          <@section>
+            <if(input.sectionHeader)>
+              <${input.sectionHeader} ...response />
+            </if>
+            <else>
+              <div class="row">
+                <div class="col">
+                  <shared-content-page-header content=content />
+                </div>
+              </div>
+            </else>
+          </@section>
+          <@section>
+            <if(input.sectionBody)>
+              <${input.sectionBody} ...response />
+            </if>
+            <else>
+              <div class="row">
+                <div class="col-lg-8 mb-3 mb-lg-0">
+                  <if(input.bodyContents)>
+                    <${input.bodyContents} ...response />
+                  </if>
+                  <else>
+                    <shared-content-page-contents content=content />
+                  </else>
+                </div>
+
+                <aside class="col-lg-4 page-rail">
+                  <if(input.bodyRail)>
+                    <${input.bodyRail} block-name="page-rail" ...response />
+                  </if>
+                  <else>
+                    <!-- <h2>CONFIGURE FOR COMPANY</h2> -->
+                    <if(GAM)>
+                      <marko-web-gam-display-ad id="gpt-ad-rail1" />
+                    </if>
+                    <!-- <h2>OPTIONAL AD HERE</h2> -->
+                    <marko-web-resolve-page|{ data: content }| node=pageNode>
+                      $ const aliases = hierarchyAliases(content.primarySection);
+                      <shared-related-content-block
+                        id=id
+                        type=type
+                        section-id=section.id
+                        section-name=section.name
+                        query-fragment=queryFragment
+                      >
+                        <@native-x index=4 name="default" aliases=aliases />
+                      </shared-related-content-block>
+                    </marko-web-resolve-page>
+                    <if(site.get("leaders.alias"))>
+                      <leaders-contextual content-id=id />
+                    </if>
+                    <if(GAM)>
+                      <marko-web-gam-display-ad id="gpt-ad-rail2" />
+                    </if>
+                  </else>
+                </aside>
+              </div>
+            </else>
+          </@section>
+        </marko-web-page-wrapper>
+      </else>
+    </marko-web-resolve-page>
+  </@page>
+
+  <@below-page>
+    <if(input.belowPage)>
+      <${input.belowPage} />
+    </if>
+    <else>
+      <h1>LOAD MORE HERE</h1>
+      <!-- <marko-web-resolve-page|{ resolved, data: content }| node=pageNode>
+        $ const section = resolved.getAsObject("primarySection");
+        $ const aliases = hierarchyAliases(section);
+        <website-content-load-more-block
+          id=id
+          type=type
+          name=content.name
+          aliases=aliases
+          section-id=section.id
+          section-name=section.name
+          section-skip=5
+        >
+          <@native-x index=0 name="default" aliases=aliases />
+        </website-content-load-more-block>
+      </marko-web-resolve-page> -->
+    </else>
+  </@below-page>
+
+  <@foot>
+    <if(input.foot)>
+      <${input.foot} />
+    </if>
+    <else>
+      <marko-web-resolve-page|{ data: content }| node=pageNode>
+        $ const aliases = hierarchyAliases(content.primarySection);
+        <shared-fixed-ad-bottom>
+          <@adunit aliases=aliases />
+        </shared-fixed-ad-bottom>
+      </marko-web-resolve-page>
+    </else>
+  </@foot>
+</marko-web-content-page-layout>
