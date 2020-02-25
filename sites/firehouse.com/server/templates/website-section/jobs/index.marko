@@ -30,7 +30,7 @@ $ const { site } = out.global;
     <marko-web-resolve-page|{ data: section }| node=pageNode>
       <marko-web-page-wrapper class="mb-block">
         <@section modifiers=["bottom-border"]>
-          <div class="row">
+          <div class="row mb-block">
             <div class="col">
               <default-theme-website-section-breadcrumbs section=section display-self=false />
               <marko-web-website-section-name tag="h1" class="page-wrapper__title" obj=section />
@@ -41,7 +41,7 @@ $ const { site } = out.global;
           </div>
         </@section>
         <@section modifiers=["bottom-border"]>
-          <div class="row">
+          <div class="row mb-block">
             <div class="col">
               <div class="firehouse-jobs">
                 <marko-web-link href=`/${alias}/submit` class="firehouse-jobs__button">

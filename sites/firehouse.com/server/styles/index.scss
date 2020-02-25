@@ -77,3 +77,11 @@ $pswp__root-z-index: $theme-site-header-z-index + 1;
     text-decoration: underline;
   }
 }
+
+.page-wrapper {
+  &__section {
+    &--bottom-border {
+      @include marko-web-node-list-border(border-bottom, $width: 2px);
+    }
+  }
+}
