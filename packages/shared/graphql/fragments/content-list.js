@@ -5,12 +5,12 @@ module.exports = gql`
 fragment WebsiteContentListFragment on Content {
   id
   type
-  typeTitled: type(input: { format: titleize })
   shortName
   teaser(input: { useFallback: false, maxLength: null })
-  canonicalPath
+  siteContext {
+    path
+  }
   published
-  publishedDate(input: { format: "MMM Do, YYYY" })
   company {
     id
     type
@@ -28,9 +28,6 @@ fragment WebsiteContentListFragment on Content {
     src
     alt
     isLogo
-  }
-  userRegistration {
-    isRequired
   }
   ... on Authorable {
     authors {
