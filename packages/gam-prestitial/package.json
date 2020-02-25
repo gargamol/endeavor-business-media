@@ -5,10 +5,6 @@
   "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/packages/gam-prestitial",
   "license": "MIT",
   "private": true,
-  "scripts": {
-    "lint": "eslint --ext .js --ext .vue --max-warnings 5 --ignore-path ../../.eslintignore ./",
-    "test": "yarn lint"
-  },
   "dependencies": {
     "@base-cms/marko-web-gam": "^1.9.0",
     "@base-cms/object-path": "^1.9.0"
