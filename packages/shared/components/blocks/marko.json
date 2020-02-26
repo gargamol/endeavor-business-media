@@ -1,16 +1,20 @@
 {
   "<shared-related-content-block>": {
     "template": "./related-content.marko",
+    "<content>": {
+      "@id": "number",
+      "@type": "string"
+    },
+    "<section>": {
+      "@id": "number",
+      "@name": "string"
+    },
     "<native-x>": {
       "@index": "number",
       "@name": "string",
       "@aliases": "array"
     },
-    "@id": "number",
-    "@type": "string",
-    "@section-id": "number",
-    "@section-name": "string",
-    "@query-fragment": "object"
+    "<list>": {}
   },
   "<shared-website-section-list-block>": {
     "template": "./website-section-list.marko",
