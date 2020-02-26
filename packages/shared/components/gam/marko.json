@@ -15,5 +15,13 @@
     "template": "./out-of-page-ad.marko",
     "@name": "string",
     "@aliases": "array"
+  },
+  "<shared-gam-define-slots>": {
+    "template": "./define-slots.marko",
+    "<targeting>": {
+      "@key-values": "object"
+    },
+    "@builder": "function",
+    "@aliases": "array"
   }
 }
