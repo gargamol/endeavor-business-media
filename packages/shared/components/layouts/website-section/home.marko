@@ -68,7 +68,22 @@ $ const adSlots = isFunction(input.adSlots) ? input.adSlots : ({ aliases }) => (
       <${input.belowPage} />
     </if>
     <else>
-      <h2>Render default load more</h2>
+      <marko-web-resolve-page|{ data: section }| node=pageNode>
+        $ const aliases = hierarchyAliases(section);
+        $ const adunit = { aliases };
+        <marko-web-load-more
+          component-name="shared-content-load-more-card-deck-list-flow"
+          component-input={
+            cardDeck: { adunit },
+            list: { adunit },
+          }
+          fragment-name="shared-content-list"
+          query-name="website-scheduled-content"
+          query-params={ sectionId: id, limit: 14, skip: 5 }
+          max-pages=0
+          page-input={ for: "website-section", id }
+        />
+      </marko-web-resolve-page>
     </else>
   </@below-page>
 
