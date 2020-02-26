@@ -20,7 +20,6 @@
       "type": "string",
       "required": true
     },
-    "@name": "string",
     "@limit": "number"
   },
   "<shared-magazine-latest-issue-block>": {
