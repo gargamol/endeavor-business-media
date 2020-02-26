@@ -1,0 +1,88 @@
+import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
+import { isFunction } from "@base-cms/utils";
+import queryFragment from "../../../graphql/fragments/content-list";
+
+$ const { site, GAM } = out.global;
+$ const {
+  id,
+  alias,
+  name,
+  pageNode,
+} = input;
+
+$ const adSlots = isFunction(input.adSlots) ? input.adSlots : ({ aliases }) => ({
+  "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
+  "gpt-ad-rail1": GAM.getAdUnit({ name: "rail1", aliases }),
+  "gpt-ad-rail2": GAM.getAdUnit({ name: "rail2", aliases }),
+});
+
+<marko-web-website-section-page-layout id=id alias=alias name=name>
+  <@head>
+    <if(input.head)>
+      <${input.head} />
+    </if>
+    <else>
+      <marko-web-gtm-website-section-context|{ context }| alias=alias>
+        <marko-web-gtm-push data=context />
+      </marko-web-gtm-website-section-context>
+      <if(GAM)>
+        <marko-web-resolve-page|{ data: section }| node=pageNode>
+          $ const aliases = hierarchyAliases(section);
+          <marko-web-gam-slots slots=adSlots({ aliases }) />
+        </marko-web-resolve-page>
+      </if>
+    </else>
+  </@head>
+
+  <@above-container>
+    <if(input.aboveContainer)>
+      <${input.aboveContainer} />
+    </if>
+    <else>
+      <marko-web-resolve-page|{ data: section }| node=pageNode>
+        $ const aliases = hierarchyAliases(section);
+        <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "wa", aliases }) />
+        <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "reskin", aliases }) />
+      </marko-web-resolve-page>
+    </else>
+  </@above-container>
+
+  <@page>
+    <if(input.page)>
+      <${input.page} />
+    </if>
+    <else>
+      <marko-web-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
+
+      <marko-web-query|{ nodes }|
+        name="website-optioned-content"
+        params={ sectionId: id, optionName: "Pinned", limit: 5, requiresImage: true, queryFragment }
+      >
+        <shared-content-hero-flow nodes=nodes />
+      </marko-web-query>
+    </else>
+  </@page>
+
+  <@below-page>
+    <if(input.belowPage)>
+      <${input.belowPage} />
+    </if>
+    <else>
+      <h2>Render default load more</h2>
+    </else>
+  </@below-page>
+
+  <@foot>
+    <if(input.foot)>
+      <${input.foot} />
+    </if>
+    <else>
+      <marko-web-resolve-page|{ data: section }| node=pageNode>
+        $ const aliases = hierarchyAliases(section);
+        <shared-fixed-ad-bottom>
+          <@adunit aliases=aliases />
+        </shared-fixed-ad-bottom>
+      </marko-web-resolve-page>
+    </else>
+  </@foot>
+</marko-web-website-section-page-layout>

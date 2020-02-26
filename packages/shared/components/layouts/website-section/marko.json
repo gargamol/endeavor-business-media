@@ -1,0 +1,29 @@
+{
+  "<shared-website-section-home-page-layout>": {
+    "template": "./home.marko",
+    "<head>": {},
+    "<above-container>": {},
+
+    "<page>": {},
+
+    "<below-page>": {},
+    "<foot>": {},
+    "@id": {
+      "type": "string",
+      "required": true
+    },
+    "@alias": {
+      "type": "string",
+      "required": true
+    },
+    "@name": {
+      "type": "string",
+      "required": true
+    },
+    "@page-node": {
+      "type": "object",
+      "required": true
+    },
+    "@ad-slots": "function"
+  }
+}
