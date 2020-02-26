@@ -35,5 +35,8 @@
       "required": true
     },
     "@ad-slots": "function"
+  },
+  "<shared-website-section-page-latest-with-directory-layout>": {
+    "template": "./latest-with-directory.marko"
   }
 }
