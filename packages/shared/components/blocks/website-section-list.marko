@@ -1,0 +1,29 @@
+import { getAsObject, get } from "@base-cms/object-path";
+import defaultValue from "@base-cms/marko-core/utils/default-value";
+import queryFragment from "../../graphql/fragments/content-list";
+
+$ const { alias, name } = input;
+$ const limit = defaultValue(input.limit, 4);
+$ const nativeX = {
+  enabled: true,
+  index: 3,
+  name: "default",
+  aliases: [alias],
+  ...getAsObject(input, "nativeX"),
+};
+
+<marko-web-query|{ nodes }|
+  name="website-scheduled-content"
+  params={ sectionAlias: alias, limit, queryFragment }
+>
+  <shared-content-list-flow ...input.list nodes=nodes>
+    <if(name)>
+      <@header>
+        <marko-web-link href=`/${alias}`>${name}</marko-web-link>
+      </@header>
+    </if>
+    <if(nativeX.enabled)>
+      <@native-x ...nativeX />
+    </if>
+  </shared-content-list-flow>
+</marko-web-query>

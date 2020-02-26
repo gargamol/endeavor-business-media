@@ -12,6 +12,17 @@
     "@section-name": "string",
     "@query-fragment": "object"
   },
+  "<shared-website-section-list-block>": {
+    "template": "./website-section-list.marko",
+    "<native-x>": {},
+    "<list>": {},
+    "@alias": {
+      "type": "string",
+      "required": true
+    },
+    "@name": "string",
+    "@limit": "number"
+  },
   "<shared-magazine-publications-block>": {
     "template": "./magazine-publications.marko"
   }
