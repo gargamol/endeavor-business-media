@@ -92,25 +92,10 @@ $ const displayLeaders = leadersEnabled && type !== "company";
                     <${input.bodyRail} block-name="page-rail" ...response />
                   </if>
                   <else>
-                    <!-- <h2>CONFIGURE FOR COMPANY</h2> -->
-                    <shared-gam-display-ad id="gpt-ad-rail1" />
-                    <!-- <h2>OPTIONAL AD HERE</h2> -->
-                    <marko-web-resolve-page|{ data: content }| node=pageNode>
-                      $ const aliases = hierarchyAliases(content.primarySection);
-                      <shared-related-content-block
-                        id=id
-                        type=type
-                        section-id=section.id
-                        section-name=section.name
-                        query-fragment=queryFragment
-                      >
-                        <@native-x index=4 name="default" aliases=aliases />
-                      </shared-related-content-block>
-                    </marko-web-resolve-page>
-                    <if(site.get("leaders.alias"))>
-                      <leaders-contextual content-id=id />
-                    </if>
-                    <shared-gam-display-ad id="gpt-ad-rail2" />
+                    <shared-content-page-right-rail
+                      page-node=pageNode
+                      display-related-content=(type !== "company")
+                    />
                   </else>
                 </aside>
               </div>
