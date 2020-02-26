@@ -1,4 +1,7 @@
 {
+  "taglib-imports": [
+    "./load-more/marko.json"
+  ],
   "<shared-related-content-block>": {
     "template": "./related-content.marko",
     "<content>": {

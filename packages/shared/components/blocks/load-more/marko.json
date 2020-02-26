@@ -1,0 +1,17 @@
+{
+  "<shared-scheduled-content-load-more-block>": {
+    "template": "./scheduled-content.marko",
+    "<query-params>":  {},
+    "<component-input>": {},
+    "@name": {
+      "type": "string",
+      "required": true
+    },
+    "@section-id": {
+      "type": "number",
+      "required": true
+    },
+    "@max-pages": "number",
+    "@fragment-name": "string"
+  }
+}
