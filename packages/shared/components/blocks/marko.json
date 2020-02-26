@@ -23,6 +23,13 @@
     "@name": "string",
     "@limit": "number"
   },
+  "<shared-magazine-latest-issue-block>": {
+    "template": "./magazine-latest-issue.marko",
+    "@publication-id": {
+      "type": "string",
+      "required": true
+    }
+  },
   "<shared-magazine-publications-block>": {
     "template": "./magazine-publications.marko"
   }

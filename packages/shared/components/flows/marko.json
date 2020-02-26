@@ -53,6 +53,12 @@
     },
     "@nodes": "array"
   },
+  "<shared-magazine-latest-issue-flow>": {
+    "template": "./magazine-latest-issue.marko",
+    "<header>": {},
+    "@node": "object",
+    "@inner-justified": "boolean"
+  },
   "<shared-magazine-issue-archive-flow>": {
     "template": "./magazine-issue-archive.marko",
     "<node>": {
