@@ -1,5 +1,5 @@
 {
-  "<directory-facets>": {
+  "<common-directory-facets>": {
     "template": "./facets.marko"
   }
 }
