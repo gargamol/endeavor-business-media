@@ -45,11 +45,13 @@
   },
   "<shared-content-hero-flow>": {
     "template": "./content-hero.marko",
-    "<list>": {},
-    "<native-x>": {
-      "@index": "number",
-      "@name": "string",
-      "@aliases": "array"
+    "<card>": {},
+    "<list>": {
+      "<native-x>": {
+        "@index": "number",
+        "@name": "string",
+        "@aliases": "array"
+      }
     },
     "@nodes": "array"
   },
