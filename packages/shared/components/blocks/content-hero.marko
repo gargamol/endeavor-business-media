@@ -2,15 +2,15 @@ import { getAsObject } from "@base-cms/object-path";
 import queryFragment from "../../graphql/fragments/content-list";
 
 $ const { id } = input;
-$ const params = {
+$ const queryParams = {
   optionName: "Pinned",
   limit: 5,
   requiresImage: true,
   queryFragment,
-  ...getAsObject(input, "query.params"),
+  ...getAsObject(input, "queryParams"),
   sectionId: id,
 };
 
-<marko-web-query|{ nodes }| name="website-optioned-content" params=params>
+<marko-web-query|{ nodes }| name="website-optioned-content" params=queryParams>
   <shared-content-hero-flow ...input.hero nodes=nodes />
 </marko-web-query>

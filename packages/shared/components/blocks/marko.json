@@ -20,17 +20,16 @@
     "template": "./website-section-list.marko",
     "<native-x>": {},
     "<list>": {},
+    "<query-params>": {},
+    "<header>": {},
     "@alias": {
       "type": "string",
       "required": true
-    },
-    "@limit": "number"
+    }
   },
   "<shared-content-hero-block>": {
     "template": "./content-hero.marko",
-    "<query>": {
-      "@params": "object"
-    },
+    "<query-params>": {},
     "<hero>": {
       "<card>": {},
       "<list>": {}

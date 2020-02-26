@@ -13,13 +13,23 @@ $ const nativeX = {
   ...getAsObject(input, "nativeX"),
 };
 
-<marko-web-query|{ nodes, section }|
-  name="website-scheduled-content"
-  params={ sectionAlias: alias, limit, queryFragment, sectionFragment }
->
+$ const queryParams = {
+  limit: 4,
+  queryFragment,
+  sectionFragment,
+  ...getAsObject(input, "queryParams"),
+  sectionAlias: alias,
+};
+
+<marko-web-query|{ nodes, section }| name="website-scheduled-content" params=queryParams>
   <shared-content-list-flow ...input.list nodes=nodes>
     <@header>
-      <marko-web-website-section-name obj=section link=true />
+      <if(input.header)>
+        <${input.header} section=section />
+      </if>
+      <else>
+        <marko-web-website-section-name obj=section link=true />
+      </else>
     </@header>
     <if(nativeX.enabled)>
       <@native-x ...nativeX />
