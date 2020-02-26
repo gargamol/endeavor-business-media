@@ -59,9 +59,11 @@ $pswp__root-z-index: $theme-site-header-z-index + 1;
 .firehouse-jobs {
   margin-bottom: map-get($spacers, block);
   &__button {
-    font-size: 1.75rem;
+    @extend .btn;
+    @extend .btn-primary;
+    font-size: 1.25rem;
     font-weight: 800;
-    color: $primary;
+    color: $light;
     text-transform: uppercase;
   }
   &__link {
