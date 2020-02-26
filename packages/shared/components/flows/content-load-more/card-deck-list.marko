@@ -1,6 +1,5 @@
 import { getAsArray, getAsObject } from "@base-cms/object-path";
 
-$ const { GAM } = out.global;
 $ const nodes = getAsArray(input, "nodes");
 $ const cardDeck = getAsObject(input, "cardDeck");
 $ const list = getAsObject(input, "list");
@@ -14,12 +13,12 @@ $ const aliases = getAsArray(list, "adunit.aliases");
   />
   <default-theme-column-list-flow nodes=nodes.slice(10)>
     <@column>
-      <if(GAM)>
-        <marko-web-gam-define-display-ad
-          ...GAM.getAdUnit({ name: "load-more", size: [300, 600], aliases })
-          modifiers=["in-card"]
-        />
-      </if>
+      <shared-gam-define-display-ad
+        name="load-more"
+        size=[300, 600]
+        aliases=aliases
+        modifiers=["in-card"]
+      />
     </@column>
     <@list|{ nodes: listNodes }|>
       <shared-content-list-flow

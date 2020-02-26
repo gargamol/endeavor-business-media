@@ -41,8 +41,8 @@ $ const adSlots = isFunction(input.adSlots) ? input.adSlots : ({ aliases }) => (
     <else>
       <marko-web-resolve-page|{ data: section }| node=pageNode>
         $ const aliases = hierarchyAliases(section);
-        <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "wa", aliases }) />
-        <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "reskin", aliases }) />
+        <shared-gam-out-of-page-ad name="wa" aliases=aliases />
+        <shared-gam-out-of-page-ad name="reskin" aliases=aliases />
       </marko-web-resolve-page>
     </else>
   </@above-container>
@@ -52,7 +52,7 @@ $ const adSlots = isFunction(input.adSlots) ? input.adSlots : ({ aliases }) => (
       <${input.page} />
     </if>
     <else>
-      <marko-web-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
+      <shared-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
 
       <marko-web-query|{ nodes }|
         name="website-optioned-content"

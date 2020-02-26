@@ -1,7 +1,6 @@
 import { getAsObject } from "@base-cms/object-path";
 import contentListFragment from "../../graphql/fragments/content-list";
 
-$ const { GAM } = out.global;
 $ const { id, pageNode } = data;
 
 <marko-web-magazine-issue-page-layout id=id>
@@ -11,18 +10,12 @@ $ const { id, pageNode } = data;
     </marko-web-gtm-magazine-issue-context>
   </@head>
   <@above-container>
-    <if(GAM)>
-      <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "wa" }) />
-      <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "reskin" }) />
-    </if>
+    <shared-gam-out-of-page-ad name="wa" />
+    <shared-gam-out-of-page-ad name="reskin" />
   </@above-container>
   <@page>
-    <if(GAM)>
-      <marko-web-gam-define-display-ad
-        ...GAM.getAdUnit({ name: "lb1" })
-        modifiers=["top-of-page"]
-      />
-    </if>
+    <shared-gam-define-display-ad name="lb1" modifiers=["top-of-page"] />
+
     <marko-web-page-wrapper class="mb-block">
       <@section>
         <div class="row">

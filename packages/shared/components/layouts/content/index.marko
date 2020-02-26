@@ -41,13 +41,11 @@ $ const displayLeaders = leadersEnabled && type !== "company";
       <${input.aboveContainer} />
     </if>
     <else>
-      <if(GAM)>
-        <marko-web-resolve-page|{ data: content }| node=pageNode>
-          $ const aliases = hierarchyAliases(content.primarySection);
-          <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "wa", aliases }) />
-          <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "reskin", aliases }) />
-        </marko-web-resolve-page>
-      </if>
+      <marko-web-resolve-page|{ data: content }| node=pageNode>
+        $ const aliases = hierarchyAliases(content.primarySection);
+        <shared-gam-out-of-page-ad name="wa" aliases=aliases />
+        <shared-gam-out-of-page-ad name="reskin" aliases=aliases />
+      </marko-web-resolve-page>
     </else>
   </@above-container>
 
@@ -60,12 +58,8 @@ $ const displayLeaders = leadersEnabled && type !== "company";
         <${input.page} ...response />
       </if>
       <else>
-        <if(GAM)>
-          <marko-web-gam-display-ad
-            id="gpt-ad-lb1"
-            modifiers=["top-of-page"]
-          />
-        </if>
+        <shared-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
+
         <marko-web-page-wrapper>
           <@section>
             <if(input.sectionHeader)>
@@ -100,9 +94,7 @@ $ const displayLeaders = leadersEnabled && type !== "company";
                   </if>
                   <else>
                     <!-- <h2>CONFIGURE FOR COMPANY</h2> -->
-                    <if(GAM)>
-                      <marko-web-gam-display-ad id="gpt-ad-rail1" />
-                    </if>
+                    <shared-gam-display-ad id="gpt-ad-rail1" />
                     <!-- <h2>OPTIONAL AD HERE</h2> -->
                     <marko-web-resolve-page|{ data: content }| node=pageNode>
                       $ const aliases = hierarchyAliases(content.primarySection);
@@ -119,9 +111,7 @@ $ const displayLeaders = leadersEnabled && type !== "company";
                     <if(site.get("leaders.alias"))>
                       <leaders-contextual content-id=id />
                     </if>
-                    <if(GAM)>
-                      <marko-web-gam-display-ad id="gpt-ad-rail2" />
-                    </if>
+                    <shared-gam-display-ad id="gpt-ad-rail2" />
                   </else>
                 </aside>
               </div>
