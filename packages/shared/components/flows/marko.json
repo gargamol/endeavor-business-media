@@ -40,6 +40,16 @@
     "@modifiers": "array",
     "@attrs": "object"
   },
+  "<shared-content-hero-flow>": {
+    "template": "./content-hero.marko",
+    "<list>": {},
+    "<native-x>": {
+      "@index": "number",
+      "@name": "string",
+      "@aliases": "array"
+    },
+    "@nodes": "array"
+  },
   "<shared-magazine-issue-archive-flow>": {
     "template": "./magazine-issue-archive.marko",
     "<node>": {
