@@ -1,0 +1,50 @@
+{
+  "<shared-content-load-more-card-deck-list-flow>": {
+    "template": "./card-deck-list.marko",
+    "@nodes": "array",
+    "<card-deck>": {
+      "<native-x>": {
+        "@index": "number",
+        "@name": "string",
+        "@aliases": "array"
+      },
+      "<adunit>": {
+        "@aliases": "array"
+      }
+    },
+    "<list>": {
+      "<native-x>": {
+        "@index": "number",
+        "@name": "string",
+        "@aliases": "array"
+      },
+      "<adunit>": {
+        "@aliases": "array"
+      }
+    }
+  },
+  "<shared-content-load-more-card-deck-flow>": {
+    "template": "./card-deck.marko",
+    "<native-x>": {
+      "@index": "number",
+      "@name": "string",
+      "@aliases": "array"
+    },
+    "<adunit>": {
+      "@aliases": "array"
+    },
+    "@nodes": "array"
+  },
+  "<shared-content-load-more-list-card-deck-flow>": {
+    "template": "./list-card-deck.marko",
+    "<native-x>": {
+      "@index": "number",
+      "@name": "string",
+      "@aliases": "array"
+    },
+    "<adunit>": {
+      "@aliases": "array"
+    },
+    "@nodes": "array"
+  }
+}
