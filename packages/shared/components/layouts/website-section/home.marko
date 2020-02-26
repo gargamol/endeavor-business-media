@@ -50,12 +50,7 @@ $ const adSlots = isFunction(input.adSlots) ? input.adSlots : ({ aliases }) => (
     <else>
       <shared-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
 
-      <marko-web-query|{ nodes }|
-        name="website-optioned-content"
-        params={ sectionId: id, optionName: "Pinned", limit: 5, requiresImage: true, queryFragment }
-      >
-        <shared-content-hero-flow nodes=nodes />
-      </marko-web-query>
+      <shared-content-hero-block id=id />
     </else>
   </@page>
 
