@@ -22,6 +22,20 @@
     },
     "@limit": "number"
   },
+  "<shared-content-hero-block>": {
+    "template": "./content-hero.marko",
+    "<query>": {
+      "@params": "object"
+    },
+    "<hero>": {
+      "<card>": {},
+      "<list>": {}
+    },
+    "@id": {
+      "type": "number",
+      "required": true
+    }
+  },
   "<shared-magazine-latest-issue-block>": {
     "template": "./magazine-latest-issue.marko",
     "@publication-id": {
