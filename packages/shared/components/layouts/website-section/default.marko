@@ -1,5 +1,7 @@
 import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
+import { getAsObject } from "@base-cms/object-path";
 import { isFunction } from "@base-cms/utils";
+import defaultValue from "@base-cms/marko-core/utils/default-value";
 import queryFragment from "../../../graphql/fragments/content-list";
 
 $ const { site, GAM } = out.global;
@@ -11,7 +13,9 @@ $ const {
 } = input;
 
 $ const adSlots = isFunction(input.adSlots) ? input.adSlots : ({ aliases }) => ({
-  "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
+  "gpt-ad-lb1": GAM.getAdUnit({ name: "lb1", aliases }),
+  "gpt-ad-rail1": GAM.getAdUnit({ name: "rail1", aliases }),
+  "gpt-ad-rail2": GAM.getAdUnit({ name: "rail2", aliases }),
 });
 
 <marko-web-website-section-page-layout id=id alias=alias name=name>
@@ -51,6 +55,21 @@ $ const adSlots = isFunction(input.adSlots) ? input.adSlots : ({ aliases }) => (
       <shared-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
 
       <shared-content-hero-block id=id />
+
+      <div class="row">
+        <div class="col-lg-8 mb-block">
+          <shared-website-section-list-block alias=alias>
+            <@query-params limit=7 skip=5 />
+            <@header>Featured</@header>
+            <@native-x index=6 />
+          </shared-website-section-list-block>
+        </div>
+
+        <div class="col-lg-4 page-rail">
+          <shared-gam-display-ad id="gpt-ad-rail1" />
+          <shared-gam-display-ad id="gpt-ad-rail2" />
+        </div>
+      </div>
     </else>
   </@page>
 
@@ -62,18 +81,18 @@ $ const adSlots = isFunction(input.adSlots) ? input.adSlots : ({ aliases }) => (
       <marko-web-resolve-page|{ data: section }| node=pageNode>
         $ const aliases = hierarchyAliases(section);
         $ const adunit = { aliases };
-        <marko-web-load-more
-          component-name="shared-content-load-more-card-deck-list-flow"
-          component-input={
-            cardDeck: { adunit },
-            list: { adunit },
-          }
-          fragment-name="shared-content-list"
-          query-name="website-scheduled-content"
-          query-params={ sectionId: id, limit: 14, skip: 5 }
-          max-pages=0
-          page-input={ for: "website-section", id }
-        />
+        $ const loadMore = getAsObject(input, "loadMore");
+        <if(defaultValue(loadMore.enabled, true))>
+          <shared-scheduled-content-load-more-block
+            name=defaultValue(loadMore.name, "card-deck-list")
+            section-id=id
+            max-pages=loadMore.maxPages
+            fragment-name=loadMore.fragmentName
+          >
+            <@query-params ...defaultValue(loadMore.queryParams, { limit: 14, skip: 12 }) />
+            <@component-input ..defaultValue(loadMore.componentInput, { cardDeck: { aliases }, list: { aliases } }) />
+          </shared-scheduled-content-load-more-block>
+        </if>
       </marko-web-resolve-page>
     </else>
   </@below-page>
