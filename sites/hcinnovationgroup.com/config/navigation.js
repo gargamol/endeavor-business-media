@@ -32,6 +32,7 @@ module.exports = {
     items: [
       { href: '/page/about-us', label: 'About Us' },
       { href: 'https://endeavor.swoogo.com/marketing-solutions', label: 'Advertise', target: '_blank' },
+      { href: 'https://endeavor.dragonforms.com/loading.do?omedasite=EBM_DoNotSell', label: 'California Do Not Sell', target: '_blank' },
       { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
       { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
     ],
