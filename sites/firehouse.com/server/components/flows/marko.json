@@ -35,6 +35,8 @@
       "type": "boolean",
       "default-value": false
     },
+    "@flush-x": "boolean",
+    "@flush-y": "boolean",
     "@inner-justified": {
       "type": "boolean",
       "default-value": true

@@ -10,6 +10,8 @@ const channel = require('../templates/website-section/channel');
 const runSurveys = require('../templates/website-section/run-surveys');
 const anniversary = require('../templates/website-section/anniversary');
 const valorAwards = require('../templates/website-section/valor-awards');
+const jobs = require('../templates/website-section/jobs/index');
+const jobsSubmit = require('../templates/website-section/jobs/submit');
 
 const channelAliases = [
   'leadership',
@@ -23,6 +25,16 @@ const channelAliases = [
 ];
 
 module.exports = (app) => {
+  app.get('/:alias(careers-education/jobs)', withWebsiteSection({
+    template: jobs,
+    queryFragment,
+  }));
+  app.get('/:alias(careers-education/jobs/submit)', withWebsiteSection({
+    aliasResolver: () => 'jobs',
+    redirectOnPathMismatch: false,
+    template: jobsSubmit,
+    queryFragment,
+  }));
   app.get('/:alias(leaders)', withWebsiteSection({
     template: leaders,
     queryFragment: leadersFragment,

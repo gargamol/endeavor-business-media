@@ -54,6 +54,7 @@ module.exports = {
     {
       label: 'Resources',
       items: [
+        { href: '/careers-education/jobs', label: 'Jobs' },
         { href: 'https://forums.firehouse.com', label: 'Forums', target: '_blank' },
         { href: '/magazine', label: 'In Print' },
         { href: '/shiftcalendar', label: 'Shift Calendar' },
