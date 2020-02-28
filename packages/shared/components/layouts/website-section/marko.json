@@ -41,5 +41,8 @@
   },
   "<shared-website-section-page-latest-with-directory-layout>": {
     "template": "./latest-with-directory.marko"
+  },
+  "<shared-website-section-page-card-deck-list-layout>": {
+    "template": "./card-deck-list.marko"
   }
 }
