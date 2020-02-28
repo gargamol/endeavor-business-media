@@ -2,6 +2,7 @@
   "<shared-website-section-page-default-layout>": {
     "template": "./default.marko",
     "<head>": {},
+    "<in-head>": {},
     "<above-container>": {},
 
     "<page>": {},
@@ -34,7 +35,9 @@
       "type": "object",
       "required": true
     },
-    "@ad-slots": "function"
+    "@ad-slots": "function",
+    "@with-oop-ads": "boolean",
+    "@with-footer-ad": "boolean"
   },
   "<shared-website-section-page-latest-with-directory-layout>": {
     "template": "./latest-with-directory.marko"
