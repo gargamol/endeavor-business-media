@@ -10,7 +10,8 @@ $ const queryParams = {
 };
 
 <marko-web-load-more
-  component-name=`shared-content-load-more-${input.name}-flow`
+  header=input.header
+  component-name=`shared-content-${input.name}-flow`
   component-input=input.componentInput
   fragment-name=fragmentName
   query-name="website-scheduled-content"

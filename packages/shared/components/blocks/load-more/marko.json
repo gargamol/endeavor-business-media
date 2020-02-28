@@ -3,6 +3,7 @@
     "template": "./scheduled-content.marko",
     "<query-params>":  {},
     "<component-input>": {},
+    "@header": "string",
     "@name": {
       "type": "string",
       "required": true
