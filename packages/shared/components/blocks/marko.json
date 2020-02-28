@@ -42,6 +42,15 @@
       "required": true
     }
   },
+  "<shared-featured-companies-block>": {
+    "template": "./featured-companies.marko",
+    "<query-params>": {},
+    "<header>": {},
+    "@section-id": {
+      "type": "number",
+      "required": true
+    }
+  },
   "<shared-magazine-latest-issue-block>": {
     "template": "./magazine-latest-issue.marko",
     "@publication-id": {
