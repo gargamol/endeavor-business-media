@@ -26,5 +26,27 @@
     },
     "@max-pages": "number",
     "@fragment-name": "string"
+  },
+  "<shared-content-page-load-more-block>": {
+    "template": "./content-page.marko",
+    "<content>": {
+      "@id": "string",
+      "@type": "string",
+      "@name": "string"
+    },
+    "<section>": {
+      "@id": "string",
+      "@name": "string"
+    },
+    "<component-input>": {},
+    "@flow": {
+      "type": "string",
+      "required": true
+    },
+    "@limit": "number",
+    "@skip": "number",
+    "@aliases": "array",
+    "@max-pages": "number",
+    "@fragment-name": "string"
   }
 }
