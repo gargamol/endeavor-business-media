@@ -1,6 +1,12 @@
 {
-  "<shared-published-content-page-feed-layout>": {
-    "template": "./feed.marko",
+  "<shared-published-content-page-list-layout>": {
+    "template": "./list.marko",
+    "<query-params>": {},
+    "@title": "string",
+    "@description": "string"
+  },
+  "<shared-published-content-page-card-deck-layout>": {
+    "template": "./card-deck.marko",
     "<query-params>": {},
     "@title": "string",
     "@description": "string"
