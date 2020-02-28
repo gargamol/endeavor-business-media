@@ -7,13 +7,16 @@ $body-bg: #fff;
 
 @import "./core";
 
-// @todo confirm if this is still in use.
+
+.node {
+  &--sponsored {
+    background-color: transparent;
+  }
+}
+
 .node-list {
-  &.sponsored {
+  &--sponsored {
     background-color: #f0f0f0;
-    .node {
-      background-color: transparent;
-    }
   }
 }
 
