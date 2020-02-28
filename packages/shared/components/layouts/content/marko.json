@@ -1,6 +1,6 @@
 {
-  "<shared-content-page-layout>": {
-    "template": "./index.marko",
+  "<shared-content-page-default-layout>": {
+    "template": "./default.marko",
     "<head>": {},
     "<above-container>": {},
 
@@ -9,6 +9,8 @@
     "<section-body>": {},
     "<body-contents>": {},
     "<body-rail>": {},
+    "<below-wrapper>": {},
+    "<load-more>": {},
 
     "<below-page>": {},
     "<foot>": {},
