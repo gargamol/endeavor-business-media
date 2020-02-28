@@ -1,0 +1,8 @@
+{
+  "<shared-published-content-page-feed-layout>": {
+    "template": "./feed.marko",
+    "<query-params>": {},
+    "@title": "string",
+    "@description": "string"
+  }
+}
