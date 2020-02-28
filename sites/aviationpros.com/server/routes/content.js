@@ -1,8 +1,9 @@
 const { withContent } = require('@base-cms/marko-web/middleware');
-const content = require('../templates/content');
+const queryFragment = require('@endeavor-business-media/package-shared/graphql/fragments/content-page');
+const content = require('@endeavor-business-media/package-shared/templates/content');
+
 const company = require('../templates/content/company');
 const whitepaper = require('../templates/content/whitepaper');
-const queryFragment = require('../graphql/fragments/content-page');
 
 module.exports = (app) => {
   app.get('/*?whitepaper/:id(\\d{8})*', withContent({

@@ -29,6 +29,7 @@
     "@base-cms/utils": "^1.9.0",
     "@base-cms/web-cli": "^1.20.4",
     "@endeavor-business-media/package-common": "^1.8.7",
+    "@endeavor-business-media/package-directory": "^1.8.7",
     "@endeavor-business-media/package-inquiry": "^1.8.6",
     "@endeavor-business-media/package-leaders": "^1.8.2",
     "@endeavor-business-media/package-shared": "^1.8.7",
