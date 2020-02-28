@@ -43,16 +43,18 @@ $ const displayAds = defaultValue(input.displayAds, true);
       <shared-gam-define-display-ad
         name="load-more"
         size=[300, 250]
-        aliases=aliases
         modifiers=["in-card"]
+        ...input.adunit
+        aliases=aliases
       />
     </@slot>
     <@slot position="after" index=6>
       <shared-gam-define-display-ad
         name="load-more"
         size=[300, 250]
-        aliases=aliases
         modifiers=["in-card"]
+        ...input.adunit
+        aliases=aliases
       />
     </@slot>
   </if>

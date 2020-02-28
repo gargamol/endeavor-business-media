@@ -46,14 +46,14 @@ $ const adSlots = isFunction(input.adSlots) ? input.adSlots : ({ aliases }) => (
         name="website-scheduled-content"
         params={ sectionId: id, limit: 14, queryFragment }
       >
-        <shared-content-load-more-card-deck-list-flow nodes=nodes>
+        <shared-content-card-deck-list-flow nodes=nodes>
           <@card-deck>
             <@native-x index=2 name="default" aliases=aliases />
           </@card-deck>
           <@list>
             <@native-x index=2 name="default" aliases=aliases />
           </@list>
-        </shared-content-load-more-card-deck-list-flow>
+        </shared-content-card-deck-list-flow>
       </marko-web-query>
     </marko-web-resolve-page>
   </@page>
