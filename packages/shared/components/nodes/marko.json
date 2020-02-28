@@ -59,5 +59,21 @@
 
     "@modifiers": "array",
     "@attrs": "object"
+  },
+  "<shared-contact-us-list-node>": {
+    "template": "./contact-us-list.marko",
+    "<image>": {},
+    "@node": "object",
+
+    "@image-position": "string",
+    "@card": "boolean",
+    "@flush": "boolean",
+    "@flush-x": "boolean",
+    "@flush-y": "boolean",
+    "@full-height": "boolean",
+
+    "@modifiers": "array",
+    "@attrs": "object",
+    "@link-attrs": "object"
   }
 }
