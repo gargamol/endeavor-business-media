@@ -18,6 +18,7 @@ $ const adSlots = isFunction(input.adSlots) ? input.adSlots : ({ aliases }) => (
 $ const leadersEnabled = Boolean(site.get("leaders.alias"));
 $ const displayLeaders = leadersEnabled && type !== "company";
 $ const displayAds = defaultValue(input.displayAds, true);
+$ const displayRelatedContent = defaultValue(input.displayRelatedContent, ["company", "contact", "webinar"].includes(type) ? false : true);
 
 <marko-web-content-page-layout id=id type=type>
   <@head>
@@ -108,7 +109,7 @@ $ const displayAds = defaultValue(input.displayAds, true);
                       <shared-content-page-right-rail
                         display-ads=displayAds
                         page-node=pageNode
-                        display-related-content=(type !== "company")
+                        display-related-content=displayRelatedContent
                         ...getAsObject(input, "rightRail")
                       />
                     </else>
