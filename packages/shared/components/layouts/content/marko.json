@@ -26,6 +26,7 @@
       "type": "object",
       "required": true
     },
+    "@display-ads": "boolean",
     "@ad-slots": "function",
     "@display-primary-image": "boolean",
     "@display-photoswipe": "boolean"
