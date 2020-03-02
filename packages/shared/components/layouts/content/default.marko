@@ -65,7 +65,7 @@ $ const displayAds = defaultValue(input.displayAds, true);
           <shared-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
         </if>
 
-        <marko-web-page-wrapper>
+        <marko-web-page-wrapper class="mb-block">
           <@section>
             <if(input.sectionHeader)>
               <${input.sectionHeader} ...response />
@@ -109,6 +109,7 @@ $ const displayAds = defaultValue(input.displayAds, true);
                         display-ads=displayAds
                         page-node=pageNode
                         display-related-content=(type !== "company")
+                        ...getAsObject(input, "rightRail")
                       />
                     </else>
                   </else>
@@ -116,39 +117,25 @@ $ const displayAds = defaultValue(input.displayAds, true);
               </div>
             </else>
           </@section>
-
-          <if(type === "company")>
-            <@section>
-              <div class="row">
-                <div class="col">
-                  <shared-company-content-list-block company-id=id>
-                    <@header>Products & Press Releases</@header>
-                    <@list class="mb-block" />
-                    <@query-params include-content-types=["Product", "PressRelease"] />
-                  </shared-company-content-list-block>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <shared-company-content-list-block company-id=id>
-                    <@header>Articles & News</@header>
-                    <@list class="mb-block" />
-                    <@query-params include-content-types=["Article", "Blog", "MediaGallery", "News"] />
-                  </shared-company-content-list-block>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <shared-company-content-list-block company-id=id>
-                    <@header>Videos & Resources</@header>
-                    <@list class="mb-block" />
-                    <@query-params include-content-types=["Video", "Whitepaper", "Document"] />
-                  </shared-company-content-list-block>
-                </div>
-              </div>
-            </@section>
-          </if>
         </marko-web-page-wrapper>
+
+        <if(type === "company")>
+          <shared-company-content-list-block company-id=id>
+            <@header>Products & Press Releases</@header>
+            <@list class="mb-block" />
+            <@query-params include-content-types=["Product", "PressRelease"] />
+          </shared-company-content-list-block>
+          <shared-company-content-list-block company-id=id>
+            <@header>Articles & News</@header>
+            <@list class="mb-block" />
+            <@query-params include-content-types=["Article", "Blog", "MediaGallery", "News"] />
+          </shared-company-content-list-block>
+          <shared-company-content-list-block company-id=id>
+            <@header>Videos & Resources</@header>
+            <@list class="mb-block" />
+            <@query-params include-content-types=["Video", "Whitepaper", "Document"] />
+          </shared-company-content-list-block>
+        </if>
 
         <if(input.belowWrapper)>
           <${input.belowWrapper} ...response />
@@ -165,27 +152,39 @@ $ const displayAds = defaultValue(input.displayAds, true);
       $ const loadMore = getAsObject(input, "loadMore");
       <if(defaultValue(loadMore.enabled, true))>
         <marko-web-resolve-page|{ resolved, data: content }| node=pageNode>
-          $ const section = resolved.getAsObject("primarySection");
-          $ const aliases = hierarchyAliases(section);
-          $ const adunit = { aliases };
-          $ const componentInput = merge({
-            displayAds,
-            cardDeck: { adunit, nativeX: { index: 0, name: "default", aliases } },
-            list: { adunit },
-          }, getAsObject(loadMore, "componentInput"));
+          <if(type === "contact")>
+            <shared-contact-page-load-more-block>
+              <@content id=id type=type name=content.name />
+            </shared-contact-page-load-more-block>
+          </if>
+          <else-if(type === "company")>
+            <shared-company-page-load-more-block>
+              <@content id=id type=type name=content.name />
+            </shared-company-page-load-more-block>
+          </else-if>
+          <else>
+            $ const section = resolved.getAsObject("primarySection");
+            $ const aliases = hierarchyAliases(section);
+            $ const adunit = { aliases };
+            $ const componentInput = merge({
+              displayAds,
+              cardDeck: { adunit, nativeX: { index: 0, name: "default", aliases } },
+              list: { adunit },
+            }, getAsObject(loadMore, "componentInput"));
 
-          <shared-content-page-load-more-block
-            flow=loadMore.flow
-            max-pages=loadMore.maxPages
-            fragment-name=loadMore.fragmentName
-            aliases=aliases
-            limit=defaultValue(loadMore.limit, 14)
-            skip=defaultValue(loadMore.skip, 5)
-          >
-            <@content id=id type=type name=content.name />
-            <@section id=section.id name=section.name />
-            <@component-input ...componentInput />
-          </shared-content-page-load-more-block>
+            <shared-content-page-load-more-block
+              flow=loadMore.flow
+              max-pages=loadMore.maxPages
+              fragment-name=loadMore.fragmentName
+              aliases=aliases
+              limit=defaultValue(loadMore.limit, 14)
+              skip=defaultValue(loadMore.skip, 5)
+            >
+              <@content id=id type=type name=content.name />
+              <@section id=section.id name=section.name />
+              <@component-input ...componentInput />
+            </shared-content-page-load-more-block>
+          </else>
         </marko-web-resolve-page>
       </if>
     </else>

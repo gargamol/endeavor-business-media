@@ -2,7 +2,7 @@ import defaultDescription from "@base-cms/marko-web/utils/published-content/desc
 import { isFunction } from "@base-cms/utils";
 import queryFragment from "../../../graphql/fragments/content-list";
 
-$ const { config } = out.global;
+$ const { config, GAM } = out.global;
 $ const { id, alias, name, pageNode } = input;
 $ const description = defaultDescription(name, config);
 

@@ -47,19 +47,19 @@ $ const directory = {
         <shared-gam-display-ad id="gpt-ad-rail1" />
         <shared-gam-display-ad id="gpt-ad-rail2" />
       </div>
-      <div class="col-lg-8 mb-block">
+      <div class="col-lg-8">
         <shared-website-section-list-block alias=alias>
           <@header>Featured Companies</@header>
           <@query-params option-name="Featured" limit=3 include-content-types=["Company"] />
-          <@list>
+          <@list inner-justified=false class="mb-block">
             <@node image-position="left" with-teaser=true />
           </@list>
         </shared-website-section-list-block>
 
         <shared-website-section-list-block alias=alias>
           <@header>Latest Companies</@header>
-          <@query-params limit=8 include-content-types=["Company"] />
-          <@list>
+          <@query-params limit=5 include-content-types=["Company"] />
+          <@list inner-justified=false class="mb-block">
             <@node image-position="left" with-teaser=true />
           </@list>
         </shared-website-section-list-block>
@@ -69,8 +69,8 @@ $ const directory = {
 
   <@below-page>
     <shared-scheduled-content-load-more-block name="list" section-id=id>
-      <@query-params include-content-types=["Company"] limit=18 skip=8 />
-      <@component-input inner-justified=false node={ imagePosition: "left", withTeaser: true } />
+      <@query-params include-content-types=["Company"] limit=18 skip=5 />
+      <@component-input inner-justified=false class="mb-block" node={ imagePosition: "left", withTeaser: true } />
     </shared-scheduled-content-load-more-block>
   </@below-page>
 </shared-website-section-page-default-layout>

@@ -22,11 +22,25 @@
   "<shared-website-section-list-block>": {
     "template": "./website-section-list.marko",
     "<native-x>": {},
-    "<list>": {},
+    "<list>": {
+      "<node>": {}
+    },
     "<query-params>": {},
     "<header>": {},
     "@alias": {
       "type": "string",
+      "required": true
+    }
+  },
+  "<shared-published-content-list-block>": {
+    "template": "./published-content-list.marko",
+    "<list>": {
+      "<node>": {}
+    },
+    "<query-params>": {},
+    "<header>": {},
+    "@content-types": {
+      "type": "array",
       "required": true
     }
   },
