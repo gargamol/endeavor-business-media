@@ -1,10 +1,8 @@
 import { getAsObject, get } from "@base-cms/object-path";
-import defaultValue from "@base-cms/marko-core/utils/default-value";
 import queryFragment from "../../graphql/fragments/content-list";
 import sectionFragment from "../../graphql/fragments/blocks/website-section-list";
 
 $ const { alias } = input;
-$ const limit = defaultValue(input.limit, 4);
 $ const nativeX = {
   enabled: true,
   index: 3,
