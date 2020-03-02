@@ -1,0 +1,39 @@
+$ const { config, site } = out.global;
+$ const gcse = site.get('gcse');
+
+$ const type = "search";
+$ const title = "Search";
+$ const description = `Search ${config.siteName()}`;
+
+<marko-web-default-page-layout type=type title=title description=description>
+  <@head>
+    <marko-web-gtm-default-context|{ context }| type=type>
+      <marko-web-gtm-push data=context />
+    </marko-web-gtm-default-context>
+  </@head>
+  <@page>
+    <shared-gam-define-display-ad name="lb1" modifiers=["top-of-page"] />
+
+    <marko-web-page-wrapper class="mb-block">
+      <@section>
+        <div class="row">
+          <div class="col">
+            <default-theme-breadcrumbs-with-home>
+              <@item>${title}</@item>
+            </default-theme-breadcrumbs-with-home>
+            <h1 class="page-wrapper__title">${description}</h1>
+          </div>
+        </div>
+      </@section>
+      <@section>
+        <div class="row">
+          <div class="col">
+            <if(gcse)>
+              <marko-web-gcse-simple-search-box api-key=gcse.getApiKey() />
+            </if>
+          </div>
+        </div>
+      </@section>
+    </marko-web-page-wrapper>
+  </@page>
+</marko-web-default-page-layout>

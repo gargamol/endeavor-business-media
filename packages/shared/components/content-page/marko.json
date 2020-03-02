@@ -1,0 +1,20 @@
+{
+  "<shared-content-page-header>": {
+    "template": "./header.marko",
+    "@content": "object"
+  },
+  "<shared-content-page-contents>": {
+    "template": "./contents.marko",
+    "@content": "object"
+  },
+  "<shared-content-page-right-rail>": {
+    "template": "./right-rail.marko",
+    "@page-node": {
+      "type": "object",
+      "required": true
+    },
+    "@display-related-content": "boolean",
+    "@display-ads": "boolean",
+    "@ad-layout": "string"
+  }
+}
