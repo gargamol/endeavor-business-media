@@ -1,0 +1,47 @@
+import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
+import GAM from "../../../../config/gam";
+
+$ const { id, alias, name, pageNode } = data;
+
+<marko-web-website-section-page-layout id=id alias=alias name=name>
+  <@head>
+    <marko-web-gtm-website-section-context|{ context }| alias=alias>
+      <marko-web-gtm-push data=context />
+    </marko-web-gtm-website-section-context>
+    <marko-web-resolve-page|{ data: section }| node=pageNode>
+      $ const aliases = hierarchyAliases(section);
+      $ const adSlots = {
+          "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
+        }
+      <marko-web-gam-slots slots=adSlots />
+    </marko-web-resolve-page>
+  </@head>
+  <@page>
+    <marko-web-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
+
+    <marko-web-resolve-page|{ data: section }| node=pageNode>
+      <marko-web-page-wrapper>
+        <@section>
+          <div class="row">
+            <div class="col">
+              <default-theme-website-section-breadcrumbs section=section />
+              <h1 class="page-wrapper__title">
+                Firehouse Submit A Job
+              </h1>
+            </div>
+          </div>
+        </@section>
+        <@section>
+          <div
+            id="wufoo-r1t17men1u0aryr">
+            Fill out my <a href="https://cygnuscorporate.wufoo.com/forms/r1t17men1u0aryr">online form</a>.
+          </div>
+          <script type="text/javascript">
+            var r1t17men1u0aryr;
+            (function(d, t) { var s = d.createElement(t), options = { 'userName':'cygnuscorporate', 'formHash':'r1t17men1u0aryr', 'autoResize':true, 'height':'1882', 'async':true, 'host':'wufoo.com', 'header':'show', 'ssl':true }; s.src = ('https:' == d.location.protocol ?'https://':'http://') + 'secure.wufoo.com/scripts/embed/form.js'; s.onload = s.onreadystatechange = function() { var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return; try { r1t17men1u0aryr = new WufooForm(); r1t17men1u0aryr.initialize(options); r1t17men1u0aryr.display(); } catch (e) { } }; var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr); })(document, 'script');
+          </script>
+        </@section>
+      </marko-web-page-wrapper>
+    </marko-web-resolve-page>
+  </@page>
+</marko-web-website-section-page-layout>

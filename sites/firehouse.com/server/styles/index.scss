@@ -56,9 +56,34 @@ $pswp__root-z-index: $theme-site-header-z-index + 1;
   }
 }
 
+.firehouse-jobs {
+  margin-bottom: map-get($spacers, block);
+  &__button {
+    @extend .btn;
+    @extend .btn-primary;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: $light;
+    text-transform: uppercase;
+  }
+  &__link {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: $dark;
+  }
+}
+
 // @todo this should be removed once added to the theme
 .page-contents {
   &__content-body a {
     text-decoration: underline;
+  }
+}
+
+.page-wrapper {
+  &__section {
+    &--bottom-border {
+      @include marko-web-node-list-border(border-bottom, $width: 2px);
+    }
   }
 }
