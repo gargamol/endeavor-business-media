@@ -14,6 +14,7 @@
       "required": true
     },
     "@display-related-content": "boolean",
+    "@display-ads": "boolean",
     "@ad-layout": "string"
   }
 }

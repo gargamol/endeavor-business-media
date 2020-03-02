@@ -3,11 +3,14 @@ import defaultValue from "@base-cms/marko-core/utils/default-value";
 
 $ const { site } = out.global;
 $ const displayRelatedContent = defaultValue(input.displayRelatedContent, true);
+$ const displayAds = defaultValue(input.displayAds, true)
 $ const adLayout = defaultValue(input.adLayout, "standard");
 
-<shared-gam-display-ad id="gpt-ad-rail1" />
-<if(adLayout === "variant-a")>
-  <shared-gam-display-ad id="gpt-ad-rail2" />
+<if(displayAds)>
+  <shared-gam-display-ad id="gpt-ad-rail1" />
+  <if(adLayout === "variant-a")>
+    <shared-gam-display-ad id="gpt-ad-rail2" />
+  </if>
 </if>
 
 <marko-web-resolve-page|{ data: content, resolved }| node=input.pageNode>
@@ -26,6 +29,6 @@ $ const adLayout = defaultValue(input.adLayout, "standard");
   </if>
 </marko-web-resolve-page>
 
-<if(adLayout === "standard")>
+<if(displayAds && adLayout === "standard")>
   <shared-gam-display-ad id="gpt-ad-rail2" />
 </if>
