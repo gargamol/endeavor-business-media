@@ -102,6 +102,38 @@ $ const displayLeaders = leadersEnabled && type !== "company";
               </div>
             </else>
           </@section>
+
+          <if(type === "company")>
+            <@section>
+              <div class="row">
+                <div class="col">
+                  <shared-company-content-list-block company-id=id>
+                    <@header>Products & Press Releases</@header>
+                    <@list class="mb-block" />
+                    <@query-params include-content-types=["Product", "PressRelease"] />
+                  </shared-company-content-list-block>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <shared-company-content-list-block company-id=id>
+                    <@header>Articles & News</@header>
+                    <@list class="mb-block" />
+                    <@query-params include-content-types=["Article", "Blog", "MediaGallery", "News"] />
+                  </shared-company-content-list-block>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <shared-company-content-list-block company-id=id>
+                    <@header>Videos & Resources</@header>
+                    <@list class="mb-block" />
+                    <@query-params include-content-types=["Video", "Whitepaper", "Document"] />
+                  </shared-company-content-list-block>
+                </div>
+              </div>
+            </@section>
+          </if>
         </marko-web-page-wrapper>
 
         <if(input.belowWrapper)>
