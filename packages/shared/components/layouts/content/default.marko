@@ -109,6 +109,7 @@ $ const displayAds = defaultValue(input.displayAds, true);
                         display-ads=displayAds
                         page-node=pageNode
                         display-related-content=(type !== "company")
+                        ...getAsObject(input, "rightRail")
                       />
                     </else>
                   </else>
