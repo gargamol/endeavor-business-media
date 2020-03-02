@@ -30,6 +30,16 @@
       "required": true
     }
   },
+  "<shared-company-content-list-block>": {
+    "template": "./company-content-list.marko",
+    "<list>": {},
+    "<query-params>": {},
+    "<header>": {},
+    "@company-id": {
+      "type": "string",
+      "required": true
+    }
+  },
   "<shared-content-hero-block>": {
     "template": "./content-hero.marko",
     "<query-params>": {},
