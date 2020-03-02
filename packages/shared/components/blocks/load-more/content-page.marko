@@ -9,31 +9,7 @@ $ const flow = defaultValue(input.flow, "card-deck-list");
 $ const componentName = `shared-content-${flow}-flow`;
 $ const fragmentName = defaultValue(input.fragmentName, "shared-content-list");
 
-<if(content.type === "contact")>
-  <marko-web-load-more
-    header=`More from ${content.name}`
-    component-name=componentName
-    component-input=componentInput
-    fragment-name=fragmentName
-    query-name="all-author-content"
-    query-params={ contactId: content.id, limit, skip: 0 }
-    page-input={ for: "content", id: content.id, type: content.type }
-    max-pages=maxPages
-  />
-</if>
-<else-if(content.type === "company")>
-  <marko-web-load-more
-    header=`More from ${content.name}`
-    component-name=componentName
-    component-input=componentInput
-    fragment-name=fragmentName
-    query-name="all-company-content"
-    query-params={ companyId: content.id, limit, skip: 0 }
-    page-input={ for: "content", id: content.id, type: content.type }
-    max-pages=maxPages
-  />
-</else-if>
-<else-if(section.id)>
+<if(section.id)>
   <shared-scheduled-content-load-more-block
     name=flow
     section-id=section.id
@@ -44,4 +20,4 @@ $ const fragmentName = defaultValue(input.fragmentName, "shared-content-list");
     <@query-params exclude-content-ids=[content.id] limit=limit skip=skip />
     <@component-input ...componentInput />
   </shared-scheduled-content-load-more-block>
-</else-if>
+</if>

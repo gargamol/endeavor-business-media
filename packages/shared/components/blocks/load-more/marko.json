@@ -48,5 +48,21 @@
     "@aliases": "array",
     "@max-pages": "number",
     "@fragment-name": "string"
+  },
+  "<shared-contact-page-load-more-block>": {
+    "template": "./contact-page.marko",
+    "<content>": {
+      "@id": "string",
+      "@type": "string",
+      "@name": "string"
+    }
+  },
+  "<shared-company-page-load-more-block>": {
+    "template": "./company-page.marko",
+    "<content>": {
+      "@id": "string",
+      "@type": "string",
+      "@name": "string"
+    }
   }
 }
