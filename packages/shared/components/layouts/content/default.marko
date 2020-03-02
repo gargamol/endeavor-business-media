@@ -152,27 +152,39 @@ $ const displayAds = defaultValue(input.displayAds, true);
       $ const loadMore = getAsObject(input, "loadMore");
       <if(defaultValue(loadMore.enabled, true))>
         <marko-web-resolve-page|{ resolved, data: content }| node=pageNode>
-          $ const section = resolved.getAsObject("primarySection");
-          $ const aliases = hierarchyAliases(section);
-          $ const adunit = { aliases };
-          $ const componentInput = merge({
-            displayAds,
-            cardDeck: { adunit, nativeX: { index: 0, name: "default", aliases } },
-            list: { adunit },
-          }, getAsObject(loadMore, "componentInput"));
+          <if(type === "contact")>
+            <shared-contact-page-load-more-block>
+              <@content id=id type=type name=content.name />
+            </shared-contact-page-load-more-block>
+          </if>
+          <else-if(type === "company")>
+            <shared-company-page-load-more-block>
+              <@content id=id type=type name=content.name />
+            </shared-company-page-load-more-block>
+          </else-if>
+          <else>
+            $ const section = resolved.getAsObject("primarySection");
+            $ const aliases = hierarchyAliases(section);
+            $ const adunit = { aliases };
+            $ const componentInput = merge({
+              displayAds,
+              cardDeck: { adunit, nativeX: { index: 0, name: "default", aliases } },
+              list: { adunit },
+            }, getAsObject(loadMore, "componentInput"));
 
-          <shared-content-page-load-more-block
-            flow=loadMore.flow
-            max-pages=loadMore.maxPages
-            fragment-name=loadMore.fragmentName
-            aliases=aliases
-            limit=defaultValue(loadMore.limit, 14)
-            skip=defaultValue(loadMore.skip, 5)
-          >
-            <@content id=id type=type name=content.name />
-            <@section id=section.id name=section.name />
-            <@component-input ...componentInput />
-          </shared-content-page-load-more-block>
+            <shared-content-page-load-more-block
+              flow=loadMore.flow
+              max-pages=loadMore.maxPages
+              fragment-name=loadMore.fragmentName
+              aliases=aliases
+              limit=defaultValue(loadMore.limit, 14)
+              skip=defaultValue(loadMore.skip, 5)
+            >
+              <@content id=id type=type name=content.name />
+              <@section id=section.id name=section.name />
+              <@component-input ...componentInput />
+            </shared-content-page-load-more-block>
+          </else>
         </marko-web-resolve-page>
       </if>
     </else>
