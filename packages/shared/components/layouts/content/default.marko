@@ -65,7 +65,7 @@ $ const displayAds = defaultValue(input.displayAds, true);
           <shared-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
         </if>
 
-        <marko-web-page-wrapper>
+        <marko-web-page-wrapper class="mb-block">
           <@section>
             <if(input.sectionHeader)>
               <${input.sectionHeader} ...response />
@@ -117,39 +117,25 @@ $ const displayAds = defaultValue(input.displayAds, true);
               </div>
             </else>
           </@section>
-
-          <if(type === "company")>
-            <@section>
-              <div class="row">
-                <div class="col">
-                  <shared-company-content-list-block company-id=id>
-                    <@header>Products & Press Releases</@header>
-                    <@list class="mb-block" />
-                    <@query-params include-content-types=["Product", "PressRelease"] />
-                  </shared-company-content-list-block>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <shared-company-content-list-block company-id=id>
-                    <@header>Articles & News</@header>
-                    <@list class="mb-block" />
-                    <@query-params include-content-types=["Article", "Blog", "MediaGallery", "News"] />
-                  </shared-company-content-list-block>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <shared-company-content-list-block company-id=id>
-                    <@header>Videos & Resources</@header>
-                    <@list class="mb-block" />
-                    <@query-params include-content-types=["Video", "Whitepaper", "Document"] />
-                  </shared-company-content-list-block>
-                </div>
-              </div>
-            </@section>
-          </if>
         </marko-web-page-wrapper>
+
+        <if(type === "company")>
+          <shared-company-content-list-block company-id=id>
+            <@header>Products & Press Releases</@header>
+            <@list class="mb-block" />
+            <@query-params include-content-types=["Product", "PressRelease"] />
+          </shared-company-content-list-block>
+          <shared-company-content-list-block company-id=id>
+            <@header>Articles & News</@header>
+            <@list class="mb-block" />
+            <@query-params include-content-types=["Article", "Blog", "MediaGallery", "News"] />
+          </shared-company-content-list-block>
+          <shared-company-content-list-block company-id=id>
+            <@header>Videos & Resources</@header>
+            <@list class="mb-block" />
+            <@query-params include-content-types=["Video", "Whitepaper", "Document"] />
+          </shared-company-content-list-block>
+        </if>
 
         <if(input.belowWrapper)>
           <${input.belowWrapper} ...response />
