@@ -6,7 +6,7 @@ $ const content = getAsObject(input, "content");
 $ const images = getAsArray(content, "images.edges").map(edge => edge.node);
 $ const { id, type } = content;
 
-$ const displayPrimaryImage = ["whitepaper", "media-gallery"].includes(type) ? false : true;
+$ const displayPrimaryImage = ["media-gallery"].includes(type) ? false : true;
 $ const displayPhotoswipe = ["contact"].includes(type) ? false : true;
 $ const displayInquiry = (content) => {
   if (type === "company" && get(content, "enableRmi")) return true;
@@ -20,9 +20,9 @@ $ const displayInquiry = (content) => {
   </if>
   <else-if(displayPrimaryImage)>
     $ const isLogo = get(content, "primaryImage.isLogo");
-    <if(isLogo || type === "contact")>
+    <if(isLogo || type === "contact" || type === "whitepaper")>
       <marko-web-page-image
-        modifiers=modifiers=(type === "contact" ? [] : ["primary-image-inline"])
+        modifiers=(type === "contact" ? [] : ["primary-image-inline"])
         obj=content.primaryImage
         fluid=false
         width=250
