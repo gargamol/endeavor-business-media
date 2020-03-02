@@ -50,11 +50,13 @@ $ const displayInquiry = (content) => {
 
   <if(type === "webinar")>
     $ const isUpcoming = content.startDate > Date.now();
-    <default-theme-content-link-url
-      obj=content
-      label=(isUpcoming ? "Register for Webinar" : "View Webinar")
-      target="_blank"
-    />
+    <div class="mt-block">
+      <default-theme-content-link-url
+        obj=content
+        label=(isUpcoming ? "Register for Webinar" : "View Webinar")
+        target="_blank"
+      />
+    </div>
   </if>
 
   <if(displayInquiry(content))>
