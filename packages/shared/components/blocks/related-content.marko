@@ -12,14 +12,12 @@ $ const section = getAsObject(input, "section");
     <@header>Related</@header>
   </shared-content-list-flow>
 </marko-web-query>
-<if(!["contact", "company"].includes(content.type))>
-  <marko-web-query|{ nodes }|
-    name="website-scheduled-content"
-    params={ sectionId: section.id, excludeContentIds: [content.id], limit: 5, queryFragment }
-  >
-    <shared-content-list-flow inner-justified=false ...input.list nodes=nodes>
-      <@header>Latest in ${section.name}</@header>
-      <@native-x ...input.nativeX />
-    </shared-content-list-flow>
-  </marko-web-query>
-</if>
+<marko-web-query|{ nodes }|
+  name="website-scheduled-content"
+  params={ sectionId: section.id, excludeContentIds: [content.id], limit: 5, queryFragment }
+>
+  <shared-content-list-flow inner-justified=false ...input.list nodes=nodes>
+    <@header>Latest in ${section.name}</@header>
+    <@native-x ...input.nativeX />
+  </shared-content-list-flow>
+</marko-web-query>
