@@ -21,3 +21,18 @@ $pswp__root-z-index: $theme-site-header-z-index + 1 !default;
 .social-sharing {
   padding: 10px 0;
 }
+
+.inquiry-form {
+  margin-top: 0;
+
+  &--sticky-top {
+    @media (min-height: 820px) {
+      position: sticky;
+      @each $breakpoint, $width in sort-map-by-values($theme-site-header-breakpoints, desc) {
+        @media (max-width: $width) {
+          top: calculate-navbar-height-for($breakpoint);
+        }
+      }
+    }
+  }
+}
