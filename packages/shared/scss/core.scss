@@ -28,6 +28,11 @@ $pswp__root-z-index: $theme-site-header-z-index + 1 !default;
   &--sticky-top {
     @media (min-height: 820px) {
       position: sticky;
+
+      $sorted: sort-map-by-values($theme-site-header-breakpoints, desc);
+      $highest: nth($sorted, 1);
+      top: calculate-navbar-height-for($highest);
+
       @each $breakpoint, $width in sort-map-by-values($theme-site-header-breakpoints, desc) {
         @media (max-width: $width) {
           top: calculate-navbar-height-for($breakpoint);
