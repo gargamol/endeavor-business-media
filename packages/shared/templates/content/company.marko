@@ -56,6 +56,9 @@ $ const { id, type, pageNode } = data;
         </div>
 
         <div class="col-lg-4 page-rail">
+          $ const contacts = resolved.getEdgeNodesFor("publicContacts");
+          <shared-content-page-company-key-contacts contacts=contacts class="mb-block" />
+
           <if(resolved.get("enableRmi"))>
             <shared-inquiry-form node=content modifiers=["sticky-top"] />
           </if>

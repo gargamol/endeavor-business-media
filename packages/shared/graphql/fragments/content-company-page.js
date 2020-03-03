@@ -54,7 +54,7 @@ fragment ContentCompanyPageFragment on Content {
       alt
     }
 
-    contacts: publicContacts {
+    publicContacts {
       edges {
         node {
           id
