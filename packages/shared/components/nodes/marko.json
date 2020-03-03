@@ -76,8 +76,8 @@
     "@attrs": "object",
     "@link-attrs": "object"
   },
-  "<shared-author-card-node>": {
-    "template": "./author-card.marko",
+  "<shared-key-contact-card-node>": {
+    "template": "./key-contact-card.marko",
     "@node": "object",
     "@with-email": "boolean"
   }
