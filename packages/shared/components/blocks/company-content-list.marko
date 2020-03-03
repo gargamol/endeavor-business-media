@@ -15,6 +15,8 @@ $ const queryParams = {
     nodes=nodes
     header=input.header
   >
-    <@node image-position="left" with-teaser=true ...getAsObject(input, "list.node") />
+    <@node image-position="left" with-teaser=true ...getAsObject(input, "list.node")>
+      <@attribution display-company=false ...getAsObject(input, "list.node.attribution") />
+    </@node>
   </shared-content-list-flow>
 </marko-web-query>
