@@ -98,7 +98,12 @@ $ const adSlots = ({ aliases }) => ({
           <shared-gam-display-ad id="gpt-ad-rail1" />
 
           <if(resolved.get("enableRmi"))>
-            <shared-inquiry-form node=content modifiers=["sticky-top"] />
+            <marko-web-node-list collapsible=false modifiers=["sticky-top"]>
+              <@header>Request More Information</@header>
+              <@body>
+                <shared-inquiry-form node=content />
+              </@body>
+            </marko-web-node-list>
           </if>
         </div>
       </div>
