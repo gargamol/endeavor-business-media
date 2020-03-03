@@ -129,12 +129,12 @@ $ const displayRelatedContent = defaultValue(input.displayRelatedContent, ["comp
           <shared-company-content-list-block company-id=id>
             <@header>Articles & News</@header>
             <@list class="mb-block" />
-            <@query-params include-content-types=["Article", "Blog", "MediaGallery", "News"] />
+            <@query-params include-content-types=["Article", "Blog", "News"] />
           </shared-company-content-list-block>
           <shared-company-content-list-block company-id=id>
             <@header>Videos & Resources</@header>
             <@list class="mb-block" />
-            <@query-params include-content-types=["Video", "Whitepaper", "Document"] />
+            <@query-params include-content-types=["Video", "Whitepaper", "Webinar", "Document", "MediaGallery", "Podcast"] />
           </shared-company-content-list-block>
         </if>
 
