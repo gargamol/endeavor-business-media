@@ -2,11 +2,11 @@ import { getAsObject } from "@base-cms/object-path";
 
 $ const content = getAsObject(input, "node");
 
-<div class="inquiry-form">
+<marko-web-block name="inquiry-form" modifiers=input.modifiers>
   <div class="inquiry-form-header">Request More Information</div>
   <div class="inquiry-form-body">
     <p>Fill out the form below to request more information about <marko-web-content-name tag=null obj=content /></p>
     <hr>
     <marko-web-browser-component name="InquiryForm" props={ contentId: content.id, content }/>
   </div>
-</div>
+</marko-web-block>
