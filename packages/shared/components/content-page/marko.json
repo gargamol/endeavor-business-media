@@ -24,6 +24,7 @@
   },
   "<shared-content-page-company-details>": {
     "template": "./company/details.marko",
+    "<header>": {},
     "@content": "object"
   },
   "<shared-content-page-company-logo>": {

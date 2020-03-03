@@ -13,12 +13,20 @@ $ const fields = [
   { key: "servicesProvided", label: "Other services", tag: "p" },
 ];
 
-<for|field| of=fields>
-  $ const value = get(content, field.key);
-  <if(value)>
-    <div class=`${blockName}__field`>
-      <span class=`${blockName}__label`>${field.label}:</span>
-      <marko-web-obj-text tag=field.tag obj=content field=field.key type="content" html=true />
-    </div>
-  </if>
-</for>
+$ const mapped = fields.map(field => ({ ...field, value: get(content, field.key) })).filter(f => f.value);
+
+<if(mapped.length)>
+  <marko-web-block name=blockName>
+    <if(input.header)>
+      <${input.header} />
+    </if>
+    <for|field| of=mapped>
+      <marko-web-element name="field" block-name=blockName>
+        <marko-web-element tag="span" name="label" block-name=blockName>
+          ${field.label}:
+        </marko-web-element>
+        <marko-web-obj-text tag=field.tag obj=content field=field.key type="content" html=true />
+      </marko-web-element>
+    </for>
+  </marko-web-block>
+</if>
