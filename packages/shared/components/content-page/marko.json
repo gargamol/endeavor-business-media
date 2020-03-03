@@ -16,5 +16,13 @@
     "@display-related-content": "boolean",
     "@display-ads": "boolean",
     "@ad-layout": "string"
+  },
+  "<shared-content-page-company-details>": {
+    "template": "./company/details.marko",
+    "@content": "object"
+  },
+  "<shared-content-page-company-logo>": {
+    "template": "./company/logo.marko",
+    "@content": "object"
   }
 }
