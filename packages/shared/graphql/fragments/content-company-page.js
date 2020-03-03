@@ -6,7 +6,7 @@ fragment ContentCompanyPageFragment on Content {
   id
   type
   name
-  teaser(input: { maxLength: 0 })
+  teaser(input: { useFallback: false, maxLength: null })
   body
 
   siteContext {
