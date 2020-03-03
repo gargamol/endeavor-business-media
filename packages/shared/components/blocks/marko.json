@@ -46,7 +46,11 @@
   },
   "<shared-company-content-list-block>": {
     "template": "./company-content-list.marko",
-    "<list>": {},
+    "<list>": {
+      "<node>": {
+        "<attribution>": {}
+      }
+    },
     "<query-params>": {},
     "<header>": {},
     "@company-id": {

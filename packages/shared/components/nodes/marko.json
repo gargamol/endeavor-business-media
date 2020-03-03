@@ -3,6 +3,7 @@
     "template": "./content-list.marko",
     "<image>": {},
     "<title>": {},
+    "<attribution>": {},
     "@node": "object",
 
     "@image-position": "string",
@@ -21,6 +22,7 @@
     "template": "./content-card.marko",
     "<image>": {},
     "<title>": {},
+    "<attribution>": {},
     "@node": "object",
 
     "@image-position": "string",
