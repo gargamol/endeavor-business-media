@@ -5,7 +5,7 @@ $ const content = getAsObject(input, "content");
 <marko-web-load-more
   header=`All Content from ${content.name}`
   component-name="shared-content-card-deck-flow"
-  component-input={ displayAds: false, nativeX: { enabled: false } }
+  component-input={ displayAds: false, nativeX: { enabled: false }, node: { attribution: { displayCompany: false } } }
   fragment-name="shared-content-list"
   query-name="all-company-content"
   query-params={ companyId: content.id, limit: 12 }
