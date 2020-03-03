@@ -1,14 +1,30 @@
+import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
+
+$ const { GAM } = out.global;
 $ const { id, type, pageNode } = data;
 
-<!-- @todo fix ads and load more -->
+$ const adSlots = ({ aliases }) => ({
+  "gpt-ad-lb1": GAM.getAdUnit({ name: "company-takeover-lb1", aliases }),
+  "gpt-ad-rail1": GAM.getAdUnit({ name: "company-takeover-rail1", aliases }),
+});
 
 <shared-content-page-default-layout
   id=id
   type=type
   page-node=pageNode
-  display-ads=false
+  with-footer-ad=false
+  ad-slots=adSlots
 >
+  <@above-container>
+    <marko-web-resolve-page|{ data: content }| node=pageNode>
+      $ const aliases = hierarchyAliases(content.primarySection);
+      <shared-gam-out-of-page-ad name="company-takeover-reskin" aliases=aliases />
+    </marko-web-resolve-page>
+  </@above-container>
+
   <@page>
+    <shared-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
+
     <marko-web-resolve-page|{ data: content, resolved }| node=pageNode>
       $ const { socialLinks, ...contentSansSocial } = content;
 
@@ -78,6 +94,8 @@ $ const { id, type, pageNode } = data;
             contacts=resolved.getEdgeNodesFor("publicContacts")
             class="mb-block"
           />
+
+          <shared-gam-display-ad id="gpt-ad-rail1" />
 
           <if(resolved.get("enableRmi"))>
             <shared-inquiry-form node=content modifiers=["sticky-top"] />
