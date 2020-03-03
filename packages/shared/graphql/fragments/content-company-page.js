@@ -69,7 +69,7 @@ fragment ContentCompanyPageFragment on Content {
       }
     }
 
-    videos: youtubeVideos(input: { pagination: { limit: 3 } }) {
+    youtubeVideos(input: { pagination: { limit: 3 } }) {
       edges {
         node {
           id

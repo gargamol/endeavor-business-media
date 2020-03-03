@@ -11,7 +11,6 @@ $ const { id, type, pageNode } = data;
   <@page>
     <marko-web-resolve-page|{ data: content, resolved }| node=pageNode>
       $ const { socialLinks, ...contentSansSocial } = content;
-      $ const section = resolved.getAsObject("primarySection");
 
       <marko-web-page-wrapper class="mb-block">
         <@section>
@@ -46,6 +45,13 @@ $ const { id, type, pageNode } = data;
           <shared-content-page-company-overview content=content class="mb-block" />
           <shared-content-page-company-details content=content class="mb-block" />
 
+          <shared-content-page-company-featured-videos
+            videos=resolved.getEdgeNodesFor("youtubeVideos")
+            href=resolved.get("youtube.url")
+            class="mb-block"
+          >
+            <@company id=id name=resolved.get("name") />
+          </shared-content-page-company-featured-videos>
 
           <shared-company-content-list-block company-id=id>
             <@header>Products & Press Releases</@header>
@@ -53,33 +59,29 @@ $ const { id, type, pageNode } = data;
             <@query-params include-content-types=["Product", "PressRelease"] />
           </shared-company-content-list-block>
 
-        </div>
-
-        <div class="col-lg-4 page-rail">
-          $ const contacts = resolved.getEdgeNodesFor("publicContacts");
-          <shared-content-page-company-key-contacts contacts=contacts class="mb-block" />
-
-          <if(resolved.get("enableRmi"))>
-            <shared-inquiry-form node=content modifiers=["sticky-top"] />
-          </if>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-6">
           <shared-company-content-list-block company-id=id>
             <@header>Articles & News</@header>
             <@list class="mb-block" />
             <@query-params include-content-types=["Article", "Blog", "News"] />
           </shared-company-content-list-block>
-        </div>
 
-        <div class="col-lg-6">
           <shared-company-content-list-block company-id=id>
             <@header>Videos & Resources</@header>
             <@list class="mb-block" />
             <@query-params include-content-types=["Video", "Whitepaper", "Webinar", "Document", "MediaGallery", "Podcast"] />
           </shared-company-content-list-block>
+
+        </div>
+
+        <div class="col-lg-4 mb-block page-rail">
+          <shared-content-page-company-key-contacts
+            contacts=resolved.getEdgeNodesFor("publicContacts")
+            class="mb-block"
+          />
+
+          <if(resolved.get("enableRmi"))>
+            <shared-inquiry-form node=content modifiers=["sticky-top"] />
+          </if>
         </div>
       </div>
     </marko-web-resolve-page>
