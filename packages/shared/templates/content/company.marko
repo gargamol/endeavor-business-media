@@ -1,0 +1,85 @@
+$ const { id, type, pageNode } = data;
+
+<!-- @todo fix ads and load more -->
+
+<shared-content-page-default-layout
+  id=id
+  type=type
+  page-node=pageNode
+  display-ads=false
+>
+  <@page>
+    <marko-web-resolve-page|{ data: content, resolved }| node=pageNode>
+      $ const { socialLinks, ...contentSansSocial } = content;
+      $ const section = resolved.getAsObject("primarySection");
+
+      <marko-web-page-wrapper>
+        <@section>
+          <div class="row">
+            <div class="col-md-9 col-sm-12 col-lg-10">
+              <div class="ldp">
+                <div class="ldp__logo">
+                  <shared-content-page-company-logo content=content />
+                </div>
+                <div class="ldp__title">
+                  <marko-web-content-name tag="h1" class="page-wrapper__title" obj=content />
+                  <marko-web-content-city-state-zip tag="p" class="text-small text-muted" obj=content />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-lg-2 col-sm-12 justify-content-center d-flex flex-column px-3 py-3">
+              <div class="ldp__social">
+                <leaders-company-website-link company=content />
+                <div class="mt-2 d-flex justify-content-around">
+                  <for|item| of=resolved.getAsArray("socialLinks")>
+                    <leaders-company-social-link company=content item=item />
+                  </for>
+                </div>
+              </div>
+            </div>
+          </div>
+        </@section>
+      </marko-web-page-wrapper>
+
+      <div class="row">
+        <div class="col-lg-8">
+          <shared-content-page-company-overview content=content class="mb-block" />
+          <shared-content-page-company-details content=content class="mb-block" />
+
+
+          <shared-company-content-list-block company-id=id>
+            <@header>Products & Press Releases</@header>
+            <@list class="mb-block" />
+            <@query-params include-content-types=["Product", "PressRelease"] />
+          </shared-company-content-list-block>
+
+        </div>
+
+        <div class="col-lg-4 page-rail">
+          <if(resolved.get("enableRmi"))>
+            <shared-inquiry-form node=content modifiers=["sticky-top"] />
+          </if>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <shared-company-content-list-block company-id=id>
+            <@header>Articles & News</@header>
+            <@list class="mb-block" />
+            <@query-params include-content-types=["Article", "Blog", "News"] />
+          </shared-company-content-list-block>
+        </div>
+
+        <div class="col-lg-6">
+          <shared-company-content-list-block company-id=id>
+            <@header>Videos & Resources</@header>
+            <@list class="mb-block" />
+            <@query-params include-content-types=["Video", "Whitepaper", "Webinar", "Document", "MediaGallery", "Podcast"] />
+          </shared-company-content-list-block>
+        </div>
+      </div>
+    </marko-web-resolve-page>
+  </@page>
+  <@load-more enabled=false />
+</shared-content-page-default-layout>
