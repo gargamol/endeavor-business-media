@@ -1,32 +1,45 @@
-import { get } from "@base-cms/object-path";
+import { getAsObject, get } from "@base-cms/object-path";
 
-$ const { content } = input;
-$ const blockName = "page-contact-details";
-$ const fields = [
-  { key: "yearsInOperation", label: "Years in business", tag: "span" },
-  { key: "numberOfEmployees", label: "Number of employees", tag: "span" },
-  { key: "salesRegion", label: "Geographic sales distribution", tag: "span" },
-  { key: "salesChannels", label: "Sales Channel", tag: "span" },
-  { key: "warrantyInformation", label: "Warranty/Guarantee", tag: "p" },
-  { key: "serviceInformation", label: "Service, support & spare parts", tag: "p" },
-  { key: "trainingInformation", label: "Training", tag: "p" },
-  { key: "servicesProvided", label: "Other services", tag: "p" },
+$ const content = getAsObject(input, "content");
+$ const { socialLinks, ...contentSansSocial } = content;
+$ const contactNeeds = [
+  "address1", "address2", "cityStateZip", "country",
+  "phone", "fax", "mobile", "tollfree",
+  "title", "website",
+  "publicEmail",
 ];
+$ const needs = [
+  "yearsInOperation",
+  "numberOfEmployees",
+  "salesRegion",
+  "salesChannels",
+  "warrantyInformation",
+  "serviceInformation",
+  "trainingInformation",
+  "servicesProvided",
+  ...contactNeeds,
+];
+$ const hasValues = needs.map(field => get(content, field)).some(v => v);
+$ const hasContactValues = contactNeeds.map(field => get(content, field)).some(v => v);
 
-$ const mapped = fields.map(field => ({ ...field, value: get(content, field.key) })).filter(f => f.value);
+<if(hasValues)>
+  <marko-web-node-list
+    collapsible=false
+    class=input.class
+  >
+    <@header>Company Overview</@header>
+    <@body>
+      <shared-content-page-company-at-a-glance content=content />
 
-<if(mapped.length)>
-  <marko-web-block name=blockName>
-    <if(input.header)>
-      <${input.header} />
-    </if>
-    <for|field| of=mapped>
-      <marko-web-element name="field" block-name=blockName>
-        <marko-web-element tag="span" name="label" block-name=blockName>
-          ${field.label}:
-        </marko-web-element>
-        <marko-web-obj-text tag=field.tag obj=content field=field.key type="content" html=true />
-      </marko-web-element>
-    </for>
-  </marko-web-block>
+      <if(hasContactValues)>
+        <shared-content-page-company-label>Contact</shared-content-page-company-label>
+        <default-theme-content-contact-details obj=contentSansSocial />
+      </if>
+
+      <marko-web-content-body|{ value }| obj=content>
+        <shared-content-page-company-label>More info on $!{content.name}</shared-content-page-company-label>
+        $!{value}
+      </marko-web-content-body>
+    </@body>
+  </marko-web-node-list>
 </if>

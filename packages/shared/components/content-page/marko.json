@@ -24,6 +24,11 @@
   },
   "<shared-content-page-company-details>": {
     "template": "./company/details.marko",
+    "@content": "object",
+    "@class": "string"
+  },
+  "<shared-content-page-company-at-a-glance>": {
+    "template": "./company/at-a-glance.marko",
     "<header>": {},
     "@content": "object"
   },
