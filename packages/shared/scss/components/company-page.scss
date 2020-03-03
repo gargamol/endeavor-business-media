@@ -11,16 +11,11 @@
   }
 }
 
-.content-section-header {
+.company-section-label {
   display: block;
+  padding-bottom: .25rem;
   color: $gray-600;
   text-align: left;
   text-transform: uppercase;
-  &--border {
-    padding-bottom: .25rem;
-    border-bottom: 1px solid rgba(0, 0, 0, .25);
-  }
-  &:not(:first-child) {
-    margin-top: 1.5rem;
-  }
+  border-bottom: 1px solid rgba(0, 0, 0, .25);
 }

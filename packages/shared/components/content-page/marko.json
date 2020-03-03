@@ -24,5 +24,10 @@
   "<shared-content-page-company-logo>": {
     "template": "./company/logo.marko",
     "@content": "object"
+  },
+  "<shared-content-page-company-label>": {
+    "template": "./company/label.marko",
+    "@tag": "string",
+    "@modifiers": "array"
   }
 }
