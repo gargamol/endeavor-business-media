@@ -30,6 +30,7 @@
       "required": true
     },
     "@display-ads": "boolean",
+    "@with-footer-ad": "boolean",
     "@ad-slots": "function",
     "@display-primary-image": "boolean",
     "@display-related-content": "boolean"
