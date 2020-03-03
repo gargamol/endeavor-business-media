@@ -3,7 +3,7 @@ import { getAsObject } from "@base-cms/object-path";
 $ const content = getAsObject(input, "content");
 
 <marko-web-load-more
-  header=`More from ${content.name}`
+  header=`All Content from ${content.name}`
   component-name="shared-content-card-deck-flow"
   component-input={ displayAds: false, nativeX: { enabled: false } }
   fragment-name="shared-content-list"
