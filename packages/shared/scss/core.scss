@@ -14,9 +14,33 @@ $pswp__root-z-index: $theme-site-header-z-index + 1 !default;
 @import "../../node_modules/@endeavor-business-media/package-leaders/scss/index";
 
 @import "./components/card-deck-flow";
+@import "./components/company-page";
 @import "./components/content-headings";
 @import "./components/node";
 
 .social-sharing {
   padding: 10px 0;
+}
+
+.inquiry-form {
+  margin-top: 0;
+  border-top: none;
+}
+
+.node-list {
+  &--sticky-top {
+    @media (min-height: 820px) {
+      position: sticky;
+
+      $sorted: sort-map-by-values($theme-site-header-breakpoints, desc);
+      $highest: nth($sorted, 1);
+      top: calculate-navbar-height-for($highest, 20px);
+
+      @each $breakpoint, $width in sort-map-by-values($theme-site-header-breakpoints, desc) {
+        @media (max-width: $width) {
+          top: calculate-navbar-height-for($breakpoint, 20px);
+        }
+      }
+    }
+  }
 }

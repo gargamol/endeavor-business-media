@@ -46,7 +46,7 @@ $ const { linkAttrs } = input;
     </@text>
     <@footer>
       <@left>
-        <attribution content=content />
+        <attribution ...input.attribution content=content />
       </@left>
       <@right|{ blockName }|>
         <dates block-name=blockName content=content />

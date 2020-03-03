@@ -19,6 +19,7 @@ $ const leadersEnabled = Boolean(site.get("leaders.alias"));
 $ const displayLeaders = leadersEnabled && type !== "company";
 $ const displayAds = defaultValue(input.displayAds, true);
 $ const displayRelatedContent = defaultValue(input.displayRelatedContent, ["company", "contact", "webinar"].includes(type) ? false : true);
+$ const withFooterAd = defaultValue(input.withFooterAd, true);
 
 <marko-web-content-page-layout id=id type=type>
   <@head>
@@ -129,12 +130,12 @@ $ const displayRelatedContent = defaultValue(input.displayRelatedContent, ["comp
           <shared-company-content-list-block company-id=id>
             <@header>Articles & News</@header>
             <@list class="mb-block" />
-            <@query-params include-content-types=["Article", "Blog", "MediaGallery", "News"] />
+            <@query-params include-content-types=["Article", "Blog", "News"] />
           </shared-company-content-list-block>
           <shared-company-content-list-block company-id=id>
             <@header>Videos & Resources</@header>
             <@list class="mb-block" />
-            <@query-params include-content-types=["Video", "Whitepaper", "Document"] />
+            <@query-params include-content-types=["Video", "Whitepaper", "Webinar", "Document", "MediaGallery", "Podcast"] />
           </shared-company-content-list-block>
         </if>
 
@@ -195,7 +196,7 @@ $ const displayRelatedContent = defaultValue(input.displayRelatedContent, ["comp
     <if(input.foot)>
       <${input.foot} />
     </if>
-    <else-if(displayAds)>
+    <else-if(displayAds && withFooterAd)>
       <marko-web-resolve-page|{ data: content }| node=pageNode>
         $ const aliases = hierarchyAliases(content.primarySection);
         <shared-fixed-ad-bottom>

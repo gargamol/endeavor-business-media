@@ -16,6 +16,15 @@
     },
     "leaders-gtm-tracker": {
       "template": "./components/gtm-tracker.marko"
+    },
+    "leaders-company-website-link": {
+      "template": "./components/company-website-link.marko",
+      "@company": "object"
+    },
+    "leaders-company-social-link": {
+      "template": "./components/company-social-link.marko",
+      "@company": "object",
+      "@item": "object"
     }
   }
 }
