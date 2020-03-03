@@ -17,6 +17,11 @@
     "@display-ads": "boolean",
     "@ad-layout": "string"
   },
+  "<shared-content-page-company-overview>": {
+    "template": "./company/overview.marko",
+    "@content": "object",
+    "@class": "string"
+  },
   "<shared-content-page-company-details>": {
     "template": "./company/details.marko",
     "@content": "object"
