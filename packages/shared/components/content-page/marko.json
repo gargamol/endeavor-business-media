@@ -40,5 +40,10 @@
     "template": "./company/label.marko",
     "@tag": "string",
     "@modifiers": "array"
+  },
+  "<shared-content-page-company-key-contacts>": {
+    "template": "./company/key-contacts.marko",
+    "@contacts": "array",
+    "@class": "string"
   }
 }
