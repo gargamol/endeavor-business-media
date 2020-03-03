@@ -75,5 +75,10 @@
     "@modifiers": "array",
     "@attrs": "object",
     "@link-attrs": "object"
+  },
+  "<shared-author-card-node>": {
+    "template": "./author-card.marko",
+    "@node": "object",
+    "@with-email": "boolean"
   }
 }
