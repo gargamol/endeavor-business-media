@@ -45,5 +45,15 @@
     "template": "./company/key-contacts.marko",
     "@contacts": "array",
     "@class": "string"
+  },
+  "<shared-content-page-company-featured-videos>": {
+    "template": "./company/featured-videos.marko",
+    "<company>": {
+      "@id": "number",
+      "@name": "string"
+    },
+    "@videos": "array",
+    "@class": "string",
+    "@href": "string"
   }
 }
