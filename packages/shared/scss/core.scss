@@ -14,6 +14,7 @@ $pswp__root-z-index: $theme-site-header-z-index + 1 !default;
 @import "../../node_modules/@endeavor-business-media/package-leaders/scss/index";
 
 @import "./components/card-deck-flow";
+@import "./components/company-page";
 @import "./components/content-headings";
 @import "./components/node";
 
