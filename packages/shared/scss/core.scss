@@ -1,0 +1,46 @@
+$theme-item-description-max-lines: 5;
+
+@import "../../node_modules/@base-cms/marko-web-gam/scss/fixed-ad-bottom";
+@import "../../node_modules/@base-cms/marko-web-reveal-ad/scss/reveal-ad";
+@import "../../node_modules/@base-cms/marko-web-social-sharing/scss/buttons";
+@import "../../node_modules/@base-cms/marko-web-theme-default/skins/orion/skin";
+
+$pswp__root-z-index: $theme-site-header-z-index + 1 !default;
+@import "../../node_modules/@base-cms/marko-web-photoswipe/scss/main";
+
+@import "../../node_modules/@endeavor-business-media/package-contact-us/scss/index";
+@import "../../node_modules/@endeavor-business-media/package-directory/scss/index";
+@import "../../node_modules/@endeavor-business-media/package-inquiry/scss/index";
+@import "../../node_modules/@endeavor-business-media/package-leaders/scss/index";
+
+@import "./components/card-deck-flow";
+@import "./components/company-page";
+@import "./components/content-headings";
+@import "./components/node";
+
+.social-sharing {
+  padding: 10px 0;
+}
+
+.inquiry-form {
+  margin-top: 0;
+  border-top: none;
+}
+
+.node-list {
+  &--sticky-top {
+    @media (min-height: 820px) {
+      position: sticky;
+
+      $sorted: sort-map-by-values($theme-site-header-breakpoints, desc);
+      $highest: nth($sorted, 1);
+      top: calculate-navbar-height-for($highest, 20px);
+
+      @each $breakpoint, $width in sort-map-by-values($theme-site-header-breakpoints, desc) {
+        @media (max-width: $width) {
+          top: calculate-navbar-height-for($breakpoint, 20px);
+        }
+      }
+    }
+  }
+}

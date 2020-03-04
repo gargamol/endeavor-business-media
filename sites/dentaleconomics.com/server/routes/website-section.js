@@ -1,10 +1,10 @@
 const { withWebsiteSection } = require('@base-cms/marko-web/middleware');
 const leadersFragment = require('@endeavor-business-media/package-leaders/graphql/fragments/leaders-section');
-const leaders = require('../templates/website-section/leaders');
+const contactUs = require('@endeavor-business-media/package-shared/templates/website-section/contact-us');
+const leaders = require('@endeavor-business-media/package-shared/templates/website-section/leaders');
+const queryFragment = require('@endeavor-business-media/package-shared/graphql/fragments/website-section-page');
+
 const section = require('../templates/website-section');
-const contactUs = require('../templates/website-section/contact-us');
-const queryFragment = require('../graphql/fragments/website-section-page');
-const editorialAdvisoryBoardTemplate = require('../templates/website-section/editorial-advisory-board');
 const jobPostings = require('../templates/website-section/job-postings');
 const whitePapers = require('../templates/website-section/white-papers');
 
@@ -18,7 +18,7 @@ module.exports = (app) => {
     queryFragment,
   }));
   app.get('/:alias(editorial-advisory-board)', withWebsiteSection({
-    template: editorialAdvisoryBoardTemplate,
+    template: contactUs,
     queryFragment,
   }));
   app.get('/:alias(job-postings)', withWebsiteSection({
