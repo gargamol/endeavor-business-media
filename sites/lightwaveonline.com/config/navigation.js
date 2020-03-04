@@ -43,6 +43,7 @@ module.exports = {
       items: [
         { href: '/network-design', label: 'Network Design' },
         { href: '/fttx', label: 'FTTX' },
+        { href: 'https://endeavor.swoogo.com/2020-fttxcellence-awards', label: '2020 FTTXcellence Award', target: '_blank' },
         { href: '/network-automation', label: 'Network Automation' },
         { href: '/data-center', label: 'Data Center' },
         { href: '/5g-mobile', label: '5G Mobile' },
