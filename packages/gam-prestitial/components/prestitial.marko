@@ -3,7 +3,7 @@ import { getAsObject } from "@base-cms/object-path";
 $ const { site } = out.global;
 $ const { adunit, slotId } = input;
 
-<if(adunit)>
+<if(adunit && adunit.path)>
   <if(input.init)>
     $ const targeting = { ...getAsObject(adunit, 'targeting'), ...getAsObject(input, 'targeting') };
     $ const slots = {
