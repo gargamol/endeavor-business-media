@@ -8,6 +8,7 @@ $theme-item-description-max-lines: 5;
 $pswp__root-z-index: $theme-site-header-z-index + 1 !default;
 @import "../../node_modules/@base-cms/marko-web-photoswipe/scss/main";
 
+@import "../../node_modules/@endeavor-business-media/package-gam-prestitial/scss/prestitial";
 @import "../../node_modules/@endeavor-business-media/package-contact-us/scss/index";
 @import "../../node_modules/@endeavor-business-media/package-directory/scss/index";
 @import "../../node_modules/@endeavor-business-media/package-inquiry/scss/index";
