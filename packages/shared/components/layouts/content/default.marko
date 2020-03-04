@@ -48,7 +48,6 @@ $ const withFooterAd = defaultValue(input.withFooterAd, true);
     <else-if(displayAds)>
       <marko-web-resolve-page|{ data: content }| node=pageNode>
         $ const aliases = hierarchyAliases(content.primarySection);
-        <shared-gam-out-of-page-ad name="wa" aliases=aliases />
         <shared-gam-out-of-page-ad name="reskin" aliases=aliases />
       </marko-web-resolve-page>
     </else-if>
