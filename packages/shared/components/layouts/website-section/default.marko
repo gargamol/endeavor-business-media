@@ -49,7 +49,6 @@ $ const adSlots = isFunction(input.adSlots) ? input.adSlots : ({ aliases }) => (
       <if(withOopAds)>
         <marko-web-resolve-page|{ data: section }| node=pageNode>
           $ const aliases = hierarchyAliases(section);
-          <shared-gam-out-of-page-ad name="wa" aliases=aliases />
           <shared-gam-out-of-page-ad name="reskin" aliases=aliases />
         </marko-web-resolve-page>
       </if>

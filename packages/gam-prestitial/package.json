@@ -1,0 +1,12 @@
+{
+  "name": "@endeavor-business-media/package-gam-prestitial",
+  "version": "1.8.7",
+  "author": "Josh Worden <josh@limit0.io>",
+  "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/packages/gam-prestitial",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@base-cms/marko-web-gam": "^1.9.0",
+    "@base-cms/object-path": "^1.9.0"
+  }
+}
