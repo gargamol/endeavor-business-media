@@ -33,7 +33,8 @@ $ const adSlots = ({ aliases }) => ({
       </div>
 
       <div class="col-lg-4 mb-block">
-        <shared-website-section-list-block alias="sponsored" link-header=false>
+        <shared-website-section-list-block alias="home">
+          <@header>Sponsored</@header>
           <@list modifiers=["sponsored"]>
             <@node modifiers=["sponsored"] />
             <@body>
@@ -41,6 +42,7 @@ $ const adSlots = ({ aliases }) => ({
             </@body>
           </@list>
           <@native-x enabled=false />
+          <@query-params option-name="Sponsored" />
         </shared-website-section-list-block>
       </div>
     </div>
