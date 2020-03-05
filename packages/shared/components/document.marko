@@ -34,12 +34,12 @@ $ const wrapperStyle = hasPrestitial ? "opacity: 0;" : null;
   </@head>
   <@body-wrapper enabled=true attrs={ id: "body-wrapper", style: wrapperStyle } />
   <@above-wrapper>
+    <leaders-dropdown-portal />
     <if(hasPrestitial)>
       <gam-prestitial display=true adunit=prestitial />
     </if>
   </@above-wrapper>
   <@above-container>
-    <leaders-dropdown-portal />
     <if(GAM)>
       <marko-web-reveal-ad-listener />
     </if>
