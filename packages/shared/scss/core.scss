@@ -1,5 +1,17 @@
 $theme-item-description-max-lines: 5;
 
+$theme-content-heading-large-margin-bottom:     11px !default;
+$theme-content-heading-large-margin-bottom-sm:  11px !default;
+
+$theme-content-heading-h4-margin-bottom:        11px !default;
+$theme-content-heading-h4-margin-bottom-sm:     11px !default;
+
+$theme-content-heading-h5-margin-bottom:        11px !default;
+$theme-content-heading-h5-margin-bottom-sm:     11px !default;
+
+$theme-content-heading-h6-margin-bottom:        11px !default;
+$theme-content-heading-h6-margin-bottom-sm:     $theme-content-heading-h6-margin-bottom !default;
+
 @import "../../node_modules/@base-cms/marko-web-gam/scss/fixed-ad-bottom";
 @import "../../node_modules/@base-cms/marko-web-reveal-ad/scss/reveal-ad";
 @import "../../node_modules/@base-cms/marko-web-social-sharing/scss/buttons";
@@ -16,7 +28,6 @@ $pswp__root-z-index: $theme-site-header-z-index + 1 !default;
 
 @import "./components/card-deck-flow";
 @import "./components/company-page";
-@import "./components/content-headings";
 @import "./components/node";
 
 .social-sharing {
