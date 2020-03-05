@@ -79,7 +79,8 @@
     "@section-id": {
       "type": "number",
       "required": true
-    }
+    },
+    "@option-name": "string"
   },
   "<shared-magazine-latest-issue-block>": {
     "template": "./magazine-latest-issue.marko",
