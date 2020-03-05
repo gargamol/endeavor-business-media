@@ -1,158 +1,135 @@
 import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
-import queryFragment from "../../graphql/fragments/content-list";
-import GAM from "../../../config/gam";
+import queryFragment from "@endeavor-business-media/package-shared/graphql/fragments/content-list";
 
+$ const { GAM } = out.global;
 $ const { id, alias, name, pageNode } = data;
 
-<marko-web-website-section-page-layout id=id alias=alias name=name>
-  <@head>
-    <marko-web-gtm-website-section-context|{ context }| alias=alias>
-      <marko-web-gtm-push data=context />
-    </marko-web-gtm-website-section-context>
-    <marko-web-resolve-page|{ data: section }| node=pageNode>
-      $ const aliases = hierarchyAliases(section);
-      $ const adSlots = {
-          "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
-        }
-       <marko-web-gam-slots slots=adSlots />
-    </marko-web-resolve-page>
-  </@head>
-  <@above-container>
-    <marko-web-resolve-page|{ data: section }| node=pageNode>
-      $ const aliases = hierarchyAliases(section);
-      <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "wa", aliases }) />
-      <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "reskin", aliases }) />
-    </marko-web-resolve-page>
-  </@above-container>
+$ const adSlots = ({ aliases }) => ({
+  "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
+});
+
+<shared-website-section-page-default-layout
+  id=id
+  alias=alias
+  name=name
+  page-node=pageNode
+  ad-slots=adSlots
+>
   <@page>
-    <marko-web-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
+    <shared-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
 
     <marko-web-resolve-page|{ data: section }| node=pageNode>
       $ const aliases = hierarchyAliases(section);
-
-       <marko-web-page-wrapper class="mb-block">
-          <@section>
-            <div class="row mb-block">
-              <div class="col">
-                <default-theme-website-section-breadcrumbs section=section display-self=false />
-                <marko-web-website-section-name tag="h1" class="page-wrapper__title" obj=section />
-              </div>
+      <marko-web-page-wrapper class="mb-block">
+        <@section>
+          <div class="row">
+            <div class="col">
+              <default-theme-website-section-breadcrumbs section=section display-self=false />
+              <marko-web-website-section-name tag="h1" class="page-wrapper__title" obj=section />
+              <marko-web-website-section-description tag="p" class="page-wrapper__deck" obj=section />
+              <hr>
             </div>
-          </@section>
+          </div>
+        </@section>
 
-          <@section|{ blockName }|>
-            <div class="row mb-block">
-              <div class="col">
-                <marko-web-query|{ nodes }|
-                  name="all-published-content"
-                  params={ contentTypes: ["Blog"], limit: 5, queryFragment }
-                >
-                  <website-content-card-deck-flow nodes=nodes with-teaser=false>
-                    <@node flush-x=true />
-                  </website-content-card-deck-flow>
-                </marko-web-query>
-              </div>
-            </div>
+        <@section>
+          <marko-web-query|{ nodes }|
+            name="website-scheduled-content"
+            params={ sectionId: id, limit: 5, queryFragment }
+          >
+            <shared-content-card-deck-list-flow nodes=nodes />
+          </marko-web-query>
+        </@section>
 
-            <div class="row mb-block">
-              <div class="col">
-                <marko-web-element tag="h2" block-name=blockName name="section-title">
-                  <marko-web-link href="/blogs/drivers-seat">In The Driver's Seat</marko-web-link>
-                </marko-web-element>
-                <marko-web-query|{ nodes }|
-                  name="website-scheduled-content"
-                  params={ sectionAlias: "blogs/drivers-seat", limit: 3, queryFragment }
-                >
-                  <website-content-card-deck-flow nodes=nodes display-ads=false>
-                    <@node flush-x=true />
-                  </website-content-card-deck-flow>
-                </marko-web-query>
-              </div>
-            </div>
+        <@section|{ blockName }|>
+          <marko-web-query|{ nodes }|
+            name="website-scheduled-content"
+            params={ sectionAlias: 'videos/uptime-update', limit: 3, queryFragment }
+          >
+            <marko-web-element tag="h2" block-name=blockName name="section-title">
+              <marko-web-link href="/videos/uptime-update">Uptime Update</marko-web-link>
+            </marko-web-element>
+            <shared-content-card-deck-flow nodes=nodes display-ads=false>
+              <@node flush=true with-teaser=false />
+            </shared-content-card-deck-flow>
+          </marko-web-query>
+        </@section>
 
-            <div class="row mb-block">
-              <div class="col">
-                <marko-web-element tag="h2" block-name=blockName name="section-title">
-                  <marko-web-link href="/blogs/kolmans-komments">Kolman's Komments</marko-web-link>
-                </marko-web-element>
-                <marko-web-query|{ nodes }|
-                  name="website-scheduled-content"
-                  params={ sectionAlias: "blogs/kolmans-komments", limit: 3, queryFragment }
-                >
-                  <website-content-card-deck-flow nodes=nodes display-ads=false>
-                    <@node flush-x=true />
-                  </website-content-card-deck-flow>
-                </marko-web-query>
-              </div>
-            </div>
+        <@section|{ blockName }|>
+          <marko-web-query|{ nodes }|
+            name="website-scheduled-content"
+            params={ sectionAlias: 'blogs/drivers-seat', limit: 3, queryFragment }
+          >
+            <marko-web-element tag="h2" block-name=blockName name="section-title">
+              <marko-web-link href="/blogs/drivers-seat">In the Driver's Seat</marko-web-link>
+            </marko-web-element>
+            <shared-content-card-deck-flow nodes=nodes display-ads=false>
+              <@node flush=true with-teaser=false />
+            </shared-content-card-deck-flow>
+          </marko-web-query>
+        </@section>
 
-            <div class="row mb-block">
-              <div class="col">
-                <marko-web-element tag="h2" block-name=blockName name="section-title">
-                  <marko-web-link href="/blogs/guest-blogs">Guest Blogs</marko-web-link>
-                </marko-web-element>
-                <marko-web-query|{ nodes }|
-                  name="website-scheduled-content"
-                  params={ sectionAlias: "blogs/guest-blogs", limit: 3, queryFragment }
-                >
-                  <website-content-card-deck-flow nodes=nodes display-ads=false>
-                    <@node flush-x=true />
-                  </website-content-card-deck-flow>
-                </marko-web-query>
-              </div>
-            </div>
+        <@section|{ blockName }|>
+          <marko-web-query|{ nodes }|
+            name="website-scheduled-content"
+            params={ sectionAlias: 'blogs/kolmans-komments', limit: 3, queryFragment }
+          >
+            <marko-web-element tag="h2" block-name=blockName name="section-title">
+              <marko-web-link href="/blogs/kolmans-komments">Kolman's Komments</marko-web-link>
+            </marko-web-element>
+            <shared-content-card-deck-flow nodes=nodes display-ads=false>
+              <@node flush=true with-teaser=false />
+            </shared-content-card-deck-flow>
+          </marko-web-query>
+        </@section>
 
-            <div class="row mb-block">
-              <div class="col">
-                <marko-web-element tag="h2" block-name=blockName name="section-title">
-                  <marko-web-link href="/blogs/industry-insights">Industry Insights</marko-web-link>
-                </marko-web-element>
-                <marko-web-query|{ nodes }|
-                  name="website-scheduled-content"
-                  params={ sectionAlias: "blogs/industry-insights", limit: 3, queryFragment }
-                >
-                  <website-content-card-deck-flow nodes=nodes display-ads=false>
-                    <@node flush-x=true />
-                  </website-content-card-deck-flow>
-                </marko-web-query>
-              </div>
-            </div>
+        <@section|{ blockName }|>
+          <marko-web-query|{ nodes }|
+            name="website-scheduled-content"
+            params={ sectionAlias: 'blogs/guest-blogs', limit: 3, queryFragment }
+          >
+            <marko-web-element tag="h2" block-name=blockName name="section-title">
+              <marko-web-link href="/blogs/guest-blogs">Guest Blogs</marko-web-link>
+            </marko-web-element>
+            <shared-content-card-deck-flow nodes=nodes display-ads=false>
+              <@node flush=true with-teaser=false />
+            </shared-content-card-deck-flow>
+          </marko-web-query>
+        </@section>
 
-            <div class="row mb-block">
-              <div class="col">
-                <marko-web-element tag="h2" block-name=blockName name="section-title">
-                  <marko-web-link href="/shop-operations/employees-hiring">Labor Time</marko-web-link>
-                </marko-web-element>
-                <marko-web-query|{ nodes }|
-                  name="website-scheduled-content"
-                  params={ sectionAlias: "shop-operations/employees-hiring", limit: 3, queryFragment }
-                >
-                  <website-content-card-deck-flow nodes=nodes display-ads=false>
-                    <@node flush-x=true />
-                  </website-content-card-deck-flow>
-                </marko-web-query>
-              </div>
-            </div>
-          </@section>
-       </marko-web-page-wrapper>
+        <@section|{ blockName }|>
+          <marko-web-query|{ nodes }|
+            name="website-scheduled-content"
+            params={ sectionAlias: 'blogs/industry-insights', limit: 3, queryFragment }
+          >
+            <marko-web-element tag="h2" block-name=blockName name="section-title">
+              <marko-web-link href="/blogs/industry-insights">Industry Insights</marko-web-link>
+            </marko-web-element>
+            <shared-content-card-deck-flow nodes=nodes display-ads=false>
+              <@node flush=true with-teaser=false />
+            </shared-content-card-deck-flow>
+          </marko-web-query>
+        </@section>
 
+        <@section|{ blockName }|>
+          <marko-web-query|{ nodes }|
+            name="website-scheduled-content"
+            params={ sectionAlias: 'shop-operations/employees-hiring', limit: 3, queryFragment }
+          >
+            <marko-web-element tag="h2" block-name=blockName name="section-title">
+              <marko-web-link href="/shop-operations/employees-hiring">Labor Time</marko-web-link>
+            </marko-web-element>
+            <shared-content-card-deck-flow nodes=nodes display-ads=false>
+              <@node flush=true with-teaser=false />
+            </shared-content-card-deck-flow>
+          </marko-web-query>
+        </@section>
+
+      </marko-web-page-wrapper>
     </marko-web-resolve-page>
   </@page>
-  <@below-page>
-    <marko-web-resolve-page|{ data: section }| node=pageNode>
-      $ const aliases = hierarchyAliases(section);
-      <marko-web-load-more
-        header="More Blogs"
-        component-name="content-card-deck-flow"
-        component-input={ aliases }
-        fragment-name="content-list"
-        query-name="all-published-content"
-        query-params={ contentTypes: ["Blog"], limit: 10, skip: 5 }
-        page-input={ for: "website-section", id }
-      />
-    </marko-web-resolve-page>
-  </@below-page>
-  <@foot>
-    <marko-web-gam-fixed-ad-bottom ...GAM.getAdUnit({ name: "lb2" }) refresh-interval=15 scroll-offset=100 />
-  </@foot>
-</marko-web-website-section-page-layout>
+
+  <@load-more header=`More ${name}`>
+    <@query-params limit=14 skip=5 />
+  </@load-more>
+</shared-website-section-page-default-layout>

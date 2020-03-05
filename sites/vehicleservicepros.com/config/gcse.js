@@ -1,5 +1,3 @@
-const GCSEConfiguration = require('@base-cms/marko-web-gcse/config');
+const configureGCSE = require('@endeavor-business-media/package-shared/config/gcse');
 
-const config = new GCSEConfiguration('017383739850048358259:o1acwmn9wua');
-
-module.exports = config;
+module.exports = configureGCSE({ apiKey: '017383739850048358259:o1acwmn9wua' });
