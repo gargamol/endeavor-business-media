@@ -23,16 +23,3 @@ $theme-site-header-breakpoints: (
 );
 
 @import "../../node_modules/@endeavor-business-media/package-shared/scss/cygnus-skin";
-
-// @todo this should move to the common theme
-// .page-wrapper {
-//   &__section-title {
-//     margin-bottom: .25rem;
-//     font-family: $theme-font-family-sans-serif;
-//     font-size: 22px;
-//     font-weight: $font-weight-bold;
-//     line-height: 1.2;
-//     color: $primary;
-//     text-transform: uppercase;
-//   }
-// }
