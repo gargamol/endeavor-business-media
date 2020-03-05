@@ -115,7 +115,7 @@
       </div>
     </div>
     <pre v-if="error" class="alert alert-danger text-danger">An error occurred: {{ error }}</pre>
-    <button type="submit" class="btn btn-lg btn-primary" :disabled="loading">
+    <button type="submit" class="btn btn-primary" :disabled="loading">
       Submit
     </button>
   </form>
