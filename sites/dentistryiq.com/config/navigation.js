@@ -2,7 +2,7 @@ module.exports = {
   primary: {
     items: [
       { href: '/dental-hygiene', label: 'Dental Hygiene' },
-      { href: '/clinical', label: 'Clinical' },
+      { href: '/dentistry', label: 'Dentistry' },
       { href: '/products', label: 'Products' },
       { href: '/practice-management', label: 'Practice Management' },
       { href: '/front-office', label: 'Front Office' },
@@ -38,7 +38,7 @@ module.exports = {
       label: 'Topics',
       items: [
         { href: '/dental-hygiene', label: 'Dental Hygiene' },
-        { href: '/clinical', label: 'Clinical' },
+        { href: '/dentistry', label: 'Dentistry' },
         { href: '/products', label: 'Products' },
         { href: '/practice-management', label: 'Practice Management' },
         { href: '/front-office', label: 'Front Office' },
