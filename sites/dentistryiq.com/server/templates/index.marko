@@ -56,13 +56,13 @@ $ const { id, alias, name, pageNode } = data;
           <div class="col-lg-6 mb-block">
             <marko-web-query|{ nodes }|
               name="website-scheduled-content"
-              params={ sectionAlias: "clinical", limit: 4, queryFragment }
+              params={ sectionAlias: "dentistry", limit: 4, queryFragment }
             >
               <website-content-list-flow nodes=nodes>
                 <@header>
-                  <marko-web-link href="/clinical">Clinical</marko-web-link>
+                  <marko-web-link href="/dentistry">Dentistry</marko-web-link>
                 </@header>
-                <@native-x index=2 name="default" aliases=["clinical"] />
+                <@native-x index=2 name="default" aliases=["dentistry"] />
               </website-content-list-flow>
             </marko-web-query>
           </div>

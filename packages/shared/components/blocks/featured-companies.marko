@@ -1,8 +1,11 @@
 import { getAsObject } from "@base-cms/object-path";
+import defaultValue from "@base-cms/marko-core/utils/default-value";
 import queryFragment from "../../graphql/fragments/content-list";
 
+$ const optionName = defaultValue(input.optionName, "Sponsored");
+
 $ const params = {
-  optionName: "Sponsored",
+  optionName,
   limit: 4,
   ...getAsObject(input, "queryParams"),
   sectionId: input.sectionId,
