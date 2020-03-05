@@ -36,7 +36,8 @@ $theme-site-header-breakpoints: (
 @import "../../node_modules/@endeavor-business-media/package-inquiry/scss/index";
 @import "../../node_modules/@endeavor-business-media/package-leaders/scss/index";
 @import "../../node_modules/@endeavor-business-media/package-common/scss/social-sharing";
-@import "../../node_modules/@endeavor-business-media/package-leaders/scss/round";
 
 $pswp__root-z-index: $theme-site-header-z-index + 1;
 @import "../../node_modules/@endeavor-business-media/package-photoswipe/scss/main";
+
+@import "../../node_modules/@endeavor-business-media/package-shared/scss/components/leaders";
