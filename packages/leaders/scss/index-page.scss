@@ -33,14 +33,3 @@
     }
   }
 }
-
-.leaders {
-  background-color: $white;
-  &__body {
-    padding: $marko-web-node-padding;
-  }
-  &__header {
-    border-top-left-radius: $theme-card-border-radius;
-    border-top-right-radius: $theme-card-border-radius;
-  }
-}
