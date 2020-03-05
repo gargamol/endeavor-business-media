@@ -5,7 +5,6 @@ $ const content = getAsObject(input, "node");
 <marko-web-block name="inquiry-form" modifiers=input.modifiers>
   <div class="inquiry-form-body">
     <p>Fill out the form below to request more information about <marko-web-content-name tag=null obj=content /></p>
-    <hr>
     <marko-web-browser-component name="InquiryForm" props={ contentId: content.id, content }/>
   </div>
 </marko-web-block>
