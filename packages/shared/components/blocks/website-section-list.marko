@@ -1,8 +1,10 @@
 import { getAsObject, get } from "@base-cms/object-path";
+import defaultValue from "@base-cms/marko-core/utils/default-value";
 import queryFragment from "../../graphql/fragments/content-list";
 import sectionFragment from "../../graphql/fragments/blocks/website-section-list";
 
 $ const { alias } = input;
+$ const linkHeader = defaultValue(input.linkHeader, true);
 $ const nativeX = {
   enabled: true,
   index: 3,
@@ -26,7 +28,7 @@ $ const queryParams = {
         <${input.header} section=section />
       </if>
       <else>
-        <marko-web-website-section-name obj=section link=true />
+        <marko-web-website-section-name obj=section link=linkHeader />
       </else>
     </@header>
     <if(nativeX.enabled)>

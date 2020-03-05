@@ -23,6 +23,7 @@
     "template": "./website-section-list.marko",
     "<native-x>": {},
     "<list>": {
+      "<body>": {},
       "<node>": {}
     },
     "<query-params>": {},
@@ -30,7 +31,8 @@
     "@alias": {
       "type": "string",
       "required": true
-    }
+    },
+    "@link-header": "boolean"
   },
   "<shared-published-content-list-block>": {
     "template": "./published-content-list.marko",
