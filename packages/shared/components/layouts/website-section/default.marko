@@ -101,6 +101,7 @@ $ const adSlots = isFunction(input.adSlots) ? input.adSlots : ({ aliases }) => (
             section-id=id
             max-pages=loadMore.maxPages
             fragment-name=loadMore.fragmentName
+            header=loadMore.header
           >
             <@query-params ...defaultValue(loadMore.queryParams, { limit: 14, skip: 12 }) />
             <@component-input ...componentInput />

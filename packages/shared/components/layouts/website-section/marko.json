@@ -15,7 +15,8 @@
         "required": true
       },
       "@max-pages": "number",
-      "@fragment-name": "string"
+      "@fragment-name": "string",
+      "@header": "string"
     },
     "<below-page>": {},
     "<foot>": {},
