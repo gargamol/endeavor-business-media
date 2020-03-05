@@ -1,11 +1,12 @@
 const { withWebsiteSection } = require('@base-cms/marko-web/middleware');
 const leadersFragment = require('@endeavor-business-media/package-leaders/graphql/fragments/leaders-section');
-const leaders = require('../templates/website-section/leaders');
+const contactUs = require('@endeavor-business-media/package-shared/templates/website-section/contact-us');
+const leaders = require('@endeavor-business-media/package-shared/templates/website-section/leaders');
+const queryFragment = require('@endeavor-business-media/package-shared/graphql/fragments/website-section-page');
+
 const section = require('../templates/website-section');
-const contactUs = require('../templates/website-section/contact-us');
-const technologiesTemplate = require('../templates/website-section/technologies');
-const globalThoughtLeadersTemplate = require('../templates/website-section/global-thought-leaders');
-const queryFragment = require('../graphql/fragments/website-section-page');
+const technologies = require('../templates/website-section/technologies');
+const globalThoughtLeaders = require('../templates/website-section/global-thought-leaders');
 
 module.exports = (app) => {
   app.get('/:alias(leaders)', withWebsiteSection({
@@ -17,11 +18,11 @@ module.exports = (app) => {
     queryFragment,
   }));
   app.get('/:alias(technologies)', withWebsiteSection({
-    template: technologiesTemplate,
+    template: technologies,
     queryFragment,
   }));
   app.get('/:alias(global-thought-leaders)', withWebsiteSection({
-    template: globalThoughtLeadersTemplate,
+    template: globalThoughtLeaders,
     queryFragment,
   }));
   app.get('/:alias([a-z0-9-/]+)', withWebsiteSection({
