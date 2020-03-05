@@ -42,7 +42,7 @@ $pswp__root-z-index: $theme-site-header-z-index + 1 !default;
 
 .node-list {
   &--sticky-top {
-    @media (min-height: 820px) {
+    @media (min-height: 710px) {
       position: sticky;
 
       $sorted: sort-map-by-values($theme-site-header-breakpoints, desc);
