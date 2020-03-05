@@ -1,7 +1,9 @@
 const navigation = require('./navigation');
+const leaders = require('./leaders');
 
 module.exports = {
   navigation,
+  leaders,
   company: 'Endeavor Business Media, LLC',
   logos: {
     navbar: {
