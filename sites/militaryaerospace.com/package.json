@@ -32,6 +32,7 @@
     "@endeavor-business-media/package-inquiry": "^1.9.0",
     "@endeavor-business-media/package-leaders": "^1.9.0",
     "@endeavor-business-media/package-photoswipe": "^1.9.0",
+    "@endeavor-business-media/package-shared": "^1.9.0",
     "graphql": "^14.5.4",
     "graphql-tag": "^2.10.1",
     "newrelic": "^5.11.0"
