@@ -12,7 +12,7 @@ module.exports = {
     items: [
       { href: '/page/about-us', label: 'About Us' },
       { href: '/job-postings', label: 'Career Center' },
-      { href: 'https://pennwell.myabsorb.com', label: 'Earn CE', target: '_blank' },
+      { href: 'https://dentalacademyofce.com/default.aspx', label: 'Earn CE', target: '_blank' },
       { href: 'https://www.dentistryiq.com/products/free-samples', label: 'Free Samples', target: '_blank' },
       { href: '/magazine', label: 'Magazine' },
       { href: '/subscribe', label: 'Subscribe' },
@@ -48,7 +48,7 @@ module.exports = {
     {
       label: 'Resources',
       items: [
-        { href: 'https://pennwell.myabsorb.com', label: 'Earn CE', target: '_blank' },
+        { href: 'https://dentalacademyofce.com/default.aspx', label: 'Earn CE', target: '_blank' },
         { href: 'https://www.dentistryiq.com/products/free-samples', label: 'Free Samples', target: '_blank' },
         { href: '/job-postings', label: 'Career Center' },
         { href: '/magazine', label: 'Magazine' },
