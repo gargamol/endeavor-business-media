@@ -1,8 +1,11 @@
 import { getAsObject } from "@base-cms/object-path";
+import defaultValue from "@base-cms/marko-core/default-value";
+
 $ const content = getAsObject(input, "node");
+$ const displayHeader = getAsObject(input.displayHeader, true);
 
 <marko-web-block name="inquiry-form" modifiers=input.modifiers>
-  <if(content.type !== 'company')>
+  <if(displayHeader)>
     <div class="inquiry-form-header">Request More Information</div>
   </if>
   <div class="inquiry-form-body">
