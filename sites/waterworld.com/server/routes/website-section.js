@@ -5,6 +5,7 @@ const leaders = require('@endeavor-business-media/package-shared/templates/websi
 const queryFragment = require('@endeavor-business-media/package-shared/graphql/fragments/website-section-page');
 
 const section = require('../templates/website-section');
+const whitePapers = require('../templates/website-section/white-papers');
 const technologies = require('../templates/website-section/technologies');
 const globalThoughtLeaders = require('../templates/website-section/global-thought-leaders');
 
@@ -15,6 +16,10 @@ module.exports = (app) => {
   }));
   app.get('/:alias(contact-us)', withWebsiteSection({
     template: contactUs,
+    queryFragment,
+  }));
+  app.get('/:alias(white-papers)', withWebsiteSection({
+    template: whitePapers,
     queryFragment,
   }));
   app.get('/:alias(technologies)', withWebsiteSection({
