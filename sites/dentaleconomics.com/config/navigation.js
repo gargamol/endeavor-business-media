@@ -11,7 +11,7 @@ module.exports = {
   secondary: {
     items: [
       { href: 'https://www.principlesofpracticemgmt.com/index.html', label: 'Conference' },
-      { href: 'https://pennwell.myabsorb.com', label: 'Earn CE', target: '_blank' },
+      { href: 'https://dentalacademyofce.com/default.aspx', label: 'Earn CE', target: '_blank' },
       { href: 'https://www.dentistryiq.com/products/free-samples', label: 'Free Samples' },
       { href: '/job-postings', label: 'HR Hub' },
       { href: '/magazine', label: 'Magazine' },
@@ -48,7 +48,7 @@ module.exports = {
     {
       label: 'Resources',
       items: [
-        { href: 'https://pennwell.myabsorb.com', label: 'Earn CE', target: '_blank' },
+        { href: 'https://dentalacademyofce.com/default.aspx', label: 'Earn CE', target: '_blank' },
         { href: '/editorial-advisory-board', label: 'Editorial Advisory Board' },
         { href: 'https://www.dentistryiq.com/products/free-samples', label: 'Free Samples' },
         { href: '/job-postings', label: 'HR Hub' },
