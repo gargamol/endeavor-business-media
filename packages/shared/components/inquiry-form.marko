@@ -2,7 +2,7 @@ import { getAsObject } from "@base-cms/object-path";
 import defaultValue from "@base-cms/marko-core/utils/default-value";
 
 $ const content = getAsObject(input, "node");
-$ const displayHeader = getAsObject(input.displayHeader, true);
+$ const displayHeader = defaultValue(input.displayHeader, true);
 
 <marko-web-block name="inquiry-form" modifiers=input.modifiers>
   <if(displayHeader)>
