@@ -33,6 +33,7 @@
   "<shared-inquiry-form>": {
     "template": "./inquiry-form.marko",
     "@node": "object",
-    "@modifiers": "array"
+    "@modifiers": "array",
+    "@display-header": "boolean"
   }
 }
