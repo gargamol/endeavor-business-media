@@ -118,14 +118,14 @@ $ const { id, alias, name, pageNode } = data;
       </div>
       <div class="col-lg-4 mb-block">
         <marko-web-query|{ nodes }|
-          name="all-published-content"
-          params={ contentTypes: ["Video"], limit: 3, queryFragment }
+          name="website-scheduled-content"
+          params={ sectionAlias: "video", limit: 3, queryFragment }
         >
           <website-content-list-flow nodes=nodes>
             <@header>
-              <marko-web-link href="/videos">Videos</marko-web-link>
+              <marko-web-link href="/video">Video</marko-web-link>
             </@header>
-            <@native-x index=2 name="default" aliases=["video"] />
+            <@native-x index=2 name="default" aliases=["Video"] />
           </website-content-list-flow>
         </marko-web-query>
       </div>
