@@ -25,7 +25,7 @@ module.exports = (app) => {
     template: directory,
     queryFragment,
   }));
-  app.get('/:alias(whitepapers)', withWebsiteSection({
+  app.get('/:alias(white-papers)', withWebsiteSection({
     template: whitePapers,
     queryFragment,
   }));
