@@ -1,3 +1,3 @@
 const configureGCSE = require('@endeavor-business-media/package-shared/config/gcse');
 
-module.exports = configureGCSE({ apiKey: '003355913687346718228:266mmrxk-zy' });
+module.exports = configureGCSE({ apiKey: '003355913687346718228:prps-rbhnq0' });
