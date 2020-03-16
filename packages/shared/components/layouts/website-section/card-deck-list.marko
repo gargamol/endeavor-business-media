@@ -48,9 +48,11 @@ $ const adSlots = isFunction(input.adSlots) ? input.adSlots : ({ aliases }) => (
       >
         <shared-content-card-deck-list-flow nodes=nodes>
           <@card-deck>
+            <@adunit aliases=aliases />
             <@native-x index=2 name="default" aliases=aliases />
           </@card-deck>
           <@list>
+            <@adunit aliases=aliases />
             <@native-x index=2 name="default" aliases=aliases />
           </@list>
         </shared-content-card-deck-list-flow>
