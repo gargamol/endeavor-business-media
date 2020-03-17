@@ -1,12 +1,14 @@
+
 const { withWebsiteSection } = require('@base-cms/marko-web/middleware');
 const leadersFragment = require('@endeavor-business-media/package-leaders/graphql/fragments/leaders-section');
-const leaders = require('../templates/website-section/leaders');
+const contactUs = require('@endeavor-business-media/package-shared/templates/website-section/contact-us');
+const leaders = require('@endeavor-business-media/package-shared/templates/website-section/leaders');
+const queryFragment = require('@endeavor-business-media/package-shared/graphql/fragments/website-section-page');
+
 const directory = require('../templates/website-section/directory');
 const section = require('../templates/website-section');
-const top100 = require('../templates/website-section/top-100');
-const contactUs = require('../templates/website-section/contact-us');
-const queryFragment = require('../graphql/fragments/website-section-page');
 const whitePapers = require('../templates/website-section/white-papers');
+const top100 = require('../templates/website-section/top-100');
 const channel = require('../templates/website-section/channel');
 
 const channelAliases = [
@@ -37,11 +39,7 @@ module.exports = (app) => {
     template: directory,
     queryFragment,
   }));
-  app.get('/:alias(top-100-vendors/2018)', withWebsiteSection({
-    template: top100,
-    queryFragment,
-  }));
-  app.get('/:alias(top-100-vendors/2019)', withWebsiteSection({
+  app.get('/:alias(top-100-vendors/*)', withWebsiteSection({
     template: top100,
     queryFragment,
   }));
