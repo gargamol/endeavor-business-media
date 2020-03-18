@@ -8,7 +8,7 @@ module.exports = {
       { href: '/residential-technologies', label: 'Residential Tech' },
       { href: '/alarms-monitoring', label: 'Alarms & Monitoring' },
       { href: '/cybersecurity', label: 'Cybersecurity' },
-      { href: '/perimeter-security', label: 'Perimeter' },
+      { href: '/covid-19', label: 'COVID-19' },
     ],
   },
   secondary: {
@@ -45,6 +45,7 @@ module.exports = {
         { href: '/residential-technologies', label: 'Residential Technologies' },
         { href: '/alarms-monitoring', label: 'Alarms & Monitoring' },
         { href: '/cybersecurity', label: 'Cybersecurity' },
+        { href: '/covid-19', label: 'COVID-19' },
         { href: '/perimeter-security', label: 'Perimeter Security' },
       ],
     },
