@@ -2,6 +2,12 @@ const configureGAM = require('@endeavor-business-media/package-shared/config/gam
 
 const config = configureGAM({ basePath: 'PIA' });
 
+// Override rail and load more to use 300x250 only.
+config
+  .setTemplate('RAIL2', { size: [300, 250] })
+  .setTemplate('LM', { size: [300, 250] });
+
+
 config
   .setAliasAdUnits('default', [
     { name: 'lb1', templateName: 'LB1', path: 'default/lb1' },
