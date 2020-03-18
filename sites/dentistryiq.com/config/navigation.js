@@ -1,12 +1,13 @@
 module.exports = {
   primary: {
     items: [
-      { href: '/dental-hygiene', label: 'Dental Hygiene' },
+      { href: '/covid-19', label: 'COVID-19' },
       { href: '/dentistry', label: 'Dentistry' },
-      { href: '/products', label: 'Products' },
-      { href: '/practice-management', label: 'Practice Management' },
+      { href: '/dental-hygiene', label: 'Dental Hygiene' },
       { href: '/front-office', label: 'Front Office' },
       { href: '/dental-assisting', label: 'Dental Assisting' },
+      { href: '/practice-management', label: 'Practice Management' },
+      { href: '/products', label: 'Products' },
     ],
   },
   secondary: {
@@ -37,12 +38,13 @@ module.exports = {
     {
       label: 'Topics',
       items: [
-        { href: '/dental-hygiene', label: 'Dental Hygiene' },
+        { href: '/covid-19', label: 'COVID-19' },
         { href: '/dentistry', label: 'Dentistry' },
-        { href: '/products', label: 'Products' },
-        { href: '/practice-management', label: 'Practice Management' },
+        { href: '/dental-hygiene', label: 'Dental Hygiene' },
         { href: '/front-office', label: 'Front Office' },
         { href: '/dental-assisting', label: 'Dental Assisting' },
+        { href: '/practice-management', label: 'Practice Management' },
+        { href: '/products', label: 'Products' },
       ],
     },
     {
