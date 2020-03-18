@@ -6,6 +6,7 @@ const contactUs = require('../templates/website-section/contact-us');
 const jobPostings = require('../templates/website-section/job-postings');
 const queryFragment = require('../graphql/fragments/website-section-page');
 const whitePapers = require('../templates/website-section/white-papers');
+const covid19 = require('../templates/website-section/covid-19');
 
 module.exports = (app) => {
   app.get('/:alias(leaders)', withWebsiteSection({
@@ -18,6 +19,10 @@ module.exports = (app) => {
   }));
   app.get('/:alias(job-postings)', withWebsiteSection({
     template: jobPostings,
+    queryFragment,
+  }));
+  app.get('/:alias(pathology/covid-19)', withWebsiteSection({
+    template: covid19,
     queryFragment,
   }));
   app.get('/:alias(white-papers)', withWebsiteSection({
