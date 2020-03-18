@@ -53,6 +53,7 @@ module.exports = {
         { href: '/front-office/office-forms', label: 'Front Office Forms' },
         { href: '/magazine', label: 'Magazine' },
         { href: '/videos', label: 'Videos' },
+        { href: '/white-papers', label: 'White Papers' },
         { href: '/webcasts', label: 'Webcasts' },
         { href: '/blogs', label: 'Blogs' },
         { href: '/page/submission-guidelines', label: 'Submission Guidelines' },
