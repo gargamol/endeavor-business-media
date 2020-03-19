@@ -13,8 +13,6 @@ $theme-site-navbar-primary-bg-color: $primary;
 $theme-site-navbar-menu-hover-background-color: lighten($theme-site-navbar-primary-bg-color, 40%);
 $theme-site-navbar-secondary-type: light;
 
-$theme-item-description-max-lines: 5;
-
 $theme-site-header-breakpoints: (
   hide-primary: 642px,
   hide-secondary: 678px,
@@ -23,19 +21,36 @@ $theme-site-header-breakpoints: (
   small-text-secondary: 805px
 );
 
-@import "components/rss";
+// Style overrides for DentalPost RSS widget
 
-@import "../../node_modules/@base-cms/marko-web-gam/scss/fixed-ad-bottom";
-@import "../../node_modules/@base-cms/marko-web-reveal-ad/scss/reveal-ad";
-@import "../../node_modules/@base-cms/marko-web-theme-default/skins/orion/skin";
-@import "../../node_modules/@endeavor-business-media/package-common/scss/card-deck-flow";
-@import "../../node_modules/@endeavor-business-media/package-common/scss/node";
-// @todo this should be remove once contact us is in core
-@import "../../node_modules/@endeavor-business-media/package-common/scss/contact-us-form";
-@import "../../node_modules/@endeavor-business-media/package-common/scss/directory";
-@import "../../node_modules/@endeavor-business-media/package-inquiry/scss/index";
-@import "../../node_modules/@endeavor-business-media/package-leaders/scss/index";
-@import "../../node_modules/@endeavor-business-media/package-common/scss/social-sharing";
+/* stylelint-disable */
+.feedgrabbr_widget .uw-w-header {
+  padding: .75rem;
+  margin-bottom: 0;
+  font-family: "Fira Sans", Roboto, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: $primary;
+  border-bottom: 1px solid rgba(0, 0, 0, .84);
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+}
 
-$pswp__root-z-index: $theme-site-header-z-index + 1;
-@import "../../node_modules/@endeavor-business-media/package-photoswipe/scss/main";
+.feedgrabbr_widget .uw-opensans * {
+  font-family: "Fira Sans", Roboto, Arial, sans-serif;
+}
+
+#fg-widget-d02d836ff0dbba7d0fd7b54e2.uw-normal .uw-w-header > span {
+  font-size: inherit;
+}
+
+#fg-widget-3954fc0c7864703b0184b95db:not(.uw-transparent) .uw-w-header, #fg-widget-3954fc0c7864703b0184b95db:not(.uw-transparent) .uw-w-branding {
+  background-color: $primary;
+}
+/* stylelint-enable */
+
+
+@import "../../node_modules/@endeavor-business-media/package-shared/scss/core";
