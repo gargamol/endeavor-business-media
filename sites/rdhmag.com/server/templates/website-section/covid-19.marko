@@ -6,6 +6,7 @@ $ const { id, alias, name, pageNode } = data;
   name=name
   page-node=pageNode
 >
+
   <@page>
     <shared-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
     <marko-web-resolve-page|{ data: section }| node=pageNode>
@@ -26,22 +27,17 @@ $ const { id, alias, name, pageNode } = data;
     <div class="row">
       <div class="col-lg-8 mb-block">
         <shared-website-section-list-block alias=alias>
-          <@header>Featured</@header>
-          <@query-params limit=17 skip=5 />
+          <@query-params limit=7 skip=5 />
+          <@native-x index=6 />
         </shared-website-section-list-block>
       </div>
       <div class="col-lg-4 page-rail">
-        <div class="feedgrabbr_widget" id="fgid_d02d836ff0dbba7d0fd7b54e2"></div>
-        <script>if (typeof (fg_widgets) === "undefined") fg_widgets = new Array(); fg_widgets.push("fgid_d02d836ff0dbba7d0fd7b54e2");</script>
-        <script async src="https://www.feedgrabbr.com/widget/fgwidget.js"></script>
-        <img class="lazyloaded" src="/DentalPost-RSS-Widget-Branding-370Wide.png" alt="Powered By: DentalPost" />
         <shared-gam-display-ad id="gpt-ad-rail1" />
         <shared-gam-display-ad id="gpt-ad-rail2" />
       </div>
     </div>
   </@page>
-
   <@load-more name="card-deck">
-    <@query-params limit=10 skip=22 />
+    <@query-params limit=10 skip=12 />
   </@load-more>
 </shared-website-section-page-default-layout>
