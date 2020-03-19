@@ -6,6 +6,7 @@ const queryFragment = require('@endeavor-business-media/package-shared/graphql/f
 const section = require('../templates/website-section');
 const freeSamplesTemplate = require('../templates/website-section/products-free-samples');
 const whitePapers = require('../templates/website-section/white-papers');
+const covid19 = require('../templates/website-section/covid-19');
 
 module.exports = (app) => {
   app.get('/:alias(leaders)', withWebsiteSection({
@@ -18,6 +19,10 @@ module.exports = (app) => {
   }));
   app.get('/:alias(products/free-samples)', withWebsiteSection({
     template: freeSamplesTemplate,
+    queryFragment,
+  }));
+  app.get('/:alias(covid-19)', withWebsiteSection({
+    template: covid19,
     queryFragment,
   }));
   app.get('/:alias(white-papers)', withWebsiteSection({
