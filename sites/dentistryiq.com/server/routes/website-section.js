@@ -21,7 +21,7 @@ module.exports = (app) => {
     template: freeSamplesTemplate,
     queryFragment,
   }));
-  app.get('/:alias(pathology/covid-19)', withWebsiteSection({
+  app.get('/:alias(covid-19)', withWebsiteSection({
     template: covid19,
     queryFragment,
   }));
