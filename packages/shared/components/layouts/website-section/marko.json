@@ -51,7 +51,27 @@
     "template": "./hero-card-deck-list.marko"
   },
   "<shared-website-section-page-feed-layout>": {
-    "template": "./feed.marko"
+    "template": "./feed.marko",
+    "@id": {
+      "type": "string",
+      "required": true
+    },
+    "@alias": {
+      "type": "string",
+      "required": true
+    },
+    "@name": {
+      "type": "string",
+      "required": true
+    },
+    "@page-node": {
+      "type": "object",
+      "required": true
+    },
+    "@image": "object",
+    "@image-position": "string",
+    "@queryName": "string",
+    "@queryParams": "object"
   },
   "<shared-website-section-page-default-directory-layout>": {
     "template": "./directory/default.marko"

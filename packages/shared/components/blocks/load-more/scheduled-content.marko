@@ -3,6 +3,7 @@ import defaultValue from "@base-cms/marko-core/utils/default-value";
 
 $ const { sectionId } = input;
 $ const fragmentName = defaultValue(input.fragmentName, "shared-content-list");
+$ const queryName = (input.queryName) ? input.queryName : "website-scheduled-content";
 
 $ const queryParams = {
   ...getAsObject(input, "queryParams"),
@@ -14,7 +15,7 @@ $ const queryParams = {
   component-name=`shared-content-${input.name}-flow`
   component-input=input.componentInput
   fragment-name=fragmentName
-  query-name="website-scheduled-content"
+  query-name=queryName
   query-params=queryParams
   max-pages=input.maxPages
   page-input={ for: "website-section", id: sectionId }
