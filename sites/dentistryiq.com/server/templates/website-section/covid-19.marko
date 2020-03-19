@@ -1,5 +1,3 @@
-import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
-
 $ const { id, alias, name, pageNode } = data;
 
 <shared-website-section-page-default-layout
@@ -8,20 +6,19 @@ $ const { id, alias, name, pageNode } = data;
   name=name
   page-node=pageNode
 >
+
   <@page>
     <shared-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
-
     <marko-web-resolve-page|{ data: section }| node=pageNode>
-      $ const aliases = hierarchyAliases(section);
-      <marko-web-page-wrapper>
+      <marko-web-page-wrapper class="mb-block">
         <@section>
           <div class="row">
             <div class="col">
               <default-theme-website-section-breadcrumbs section=section />
               <marko-web-website-section-name tag="h1" class="page-wrapper__title" obj=section />
-              <div class="page-wrapper__description">
+              <p class="page-wrapper__description">
                 ${section.description}
-              </div>
+              </p>
             </div>
           </div>
         </@section>
