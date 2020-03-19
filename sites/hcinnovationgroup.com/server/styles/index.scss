@@ -27,12 +27,6 @@ $theme-card-header-background-color: #0f183e;
 @import "../../node_modules/@endeavor-business-media/package-shared/scss/cygnus-skin";
 
 .node-list {
-  &.sponsored {
-    background-color: #f0f0f0;
-    .node {
-      background-color: transparent;
-    }
-  }
   &--top100 {
     .node {
       &:nth-child(odd) {
@@ -106,8 +100,5 @@ $theme-card-header-background-color: #0f183e;
         }
       }
     }
-  }
-  &__content-body a {
-    text-decoration: underline;
   }
 }
