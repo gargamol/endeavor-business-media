@@ -30,5 +30,6 @@ $theme-site-header-breakpoints: (
   small-text-secondary: 1105px
 );
 
-@import "../../node_modules/@endeavor-business-media/package-shared/scss/cygnus-skin";
+$theme-card-header-background-color: #000;
 
+@import "../../node_modules/@endeavor-business-media/package-shared/scss/cygnus-skin";
