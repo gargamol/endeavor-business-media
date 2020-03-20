@@ -1,9 +1,60 @@
-$ const { id, alias, name, pageNode } = data;
+import { isFunction } from "@base-cms/utils";
+import queryFragment from "@endeavor-business-media/package-shared/graphql/fragments/content-list";
 
-<shared-website-section-page-feed-layout id=id alias=alias name=name page-node=pageNode>
-  <@list-flow>
-    <@node image-position="left">
-      <@image ar="16:9" width="150" />
-    </@node>
-  </@list-flow>
-</shared-website-section-page-feed-layout>
+$ const { config, GAM } = out.global;
+$ const { id, alias, name, pageNode } = input;
+
+$ const adSlots = isFunction(input.adSlots) ? input.adSlots : ({ aliases }) => ({
+  "gpt-ad-lb1": GAM.getAdUnit({ name: "lb1", aliases }),
+});
+
+<shared-website-section-page-default-layout
+  id=id
+  alias=alias
+  name=name
+  page-node=pageNode
+  ad-slots=adSlots
+>
+  <@page>
+    <shared-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
+
+    <marko-web-page-wrapper class="mb-block">
+      <@section>
+        <marko-web-resolve-page|{ data: section }| node=pageNode>
+          <div class="row">
+            <div class="col">
+              <default-theme-breadcrumbs-with-home>
+                <@item>${name}</@item>
+              </default-theme-breadcrumbs-with-home>
+              <h1 class="page-wrapper__title">${name}</h1>
+              <div class="page-wrapper__deck">${section.description}</div>
+            </div>
+          </div>
+        </marko-web-resolve-page>
+      </@section>
+    </marko-web-page-wrapper>
+
+    <div class="row">
+      <div class="col">
+        <marko-web-query|{ nodes }| name="website-optioned-content" params={ sectionId: id, optionName: "Pinned", limit: 18, queryFragment }>
+          <shared-content-list-flow nodes=nodes>
+            <@node image-position="left">
+              <@image ar="16:9" width="150" />
+            </@node>
+          </shared-content-list-flow>
+        </marko-web-query>
+      </div>
+    </div>
+  </@page>
+
+  <@below-page>
+    <shared-optioned-content-load-more-block name="list" section-id=id>
+      <@query-params option-name="Pinned" limit=18 skip=18 />
+      <@component-input>
+        <@node image-position="left">
+          <@image ar="16:9" width="150" />
+        </@node>
+      </@component-input>
+    </shared-optioned-content-load-more-block>
+  </@below-page>
+</shared-website-section-page-default-layout>
