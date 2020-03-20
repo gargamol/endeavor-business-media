@@ -2,7 +2,27 @@
   "<shared-scheduled-content-load-more-block>": {
     "template": "./scheduled-content.marko",
     "<query-params>":  {},
-    "<component-input>": {},
+    "<component-input>": {
+      "<node>": {}
+    },
+    "@header": "string",
+    "@name": {
+      "type": "string",
+      "required": true
+    },
+    "@section-id": {
+      "type": "number",
+      "required": true
+    },
+    "@max-pages": "number",
+    "@fragment-name": "string"
+  },
+  "<shared-optioned-content-load-more-block>": {
+    "template": "./optioned-content.marko",
+    "<query-params>":  {},
+    "<component-input>": {
+      "<node>": {}
+    },
     "@header": "string",
     "@name": {
       "type": "string",

@@ -92,6 +92,16 @@ fragment ContentPageFragment on Content {
       label
     }
   }
+  ... on ContentTop100 {
+    rank
+    phone
+    website
+    previousRank
+    founded
+    revenueCurrent
+    companyExecutives
+    marketsServing
+  }
   ... on Media {
     fileSrc
   }

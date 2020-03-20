@@ -1,9 +1,9 @@
-$theme-card-header-background-color: #000;
+$theme-card-header-background-color: #000 !default;
 
-$border-radius: none;
-$theme-box-shadow-sm:   none;
-$theme-box-shadow-lg: none;
-$body-bg: #fff;
+$border-radius: none !default;
+$theme-box-shadow-sm: none !default;
+$theme-box-shadow-lg: none !default;
+$body-bg: #fff !default;
 
 @import "./core";
 

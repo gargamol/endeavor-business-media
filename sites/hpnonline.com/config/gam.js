@@ -1,6 +1,6 @@
-const GAMConfiguration = require('@base-cms/marko-web-gam/config');
+const configureGAM = require('@endeavor-business-media/package-shared/config/gam');
 
-const config = new GAMConfiguration('21687441225', { basePath: 'HPN' });
+const config = configureGAM({ basePath: 'HPN' });
 
 config
   .setTemplate('LB1', {

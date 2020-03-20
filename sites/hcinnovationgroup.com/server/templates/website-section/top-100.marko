@@ -1,93 +1,61 @@
 import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
+import { isFunction } from "@base-cms/utils";
+import formatUsCurrency from "@endeavor-business-media/package-shared/utils/format-us-currency";
 import queryFragment from "../../graphql/fragments/top100-landing-page";
-import formatUsCurrency from "../../utils/format-us-currency";
-import GAM from "../../../config/gam";
 
+$ const { GAM, site, config } = out.global;
 $ const { id, alias, name, pageNode } = data;
 
-<marko-web-website-section-page-layout id=id alias=alias name=name>
-  <@head>
-    <marko-web-gtm-website-section-context|{ context }| alias=alias>
-      <marko-web-gtm-push data=context />
-    </marko-web-gtm-website-section-context>
-    <marko-web-resolve-page|{ data: section }| node=pageNode>
-      $ const aliases = hierarchyAliases(section);
-      $ const adSlots = {
-          "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
-        }
-       <marko-web-gam-slots slots=adSlots />
-    </marko-web-resolve-page>
-  </@head>
-  <@above-container>
-    <marko-web-resolve-page|{ data: section }| node=pageNode>
-      $ const aliases = hierarchyAliases(section);
-      <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "wa", aliases }) />
-      <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "reskin", aliases }) />
-    </marko-web-resolve-page>
-  </@above-container>
-  <@page>
-    <marko-web-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
-    <marko-web-resolve-page|{ data: section }| node=pageNode>
-    $ const aliases = hierarchyAliases(section);
-      <marko-web-page-wrapper class="mb-block">
-        <@section>
-          <div class="row">
-            <div class="col">
-              <default-theme-website-section-breadcrumbs section=section display-self=false />
-              <marko-web-website-section-name tag="h1" class="page-wrapper__title" obj=section />
-              <if(section.description)>
-                <p class="page-wrapper__deck">$!{section.description}</p>
-              </if>
-              <hr>
-            </div>
-          </div>
-        </@section>
-        <@section>
-          <div class="row">
-            <div class="col-lg-12 mb-block">
-              <marko-web-query|{ nodes }|
-                name="website-scheduled-content"
-                params={ sectionId: id, includeContentTypes: ["Top100"], limit: 100, queryFragment }
+$ const adSlots = ({ aliases }) => ({
+  "gpt-ad-lb1": GAM.getAdUnit({ name: "lb1", aliases }),
+});
+
+<shared-website-section-page-header-layout
+  id=id
+  alias=alias
+  name=name
+  page-node=pageNode
+  ad-slots=adSlots
+  with-oop-ads=false
+  with-footer-ad=false
+>
+  <@section>
+    <div class="row">
+      <div class="col-lg-12 mb-block">
+        <marko-web-query|{ nodes }|
+          name="website-scheduled-content"
+          params={ sectionId: id, includeContentTypes: ["Top100"], limit: 100, queryFragment }
+        >
+          $ nodes.sort((a, b) => {
+            if (a.rank > b.rank) return 1;
+            if (a.rank < b.rank) return -1;
+            return 1;
+          });
+          <div class="node-list node-list--inner-justified node-list--top100">
+            <for|node, index| of=nodes>
+              <marko-web-node
+                type=`top100-content`
+                flush=true
               >
-                $ nodes.sort((a, b) => {
-                  if (a.rank > b.rank) return 1;
-                  if (a.rank < b.rank) return -1;
-                  return 1;
-                });
-                <div class="node-list node-list--inner-justified node-list--top100">
-                  <for|node, index| of=nodes>
-                    <marko-web-node
-                      type=`top100-content`
-                      flush=true
-                    >
-                    <@body>
-                      <@text|{ blockName }|>
-                        <div class=`${blockName}__content-rank`>${node.rank}</div>
-                        <div class=`${blockName}__content-company`>
-                          <marko-web-content-short-name block-name=blockName tag="h6" obj=node link={ attrs: linkAttrs }>
-                            <@link href=node.siteContext.url />
-                          </marko-web-content-short-name>
-                          ${node.city}, ${node.state}
-                        </div>
-                        <div class=`${blockName}__content-revenue`>${formatUsCurrency(node.revenueCurrent)}</div>
-                      </@text>
-                    </@body>
-                    </marko-web-node>
-                  </for>
+              <@body>
+                <@text|{ blockName }|>
+                  <div class=`${blockName}__content-rank`>${node.rank}</div>
+                  <div class=`${blockName}__content-company`>
+                    <marko-web-content-short-name block-name=blockName tag="h6" obj=node link={ attrs: linkAttrs }>
+                      <@link href=node.siteContext.url />
+                    </marko-web-content-short-name>
+                    ${node.city}, ${node.state}
+                  </div>
+                  <div class=`${blockName}__content-revenue`>${formatUsCurrency(node.revenueCurrent)}</div>
+                </@text>
+              </@body>
+              </marko-web-node>
+            </for>
 
-                </div>
-              </marko-web-query>
-            </div>
           </div>
-
-        </@section>
-      </marko-web-page-wrapper>
-    </marko-web-resolve-page>
-  </@page>
-  <@foot>
-    <marko-web-resolve-page|{ data: section }| node=pageNode>
-      $ const aliases = hierarchyAliases(section);
-      <marko-web-gam-fixed-ad-bottom ...GAM.getAdUnit({ name: "lb2", aliases }) refresh-interval=15 scroll-offset=100 />
-    </marko-web-resolve-page>
-  </@foot>
-</marko-web-website-section-page-layout>
+        </marko-web-query>
+      </div>
+    </div>
+  </@section>
+  <@load-more enabled=false />
+</shared-website-section-page-header-layout>
