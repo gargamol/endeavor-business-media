@@ -1,12 +1,9 @@
 $ const { id, alias, name, pageNode } = data;
 
-<shared-website-section-page-feed-layout
-  id=id
-  alias=alias
-  name=name
-  page-node=pageNode
-  image-position="left"
-  image={ ar: "16:9", width: 150 }
-  queryName="website-optioned-content"
-  queryParams={ optionName: "Pinned" }
-/>
+<shared-website-section-page-feed-layout id=id alias=alias name=name page-node=pageNode>
+  <@list-flow>
+    <@node image-position="left">
+      <@image ar="16:9" width="150" />
+    </@node>
+  </@list-flow>
+</shared-website-section-page-feed-layout>
