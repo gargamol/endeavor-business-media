@@ -1,4 +1,3 @@
-const loadInquiry = require('@endeavor-business-media/package-inquiry/load-from-config');
 const home = require('./home');
 const content = require('./content');
 const dynamicPages = require('./dynamic-page');
@@ -9,10 +8,6 @@ const subscribe = require('./subscribe');
 const websiteSections = require('./website-section');
 
 module.exports = (app) => {
-  // Handle submissions on /__inquiry
-  // @todo This should be removed once inquiry is moved to core.
-  loadInquiry(app);
-
   // Homepage
   home(app);
 

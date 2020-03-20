@@ -21,6 +21,8 @@
     "@base-cms/object-path": "^1.25.0",
     "@base-cms/utils": "^1.25.0",
     "@base-cms/web-cli": "^1.25.0",
+    "@endeavor-business-media/package-inquiry": "^1.10.0",
+    "@endeavor-business-media/package-directory": "^1.10.0",
     "@endeavor-business-media/package-leaders": "^1.10.0",
     "@endeavor-business-media/package-shared": "^1.10.1",
     "graphql": "^14.5.4",
