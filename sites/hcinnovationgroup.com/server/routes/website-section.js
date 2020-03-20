@@ -1,4 +1,3 @@
-
 const { withWebsiteSection } = require('@base-cms/marko-web/middleware');
 const leadersFragment = require('@endeavor-business-media/package-leaders/graphql/fragments/leaders-section');
 const contactUs = require('@endeavor-business-media/package-shared/templates/website-section/contact-us');
