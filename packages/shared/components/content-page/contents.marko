@@ -1,4 +1,5 @@
 import { get, getAsObject, getAsArray } from "@base-cms/object-path";
+import formatUsCurrency from "../../utils/format-us-currency";
 
 $ const { site } = out.global;
 
@@ -6,7 +7,7 @@ $ const content = getAsObject(input, "content");
 $ const images = getAsArray(content, "images.edges").map(edge => edge.node);
 $ const { id, type } = content;
 
-$ const displayPrimaryImage = ["media-gallery"].includes(type) ? false : true;
+$ const displayPrimaryImage = ["media-gallery", "top100"].includes(type) ? false : true;
 $ const displayPhotoswipe = ["contact"].includes(type) ? false : true;
 $ const displayInquiry = (content) => {
   if (type === "company" && get(content, "enableRmi")) return true;
@@ -34,6 +35,18 @@ $ const displayInquiry = (content) => {
   </else-if>
 
   <default-theme-content-contact-details obj=content />
+
+  <if(type === "top100")>
+    <div class="mb-block">
+      <strong class="d-block">
+        Current Rank: <marko-web-obj-text type="content" block-name=blockName obj=content field="rank" tag=null modifiers="rank"/>
+      </strong>
+      <strong class="d-block">
+        Previously Ranked: <marko-web-obj-text type="content" block-name=blockName obj=content field="previousRank" tag=null modifiers="rank"/>
+      </strong>
+    </div>
+  </if>
+
   <marko-web-content-body block-name=blockName obj=content />
   <marko-web-content-sidebars block-name=blockName obj=content />
 
@@ -65,6 +78,15 @@ $ const displayInquiry = (content) => {
 
   <if(type === "podcast")>
     <marko-web-content-audio block-name=blockName obj=content />
+  </if>
+
+  <if(type === "top100")>
+    <div class="page-contents__info">
+      <div class=`${blockName}__content-revenue-current`>${formatUsCurrency(content.revenueCurrent)}</div>
+      <marko-web-obj-text type="content" block-name=blockName obj=content field="companyExecutives" />
+      <marko-web-obj-text type="content" block-name=blockName obj=content field="founded" />
+      <marko-web-obj-text type="content" block-name=blockName obj=content field="marketsServing" />
+    </div>
   </if>
 
   <if(displayPhotoswipe)>

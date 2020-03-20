@@ -54,6 +54,7 @@ $theme-card-header-background-color: #0f183e;
 .page-contents {
   $self: &;
   &__info {
+    margin-top: map-get($spacers, block);
     #{ $self } {
       &__content-revenue-current,
       &__content-phone,
