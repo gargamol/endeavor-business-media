@@ -1,4 +1,3 @@
-const contactUsHandler = require('@endeavor-business-media/package-common/contact-us');
 const loadInquiry = require('@endeavor-business-media/package-inquiry/load-from-config');
 const home = require('./home');
 const content = require('./content');
@@ -13,10 +12,6 @@ module.exports = (app) => {
   // Handle submissions on /__inquiry
   // @todo This should be removed once inquiry is moved to core.
   loadInquiry(app);
-
-  // Handle contact is submissions on /__contact-us
-  // @todo This should be removed once contact-us is moved to core.
-  contactUsHandler(app);
 
   // Homepage
   home(app);
