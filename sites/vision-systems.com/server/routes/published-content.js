@@ -1,6 +1,6 @@
-const events = require('../templates/published-content/events');
-const webinars = require('../templates/published-content/webinars');
-const videos = require('../templates/published-content/videos');
+const events = require('@endeavor-business-media/package-shared/templates/published-content/events');
+const webinars = require('@endeavor-business-media/package-shared/templates/published-content/webinars');
+const videos = require('@endeavor-business-media/package-shared/templates/published-content/videos');
 
 module.exports = (app) => {
   app.get('/events', (_, res) => { res.marko(events); });

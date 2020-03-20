@@ -16,8 +16,6 @@ $theme-site-navbar-secondary-type: light;
 $theme-site-navbar-logo-height: 45px;
 $theme-site-navbar-logo-height-sm: 30px;
 
-$theme-item-description-max-lines: 5;
-
 $theme-site-header-breakpoints: (
   hide-primary: 930px,
   hide-secondary: 815px,
@@ -25,19 +23,4 @@ $theme-site-header-breakpoints: (
   small-text-primary: 1046px,
   small-text-secondary: 977px
 );
-@import "../../node_modules/@base-cms/marko-web-gam/scss/fixed-ad-bottom";
-@import "../../node_modules/@base-cms/marko-web-reveal-ad/scss/reveal-ad";
-@import "../../node_modules/@base-cms/marko-web-theme-default/skins/orion/skin";
-@import "../../node_modules/@endeavor-business-media/package-common/scss/card-deck-flow";
-@import "../../node_modules/@endeavor-business-media/package-common/scss/node";
-// @todo this should be remove once contact us is in core
-@import "../../node_modules/@endeavor-business-media/package-common/scss/contact-us-form";
-@import "../../node_modules/@endeavor-business-media/package-common/scss/directory";
-@import "../../node_modules/@endeavor-business-media/package-inquiry/scss/index";
-@import "../../node_modules/@endeavor-business-media/package-leaders/scss/index";
-@import "../../node_modules/@endeavor-business-media/package-common/scss/social-sharing";
-
-$pswp__root-z-index: $theme-site-header-z-index + 1;
-@import "../../node_modules/@endeavor-business-media/package-photoswipe/scss/main";
-
-@import "../../node_modules/@endeavor-business-media/package-shared/scss/components/leaders";
+@import "../../node_modules/@endeavor-business-media/package-shared/scss/core";
