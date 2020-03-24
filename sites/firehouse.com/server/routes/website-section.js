@@ -1,12 +1,13 @@
 const { withWebsiteSection } = require('@base-cms/marko-web/middleware');
 const leadersFragment = require('@endeavor-business-media/package-leaders/graphql/fragments/leaders-section');
-const leaders = require('../templates/website-section/leaders');
-const queryFragment = require('../graphql/fragments/website-section-page');
+const contactUs = require('@endeavor-business-media/package-shared/templates/website-section/contact-us');
+const leaders = require('@endeavor-business-media/package-shared/templates/website-section/leaders');
+const queryFragment = require('@endeavor-business-media/package-shared/graphql/fragments/website-section-page');
+
 const directory = require('../templates/website-section/directory');
 const section = require('../templates/website-section');
-const contactUs = require('../templates/website-section/contact-us');
-const whitePapers = require('../templates/website-section/white-papers');
 const channel = require('../templates/website-section/channel');
+
 const runSurveys = require('../templates/website-section/run-surveys');
 const anniversary = require('../templates/website-section/anniversary');
 const valorAwards = require('../templates/website-section/valor-awards');
