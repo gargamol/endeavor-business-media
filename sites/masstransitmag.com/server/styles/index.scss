@@ -11,11 +11,6 @@ $leaders-accent-color: $primary;
 $theme-site-navbar-primary-bg-color: $primary;
 $theme-site-navbar-secondary-bg-color: #000;
 
-$theme-site-navbar-logo-height: 45px;
-$theme-site-navbar-logo-height-sm: 25px;
-
-$theme-item-description-max-lines: 5;
-
 $theme-site-header-breakpoints: (
   hide-primary: 850px,
   hide-secondary: 850px,
@@ -24,44 +19,7 @@ $theme-site-header-breakpoints: (
   small-text-secondary: 1000px
 );
 
-$theme-card-header-background-color: #000;
-
-$border-radius: none;
-$theme-box-shadow-sm:   none;
-$theme-box-shadow-lg: none;
-$body-bg: #fff;
-
-@import "../../node_modules/@endeavor-business-media/package-common/scss/content-heading";
-@import "../../node_modules/@base-cms/marko-web-gam/scss/fixed-ad-bottom";
-@import "../../node_modules/@base-cms/marko-web-reveal-ad/scss/reveal-ad";
-@import "../../node_modules/@base-cms/marko-web-theme-default/skins/orion/skin";
-@import "../../node_modules/@endeavor-business-media/package-common/scss/card-deck-flow";
-@import "../../node_modules/@endeavor-business-media/package-common/scss/node";
-// @todo this should be remove once contact us is in core
-@import "../../node_modules/@endeavor-business-media/package-common/scss/contact-us-form";
-@import "../../node_modules/@endeavor-business-media/package-common/scss/directory";
-@import "../../node_modules/@endeavor-business-media/package-inquiry/scss/index";
-@import "../../node_modules/@endeavor-business-media/package-leaders/scss/index";
-@import "../../node_modules/@endeavor-business-media/package-common/scss/social-sharing";
-
-$pswp__root-z-index: $theme-site-header-z-index + 1;
-@import "../../node_modules/@endeavor-business-media/package-photoswipe/scss/main";
-
-.node-list {
-  &.sponsored {
-    background-color: #f0f0f0;
-    .node {
-      background-color: transparent;
-    }
-  }
-}
-
-// @todo this should be removed once added to the theme
-.page-contents {
-  &__content-body a {
-    text-decoration: underline;
-  }
-}
+@import "../../node_modules/@endeavor-business-media/package-shared/scss/cygnus-skin";
 
 .transit-bids {
   &__button {
@@ -74,13 +32,5 @@ $pswp__root-z-index: $theme-site-header-z-index + 1;
 
   &__contact-info {
     font-size: 1.25rem;
-  }
-}
-
-.page-wrapper {
-  &__section {
-    &--bottom-border {
-      @include marko-web-node-list-border(border-bottom, $width: 2px);
-    }
   }
 }
