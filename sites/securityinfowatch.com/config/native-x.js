@@ -1,6 +1,6 @@
-const NativeXConfiguration = require('@base-cms/marko-web-native-x/config');
+const configureNativeX = require('@endeavor-business-media/package-shared/config/native-x');
 
-const config = new NativeXConfiguration('https://ebm.native-x.io');
+const config = configureNativeX();
 
 config
   .setAliasPlacements('default', [
