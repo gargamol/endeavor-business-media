@@ -38,10 +38,6 @@ module.exports = (app) => {
     template: channel,
     queryFragment,
   }));
-  app.get('/:alias(white-papers)', withWebsiteSection({
-    template: whitePapers,
-    queryFragment,
-  }));
   app.get('/:alias([a-z0-9-/]+)', withWebsiteSection({
     template: section,
     queryFragment,

@@ -56,10 +56,6 @@ module.exports = (app) => {
     template: channel,
     queryFragment,
   }));
-  app.get('/:alias(white-papers)', withWebsiteSection({
-    template: whitePapers,
-    queryFragment,
-  }));
   app.get('/:alias(run-surveys)', withWebsiteSection({
     template: runSurveys,
     queryFragment,
