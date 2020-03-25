@@ -46,6 +46,18 @@
       "required": true
     }
   },
+  "<shared-published-content-cards-block>": {
+    "template": "./published-content-cards.marko",
+    "<list>": {
+      "<node>": {}
+    },
+    "<query-params>": {},
+    "<header>": {},
+    "@content-types": {
+      "type": "array",
+      "required": true
+    }
+  },
   "<shared-company-content-list-block>": {
     "template": "./company-content-list.marko",
     "<list>": {
