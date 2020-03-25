@@ -90,7 +90,7 @@ $ const withFooterAd = defaultValue(input.withFooterAd, true);
                     <${input.bodyContents} ...response />
                   </if>
                   <else>
-                    <shared-content-page-contents content=content />
+                    <shared-content-page-contents content=content before-body=get(input, "pageContents.beforeBody") />
                   </else>
                 </div>
 
