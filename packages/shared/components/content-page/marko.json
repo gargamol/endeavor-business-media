@@ -5,6 +5,7 @@
   },
   "<shared-content-page-contents>": {
     "template": "./contents.marko",
+    "<before-body>": {},
     "@content": "object"
   },
   "<shared-content-page-right-rail>": {
