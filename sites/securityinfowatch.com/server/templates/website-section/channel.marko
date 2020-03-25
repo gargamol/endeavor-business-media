@@ -1,3 +1,4 @@
+import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
 import categories from "../../categories";
 
 $ const { id, alias, name, pageNode } = data;
@@ -9,5 +10,18 @@ $ const { id, alias, name, pageNode } = data;
   page-node=pageNode
 >
   <@directory facets=categories />
+  <@hero>
+    <marko-web-resolve-page|{ data: section }| node=pageNode>
+      $ const aliases = hierarchyAliases(section);
+      <shared-content-hero-block id=id>
+        <@hero>
+          <@card full-height=false />
+          <@below-card>
+            <shared-gam-define-display-ad name="fl" aliases=aliases />
+          </@below-card>
+        </@hero>
+      </shared-content-hero-block>
+    </marko-web-resolve-page>
+  </@hero>
   <@load-more name="list-card-deck" />
 </shared-website-section-page-latest-with-directory-layout>

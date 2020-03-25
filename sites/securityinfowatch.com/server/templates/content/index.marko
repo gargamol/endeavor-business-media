@@ -1,3 +1,4 @@
+import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
 $ const { id, type, pageNode } = data;
 
 <shared-content-page-default-layout
@@ -5,5 +6,13 @@ $ const { id, type, pageNode } = data;
   type=type
   page-node=pageNode
 >
+  <@page-contents>
+    <@before-body>
+      <marko-web-resolve-page|{ data: section }| node=pageNode>
+        $ const aliases = hierarchyAliases(section);
+        <shared-gam-define-display-ad name="fl" aliases=aliases />
+      </marko-web-resolve-page>
+    </@before-body>
+  </@page-contents>
   <@load-more flow="list-card-deck" />
 </shared-content-page-default-layout>
