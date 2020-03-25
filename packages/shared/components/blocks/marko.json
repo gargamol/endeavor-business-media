@@ -65,6 +65,7 @@
     "<query-params>": {},
     "<hero>": {
       "<card>": {},
+      "<below-card>": {},
       "<list>": {}
     },
     "@id": {
