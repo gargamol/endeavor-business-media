@@ -50,6 +50,7 @@
   "<shared-content-hero-flow>": {
     "template": "./hero.marko",
     "<card>": {},
+    "<below-card>": {},
     "<list>": {
       "<node>": {},
       "<native-x>": {
