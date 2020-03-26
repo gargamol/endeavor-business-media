@@ -18,7 +18,7 @@ $ const params = {
     <@nodes nodes=nodes>
       <shared-content-card-deck-flow
         nodes=nodes
-        cols=defaultValue(input.cols, params.limit)
+        cols=defaultValue(input.cols, 4)
         display-ads=defaultValue(input.displayAds, false)
       >
         <@node with-teaser=defaultValue(input.withTeaser, false) />
