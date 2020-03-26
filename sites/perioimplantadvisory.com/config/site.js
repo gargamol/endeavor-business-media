@@ -28,6 +28,10 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/PI_Advisory' },
     { provider: 'facebook', href: 'https://www.facebook.com/SurgicalRR' },
   ],
+  identityX: {
+    appId: '5e6946b0fa46c443e6eb2a0c',
+    enabled: false,
+  },
   gtm: {
     containerId: 'GTM-T972GJR',
   },

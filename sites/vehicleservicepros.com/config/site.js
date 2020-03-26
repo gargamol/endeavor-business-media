@@ -8,10 +8,6 @@ module.exports = {
   gam,
   gcse,
   nativeX,
-  identityX: {
-    appId: '5e28a60658e67bec4255ae5a',
-    enabled: true,
-  },
   company: 'Endeavor Business Media, LLC',
   logos: {
     navbar: {
@@ -32,6 +28,10 @@ module.exports = {
     { provider: 'twitter', href: 'https://www.twitter.com/VehicleSrvcPros', target: '_blank' },
     { provider: 'facebook', href: 'https://www.facebook.com/VehicleServicePros', target: '_blank' },
   ],
+  identityX: {
+    appId: '5e28a60658e67bec4255ae5a',
+    enabled: true,
+  },
   gtm: {
     containerId: 'GTM-KVJDNC9',
   },

@@ -28,6 +28,10 @@ module.exports = {
     { provider: 'facebook', href: 'https://www.facebook.com/MassTransit', target: '_blank' },
     { provider: 'linkedin', href: 'https://www.linkedin.com/company/masstransit', target: '_blank' },
   ],
+  identityX: {
+    appId: '5e28a5db58e67b5d6b55ae57',
+    enabled: false,
+  },
   gtm: {
     containerId: 'GTM-PR268NB',
   },

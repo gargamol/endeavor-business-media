@@ -30,6 +30,10 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/MilAero', target: '_blank' },
     { provider: 'facebook', href: 'https://www.facebook.com/pages/Military-Aerospace-Electronics/174732214480', target: '_blank' },
   ],
+  identityX: {
+    appId: '5e69476e87774f53aaa7dce6',
+    enabled: false,
+  },
   gtm: {
     containerId: 'GTM-N3KJF35',
   },

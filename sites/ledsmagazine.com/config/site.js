@@ -30,6 +30,10 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/ledsmagazine', target: '_blank' },
     { provider: 'facebook', href: 'https://www.facebook.com/LEDsMagazine?fref=ts', target: '_blank' },
   ],
+  identityX: {
+    appId: '5e6947a687774fe0a8a7dce9',
+    enabled: false,
+  },
   gtm: {
     containerId: 'GTM-PLNZ46S',
   },

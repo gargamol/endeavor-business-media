@@ -22,6 +22,10 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/offshoremgzn', target: '_blank' },
     { provider: 'facebook', href: 'https://www.facebook.com/offshoremagazine', target: '_blank' },
   ],
+  identityX: {
+    appId: '5e6946e4fa46c4129eeb2a0d',
+    enabled: false,
+  },
   gtm: {
     containerId: 'GTM-NFS8BVJ',
   },

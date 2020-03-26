@@ -24,6 +24,10 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/stormwatermag?lang=en' },
     { provider: 'facebook', href: 'https://www.facebook.com/StormwaterMagazine' },
   ],
+  identityX: {
+    appId: '5e69463dfa46c45109eb2a0b',
+    enabled: false,
+  },
   gtm: {
     containerId: 'GTM-TLSVP6Q',
   },

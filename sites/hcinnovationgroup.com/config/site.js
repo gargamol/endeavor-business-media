@@ -28,6 +28,10 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/HCInnovationGrp', target: '_blank' },
     { provider: 'facebook', href: 'https://www.facebook.com/HealthcareInnovationGroup', target: '_blank' },
   ],
+  identityX: {
+    appId: '5e69487b87774f43b7a7dced',
+    enabled: false,
+  },
   gtm: {
     containerId: 'GTM-WV5FMR3',
   },

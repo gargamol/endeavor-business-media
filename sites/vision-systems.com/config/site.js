@@ -30,6 +30,10 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/Vision_Systems', target: '_blank' },
     { provider: 'facebook', href: 'https://www.facebook.com/VisionSystemsDesign?ref=hl', target: '_blank' },
   ],
+  identityX: {
+    appId: '5e693fd8fa46c40ea6eb29f5',
+    enabled: false,
+  },
   gtm: {
     containerId: 'GTM-TMGQFQZ',
   },

@@ -22,6 +22,10 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/foresternetwork' },
     { provider: 'facebook', href: 'https://www.facebook.com/foresternetwork' },
   ],
+  identityX: {
+    appId: '5e6948c287774f8616a7dcee',
+    enabled: false,
+  },
   gtm: {
     containerId: 'GTM-TNFLPD9',
   },

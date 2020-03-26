@@ -28,6 +28,10 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/officercom', target: '_blank' },
     { provider: 'facebook', href: 'https://www.facebook.com/officercom', target: '_blank' },
   ],
+  identityX: {
+    appId: '5e28a80658e67b295255ae5d',
+    enabled: false,
+  },
   gtm: {
     containerId: 'GTM-PXB3XNX',
   },

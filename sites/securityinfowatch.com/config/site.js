@@ -30,6 +30,10 @@ module.exports = {
     { provider: 'twitter', href: 'http://www.twitter.com/SecInfoWatch', target: '_blank' },
     { provider: 'facebook', href: 'http://www.facebook.com/SecInfoWatch', target: '_blank' },
   ],
+  identityX: {
+    appId: '',
+    enabled: false,
+  },
   gtm: {
     containerId: 'GTM-KMZ7FHS',
   },
@@ -37,7 +41,7 @@ module.exports = {
     userName: 'cygnuscorporate',
   },
   magazines: {
-    description: '',
+    description: '5e28a5f258e67bcde455ae58',
   },
   contactUs: {
     branding: {

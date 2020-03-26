@@ -10,10 +10,6 @@ module.exports = {
   gcse,
   nativeX,
   leaders,
-  identityX: {
-    appId: '5e28a5c758e67b1b2b55ae56',
-    enabled: true,
-  },
   company: 'Endeavor Business Media, LLC',
   logos: {
     navbar: {
@@ -34,6 +30,10 @@ module.exports = {
     { provider: 'twitter', href: 'https://www.twitter.com/LocksmithLedger', target: '_blank' },
     { provider: 'facebook', href: 'https://www.facebook.com/locksmithledgerinternational', target: '_blank' },
   ],
+  identityX: {
+    appId: '5e28a5c758e67b1b2b55ae56',
+    enabled: true,
+  },
   gtm: {
     containerId: 'GTM-N7CHFQS',
   },

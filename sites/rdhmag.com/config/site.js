@@ -28,6 +28,10 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/RDHmag', target: '_blank' },
     { provider: 'facebook', href: 'https://www.facebook.com/RDHMagazine', target: '_blank' },
   ],
+  identityX: {
+    appId: '5e69466987774f3141a7dcdb',
+    enabled: false,
+  },
   gtm: {
     containerId: 'GTM-5ZXPSXX',
   },

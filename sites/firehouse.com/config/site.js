@@ -28,6 +28,10 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/FirehouseNews', target: '_blank' },
     { provider: 'facebook', href: 'https://www.facebook.com/firehousecom', target: '_blank' },
   ],
+  identityX: {
+    appId: '',
+    enabled: false,
+  },
   gtm: {
     containerId: 'GTM-WZWBT3Q',
   },

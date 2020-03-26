@@ -27,6 +27,10 @@ module.exports = {
     { provider: 'linkedin', href: 'https://www.linkedin.com/company/plastics-machinery-magazine', target: '_blank' },
     { provider: 'twitter', href: 'https://twitter.com/PlasticsMM', target: '_blank' },
   ],
+  identityX: {
+    appId: '5e69468c87774f11bba7dcdd',
+    enabled: false,
+  },
   gtm: {
     containerId: 'GTM-MWVRJBJ',
   },

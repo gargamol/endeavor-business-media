@@ -28,6 +28,10 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/ProcessingMag', target: '_blank' },
     { provider: 'facebook', href: 'http://www.facebook.com/ProcessingMagazine', target: '_blank' },
   ],
+  identityX: {
+    appId: '5e6946ca87774f3ad8a7dcdf',
+    enabled: false,
+  },
   gtm: {
     containerId: 'GTM-T8FSMGJ',
   },

@@ -28,6 +28,10 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/dentalmagazine', target: '_blank' },
     { provider: 'facebook', href: 'https://www.facebook.com/DentalEconomics', target: '_blank' },
   ],
+  identityX: {
+    appId: '5e69494987774f276ba7dcf4',
+    enabled: false,
+  },
   gtm: {
     containerId: 'GTM-58C63G3',
   },

@@ -28,6 +28,10 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/MedicalLabMLO', target: '_blank' },
     { provider: 'facebook', href: 'https://www.facebook.com/MLOMedicalLaboratoryObserver', target: '_blank' },
   ],
+  identityX: {
+    appId: '5e69474987774f9568a7dce5',
+    enabled: false,
+  },
   gtm: {
     containerId: 'GTM-NBTQ9MW',
   },
