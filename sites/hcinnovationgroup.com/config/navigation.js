@@ -1,6 +1,7 @@
 module.exports = {
   primary: {
     items: [
+      { href: '/covid-19', label: 'COVID-19' },
       { href: 'https://endeavor.swoogo.com/Summit_Series/cyber_forums', label: 'Events', target: '_blank' },
       { href: '/policy-value-based-care', label: 'VBC' },
       { href: '/population-health-management', label: 'Pop Health' },
@@ -10,7 +11,6 @@ module.exports = {
       { href: '/interoperability-hie', label: 'Interoperability & HIE' },
       { href: '/clinical-it', label: 'Clinical IT' },
       { href: '/imaging', label: 'Imaging' },
-      { href: '/covid-19', label: 'COVID-19' },
     ],
   },
   secondary: {
@@ -42,6 +42,7 @@ module.exports = {
     {
       label: 'Topics',
       items: [
+        { href: '/covid-19', label: 'COVID-19' },
         { href: 'https://endeavor.swoogo.com/Summit_Series/cyber_forums', label: 'Events', target: '_blank' },
         { href: '/policy-value-based-care', label: 'Policy & Value-Based Care' },
         { href: '/population-health-management', label: 'Population Health' },
@@ -51,7 +52,6 @@ module.exports = {
         { href: '/interoperability-hie', label: 'Interoperability & HIE' },
         { href: '/clinical-it', label: 'Clinical IT' },
         { href: '/imaging', label: 'Imaging' },
-        { href: '/covid-19', label: 'COVID-19' },
       ],
     },
     {
