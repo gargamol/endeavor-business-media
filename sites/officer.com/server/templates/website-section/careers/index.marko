@@ -1,32 +1,25 @@
 import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
-import queryFragment from "../../../graphql/fragments/content-list";
-import GAM from "../../../../config/gam";
+import { getAsObject } from "@base-cms/object-path";
+import { isFunction } from "@base-cms/utils";
+import queryFragment from "@endeavor-business-media/package-shared/graphql/fragments/content-list";
 
-$ const { id, alias, name, pageNode } = data;
+$ const { config, GAM } = out.global;
+$ const { id, alias, name, pageNode } = input;
 
-<marko-web-website-section-page-layout id=id alias=alias name=name>
-  <@head>
-    <marko-web-gtm-website-section-context|{ context }| alias=alias>
-      <marko-web-gtm-push data=context />
-    </marko-web-gtm-website-section-context>
-    <marko-web-resolve-page|{ data: section }| node=pageNode>
-      $ const aliases = hierarchyAliases(section);
-      $ const adSlots = {
-          "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
-          "gpt-ad-rail1":   GAM.getAdUnit({ name: "rail1", aliases }),
-        }
-      <marko-web-gam-slots slots=adSlots />
-    </marko-web-resolve-page>
-  </@head>
-  <@above-container>
-    <marko-web-resolve-page|{ data: section }| node=pageNode>
-      $ const aliases = hierarchyAliases(section);
-      <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "wa", aliases }) />
-      <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "reskin", aliases }) />
-    </marko-web-resolve-page>
-  </@above-container>
+$ const adSlots = isFunction(input.adSlots) ? input.adSlots : ({ aliases }) => ({
+  "gpt-ad-lb1": GAM.getAdUnit({ name: "lb1", aliases }),
+  "gpt-ad-rail1": GAM.getAdUnit({ name: "rail1", aliases }),
+});
+
+<shared-website-section-page-default-layout
+  id=id
+  alias=alias
+  name=name
+  page-node=pageNode
+  ad-slots=adSlots
+>
   <@page>
-    <marko-web-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
+    <shared-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
 
     <marko-web-resolve-page|{ data: section }| node=pageNode>
       $ const aliases = hierarchyAliases(section);
@@ -34,14 +27,16 @@ $ const { id, alias, name, pageNode } = data;
         <@section>
           <div class="row">
             <div class="col">
-              <default-theme-website-section-breadcrumbs section=section />
+              <default-theme-website-section-breadcrumbs section=section display-self=false />
               <marko-web-website-section-name tag="h1" class="page-wrapper__title" obj=section />
               <if(section.description)>
                 <p class="page-wrapper__deck">${section.description}</p>
               </if>
+              <hr>
             </div>
           </div>
         </@section>
+
         <@section>
           <div class="row">
             <div class="col-lg-8 mb-block">
@@ -49,7 +44,7 @@ $ const { id, alias, name, pageNode } = data;
                 name="website-scheduled-content"
                 params={ sectionId: id, limit: 10, queryFragment }
               >
-                <website-content-list-flow
+                <shared-content-list-flow
                   nodes=nodes
                   inner-justified=false
                   flush-x=true
@@ -57,34 +52,36 @@ $ const { id, alias, name, pageNode } = data;
               </marko-web-query>
             </div>
             <div class="col-lg-4 page-rail">
-              <website-submit-job-block class="mb-block" />
-              <marko-web-gam-display-ad id="gpt-ad-rail1" />
+              <!-- <website-submit-job-block class="mb-block" /> -->
+
+              $ const blockName = "submit-job";
+
+              <marko-web-block name=blockName class=input.class>
+                <marko-web-element tag="h4" name="title" block-name=blockName>
+                  Submit a Job
+                </marko-web-element>
+                <marko-web-element tag="p" name="description" block-name=blockName>
+                  Job posting packages are available for both standard and featured listings.
+                </marko-web-element>
+                <marko-web-link
+                  class="btn btn-outline-primary"
+                  href="/careers/submit">
+                  Submit a Job
+                </marko-web-link>
+              </marko-web-block>
+
+              <shared-gam-display-ad id="gpt-ad-rail1" />
             </div>
           </div>
         </@section>
       </marko-web-page-wrapper>
     </marko-web-resolve-page>
   </@page>
+
   <@below-page>
-    <marko-web-resolve-page|{ data: section }| node=pageNode>
-      $ const aliases = hierarchyAliases(section);
-      <marko-web-load-more
-        component-name="content-load-more-flow"
-        component-input={
-          aliases,
-          nativeX: { index: 0, name: "default", aliases },
-        }
-        fragment-name="content-list"
-        query-name="website-scheduled-content"
-        query-params={ sectionId: id, limit: 14, skip: 10 }
-        page-input={ for: "website-section", id }
-      />
-    </marko-web-resolve-page>
+    <shared-scheduled-content-load-more-block name="card-deck" section-id=id>
+      <@query-params limit=14 skip=10 />
+      <@component-input display-ads=false />
+    </shared-scheduled-content-load-more-block>
   </@below-page>
-  <@foot>
-    <marko-web-resolve-page|{ data: section }| node=pageNode>
-      $ const aliases = hierarchyAliases(section);
-      <marko-web-gam-fixed-ad-bottom ...GAM.getAdUnit({ name: "lb2", aliases }) refresh-interval=15 scroll-offset=100 />
-    </marko-web-resolve-page>
-  </@foot>
-</marko-web-website-section-page-layout>
+</shared-website-section-page-default-layout>
