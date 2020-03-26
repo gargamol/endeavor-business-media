@@ -30,6 +30,10 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/WaterWorld' },
     { provider: 'facebook', href: 'https://www.facebook.com/waterworldmag' },
   ],
+  identityX: {
+    appId: '5e693f8afa46c473a7eb29f4',
+    enabled: false,
+  },
   gtm: {
     containerId: 'GTM-TC76RXH',
   },

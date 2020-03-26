@@ -28,6 +28,10 @@ module.exports = {
     { provider: 'twitter', href: 'http://twitter.com/CABLINGMAG', target: '_blank' },
     { provider: 'facebook', href: 'http://www.facebook.com/pages/Cabling-Installation-and-Maintenance/298118662118', target: '_blank' },
   ],
+  identityX: {
+    appId: '5e69496bfa46c403f2eb2a18',
+    enabled: false,
+  },
   gtm: {
     containerId: 'GTM-5VGZZRL',
   },

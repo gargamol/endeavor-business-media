@@ -28,6 +28,10 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/ILS_for_Mfg', target: '_blank' },
     { provider: 'facebook', href: 'https://www.facebook.com/industriallasersolutions', target: '_blank' },
   ],
+  identityX: {
+    appId: '5e6947e587774f2573a7dcea',
+    enabled: false,
+  },
   gtm: {
     containerId: 'GTM-K9WQRTW',
   },

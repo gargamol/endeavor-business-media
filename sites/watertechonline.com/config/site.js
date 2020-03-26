@@ -24,6 +24,10 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/WaterTechOnline', target: '_blank' },
     { provider: 'facebook', href: 'https://www.facebook.com/WaterTechnology', target: '_blank' },
   ],
+  identityX: {
+    appId: '5e693fa987774f4b11a7dcd1',
+    enabled: false,
+  },
   gtm: {
     containerId: 'GTM-TSPJXZ4',
   },

@@ -27,6 +27,10 @@ module.exports = {
     { provider: 'twitter', href: 'https://www.twitter.com/Aviation_Pros', target: '_blank' },
     { provider: 'facebook', href: 'https://www.facebook.com/AviationPros', target: '_blank' },
   ],
+  identityX: {
+    appId: '5e28a0e058e67b6b7c55ae36',
+    enabled: true,
+  },
   gtm: {
     containerId: 'GTM-WKMCBZC',
   },

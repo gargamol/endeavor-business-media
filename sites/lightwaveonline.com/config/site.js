@@ -28,6 +28,10 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/lightwaveonline', target: '_blank' },
     { provider: 'facebook', href: 'https://www.facebook.com/LightwaveOnline', target: '_blank' },
   ],
+  identityX: {
+    appId: '5e69478587774f677ea7dce7',
+    enabled: false,
+  },
   gtm: {
     containerId: 'GTM-5B8WRGS',
   },

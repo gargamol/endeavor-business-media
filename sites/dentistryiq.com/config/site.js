@@ -28,6 +28,10 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/dentistryiq' },
     { provider: 'facebook', href: 'https://www.facebook.com/DentistryIQ' },
   ],
+  identityX: {
+    appId: '5e694932fa46c4abbaeb2a16',
+    enabled: false,
+  },
   gtm: {
     containerId: 'GTM-WFGHPBF',
   },

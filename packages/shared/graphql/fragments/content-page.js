@@ -9,6 +9,7 @@ fragment ContentPageFragment on Content {
   published
   siteContext {
     path
+    canonicalUrl
   }
   company {
     id
@@ -39,6 +40,10 @@ fragment ContentPageFragment on Content {
   gating {
     surveyType
     surveyId
+  }
+  userRegistration {
+    isRequired
+    accessLevels
   }
   ... on ContentVideo {
     embedCode

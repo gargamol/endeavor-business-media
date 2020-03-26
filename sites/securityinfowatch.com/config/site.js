@@ -30,6 +30,11 @@ module.exports = {
     { provider: 'twitter', href: 'http://www.twitter.com/SecInfoWatch', target: '_blank' },
     { provider: 'facebook', href: 'http://www.facebook.com/SecInfoWatch', target: '_blank' },
   ],
+  identityX: {
+    appId: '5e28a5f258e67bcde455ae58',
+    enabled: true,
+    comments: { enabled: true },
+  },
   gtm: {
     containerId: 'GTM-KMZ7FHS',
   },

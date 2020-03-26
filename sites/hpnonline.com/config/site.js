@@ -27,6 +27,10 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/HPN_Online', target: '_blank' },
     { provider: 'facebook', href: 'https://www.facebook.com/hpnonline', target: '_blank' },
   ],
+  identityX: {
+    appId: '5e6948a2fa46c4c1a0eb2a13',
+    enabled: false,
+  },
   gtm: {
     containerId: 'GTM-PGBWQKG',
   },

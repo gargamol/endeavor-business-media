@@ -28,6 +28,11 @@ module.exports = {
     { provider: 'twitter', href: 'https://www.twitter.com/cpapracadvisor', target: '_blank' },
     { provider: 'facebook', href: 'https://www.facebook.com/cpapracticeadvisor', target: '_blank' },
   ],
+  identityX: {
+    appId: '5e28a5a358e67b178d55ae54',
+    enabled: true,
+    comments: { enabled: true },
+  },
   gtm: {
     containerId: 'GTM-WKFS2G3',
   },

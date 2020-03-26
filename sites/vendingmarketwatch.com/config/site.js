@@ -24,6 +24,11 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/vendingmagazine', target: '_blank' },
     { provider: 'facebook', href: 'https://www.facebook.com/vendingmarket/', target: '_blank' },
   ],
+  identityX: {
+    appId: '5e28a61658e67b865e55ae5b',
+    enabled: true,
+    comments: { enabled: true },
+  },
   gtm: {
     containerId: 'GTM-MH74BHQ',
   },

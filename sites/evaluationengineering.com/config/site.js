@@ -28,6 +28,10 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/EE_Engineers' },
     { provider: 'facebook', href: 'https://www.facebook.com/EvaluationEngineering' },
   ],
+  identityX: {
+    appId: '5e6948f587774ff3d7a7dcf2',
+    enabled: false,
+  },
   gtm: {
     containerId: 'GTM-MKGZ9CS',
   },

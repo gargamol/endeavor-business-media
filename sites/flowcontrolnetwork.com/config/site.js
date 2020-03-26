@@ -22,6 +22,10 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/flowcontrol_mag', target: '_blank' },
     { provider: 'facebook', href: 'https://www.facebook.com/FlowControlMagazine', target: '_blank' },
   ],
+  identityX: {
+    appId: '5e6948dd87774f47b7a7dcf1',
+    enabled: false,
+  },
   gtm: {
     containerId: 'GTM-MNTKWH8',
   },

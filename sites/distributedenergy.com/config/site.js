@@ -18,6 +18,10 @@ module.exports = {
     },
   },
   socialMediaLinks: [],
+  identityX: {
+    appId: '5e69491bfa46c43e66eb2a15',
+    enabled: false,
+  },
   gtm: {
     containerId: 'GTM-K7P6D3Z',
   },

@@ -30,6 +30,10 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/LaserFocusWorld', target: '_blank' },
     { provider: 'facebook', href: 'https://www.facebook.com/pages/Laser-Focus-World/126899915297', target: '_blank' },
   ],
+  identityX: {
+    appId: '5e42bbab1f09853dd6c31bd8',
+    enabled: false,
+  },
   gtm: {
     containerId: 'GTM-MFCT2LV',
   },

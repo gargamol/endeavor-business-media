@@ -22,6 +22,10 @@ module.exports = {
     { provider: 'twitter', href: 'http://twitter.com/UtilityProducts', target: '_blank' },
     { provider: 'facebook', href: 'http://www.facebook.com/pages/Utility-Products-Magazine/133739816672957', target: '_blank' },
   ],
+  identityX: {
+    appId: '5e69460d87774f229fa7dcd9',
+    enabled: false,
+  },
   gtm: {
     containerId: 'GTM-52ZXGBW',
   },

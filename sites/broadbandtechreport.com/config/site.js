@@ -28,6 +28,10 @@ module.exports = {
     { provider: 'twitter', href: 'http://twitter.com/BTReport' },
     { provider: 'facebook', href: 'https://www.facebook.com/BTReport' },
   ],
+  identityX: {
+    appId: '5e6945bdfa46c4644eeb2a05',
+    enabled: false,
+  },
   gtm: {
     containerId: 'GTM-M2SKF2X',
   },

@@ -28,6 +28,10 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/intelligentaero', target: '_blank' },
     { provider: 'facebook', href: 'https://www.facebook.com/intelligentaerospace/', target: '_blank' },
   ],
+  identityX: {
+    appId: '5e694803fa46c4637beb2a11',
+    enabled: false,
+  },
   gtm: {
     containerId: 'GTM-K79SD2G',
   },

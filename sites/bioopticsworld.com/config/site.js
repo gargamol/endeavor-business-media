@@ -28,6 +28,10 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/BioOptics' },
     { provider: 'facebook', href: 'https://www.facebook.com/pages/BioOptics-World/131802223749' },
   ],
+  identityX: {
+    appId: '5e693f6bfa46c41a1eeb29f3',
+    enabled: false,
+  },
   gtm: {
     containerId: 'GTM-53W9PRB',
   },
