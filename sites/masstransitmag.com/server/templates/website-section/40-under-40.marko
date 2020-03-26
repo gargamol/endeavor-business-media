@@ -2,7 +2,7 @@ import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
 import { getAsObject } from "@base-cms/object-path";
 import { isFunction } from "@base-cms/utils";
 import queryFragment from "@endeavor-business-media/package-shared/graphql/fragments/content-list";
-import fortyQueryFragment from "@endeavor-business-media/package-shared/graphql/fragments/content-list-body";
+import bodyQueryFragment from "@endeavor-business-media/package-shared/graphql/fragments/content-list-body";
 
 $ const { config, GAM } = out.global;
 $ const { id, alias, name, pageNode } = input;
@@ -40,7 +40,7 @@ $ const adSlots = isFunction(input.adSlots) ? input.adSlots : ({ aliases }) => (
 
         <marko-web-query|{ nodes }|
           name="website-optioned-content"
-          params={ sectionId: id, optionName: "Pinned", limit: 1, queryFragment: fortyQueryFragment }
+          params={ sectionId: id, optionName: "Pinned", limit: 1, queryFragment: bodyQueryFragment }
         >
           $ const content = nodes[0];
           $ const primaryImage = getAsObject(content, "primaryImage");
