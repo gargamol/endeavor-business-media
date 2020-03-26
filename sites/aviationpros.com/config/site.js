@@ -8,6 +8,10 @@ module.exports = {
   gam,
   gcse,
   nativeX,
+  identityX: {
+    appId: '5e28a0e058e67b6b7c55ae36',
+    enabled: true,
+  },
   company: 'Endeavor Business Media, LLC',
   logos: {
     navbar: {

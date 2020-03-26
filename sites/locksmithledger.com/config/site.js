@@ -10,6 +10,10 @@ module.exports = {
   gcse,
   nativeX,
   leaders,
+  identityX: {
+    appId: '5e28a5c758e67b1b2b55ae56',
+    enabled: true,
+  },
   company: 'Endeavor Business Media, LLC',
   logos: {
     navbar: {
