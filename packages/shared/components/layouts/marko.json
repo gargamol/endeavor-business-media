@@ -9,5 +9,18 @@
     "<newsletter-section>": {},
     "<magazine-section>": {},
     "@description": "string"
+  },
+  "<shared-default-page-layout>": {
+    "template": "./default.marko",
+    "<section>": {},
+    "@title": {
+      "type": "string",
+      "required": true
+    },
+    "@type": {
+      "type": "string",
+      "required": true
+    },
+    "@description": "string"
   }
 }
