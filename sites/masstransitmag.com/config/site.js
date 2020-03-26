@@ -30,7 +30,7 @@ module.exports = {
   ],
   identityX: {
     appId: '5e28a5db58e67b5d6b55ae57',
-    enabled: false,
+    enabled: true,
   },
   gtm: {
     containerId: 'GTM-PR268NB',
