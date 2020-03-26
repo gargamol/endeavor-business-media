@@ -42,7 +42,7 @@ module.exports = {
     userName: 'cygnuscorporate',
   },
   magazines: {
-    description: '5e28a5f258e67bcde455ae58',
+    description: '',
   },
   contactUs: {
     branding: {
