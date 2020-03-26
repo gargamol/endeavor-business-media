@@ -91,9 +91,9 @@ $pswp__root-z-index: $theme-site-header-z-index + 1 !default;
 
   &__title {
     margin-bottom: 15px;
-    font-family: Raleway, sans-serif;
+    font-family: $theme-font-family-sans-serif;
     font-size: 17px;
-    font-weight: 800;
+    font-weight: $font-weight-bold;
     color: $primary;
     text-transform: uppercase;
   }
