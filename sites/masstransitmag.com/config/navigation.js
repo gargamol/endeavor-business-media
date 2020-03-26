@@ -1,6 +1,7 @@
 module.exports = {
   primary: {
     items: [
+      { href: '/covid-19', label: 'COVID-19 News' },
       { href: '/bus', label: 'Bus' },
       { href: '/rail', label: 'Rail' },
       { href: '/technology', label: 'Technology' },
@@ -39,6 +40,7 @@ module.exports = {
     {
       label: 'Topics',
       items: [
+        { href: '/covid-19', label: 'COVID-19 News' },
         { href: '/bus', label: 'Bus' },
         { href: '/rail', label: 'Rail' },
         { href: '/technology', label: 'Technology' },
