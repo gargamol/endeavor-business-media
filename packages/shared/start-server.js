@@ -8,15 +8,12 @@ const loadInquiry = require('@endeavor-business-media/package-inquiry/load-from-
 const document = require('./components/document');
 const components = require('./components');
 const fragments = require('./fragments');
-const userRoutes = require('./routes/user');
 
 const routes = siteRoutes => (app) => {
   // Handle submissions on /__inquiry
   loadInquiry(app);
   // Handle contact submissions on /__contact-us
   contactUsHandler(app);
-  // Load user routes.
-  userRoutes(app);
   // Load site routes.
   siteRoutes(app);
 };
