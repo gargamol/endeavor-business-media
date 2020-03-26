@@ -1,6 +1,7 @@
 module.exports = {
   primary: {
     items: [
+      { href: '/covid-19', label: 'COVID-19' },
       { href: '/tactical', label: 'Tactical' },
       { href: '/training-careers', label: 'Training & Careers' },
       { href: '/on-the-street', label: 'On The Street' },
@@ -37,6 +38,7 @@ module.exports = {
     {
       label: 'Topics',
       items: [
+        { href: '/covid-19', label: 'COVID-19' },
         { href: '/tactical', label: 'Tactical' },
         { href: '/training-careers', label: 'Training & Careers' },
         { href: '/on-the-street', label: 'On The Street' },
