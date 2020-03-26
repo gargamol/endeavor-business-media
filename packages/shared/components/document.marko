@@ -44,9 +44,9 @@ $ const wrapperStyle = hasPrestitial ? "opacity: 0;" : null;
       <marko-web-reveal-ad-listener />
     </if>
     <marko-web-gtm-track-load-more />
-    <marko-web-identity-x-context|{ hasUser }|>
-      <default-theme-site-header has-user=hasUser reg-enabled=true />
-      <default-theme-site-menu has-user=hasUser reg-enabled=true />
+    <marko-web-identity-x-context|{ hasUser, isEnabled }|>
+      <default-theme-site-header has-user=hasUser reg-enabled=isEnabled />
+      <default-theme-site-menu has-user=hasUser reg-enabled=isEnabled />
     </marko-web-identity-x-context>
     <${input.aboveContainer} />
   </@above-container>
