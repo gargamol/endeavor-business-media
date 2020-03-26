@@ -29,8 +29,9 @@ module.exports = {
     { provider: 'facebook', href: 'https://www.facebook.com/firehousecom', target: '_blank' },
   ],
   identityX: {
-    appId: '',
-    enabled: false,
+    appId: '5e28a5b558e67b455855ae55',
+    enabled: true,
+    comments: { enabled: true },
   },
   gtm: {
     containerId: 'GTM-WZWBT3Q',
