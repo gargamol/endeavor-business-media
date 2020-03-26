@@ -15,12 +15,12 @@
     "test": "yarn lint && yarn compile && yarn build"
   },
   "dependencies": {
-    "@base-cms/marko-core": "^1.25.0",
-    "@base-cms/marko-web": "^1.25.0",
-    "@base-cms/marko-web-theme-default": "^1.25.0",
+    "@base-cms/marko-core": "^1.25.5",
+    "@base-cms/marko-web": "^1.25.5",
+    "@base-cms/marko-web-theme-default": "^1.25.4",
     "@base-cms/object-path": "^1.25.0",
     "@base-cms/utils": "^1.25.0",
-    "@base-cms/web-cli": "^1.25.0",
+    "@base-cms/web-cli": "^1.25.5",
     "@endeavor-business-media/package-leaders": "^1.10.0",
     "@endeavor-business-media/package-shared": "^1.11.1",
     "graphql": "^14.5.4",
