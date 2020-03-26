@@ -10,6 +10,7 @@ module.exports = {
       { href: '/interoperability-hie', label: 'Interoperability & HIE' },
       { href: '/clinical-it', label: 'Clinical IT' },
       { href: '/imaging', label: 'Imaging' },
+      { href: '/covid-19', label: 'COVID-19' },
     ],
   },
   secondary: {
@@ -50,6 +51,7 @@ module.exports = {
         { href: '/interoperability-hie', label: 'Interoperability & HIE' },
         { href: '/clinical-it', label: 'Clinical IT' },
         { href: '/imaging', label: 'Imaging' },
+        { href: '/covid-19', label: 'COVID-19' },
       ],
     },
     {
