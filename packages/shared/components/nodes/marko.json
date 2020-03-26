@@ -33,7 +33,8 @@
 
     "@modifiers": "array",
     "@attrs": "object",
-    "@link-attrs": "object"
+    "@link-attrs": "object",
+    "@full-height": "boolean"
   },
   "<shared-magazine-latest-issue-node>": {
     "template": "./magazine-latest-issue.marko",

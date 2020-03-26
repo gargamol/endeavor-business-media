@@ -1,233 +1,108 @@
-import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
-import queryFragment from "../graphql/fragments/content-list";
-import latestIssueFragment from "../graphql/fragments/magazine-latest-issue";
-import GAM from "../../config/gam";
-
+$ const { GAM } = out.global;
 $ const { id, alias, name, pageNode } = data;
 
-<marko-web-website-section-page-layout id=id alias=alias name=name>
-  <@head>
-    <marko-web-gtm-website-section-context|{ context }| alias=alias>
-      <marko-web-gtm-push data=context />
-    </marko-web-gtm-website-section-context>
-    <marko-web-resolve-page|{ data: section }| node=pageNode>
-      $ const aliases = hierarchyAliases(section);
-      $ const adSlots = {
-          "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
-          "gpt-ad-rail2": GAM.getAdUnit({ name: "rail2", aliases }),
-          "gpt-ad-rail3": GAM.getAdUnit({ name: "rail2", aliases }),
-          "gpt-ad-ms": GAM.getAdUnit({ name: "ms", aliases }),
-        }
-       <marko-web-gam-slots slots=adSlots />
-    </marko-web-resolve-page>
-  </@head>
-  <@above-container>
-    <marko-web-resolve-page|{ data: section }| node=pageNode>
-      $ const aliases = hierarchyAliases(section);
-      <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "wa", aliases }) />
-      <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "reskin", aliases }) />
-    </marko-web-resolve-page>
-  </@above-container>
-  <@page>
-    <marko-web-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
+$ const adSlots = ({ aliases }) => ({
+  "gpt-ad-lb1": GAM.getAdUnit({ name: "lb1", aliases }),
+  "gpt-ad-rail2": GAM.getAdUnit({ name: "rail2", aliases }),
+  "gpt-ad-rail3": GAM.getAdUnit({ name: "rail2", aliases }),
+  "gpt-ad-ms": GAM.getAdUnit({ name: "ms", aliases }),
+});
 
-    <marko-web-query|{ nodes }|
-      name="website-optioned-content"
-      params={ sectionId: id, optionName: "Pinned", limit: 5, requiresImage: true, queryFragment }
-    >
-      <website-content-hero-flow nodes=nodes />
-    </marko-web-query>
+<shared-website-section-page-default-layout
+  id=id
+  alias=alias
+  name=name
+  page-node=pageNode
+  ad-slots=adSlots
+>
+  <@page>
+    <shared-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
+
+    <shared-content-hero-block id=id />
 
     <div class="row">
       <div class="col-lg-4 mb-block">
-        <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
-          params={ sectionId: id, limit: 4, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link>Latest</marko-web-link>
-            </@header>
-            <@native-x index=2 name="default" aliases=["home"] />
-          </website-content-list-flow>
-        </marko-web-query>
+        <shared-website-section-list-block alias=alias>
+          <@query-params limit=4 skip=5 />
+          <@header>Latest</@header>
+        </shared-website-section-list-block>
       </div>
 
       <div class="col-lg-4 mb-block">
-        <marko-web-gam-display-ad id="gpt-ad-rail2" />
+        <shared-gam-display-ad id="gpt-ad-rail2" />
       </div>
 
       <div class="col-lg-4 mb-block">
-        <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
-          params={ sectionId: id, optionName: "Sponsored", limit: 4, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes class="sponsored" inner-justified=false>
-            <@header>
-              <marko-web-link>Sponsored Content</marko-web-link>
-            </@header>
+        <shared-website-section-list-block alias=alias link-header=false>
+          <@query-params optionName="Sponsored" />
+          <@header>Sponsored Content</@header>
+          <@list modifiers=["sponsored"]>
+            <@node modifiers=["sponsored"] />
             <@body>
-              <marko-web-gam-display-ad id="gpt-ad-ms" />
+              <shared-gam-display-ad id="gpt-ad-ms" />
             </@body>
-          </website-content-list-flow>
-        </marko-web-query>
+          </@list>
+          <@native-x enabled=false />
+        </shared-website-section-list-block>
       </div>
     </div>
 
     <div class="row">
       <div class="col-lg-4 mb-block">
-        <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
-          params={ sectionAlias: "tactical", limit: 4, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link href="/tactical">Tactical</marko-web-link>
-            </@header>
-            <@native-x index=2 name="default" aliases=["tactical"] />
-          </website-content-list-flow>
-        </marko-web-query>
+        <shared-website-section-list-block alias="tactical" />
       </div>
+
       <div class="col-lg-4 mb-block">
-          <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
-          params={ sectionAlias: "training-careers", limit: 4, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link href="/training-careers">Training & Careers</marko-web-link>
-            </@header>
-            <@native-x index=2 name="default" aliases=["training-careers"] />
-          </website-content-list-flow>
-        </marko-web-query>
+        <shared-website-section-list-block alias="training-careers" />
       </div>
+
       <div class="col-lg-4 mb-block">
-          <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
-          params={ sectionAlias: "on-the-street", limit: 4, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link href="/on-the-street">On The Street</marko-web-link>
-            </@header>
-            <@native-x index=2 name="default" aliases=["on-the-street"] />
-          </website-content-list-flow>
-        </marko-web-query>
+        <shared-website-section-list-block alias="on-the-street" />
       </div>
     </div>
 
     <div class="row">
       <div class="col">
-        <marko-web-query|{ nodes }|
-          name="all-published-content"
-          params={ contentTypes: ["Video"], limit: 4, queryFragment }
-        >
-          <marko-web-node-list inner-justified=true >
-            <@header>
-              <marko-web-link href="/videos">Videos</marko-web-link>
-            </@header>
-            <@nodes nodes=nodes>
-              <website-content-card-deck-flow nodes=nodes cols=4 display-ads=false with-teaser=false />
-            </@nodes>
-          </marko-web-node-list>
-        </marko-web-query>
+        <shared-published-content-cards-block content-types=["Video"]>
+          <@header>
+            <marko-web-link href="/videos">Videos</marko-web-link>
+          </@header>
+          <@query-params limit=4 />
+        </shared-published-content-cards-block>
       </div>
     </div>
 
     <div class="row">
       <div class="col-lg-4 mb-block">
-        <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
-          params={ sectionAlias: "investigations", limit: 4, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link href="/investigations">Investigations</marko-web-link>
-            </@header>
-            <@native-x index=2 name="default" aliases=["investigations"] />
-          </website-content-list-flow>
-        </marko-web-query>
+        <shared-website-section-list-block alias="investigations" />
       </div>
+
       <div class="col-lg-4 mb-block">
-        <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
-          params={ sectionAlias: "command-hq", limit: 4, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link href="/command-hq">Command/HQ</marko-web-link>
-            </@header>
-            <@native-x index=2 name="default" aliases=["command-hq"] />
-          </website-content-list-flow>
-        </marko-web-query>
+        <shared-website-section-list-block alias="command-hq" />
       </div>
+
       <div class="col-lg-4 mb-block">
-        <marko-web-query|{ nodes }|
-          name="website-scheduled-content"
-          params={ sectionAlias: "features/honoring-the-fallen", limit: 4, queryFragment }
-        >
-          <website-content-list-flow nodes=nodes>
-            <@header>
-              <marko-web-link href="/features/honoring-the-fallen">Honoring The Fallen</marko-web-link>
-            </@header>
-            <@native-x index=2 name="default" aliases=["features/honoring-the-fallen"] />
-          </website-content-list-flow>
-        </marko-web-query>
+        <shared-website-section-list-block alias="features/honoring-the-fallen">
+          <@native-x enabled=false />
+        </shared-website-section-list-block>
       </div>
     </div>
 
     <div class="row">
-      <div class="col-lg-4 md-block">
-        <marko-web-query|{ node: issue }|
-          name="magazine-latest-issue"
-            params={ publicationId: "53f6823928ed57018875bb53", queryFragment: latestIssueFragment }>
-          <website-magazine-latest-issue-flow issue-node=issue>
-            <@header>
-              <marko-web-magazine-issue-name tag=null obj=issue link=true>
-                Law Enforcment Technology
-              </marko-web-magazine-issue-name>
-            </@header>
-          </website-magazine-latest-issue-flow>
-        </marko-web-query>
-      </div>
-
       <div class="col-lg-4 mb-block">
-        <marko-web-gam-display-ad id="gpt-ad-rail3" />
+        <shared-magazine-latest-issue-block publication-id="53f6823928ed57018875bb53" />
       </div>
-
-      <div class="col-lg-4 md-block">
-        <marko-web-query|{ node: issue }|
-          name="magazine-latest-issue"
-            params={ publicationId: "53f6824228ed57018875bb59", queryFragment: latestIssueFragment }>
-          <website-magazine-latest-issue-flow issue-node=issue>
-            <@header>
-              <marko-web-magazine-issue-name tag=null obj=issue link=true>
-                Law Enforcement Product News
-              </marko-web-magazine-issue-name>
-            </@header>
-          </website-magazine-latest-issue-flow>
-        </marko-web-query>
+      <div class="col-lg-4 mb-block">
+        <shared-gam-display-ad id="gpt-ad-rail3" />
+      </div>
+      <div class="col-lg-4 mb-block">
+        <shared-magazine-latest-issue-block publication-id="53f6824228ed57018875bb59" />
       </div>
     </div>
   </@page>
-  <@below-page>
-    <marko-web-resolve-page|{ data: section }| node=pageNode>
-      $ const aliases = hierarchyAliases(section);
-      <marko-web-load-more
-        component-name="content-load-more-flow"
-        component-input={ aliases }
-        fragment-name="content-list"
-        query-name="website-scheduled-content"
-        query-params={ sectionId: id, limit: 14, skip: 5 }
-        max-pages=0
-        page-input={ for: "website-section", id }
-      />
-    </marko-web-resolve-page>
-  </@below-page>
-  <@foot>
-    <marko-web-resolve-page|{ data: section }| node=pageNode>
-      $ const aliases = hierarchyAliases(section);
-      <marko-web-gam-fixed-ad-bottom ...GAM.getAdUnit({ name: "lb2", aliases }) refresh-interval=15 scroll-offset=100 />
-    </marko-web-resolve-page>
-  </@foot>
-</marko-web-website-section-page-layout>
+
+  <@load-more max-pages=0>
+    <@query-params limit=14 skip=9 />
+    <@component-input card-deck={ nativeX: null } />
+  </@load-more>
+</shared-website-section-page-default-layout>

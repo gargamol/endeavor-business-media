@@ -1,13 +1,14 @@
 const { withWebsiteSection } = require('@base-cms/marko-web/middleware');
 const leadersFragment = require('@endeavor-business-media/package-leaders/graphql/fragments/leaders-section');
-const leaders = require('../templates/website-section/leaders');
+const contactUs = require('@endeavor-business-media/package-shared/templates/website-section/contact-us');
+const leaders = require('@endeavor-business-media/package-shared/templates/website-section/leaders');
+const queryFragment = require('@endeavor-business-media/package-shared/graphql/fragments/website-section-page');
+
 const directory = require('../templates/website-section/directory');
 const section = require('../templates/website-section');
-const contactUs = require('../templates/website-section/contact-us');
-const queryFragment = require('../graphql/fragments/website-section-page');
-const whitePapers = require('../templates/website-section/white-papers');
-const fortyUnderForty = require('../templates/website-section/40-under-40');
 const channel = require('../templates/website-section/channel');
+
+const fortyUnderForty = require('../templates/website-section/40-under-40');
 const transitBidsRFP = require('../templates/website-section/transit-bids-rfp');
 const transitBidsRFPSubmit = require('../templates/website-section/transit-bids-rfp/submit');
 
@@ -53,10 +54,6 @@ module.exports = (app) => {
   }));
   app.get(`/:alias(${channelAliases.join('|')})`, withWebsiteSection({
     template: channel,
-    queryFragment,
-  }));
-  app.get('/:alias(white-papers)', withWebsiteSection({
-    template: whitePapers,
     queryFragment,
   }));
   app.get('/:alias([a-z0-9-/]+)', withWebsiteSection({

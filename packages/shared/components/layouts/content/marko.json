@@ -8,6 +8,9 @@
     "<section-header>": {},
     "<section-body>": {},
     "<body-contents>": {},
+    "<page-contents>": {
+      "<before-body>": {}
+    },
     "<body-rail>": {},
     "<below-wrapper>": {},
     "<load-more>": {},

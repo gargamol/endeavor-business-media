@@ -1,33 +1,27 @@
 import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
-import queryFragment from "../../../graphql/fragments/content-list";
-import GAM from "../../../../config/gam";
+import { getAsObject } from "@base-cms/object-path";
+import { isFunction } from "@base-cms/utils";
+import queryFragment from "@endeavor-business-media/package-shared/graphql/fragments/content-list";
 
-$ const { id, alias, name, pageNode } = data;
-$ const { site } = out.global;
+$ const { config, GAM, site } = out.global;
+$ const { id, alias, name, pageNode } = input;
 
-<marko-web-website-section-page-layout id=id alias=alias name=name>
-  <@head>
-    <marko-web-gtm-website-section-context|{ context }| alias=alias>
-      <marko-web-gtm-push data=context />
-    </marko-web-gtm-website-section-context>
-    <marko-web-resolve-page|{ data: section }| node=pageNode>
-      $ const aliases = hierarchyAliases(section);
-      $ const adSlots = {
-          "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
-        }
-      <marko-web-gam-slots slots=adSlots />
-    </marko-web-resolve-page>
-  </@head>
-  <@above-container>
-    <marko-web-resolve-page|{ data: section }| node=pageNode>
-      $ const aliases = hierarchyAliases(section);
-      <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "wa", aliases }) />
-      <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "reskin", aliases }) />
-    </marko-web-resolve-page>
-  </@above-container>
+$ const adSlots = isFunction(input.adSlots) ? input.adSlots : ({ aliases }) => ({
+  "gpt-ad-lb1": GAM.getAdUnit({ name: "lb1", aliases }),
+});
+
+<shared-website-section-page-default-layout
+  id=id
+  alias=alias
+  name=name
+  page-node=pageNode
+  ad-slots=adSlots
+>
   <@page>
-    <marko-web-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
+    <shared-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
+
     <marko-web-resolve-page|{ data: section }| node=pageNode>
+    $ const aliases = hierarchyAliases(section);
       <marko-web-page-wrapper class="mb-block">
         <@section>
           <div class="row">
@@ -37,9 +31,11 @@ $ const { site } = out.global;
               <if(section.description)>
                 <p class="page-wrapper__deck">${section.description}</p>
               </if>
+              <hr>
             </div>
           </div>
         </@section>
+
         <@section modifiers=["bottom-border"]>
           <div class="row">
             <div class="col-lg-5">
@@ -64,20 +60,16 @@ $ const { site } = out.global;
             </div>
           </div>
         </@section>
-        <@section class="infinite-scroll-target">
+
+        <@section>
           <div class="row">
             <div class="col">
-              <marko-web-query|{ nodes }|
-                name="website-optioned-content"
-                params={ sectionId: id, optionName: "Pinned", limit: 250, queryFragment }
-              >
-                <website-content-list-flow
-                  nodes=nodes
-                  with-teaser=true
-                  image-position="left"
-                  inner-justified=false
-                  flush-x=true
-                />
+              <marko-web-query|{ nodes }| name="website-optioned-content" params={ sectionId: id, optionName: "Pinned", limit: 30, queryFragment }>
+                <shared-content-list-flow nodes=nodes>
+                  <@node image-position="left" with-teaser=true>
+                    <@image ar="16:9" width="150" />
+                  </@node>
+                </shared-content-list-flow>
               </marko-web-query>
             </div>
           </div>
@@ -85,10 +77,15 @@ $ const { site } = out.global;
       </marko-web-page-wrapper>
     </marko-web-resolve-page>
   </@page>
-  <@foot>
-    <marko-web-resolve-page|{ data: section }| node=pageNode>
-      $ const aliases = hierarchyAliases(section);
-      <marko-web-gam-fixed-ad-bottom ...GAM.getAdUnit({ name: "lb2", aliases }) refresh-interval=15 scroll-offset=100 />
-    </marko-web-resolve-page>
-  </@foot>
-</marko-web-website-section-page-layout>
+
+  <@below-page>
+    <shared-optioned-content-load-more-block name="list" section-id=id>
+      <@query-params option-name="Pinned" limit=30 skip=30 />
+      <@component-input>
+        <@node image-position="left" with-teaser=true>
+          <@image ar="16:9" width="150" />
+        </@node>
+      </@component-input>
+    </shared-optioned-content-load-more-block>
+  </@below-page>
+</shared-website-section-page-default-layout>

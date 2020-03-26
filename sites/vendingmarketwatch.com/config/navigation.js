@@ -20,6 +20,7 @@ module.exports = {
       { href: '/page/advertise', label: 'Advertise' },
       { href: '/video-showcase', label: 'Video Showcase' },
       { href: '/365-retail-markets', label: '365 Retail Markets' },
+      { href: '/covid-19', label: 'COVID-19' },
     ],
   },
   tertiary: {
@@ -58,6 +59,7 @@ module.exports = {
         { href: '/directory', label: 'Product Guide' },
         { href: '/video-showcase', label: 'Video Showcase' },
         { href: '/365-retail-markets', label: '365 Retail Markets' },
+        { href: '/covid-19', label: 'COVID-19' },
       ],
     },
     {

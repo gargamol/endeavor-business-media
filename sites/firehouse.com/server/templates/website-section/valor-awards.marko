@@ -1,33 +1,25 @@
-import { getAsObject } from "@base-cms/object-path";
 import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
-import queryFragment from "../../graphql/fragments/content-list";
-import valorQueryFragment from "../../graphql/fragments/content-list-body";
-import GAM from "../../../config/gam";
+import { getAsObject } from "@base-cms/object-path";
+import { isFunction } from "@base-cms/utils";
+import queryFragment from "@endeavor-business-media/package-shared/graphql/fragments/content-list";
+import bodyQueryFragment from "@endeavor-business-media/package-shared/graphql/fragments/content-list-body";
 
-$ const { id, alias, name, pageNode } = data;
+$ const { config, GAM } = out.global;
+$ const { id, alias, name, pageNode } = input;
 
-<marko-web-website-section-page-layout id=id alias=alias name=name>
-  <@head>
-    <marko-web-gtm-website-section-context|{ context }| alias=alias>
-      <marko-web-gtm-push data=context />
-    </marko-web-gtm-website-section-context>
-    <marko-web-resolve-page|{ data: section }| node=pageNode>
-      $ const aliases = hierarchyAliases(section);
-      $ const adSlots = {
-          "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
-        }
-       <marko-web-gam-slots slots=adSlots />
-    </marko-web-resolve-page>
-  </@head>
-  <@above-container>
-    <marko-web-resolve-page|{ data: section }| node=pageNode>
-      $ const aliases = hierarchyAliases(section);
-      <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "wa", aliases }) />
-      <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "reskin", aliases }) />
-    </marko-web-resolve-page>
-  </@above-container>
+$ const adSlots = isFunction(input.adSlots) ? input.adSlots : ({ aliases }) => ({
+  "gpt-ad-lb1": GAM.getAdUnit({ name: "lb1", aliases }),
+});
+
+<shared-website-section-page-default-layout
+  id=id
+  alias=alias
+  name=name
+  page-node=pageNode
+  ad-slots=adSlots
+>
   <@page>
-    <marko-web-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
+    <shared-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
 
     <marko-web-resolve-page|{ data: section }| node=pageNode>
     $ const aliases = hierarchyAliases(section);
@@ -44,13 +36,12 @@ $ const { id, alias, name, pageNode } = data;
             </div>
           </div>
         </@section>
-
         <@section>
           <div class="row">
             <div class="col-lg-6">
               <marko-web-query|{ nodes }|
                 name="website-optioned-content"
-                params={ sectionId: id, optionName: "Pinned", limit: 1, includeContentTypes: ["Article"], queryFragment: valorQueryFragment }
+                params={ sectionId: id, optionName: "Pinned", limit: 1, includeContentTypes: ["Article"], queryFragment: bodyQueryFragment }
               >
                 $ const content = nodes[0];
                 $ const primaryImage = getAsObject(content, "primaryImage");
@@ -107,7 +98,6 @@ $ const { id, alias, name, pageNode } = data;
                 </div>
               </marko-web-query>
             </div>
-
           </div>
         </@section>
         <@section>
@@ -115,27 +105,9 @@ $ const { id, alias, name, pageNode } = data;
             <div class="col-lg-12 mb-block">
               <marko-web-query|{ nodes }|
                 name="website-scheduled-content"
-                params={ sectionId: id, limit: 10, skip: 0, queryFragment }
+                params={ sectionId: id, limit: 12, skip: 0, queryFragment }
               >
-                <website-content-card-deck-flow nodes=nodes aliases=aliases>
-                  <@native-x index=2 name="default" aliases=[alias] />
-                </website-content-card-deck-flow>
-              </marko-web-query>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-lg-4 page-rail">
-              <marko-web-gam-define-display-ad ...GAM.getAdUnit({ name: "load-more", size: [300, 600], aliases }) modifiers=["in-card"] />
-            </div>
-            <div class="col-lg-8 mb-block">
-              <marko-web-query|{ nodes }|
-                name="website-scheduled-content"
-                params={ sectionId: id, limit: 4, skip: 10, queryFragment }
-              >
-                <website-content-list-flow nodes=nodes>
-                  <@native-x index=2 name="default" aliases=[alias] />
-                </website-content-list-flow>
+                <shared-content-card-deck-flow nodes=nodes display-ads=false />
               </marko-web-query>
             </div>
           </div>
@@ -143,26 +115,11 @@ $ const { id, alias, name, pageNode } = data;
       </marko-web-page-wrapper>
     </marko-web-resolve-page>
   </@page>
+
   <@below-page>
-    <marko-web-resolve-page|{ data: section }| node=pageNode>
-      $ const aliases = hierarchyAliases(section);
-      <marko-web-load-more
-        component-name="content-load-more-flow"
-        component-input={
-          aliases,
-          nativeX: { index: 0, name: "default", aliases },
-        }
-        fragment-name="content-list"
-        query-name="website-scheduled-content"
-        query-params={ sectionId: id, limit: 14, skip: 14 }
-        page-input={ for: "website-section", id }
-      />
-    </marko-web-resolve-page>
+    <shared-scheduled-content-load-more-block name="card-deck" section-id=id>
+      <@query-params limit=18 skip=12 />
+      <@component-input display-ads=false />
+    </shared-scheduled-content-load-more-block>
   </@below-page>
-  <@foot>
-    <marko-web-resolve-page|{ data: section }| node=pageNode>
-      $ const aliases = hierarchyAliases(section);
-      <marko-web-gam-fixed-ad-bottom ...GAM.getAdUnit({ name: "lb2", aliases }) refresh-interval=15 scroll-offset=100 />
-    </marko-web-resolve-page>
-  </@foot>
-</marko-web-website-section-page-layout>
+</shared-website-section-page-default-layout>

@@ -1,10 +1,6 @@
-import GAM from "../../../config/gam";
-
 $ const { site } = out.global;
 
-$ const type = "magazines";
-$ const title = "Magazines";
-$ const description = site.get("magazines.description");
+$ const { type, title, description } = input;
 
 <marko-web-default-page-layout type=type title=title description=description>
   <@head>
@@ -13,11 +9,12 @@ $ const description = site.get("magazines.description");
     </marko-web-gtm-default-context>
   </@head>
   <@above-container>
-    <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "wa" }) />
-    <marko-web-gam-out-of-page-ad ...GAM.getAdUnit({ name: "reskin" }) />
+    <shared-gam-out-of-page-ad name="reskin" />
   </@above-container>
+
   <@page>
-    <marko-web-gam-define-display-ad ...GAM.getAdUnit({ name: "lb1" }) modifiers=["top-of-page"] />
+    <shared-gam-define-display-ad name="lb1" modifiers=["top-of-page"] />
+
     <marko-web-page-wrapper class="mb-block">
       <@section>
         <div class="row">
@@ -27,13 +24,12 @@ $ const description = site.get("magazines.description");
             </default-theme-breadcrumbs-with-home>
             <h1 class="page-wrapper__title">${title}</h1>
             <if(description)>
-              <p class="page-wrapper__deck">${description}</p>
+              <p class="page-wrapper__description">${description}</p>
             </if>
+            <hr>
           </div>
         </div>
-      </@section>
-      <@section>
-        <website-magazine-publications-block />
+        <${input.section} />
       </@section>
     </marko-web-page-wrapper>
   </@page>

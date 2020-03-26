@@ -4,6 +4,9 @@
       <@image width=630 />
       <@title modifiers=["large"] />
     </shared-content-card-node>
+    <if(input.belowCard)>
+      <${input.belowCard} node=node />
+    </if>
   </@hero>
   <@list|{ nodes }|>
     <shared-content-list-flow ...input.list nodes=nodes />

@@ -1,61 +1,64 @@
-import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
-import GAM from "../../../../config/gam";
+import { isFunction } from "@base-cms/utils";
+import queryFragment from "@endeavor-business-media/package-shared/graphql/fragments/content-list";
 
-$ const { id, alias, name, pageNode } = data;
+$ const { config, GAM } = out.global;
+$ const { id, alias, name, pageNode } = input;
 
-<marko-web-website-section-page-layout id=id alias=alias name=name>
-  <@head>
-    <marko-web-gtm-website-section-context|{ context }| alias=alias>
-      <marko-web-gtm-push data=context />
-    </marko-web-gtm-website-section-context>
-    <marko-web-resolve-page|{ data: section }| node=pageNode>
-      $ const aliases = hierarchyAliases(section);
-      $ const adSlots = {
-          "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
-        }
-      <marko-web-gam-slots slots=adSlots />
-    </marko-web-resolve-page>
-  </@head>
+$ const adSlots = isFunction(input.adSlots) ? input.adSlots : ({ aliases }) => ({
+  "gpt-ad-lb1": GAM.getAdUnit({ name: "lb1", aliases }),
+});
+
+<shared-website-section-page-default-layout
+  id=id
+  alias=alias
+  name=name
+  page-node=pageNode
+  ad-slots=adSlots
+  with-oop-ads=false
+  with-footer-ad=false
+>
   <@page>
-    <marko-web-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
+    <shared-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
 
-    <marko-web-resolve-page|{ data: section }| node=pageNode>
-      <marko-web-page-wrapper>
-        <@section>
+    <marko-web-page-wrapper class="mb-block">
+      <@section>
+        <marko-web-resolve-page|{ data: section }| node=pageNode>
           <div class="row">
             <div class="col">
-              <default-theme-website-section-breadcrumbs section=section />
-              <h1 class="page-wrapper__title">
-                Submit a Transit Bids-RFP
-              </h1>
+              <default-theme-breadcrumbs-with-home>
+                <@item>${name}</@item>
+              </default-theme-breadcrumbs-with-home>
+              <h1 class="page-wrapper__title">Submit a Transit Bids-RFP</h1>
+              <div class="page-wrapper__deck">${section.description}</div>
             </div>
           </div>
-        </@section>
-        <@section>
-          <div id="wufoo-q19zmy5w0qcojvg">
-            Fill out the <a href="https://cygnuscorporate.wufoo.com/forms/q19zmy5w0qcojvg">online form</a>.
-          </div>
-          <script type="text/javascript">
-            var q19zmy5w0qcojvg;
-            (function(d, t) {
-              var s = d.createElement(t), options = {
-              'userName':'cygnuscorporate',
-              'formHash':'q19zmy5w0qcojvg',
-              'autoResize':true,
-              'height':'1367',
-              'async':true,
-              'host':'wufoo.com',
-              'header':'hide',
-              'ssl':true};
-              s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'secure.wufoo.com/scripts/embed/form.js';
-              s.onload = s.onreadystatechange = function() {
-              var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
-              try { q19zmy5w0qcojvg = new WufooForm();q19zmy5w0qcojvg.initialize(options);q19zmy5w0qcojvg.display(); } catch (e) {}};
-              var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
-            })(document, 'script');
-          </script>
-        </@section>
-      </marko-web-page-wrapper>
-    </marko-web-resolve-page>
+        </marko-web-resolve-page>
+      </@section>
+      <@section>
+        <div id="wufoo-q19zmy5w0qcojvg">
+          Fill out the <a href="https://cygnuscorporate.wufoo.com/forms/q19zmy5w0qcojvg">online form</a>.
+        </div>
+        <script type="text/javascript">
+          var q19zmy5w0qcojvg;
+          (function(d, t) {
+            var s = d.createElement(t), options = {
+            'userName':'cygnuscorporate',
+            'formHash':'q19zmy5w0qcojvg',
+            'autoResize':true,
+            'height':'1367',
+            'async':true,
+            'host':'wufoo.com',
+            'header':'hide',
+            'ssl':true};
+            s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'secure.wufoo.com/scripts/embed/form.js';
+            s.onload = s.onreadystatechange = function() {
+            var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+            try { q19zmy5w0qcojvg = new WufooForm();q19zmy5w0qcojvg.initialize(options);q19zmy5w0qcojvg.display(); } catch (e) {}};
+            var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+          })(document, 'script');
+        </script>
+      </@section>
+    </marko-web-page-wrapper>
   </@page>
-</marko-web-website-section-page-layout>
+  <@load-more enabled=false />
+</shared-website-section-page-default-layout>
