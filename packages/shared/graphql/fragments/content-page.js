@@ -9,6 +9,7 @@ fragment ContentPageFragment on Content {
   published
   siteContext {
     path
+    canonicalUrl
   }
   company {
     id

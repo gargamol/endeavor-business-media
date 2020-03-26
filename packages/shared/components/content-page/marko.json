@@ -67,5 +67,15 @@
     "@messages": "object",
     "@title": "string",
     "@user-input-title": "string"
+  },
+  "<shared-content-page-comments>": {
+    "template": "./comments.marko",
+    "<content>": {
+      "@id": "number",
+      "@name": "string",
+      "@teaser": "string",
+      "@url": "string"
+    },
+    "@should-display": "boolean"
   }
 }

@@ -15,6 +15,7 @@ $ const displayInquiry = (content) => {
   if (type === "product" && get(content, "company.enableRmi")) return true;
   return false;
 };
+$ const displayComments = ["contact", "document", "whitepaper", "product", "company"].includes(type) ? false : true;
 
 $ const requiresRegistration = get(content, "userRegistration.isRequired");
 $ const accessLevels = getAsArray(content, "userRegistration.accessLevels");
@@ -112,6 +113,10 @@ $ const accessLevels = getAsArray(content, "userRegistration.accessLevels");
           <marko-web-obj-text type="content" block-name=blockName obj=content field="marketsServing" />
         </div>
       </if>
+
+      <shared-content-page-comments should-display=displayComments>
+        <@content id=id name=content.name teaser=content.teaser url=content.siteContext.canonicalUrl />
+      </shared-content-page-comments>
     </else>
   </marko-web-identity-x-access>
 
