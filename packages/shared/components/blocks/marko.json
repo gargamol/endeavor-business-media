@@ -104,5 +104,8 @@
   },
   "<shared-magazine-publications-block>": {
     "template": "./magazine-publications.marko"
+  },
+  "<shared-newsletter-signup-block>": {
+    "template": "./omeda-newsletter-signup.marko"
   }
 }
