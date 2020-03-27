@@ -8,6 +8,9 @@ $leaders-primary-color: #000;
 $leaders-primary-color-light: lighten($leaders-primary-color, 10%);
 $leaders-accent-color: $primary;
 
+$theme-newsletter-block-bg-color: $primary;
+$theme-newsletter-block-button-bg-color: #000;
+
 $theme-item-description-max-lines: 5;
 
 $theme-site-header-breakpoints: (
