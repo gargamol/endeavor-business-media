@@ -7,7 +7,9 @@ $ const { site } = out.global;
   contextual: true,
   displayHeader: false,
   columns: 3,
-  offsetTop: 50,
+  offsetTop: site.get("leaders.offsetTop", 105),
+  promotionLimit: site.get("leaders.promotionLimit", 4),
+  videoLimit: site.get("leaders.videoLimit", 3),
   viewAllHref: '/leaders',
   mediaQueries: [
     { prop: "columns", value: 2, query: "(max-width: 991px)" },
