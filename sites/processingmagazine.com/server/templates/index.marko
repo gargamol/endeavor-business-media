@@ -24,14 +24,14 @@ $ const adSlots = ({ aliases }) => ({
       <div class="col-lg-8">
         <div class="row">
           <div class="col-lg-6 mb-block">
-            <shared-website-section-list-block alias="maintenance-safety">
+            <shared-website-section-list-block alias="covid-19">
               <@query-params limit=3 />
               <@native-x index=2 />
             </shared-website-section-list-block>
           </div>
 
           <div class="col-lg-6 mb-block">
-            <shared-website-section-list-block alias="material-handling-dry-wet">
+            <shared-website-section-list-block alias="maintenance-safety">
               <@query-params limit=3 />
               <@native-x index=2 />
             </shared-website-section-list-block>
@@ -40,14 +40,14 @@ $ const adSlots = ({ aliases }) => ({
 
         <div class="row">
           <div class="col-lg-6 mb-block">
-            <shared-website-section-list-block alias="mixing-blending-size-reduction">
+            <shared-website-section-list-block alias="material-handling-dry-wet">
               <@query-params limit=3 />
               <@native-x index=2 />
             </shared-website-section-list-block>
           </div>
 
           <div class="col-lg-6 mb-block">
-            <shared-website-section-list-block alias="process-control-automation">
+            <shared-website-section-list-block alias="mixing-blending-size-reduction">
               <@query-params limit=3 />
               <@native-x index=2 />
             </shared-website-section-list-block>
@@ -63,22 +63,28 @@ $ const adSlots = ({ aliases }) => ({
 
     <div class="row">
       <div class="col-lg-4 mb-block">
-        <shared-website-section-list-block alias="pumps-motors-drives">
-          <@query-params limit=3 />
-          <@native-x index=2 />
-        </shared-website-section-list-block>
+        <shared-website-section-list-block alias="process-control-automation" />
       </div>
 
       <div class="col-lg-4 mb-block">
-        <shared-website-section-list-block alias="valves-actuators">
-          <@query-params limit=3 />
-          <@native-x index=2 />
+        <shared-website-section-list-block alias="pumps-motors-drives" />
+      </div>
+
+      <div class="col-lg-4 mb-block">
+        <shared-website-section-list-block alias="valves-actuators" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 mb-block">
+        <shared-website-section-list-block alias=alias>
+          <@query-params limit=4 skip=5 />
+          <@header>More from Processing Magazine</@header>
         </shared-website-section-list-block>
       </div>
 
       <div class="col-lg-4 mb-block">
         <shared-published-content-list-block content-types=["Webinar"]>
-          <@query-params limit=3 />
           <@header>
             <marko-web-link href="/webinars">Webinars</marko-web-link>
           </@header>
@@ -87,11 +93,15 @@ $ const adSlots = ({ aliases }) => ({
           </@list>
         </shared-published-content-list-block>
       </div>
+
+      <div class="col-lg-4 mb-block">
+        <shared-magazine-latest-issue-block publication-id="5da74dc4a6e839a3008b4567" />
+      </div>
     </div>
   </@page>
 
   <@load-more max-pages=0>
-    <@query-params limit=14 skip=5 />
+    <@query-params limit=14 skip=9 />
     <@component-input card-deck={ nativeX: null } />
   </@load-more>
 </shared-website-section-page-default-layout>
