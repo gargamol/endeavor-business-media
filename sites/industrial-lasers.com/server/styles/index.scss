@@ -15,6 +15,9 @@ $theme-site-navbar-menu-hover-background-color: lighten($theme-site-navbar-prima
 $theme-site-navbar-logo-height: 55px;
 $theme-site-navbar-logo-height-sm: 30px;
 
+$theme-newsletter-block-bg-color: $primary;
+$theme-newsletter-block-button-bg-color: #000;
+
 $theme-site-header-breakpoints: (
   hide-primary: 870px,
   hide-secondary: 804px,

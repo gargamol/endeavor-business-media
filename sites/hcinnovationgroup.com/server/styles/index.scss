@@ -14,6 +14,9 @@ $theme-site-navbar-primary-bg-color: $primary;//#0F183E
 $theme-site-navbar-logo-height: 70px;
 $theme-site-navbar-logo-height-sm: 25px;
 
+$theme-newsletter-block-bg-color: $theme-site-navbar-secondary-bg-color;
+$theme-newsletter-block-button-bg-color: #000;
+
 $theme-site-header-breakpoints: (
   hide-primary: 950px,
   hide-secondary: 910px,

@@ -23,6 +23,9 @@ $leaders-video-card-count: 2 !default;
 @import "../../node_modules/@base-cms/marko-web-social-sharing/scss/buttons";
 @import "../../node_modules/@base-cms/marko-web-theme-default/skins/orion/skin";
 
+$theme-newsletter-block-bg-color: $theme-card-header-background-color !default;
+$theme-newsletter-block-button-bg-color: #c83e31 !default;
+
 $pswp__root-z-index: $theme-site-header-z-index + 1 !default;
 @import "../../node_modules/@base-cms/marko-web-photoswipe/scss/main";
 
@@ -112,5 +115,64 @@ $pswp__root-z-index: $theme-site-header-z-index + 1 !default;
         margin-bottom: 0;
       }
     }
+  }
+}
+
+.newsletter-signup-block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: $grid-gutter-width * 2;
+  background-color: $theme-newsletter-block-bg-color;
+
+  &__title {
+    @include theme-line-height-crop(1.5);
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-left: auto;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: $white;
+    text-align: center;
+  }
+
+  &__form {
+    width: 100%;
+  }
+
+  &__field-wrapper {
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+
+  &__email-field {
+    width: 70%;
+    height: 45px;
+    padding: 2px 20px;
+    font-family: $theme-font-family-serif;
+    border: 0;
+  }
+
+  &__submit-button {
+    height: 44px;
+    padding: 2px 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+    font-family: $theme-font-family-sans-serif;
+    font-size: 15px;
+    font-weight: $font-weight-bold;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: $theme-newsletter-block-button-bg-color;
+    border: none;
+  }
+
+  &--margin-top {
+    margin-top: map-get($spacers, block);
   }
 }

@@ -16,6 +16,7 @@ $ const displayInquiry = (content) => {
   return false;
 };
 $ const displayComments = ["contact", "document", "whitepaper", "product", "company"].includes(type) ? false : true;
+$ const displayNewsletterSignup = displayComments;
 
 $ const requiresRegistration = get(content, "userRegistration.isRequired");
 $ const accessLevels = getAsArray(content, "userRegistration.accessLevels");
@@ -125,4 +126,9 @@ $ const accessLevels = getAsArray(content, "userRegistration.accessLevels");
       <@props thumbnail-click-selectors=`[data-gallery-id="${id}"] [data-image-id]` />
     </marko-web-photoswipe-images>
   </if>
+
+  <if(displayNewsletterSignup)>
+    <shared-newsletter-signup-block modifiers=["margin-top"] />
+  </if>
+
 </default-theme-page-contents>

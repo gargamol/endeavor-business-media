@@ -2,12 +2,14 @@ const navigation = require('./navigation');
 const gam = require('./gam');
 const gcse = require('./gcse');
 const nativeX = require('./native-x');
+const dragonForms = require('./dragon-forms');
 
 module.exports = {
   navigation,
   gam,
   gcse,
   nativeX,
+  dragonForms,
   company: 'Endeavor Business Media, LLC',
   logos: {
     navbar: {
