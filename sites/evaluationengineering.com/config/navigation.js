@@ -42,6 +42,7 @@ module.exports = {
         { href: '/industries', label: 'Industries' },
         { href: '/instrumentation', label: 'Instrumentation' },
         { href: '/test-issues-techniques', label: 'Test Issues & Techniques' },
+        { href: '/covid-19', label: 'COVID-19' },
       ],
     },
     {
