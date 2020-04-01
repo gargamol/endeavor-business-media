@@ -1,6 +1,7 @@
 module.exports = {
   primary: {
     items: [
+      { href: '/covid-19', label: 'COVID-19' },
       { href: '/macro-op-ed', label: 'Macro/Op-Ed' },
       { href: '/practice', label: 'Practice' },
       { href: '/science-tech', label: 'Science & Tech' },
@@ -38,6 +39,7 @@ module.exports = {
     {
       label: 'Topics',
       items: [
+        { href: '/covid-19', label: 'COVID-19' },
         { href: '/macro-op-ed', label: 'Macro/Op-Ed' },
         { href: '/practice', label: 'Practice' },
         { href: '/science-tech', label: 'Science & Tech' },
