@@ -1,6 +1,7 @@
 module.exports = {
   primary: {
     items: [
+      { href: '/whats-trending', label: "What's Trending" },
       { href: '/ergonomics', label: 'Ergonomics' },
       { href: '/infection-control', label: 'Infection Control' },
       { href: '/patient-care', label: 'Patient Care' },
@@ -38,6 +39,7 @@ module.exports = {
     {
       label: 'Topics',
       items: [
+        { href: '/whats-trending', label: "What's Trending" },
         { href: '/ergonomics', label: 'Ergonomics' },
         { href: '/infection-control', label: 'Infection Control' },
         { href: '/patient-care', label: 'Patient Care' },
