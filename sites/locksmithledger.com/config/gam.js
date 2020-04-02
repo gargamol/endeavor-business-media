@@ -13,6 +13,14 @@ config
     { name: 'reskin', path: 'default/reskin' },
     { name: 'wa', path: 'default/wa' },
   ])
+  .setAliasAdUnits('covid-19', [
+    { name: 'lb1', templateName: 'LB1', path: 'covid-19/lb1' },
+    { name: 'lb2', templateName: 'LB2', path: 'covid-19/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'covid-19/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'covid-19/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'covid-19/load-more' },
+    { name: 'reskin', path: 'covid-19/reskin' },
+  ])
   .setAliasAdUnits('alarms-video', [
     { name: 'lb1', templateName: 'LB1', path: 'alarms-video/lb1' },
     { name: 'lb2', templateName: 'LB2', path: 'alarms-video/lb2' },
