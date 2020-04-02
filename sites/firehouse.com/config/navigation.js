@@ -19,6 +19,7 @@ module.exports = {
       { href: '/directory', label: 'Buyer\'s Guide' },
       { href: '/magazine', label: 'In Print' },
       { href: '/page/advertise', label: 'Advertise' },
+      { href: '/covid-19', label: 'COVID-19' },
     ],
   },
   tertiary: {
@@ -54,6 +55,7 @@ module.exports = {
     {
       label: 'Resources',
       items: [
+        { href: '/covid-19', label: 'COVID-19' },
         { href: '/careers-education/jobs', label: 'Jobs' },
         { href: 'https://forums.firehouse.com', label: 'Forums', target: '_blank' },
         { href: '/magazine', label: 'In Print' },
