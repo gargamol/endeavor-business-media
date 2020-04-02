@@ -1,6 +1,7 @@
 module.exports = {
   primary: {
     items: [
+      { href: '/covid-19', label: 'COVID-19' },
       { href: '/accounting-audit', label: 'Accounting & Audit' },
       { href: '/firm-management', label: 'Firm Management' },
       { href: '/payroll', label: 'Payroll' },
@@ -39,6 +40,7 @@ module.exports = {
     {
       label: 'Topics',
       items: [
+        { href: '/covid-19', label: 'COVID-19' },
         { href: '/accounting-audit', label: 'Accounting & Audit' },
         { href: '/firm-management', label: 'Firm Management' },
         { href: '/payroll', label: 'Payroll' },
