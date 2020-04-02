@@ -15,11 +15,11 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-8">
         <div class="row">
           <div class="col-lg-6 mb-block">
-            <shared-website-section-list-block alias="macro-op-ed" />
+            <shared-website-section-list-block alias="covid-19" />
           </div>
 
           <div class="col-lg-6 mb-block">
-            <shared-website-section-list-block alias="practice" />
+            <shared-website-section-list-block alias="macro-op-ed" />
           </div>
         </div>
       </div>
@@ -30,6 +30,10 @@ $ const { id, alias, name, pageNode } = data;
     </div>
 
     <div class="row">
+      <div class="col-lg-4 mb-block">
+        <shared-website-section-list-block alias="practice" />
+      </div>
+
       <div class="col-lg-4 mb-block">
         <shared-website-section-list-block alias="science-tech">
           <@query-params limit=3 />
@@ -43,30 +47,21 @@ $ const { id, alias, name, pageNode } = data;
           <@native-x index=2 />
         </shared-website-section-list-block>
       </div>
+    </div>
 
+    <div class="row">
       <div class="col-lg-4 mb-block">
         <shared-website-section-list-block alias="dental-office-design">
           <@query-params limit=3 />
           <@native-x index=2 />
         </shared-website-section-list-block>
       </div>
-    </div>
-
-    <div class="row">
       <div class="col-lg-4 mb-block">
         <shared-published-content-list-block content-types=["Video"]>
           <@header>
             <marko-web-link href="/videos">Videos</marko-web-link>
           </@header>
         </shared-published-content-list-block>
-      </div>
-      <div class="col-lg-4 mb-block">
-        <shared-website-section-list-block alias="white-papers">
-          <@native-x enabled=false />
-          <@list>
-            <@node display-image=false />
-          </@list>
-        </shared-website-section-list-block>
       </div>
       <div class="col-lg-4 mb-block">
         <shared-magazine-latest-issue-block publication-id="5c9a271747062ba1048b4569" />
