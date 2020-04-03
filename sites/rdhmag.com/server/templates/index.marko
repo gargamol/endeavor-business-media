@@ -16,9 +16,7 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-8">
         <div class="row">
           <div class="col-lg-6 mb-block">
-            <shared-website-section-list-block alias="pathology/covid-19">
-              <@native-x aliases=["pathology"] />
-            </shared-website-section-list-block>
+            <shared-website-section-list-block alias="covid-19" />
           </div>
           <div class="col-lg-6 mb-block">
             <shared-website-section-list-block alias="infection-control" />
@@ -33,21 +31,15 @@ $ const { id, alias, name, pageNode } = data;
 
     <div class="row">
       <div class="col-lg-4 mb-block">
-        <shared-website-section-list-block alias="patient-care">
-          <@query-params limit=3 />
-          <@native-x index=2 />
-        </shared-website-section-list-block>
+        <shared-website-section-list-block alias="patient-care" />
       </div>
       <div class="col-lg-4 mb-block">
-        <shared-website-section-list-block alias="pathology">
-          <@query-params limit=3 />
-          <@native-x index=2 />
-        </shared-website-section-list-block>
+        <shared-website-section-list-block alias="pathology" />
       </div>
       <div class="col-lg-4 mb-block">
         <shared-published-content-list-block content-types=["Webinar"]>
           <@header>
-            <marko-web-link href="/webinar">Webcasts</marko-web-link>
+            <marko-web-link href="/webcasts">Webcasts</marko-web-link>
           </@header>
         </shared-published-content-list-block>
       </div>
@@ -55,17 +47,13 @@ $ const { id, alias, name, pageNode } = data;
 
     <div class="row">
       <div class="col-lg-4 mb-block">
-        <shared-website-section-list-block alias="career-profession">
-          <@query-params limit=5 />
-          <@native-x index=4 />
-        </shared-website-section-list-block>
+        <shared-website-section-list-block alias="career-profession" />
       </div>
       <div class="col-lg-4 mb-block">
         <shared-published-content-list-block content-types=["Video"]>
           <@header>
             <marko-web-link href="/videos">Videos</marko-web-link>
           </@header>
-          <@query-params limit=5 />
         </shared-published-content-list-block>
       </div>
       <div class="col-lg-4 mb-block">

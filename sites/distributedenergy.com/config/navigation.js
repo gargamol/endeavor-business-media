@@ -34,6 +34,7 @@ module.exports = {
     {
       label: 'Topics',
       items: [
+        { href: '/covid-19', label: 'COVID-19' },
         { href: '/microgrids', label: 'Microgrids' },
         { href: '/renewables', label: 'Renewables' },
         { href: '/storage', label: 'Storage' },

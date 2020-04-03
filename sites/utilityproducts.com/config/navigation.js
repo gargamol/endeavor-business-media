@@ -38,6 +38,7 @@ module.exports = {
     {
       label: 'Topics',
       items: [
+        { href: '/covid-19', label: 'COVID-19' },
         { href: '/transmission-distribution', label: 'Transmission & Distribution' },
         { href: '/vehicles-accessories', label: 'Vehicles & Accessories' },
         { href: '/tools-supplies', label: 'Tools & Supplies' },
