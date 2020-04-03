@@ -14,6 +14,7 @@ module.exports = {
       { href: '/magazine', label: 'Magazine ' },
       { href: '/page/advertise', label: 'Advertise' },
       { href: '/white-papers', label: 'Free Reports' },
+      { href: '/page/supplements', label: 'Supplements' },
     ],
   },
   tertiary: {
@@ -47,6 +48,7 @@ module.exports = {
       items: [
         { href: '/magazine', label: 'Magazine' },
         { href: '/white-papers', label: 'Free Reports' },
+        { href: '/page/supplements', label: 'Supplements' },
       ],
     },
     {
