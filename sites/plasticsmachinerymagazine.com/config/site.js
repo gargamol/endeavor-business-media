@@ -47,7 +47,7 @@ module.exports = {
       bgColor: '#164f77',
       logo: 'https://img.plasticsmachinerymagazine.com/files/base/ebm/pmm/image/static/logo/site_logo.png?h=60',
     },
-    to: 'sales@plasticsmachinerymagazine.com',
+    to: 'contact@plasticsmachinerymagazine.com',
   },
   inquiry: {
     enabled: true,
