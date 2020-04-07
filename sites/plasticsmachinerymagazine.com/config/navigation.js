@@ -56,7 +56,6 @@ module.exports = {
         { href: '/page/advertise', label: 'Advertise' },
         { href: '/contact-us', label: 'Contact Us' },
         { href: '/product-innovations', label: 'Product Innovations' },
-        { href: '/webinars', label: 'Webinars' },
       ],
     },
     {
