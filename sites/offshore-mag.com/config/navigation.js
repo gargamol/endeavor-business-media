@@ -42,6 +42,7 @@ module.exports = {
     {
       label: 'Topics',
       items: [
+        { href: '/business-briefs/coronavirus', label: 'Coronavirus' },
         { href: '/regional-reports', label: 'Regional Reports' },
         { href: '/drilling-completion', label: 'Drilling & Completion' },
         { href: '/field-development', label: 'Field Development' },
