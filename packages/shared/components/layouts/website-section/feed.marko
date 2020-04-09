@@ -1,4 +1,5 @@
 import defaultDescription from "@base-cms/marko-web/utils/published-content/description";
+import defaultValue from "@base-cms/marko-core/utils/default-value";
 import { isFunction } from "@base-cms/utils";
 import queryFragment from "../../../graphql/fragments/content-list";
 
@@ -20,19 +21,21 @@ $ const adSlots = isFunction(input.adSlots) ? input.adSlots : ({ aliases }) => (
   <@page>
     <shared-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
 
-    <marko-web-page-wrapper class="mb-block">
-      <@section>
-        <div class="row">
-          <div class="col">
-            <default-theme-breadcrumbs-with-home>
-              <@item>${name}</@item>
-            </default-theme-breadcrumbs-with-home>
-            <h1 class="page-wrapper__title">${name}</h1>
-            <div class="page-wrapper__deck">${description}</div>
+  <marko-web-resolve-page|{ data: section }| node=pageNode>
+      <marko-web-page-wrapper class="mb-block">
+        <@section>
+          <div class="row">
+            <div class="col">
+              <default-theme-breadcrumbs-with-home>
+                <@item>${name}</@item>
+              </default-theme-breadcrumbs-with-home>
+              <h1 class="page-wrapper__title">${name}</h1>
+              <div class="page-wrapper__deck">${defaultValue(section.description, description)}</div>
+            </div>
           </div>
-        </div>
-      </@section>
-    </marko-web-page-wrapper>
+        </@section>
+      </marko-web-page-wrapper>
+    </marko-web-resolve-page>
 
     <div class="row">
       <div class="col">
