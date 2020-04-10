@@ -312,12 +312,12 @@ jobs:
       name: strategies-u.com
       script: npx @base-cms/website-deployment-tool deploy strategies-u.com aerilon
 
-    # - <<: *production-job
-    #   name: taxpracticeadvisor.com
-    #   script: npx @base-cms/website-deployment-tool deploy taxpracticeadvisor.com picon
-    # - <<: *staging-job
-    #   name: taxpracticeadvisor.com
-    #   script: npx @base-cms/website-deployment-tool deploy taxpracticeadvisor.com picon
+    - <<: *production-job
+      name: taxpracticeadvisor.com
+      script: npx @base-cms/website-deployment-tool deploy taxpracticeadvisor.com picon
+    - <<: *staging-job
+      name: taxpracticeadvisor.com
+      script: npx @base-cms/website-deployment-tool deploy taxpracticeadvisor.com picon
 
     - <<: *production-job
       name: utilityproducts.com
