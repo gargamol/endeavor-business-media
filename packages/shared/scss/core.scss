@@ -32,22 +32,17 @@ $pswp__root-z-index: $theme-site-header-z-index + 1 !default;
 @import "../../node_modules/@endeavor-business-media/package-gam-prestitial/scss/prestitial";
 @import "../../node_modules/@endeavor-business-media/package-contact-us/scss/index";
 @import "../../node_modules/@endeavor-business-media/package-directory/scss/index";
-@import "../../node_modules/@endeavor-business-media/package-inquiry/scss/index";
 @import "../../node_modules/@endeavor-business-media/package-leaders/scss/index";
 
 @import "./components/card-deck-flow";
 @import "./components/company-page";
 @import "./components/identity-x";
+@import "./components/inquiry";
 @import "./components/leaders";
 @import "./components/node";
 
 .social-sharing {
   padding: 10px 0;
-}
-
-.inquiry-form {
-  margin-top: 0;
-  border-top: none;
 }
 
 .node-list {

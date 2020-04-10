@@ -32,7 +32,6 @@
     "@endeavor-business-media/package-contact-us": "^1.12.0",
     "@endeavor-business-media/package-directory": "^1.12.0",
     "@endeavor-business-media/package-gam-prestitial": "^1.14.4",
-    "@endeavor-business-media/package-inquiry": "^1.12.0",
     "@endeavor-business-media/package-leaders": "^1.13.0",
     "cheerio": "^1.0.0-rc.3",
     "graphql": "^14.5.4",

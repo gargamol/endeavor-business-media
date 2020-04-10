@@ -29,11 +29,5 @@
     "template": "./image-list.marko",
     "@images": "array",
     "@width": "number"
-  },
-  "<shared-inquiry-form>": {
-    "template": "./inquiry-form.marko",
-    "@node": "object",
-    "@modifiers": "array",
-    "@display-header": "boolean"
   }
 }
