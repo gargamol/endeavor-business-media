@@ -3,7 +3,7 @@ const { startServer } = require('@base-cms/marko-web');
 const { set, get } = require('@base-cms/object-path');
 const cleanResponse = require('@base-cms/marko-core/middleware/clean-marko-response');
 const contactUsHandler = require('@endeavor-business-media/package-contact-us');
-const loadInquiry = require('@endeavor-business-media/package-inquiry/load-from-config');
+const loadInquiry = require('@base-cms/marko-web-inquiry');
 
 const document = require('./components/document');
 const components = require('./components');

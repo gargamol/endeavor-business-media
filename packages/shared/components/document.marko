@@ -9,6 +9,9 @@ $ const prestitial = GAM ? GAM.getAdUnit({ name: "wa" }) : {};
 $ const hasPrestitial = Boolean(prestitial.path);
 $ const wrapperStyle = hasPrestitial ? "opacity: 0;" : null;
 
+$ const radix = site.getAsObject("radix");
+$ const isRadixEnabled = Boolean(radix.enabled && radix.appId);
+
 <marko-web-document ...input>
   <@head>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -44,6 +47,9 @@ $ const wrapperStyle = hasPrestitial ? "opacity: 0;" : null;
       <marko-web-reveal-ad-listener />
     </if>
     <marko-web-gtm-track-load-more />
+    <if(isRadixEnabled)>
+      <marko-web-radix-inquiry-listener app-id=radix.appId submission-field-ids=radix.submissionFieldIds />
+    </if>
     <marko-web-identity-x-context|{ hasUser, isEnabled }|>
       <default-theme-site-header has-user=hasUser reg-enabled=isEnabled />
       <default-theme-site-menu has-user=hasUser reg-enabled=isEnabled />
@@ -53,5 +59,8 @@ $ const wrapperStyle = hasPrestitial ? "opacity: 0;" : null;
   <@below-container>
     <${input.belowContainer} />
     <default-theme-site-footer />
+    <if(isRadixEnabled)>
+      <marko-web-radix-identity-detector app-id=radix.appId />
+    </if>
   </@below-container>
 </marko-web-document>
