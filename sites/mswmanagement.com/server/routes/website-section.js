@@ -3,7 +3,6 @@ const leadersFragment = require('@endeavor-business-media/package-leaders/graphq
 const leaders = require('@endeavor-business-media/package-shared/templates/website-section/leaders');
 const contactUs = require('@endeavor-business-media/package-shared/templates/website-section/contact-us');
 const queryFragment = require('@endeavor-business-media/package-shared/graphql/fragments/website-section-page');
-
 const directory = require('../templates/website-section/directory');
 const section = require('../templates/website-section');
 const whitePapers = require('../templates/website-section/white-papers');
@@ -26,6 +25,10 @@ module.exports = (app) => {
     queryFragment,
   }));
   app.get('/:alias(white-papers)', withWebsiteSection({
+    template: whitePapers,
+    queryFragment,
+  }));
+  app.get('/:alias(supplements)', withWebsiteSection({
     template: whitePapers,
     queryFragment,
   }));
