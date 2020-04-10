@@ -1,0 +1,103 @@
+import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
+
+$ const { GAM } = out.global;
+$ const { id, alias, name, pageNode } = data;
+
+$ const adSlots = ({ aliases }) => ({
+  "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
+  "gpt-ad-rail2": GAM.getAdUnit({ name: "rail2", aliases }),
+  "gpt-ad-rail3": GAM.getAdUnit({ name: "rail2", aliases }),
+  "gpt-ad-ms": GAM.getAdUnit({ name: "ms", aliases }),
+});
+
+<shared-website-section-page-default-layout
+  id=id
+  alias=alias
+  name=name
+  page-node=pageNode
+  ad-slots=adSlots
+>
+  <@page>
+    <shared-content-hero-block id=id />
+
+    <shared-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
+
+    <div class="row">
+      <div class="col-lg-4 mb-block">
+        <shared-website-section-list-block alias="tax-compliance" />
+      </div>
+
+      <div class="col-lg-4 mb-block">
+        <shared-gam-display-ad id="gpt-ad-rail2" />
+      </div>
+
+      <div class="col-lg-4 mb-block">
+        <shared-website-section-list-block alias="firm-management" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 mb-block">
+        <shared-website-section-list-block alias="payroll" />
+      </div>
+
+      <div class="col-lg-4 mb-block">
+        <shared-website-section-list-block alias="accounting-audit" />
+      </div>
+
+      <div class="col-lg-4 mb-block">
+        <shared-website-section-list-block alias="small-business" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 mb-block">
+        <shared-website-section-list-block alias="reviews" />
+      </div>
+
+      <div class="col-lg-4 mb-block">
+        <shared-gam-display-ad id="gpt-ad-rail3" />
+      </div>
+
+      <div class="col-lg-4 mb-block">
+        <shared-website-section-list-block alias="contributors">
+          <@native-x enabled=false />
+        </shared-website-section-list-block>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 mb-block">
+        <shared-published-content-list-block content-types=["Video"]>
+          <@header>
+            <marko-web-link href="/videos">Videos</marko-web-link>
+          </@header>
+        </shared-published-content-list-block>
+      </div>
+
+      <div class="col-lg-4 mb-block">
+        <shared-website-section-list-block alias=alias>
+          <@query-params limit=4 skip=5 />
+          <@header>Community</@header>
+        </shared-website-section-list-block>
+      </div>
+
+      <div class="col-lg-4 mb-block">
+        <shared-website-section-list-block alias="sponsored" link-header=false>
+          <@list modifiers=["sponsored"]>
+            <@node modifiers=["sponsored"] />
+            <@body>
+              <shared-gam-display-ad id="gpt-ad-ms" />
+            </@body>
+          </@list>
+          <@native-x enabled=false />
+        </shared-website-section-list-block>
+      </div>
+    </div>
+  </@page>
+
+  <@load-more max-pages=0>
+    <@query-params limit=14 skip=9 />
+    <@component-input card-deck={ nativeX: null } />
+  </@load-more>
+</shared-website-section-page-default-layout>
