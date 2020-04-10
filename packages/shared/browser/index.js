@@ -10,6 +10,7 @@ import Leaders from '@endeavor-business-media/package-leaders/browser';
 import Directory from '@endeavor-business-media/package-directory/browser';
 import SocialSharing from '@base-cms/marko-web-social-sharing/browser';
 import IdentityX from '@base-cms/marko-web-identity-x/browser';
+import Radix from '@base-cms/marko-web-radix/browser';
 
 export default (Browser) => {
   DefaultTheme(Browser);
@@ -24,4 +25,5 @@ export default (Browser) => {
   SocialSharing(Browser);
   ContactUs(Browser);
   IdentityX(Browser);
+  Radix(Browser);
 };
