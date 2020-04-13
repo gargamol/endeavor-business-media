@@ -114,6 +114,14 @@ config
     { name: 'rail2', templateName: 'RAIL2', path: 'imaging/rail2' },
     { name: 'load-more', templateName: 'LM', path: 'imaging/load-more' },
     { name: 'reskin', path: 'imaging/reskin' },
+  ])
+  .setAliasAdUnits('empowering', [
+    { name: 'lb1', templateName: 'LB1', path: 'empowering/lb1' },
+    { name: 'lb2', templateName: 'LB2', path: 'empowering/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'empowering/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'empowering/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'empowering/load-more' },
+    { name: 'reskin', path: 'empowering/reskin' },
   ]);
 
 module.exports = config;
