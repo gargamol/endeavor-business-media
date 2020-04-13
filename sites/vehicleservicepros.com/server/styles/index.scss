@@ -30,10 +30,8 @@ $theme-site-header-breakpoints: (
       max-height: 200px;
     }
   }
-  .diagnostic-feed {
-    &__title {
-      @include theme-card-header();
-      padding: $marko-web-node-list-padding;
-    }
+  &__title {
+    @include theme-card-header();
+    padding: $marko-web-node-list-padding;
   }
 }
