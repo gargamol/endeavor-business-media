@@ -51,10 +51,11 @@ $ const { id, alias, name, pageNode } = data;
 
     <div class="row">
       <div class="col-lg-4 mb-block">
-        <shared-website-section-list-block alias="dental-office-design">
-          <@query-params limit=3 />
-          <@native-x index=2 />
-        </shared-website-section-list-block>
+        <shared-published-content-list-block content-types=["Webinar"]>
+          <@header>
+            <marko-web-link href="/webinars">Webcasts</marko-web-link>
+          </@header>
+        </shared-published-content-list-block>
       </div>
       <div class="col-lg-4 mb-block">
         <shared-published-content-list-block content-types=["Video"]>
