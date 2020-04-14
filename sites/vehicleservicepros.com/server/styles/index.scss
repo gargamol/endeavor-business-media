@@ -33,5 +33,6 @@ $theme-site-header-breakpoints: (
   &__title {
     @include theme-card-header();
     padding: $marko-web-node-list-padding;
+    text-transform: uppercase;
   }
 }
