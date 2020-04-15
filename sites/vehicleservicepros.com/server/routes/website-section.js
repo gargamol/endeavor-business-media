@@ -6,6 +6,7 @@ const queryFragment = require('@endeavor-business-media/package-shared/graphql/f
 const directory = require('../templates/website-section/directory');
 const section = require('../templates/website-section');
 const channel = require('../templates/website-section/channel');
+const diagnosticNetworkFeed = require('../templates/website-section/diagnostic-network-feed');
 const videos = require('../templates/website-section/videos');
 const blogs = require('../templates/website-section/blogs');
 
@@ -15,12 +16,21 @@ const channelAliases = [
   'vehicles',
   'distributors',
   'industry-news',
+  'diagnosticNetworkFeed',
 ];
 
 module.exports = (app) => {
   app.get('/:alias(leaders)', withWebsiteSection({
     template: leaders,
     queryFragment: leadersFragment,
+  }));
+  app.get('/:alias(in-the-bay)', withWebsiteSection({
+    template: diagnosticNetworkFeed,
+    queryFragment,
+  }));
+  app.get('/:alias(covid-19)', withWebsiteSection({
+    template: diagnosticNetworkFeed,
+    queryFragment,
   }));
   app.get('/:alias(blogs)', withWebsiteSection({
     template: blogs,
