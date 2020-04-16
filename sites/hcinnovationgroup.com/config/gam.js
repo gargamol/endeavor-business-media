@@ -115,13 +115,13 @@ config
     { name: 'load-more', templateName: 'LM', path: 'imaging/load-more' },
     { name: 'reskin', path: 'imaging/reskin' },
   ])
-  .setAliasAdUnits('empowering', [
-    { name: 'lb1', templateName: 'LB1', path: 'empowering/lb1' },
-    { name: 'lb2', templateName: 'LB2', path: 'empowering/lb2' },
-    { name: 'rail1', templateName: 'RAIL1', path: 'empowering/rail1' },
-    { name: 'rail2', templateName: 'RAIL2', path: 'empowering/rail2' },
-    { name: 'load-more', templateName: 'LM', path: 'empowering/load-more' },
-    { name: 'reskin', path: 'empowering/reskin' },
+  .setAliasAdUnits('patient-empowerment', [
+    { name: 'lb1', templateName: 'LB1', path: 'patient-empowerment/lb1' },
+    { name: 'lb2', templateName: 'LB2', path: 'patient-empowerment/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'patient-empowerment/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'patient-empowerment/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'patient-empowerment/load-more' },
+    { name: 'reskin', path: 'patient-empowerment/reskin' },
   ]);
 
 module.exports = config;
