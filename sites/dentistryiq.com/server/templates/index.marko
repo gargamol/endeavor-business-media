@@ -17,12 +17,14 @@ $ const { id, alias, name, pageNode } = data;
         <div class="row">
           <div class="col-lg-6 mb-block">
             <shared-website-section-list-block alias="covid-19">
-              <@native-x index=2 />
+              <@query-params limit=6 />
+              <@native-x index=5 />
             </shared-website-section-list-block>
           </div>
           <div class="col-lg-6 mb-block">
             <shared-website-section-list-block alias="dentistry">
-              <@native-x index=2 />
+              <@query-params limit=6 />
+              <@native-x index=5 />
             </shared-website-section-list-block>
           </div>
         </div>
@@ -76,8 +78,8 @@ $ const { id, alias, name, pageNode } = data;
     </div>
   </@page>
 
-  <@load-more name="card-deck" max-pages=0>
-    <@query-params limit=10 skip=5 />
+  <@load-more max-pages=0>
+    <@query-params limit=14 skip=5 />
     <@component-input native-x=null />
   </@load-more>
 </shared-website-section-page-default-layout>
