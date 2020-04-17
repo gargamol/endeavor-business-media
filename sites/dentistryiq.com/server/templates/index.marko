@@ -17,12 +17,14 @@ $ const { id, alias, name, pageNode } = data;
         <div class="row">
           <div class="col-lg-6 mb-block">
             <shared-website-section-list-block alias="covid-19">
-              <@native-x index=2 />
+              <@query-params limit=6 />
+              <@native-x index=5 />
             </shared-website-section-list-block>
           </div>
           <div class="col-lg-6 mb-block">
             <shared-website-section-list-block alias="dentistry">
-              <@native-x index=2 />
+              <@query-params limit=6 />
+              <@native-x index=5 />
             </shared-website-section-list-block>
           </div>
         </div>
