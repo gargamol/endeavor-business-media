@@ -13,30 +13,27 @@ module.exports = {
   company: 'Endeavor Business Media, LLC',
   logos: {
     navbar: {
-      src: 'https://img.cpapracticeadvisor.com/files/base/cygnus/cpa/image/static/logo/site_logo_white.png?h=60',
+      src: 'https://img.taxpracticeadvisor.com/files/base/cygnus/tpa/image/static/tpa-logo.jpg?h=60',
       srcset: [
-        'https://img.cpapracticeadvisor.com/files/base/cygnus/cpa/image/static/logo/site_logo_white.png?h=120 2x',
+        'https://img.taxpracticeadvisor.com/files/base/cygnus/tpa/image/static/tpa-logo.jpg?h=120 2x',
       ],
     },
     footer: {
-      src: 'https://img.cpapracticeadvisor.com/files/base/cygnus/cpa/image/static/logo/site_logo_white.png?h=60',
+      src: 'https://img.taxpracticeadvisor.com/files/base/cygnus/tpa/image/static/tpa-logo.jpg?h=60',
       srcset: [
-        'https://img.cpapracticeadvisor.com/files/base/cygnus/cpa/image/static/logo/site_logo_white.png?h=120 2x',
+        'https://img.taxpracticeadvisor.com/files/base/cygnus/tpa/image/static/tpa-logo.jpg?h=120 2x',
       ],
     },
   },
   socialMediaLinks: [
-    { provider: 'linkedin', href: 'https://www.linkedin.com/in/cpapracticeadvisor', target: '_blank' },
-    { provider: 'twitter', href: 'https://www.twitter.com/cpapracadvisor', target: '_blank' },
-    { provider: 'facebook', href: 'https://www.facebook.com/cpapracticeadvisor', target: '_blank' },
   ],
   identityX: {
-    appId: '5e28a5a358e67b178d55ae54',
-    enabled: true,
-    comments: { enabled: true },
+    appId: '5e28a62858e67bff3455ae5c',
+    enabled: false,
+    comments: { enabled: false },
   },
   gtm: {
-    containerId: 'GTM-WKFS2G3',
+    containerId: 'GTM-KBBG9FZ',
   },
   wufoo: {
     userName: 'cygnuscorporate',
@@ -47,7 +44,7 @@ module.exports = {
   contactUs: {
     branding: {
       bgColor: '#164f77',
-      logo: 'https://img.cpapracticeadvisor.com/files/base/cygnus/cpa/image/static/logo/site_logo_white.png?h=60',
+      logo: 'https://img.taxpracticeadvisor.com/files/base/cygnus/tpa/image/static/tpa-logo.jpg?h=60',
     },
     to: 'isaac.obannon@cpapracticeadvisor.com',
   },
@@ -57,7 +54,7 @@ module.exports = {
     sendTo: 'bstrobel@southcomm.com',
     sendFrom: 'CPAPracticeAdvisor.com <noreply@baseplatform.io>',
     sendBcc: 'emailactivity@cygnus.com',
-    logo: 'https://img.cpapracticeadvisor.com/files/base/cygnus/cpa/image/static/logo/site_logo_white.png?h=60',
+    logo: 'https://img.taxpracticeadvisor.com/files/base/cygnus/tpa/image/static/tpa-logo.jpg?h=60',
     bgColor: '#164f77',
   },
 };
