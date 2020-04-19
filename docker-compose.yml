@@ -730,7 +730,7 @@ services:
       EXPOSED_PORT: 9752
       LIVERELOAD_PORT: 19752
       TENANT_KEY: ebm_tpa
-      SITE_ID: 5c86ed7b47062b9e098b4567
+      SITE_ID: 5e876025044e6e2b008b456e
     ports:
       - "9752:80"
       - "19752:19751"
