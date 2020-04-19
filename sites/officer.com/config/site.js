@@ -35,6 +35,13 @@ module.exports = {
     enabled: true,
     comments: { enabled: true },
   },
+  radix: {
+    enabled: true,
+    appId: 'b105cce3-d815-4347-9ae4-b203d58347a4',
+    submissionFieldIds: [
+      { name: 'comments', id: '57e55318bcf2d6f3c30e0833' },
+    ],
+  },
   gtm: {
     containerId: 'GTM-PXB3XNX',
   },

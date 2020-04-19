@@ -15,11 +15,17 @@ $ const { id, alias, name, pageNode } = data;
       <div class="col-lg-8">
         <div class="row">
           <div class="col-lg-6 mb-block">
-            <shared-website-section-list-block alias="covid-19" />
+            <shared-website-section-list-block alias="covid-19">
+              <@query-params limit=6 />
+              <@native-x index=5 />
+            </shared-website-section-list-block>
           </div>
 
           <div class="col-lg-6 mb-block">
-            <shared-website-section-list-block alias="macro-op-ed" />
+            <shared-website-section-list-block alias="macro-op-ed">
+              <@query-params limit=6 />
+              <@native-x index=5 />
+            </shared-website-section-list-block>
           </div>
         </div>
       </div>
@@ -51,10 +57,11 @@ $ const { id, alias, name, pageNode } = data;
 
     <div class="row">
       <div class="col-lg-4 mb-block">
-        <shared-website-section-list-block alias="dental-office-design">
-          <@query-params limit=3 />
-          <@native-x index=2 />
-        </shared-website-section-list-block>
+        <shared-published-content-list-block content-types=["Webinar"]>
+          <@header>
+            <marko-web-link href="/webinars">Webcasts</marko-web-link>
+          </@header>
+        </shared-published-content-list-block>
       </div>
       <div class="col-lg-4 mb-block">
         <shared-published-content-list-block content-types=["Video"]>
@@ -69,8 +76,8 @@ $ const { id, alias, name, pageNode } = data;
     </div>
   </@page>
 
-  <@load-more name="card-deck" max-pages=0>
-    <@query-params limit=10 skip=5 />
+  <@load-more max-pages=0>
+    <@query-params limit=14 skip=5 />
     <@component-input native-x=null />
   </@load-more>
 </shared-website-section-page-default-layout>

@@ -23,6 +23,7 @@ const channelAliases = [
   'careers-education',
   'prevention-investigation',
   'stations',
+  'covid-19',
 ];
 
 module.exports = (app) => {

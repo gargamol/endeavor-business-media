@@ -54,7 +54,7 @@ module.exports = {
     sendFrom: 'CablingInstall.com <noreply@baseplatform.io>',
     sendBcc: 'emailactivity@cygnus.com',
     logo: 'https://img.cablinginstall.com/files/base/pennwell/cim/logo.png?h=60',
-    bgColor: '#ee2e30',
+    bgColor: '#ffffff',
   },
   magazines: {
     description: '',

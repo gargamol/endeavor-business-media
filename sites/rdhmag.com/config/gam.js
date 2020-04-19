@@ -2,11 +2,6 @@ const configureGAM = require('@endeavor-business-media/package-shared/config/gam
 
 const config = configureGAM({ basePath: 'RDH' });
 
-// Override rail and load more to use 300x250 only.
-config
-  .setTemplate('RAIL2', { size: [300, 250] })
-  .setTemplate('LM', { size: [300, 250] });
-
 config
   .setAliasAdUnits('default', [
     { name: 'lb1', templateName: 'LB1', path: 'default/lb1' },
@@ -24,6 +19,14 @@ config
     { name: 'rail2', templateName: 'RAIL2', path: 'covid-19/rail2' },
     { name: 'load-more', templateName: 'LM', path: 'covid-19/load-more' },
     { name: 'reskin', path: 'covid-19/reskin' },
+  ])
+  .setAliasAdUnits('whats-trending', [
+    { name: 'lb1', templateName: 'LB1', path: 'whats-trending/lb1' },
+    { name: 'lb2', templateName: 'LB2', path: 'whats-trending/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'whats-trending/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'whats-trending/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'whats-trending/load-more' },
+    { name: 'reskin', path: 'whats-trending/reskin' },
   ])
   .setAliasAdUnits('job-postings', [
     { name: 'lb1', templateName: 'LB1', path: 'job-postings/lb1' },

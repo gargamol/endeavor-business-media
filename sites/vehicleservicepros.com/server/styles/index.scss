@@ -23,3 +23,16 @@ $theme-site-header-breakpoints: (
 );
 
 @import "../../node_modules/@endeavor-business-media/package-shared/scss/cygnus-skin";
+
+.with-diagnostic-feed {
+  .directory-facets {
+    &__list {
+      max-height: 200px;
+    }
+  }
+  &__title {
+    @include theme-card-header();
+    padding: $marko-web-node-list-padding;
+    text-transform: uppercase;
+  }
+}

@@ -14,6 +14,7 @@ module.exports = {
     items: [
       { href: '/page/about-us', label: 'About Us' },
       { href: '/job-postings', label: 'Career Center' },
+      { href: 'https://www.rdhunderoneroof.com/', label: 'Conference', target: '_blank' },
       { href: 'https://dentalacademyofce.com/default.aspx', label: 'Earn CE', target: '_blank' },
       { href: 'https://www.dentistryiq.com/products/free-samples', label: 'Free Samples', target: '_blank' },
       { href: '/magazine', label: 'Magazine' },
@@ -52,6 +53,7 @@ module.exports = {
     {
       label: 'Resources',
       items: [
+        { href: 'https://www.rdhunderoneroof.com/', label: 'Conference', target: '_blank' },
         { href: 'https://dentalacademyofce.com/default.aspx', label: 'Earn CE', target: '_blank' },
         { href: 'https://www.dentistryiq.com/products/free-samples', label: 'Free Samples', target: '_blank' },
         { href: '/job-postings', label: 'Career Center' },

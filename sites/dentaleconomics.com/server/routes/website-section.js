@@ -3,10 +3,10 @@ const leadersFragment = require('@endeavor-business-media/package-leaders/graphq
 const contactUs = require('@endeavor-business-media/package-shared/templates/website-section/contact-us');
 const leaders = require('@endeavor-business-media/package-shared/templates/website-section/leaders');
 const queryFragment = require('@endeavor-business-media/package-shared/graphql/fragments/website-section-page');
-
 const section = require('../templates/website-section');
 const jobPostings = require('../templates/website-section/job-postings');
 const whitePapers = require('../templates/website-section/white-papers');
+const covid19 = require('../templates/website-section/covid-19');
 
 module.exports = (app) => {
   app.get('/:alias(leaders)', withWebsiteSection({
@@ -15,6 +15,10 @@ module.exports = (app) => {
   }));
   app.get('/:alias(contact-us)', withWebsiteSection({
     template: contactUs,
+    queryFragment,
+  }));
+  app.get('/:alias(covid-19)', withWebsiteSection({
+    template: covid19,
     queryFragment,
   }));
   app.get('/:alias(editorial-advisory-board)', withWebsiteSection({

@@ -99,7 +99,7 @@ $ const accessLevels = getAsArray(content, "userRegistration.accessLevels");
       </if>
 
       <if(displayInquiry(content))>
-        <shared-inquiry-form node=content />
+        <marko-web-inquiry-form content=content modifiers=["margin-top"] />
       </if>
 
       <if(type === "podcast")>
