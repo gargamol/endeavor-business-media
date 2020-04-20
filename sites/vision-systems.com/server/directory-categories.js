@@ -1,5 +1,10 @@
 module.exports = [
   {
+    id: 35124,
+    name: 'Camera Directory',
+    href: '/directory/camera-directory',
+  },
+  {
     id: 34987,
     name: 'Manufacturers',
     href: '/directory/manufacturers',
@@ -50,16 +55,6 @@ module.exports = [
             href: '/directory/manufacturers/automation-equipment/robots',
           },
           {
-            id: 34996,
-            name: 'Servo/Stepper Motors and Controllers',
-            href: '/directory/manufacturers/automation-equipment/servo-stepper-motors-and-controllers',
-          },
-          {
-            id: 34997,
-            name: 'Time Delay and Integration (TDI) Sensors',
-            href: '/directory/manufacturers/automation-equipment/time-delay-and-integration-tdi-sensors',
-          },
-          {
             id: 34998,
             name: 'X-Y Positioning Systems and Tables',
             href: '/directory/manufacturers/automation-equipment/x-y-positioning-systems-and-tables',
@@ -90,118 +85,113 @@ module.exports = [
       },
       {
         id: 35004,
-        name: 'Cameras and Image Capture',
-        href: '/directory/manufacturers/cameras-and-image-capture',
+        name: 'Cameras',
+        href: '/directory/manufacturers/cameras',
         values: [
           {
             id: 35003,
             name: '3D Cameras',
-            href: '/directory/manufacturers/cameras-and-image-capture/3d-cameras',
+            href: '/directory/manufacturers/cameras/3d-cameras',
           },
           {
             id: 35005,
             name: '3D Vision Sensors',
-            href: '/directory/manufacturers/cameras-and-image-capture/3d-vision-sensors',
+            href: '/directory/manufacturers/cameras/3d-vision-sensors',
           },
           {
             id: 35006,
             name: 'Area-array Cameras',
-            href: '/directory/manufacturers/cameras-and-image-capture/area-array-cameras',
+            href: '/directory/manufacturers/cameras/area-array-cameras',
           },
           {
             id: 35007,
             name: 'Camera Link Cameras',
-            href: '/directory/manufacturers/cameras-and-image-capture/camera-link-cameras',
+            href: '/directory/manufacturers/cameras/camera-link-cameras',
           },
           {
             id: 35008,
             name: 'Cameras, Cooled',
-            href: '/directory/manufacturers/cameras-and-image-capture/cameras-cooled',
+            href: '/directory/manufacturers/cameras/cameras-cooled',
           },
           {
             id: 35009,
             name: 'CCD Cameras',
-            href: '/directory/manufacturers/cameras-and-image-capture/ccd-cameras',
-          },
-          {
-            id: 35010,
-            name: 'Charge Injection Device Cameras',
-            href: '/directory/manufacturers/cameras-and-image-capture/charge-injection-device-cameras',
+            href: '/directory/manufacturers/cameras/ccd-cameras',
           },
           {
             id: 35011,
             name: 'CMOS Cameras',
-            href: '/directory/manufacturers/cameras-and-image-capture/cmos-cameras',
+            href: '/directory/manufacturers/cameras/cmos-cameras',
           },
           {
             id: 35012,
             name: 'CoaXPress Cameras',
-            href: '/directory/manufacturers/cameras-and-image-capture/coaxpress-cameras',
-          },
-          {
-            id: 35013,
-            name: 'FireWire Cameras',
-            href: '/directory/manufacturers/cameras-and-image-capture/firewire-cameras',
+            href: '/directory/manufacturers/cameras/coaxpress-cameras',
           },
           {
             id: 35014,
-            name: 'Gigabit Ethernet and 10GigE Cameras',
-            href: '/directory/manufacturers/cameras-and-image-capture/gigabit-ethernet-and-10gige-cameras',
+            name: 'Gigabit Ethernet, 10GigE and Up Cameras',
+            href: '/directory/manufacturers/cameras/gigabit-ethernet-10gige-and-up-cameras',
           },
           {
             id: 35015,
             name: 'High-speed Video Cameras',
-            href: '/directory/manufacturers/cameras-and-image-capture/high-speed-video-cameras',
+            href: '/directory/manufacturers/cameras/high-speed-video-cameras',
           },
           {
             id: 35016,
             name: 'Infrared Cameras',
-            href: '/directory/manufacturers/cameras-and-image-capture/infrared-cameras',
+            href: '/directory/manufacturers/cameras/infrared-cameras',
           },
           {
             id: 35017,
             name: 'Line Scan Cameras',
-            href: '/directory/manufacturers/cameras-and-image-capture/line-scan-cameras',
+            href: '/directory/manufacturers/cameras/line-scan-cameras',
           },
           {
             id: 35018,
             name: 'Low-light Cameras',
-            href: '/directory/manufacturers/cameras-and-image-capture/low-light-cameras',
+            href: '/directory/manufacturers/cameras/low-light-cameras',
           },
           {
             id: 35019,
             name: 'Multispectral/Hyperspectral Cameras',
-            href: '/directory/manufacturers/cameras-and-image-capture/multispectral-hyperspectral-cameras',
+            href: '/directory/manufacturers/cameras/multispectral-hyperspectral-cameras',
+          },
+          {
+            id: 35547,
+            name: 'Polarization Camers',
+            href: '/directory/manufacturers/cameras/polarization-cameras',
           },
           {
             id: 35020,
             name: 'Smart Cameras',
-            href: '/directory/manufacturers/cameras-and-image-capture/smart-cameras',
+            href: '/directory/manufacturers/cameras/smart-cameras',
           },
           {
             id: 35021,
             name: 'Time Delay and Integration (TDI) Cameras',
-            href: '/directory/manufacturers/cameras-and-image-capture/time-delay-and-integration-tdi-cameras',
+            href: '/directory/manufacturers/cameras/time-delay-and-integration-tdi-cameras',
           },
           {
             id: 35022,
             name: 'Time of Flight Cameras',
-            href: '/directory/manufacturers/cameras-and-image-capture/time-of-flight-cameras',
+            href: '/directory/manufacturers/cameras/time-of-flight-cameras',
           },
           {
             id: 35023,
             name: 'USB Cameras',
-            href: '/directory/manufacturers/cameras-and-image-capture/usb-cameras',
+            href: '/directory/manufacturers/cameras/usb-cameras',
           },
           {
             id: 35024,
             name: 'UV Cameras',
-            href: '/directory/manufacturers/cameras-and-image-capture/uv-cameras',
+            href: '/directory/manufacturers/cameras/uv-cameras',
           },
           {
             id: 35025,
             name: 'X-ray Cameras',
-            href: '/directory/manufacturers/cameras-and-image-capture/x-ray-cameras',
+            href: '/directory/manufacturers/cameras/x-ray-cameras',
           },
         ],
       },
@@ -245,7 +235,17 @@ module.exports = [
             name: 'Proximity/Positioning Sensors',
             href: '/directory/manufacturers/image-sensors/proximity-positioning-sensors',
           },
+          {
+            id: 34997,
+            name: 'Time Delay and Integration (TDI) Sensors',
+            href: '/directory/manufacturers/image-sensors/time-delay-and-integration-tdi-sensors',
+          },
         ],
+      },
+      {
+        id: 35054,
+        name: 'Image Storage Devices',
+        href: '/directory/manufacturers/image-storage-devices',
       },
       {
         id: 35035,
@@ -352,26 +352,9 @@ module.exports = [
         ],
       },
       {
-        id: 35054,
-        name: 'Image Storage Devices',
-        href: '/directory/manufacturers/image-storage-devices',
-      },
-      {
         id: 35056,
         name: 'Optical Subsystems',
         href: '/directory/manufacturers/optical-subsystems',
-        values: [
-          {
-            id: 35055,
-            name: 'Microscopes',
-            href: '/directory/manufacturers/optical-subsystems/microscopes',
-          },
-          {
-            id: 35057,
-            name: 'Spectrophotometers',
-            href: '/directory/manufacturers/optical-subsystems/spectrophotometers',
-          },
-        ],
       },
       {
         id: 35059,
@@ -446,6 +429,11 @@ module.exports = [
             href: '/directory/manufacturers/software/data-acquisition-toolkits',
           },
           {
+            id: 35548,
+            name: 'Deep Learning Software',
+            href: '/directory/manufacturers/software/deep-learning-software',
+          },
+          {
             id: 35072,
             name: 'Development Tools',
             href: '/directory/manufacturers/software/development-tools',
@@ -466,29 +454,14 @@ module.exports = [
             href: '/directory/manufacturers/software/embedded-fpga-software',
           },
           {
-            id: 35076,
-            name: 'Image Analysis Software',
-            href: '/directory/manufacturers/software/image-analysis-software',
-          },
-          {
             id: 35077,
             name: 'Image Compression Software',
             href: '/directory/manufacturers/software/image-compression-software',
           },
           {
-            id: 35078,
-            name: 'Image Processing Software',
-            href: '/directory/manufacturers/software/image-processing-software',
-          },
-          {
-            id: 35079,
-            name: 'Industrial Inspection Software',
-            href: '/directory/manufacturers/software/industrial-inspection-software',
-          },
-          {
             id: 35080,
-            name: 'Machine Vision Software',
-            href: '/directory/manufacturers/software/machine-vision-software',
+            name: 'Machine Vision/Imaging Software',
+            href: '/directory/manufacturers/software/machine-vision-imaging-software',
           },
           {
             id: 35081,
@@ -518,6 +491,11 @@ module.exports = [
         href: '/directory/manufacturers/system-boards',
         values: [
           {
+            id: 35089,
+            name: 'Acquisition/Interface Boards',
+            href: '/directory/manufacturers/system-boards/acquisition-interface-boards',
+          },
+          {
             id: 35085,
             name: 'Analog Input/Output Boards',
             href: '/directory/manufacturers/system-boards/analog-input-output-boards',
@@ -531,11 +509,6 @@ module.exports = [
             id: 35088,
             name: 'CoaXPress Boards',
             href: '/directory/manufacturers/system-boards/coaxpress-boards',
-          },
-          {
-            id: 35089,
-            name: 'Data Acquisition Boards',
-            href: '/directory/manufacturers/system-boards/data-acquisition-boards',
           },
           {
             id: 35090,
@@ -606,120 +579,11 @@ module.exports = [
           },
         ],
       },
-      {
-        id: 35106,
-        name: 'Vision Systems by Application',
-        href: '/directory/manufacturers/vision-systems-by-application',
-        values: [
-          {
-            id: 35105,
-            name: 'Automation/Robotics',
-            href: '/directory/manufacturers/vision-systems-by-application/automation-robotics',
-          },
-          {
-            id: 35107,
-            name: 'Biometrics Systems',
-            href: '/directory/manufacturers/vision-systems-by-application/biometrics-systems',
-          },
-          {
-            id: 35108,
-            name: 'Forensic Systems',
-            href: '/directory/manufacturers/vision-systems-by-application/forensic-systems',
-          },
-          {
-            id: 35109,
-            name: 'Guidance/Tracking Systems',
-            href: '/directory/manufacturers/vision-systems-by-application/guidance-tracking-systems',
-          },
-          {
-            id: 35110,
-            name: 'Infrared Imaging Systems',
-            href: '/directory/manufacturers/vision-systems-by-application/infrared-imaging-systems',
-          },
-          {
-            id: 35111,
-            name: 'Inspection/Nondestructive Testing Systems',
-            href: '/directory/manufacturers/vision-systems-by-application/inspection-nondestructive-testing-systems',
-          },
-          {
-            id: 35112,
-            name: 'Intelligent Transportation Systems',
-            href: '/directory/manufacturers/vision-systems-by-application/intelligent-transportation-systems',
-          },
-          {
-            id: 35113,
-            name: 'Law Enforcement Systems',
-            href: '/directory/manufacturers/vision-systems-by-application/law-enforcement-systems',
-          },
-          {
-            id: 35114,
-            name: 'Medical Diagnostics Systems',
-            href: '/directory/manufacturers/vision-systems-by-application/medical-diagnostics-systems',
-          },
-          {
-            id: 35115,
-            name: 'Metrology/Measurement/Gauging Systems',
-            href: '/directory/manufacturers/vision-systems-by-application/metrology-measurement-gauging-systems',
-          },
-          {
-            id: 35116,
-            name: 'Microscopy Systems',
-            href: '/directory/manufacturers/vision-systems-by-application/microscopy-systems',
-          },
-          {
-            id: 35117,
-            name: 'Motion Analysis Systems',
-            href: '/directory/manufacturers/vision-systems-by-application/motion-analysis-systems',
-          },
-          {
-            id: 35118,
-            name: 'OCR/OCV Systems',
-            href: '/directory/manufacturers/vision-systems-by-application/ocr-ocv-systems',
-          },
-          {
-            id: 35119,
-            name: 'Process Control Systems',
-            href: '/directory/manufacturers/vision-systems-by-application/process-control-systems',
-          },
-          {
-            id: 35120,
-            name: 'Quality Assurance Systems',
-            href: '/directory/manufacturers/vision-systems-by-application/quality-assurance-systems',
-          },
-          {
-            id: 35121,
-            name: 'Remote Sensing Systems',
-            href: '/directory/manufacturers/vision-systems-by-application/remote-sensing-systems',
-          },
-          {
-            id: 35122,
-            name: 'Surveillance Systems',
-            href: '/directory/manufacturers/vision-systems-by-application/surveillance-systems',
-          },
-          {
-            id: 35123,
-            name: 'Web Scanning Systems',
-            href: '/directory/manufacturers/vision-systems-by-application/web-scanning-systems',
-          },
-        ],
-      },
     ],
   },
   {
     id: 35099,
-    name: 'System-Integration Services: Online only category',
-    href: '/directory/system-integration-services-online-only-category',
-    values: [
-      {
-        id: 35098,
-        name: 'System-Integration Services',
-        href: '/directory/system-integration-services-online-only-category/system-integration-services',
-      },
-    ],
-  },
-  {
-    id: 35124,
-    name: 'Camera Directory',
-    href: '/directory/camera-directory',
+    name: 'System-Integration Services',
+    href: '/directory/system-integration-services',
   },
 ];
