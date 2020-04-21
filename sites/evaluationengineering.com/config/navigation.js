@@ -48,14 +48,12 @@ module.exports = {
     {
       label: 'Resources',
       items: [
-        { href: '/ee-blogs', label: 'EE Blogs' },
+        { href: '/page/resources', label: 'EE Resources' },
+        { href: '/ee-blogs', label: 'Blogs' },
         { href: '/new-products', label: 'New Products' },
         { href: '/special-reports', label: 'Special Reports' },
-        { href: '/industry-events', label: 'Industry Events' },
-        { href: '/product-picks', label: 'Product Picks' },
-        { href: '/magazine', label: 'Magazine' },
+        { href: '/magazine', label: 'Digital Archives' },
         { href: '/white-papers', label: 'White Papers' },
-        { href: '/webcasts', label: 'Webcasts' },
       ],
     },
     {
