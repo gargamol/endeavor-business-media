@@ -754,11 +754,6 @@ module.exports = [
     href: '/directory/platform-systems-subsystems',
     values: [
       {
-        id: 34883,
-        name: 'Lighting',
-        href: '/directory/platform-systems-subsystems/lighting',
-      },
-      {
         id: 34900,
         name: 'Autopilots',
         href: '/directory/platform-systems-subsystems/autopilots',
@@ -787,6 +782,11 @@ module.exports = [
         id: 34906,
         name: 'Landing systems',
         href: '/directory/platform-systems-subsystems/landing-systems',
+      },
+      {
+        id: 34883,
+        name: 'Lighting',
+        href: '/directory/platform-systems-subsystems/lighting',
       },
       {
         id: 34907,
@@ -846,11 +846,6 @@ module.exports = [
     href: '/directory/rf-and-microwave',
     values: [
       {
-        id: 34874,
-        name: 'Bonding and adhesives',
-        href: '/directory/rf-and-microwave/bonding-and-adhesives',
-      },
-      {
         id: 34917,
         name: 'Amplifiers',
         href: '/directory/rf-and-microwave/amplifiers',
@@ -859,6 +854,11 @@ module.exports = [
         id: 34919,
         name: 'Antennas',
         href: '/directory/rf-and-microwave/antennas',
+      },
+      {
+        id: 34874,
+        name: 'Bonding and adhesives',
+        href: '/directory/rf-and-microwave/bonding-and-adhesives',
       },
       {
         id: 34920,
