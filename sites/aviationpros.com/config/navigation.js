@@ -18,7 +18,7 @@ module.exports = {
     items: [
       { href: '/subscribe', label: 'Subscribe' },
       { href: '/magazine', label: 'Magazines' },
-      { href: '/page/advertise', label: 'Advertise' },
+      { href: '/advertise', label: 'Advertise' },
       { href: '/contact-us', label: 'Contact Us' },
       { href: 'https://jobs.aviationpros.com', label: 'Careers', target: '_blank' },
       { href: '/directory', label: 'Buyers Guide' },
@@ -34,7 +34,7 @@ module.exports = {
     items: [
       { href: '/page/about-us', label: 'About Us' },
       { href: '/contact-us', label: 'Contact Us' },
-      { href: '/page/advertise', label: 'Advertise' },
+      { href: '/advertise', label: 'Advertise' },
       { href: 'https://endeavor.dragonforms.com/loading.do?omedasite=EBM_DoNotSell', label: 'California Do Not Sell', target: '_blank' },
       { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
       { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
@@ -75,7 +75,7 @@ module.exports = {
       label: 'User Tools',
       items: [
         { href: '/subscribe', label: 'Subscribe' },
-        { href: '/page/advertise', label: 'Advertise' },
+        { href: '/advertise', label: 'Advertise' },
         { href: '/page/about-us', label: 'About Us' },
         { href: '/contact-us', label: 'Contact Us' },
         { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
