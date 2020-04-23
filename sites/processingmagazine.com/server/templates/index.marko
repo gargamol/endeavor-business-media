@@ -75,29 +75,6 @@ $ const adSlots = ({ aliases }) => ({
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-lg-4 mb-block">
-        <shared-website-section-list-block alias=alias>
-          <@query-params limit=4 skip=5 />
-          <@header>More from Processing Magazine</@header>
-        </shared-website-section-list-block>
-      </div>
-
-      <div class="col-lg-4 mb-block">
-        <shared-published-content-list-block content-types=["Webinar"]>
-          <@header>
-            <marko-web-link href="/webinars">Webinars</marko-web-link>
-          </@header>
-          <@list>
-            <@node display-image=false />
-          </@list>
-        </shared-published-content-list-block>
-      </div>
-
-      <div class="col-lg-4 mb-block">
-        <shared-magazine-latest-issue-block publication-id="5da74dc4a6e839a3008b4567" />
-      </div>
-    </div>
   </@page>
 
   <@load-more max-pages=0>
