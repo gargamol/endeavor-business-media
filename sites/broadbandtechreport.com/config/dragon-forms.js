@@ -3,6 +3,6 @@ const DragonFormsConfig = require('@endeavor-business-media/package-shared/confi
 const config = new DragonFormsConfig({ url: 'https://endeavor.dragonforms.com' });
 
 config
-  .addForm('newsletterSignup', { omedasite: 'BTRPrefPage' });
+  .addForm('newsletterSignup', { omedasite: 'BTRnewpref&pk=ARTWEB' });
 
 module.exports = config;
