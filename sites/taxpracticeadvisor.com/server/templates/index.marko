@@ -24,7 +24,7 @@ $ const adSlots = ({ aliases }) => ({
 
     <div class="row">
       <div class="col-lg-4 mb-block">
-        <shared-website-section-list-block alias="tax-compliance" />
+        <shared-website-section-list-block alias="top-tax-news" />
       </div>
 
       <div class="col-lg-4 mb-block">
@@ -32,66 +32,40 @@ $ const adSlots = ({ aliases }) => ({
       </div>
 
       <div class="col-lg-4 mb-block">
-        <shared-website-section-list-block alias="firm-management" />
+        <shared-website-section-list-block alias="individual-income-taxes" />
       </div>
     </div>
 
     <div class="row">
       <div class="col-lg-4 mb-block">
-        <shared-website-section-list-block alias="payroll" />
+        <shared-website-section-list-block alias="corporate-income-taxes" />
       </div>
 
       <div class="col-lg-4 mb-block">
-        <shared-website-section-list-block alias="accounting-audit" />
+        <shared-website-section-list-block alias="payroll-taxes" />
       </div>
 
       <div class="col-lg-4 mb-block">
-        <shared-website-section-list-block alias="small-business" />
+        <shared-website-section-list-block alias="sales-use-taxes" />
       </div>
     </div>
 
     <div class="row">
       <div class="col-lg-4 mb-block">
-        <shared-website-section-list-block alias="reviews" />
+        <shared-website-section-list-block alias="practice-management" />
       </div>
 
       <div class="col-lg-4 mb-block">
         <shared-gam-display-ad id="gpt-ad-rail3" />
       </div>
 
-      <div class="col-lg-4 mb-block">
-        <shared-website-section-list-block alias="contributors">
-          <@native-x enabled=false />
-        </shared-website-section-list-block>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-4 mb-block">
-        <shared-published-content-list-block content-types=["Video"]>
+      <div class="col">
+        <shared-published-content-cards-block content-types=["Webinar"]>
           <@header>
-            <marko-web-link href="/videos">Videos</marko-web-link>
+            <marko-web-link href="/webinars">Webinars</marko-web-link>
           </@header>
-        </shared-published-content-list-block>
-      </div>
-
-      <div class="col-lg-4 mb-block">
-        <shared-website-section-list-block alias=alias>
-          <@query-params limit=4 skip=5 />
-          <@header>Community</@header>
-        </shared-website-section-list-block>
-      </div>
-
-      <div class="col-lg-4 mb-block">
-        <shared-website-section-list-block alias="sponsored" link-header=false>
-          <@list modifiers=["sponsored"]>
-            <@node modifiers=["sponsored"] />
-            <@body>
-              <shared-gam-display-ad id="gpt-ad-ms" />
-            </@body>
-          </@list>
-          <@native-x enabled=false />
-        </shared-website-section-list-block>
+          <@query-params limit=4 />
+        </shared-published-content-cards-block>
       </div>
     </div>
   </@page>
