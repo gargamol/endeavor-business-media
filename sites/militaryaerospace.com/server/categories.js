@@ -254,6 +254,11 @@ module.exports = [
         href: '/directory/components-power-electronics-sensors/components-wire-and-cable',
       },
       {
+        id: 35425,
+        name: 'Displays - Cathode ray tubes',
+        href: '/directory/components-power-electronics-sensors/displays-cathode-ray-tubes',
+      },
+      {
         id: 34801,
         name: 'Displays - Cockpit displays',
         href: '/directory/components-power-electronics-sensors/displays-cockpit-displays',
@@ -367,6 +372,11 @@ module.exports = [
         id: 34823,
         name: 'Integrated circuits, digital - FPGAs',
         href: '/directory/components-power-electronics-sensors/integrated-circuits-digital-fpgas',
+      },
+      {
+        id: 35427,
+        name: 'Integrated circuits, digital - Graphics ICs',
+        href: '/directory/components-power-electronics-sensors/integrated-circuits-digital-graphics-ics',
       },
       {
         id: 34824,
@@ -630,6 +640,11 @@ module.exports = [
     href: '/directory/electro-optics',
     values: [
       {
+        id: 35429,
+        name: 'Bonding and adhesives',
+        href: '/directory/electro-optics/bonding-and-adhesives',
+      },
+      {
         id: 34876,
         name: 'Cameras',
         href: '/directory/electro-optics/cameras',
@@ -663,6 +678,11 @@ module.exports = [
         id: 34882,
         name: 'LEDs',
         href: '/directory/electro-optics/leds',
+      },
+      {
+        id: 35426,
+        name: 'Lighting',
+        href: '/directory/electro-optics/lighing',
       },
       {
         id: 34884,
@@ -1040,6 +1060,11 @@ module.exports = [
         id: 34953,
         name: 'Applications',
         href: '/directory/software/applications',
+      },
+      {
+        id: 35428,
+        name: 'Moving maps',
+        href: '/directory/software/moving-maps',
       },
       {
         id: 34955,
