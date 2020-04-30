@@ -4,6 +4,6 @@ const videos = require('@endeavor-business-media/package-shared/templates/publis
 
 module.exports = (app) => {
   app.get('/events', (_, res) => { res.marko(events); });
-  app.get('/webinars', (_, res) => { res.marko(webinars); });
+  app.get('/webinars', (_, res) => { res.marko(webinars, { title: 'Webinars' }); });
   app.get('/videos', (_, res) => { res.marko(videos); });
 };

@@ -58,7 +58,7 @@ module.exports = {
         { href: '/blogs/industry-insights', label: 'Industry Insights' },
         { href: '/magazine', label: 'Publications' },
         { href: '/whitepapers', label: 'Whitepapers' },
-        { href: '/webcasts', label: 'Webcasts' },
+        { href: '/webinars', label: 'Webinars' },
         { href: '/careers', label: 'Careers' },
         { href: '/events', label: 'Events' },
         { href: '/federal', label: 'Federal' },
