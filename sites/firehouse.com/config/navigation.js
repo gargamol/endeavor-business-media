@@ -66,6 +66,7 @@ module.exports = {
         { href: '/valor-awards', label: 'Valor Awards' },
         { href: '/run-surveys', label: 'Run Surveys' },
         { href: '/industry-insights', label: 'Industry Insights' },
+        { href: '/quick-chat-videos', label: 'Quick Chat Videos' },
         { href: '/manufacturers-corner', label: 'Manufacturer\'s Corner' },
         { href: '/webcasts', label: 'Webcasts' },
         { href: 'https://www.firehouseworld.com/', label: 'Firehouse World', target: '_blank' },
