@@ -31,7 +31,6 @@ $theme-site-header-breakpoints: (
 );
 
 @import "../../node_modules/@endeavor-business-media/package-shared/scss/cygnus-skin";
-@import "../../node_modules/@endeavor-business-media/package-shared/scss/components/leaders";
 
 .submit-job {
   @include media-breakpoint-up(lg) {
