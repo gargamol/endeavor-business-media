@@ -59,13 +59,16 @@ $ const adSlots = ({ aliases }) => ({
         <shared-gam-display-ad id="gpt-ad-rail3" />
       </div>
 
-      <div class="col">
-        <shared-published-content-cards-block content-types=["Webinar"]>
+      <div class="col-lg-4 mb-block">
+        <shared-published-content-list-block content-types=["Webinar"]>
+          <@query-params limit=3 />
           <@header>
-            <marko-web-link href="/webinars">Webinars</marko-web-link>
+            <marko-web-link href="/webinar">Webinars</marko-web-link>
           </@header>
-          <@query-params limit=4 />
-        </shared-published-content-cards-block>
+          <@list>
+            <@node display-image=false />
+          </@list>
+        </shared-published-content-list-block>
       </div>
     </div>
   </@page>
