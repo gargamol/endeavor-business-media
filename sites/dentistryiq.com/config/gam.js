@@ -107,6 +107,15 @@ config
     { name: 'rail2', templateName: 'RAIL2', path: 'dental-assisting/rail2' },
     { name: 'load-more', templateName: 'LM', path: 'dental-assisting/load-more' },
     { name: 'reskin', path: 'dental-assisting/reskin' },
+  ])
+  .setAliasAdUnits('dentistry', [
+    { name: 'lb1', templateName: 'LB1', path: 'dentistry/lb1' },
+    { name: 'lb2', templateName: 'LB2', path: 'dentistry/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'dentistry/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'dentistry/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'dentistry/load-more' },
+    { name: 'reskin', path: 'dentistry/reskin' },
+    { name: 'wa', path: 'dentistry/wa' },
   ]);
 
 module.exports = config;
