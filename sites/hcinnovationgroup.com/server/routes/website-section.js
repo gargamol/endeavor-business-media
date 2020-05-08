@@ -18,6 +18,7 @@ const channelAliases = [
   'interoperability-hie',
   'clinical-it',
   'imaging',
+  'patient-empowerment',
 ];
 
 module.exports = (app) => {
