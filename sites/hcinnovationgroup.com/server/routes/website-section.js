@@ -3,7 +3,6 @@ const leadersFragment = require('@endeavor-business-media/package-leaders/graphq
 const contactUs = require('@endeavor-business-media/package-shared/templates/website-section/contact-us');
 const leaders = require('@endeavor-business-media/package-shared/templates/website-section/leaders');
 const queryFragment = require('@endeavor-business-media/package-shared/graphql/fragments/website-section-page');
-
 const directory = require('../templates/website-section/directory');
 const section = require('../templates/website-section');
 const whitePapers = require('../templates/website-section/white-papers');
@@ -19,6 +18,7 @@ const channelAliases = [
   'interoperability-hie',
   'clinical-it',
   'imaging',
+  'patient-empowerment',
 ];
 
 module.exports = (app) => {

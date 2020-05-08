@@ -121,7 +121,9 @@ config
     { name: 'rail1', templateName: 'RAIL1', path: 'patient-empowerment/rail1' },
     { name: 'rail2', templateName: 'RAIL2', path: 'patient-empowerment/rail2' },
     { name: 'load-more', templateName: 'LM', path: 'patient-empowerment/load-more' },
+    { name: 'ms', templateName: 'MS', path: 'patient-empowerment/ms' },
     { name: 'reskin', path: 'patient-empowerment/reskin' },
+    { name: 'wa', path: 'patient-empowerment/wa' },
   ]);
 
 module.exports = config;
