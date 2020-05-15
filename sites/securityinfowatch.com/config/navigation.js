@@ -13,10 +13,11 @@ module.exports = {
   },
   secondary: {
     items: [
+      { href: '/advertise', label: 'Advertise' },
+      { href: '/subscribe', label: 'Subscribe' },
       { href: 'https://forums.securityinfowatch.com', label: 'Forums', target: '_blank' },
       { href: '/directory', label: 'Buyer\'s Guide' },
-      { href: '/subscribe', label: 'Subscribe' },
-      { href: '/advertise', label: 'Advertise' },
+      { href: '/cannabis-security', label: 'Cannabis Security' },
     ],
   },
   tertiary: {
@@ -47,6 +48,7 @@ module.exports = {
         { href: '/cybersecurity', label: 'Cybersecurity' },
         { href: '/covid-19', label: 'COVID-19' },
         { href: '/perimeter-security', label: 'Perimeter Security' },
+        { href: '/cannabis-security', label: 'Cannabis Security' },
       ],
     },
     {
