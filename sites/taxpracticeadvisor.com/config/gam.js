@@ -34,6 +34,54 @@ config
     { name: 'ms', templateName: 'MS', path: 'default/ms' },
     { name: 'reskin', path: 'default/reskin' },
     { name: 'wa', path: 'default/wa' },
+  ])
+  .setAliasAdUnits('top-tax-news', [
+    { name: 'lb1', templateName: 'LB1', path: 'top-tax-news/lb1' },
+    { name: 'lb2', templateName: 'LB2', path: 'top-tax-news/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'top-tax-news/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'top-tax-news/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'top-tax-news/load-more' },
+    { name: 'reskin', path: 'top-tax-news/reskin' },
+  ])
+  .setAliasAdUnits('individual-income-taxes', [
+    { name: 'lb1', templateName: 'LB1', path: 'individual-income-taxes/lb1' },
+    { name: 'lb2', templateName: 'LB2', path: 'individual-income-taxes/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'individual-income-taxes/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'individual-income-taxes/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'individual-income-taxes/load-more' },
+    { name: 'reskin', path: 'individual-income-taxes/reskin' },
+  ])
+  .setAliasAdUnits('corporate-income-taxes', [
+    { name: 'lb1', templateName: 'LB1', path: 'corporate-income-taxes/lb1' },
+    { name: 'lb2', templateName: 'LB2', path: 'corporate-income-taxes/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'corporate-income-taxes/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'corporate-income-taxes/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'corporate-income-taxes/load-more' },
+    { name: 'reskin', path: 'corporate-income-taxes/reskin' },
+  ])
+  .setAliasAdUnits('payroll-taxes', [
+    { name: 'lb1', templateName: 'LB1', path: 'payroll-taxes/lb1' },
+    { name: 'lb2', templateName: 'LB2', path: 'payroll-taxes/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'payroll-taxes/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'payroll-taxes/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'payroll-taxes/load-more' },
+    { name: 'reskin', path: 'payroll-taxes/reskin' },
+  ])
+  .setAliasAdUnits('sales-use-taxes', [
+    { name: 'lb1', templateName: 'LB1', path: 'sales-use-taxes/lb1' },
+    { name: 'lb2', templateName: 'LB2', path: 'sales-use-taxes/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'sales-use-taxes/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'sales-use-taxes/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'sales-use-taxes/load-more' },
+    { name: 'reskin', path: 'sales-use-taxes/reskin' },
+  ])
+  .setAliasAdUnits('practice-management', [
+    { name: 'lb1', templateName: 'LB1', path: 'practice-management/lb1' },
+    { name: 'lb2', templateName: 'LB2', path: 'practice-management/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'practice-management/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'practice-management/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'practice-management/load-more' },
+    { name: 'reskin', path: 'practice-management/reskin' },
   ]);
 
 module.exports = config;
