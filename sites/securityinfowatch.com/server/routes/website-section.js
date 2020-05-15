@@ -18,6 +18,7 @@ const channelAliases = [
   'alarms-monitoring',
   'cybersecurity',
   'perimeter-security',
+  'cannabis-security',
 ];
 
 module.exports = (app) => {
