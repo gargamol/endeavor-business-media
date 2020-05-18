@@ -19,6 +19,7 @@ const channelAliases = [
   'evs-facility-services',
   'healthcare-it',
   'regulatory',
+  'hall-of-fame',
 ];
 
 module.exports = (app) => {
