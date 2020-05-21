@@ -5,7 +5,7 @@ module.exports = {
       { href: '/architectural-lighting', label: 'Architectural Lighting' },
       { href: '/smart-lighting-iot', label: 'Smart Lighting & IoT' },
       { href: '/lighting-health-wellbeing', label: 'Lighting for Health & Wellbeing' },
-      { href: '/horticultural-lighting', label: 'Horticultural Lighting' },
+      { href: '/horticultural-lighting', label: 'HortiCann Lighting' },
     ],
   },
   secondary: {
