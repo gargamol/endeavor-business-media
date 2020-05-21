@@ -5,6 +5,7 @@ $ const adSlots = ({ aliases }) => ({
   "gpt-ad-lb1": GAM.getAdUnit({ name: "lb1", aliases }),
   "gpt-ad-rail1": GAM.getAdUnit({ name: "rail1", aliases }),
   "gpt-ad-rail2": GAM.getAdUnit({ name: "rail2", aliases }),
+  "gpt-ad-rail3": GAM.getAdUnit({ name: "rail1", aliases }),
 });
 
 <shared-website-section-page-default-layout
@@ -46,6 +47,16 @@ $ const adSlots = ({ aliases }) => ({
         <shared-website-section-list-block alias="technology" />
       </div>
     </div>
+
+    <div class="row">
+      <div class="col-lg-8 mb-block">
+        <leaders-home-page />
+      </div>
+      <div class="col-lg-4 mb-block">
+        <shared-gam-display-ad id="gpt-ad-rail3" />
+      </div>
+    </div>
+
   </@page>
 
   <@load-more max-pages=0>
