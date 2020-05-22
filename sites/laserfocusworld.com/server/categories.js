@@ -2920,6 +2920,11 @@ module.exports = [
         href: '/directory/other-light-sources-laser-parts-accessories-cooling-equipment-vacuum-gas-handling-equipment/laser-systems-parts-accessories-lamp-housings',
       },
       {
+        id: 35639,
+        name: 'Laser Systems Parts & Accessories - Laser diode drivers',
+        href: '/directory/other-light-sources-laser-parts-accessories-cooling-equipment-vacuum-gas-handling-equipment/laser-systems-parts-accessories-laser-diode-drivers',
+      },
+      {
         id: 34098,
         name: 'Laser Systems Parts & Accessories - Laser diode life test equipment',
         href: '/directory/other-light-sources-laser-parts-accessories-cooling-equipment-vacuum-gas-handling-equipment/laser-systems-parts-accessories-laser-diode-life-test-equipment',
