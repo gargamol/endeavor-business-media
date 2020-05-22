@@ -32,8 +32,8 @@ module.exports = [
       },
       {
         id: 60227,
-        name: 'Control Buttons & Swtiches',
-        href: '/access-identity/access-control/control-buttons-swtiches',
+        name: 'Control Buttons & Switches',
+        href: '/access-identity/access-control/control-buttons-switches',
       },
       {
         id: 60228,
