@@ -17,6 +17,7 @@ module.exports = {
     items: [
       { href: '/webinars', label: 'Webinars' },
       { href: '/whitepapers', label: 'WhitePapers' },
+      { href: '/video', label: 'Videos' },
       // { href: '/top-100-vendors/2018', label: 'Top 100 Vendors' },
       { href: 'https://endeavor.swoogo.com/innovators-showcase/378310', label: 'Innovators', target: '_blank' },
       { href: '/subscribe', label: 'Subscribe' },
