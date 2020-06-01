@@ -35,7 +35,7 @@ module.exports = {
   identityX: {
     appId: '5e28a61658e67b865e55ae5b',
     enabled: true,
-    comments: { enabled: true },
+    comments: { enabled: false },
   },
   radix: {
     enabled: true,
