@@ -60,6 +60,8 @@ module.exports = {
         { href: 'https://www.foresteruniversity.com/ProductSubCats.aspx?SubCatID=47', label: 'Books', target: '_blank' },
         { href: 'https://www.foresteruniversity.com', label: 'Training', target: '_blank' },
         { href: '/magazine', label: 'Magazine' },
+        { href: '/white-papers', label: 'Whitepapers' },
+        { href: '/webinars', label: 'Webinars' },
       ],
     },
     {
