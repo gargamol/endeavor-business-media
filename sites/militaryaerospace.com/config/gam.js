@@ -91,6 +91,14 @@ config
     { name: 'rail2', templateName: 'RAIL2', path: 'defense-executive/rail2' },
     { name: 'load-more', templateName: 'LM', path: 'defense-executive/load-more' },
     { name: 'reskin', path: 'defense-executive/reskin' },
+  ])
+  .setAliasAdUnits('trusted-computing', [
+    { name: 'lb1', templateName: 'LB1', path: 'trusted-computing/lb1' },
+    { name: 'lb2', templateName: 'LB2', path: 'trusted-computing/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'trusted-computing/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'trusted-computing/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'trusted-computing/load-more' },
+    { name: 'reskin', path: 'trusted-computing/reskin' },
   ]);
 
 module.exports = config;
