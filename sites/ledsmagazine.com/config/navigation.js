@@ -63,7 +63,7 @@ module.exports = {
         { href: 'https://www.strategiesinlight.com/index.html', label: 'Strategies in Light', target: '_blank' },
         { href: 'https://sapphireawards.secure-platform.com/a/', label: 'Sapphire Awards', target: '_blank' },
         { href: 'https://www.surveymonkey.com/r/leds40u40', label: '40 Under 40', target: '_blank' },
-        { href: 'https://www.horticannlt.com/', label: 'HortiCann Light + Tech Conference', target: '_blank' },
+        { href: 'https://www.horticannlt.com/', label: 'HortiCann Light + Tech', target: '_blank' },
         { href: 'https://www.strategies-u.com/index.html', label: 'Research', target: '_blank' },
       ],
     },
