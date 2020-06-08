@@ -15,7 +15,7 @@ module.exports = {
       { href: '/page/advertise', label: 'Advertise' },
       { href: '/white-papers', label: 'Free Reports' },
       { href: '/supplements', label: 'Supplements' },
-      { href: '/leaders', label: 'leaders' },
+      { href: '/leaders', label: 'Leaders' },
     ],
   },
   tertiary: {
@@ -50,7 +50,7 @@ module.exports = {
         { href: '/magazine', label: 'Magazine' },
         { href: '/white-papers', label: 'Free Reports' },
         { href: '/supplements', label: 'Supplements' },
-        { href: '/leaders', label: 'leaders' },
+        { href: '/leaders', label: 'Leaders' },
       ],
     },
     {
