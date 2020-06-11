@@ -21,7 +21,7 @@
     "@base-cms/marko-web-identity-x": "^1.29.4",
     "@base-cms/marko-web-inquiry": "^1.27.3",
     "@base-cms/marko-web-native-x": "^1.25.0",
-    "@base-cms/marko-web-photoswipe": "^1.25.0",
+    "@base-cms/marko-web-photoswipe": "^1.29.5",
     "@base-cms/marko-web-radix": "^1.26.0",
     "@base-cms/marko-web-reveal-ad": "^1.26.3",
     "@base-cms/marko-web-social-sharing": "^1.25.0",
