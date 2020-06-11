@@ -36,7 +36,13 @@ $ const accessLevels = getAsArray(content, "userRegistration.accessLevels");
       />
     </if>
     <else>
-      <marko-web-page-image width=720 obj=content.primaryImage />
+      <marko-web-page-image
+        width=720
+        obj=content.primaryImage
+      />
+      <if(images.length && displayPhotoswipe)>
+        <button class="btn btn-primary mb-3" data-gallery-button="true">View Image Gallery</button>
+      </if>
     </else>
   </else-if>
 
@@ -123,7 +129,10 @@ $ const accessLevels = getAsArray(content, "userRegistration.accessLevels");
 
   <if(displayPhotoswipe)>
     <marko-web-photoswipe-images images=images>
-      <@props thumbnail-click-selectors=`[data-gallery-id="${id}"] [data-image-id]` />
+      <@props
+        thumbnail-click-selectors=`[data-gallery-id="${id}"] [data-image-id]`
+        button-selector=`[data-gallery-id="${id}"] [data-gallery-button]`
+      />
     </marko-web-photoswipe-images>
   </if>
 
