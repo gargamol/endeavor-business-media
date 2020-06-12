@@ -12,7 +12,7 @@ module.exports = {
     items: [
       { href: '/magazine', label: 'Magazine' },
       { href: '/white-papers', label: 'White Papers' },
-      { href: '/webcasts', label: 'Webcasts' },
+      { href: '/webcasts', label: 'EE Resources' },
       { href: '/special-reports', label: 'Special Reports' },
       { href: '/subscribe', label: 'Subscribe' },
       { href: 'https://designengineering.endeavorb2b.com/evaluation-engineering/', label: 'Advertise', target: '_blank' },
@@ -48,7 +48,7 @@ module.exports = {
     {
       label: 'Resources',
       items: [
-        { href: '/page/resources', label: 'EE Resources' },
+        { href: '/webcasts', label: 'EE Resources' },
         { href: '/ee-blogs', label: 'Blogs' },
         { href: '/new-products', label: 'New Products' },
         { href: '/special-reports', label: 'Special Reports' },
