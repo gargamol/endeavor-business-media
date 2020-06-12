@@ -48,7 +48,7 @@ module.exports = {
     {
       label: 'Resources',
       items: [
-        { href: '/page/resources', label: 'EE Resources' },
+        { href: '/webcasts', label: 'EE Resources' },
         { href: '/ee-blogs', label: 'Blogs' },
         { href: '/new-products', label: 'New Products' },
         { href: '/special-reports', label: 'Special Reports' },
