@@ -1618,6 +1618,11 @@ module.exports = [
         href: '/directory/finished-optics-coatings-optical-subsystems/optical-components-windows-heated-infrared',
       },
       {
+        id: 35652,
+        name: 'Optical Components - Windows, laser safety',
+        href: '/directory/finished-optics-coatings-optical-subsystems/optical-components-windows-laser-safety',
+      },
+      {
         id: 33838,
         name: 'Optical filters',
         href: '/directory/finished-optics-coatings-optical-subsystems/optical-filters',
