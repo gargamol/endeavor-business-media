@@ -55,7 +55,6 @@ module.exports = {
         { href: '/white-papers', label: 'White Papers' },
         { href: '/webinars', label: 'Webinars' },
         { href: '/events', label: 'Events' },
-        { href: dragonForms.getFormUrl('newsletterSubscribe'), label: 'eNewsletter', target: '_blank' },
       ],
     },
     {

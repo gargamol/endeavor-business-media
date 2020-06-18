@@ -50,7 +50,6 @@ module.exports = {
         { href: '/events', label: 'Events' },
         { href: '/magazine', label: 'Magazine' },
         { href: '/white-papers', label: 'Free Reports' },
-        { href: dragonForms.getFormUrl('newsletterSubscribe'), label: 'eNewsletter', target: '_blank' },
       ],
     },
     {

@@ -53,7 +53,6 @@ module.exports = {
         { href: '/global-thought-leaders', label: 'Global Thought Leaders' },
         { href: '/events', label: 'Events' },
         { href: '/magazine', label: 'Magazine' },
-        { href: dragonForms.getFormUrl('newsletterSubscribe'), label: 'eNewsletter', target: '_blank' },
         { href: '/videos', label: 'WaterWorldTV' },
         { href: '/white-papers', label: 'White Papers' },
         { href: '/webinars', label: 'Webcasts' },

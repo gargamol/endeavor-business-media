@@ -62,7 +62,6 @@ module.exports = {
         { href: '/video-showcase', label: 'Video Showcase' },
         { href: '/365-retail-markets', label: '365 Retail Markets' },
         { href: '/covid-19', label: 'COVID-19' },
-        { href: dragonForms.getFormUrl('newsletterSubscribe'), label: 'eNewsletter', target: '_blank' },
       ],
     },
     {

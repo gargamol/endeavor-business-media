@@ -67,7 +67,6 @@ module.exports = {
         { href: '/healthcare', label: 'Healthcare' },
         { href: '/whitepapers', label: 'Whitepapers' },
         { href: '/webinars', label: 'Webinars' },
-        { href: dragonForms.getFormUrl('newsletterSubscribe'), label: 'eNewsletter', target: '_blank' },
       ],
     },
     {

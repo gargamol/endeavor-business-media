@@ -64,7 +64,6 @@ module.exports = {
         { href: '/videos', label: 'Videos' },
         { href: '/webcasts', label: 'Webcasts' },
         { href: '/white-papers', label: 'White Papers' },
-        { href: dragonForms.getFormUrl('newsletterSubscribe'), label: 'eNewsletter', target: '_blank' },
       ],
     },
     {

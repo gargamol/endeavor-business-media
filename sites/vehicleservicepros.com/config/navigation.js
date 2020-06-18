@@ -61,7 +61,6 @@ module.exports = {
         { href: '/whitepapers', label: 'Whitepapers' },
         { href: '/reviews', label: 'Tool Reviews' },
         { href: 'https://vehicleservicepros.jobboard.io', label: 'Job Board', target: '_blank' },
-        { href: dragonForms.getFormUrl('newsletterSubscribe'), label: 'eNewsletter', target: '_blank' },
       ],
     },
     {
