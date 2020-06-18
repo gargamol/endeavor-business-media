@@ -1,3 +1,5 @@
+const dragonForms = require('./dragon-forms');
+
 module.exports = {
   primary: {
     items: [
@@ -30,7 +32,7 @@ module.exports = {
       { href: '/page/about-us', label: 'About Us' },
       { href: '/contact-us', label: 'Contact Us' },
       { href: '/page/advertise', label: 'Advertise' },
-      { href: 'https://endeavor.dragonforms.com/loading.do?omedasite=EBM_DoNotSell', label: 'California Do Not Sell', target: '_blank' },
+      { href: dragonForms.getFormUrl('doNotSell'), label: 'California Do Not Sell', target: '_blank' },
       { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
       { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
     ],
@@ -65,6 +67,7 @@ module.exports = {
         { href: '/healthcare', label: 'Healthcare' },
         { href: '/whitepapers', label: 'Whitepapers' },
         { href: '/webinars', label: 'Webinars' },
+        { href: dragonForms.getFormUrl('newsletterSubscribe'), label: 'eNewsletter', target: '_blank' },
       ],
     },
     {
