@@ -3,6 +3,8 @@ const DragonFormsConfig = require('@endeavor-business-media/package-shared/confi
 const config = new DragonFormsConfig({ url: 'https://endeavor.dragonforms.com' });
 
 config
-  .addForm('newsletterSignup', { omedasite: 'RDHPrefPage' });
-
+  .addForm('doNotSell', { omedasite: 'EBM_DoNotSell' })
+  .addForm('newsletterPref', { omedasite: 'RDHPrefPage' })
+  .addForm('newsletterSubscribe', { omedasite: 'RDHNewPref' })
+  .addForm('newsletterSignup', { omedasite: 'RDHNewPref', query: { pk: 'ARTWEB' } });
 module.exports = config;
