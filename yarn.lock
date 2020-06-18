@@ -856,10 +856,10 @@
     graphql "^14.5.4"
     graphql-tag "^2.10.1"
 
-"@base-cms/marko-web-icons@^1.24.0":
-  version "1.24.0"
-  resolved "https://registry.yarnpkg.com/@base-cms/marko-web-icons/-/marko-web-icons-1.24.0.tgz#f03f3afa456d9d1229a217f2c7efe15065fac02c"
-  integrity sha512-hU6A/4nr/QmwO5ePCboe/oWl/NW6eCZcZVHKLMoYQ+tfO46BhwcKiUz5CAMZJorx5rveAwoAd8eT9g6f4SRVAw==
+"@base-cms/marko-web-icons@^1.29.6":
+  version "1.29.6"
+  resolved "https://registry.yarnpkg.com/@base-cms/marko-web-icons/-/marko-web-icons-1.29.6.tgz#64ac8d9c05b92cfe0819c9512849d30b26c5e78c"
+  integrity sha512-cNM2pAXtquQpDueBMBWv1K1vcjq5zPfFoQ9AlNfso8jf5PFmeGXX7GNQ57zAlYHy1xIA7VtKJMfIht7kXABJmw==
 
 "@base-cms/marko-web-identity-x@^1.29.4":
   version "1.29.4"
@@ -905,10 +905,10 @@
     graphql "^14.5.4"
     graphql-tag "^2.10.1"
 
-"@base-cms/marko-web-native-x@^1.25.0":
-  version "1.25.0"
-  resolved "https://registry.yarnpkg.com/@base-cms/marko-web-native-x/-/marko-web-native-x-1.25.0.tgz#667a694b524361699adc984c58e8ebbbc0d6eb65"
-  integrity sha512-BXaJ6cuTuShIRjjav+EgWrBWBkYRWCIakbxVttGxFOHgCxBGof9JolwgyRh39zvuAm0Zl1lhQkGSdNtvuU6VPg==
+"@base-cms/marko-web-native-x@^1.29.8":
+  version "1.29.8"
+  resolved "https://registry.yarnpkg.com/@base-cms/marko-web-native-x/-/marko-web-native-x-1.29.8.tgz#2f367a6b559c1520e6ce5b6795980aca536a0732"
+  integrity sha512-9AFs+AIVhDU6+C+8PFkRg+Zob9O8HSazn7kr2iy+edQi7W71tomezikfvSwS2cFMrq7zyKlf6Afnp+GaoRgU9Q==
   dependencies:
     "@base-cms/object-path" "^1.25.0"
     "@base-cms/utils" "^1.25.0"
@@ -943,12 +943,12 @@
   dependencies:
     "@base-cms/utils" "^1.25.0"
 
-"@base-cms/marko-web-theme-default@^1.27.6":
-  version "1.27.6"
-  resolved "https://registry.yarnpkg.com/@base-cms/marko-web-theme-default/-/marko-web-theme-default-1.27.6.tgz#e86d8762da8b7af927e47b4a627d11de346726b4"
-  integrity sha512-Bkk77H6aU1vOFcHyvlNApb95/R83+j+19Na/NyKgp9GLHx+RJhMaURFl+1ZzGKoj8NpeEZ59GNccqcWWJJx8+g==
+"@base-cms/marko-web-theme-default@^1.29.6":
+  version "1.29.6"
+  resolved "https://registry.yarnpkg.com/@base-cms/marko-web-theme-default/-/marko-web-theme-default-1.29.6.tgz#7d9063b783057e239edccf63d1318780a3a82de0"
+  integrity sha512-vqYpNOV5DxgeTtlJrM+B8nauozPXAidU/UMxl8awinqUJxt1da9uvFtNevdRptlVbnQPrThBTJBTHgR1lJ7ftA==
   dependencies:
-    "@base-cms/marko-web-icons" "^1.24.0"
+    "@base-cms/marko-web-icons" "^1.29.6"
     "@base-cms/object-path" "^1.25.0"
     "@base-cms/utils" "^1.25.0"
     bootstrap "4.3.1"
