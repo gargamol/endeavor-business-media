@@ -3,6 +3,7 @@ const leadersFragment = require('@endeavor-business-media/package-leaders/graphq
 const contactUs = require('@endeavor-business-media/package-shared/templates/website-section/contact-us');
 const leaders = require('@endeavor-business-media/package-shared/templates/website-section/leaders');
 const queryFragment = require('@endeavor-business-media/package-shared/graphql/fragments/website-section-page');
+const noAds = require('@endeavor-business-media/package-shared/templates/content/no-ads-load-more.marko');
 const directory = require('../templates/website-section/directory');
 const section = require('../templates/website-section');
 const whitePapers = require('../templates/website-section/white-papers');
@@ -19,6 +20,12 @@ const channelAliases = [
   'clinical-it',
   'imaging',
   'patient-empowerment',
+];
+
+const noAdsAliases = [
+  'virtual-care-and-COVID-19',
+  'COVID-19-and-cybersecurity',
+  'COVID-19-and-data-analytics',
 ];
 
 module.exports = (app) => {
@@ -44,6 +51,10 @@ module.exports = (app) => {
   }));
   app.get(`/:alias(${channelAliases.join('|')})`, withWebsiteSection({
     template: channel,
+    queryFragment,
+  }));
+  app.get(`/:alias(${noAdsAliases.join('|')})`, withWebsiteSection({
+    template: noAds,
     queryFragment,
   }));
   app.get('/:alias(white-papers)', withWebsiteSection({
