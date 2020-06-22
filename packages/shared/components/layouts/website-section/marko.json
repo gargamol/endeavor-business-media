@@ -80,5 +80,24 @@
   },
   "<shared-website-section-page-tech-group-directory-layout>": {
     "template": "./directory/tech-group.marko"
+  },
+  "<shared-website-section-page-hero-no-ads-layout>": {
+    "template": "./hero-no-ads.marko",
+    "@id": {
+      "type": "string",
+      "required": true
+    },
+    "@alias": {
+      "type": "string",
+      "required": true
+    },
+    "@name": {
+      "type": "string",
+      "required": true
+    },
+    "@page-node": {
+      "type": "object",
+      "required": true
+    }
   }
 }
