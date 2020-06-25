@@ -9,6 +9,7 @@ const document = require('./components/document');
 const components = require('./components');
 const fragments = require('./fragments');
 const userRoutes = require('./routes/user');
+const contentPrintRoutes = require('./routes/content-print');
 
 const routes = siteRoutes => (app) => {
   // Handle submissions on /__inquiry
@@ -17,6 +18,8 @@ const routes = siteRoutes => (app) => {
   contactUsHandler(app);
   // Load user routes.
   userRoutes(app);
+  // Load content print routes.
+  contentPrintRoutes(app);
   // Load site routes.
   siteRoutes(app);
 };
