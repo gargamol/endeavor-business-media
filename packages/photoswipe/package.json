@@ -18,7 +18,7 @@
   },
   "peerDependencies": {
     "@base-cms/marko-core": "^1.26.2",
-    "@base-cms/marko-web": "^1.27.3"
+    "@base-cms/marko-web": "^1.29.10"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3"

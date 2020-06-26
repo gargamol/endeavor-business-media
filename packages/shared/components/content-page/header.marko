@@ -30,6 +30,7 @@ $ const displayPublishedDate = ["company", "contact", "whitepaper"].includes(typ
 <if(type !== "contact")>
   <marko-web-social-sharing
     path=content.siteContext.path
-    providers=["facebook", "linkedin", "twitter", "pinterest"]
+    providers=["print", "facebook", "linkedin", "twitter", "pinterest"]
+    print-path=`/print/content/${content.id}`
   />
 </if>
