@@ -31,7 +31,9 @@ $ const isRadixEnabled = Boolean(radix.enabled && radix.appId);
     <${input.head} />
     <marko-web-gtm-start />
     <if(GAM)>
-      <marko-web-gam-enable />
+      <marko-web-gam-enable>
+        <@lazy-load ...site.getAsObject("gam.lazyLoad") />
+      </marko-web-gam-enable>
       <marko-web-gam-targeting key-values={ uri: req.path } />
     </if>
   </@head>
