@@ -1,3 +1,5 @@
+$ const dragonForms = require('../../../config/dragon-forms');
+
 <shared-subscribe-page-layout
   description="CPA Practice Advisor has products that deliver powerful content to you in a variety of forms including print, online, email and social media. To subscribe to a product or manage your current subscription, click below and put the power of CPA Practice Advisor at your fingertips."
 >
@@ -9,7 +11,7 @@
         <p>
           <marko-web-link
             class="font-weight-bold"
-            href="https://endeavor.dragonforms.com/loading.do?omedasite=CPAnewpref"
+            href=dragonForms.getFormUrl('newsletterSubscribe')
             target="_blank">
             Subscribe
           </marko-web-link>
@@ -17,7 +19,7 @@
         <p>
           <marko-web-link
             class="font-weight-bold"
-            href="https://endeavor.dragonforms.com/loading.do?omedasite=CPAPrefPage"
+            href=dragonForms.getFormUrl('newsletterManage')
             target="_blank">
             Manage Preferences
           </marko-web-link>
