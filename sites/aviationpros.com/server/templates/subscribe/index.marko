@@ -1,3 +1,5 @@
+$ const dragonForms = require('../../../config/dragon-forms');
+
 <shared-subscribe-page-layout
   description="AviationPros has products that deliver powerful content to you in a variety of forms including print, online, email and social media. To subscribe to a product or manage your current subscription, click below and put the power of AviationPros at your fingertips."
 >
@@ -21,7 +23,7 @@
             <p>
               <marko-web-link
                 class="font-weight-bold"
-                href="https://endeavor.dragonforms.com/loading.do?omedasite=AIRBnewpref"
+                href=dragonForms.getFormUrl('newsletterSubscribe')
                 target="_blank">
                 Airport Business
               </marko-web-link>
@@ -42,7 +44,7 @@
             <p class="btn btn-sm btn-outline-primary">
               <marko-web-link
                 class="font-weight-bold"
-                href="https://endeavor.dragonforms.com/loading.do?omedasite=AviationProsPrefPage"
+                href=dragonForms.getFormUrl('newsletterManage')
                 target="_blank">
                 Newsletter Preferences
               </marko-web-link>

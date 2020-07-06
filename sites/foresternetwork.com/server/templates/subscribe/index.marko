@@ -1,4 +1,5 @@
 $ const { config } = out.global;
+$ const dragonForms = require('../../../config/dragon-forms');
 
 <shared-subscribe-page-layout
   description=`${config.siteName()} has products that deliver powerful content to you in a variety of forms including print, online, email and social media. To subscribe to a product or manage your current subscription, click below and put the power of ${config.siteName()} at your fingertips.`
@@ -11,7 +12,9 @@ $ const { config } = out.global;
         <p><strong>Subscribe to our newsletters:</strong></p>
         <ul>
           <li>
-            <a href="https://endeavor.dragonforms.com/loading.do?omedasite=DE_eNLshort" title="Distributed Energy Weekly">
+            <a
+              href=dragonForms.getFormUrl('newsletterSubscribe')
+              title="Distributed Energy Weekly">
               Distributed Energy Weekly
             </a>
           </li>

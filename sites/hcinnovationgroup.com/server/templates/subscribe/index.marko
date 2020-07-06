@@ -1,5 +1,5 @@
-
 $ const { config } = out.global;
+$ const dragonForms = require('../../../config/dragon-forms');
 
 <shared-subscribe-page-layout
   description=`${config.siteName()} has products that deliver powerful content to you in a variety of forms including print, online, email and social media. To subscribe to a product or manage your current subscription, click below and put the power of ${config.siteName()} at your fingertips.`
@@ -12,7 +12,7 @@ $ const { config } = out.global;
         <p>
           <marko-web-link
             class="font-weight-bold"
-            href="https://endeavor.dragonforms.com/loading.do?omedasite=HInewpref"
+            href=dragonForms.getFormUrl('newsletterSubscribe')
             target="_blank">
             Subscribe
           </marko-web-link>
@@ -20,7 +20,7 @@ $ const { config } = out.global;
         <p>
           <marko-web-link
             class="font-weight-bold"
-            href="https://endeavor.dragonforms.com/loading.do?omedasite=HIPrefPageN"
+            href=dragonForms.getFormUrl('newsletterManage')
             target="_blank">
             Manage Preferences
           </marko-web-link>

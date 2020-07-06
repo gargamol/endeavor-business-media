@@ -1,8 +1,7 @@
-
 import GAM from "../../../config/gam";
 
 $ const { config, site } = out.global;
-
+$ const dragonForms = require('../../../config/dragon-forms');
 $ const type = "subscribe";
 $ const title = "Subscribe";
 $ const description = `${config.siteName()} has products that deliver powerful content to you in a variety of forms including print, online, email and social media. To subscribe to a product or manage your current subscription, click below and put the power of ${config.siteName()} at your fingertips.`;
@@ -45,7 +44,7 @@ $ const description = `${config.siteName()} has products that deliver powerful c
             <p>
               <marko-web-link
                 class="font-weight-bold"
-                href="https://endeavor.dragonforms.com/loading.do?omedasite=OFFNewPref&pk=HMWEB"
+                href=dragonForms.getFormUrl('newsletterSubscribe')
                 target="_blank">
                 Subscribe
               </marko-web-link>
@@ -53,7 +52,7 @@ $ const description = `${config.siteName()} has products that deliver powerful c
             <p>
               <marko-web-link
                 class="font-weight-bold"
-                href="https://endeavor.dragonforms.com/loading.do?omedasite=OFFPrefPage"
+                href=dragonForms.getFormUrl('newsletterManage')
                 target="_blank">
                 Manage Preferences
               </marko-web-link>
