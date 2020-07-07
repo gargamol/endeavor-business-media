@@ -27,7 +27,13 @@ module.exports = {
       ],
     },
   },
-  socialMediaLinks: [],
+  socialMediaLinks: [
+    { provider: 'linkedin', href: 'https://www.linkedin.com/company/grading-and-excavation-contractor/', target: '_blank' },
+    { provider: 'facebook', href: 'https://www.facebook.com/gradingexcavationcontractor/', target: '_blank' },
+    { provider: 'instagram', href: 'https://www.instagram.com/gxcontractor/', target: '_blank' },
+    { provider: 'twitter', href: 'https://twitter.com/TheGXMagazine', target: '_blank' },
+
+  ],
   identityX: {
     appId: '5e69485787774f08c7a7dcec',
     enabled: true,
