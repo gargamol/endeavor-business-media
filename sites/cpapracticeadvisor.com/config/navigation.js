@@ -21,7 +21,6 @@ module.exports = {
       { href: '/webinars', label: 'Webinars' },
       { href: '/sales-tax-compliance', label: 'Sales Tax & Compliance' },
       { href: '/a-year-in-the-life-of-payroll', label: 'Year in the Life: Payroll' },
-      { href: '/media-center', label: 'Media Center' },
     ],
   },
   tertiary: {
@@ -67,6 +66,7 @@ module.exports = {
         { href: 'https://www.ensuringsuccess.com/', label: 'Ensuring Success', target: '_blank' },
         { href: '/events', label: 'Events' },
         { href: '/sponsored', label: 'Sponsored Content' },
+        { href: '/media-center', label: 'Media Center' },
       ],
     },
     {
