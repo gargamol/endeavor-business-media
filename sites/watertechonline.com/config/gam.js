@@ -2,6 +2,13 @@ const configureGAM = require('@endeavor-business-media/package-shared/config/gam
 
 const config = configureGAM({ basePath: 'WTO' });
 
+config.lazyLoad = {
+  enabled: true, // set to true to enable lazy loading
+  fetchMarginPercent: 100, // fetch ad when one viewport away
+  renderMarginPercent: 50, // render ad when half viewport away
+  mobileScaling: 2, // double these on mobile
+};
+
 config
   .setTemplate('LB1', {
     size: [[970, 250], [970, 90], [970, 66], [728, 90], [320, 50], [300, 50], [300, 100]],
