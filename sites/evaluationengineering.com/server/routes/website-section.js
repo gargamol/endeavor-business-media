@@ -3,10 +3,10 @@ const leadersFragment = require('@endeavor-business-media/package-leaders/graphq
 const contactUs = require('@endeavor-business-media/package-shared/templates/website-section/contact-us');
 const leaders = require('@endeavor-business-media/package-shared/templates/website-section/leaders');
 const queryFragment = require('@endeavor-business-media/package-shared/graphql/fragments/website-section-page');
-
 const directory = require('../templates/website-section/directory');
 const section = require('../templates/website-section');
 const whitePapers = require('../templates/website-section/white-papers');
+const blogs = require('../templates/website-section/blogs');
 
 module.exports = (app) => {
   app.get('/:alias(leaders)', withWebsiteSection({
@@ -19,6 +19,10 @@ module.exports = (app) => {
   }));
   app.get('/:alias(directory)', withWebsiteSection({
     template: directory,
+    queryFragment,
+  }));
+  app.get('/:alias(ee-blogs)', withWebsiteSection({
+    template: blogs,
     queryFragment,
   }));
   app.get('/:alias(directory/[a-z0-9-/]+)', withWebsiteSection({
