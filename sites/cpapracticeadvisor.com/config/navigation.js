@@ -66,6 +66,7 @@ module.exports = {
         { href: 'https://www.ensuringsuccess.com/', label: 'Ensuring Success', target: '_blank' },
         { href: '/events', label: 'Events' },
         { href: '/sponsored', label: 'Sponsored Content' },
+        { href: '/media-center', label: 'Media Center' },
       ],
     },
     {
