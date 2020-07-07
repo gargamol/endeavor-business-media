@@ -1,0 +1,51 @@
+import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
+import queryFragment from "@endeavor-business-media/package-shared/graphql/fragments/content-list";
+
+$ const { GAM } = out.global;
+$ const { id, alias, name, pageNode } = data;
+
+$ const adSlots = ({ aliases }) => ({
+  "gpt-ad-lb1":   GAM.getAdUnit({ name: "lb1", aliases }),
+});
+
+<shared-website-section-page-default-layout
+  id=id
+  alias=alias
+  name=name
+  page-node=pageNode
+  ad-slots=adSlots
+>
+  <@page>
+    <shared-gam-display-ad id="gpt-ad-lb1" modifiers=["top-of-page"] />
+
+    <marko-web-resolve-page|{ data: section }| node=pageNode>
+      $ const aliases = hierarchyAliases(section);
+      <marko-web-page-wrapper class="mb-block">
+        <@section>
+          <div class="row">
+            <div class="col">
+              <default-theme-website-section-breadcrumbs section=section display-self=false />
+              <marko-web-website-section-name tag="h1" class="page-wrapper__title" obj=section />
+              <marko-web-website-section-description tag="p" class="page-wrapper__deck" obj=section />
+              <hr>
+            </div>
+          </div>
+        </@section>
+
+        <@section>
+          <marko-web-query|{ nodes }|
+            name="website-scheduled-content"
+            params={ sectionId: id, limit: 5, queryFragment }
+          >
+            <shared-content-card-deck-list-flow nodes=nodes />
+          </marko-web-query>
+        </@section>
+
+      </marko-web-page-wrapper>
+    </marko-web-resolve-page>
+  </@page>
+
+  <@load-more header=`More ${name}`>
+    <@query-params limit=14 skip=5 />
+  </@load-more>
+</shared-website-section-page-default-layout>
