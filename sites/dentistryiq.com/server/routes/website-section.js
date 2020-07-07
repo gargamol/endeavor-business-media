@@ -17,7 +17,7 @@ module.exports = (app) => {
     template: contactUs,
     queryFragment,
   }));
-  app.get('/:alias(products/free-samples)', withWebsiteSection({
+  app.get('/:alias(dentistry/products/free-samples)', withWebsiteSection({
     template: freeSamplesTemplate,
     queryFragment,
   }));
