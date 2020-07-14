@@ -1,8 +1,8 @@
 module.exports = {
-  // title: 'Leadership in Stormwater',
-  // alias: 'leaders/2020',
-  // calloutValue: 'Leading Companies',
-  // header: {
-  //   imgSrc: 'https://img.stormh2o.com/files/base/ebm/stw/image/static/stw-leaders.png?h=90',
-  // },
+  title: 'Leaders in Industrial Flow Solutions',
+  alias: 'leaders/2020',
+  calloutValue: 'Leading Companies',
+  header: {
+    imgSrc: 'https://img.flowcontrolnetwork.com/files/base/ebm/fcn/image/static/fcn-leaders.png?h=60',
+  },
 };
