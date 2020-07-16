@@ -28,7 +28,7 @@ module.exports = {
     },
   },
   socialMediaLinks: [
-    { provider: 'linkedin', href: 'http://www.linkedin.com/groups/8244648/profile', target: '_blank' },
+    { provider: 'linkedin', href: 'https://www.linkedin.com/groups/5113743/', target: '_blank' },
     { provider: 'twitter', href: 'http://www.twitter.com/SecInfoWatch', target: '_blank' },
     { provider: 'facebook', href: 'http://www.facebook.com/SecInfoWatch', target: '_blank' },
   ],
