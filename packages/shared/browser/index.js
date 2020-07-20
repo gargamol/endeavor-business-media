@@ -5,6 +5,7 @@ import GCSE from '@base-cms/marko-web-gcse/browser';
 import RevealAd from '@base-cms/marko-web-reveal-ad/browser';
 import PhotoSwipe from '@base-cms/marko-web-photoswipe/browser';
 import Inquiry from '@base-cms/marko-web-inquiry/browser';
+import Common from '@endeavor-business-media/package-common/browser';
 import ContactUs from '@endeavor-business-media/package-contact-us/browser';
 import Leaders from '@endeavor-business-media/package-leaders/browser';
 import Directory from '@endeavor-business-media/package-directory/browser';
@@ -23,6 +24,7 @@ export default (Browser) => {
   PhotoSwipe(Browser);
   Directory(Browser);
   SocialSharing(Browser);
+  Common(Browser);
   ContactUs(Browser);
   IdentityX(Browser);
   Radix(Browser);
