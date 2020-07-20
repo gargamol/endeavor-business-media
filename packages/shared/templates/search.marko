@@ -1,5 +1,6 @@
 $ const { config, site } = out.global;
 $ const gcse = site.get('gcse');
+$ const algolia = site.get('algolia');
 
 $ const type = "search";
 $ const title = "Search";
@@ -31,6 +32,13 @@ $ const description = `Search ${config.siteName()}`;
             <if(gcse)>
               <marko-web-gcse-simple-search-box api-key=gcse.getApiKey() />
             </if>
+            <else-if(algolia)>
+              <common-algolia-site-search
+                application-id=site.get('algolia.applicationId')
+                search-api-key=site.get('algolia.searchApiKey')
+                tenant-key="cygnus_siw"
+              />
+            </else-if>
           </div>
         </div>
       </@section>
