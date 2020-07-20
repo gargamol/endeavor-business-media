@@ -1,14 +1,12 @@
 const navigation = require('./navigation');
 const leaders = require('./leaders');
 const gam = require('./gam');
-const gcse = require('./gcse');
 const nativeX = require('./native-x');
 const dragonForms = require('./dragon-forms');
 
 module.exports = {
   navigation,
   gam,
-  gcse,
   nativeX,
   dragonForms,
   leaders,
@@ -68,5 +66,9 @@ module.exports = {
     sendBcc: 'emailactivity@cygnus.com',
     logo: 'https://img.securityinfowatch.com/files/base/cygnus/siw/image/static/logo/site_logo_red_on_black.png?h=60',
     bgColor: '#164f77',
+  },
+  algolia: {
+    applicationId: '80YJALCHBD',
+    searchApiKey: '54e907df9d8e8e66dbaf63ac1938c740',
   },
 };
