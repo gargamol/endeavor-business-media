@@ -61,7 +61,7 @@ module.exports = {
     to: 'support@officer.com',
   },
   inquiry: {
-    enabled: false,
+    enabled: true,
     directSend: true,
     sendTo: 'jsimon@southcomm.com',
     sendFrom: 'Officer.com <noreply@baseplatform.io>',
