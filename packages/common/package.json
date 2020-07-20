@@ -28,6 +28,7 @@
     "instantsearch.js": "^4.7.0",
     "node-fetch": "^2.6.0",
     "vue-instantsearch": "^3.1.0",
-    "vue-recaptcha": "^1.2.0"
+    "vue-recaptcha": "^1.2.0",
+    "vue-server-renderer": "^2.6.11"
   }
 }
