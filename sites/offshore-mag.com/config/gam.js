@@ -120,6 +120,14 @@ config
     { name: 'rail2', templateName: 'RAIL2', path: 'business-briefs/rail2' },
     { name: 'load-more', templateName: 'LM', path: 'business-briefs/load-more' },
     { name: 'reskin', path: 'business-briefs/reskin' },
+  ])
+  .setAliasAdUnits('renewable-energy', [
+    { name: 'lb1', templateName: 'LB1', path: 'renewable-energy/lb1' },
+    { name: 'lb2', templateName: 'LB2', path: 'renewable-energy/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'renewable-energy/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'renewable-energy/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'renewable-energy/load-more' },
+    { name: 'reskin', path: 'renewable-energy/reskin' },
   ]);
 
 module.exports = config;
