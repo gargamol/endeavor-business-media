@@ -27,7 +27,11 @@ module.exports = {
       ],
     },
   },
-  socialMediaLinks: [],
+  socialMediaLinks: [
+    { provider: 'linkedin', href: 'https://www.linkedin.com/company/msw-management/', target: '_blank' },
+    { provider: 'twitter', href: 'https://twitter.com/mswmanagement', target: '_blank' },
+    { provider: 'facebook', href: 'https://www.facebook.com/MSWManagement/', target: '_blank' },
+  ],
   identityX: {
     appId: '5e69472787774f797ba7dce4',
     enabled: true,
