@@ -71,7 +71,6 @@ module.exports = {
         { href: '/quick-chat-videos', label: 'Quick Chat Videos' },
         { href: '/manufacturers-corner', label: 'Manufacturer\'s Corner' },
         { href: '/webcasts', label: 'Webcasts' },
-        { href: 'https://www.firehouseworld.com/', label: 'Firehouse World', target: '_blank' },
         { href: 'https://www.firehouseexpo.com/', label: 'Firehouse Expo', target: '_blank' },
         { href: 'https://www.fhstationdesign.com/', label: 'Station Design', target: '_blank' },
         { href: '/page/submissions', label: 'Submissions' },
