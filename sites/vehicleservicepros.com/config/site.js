@@ -26,9 +26,11 @@ module.exports = {
     },
   },
   socialMediaLinks: [
-    { provider: 'linkedin', href: 'https://www.linkedin.com/groups/VehicleServicePros.com-4056085/about', target: '_blank' },
+    { provider: 'linkedin', href: 'https://www.linkedin.com/company/vehicleservicepros/', target: '_blank' },
     { provider: 'twitter', href: 'https://www.twitter.com/VehicleSrvcPros', target: '_blank' },
     { provider: 'facebook', href: 'https://www.facebook.com/VehicleServicePros', target: '_blank' },
+    { provider: 'youtube', href: 'https://www.youtube.com/channel/UCoU05FUN1AdvXj5AjyfX83Q?view_as=subscriber', target: '_blank' },
+    { provider: 'instagram', href: 'https://www.instagram.com/vehiclesrvcpros/', target: '_blank' },
   ],
   identityX: {
     appId: '5e28a60658e67bec4255ae5a',
