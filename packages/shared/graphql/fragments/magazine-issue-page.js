@@ -16,6 +16,9 @@ fragment MagazineIssuePageFragment on MagazineIssue {
     id
     name
     subscribeUrl
+    renewalUrl
+    reprintsUrl
+    einquiryUrl
     canonicalPath
   }
 }
