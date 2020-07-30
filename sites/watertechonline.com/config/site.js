@@ -28,7 +28,7 @@ module.exports = {
     },
   },
   socialMediaLinks: [
-    { provider: 'linkedin', href: 'https://www.linkedin.com/in/watertechnology', target: '_blank' },
+    { provider: 'linkedin', href: 'https://www.linkedin.com/showcase/water-technology-magazine/', target: '_blank' },
     { provider: 'twitter', href: 'https://twitter.com/WaterTechOnline', target: '_blank' },
     { provider: 'facebook', href: 'https://www.facebook.com/WaterTechnology', target: '_blank' },
   ],
