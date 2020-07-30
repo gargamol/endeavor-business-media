@@ -55,6 +55,7 @@ module.exports = {
         { href: '/rigs-vessels', label: 'Rigs/Vessels' },
         { href: '/deepwater', label: 'Deepwater' },
         { href: '/business-briefs', label: 'Business Briefs' },
+        { href: '/renewable-energy', label: 'Renewable Energy' },
       ],
     },
     {
@@ -66,6 +67,7 @@ module.exports = {
         { href: '/white-papers', label: 'White Papers' },
         { href: '/webcasts', label: 'Webcasts' },
         { href: '/events', label: 'Events' },
+        { href: '/surveys', label: 'Surveys' },
       ],
     },
     {
