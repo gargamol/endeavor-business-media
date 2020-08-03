@@ -124,6 +124,16 @@ config
     { name: 'ms', templateName: 'MS', path: 'patient-empowerment/ms' },
     { name: 'reskin', path: 'patient-empowerment/reskin' },
     { name: 'wa', path: 'patient-empowerment/wa' },
+  ])
+  .setAliasAdUnits('topic-takeover', [
+    { name: 'lb1', templateName: 'LB1', path: 'topic-takeover/lb1' },
+    { name: 'lb2', templateName: 'LB2', path: 'topic-takeover/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'topic-takeover/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'topic-takeover/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'topic-takeover/load-more' },
+    { name: 'ms', templateName: 'MS', path: 'topic-takeover/ms' },
+    { name: 'reskin', path: 'topic-takeover/reskin' },
+    { name: 'wa', path: 'topic-takeover/wa' },
   ]);
 
 module.exports = config;
