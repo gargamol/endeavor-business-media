@@ -117,14 +117,14 @@ config
     { name: 'reskin', path: 'dentistry/reskin' },
     { name: 'wa', path: 'dentistry/wa' },
   ])
-  .setAliasAdUnits('dental-jobs', [
-    { name: 'lb1', templateName: 'LB1', path: 'dental-jobs/lb1' },
-    { name: 'lb2', templateName: 'LB2', path: 'dental-jobs/lb2' },
-    { name: 'rail1', templateName: 'RAIL1', path: 'dental-jobs/rail1' },
-    { name: 'rail2', templateName: 'RAIL2', path: 'dental-jobs/rail2' },
-    { name: 'load-more', templateName: 'LM', path: 'dental-jobs/load-more' },
-    { name: 'reskin', path: 'dental-jobs/reskin' },
-    { name: 'wa', path: 'dental-jobs/wa' },
+  .setAliasAdUnits('dental-works', [
+    { name: 'lb1', templateName: 'LB1', path: 'dental-works/lb1' },
+    { name: 'lb2', templateName: 'LB2', path: 'dental-works/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'dental-works/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'dental-works/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'dental-works/load-more' },
+    { name: 'reskin', path: 'dental-works/reskin' },
+    { name: 'wa', path: 'dental-works/wa' },
   ]);
 
 module.exports = config;
