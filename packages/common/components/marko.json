@@ -1,5 +1,6 @@
 {
   "taglib-imports": [
+    "./algolia/marko.json",
     "./directory/marko.json"
   ],
   "<common-image-list>": {
