@@ -49,9 +49,15 @@
               <div v-if="item.primaryImage" class="node__image-wrapper">
                 <a
                   class="node__image-inner-wrapper node__image-inner-wrapper--fluid-16by9"
-                  :href="item.primarySite.host + item.id"
+                  :href="`https://${item.primarySite.host}/${item.id}`"
                 >
                   <img
+                    v-if="item.primaryImage.isLogo"
+                    class="node__image"
+                    :src="`${item.primaryImage.src}?auto=format&fit=fit&h=191&w=340`"
+                  >
+                  <img
+                    v-else
                     class="node__image"
                     :src="`${item.primaryImage.src}?auto=format&fit=crop&h=191&w=340`"
                   >
@@ -60,7 +66,7 @@
               <div class="node__body">
                 <div class="node__contents node__contents--body">
                   <h5 class="node__title">
-                    <a :href="item.primarySite.host + item.id">
+                    <a :href="`https://${item.primarySite.host}/${item.id}`">
                       {{ item.name }}
                     </a>
                   </h5>
