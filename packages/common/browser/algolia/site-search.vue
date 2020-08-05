@@ -49,7 +49,7 @@
               <div v-if="item.primaryImage" class="node__image-wrapper">
                 <a
                   class="node__image-inner-wrapper node__image-inner-wrapper--fluid-16by9"
-                  :href="`https://${item.primarySite.host}/${item.id}`"
+                  :href="`/${item.id}`"
                 >
                   <img
                     v-if="item.primaryImage.isLogo"
@@ -66,7 +66,7 @@
               <div class="node__body">
                 <div class="node__contents node__contents--body">
                   <h5 class="node__title">
-                    <a :href="`https://${item.primarySite.host}/${item.id}`">
+                    <a :href="`/${item.id}`">
                       {{ item.name }}
                     </a>
                   </h5>
