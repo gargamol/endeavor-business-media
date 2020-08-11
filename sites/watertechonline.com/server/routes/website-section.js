@@ -8,6 +8,7 @@ const directory = require('../templates/website-section/directory');
 const section = require('../templates/website-section');
 const whitePapers = require('../templates/website-section/white-papers');
 const industryTemplate = require('../templates/website-section/industry');
+const globalThoughtLeaders = require('../templates/website-section/global-thought-leaders');
 
 module.exports = (app) => {
   app.get('/:alias(leaders)', withWebsiteSection({
@@ -24,6 +25,10 @@ module.exports = (app) => {
   }));
   app.get('/:alias(directory/[a-z0-9-/]+)', withWebsiteSection({
     template: directory,
+    queryFragment,
+  }));
+  app.get('/:alias(global-thought-leaders)', withWebsiteSection({
+    template: globalThoughtLeaders,
     queryFragment,
   }));
   app.get('/:alias(white-papers)', withWebsiteSection({
