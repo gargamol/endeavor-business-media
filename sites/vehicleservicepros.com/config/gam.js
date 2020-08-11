@@ -172,6 +172,14 @@ config
     { name: 'rail2', templateName: 'RAIL2', path: 'in-the-bay/tools-equipment/air-tools/rail2' },
     { name: 'load-more', templateName: 'LM', path: 'in-the-bay/tools-equipment/air-tools/load-more' },
     { name: 'reskin', path: 'in-the-bay/tools-equipment/air-tools/reskin' },
+  ])
+  .setAliasAdUnits('page/great-prize-giveaway-2020', [
+    { name: 'lb1', templateName: 'LB1', path: 'page/great-prize-giveaway-2020/lb1' },
+    { name: 'lb2', templateName: 'LB2', path: 'page/great-prize-giveaway-2020/lb2' },
+    { name: 'load-more', templateName: 'LM', path: 'page/great-prize-giveaway-2020/load-more' },
+    { name: 'ms', templateName: 'MS', path: 'page/great-prize-giveaway-2020/ms' },
+    { name: 'reskin', path: 'page/great-prize-giveaway-2020/reskin' },
+    { name: 'wa', path: 'page/great-prize-giveaway-2020/wa' },
   ]);
 
 module.exports = config;
