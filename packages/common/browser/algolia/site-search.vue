@@ -10,17 +10,22 @@
         <br>
         <br>
       </div>
-      <div class="col-3">
-        <ais-clear-refinements />
+      <div class="col-lg-3 col-md-4 col-sm-12">
         <div
           slot="showMoreLabel"
           slot-scope="{ isShowingMore }"
         >
           {{ isShowingMore ? 'Less' : 'More' }}
         </div>
-        <h2>Type</h2>
+        <h2 class="ais-header">
+          Type
+        </h2>
         <ais-refinement-list attribute="type" />
-        <h2>Categories</h2>
+        <ais-clear-refinements />
+        <br>
+        <h2 class="ais-header">
+          Categories
+        </h2>
         <ais-hierarchical-menu
           :attributes="[
             'sections.lev0',
@@ -37,7 +42,7 @@
         <!-- eslint-disable-next-line vue/attribute-hyphenation -->
         <ais-configure :hitsPerPage="24" />
       </div>
-      <div class="col-9">
+      <div class="col-lg-9 col-md-8 col-sm-12">
         <ais-hits
           :class-names="{
             'ais-Hits-list': 'card-deck-flow card-deck-flow--3-cols',
@@ -46,7 +51,7 @@
         >
           <div slot="item" slot-scope="{ item }">
             <div class="node__contents">
-              <div v-if="item.primaryImage" class="node__image-wrapper">
+              <div v-if="item.primaryImage" class="ais-image-wrapper node__image-wrapper">
                 <a
                   class="node__image-inner-wrapper node__image-inner-wrapper--fluid-16by9"
                   :href="`/${item.id}`"
@@ -54,7 +59,7 @@
                   <img
                     v-if="item.primaryImage.isLogo"
                     class="node__image"
-                    :src="`${item.primaryImage.src}?auto=format&fit=fit&h=191&w=340`"
+                    :src="`${item.primaryImage.src}?auto=format&fit=fill&h=191&w=340`"
                   >
                   <img
                     v-else
