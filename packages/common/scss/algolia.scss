@@ -201,4 +201,12 @@
     height: 12px;
   }
 
+// Mobile media query currently targeting the "Type" and "Categories" filters.
+
+@include media-breakpoint-down(sm) {
+  &-mobile-hide {
+    display: none;
+  }
+}
+
 }
