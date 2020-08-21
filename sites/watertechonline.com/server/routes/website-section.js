@@ -7,7 +7,6 @@ const queryFragment = require('@endeavor-business-media/package-shared/graphql/f
 const directory = require('../templates/website-section/directory');
 const section = require('../templates/website-section');
 const whitePapers = require('../templates/website-section/white-papers');
-const industryTemplate = require('../templates/website-section/industry');
 const globalThoughtLeaders = require('../templates/website-section/global-thought-leaders');
 
 module.exports = (app) => {
@@ -33,10 +32,6 @@ module.exports = (app) => {
   }));
   app.get('/:alias(white-papers)', withWebsiteSection({
     template: whitePapers,
-    queryFragment,
-  }));
-  app.get('/:alias(industry)', withWebsiteSection({
-    template: industryTemplate,
     queryFragment,
   }));
   app.get('/:alias([a-z0-9-/]+)', withWebsiteSection({
