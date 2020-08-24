@@ -51,6 +51,7 @@ module.exports = {
         { href: '/micro-market', label: 'Micro Market' },
         { href: '/products', label: 'Products' },
         { href: '/technology', label: 'Technology' },
+        { href: '/webinars', label: 'Webcasts' },
       ],
     },
     {
