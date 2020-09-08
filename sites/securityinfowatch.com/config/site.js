@@ -69,6 +69,6 @@ module.exports = {
   },
   algolia: {
     applicationId: '80YJALCHBD',
-    searchApiKey: '54e907df9d8e8e66dbaf63ac1938c740',
+    searchApiKey: 'N2NkMTFjMjI3ZTFhZTVjNGJmNWU3ODE5ZTM5MDgyMzQzMWFmMWMxNjQyY2NlZGYzNzY1NWZiMWUzYTJmOWUyYWZpbHRlcnM9c3RhdHVzJTNBMQ==',
   },
 };
