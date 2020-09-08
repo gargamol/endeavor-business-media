@@ -3,6 +3,7 @@
     :index-name="tenantKey"
     :search-client="searchClient"
     :routing="routing"
+    :searchFunction="searchFunction"
   >
     <div class="row algolia-search">
       <div class="col-12">
@@ -143,6 +144,14 @@ export default {
       routing: {
         router: historyRouter(),
         stateMapping: simpleMapping(),
+      },
+      searchFunction(helper) {
+        const page = helper.getPage();
+        helper
+          .addNumericRefinement('published', '<', new Date().getTime())
+          .addNumericRefinement('unpublished', '>', new Date().getTime())
+          .setPage(page)
+          .search();
       },
     };
   },
