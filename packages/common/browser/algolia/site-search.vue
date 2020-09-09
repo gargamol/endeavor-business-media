@@ -8,16 +8,19 @@
     <div class="row algolia-search">
       <div class="col-12">
         <ais-search-box />
-        <ais-sort-by
-          :items="[
-            { value: tenantKey, label: 'Relevances' },
-            { value: `${tenantKey}_published`, label: 'Date' },
-          ]"
-        />
         <br>
         <br>
       </div>
       <div class="col-lg-3 col-md-4 ais-mobile-hide">
+        <h2 class="ais-header">
+          Sort By
+        </h2>
+        <ais-sort-by
+          :items="[
+            { value: tenantKey, label: 'Relavents' },
+            { value: `${tenantKey}_published`, label: 'Published Date' },
+          ]"
+        />
         <div
           slot="showMoreLabel"
           slot-scope="{ isShowingMore }"
