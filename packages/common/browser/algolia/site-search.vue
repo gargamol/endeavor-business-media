@@ -3,6 +3,7 @@
     :index-name="tenantKey"
     :search-client="searchClient"
     :routing="routing"
+    :search-function="searchFunction"
   >
     <div class="row algolia-search">
       <div class="col-12">
@@ -11,6 +12,15 @@
         <br>
       </div>
       <div class="col-lg-3 col-md-4 ais-mobile-hide">
+        <h2 class="ais-header">
+          Sort By
+        </h2>
+        <ais-sort-by
+          :items="[
+            { value: tenantKey, label: 'Relevance' },
+            { value: `${tenantKey}_published`, label: 'Published Date' },
+          ]"
+        />
         <div
           slot="showMoreLabel"
           slot-scope="{ isShowingMore }"
@@ -100,6 +110,7 @@
 import {
   AisInstantSearch,
   AisSearchBox,
+  AisSortBy,
   AisRefinementList,
   AisClearRefinements,
   AisHierarchicalMenu,
@@ -115,6 +126,7 @@ export default {
   components: {
     AisInstantSearch,
     AisSearchBox,
+    AisSortBy,
     AisRefinementList,
     AisClearRefinements,
     AisHierarchicalMenu,
@@ -143,6 +155,15 @@ export default {
       routing: {
         router: historyRouter(),
         stateMapping: simpleMapping(),
+      },
+      searchFunction(helper) {
+        const page = helper.getPage();
+        helper
+          .addNumericRefinement('published', '<', new Date().getTime())
+          .addNumericRefinement('unpublished', '>', new Date().getTime())
+          .addNumericRefinement('status', '=', 1)
+          .setPage(page)
+          .search();
       },
     };
   },
