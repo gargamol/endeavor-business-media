@@ -62,7 +62,6 @@ module.exports = {
         { href: '/case-studies', label: 'Case Studies' },
         { href: '/40-under-40', label: '40 under 40' },
         { href: '/transit-bids-rfp', label: 'Transit Bids RFP' },
-        { href: 'https://jobs.masstransitmag.com', label: 'Career Center' },
         { href: '/special-report-safety-security', label: 'Special Report: Safety & Security' },
         { href: 'https://www.transitbussummit.com/', target: '_blank', label: 'Transit Bus Summit' },
       ],
