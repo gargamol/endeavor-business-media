@@ -17,7 +17,7 @@
         </h2>
         <ais-sort-by
           :items="[
-            { value: tenantKey, label: 'Relavents' },
+            { value: tenantKey, label: 'Relevance' },
             { value: `${tenantKey}_published`, label: 'Published Date' },
           ]"
         />
