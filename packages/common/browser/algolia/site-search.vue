@@ -8,6 +8,12 @@
     <div class="row algolia-search">
       <div class="col-12">
         <ais-search-box />
+        <ais-sort-by
+          :items="[
+            { value: tenantKey, label: 'Relavents' },
+            { value: `${tenantKey}_published`, label: 'Date' },
+          ]"
+        />
         <br>
         <br>
       </div>
@@ -101,6 +107,7 @@
 import {
   AisInstantSearch,
   AisSearchBox,
+  AisSortBy,
   AisRefinementList,
   AisClearRefinements,
   AisHierarchicalMenu,
@@ -116,6 +123,7 @@ export default {
   components: {
     AisInstantSearch,
     AisSearchBox,
+    AisSortBy,
     AisRefinementList,
     AisClearRefinements,
     AisHierarchicalMenu,
@@ -150,6 +158,7 @@ export default {
         helper
           .addNumericRefinement('published', '<', new Date().getTime())
           .addNumericRefinement('unpublished', '>', new Date().getTime())
+          .addNumericRefinement('status', '=', 1)
           .setPage(page)
           .search();
       },
