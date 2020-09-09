@@ -16,6 +16,7 @@ module.exports = {
     items: [
       { href: 'https://www.locksmithledger.com/codesexpress', label: 'CodesExpress' },
       { href: '/directory', label: 'Buyer\'s Guide' },
+      { href: '/videos', label: 'Videos' },
       { href: '/contact-us', label: 'Contact Us' },
     ],
   },
@@ -54,6 +55,7 @@ module.exports = {
         { href: '/events', label: 'Events' },
         { href: '/magazine', label: 'Magazine' },
         { href: '/classifieds', label: 'Classifieds' },
+        { href: '/videos', label: 'Videos' },
       ],
     },
     {
