@@ -5,7 +5,7 @@ module.exports = {
     items: [
       { href: '/top-tax-news', label: 'Top Tax News' },
       { href: '/individual-income-taxes', label: 'Individual Income Taxes' },
-      { href: '/corporate-income-taxes', label: 'Corporate Income Taxes' },
+      { href: '/business-income-taxes', label: 'Business Income Taxes' },
       { href: '/payroll-taxes', label: 'Payroll Taxes' },
       { href: '/sales-use-taxes', label: 'Sales and Use Taxes' },
       { href: '/practice-management', label: 'Practice Management' },
@@ -42,7 +42,7 @@ module.exports = {
       items: [
         { href: '/top-tax-news', label: 'Top Tax News' },
         { href: '/individual-income-taxes', label: 'Individual Income Taxes' },
-        { href: '/corporate-income-taxes', label: 'Corporate Income Taxes' },
+        { href: '/business-income-taxes', label: 'Business Income Taxes' },
         { href: '/payroll-taxes', label: 'Payroll Taxes' },
         { href: '/sales-use-taxes', label: 'Sales and Use Taxes' },
         { href: '/practice-management', label: 'Practice Management' },
