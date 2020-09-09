@@ -10,7 +10,7 @@
         <ais-search-box />
         <ais-sort-by
           :items="[
-            { value: tenantKey, label: 'Relavents' },
+            { value: tenantKey, label: 'Relevances' },
             { value: `${tenantKey}_published`, label: 'Date' },
           ]"
         />
