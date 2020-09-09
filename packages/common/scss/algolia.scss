@@ -101,10 +101,15 @@
     }
   }
 
+  &-SortBy {
+    padding-bottom: 30px;
+  }
+
   &-ClearRefinements-button,
   &-CurrentRefinements-delete,
   &-CurrentRefinements-reset,
-  &-HierarchicalMenu-showMore {
+  &-HierarchicalMenu-showMore,
+  &-SortBy-select {
     background-image: linear-gradient(180deg,#fff,#f5f5fa);
     color: #515151;
     font-weight: 600;
