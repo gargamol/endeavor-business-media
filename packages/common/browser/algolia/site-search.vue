@@ -3,7 +3,7 @@
     :index-name="tenantKey"
     :search-client="searchClient"
     :routing="routing"
-    :searchFunction="searchFunction"
+    :search-function="searchFunction"
   >
     <div class="row algolia-search">
       <div class="col-12">
