@@ -30,7 +30,7 @@ $ const description = `Search ${config.siteName()}`;
         <div class="row">
           <div class="col">
             <if(applicationId && searchApiKey)>
-              <lazarus-shared-algolia-site-search application-id=applicationId search-api-key=searchApiKey />
+              <common-algolia-site-search application-id=applicationId search-api-key=searchApiKey />
             </if>
             <else>
               $ warn("Unable to load search: no `algolia.applicationId && algoliaApiKey` values are configured.");
