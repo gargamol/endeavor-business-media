@@ -42,6 +42,10 @@ module.exports = {
       { name: 'comments', id: '5be350daadff35d154799025' },
     ],
   },
+  algolia: {
+    applicationId: '80YJALCHBD',
+    searchApiKey: '54e907df9d8e8e66dbaf63ac1938c740',
+  },
   gtm: {
     containerId: 'GTM-KMZ7FHS',
   },
@@ -66,9 +70,5 @@ module.exports = {
     sendBcc: 'emailactivity@cygnus.com',
     logo: 'https://img.securityinfowatch.com/files/base/cygnus/siw/image/static/logo/site_logo_red_on_black.png?h=60',
     bgColor: '#164f77',
-  },
-  algolia: {
-    applicationId: '80YJALCHBD',
-    searchApiKey: '54e907df9d8e8e66dbaf63ac1938c740',
   },
 };
