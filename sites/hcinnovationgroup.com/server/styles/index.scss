@@ -28,6 +28,7 @@ $theme-site-header-breakpoints: (
 $theme-card-header-background-color: #0f183e;
 
 @import "../../node_modules/@endeavor-business-media/package-shared/scss/cygnus-skin";
+@import "../../node_modules/@endeavor-business-media/package-common/scss/algolia";
 
 .node-list {
   &--top100 {
