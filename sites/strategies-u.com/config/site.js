@@ -21,6 +21,10 @@ module.exports = {
     appId: '5e694622fa46c462faeb2a08',
     enabled: false,
   },
+  algolia: {
+    applicationId: '80YJALCHBD',
+    searchApiKey: '54e907df9d8e8e66dbaf63ac1938c740',
+  },
   gtm: {
     containerId: 'GTM-PTZXJ4B',
   },
