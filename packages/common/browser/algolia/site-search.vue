@@ -20,6 +20,7 @@
             { value: tenantKey, label: 'Relevance' },
             { value: `${tenantKey}_published`, label: 'Published Date' },
           ]"
+          :transform-items="sortedClicked"
         />
         <div
           slot="showMoreLabel"
@@ -152,18 +153,10 @@ export default {
 
   data() {
     return {
+      sorted: false,
       routing: {
         router: historyRouter(),
         stateMapping: simpleMapping(),
-      },
-      searchFunction(helper) {
-        const page = helper.getPage();
-        helper
-          .addNumericRefinement('published', '<', new Date().getTime())
-          .addNumericRefinement('unpublished', '>', new Date().getTime())
-          .addNumericRefinement('status', '=', 1)
-          .setPage(page)
-          .search();
       },
     };
   },
@@ -172,6 +165,34 @@ export default {
       this.applicationId,
       this.searchApiKey,
     );
+  },
+methods: {
+    searchFunction(helper) {
+      const page = helper.getPage();
+      // if query null set default sort to published
+      if (!this.sorted) {
+        let index = (helper.state.query)? this.tenantKey : `${this.tenantKey}_published`;
+        helper.setIndex(index).getIndex();
+      }
+
+      const timestamp = new Date().getTime();
+      helper
+        .addNumericRefinement('published', '<', timestamp)
+        .addNumericRefinement('unpublished', '>', timestamp)
+        .addNumericRefinement('status', '=', 1)
+        .setPage(page)
+        .search();
+    },
+    sortedClicked(itmes) {
+      let uri = window.location.search.substring(1);
+      let params = new URLSearchParams(uri);
+      if (params.get(`${this.tenantKey}[query]`)) {
+        this.sorted = true;
+      } else {
+        this.sorted = false;
+      }
+      return itmes;
+    },
   },
 };
 </script>
