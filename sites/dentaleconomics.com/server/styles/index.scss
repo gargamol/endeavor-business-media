@@ -25,6 +25,7 @@ $theme-site-header-breakpoints: (
 );
 
 @import "../../node_modules/@endeavor-business-media/package-shared/scss/core";
+@import "../../node_modules/@endeavor-business-media/package-common/scss/algolia";
 
 // Style overrides for DentalPost RSS widget
 /* stylelint-disable */

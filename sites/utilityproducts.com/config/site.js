@@ -1,14 +1,13 @@
 const navigation = require('./navigation');
 const leaders = require('./leaders');
 const gam = require('./gam');
-const gcse = require('./gcse');
+
 const nativeX = require('./native-x');
 const dragonForms = require('./dragon-forms');
 
 module.exports = {
   navigation,
   gam,
-  gcse,
   nativeX,
   dragonForms,
   leaders,
@@ -36,6 +35,10 @@ module.exports = {
     appId: '5e69460d87774f229fa7dcd9',
     enabled: true,
     comments: { enabled: false },
+  },
+  algolia: {
+    applicationId: '80YJALCHBD',
+    searchApiKey: '54e907df9d8e8e66dbaf63ac1938c740',
   },
   gtm: {
     containerId: 'GTM-52ZXGBW',

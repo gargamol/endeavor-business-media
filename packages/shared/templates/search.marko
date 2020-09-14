@@ -1,6 +1,6 @@
 $ const { config, site } = out.global;
-$ const gcse = site.get('gcse');
-$ const algolia = site.get('algolia');
+$ const applicationId = site.get("algolia.applicationId");
+$ const searchApiKey = site.get("algolia.searchApiKey");
 
 $ const type = "search";
 $ const title = "Search";
@@ -29,15 +29,13 @@ $ const description = `Search ${config.siteName()}`;
       <@section>
         <div class="row">
           <div class="col">
-            <if(gcse)>
-              <marko-web-gcse-simple-search-box api-key=gcse.getApiKey() />
+            <if(applicationId && searchApiKey)>
+              <common-algolia-site-search application-id=applicationId search-api-key=searchApiKey />
             </if>
-            <else-if(algolia)>
-              <common-algolia-site-search
-                application-id=site.get('algolia.applicationId')
-                search-api-key=site.get('algolia.searchApiKey')
-              />
-            </else-if>
+            <else>
+              $ warn("Unable to load search: no `algolia.applicationId && algoliaApiKey` values are configured.");
+            </else>
+            >
           </div>
         </div>
       </@section>

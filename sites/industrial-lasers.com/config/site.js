@@ -1,13 +1,12 @@
 const navigation = require('./navigation');
 const gam = require('./gam');
-const gcse = require('./gcse');
+
 const nativeX = require('./native-x');
 const dragonForms = require('./dragon-forms');
 
 module.exports = {
   navigation,
   gam,
-  gcse,
   nativeX,
   dragonForms,
   company: 'Endeavor Business Media, LLC',
@@ -34,6 +33,10 @@ module.exports = {
     appId: '5e6947e587774f2573a7dcea',
     enabled: true,
     comments: { enabled: true },
+  },
+  algolia: {
+    applicationId: '80YJALCHBD',
+    searchApiKey: '54e907df9d8e8e66dbaf63ac1938c740',
   },
   gtm: {
     containerId: 'GTM-K9WQRTW',
