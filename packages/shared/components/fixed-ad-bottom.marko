@@ -10,7 +10,7 @@ $ const aliases = getAsArray(adunit, "aliases");
 <if(GAM)>
   <marko-web-gam-fixed-ad-bottom
     ...GAM.getAdUnit({ name, aliases })
-    refresh-interval=defaultValue(input.refreshInterval, 15)
+    refresh-interval=defaultValue(input.refreshInterval, 30)
     scroll-offset=defaultValue(input.scrollOffset, 100)
   />
 </if>
