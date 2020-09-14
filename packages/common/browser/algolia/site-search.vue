@@ -166,12 +166,12 @@ export default {
       this.searchApiKey,
     );
   },
-methods: {
+  methods: {
     searchFunction(helper) {
       const page = helper.getPage();
       // if query null set default sort to published
       if (!this.sorted) {
-        let index = (helper.state.query)? this.tenantKey : `${this.tenantKey}_published`;
+        const index = (helper.state.query) ? this.tenantKey : `${this.tenantKey}_published`;
         helper.setIndex(index).getIndex();
       }
 
@@ -184,8 +184,8 @@ methods: {
         .search();
     },
     sortedClicked(itmes) {
-      let uri = window.location.search.substring(1);
-      let params = new URLSearchParams(uri);
+      const uri = window.location.search.substring(1);
+      const params = new URLSearchParams(uri);
       if (params.get(`${this.tenantKey}[query]`)) {
         this.sorted = true;
       } else {
