@@ -1,7 +1,8 @@
 import GAM from "../../config/gam";
-import GCSE from "../../config/gcse";
 
-$ const { config } = out.global;
+$ const { config, site } = out.global;
+$ const applicationId = site.get("algolia.applicationId");
+$ const searchApiKey = site.get("algolia.searchApiKey");
 
 $ const type = "search";
 $ const title = "Search";
@@ -29,7 +30,12 @@ $ const description = `Search ${config.siteName()}`;
       <@section>
         <div class="row">
           <div class="col">
-            <marko-web-gcse-simple-search-box api-key=GCSE.getApiKey() />
+            <if(applicationId && searchApiKey)>
+              <common-algolia-site-search application-id=applicationId search-api-key=searchApiKey />
+            </if>
+            <else>
+              $ warn("Unable to load search: no `algolia.applicationId && algoliaApiKey` values are configured.");
+            </else>
           </div>
         </div>
       </@section>
