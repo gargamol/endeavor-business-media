@@ -198,9 +198,6 @@ export default {
     getDate(date) {
       return moment(date).format(this.dateFormat);
     },
-    nameHTML() {
-      return this.name;
-    },
   },
 };
 </script>
