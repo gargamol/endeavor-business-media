@@ -178,7 +178,7 @@ export default {
       // if query null set default sort to published
       if (!this.sorted) {
         const index = (helper.state.query) ? this.tenantKey : `${this.tenantKey}_published`;
-        helper.setIndex(index).getIndex();
+        helper.setIndex(index);
       }
 
       const timestamp = new Date().getTime();
