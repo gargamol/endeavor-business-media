@@ -1,6 +1,6 @@
 {
   "name": "@endeavor-business-media/gxcontractor.com",
-  "version": "1.20.16",
+  "version": "1.20.17",
   "author": "Brian Miller <bmiller@endeavorb2b.com>",
   "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/sites/gxcontractor.com",
   "license": "MIT",
@@ -23,7 +23,7 @@
     "@base-cms/web-cli": "^1.36.3",
     "@endeavor-business-media/package-directory": "^1.20.13",
     "@endeavor-business-media/package-leaders": "^1.20.13",
-    "@endeavor-business-media/package-shared": "^1.20.16",
+    "@endeavor-business-media/package-shared": "^1.20.17",
     "graphql": "^14.5.4",
     "graphql-tag": "^2.10.1"
   }
