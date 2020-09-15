@@ -185,7 +185,7 @@ export default {
         .setPage(page)
         .search();
     },
-    sortedClicked(itmes) {
+    sortedClicked(items) {
       const uri = window.location.search.substring(1);
       const params = new URLSearchParams(uri);
       if (params.get(`${this.tenantKey}[query]`)) {
@@ -193,7 +193,7 @@ export default {
       } else {
         this.sorted = false;
       }
-      return itmes;
+      return items;
     },
     getDate(date) {
       return moment(date).format(this.dateFormat);
