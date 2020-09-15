@@ -86,7 +86,11 @@
                     <a :href="`/${item.id}`" v-html="item.name" />
                   </h5>
                   <div v-if="item.teaser === '...'" class="node__text node__text--teaser" />
-                  <div v-else-if="item.teaser" class="node__text node__text--teaser" v-html="item.teaser" />
+                  <div
+                    v-else-if="item.teaser"
+                    class="node__text node__text--teaser"
+                    v-html="item.teaser"
+                  />
                 </div>
                 <div class="node__footer node__footer--body">
                   <div class="node__footer-right">
