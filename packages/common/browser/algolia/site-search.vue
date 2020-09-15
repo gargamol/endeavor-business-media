@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-v-html-->
 <template>
   <ais-instant-search
     :index-name="tenantKey"
@@ -82,20 +83,16 @@
               <div class="node__body">
                 <div class="node__contents node__contents--body">
                   <h5 class="node__title">
-                    <a :href="`/${item.id}`">
-                      {{ item.name }}
-                    </a>
+                    <a :href="`/${item.id}`" v-html="item.name" />
                   </h5>
                   <div v-if="item.teaser === '...'" class="node__text node__text--teaser" />
-                  <div v-else-if="item.teaser" class="node__text node__text--teaser">
-                    {{ item.teaser }}
+                  <div v-else-if="item.teaser" class="node__text node__text--teaser" v-html="item.teaser" />
+                </div>
+                <div class="node__footer node__footer--body">
+                  <div class="node__footer-right">
+                    <div>{{ getDate(item.published) }}</div>
                   </div>
                 </div>
-                <!-- <div class="node__footer node__footer--body">
-                  <div class="node__footer-right">
-                    <div>{{ item.published }}</div>
-                  </div>
-                </div> -->
               </div>
             </div>
           </div>
@@ -119,6 +116,7 @@ import {
   AisHits,
   AisPagination,
 } from 'vue-instantsearch';
+import moment from 'moment';
 import algoliasearch from 'algoliasearch/lite';
 import { history as historyRouter } from 'instantsearch.js/es/lib/routers';
 import { simple as simpleMapping } from 'instantsearch.js/es/lib/stateMappings';
@@ -148,6 +146,10 @@ export default {
     tenantKey: {
       type: String,
       required: true,
+    },
+    dateFormat: {
+      type: String,
+      default: 'MMM Do, YYYY',
     },
   },
 
@@ -192,6 +194,12 @@ export default {
         this.sorted = false;
       }
       return itmes;
+    },
+    getDate(date) {
+      return moment(date).format(this.dateFormat);
+    },
+    nameHTML() {
+      return this.name;
     },
   },
 };
