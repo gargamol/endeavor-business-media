@@ -4,6 +4,8 @@ const config = new DragonFormsConfig({ url: 'https://endeavor.dragonforms.com' }
 
 config
   .addForm('doNotSell', { omedasite: 'EBM_DoNotSell' })
+  .addForm('newsletterSubscribe', { omedasite: 'GXCnewpref' })
+  .addForm('newsletterManage', { omedasite: 'GXCPrefPage' })
   .addForm('newsletterSignup', { omedasite: 'GXC_eNLshort' });
 
 module.exports = config;
