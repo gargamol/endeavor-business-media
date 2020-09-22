@@ -501,7 +501,7 @@ module.exports = [
       },
       {
         id: 34564,
-        name: 'Surface-mount LEDs (',
+        name: 'Surface-mount LEDs (<0.5W)',
         href: '/directory/led-packages/surface-mount-leds-',
       },
       {
@@ -516,7 +516,7 @@ module.exports = [
       },
       {
         id: 34567,
-        name: 'White LEDs (',
+        name: 'White LEDs (<0.5W)',
         href: '/directory/led-packages/white-leds-',
       },
     ],
