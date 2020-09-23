@@ -122,6 +122,14 @@ config
     { name: 'rail2', templateName: 'RAIL2', path: 'stations/rail2' },
     { name: 'load-more', templateName: 'LM', path: 'stations/load-more' },
     { name: 'reskin', path: 'stations/reskin' },
+  ])
+  .setAliasAdUnits('evt', [
+    { name: 'lb1', templateName: 'LB1', path: 'evt/lb1' },
+    { name: 'lb2', templateName: 'LB2', path: 'evt/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'evt/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'evt/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'evt/load-more' },
+    { name: 'reskin', path: 'evt/reskin' },
   ]);
 
 module.exports = config;
