@@ -15,8 +15,10 @@ module.exports = {
     items: [
       { href: '/subscribe', label: 'Subscribe' },
       { href: '/magazine', label: 'Magazine' },
-      { href: '/webinars', label: 'Webinars' },
       { href: '/events', label: 'Events' },
+      { href: '/news-notes', label: 'News & Notes' },
+      { href: '/videos', label: 'Videos' },
+      { href: '/webinars', label: 'Webinars' },
       { href: '/breakthrough-products', label: 'Breakthrough Products Awards' },
     ],
   },
@@ -51,8 +53,10 @@ module.exports = {
       label: 'Resources',
       items: [
         { href: '/magazine', label: 'Magazine' },
-        { href: '/webinars', label: 'Webinars' },
         { href: '/events', label: 'Events' },
+        { href: '/news-notes', label: 'News & Notes' },
+        { href: '/videos', label: 'Videos' },
+        { href: '/webinars', label: 'Webinars' },
         { href: '/breakthrough-products', label: 'Breakthrough Products Awards' },
       ],
     },
