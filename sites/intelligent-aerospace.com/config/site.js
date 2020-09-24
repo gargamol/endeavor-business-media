@@ -49,7 +49,7 @@ module.exports = {
   contactUs: {
     branding: {
       bgColor: '#106d7d',
-      logo: 'https://img.intelligent-aerospace.com/files/base/pennwell/ils/logo.png?h=60',
+      logo: 'https://img.intelligent-aerospace.com/files/base/pennwell/ias/logo.png?h=60',
     },
     to: 'juliac@pennwell.com',
   },
