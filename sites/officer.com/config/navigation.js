@@ -57,7 +57,7 @@ module.exports = {
         { href: '/features/honoring-the-fallen', label: 'Honoring The Fallen' },
         { href: '/manufacturers-corner', label: 'Manufactures Corner' },
         { href: '/features/by-contributor', label: 'By Contributors' },
-        { href: '/blogs/industry-insights', label: 'Industry Insights' },
+        { href: '/blogs/expert-insights', label: 'Expert Insights' },
         { href: '/magazine', label: 'Publications' },
         { href: '/whitepapers', label: 'Whitepapers' },
         { href: '/webinars', label: 'Webinars' },
