@@ -19,6 +19,7 @@ module.exports = {
       { href: '/white-papers', label: 'White Papers' },
       { href: '/webinars', label: 'Webinars' },
       { href: '/events', label: 'Events' },
+      { href: '/global-thought-leaders', label: 'Global Thought Leaders' },
     ],
   },
   tertiary: {
@@ -55,6 +56,7 @@ module.exports = {
         { href: '/white-papers', label: 'White Papers' },
         { href: '/webinars', label: 'Webinars' },
         { href: '/events', label: 'Events' },
+        { href: '/global-thought-leaders', label: 'Global Thought Leaders' },
       ],
     },
     {
