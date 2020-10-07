@@ -9,6 +9,7 @@ module.exports = {
       { href: '/fiber-optics', label: 'Fiber Optics' },
       { href: '/software-accessories', label: 'Software & Accessories' },
       { href: '/test-measurement', label: 'Test & Measurement' },
+      { href: 'https://www.industrial-lasers.com/', label: 'Industrial Lasers', target: '_blank' },
     ],
   },
   secondary: {
@@ -64,6 +65,7 @@ module.exports = {
         { href: 'https://laserfocusworldinnovators.secure-platform.com/a', label: 'Awards', target: '_blank' },
         { href: 'https://www.marketplaceseminar.com/index.html', label: 'L&P Market Seminar', target: '_blank' },
         { href: 'https://www.strategies-u.com/reports', label: 'Photonics Market Reports', target: '_blank' },
+        { href: 'https://www.industrial-lasers.com/', label: 'Industrial Lasers', target: '_blank' },
       ],
     },
     {
