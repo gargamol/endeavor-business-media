@@ -2,7 +2,7 @@ import hierarchyAliases from "@base-cms/marko-web/utils/hierarchy-aliases";
 
 $ const { id, alias, name, pageNode } = data;
 
-<shared-website-section-page-default-layout
+<shared-website-section-page-card-deck-list-layout
   id=id
   alias=alias
   name=name
@@ -29,7 +29,8 @@ $ const { id, alias, name, pageNode } = data;
     </marko-web-resolve-page>
 
   </@page>
-  <@load-more name="card-deck">
+
+  <@load-more name="list-card-deck">
     <@query-params limit=14 />
   </@load-more>
-</shared-website-section-page-default-layout>
+</shared-website-section-page-card-deck-list-layout>
