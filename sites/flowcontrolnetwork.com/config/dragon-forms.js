@@ -4,6 +4,6 @@ const config = new DragonFormsConfig({ url: 'https://endeavor.dragonforms.com' }
 
 config
   .addForm('doNotSell', { omedasite: 'EBM_DoNotSell' })
-  .addForm('newsletterSignup', { omedasite: 'END13_YFland' });
+  .addForm('newsletterSignup', { omedasite: 'YFnewpref' });
 
 module.exports = config;
