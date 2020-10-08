@@ -1,7 +1,7 @@
-$ const dragonForms = require('../../../config/dragon-forms');
+$ const { config } = out.global;
 
 <shared-subscribe-page-layout
-  description="AviationPros has products that deliver powerful content to you in a variety of forms including print, online, email and social media. To subscribe to a product or manage your current subscription, click below and put the power of AviationPros at your fingertips."
+  description=`${config.siteName()} has products that deliver powerful content to you in a variety of forms including print, online, email and social media. To subscribe to a product or manage your current subscription, click below and put the power of ${config.siteName()} at your fingertips.`
 >
   <@newsletter-section>
     <div class="row">
@@ -11,17 +11,9 @@ $ const dragonForms = require('../../../config/dragon-forms');
         <p>
           <marko-web-link
             class="font-weight-bold"
-            href=dragonForms.getFormUrl('newsletterSubscribe')
+            href="http://cygnuscorporate.wufoo.com/forms/m1mu6gxu02je8ro/"
             target="_blank">
-            Subscribe
-          </marko-web-link>
-        </p>
-        <p>
-          <marko-web-link
-            class="font-weight-bold"
-            href=dragonForms.getFormUrl('newsletterManage')
-            target="_blank">
-            Manage Preferences
+            Subscribe / Manage Preferences
           </marko-web-link>
         </p>
         <hr>
