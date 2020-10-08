@@ -20,10 +20,10 @@ $theme-newsletter-block-button-bg-color: #000;
 
 $theme-site-header-breakpoints: (
   hide-primary: 870px,
-  hide-secondary: 804px,
-  small-logo: 894px,
+  hide-secondary: 1000px,
+  small-logo: 1100px,
   small-text-primary: 976px,
-  small-text-secondary: 976px
+  small-text-secondary: 1200px
 );
 
 @import "../../node_modules/@endeavor-business-media/package-shared/scss/core";

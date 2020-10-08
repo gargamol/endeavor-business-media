@@ -21,6 +21,7 @@ module.exports = {
       { href: '/webcasts', label: 'Webcasts' },
       { href: '/directory', label: 'Buyer\'s Guide' },
       { href: 'https://www.marketplaceseminar.com/index.html', label: 'L&P Market Seminar', target: '_blank' },
+      { href: 'https://www.laserfocusworld.com/', label: 'LFW.com', target: '_blank' },
     ],
   },
   tertiary: {
@@ -63,6 +64,7 @@ module.exports = {
         { href: '/directory', label: 'Buyer\'s Guide' },
         { href: 'https://www.marketplaceseminar.com/index.html', label: 'L&P Market Seminar', target: '_blank' },
         { href: 'https://www.strategies-u.com/reports', label: 'Photonics Market Reports', target: '_blank' },
+        { href: 'https://www.laserfocusworld.com/', label: 'LFW.com', target: '_blank' },
       ],
     },
     {
