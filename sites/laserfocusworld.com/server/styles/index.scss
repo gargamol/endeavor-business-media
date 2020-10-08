@@ -14,12 +14,14 @@ $theme-site-navbar-primary-bg-color: $primary;
 $theme-site-navbar-logo-height: 45px;
 $theme-site-navbar-logo-height-sm: 25px;
 
+$theme-site-navbar-secondary-font-size: 13px !default;
+
 $theme-site-header-breakpoints: (
-  hide-primary: 832px,
-  hide-secondary: 906px,
+  hide-primary: 970px,
+  hide-secondary: 1085px,
   small-logo: 1015px,
-  small-text-primary: 932px,
-  small-text-secondary: 1105px
+  small-text-primary: 1085px,
+  small-text-secondary: 1190px
 );
 
 @import "../../node_modules/@endeavor-business-media/package-shared/scss/core";
