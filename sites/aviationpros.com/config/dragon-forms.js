@@ -6,6 +6,6 @@ config
   .addForm('doNotSell', { omedasite: 'EBM_DoNotSell' })
   .addForm('newsletterSubscribe', { omedasite: 'AIRBnewpref' })
   .addForm('newsletterManage', { omedasite: 'AviationProsPrefPage' })
-  .addForm('newsletterSignup', { omedasite: 'AIRBnewpref', query: { pk: 'ARTWEB' } });
+  .addForm('newsletterSignup', { omedasite: 'GSMnewpref', query: { pk: 'ARTWEB' } });
 
 module.exports = config;
