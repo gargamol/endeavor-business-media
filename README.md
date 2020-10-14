@@ -1,7 +1,20 @@
 # BaseCMS Websites for Endeavor Business Media
 This monorepo contains the codebase for websites managed by Endeavor Business Media. All sites within this repository utilize the [@base-cms/base-cms](https://github.com/base-cms/base-cms) packages, most notably the `marko-web` and `web-cli`.
 
-#### Copy Method
+## First Steps
+```$ ./scripts/yarn.sh```
+
+```$ docker-compose up [site-name.com]```
+
+Ex: ```docker-compose up laserfocusworld.com```
+
+## Errors
+
+```GraphQL error: The provided application context does not match the app for the user.```
+### Resolution
+Clear your browser cookies. This could be caused by user login context.
+
+## Copy Method
 If you wish to use an existing site as a starting point,begin by creating a new branch and then copy the site directory (recursively) to the new site name:
 ```bash
 cp -R sites/sitetocopy sites/mynewsite
