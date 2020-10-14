@@ -17,24 +17,13 @@
   "dependencies": {
     "@base-cms/marko-core": "^1.38.0",
     "@base-cms/marko-web": "^1.37.0",
-    "@base-cms/marko-web-gam": "^1.37.0",
-    "@base-cms/marko-web-gcse": "^1.37.0",
-    "@base-cms/marko-web-gtm": "^1.37.0",
-    "@base-cms/marko-web-icons": "^1.37.0",
-    "@base-cms/marko-web-native-x": "^1.37.0",
-    "@base-cms/marko-web-reveal-ad": "^1.37.0",
-    "@base-cms/marko-web-social-sharing": "^1.41.0",
     "@base-cms/marko-web-theme-default": "^1.41.0",
     "@base-cms/object-path": "^1.37.0",
     "@base-cms/utils": "^1.37.0",
     "@base-cms/web-cli": "^1.37.0",
-    "@endeavor-business-media/package-common": "^1.20.19",
-    "@endeavor-business-media/package-inquiry": "^1.20.19",
     "@endeavor-business-media/package-leaders": "^1.20.19",
-    "@endeavor-business-media/package-photoswipe": "^1.20.19",
     "@endeavor-business-media/package-shared": "^1.20.19",
     "graphql": "^14.5.4",
-    "graphql-tag": "^2.10.1",
-    "newrelic": "^5.11.0"
+    "graphql-tag": "^2.10.1"
   }
 }

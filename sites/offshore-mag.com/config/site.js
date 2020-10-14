@@ -1,7 +1,13 @@
 const navigation = require('./navigation');
+const gam = require('./gam');
+const gcse = require('./gcse');
+const nativeX = require('./native-x');
 
 module.exports = {
   navigation,
+  gam,
+  gcse,
+  nativeX,
   company: 'Endeavor Business Media, LLC',
   logos: {
     navbar: {
@@ -24,7 +30,8 @@ module.exports = {
   ],
   identityX: {
     appId: '5e6946e4fa46c4129eeb2a0d',
-    enabled: false,
+    enabled: true,
+    comments: { enabled: true },
   },
   algolia: {
     applicationId: '80YJALCHBD',
