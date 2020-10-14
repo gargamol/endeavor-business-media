@@ -70,6 +70,7 @@ module.exports = {
         { href: '/industry-insights', label: 'Industry Insights' },
         { href: '/quick-chat-videos', label: 'Quick Chat Videos' },
         { href: '/manufacturers-corner', label: 'Manufacturer\'s Corner' },
+        { href: '/podcast', label: 'Podcasts' },
         { href: '/webcasts', label: 'Webcasts' },
         { href: 'https://www.firehouseexpo.com/', label: 'Firehouse Expo', target: '_blank' },
         { href: 'https://www.fhstationdesign.com/', label: 'Station Design', target: '_blank' },
