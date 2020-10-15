@@ -285,14 +285,32 @@ config
     { name: 'reskin', path: 'training-careers/specialized-training/reskin' },
     { name: 'wa', path: 'training-careers/specialized-training/wa' },
   ])
-  .setAliasAdUnits('on-the-street/vehicles-equipment', [
-    { name: 'lb1', templateName: 'LB1', path: 'on-the-street/vehicles-equipment/lb1' },
-    { name: 'lb2', templateName: 'LB2', path: 'on-the-street/vehicles-equipment/lb2' },
-    { name: 'rail1', templateName: 'RAIL1', path: 'on-the-street/vehicles-equipment/rail1' },
-    { name: 'rail2', templateName: 'RAIL2', path: 'on-the-street/vehicles-equipment/rail2' },
-    { name: 'load-more', templateName: 'LM', path: 'on-the-street/vehicles-equipment/load-more' },
-    { name: 'reskin', path: 'on-the-street/vehicles-equipment/reskin' },
-    { name: 'wa', path: 'on-the-street/vehicles-equipment/wa' },
+  .setAliasAdUnits('vehicles-fleet', [
+    { name: 'lb1', templateName: 'LB1', path: 'vehicles-fleet/lb1' },
+    { name: 'lb2', templateName: 'LB2', path: 'vehicles-fleet/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'vehicles-fleet/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'vehicles-fleet/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'vehicles-fleet/load-more' },
+    { name: 'reskin', path: 'vehicles-fleet/reskin' },
+    { name: 'wa', path: 'vehicles-fleet/wa' },
+  ])
+  .setAliasAdUnits('vehicles-fleet/k-9-equipment-servicest', [
+    { name: 'lb1', templateName: 'LB1', path: 'vehicles-fleet/k-9-equipment-services/lb1' },
+    { name: 'lb2', templateName: 'LB2', path: 'vehicles-fleet/k-9-equipment-services/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'vehicles-fleet/k-9-equipment-services/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'vehicles-fleet/k-9-equipment-services/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'vehicles-fleet/k-9-equipment-services/load-more' },
+    { name: 'reskin', path: 'vehicles-fleet/k-9-equipment-services/reskin' },
+    { name: 'wa', path: 'vehicles-fleet/k-9-equipment-services/wa' },
+  ])
+  .setAliasAdUnits('vehicles-fleet/vehicles-equipment', [
+    { name: 'lb1', templateName: 'LB1', path: 'vehicles-fleet/vehicles-equipment/lb1' },
+    { name: 'lb2', templateName: 'LB2', path: 'vehicles-fleet/vehicles-equipment/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'vehicles-fleet/vehicles-equipment/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'vehicles-fleet/vehicles-equipment/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'vehicles-fleet/vehicles-equipment/load-more' },
+    { name: 'reskin', path: 'vehicles-fleet/vehicles-equipment/reskin' },
+    { name: 'wa', path: 'vehicles-fleet/vehicles-equipment/wa' },
   ]);
 
 module.exports = config;

@@ -17,6 +17,7 @@ const channelAliases = [
   'on-the-street',
   'investigations',
   'command-hq',
+  'vehicles-fleet',
 ];
 
 module.exports = (app) => {
