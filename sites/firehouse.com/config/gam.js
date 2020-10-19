@@ -2,6 +2,14 @@ const configureGAM = require('@endeavor-business-media/package-shared/config/gam
 
 const config = configureGAM({ basePath: 'Firehouse' });
 
+// Remove this block to convert to true via global gam config
+config.lazyLoad = {
+  enabled: false,
+  fetchMarginPercent: 100,
+  renderMarginPercent: 50,
+  mobileScaling: 2,
+};
+
 config
   .setTemplate('LB1', {
     size: [[970, 250], [970, 90], [970, 66], [728, 90], [320, 50], [300, 50], [300, 100]],
