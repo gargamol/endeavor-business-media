@@ -1,6 +1,6 @@
 {
   "name": "@endeavor-business-media/package-shared",
-  "version": "1.20.19",
+  "version": "1.20.23",
   "author": "Jacob Bare <jacob@limit0.io>",
   "repository": "https://github.com/base-cms-websites/endeavor-business-media/tree/master/packages/shared",
   "license": "MIT",
@@ -29,7 +29,7 @@
     "@base-cms/object-path": "^1.37.0",
     "@base-cms/utils": "^1.37.0",
     "@base-cms/web-cli": "^1.37.0",
-    "@endeavor-business-media/package-common": "^1.20.19",
+    "@endeavor-business-media/package-common": "^1.20.23",
     "@endeavor-business-media/package-contact-us": "^1.20.19",
     "@endeavor-business-media/package-directory": "^1.20.19",
     "@endeavor-business-media/package-gam-prestitial": "^1.20.19",
