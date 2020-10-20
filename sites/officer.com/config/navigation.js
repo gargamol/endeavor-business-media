@@ -3,7 +3,7 @@ const dragonForms = require('./dragon-forms');
 module.exports = {
   primary: {
     items: [
-      { href: '/covid-19', label: 'COVID-19' },
+      { href: '/vehicles-fleet', label: 'Vehicles & Fleet' },
       { href: '/tactical', label: 'Tactical' },
       { href: '/training-careers', label: 'Training & Careers' },
       { href: '/on-the-street', label: 'On The Street' },
@@ -40,6 +40,7 @@ module.exports = {
     {
       label: 'Topics',
       items: [
+        { href: '/vehicles-fleet', label: 'Vehicles & Fleet' },
         { href: '/covid-19', label: 'COVID-19' },
         { href: '/tactical', label: 'Tactical' },
         { href: '/training-careers', label: 'Training & Careers' },
