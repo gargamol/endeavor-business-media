@@ -303,6 +303,15 @@ config
     { name: 'reskin', path: 'vehicles-fleet/k-9-equipment-services/reskin' },
     { name: 'wa', path: 'vehicles-fleet/k-9-equipment-services/wa' },
   ])
+  .setAliasAdUnits('vehicles-fleet/computer-software', [
+    { name: 'lb1', templateName: 'LB1', path: 'vehicles-fleet/computer-software/lb1' },
+    { name: 'lb2', templateName: 'LB2', path: 'vehicles-fleet/computer-software/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'vehicles-fleet/computer-software/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'vehicles-fleet/computer-software/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'vehicles-fleet/computer-software/load-more' },
+    { name: 'reskin', path: 'vehicles-fleet/computer-software/reskin' },
+    { name: 'wa', path: 'vehicles-fleet/computer-software/wa' },
+  ])
   .setAliasAdUnits('vehicles-fleet/vehicles-equipment', [
     { name: 'lb1', templateName: 'LB1', path: 'vehicles-fleet/vehicles-equipment/lb1' },
     { name: 'lb2', templateName: 'LB2', path: 'vehicles-fleet/vehicles-equipment/lb2' },
