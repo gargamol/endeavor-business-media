@@ -158,6 +158,14 @@ config
     { name: 'rail2', templateName: 'RAIL2', path: 'covid-19-and-cybersecurity/rail2' },
     { name: 'load-more', templateName: 'LM', path: 'covid-19-and-cybersecurity/load-more' },
     { name: 'reskin', path: 'covid-19-and-cybersecurity/reskin' },
+  ])
+  .setAliasAdUnits('product-showcase-day', [
+    { name: 'lb1', templateName: 'LB1', path: 'product-showcase-day/lb1' },
+    { name: 'lb2', templateName: 'LB2', path: 'product-showcase-day/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'product-showcase-day/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'product-showcase-day/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'product-showcase-day/load-more' },
+    { name: 'reskin', path: 'product-showcase-day/reskin' },
   ]);
 
 module.exports = config;
