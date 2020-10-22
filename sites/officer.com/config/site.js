@@ -66,7 +66,7 @@ module.exports = {
   inquiry: {
     enabled: true,
     directSend: true,
-    sendTo: 'jsimon@southcomm.com',
+    sendTo: 'notifications@officer.com',
     sendFrom: 'Officer.com <noreply@baseplatform.io>',
     sendBcc: 'emailactivity@cygnus.com',
     logo: 'https://img.officer.com/files/base/cygnus/ofcr/image/static/logo/site_logo.png?h=60',
