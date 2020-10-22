@@ -172,3 +172,12 @@ $pswp__root-z-index: $theme-site-header-z-index + 1 !default;
     margin-top: map-get($spacers, block);
   }
 }
+
+.site-footer {
+  &__items {
+    flex-direction: column;
+    @include media-breakpoint-up(lg) {
+      flex-direction: row;
+    }
+  }
+}
