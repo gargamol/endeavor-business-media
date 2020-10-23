@@ -21,6 +21,7 @@ module.exports = {
       { href: '/contact-us', label: 'Contact Us' },
       { href: '/product-innovations', label: 'Product Innovations' },
       { href: '/webinars', label: 'Webinars' },
+      { href: '/whitepapers', label: 'White Papers' },
     ],
   },
   tertiary: {
@@ -60,6 +61,7 @@ module.exports = {
         { href: '/contact-us', label: 'Contact Us' },
         { href: '/product-innovations', label: 'Product Innovations' },
         { href: '/webinars', label: 'Webinars' },
+        { href: '/whitepapers', label: 'White Papers' },
       ],
     },
     {
