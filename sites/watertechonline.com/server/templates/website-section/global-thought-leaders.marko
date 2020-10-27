@@ -48,14 +48,14 @@ $ const imageOpts = {
                     image-position="top"
                     card=false
                     full-height=true
+                    modifiers=[`website-section-${section.id}-sponsor`]
                   >
                     <@image
                       src=get(content, "company.primaryImage.src")
                       alt=get(content, "company.primaryImage.alt")
                       is-logo=get(content, "company.primaryImage.isLogo")
-                      fluid=true
                       ar="16:9"
-                      width=520
+                      width=320
                       link={ href: get(content, "company.siteContext.path") }
                     />
                     <@body>
