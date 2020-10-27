@@ -24,3 +24,24 @@ $theme-site-header-breakpoints: (
 
 @import "../../node_modules/@endeavor-business-media/package-shared/scss/core";
 @import "../../node_modules/@endeavor-business-media/package-common/scss/algolia";
+
+
+// Custom styling for global-thought-leaders website section
+
+.node {
+  $self: &;
+  &--website-section-35711-sponsor {
+    #{ $self } {
+      &__image-wrapper {
+        // settings to override IE11 inline css from base-cms
+        height: auto !important; /* stylelint-disable-line */
+        min-width: auto !important; /* stylelint-disable-line */
+        margin: 0 auto;
+      }
+      &__image-wrapper,
+      &__image {
+        max-width: 100%;
+      }
+    }
+  }
+}
