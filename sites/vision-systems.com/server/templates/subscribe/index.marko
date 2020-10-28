@@ -10,12 +10,18 @@ $ const dragonForms = require('../../../config/dragon-forms');
         <h4>Newsletters</h4>
         <p>Stay up-to-date on industry news and events, new product launches and more. Select from our list of targeted email offerings to stay informed on the topics that matter to you and your business.</p>
         <p>
-          <marko-web-link
-            class="font-weight-bold"
-            href=dragonForms.getFormUrl('newsletterSignup')
-            target="_blank">
-            Subscribe / Manage Preferences
-          </marko-web-link>
+          <ul>
+            <li>
+              <strong>
+                <marko-web-link href=dragonForms.getFormUrl('newsletterSubscribe') target="_blank">Subscribe</marko-web-link>
+              </strong>
+            </li>
+            <li>
+              <strong>
+                <marko-web-link href=dragonForms.getFormUrl('newsletterManage') target="_blank">Manage Preferences</marko-web-link>
+              </strong>
+            </li>
+          </ul>
         </p>
         <hr>
       </div>
