@@ -59,6 +59,7 @@ module.exports = {
         { href: '/videos', label: 'Videos' },
         { href: '/white-papers', label: 'White Papers' },
         { href: '/webcasts', label: 'Webcasts' },
+        { href: '/events', label: 'Events' },
         { href: '/btr-america-latina', label: 'BTR America Latina' },
         { href: 'https://diamondtechreviews.secure-platform.com/a', label: 'Diamond Tech Reviews' },
         { href: '/on-topic', label: 'On Topic' },
