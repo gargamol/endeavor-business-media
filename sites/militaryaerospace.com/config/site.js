@@ -60,7 +60,7 @@ module.exports = {
     directSend: true,
     sendTo: 'bgweb@endeavorb2b.com',
     sendFrom: 'MilitaryAerospace.com <noreply@baseplatform.io>',
-    sendBcc: 'emailactivity@cygnus.com',
+    sendBcc: 'eactivity@endeavorb2b.com',
     logo: 'https://img.militaryaerospace.com/files/base/pennwell/mae/logo.png?h=60',
     bgColor: '#00417e',
   },

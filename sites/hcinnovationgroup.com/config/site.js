@@ -58,7 +58,7 @@ module.exports = {
     directSend: true,
     sendTo: 'bgweb@endeavorb2b.com',
     sendFrom: 'HCInnovationGroup.com <noreply@baseplatform.io>',
-    sendBcc: 'emailactivity@cygnus.com',
+    sendBcc: 'eactivity@endeavorb2b.com',
     logo: 'https://img.hcinnovationgroup.com/files/base/ebm/hci/image/static/logo/site_logo.png?h=60',
     bgColor: '#164f77',
   },

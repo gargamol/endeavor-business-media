@@ -59,7 +59,7 @@ module.exports = {
     directSend: true,
     sendTo: 'bgweb@endeavorb2b.com',
     sendFrom: 'IndustrialLasers.com <noreply@baseplatform.io>',
-    sendBcc: 'emailactivity@cygnus.com',
+    sendBcc: 'eactivity@endeavorb2b.com',
     logo: 'https://img.industrial-lasers.com/files/base/pennwell/ils/logo.png?h=60',
     bgColor: '#106d7d',
   },

@@ -66,7 +66,7 @@ module.exports = {
     directSend: true,
     sendTo: 'rmi@firehouse.com',
     sendFrom: 'Firehouse.com <noreply@baseplatform.io>',
-    sendBcc: 'emailactivity@cygnus.com',
+    sendBcc: 'eactivity@endeavorb2b.com',
     logo: 'https://img.firehouse.com/files/base/cygnus/fhc/image/static/logo/site_logo.png?h=60',
     bgColor: '#164f77',
   },

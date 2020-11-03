@@ -31,7 +31,7 @@ const send = async (res, domain, payload) => {
   return sgMail.send({
     from: 'Base CMS <noreply@base-cms.io>',
     to: res.app.locals.site.get('contactUs.to', 'base@endeavorb2b.com'),
-    bcc: 'emailactivity@cygnus.com',
+    bcc: 'eactivity@endeavorb2b.com',
     subject,
     html,
   });

@@ -117,6 +117,15 @@ config
     { name: 'reskin', path: 'dentistry/reskin' },
     { name: 'wa', path: 'dentistry/wa' },
   ])
+  .setAliasAdUnits('dentistry/products', [
+    { name: 'lb1', templateName: 'LB1', path: 'dentistry/products/lb1' },
+    { name: 'lb2', templateName: 'LB2', path: 'dentistry/products/lb2' },
+    { name: 'rail1', templateName: 'RAIL1', path: 'dentistry/products/rail1' },
+    { name: 'rail2', templateName: 'RAIL2', path: 'dentistry/products/rail2' },
+    { name: 'load-more', templateName: 'LM', path: 'dentistry/products/load-more' },
+    { name: 'reskin', path: 'dentistry/products/reskin' },
+    { name: 'wa', path: 'dentistry/products/wa' },
+  ])
   .setAliasAdUnits('dental-jobs', [
     { name: 'lb1', templateName: 'LB1', path: 'dental-jobs/lb1' },
     { name: 'lb2', templateName: 'LB2', path: 'dental-jobs/lb2' },

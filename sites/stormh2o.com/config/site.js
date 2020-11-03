@@ -60,7 +60,7 @@ module.exports = {
     directSend: true,
     sendTo: 'adsales@endeavorb2b.com',
     sendFrom: 'StormH2O.com <noreply@baseplatform.io>',
-    sendBcc: 'emailactivity@cygnus.com',
+    sendBcc: 'eactivity@endeavorb2b.com',
     logo: 'https://img.stormh2o.com/files/base/ebm/stw/image/static/logo/site_logo.png?h=60',
     bgColor: '#164f77',
   },

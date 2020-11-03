@@ -65,7 +65,7 @@ module.exports = {
     directSend: true,
     sendTo: 'sales@masstransitmag.com',
     sendFrom: 'MassTransitMag.com <noreply@baseplatform.io>',
-    sendBcc: 'emailactivity@cygnus.com',
+    sendBcc: 'eactivity@endeavorb2b.com',
     logo: 'https://img.masstransitmag.com/files/base/cygnus/mass/image/static/logo/site_logo.png?h=60',
     bgColor: '#164f77',
   },

@@ -59,7 +59,7 @@ module.exports = {
     directSend: true,
     sendTo: 'kcormier@evaluationengineering.com',
     sendFrom: 'EvaluationEngineering.com <noreply@baseplatform.io>',
-    sendBcc: 'emailactivity@cygnus.com',
+    sendBcc: 'eactivity@endeavorb2b.com',
     logo: 'https://img.evaluationengineering.com/files/base/ebm/ee/image/static/ee_logo.png?h=60',
     bgColor: '#d71920',
   },

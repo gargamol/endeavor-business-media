@@ -61,7 +61,7 @@ module.exports = {
     directSend: true,
     sendTo: 'clong@pennwell.com',
     sendFrom: 'UtilityProducts.com <noreply@baseplatform.io>',
-    sendBcc: 'emailactivity@cygnus.com',
+    sendBcc: 'eactivity@endeavorb2b.com',
     logo: 'https://img.utilityproducts.com/files/base/pennwell/up/logo.png?h=60',
     bgColor: '#494232',
   },

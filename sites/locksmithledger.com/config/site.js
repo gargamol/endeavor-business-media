@@ -68,7 +68,7 @@ module.exports = {
     directSend: true,
     sendTo: 'nbrokamp@endeavorb2b.com',
     sendFrom: 'LocksmithLedger.com <noreply@baseplatform.io>',
-    sendBcc: 'emailactivity@cygnus.com',
+    sendBcc: 'eactivity@endeavorb2b.com',
     logo: 'https://img.locksmithledger.com/files/base/cygnus/ll/image/static/logo/lsl.png?h=60',
     bgColor: '#164f77',
   },
