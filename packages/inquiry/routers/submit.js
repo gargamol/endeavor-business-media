@@ -7,6 +7,8 @@ const { notificationBuilder, confirmationBuilder } = require('../template-builde
 const storeInquiry = require('../utils/store-inquiry');
 
 module.exports = ({ queryFragment, notification, confirmation }) => asyncRoute(async (req, res) => {
+  console.log('submit router');
+  
   const { site } = res.app.locals;
   const {
     sendBcc: bcc,
