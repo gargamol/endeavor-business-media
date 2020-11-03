@@ -60,10 +60,10 @@ module.exports = {
         { href: '/videos', label: 'Videos' },
         { href: '/white-papers', label: 'White Papers' },
         { href: '/webcasts', label: 'Webcasts' },
-        { href: '/events', label: 'Events' },
         { href: '/on-topic', label: 'On Topic' },
         { href: '/directory', label: 'Buyer\'s Guide' },
         { href: 'https://lightwavereviews.secure-platform.com/a/organizations/main/home', label: 'Innovation Reviews', target: '_blank' },
+        { href: '/events', label: 'Events' },
       ],
     },
     {
