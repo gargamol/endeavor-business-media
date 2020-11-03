@@ -64,7 +64,7 @@ module.exports = {
     directSend: true,
     sendTo: 'notifications@aviationpros.com',
     sendFrom: 'AviationPros.com <noreply@baseplatform.io>',
-    sendBcc: 'emailactivity@cygnus.com',
+    sendBcc: 'eactivity@endeavorb2b.com',
     logo: 'https://img.aviationpros.com/files/base/cygnus/cavc/image/static/logo/site_logo.png?h=60',
     bgColor: '#164f77',
   },

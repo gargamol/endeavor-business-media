@@ -58,7 +58,7 @@ module.exports = {
     directSend: true,
     sendTo: 'sales@plasticsmachinerymagazine.com',
     sendFrom: 'SecurityInfoWatch.com <noreply@baseplatform.io>',
-    sendBcc: 'emailactivity@cygnus.com',
+    sendBcc: 'eactivity@endeavorb2b.com',
     logo: 'https://img.plasticsmachinerymagazine.com/files/base/ebm/pmm/image/static/logo/site_logo.png?h=60',
     bgColor: '#164f77',
   },

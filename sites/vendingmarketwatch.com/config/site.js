@@ -68,7 +68,7 @@ module.exports = {
     directSend: true,
     sendTo: 'editors@vendingmarketwatch.com',
     sendFrom: 'vendingmarketwatch.com <noreply@baseplatform.io>',
-    sendBcc: 'emailactivity@cygnus.com',
+    sendBcc: 'eactivity@endeavorb2b.com',
     logo: 'https://img.vendingmarketwatch.com/files/base/cygnus/vmw/image/static/logo/vending.png?h=60',
     bgColor: '#000',
   },

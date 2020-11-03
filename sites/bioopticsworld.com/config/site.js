@@ -59,7 +59,7 @@ module.exports = {
     directSend: true,
     sendTo: 'juliac@pennwell.com',
     sendFrom: 'BioOpticWorld.com <noreply@baseplatform.io>',
-    sendBcc: 'emailactivity@cygnus.com',
+    sendBcc: 'eactivity@endeavorb2b.com',
     logo: 'https://img.bioopticsworld.com/files/base/pennwell/bow/logo.png?h=60',
     bgColor: '#445b51',
   },

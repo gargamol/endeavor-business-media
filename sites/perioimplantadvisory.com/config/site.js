@@ -58,7 +58,7 @@ module.exports = {
     directSend: true,
     sendTo: 'zacharyk@pennwell.com',
     sendFrom: 'PerioImpantAdvisory.com <noreply@baseplatform.io>',
-    sendBcc: 'emailactivity@cygnus.com',
+    sendBcc: 'eactivity@endeavorb2b.com',
     logo: 'https://img.perioimplantadvisory.com/files/base/pennwell/pia/logo.png?h=60',
     bgColor: '#000',
   },

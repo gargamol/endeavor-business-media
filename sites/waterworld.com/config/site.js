@@ -60,7 +60,7 @@ module.exports = {
     directSend: true,
     sendTo: 'adsales@endeavorb2b.com',
     sendFrom: 'WaterWorld.com <noreply@baseplatform.io>',
-    sendBcc: 'emailactivity@cygnus.com',
+    sendBcc: 'eactivity@endeavorb2b.com',
     logo: 'https://img.waterworld.com/files/base/ebm/ww/image/static/logo/site_logo.png?h=60',
     bgColor: '#164f77',
   },

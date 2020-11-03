@@ -58,7 +58,7 @@ module.exports = {
     directSend: true,
     sendTo: 'zkulsrud@endeavorb2b.com',
     sendFrom: 'DentistryIQ.com <noreply@baseplatform.io>',
-    sendBcc: 'emailactivity@cygnus.com',
+    sendBcc: 'eactivity@endeavorb2b.com',
     logo: 'https://img.dentistryiq.com/files/base/pennwell/diq/logo.png?h=60',
     bgColor: '#0f4069',
   },

@@ -60,7 +60,7 @@ module.exports = {
     directSend: true,
     sendTo: 'jsemple@endeavorbusinessmedia.com',
     sendFrom: 'WaterTechOnline.com <noreply@baseplatform.io>',
-    sendBcc: 'emailactivity@cygnus.com',
+    sendBcc: 'eactivity@endeavorb2b.com',
     logo: 'https://img.watertechonline.com/files/base/ebm/wto/image/static/wto-logo.png?h=60',
     bgColor: '#164f77',
   },

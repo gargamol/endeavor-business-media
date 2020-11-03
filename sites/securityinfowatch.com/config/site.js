@@ -67,7 +67,7 @@ module.exports = {
     directSend: true,
     sendTo: 'nbrokamp@endeavorb2b.com',
     sendFrom: 'SecurityInfoWatch.com <noreply@baseplatform.io>',
-    sendBcc: 'emailactivity@cygnus.com',
+    sendBcc: 'eactivity@endeavorb2b.com',
     logo: 'https://img.securityinfowatch.com/files/base/cygnus/siw/image/static/logo/site_logo_red_on_black.png?h=60',
     bgColor: '#164f77',
   },
