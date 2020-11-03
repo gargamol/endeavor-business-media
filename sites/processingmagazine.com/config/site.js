@@ -60,7 +60,7 @@ module.exports = {
     directSend: true,
     sendTo: 'adsales@endeavorb2b.com',
     sendFrom: 'ProcessingMagazine.com <noreply@baseplatform.io>',
-    sendBcc: 'emailactivity@cygnus.com',
+    sendBcc: 'eactivity@endeavorb2b.com',
     logo: 'https://img.processingmagazine.com/files/base/ebm/pcm/image/static/pcm_logo_white.png?h=60',
     bgColor: '#164f77',
   },

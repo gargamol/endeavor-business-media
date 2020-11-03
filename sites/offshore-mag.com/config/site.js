@@ -58,7 +58,7 @@ module.exports = {
     directSend: true,
     sendTo: 'pwestervelt@pennwell.com',
     sendFrom: 'OffShore-Mag.com <noreply@baseplatform.io>',
-    sendBcc: 'emailactivity@cygnus.com',
+    sendBcc: 'eactivity@endeavorb2b.com',
     logo: 'https://img.offshore-mag.com/files/base/pennwell/os/logo.png?h=60',
     bgColor: '#094e85',
   },

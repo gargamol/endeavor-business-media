@@ -59,7 +59,7 @@ module.exports = {
     directSend: true,
     sendTo: 'juliac@pennwell.com',
     sendFrom: 'BroadBandTechReport.com <noreply@baseplatform.io>',
-    sendBcc: 'emailactivity@cygnus.com',
+    sendBcc: 'eactivity@endeavorb2b.com',
     logo: 'https://img.broadbandtechreport.com/files/base/pennwell/btr/logo.png?h=60',
     bgColor: '#254497',
   },

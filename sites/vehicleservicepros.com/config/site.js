@@ -68,7 +68,7 @@ module.exports = {
     directSend: true,
     sendTo: 'sales@vehicleservicepros.com',
     sendFrom: 'VehicleServicePros.com <noreply@baseplatform.io>',
-    sendBcc: 'emailactivity@cygnus.com',
+    sendBcc: 'eactivity@endeavorb2b.com',
     logo: 'https://img.vehicleservicepros.com/files/base/cygnus/vspc/image/static/logo/vsp.png?h=60',
     bgColor: '#164f77',
   },

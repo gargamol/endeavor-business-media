@@ -61,7 +61,7 @@ module.exports = {
     directSend: true,
     sendTo: 'bgweb@endeavorb2b.com',
     sendFrom: 'LightwaveOnline.com <noreply@baseplatform.io>',
-    sendBcc: 'emailactivity@cygnus.com',
+    sendBcc: 'eactivity@endeavorb2b.com',
     logo: 'https://img.lightwaveonline.com/files/base/pennwell/lw/logo.png?h=60',
     bgColor: '#fff',
   },

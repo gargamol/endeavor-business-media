@@ -60,7 +60,7 @@ module.exports = {
     directSend: true,
     sendTo: 'adsales@endeavorb2b.com',
     sendFrom: 'ForesterNetwork.com <noreply@baseplatform.io>',
-    sendBcc: 'emailactivity@cygnus.com',
+    sendBcc: 'eactivity@endeavorb2b.com',
     logo: 'https://img.foresternetwork.com/files/base/ebm/frn/image/static/logo/site_logo.png?h=60',
     bgColor: '#164f77',
   },
